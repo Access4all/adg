@@ -63,7 +63,7 @@ gulp.task('html', (cb) => {
     // Second build step
     .on('finish', () => {
 
-      // Create page hierarchy
+      // Create basic page hierarchy
       for (let page in pages) {
         let parents = page.split('/')
           .filter((item) => item !== 'index')
@@ -79,8 +79,6 @@ gulp.task('html', (cb) => {
 
         pages[page].isChild = true
       }
-
-      console.log(pages)
 
       // Skip reading file contents and use cached `pages` instead
       gulp.src('./pages/**/*.md', {
