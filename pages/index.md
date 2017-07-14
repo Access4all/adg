@@ -1,6 +1,6 @@
 ---
 layout: layout
-title: Hello
+title: Index
 ---
 
 # Hello
@@ -10,5 +10,3 @@ Yay!
 ```js
 const x = 'bla';
 ```
-
-[Dialog example](examples/dialog)
