@@ -2,11 +2,11 @@ const gulp = require('gulp')
 const sass = require('gulp-sass')
 const markdown = require('gulp-markdown')
 const handlebars = require('gulp-hb')
-const frontmatter = require('gulp-front-matter')
+const frontMatter = require('gulp-front-matter')
 const through = require('through2')
 const fs = require('fs')
 const path = require('path')
-const browsersync = require('browser-sync')
+const browserSync = require('browser-sync').create()
 
 gulp.task('css', () => {
   return gulp.src('./static/**/*.scss', {
@@ -14,6 +14,7 @@ gulp.task('css', () => {
   })
     .pipe(sass())
     .pipe(gulp.dest('./build'))
+    .pipe(browserSync.stream())
 })
 
 gulp.task('html', (cb) => {
@@ -38,7 +39,7 @@ gulp.task('html', (cb) => {
   })
 
     // Extract YAML front matter
-    .pipe(frontmatter())
+    .pipe(frontMatter())
 
     // Compile Markdown to HTML
     .pipe(markdown())
@@ -99,9 +100,10 @@ gulp.task('html', (cb) => {
           return cb(null, file)
         }))
 
-        // Save and run callback
         .pipe(gulp.dest('./build'))
         .on('finish', () => {
+          browserSync.reload()
+
           return cb()
         })
     })
@@ -112,9 +114,7 @@ gulp.task('build', ['css', 'html'], (cb) => {
 })
 
 gulp.task('default', ['build'], () => {
-  const server = browsersync.create()
-
-  server.init({
+  browserSync.init({
     server: {
       baseDir: './build'
     }
