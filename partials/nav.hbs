@@ -1,11 +1,13 @@
 <ul>
 {{#each pages}}
-  <li>
-    <a href="{{url}}">{{title}}</a>
+  {{#unless isChild}}
+    <li>
+      <a href="{{url}}">{{title}}</a>
 
-    {{#if children}}
-      {{> "partials/nav" pages=children}}
-    {{/if}}
-  </li>
+      {{#if children}}
+        {{> "partials/nav" pages=children}}
+      {{/if}}
+    </li>
+  {{/unless}}
 {{/each}}
 </ul>

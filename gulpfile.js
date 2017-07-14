@@ -2,6 +2,7 @@ const gulp = require('gulp')
 const sass = require('gulp-sass')
 const markdown = require('gulp-markdown')
 const handlebars = require('gulp-hb')
+const prettify = require('gulp-prettify')
 const frontMatter = require('gulp-front-matter')
 const through = require('through2')
 const fs = require('fs')
@@ -62,6 +63,25 @@ gulp.task('html', (cb) => {
     // Second build step
     .on('finish', () => {
 
+      // Create page hierarchy
+      for (let page in pages) {
+        let parents = page.split('/')
+          .filter((item) => item !== 'index')
+          .slice(0, -1)
+          .map((item) => item + '/index')
+    
+        if (!parents.length) continue
+
+        parents.forEach((item) => {
+          let clone = Object.assign({}, pages[page])
+          pages[item].children = (pages[item].children || []).concat([clone])
+        })
+
+        pages[page].isChild = true
+      }
+
+      console.log(pages)
+
       // Skip reading file contents and use cached `pages` instead
       gulp.src('./pages/**/*.md', {
         base: './pages',
@@ -91,6 +111,12 @@ gulp.task('html', (cb) => {
           parsePartialName: (options, file) => {
             return path.relative('./', file.path).replace(path.extname(file.path), '')
           }
+        }))
+
+        // Format
+        .pipe(prettify({
+          indent_with_tabs: false,
+          max_preserve_newlines: 1
         }))
 
         // Rename to `.html`
