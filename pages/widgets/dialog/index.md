@@ -7,4 +7,4 @@ title: Dialog
 
 Hi there!
 
-[JSFiddle](http://jsfiddle.net/gh/get/backflip/adg/widget/dialog/)
+[JSFiddle](https://jsfiddle.net/gh/get/library/pure/backflip/adg/tree/master/examples/dialog)
