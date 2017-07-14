@@ -1,3 +1,7 @@
 .dialog {
   color: red;
+  
+  &.is-initialized {
+    color: green;
+  }
 }
