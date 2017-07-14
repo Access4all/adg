@@ -12,10 +12,10 @@ npm i
 
 Dev:
 ```
-npm run gulp
+npm start
 ```
 
 Build:
 ```
-npm run gulp build
+npm run build
 ```
