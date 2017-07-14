@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "directory-tree": "^2.0.0",
     "gulp": "^3.9.1",
     "gulp-front-matter": "^1.3.0",
     "gulp-hb": "^6.0.2",
