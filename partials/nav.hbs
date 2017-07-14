@@ -1,0 +1,11 @@
+<ul>
+{{#each pages}}
+  <li>
+    <a href="{{url}}">{{title}}</a>
+
+    {{#if children}}
+      {{> "partials/nav" pages=children}}
+    {{/if}}
+  </li>
+{{/each}}
+</ul>

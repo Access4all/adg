@@ -1,0 +1,13 @@
+$colors: (
+	default: black,
+	active: red
+);
+
+a {
+	color: map-get($colors, default);
+
+	&:hover,
+	&:focus {
+		color: map-get($colors, active);
+	}
+}
