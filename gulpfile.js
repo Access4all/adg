@@ -1,14 +1,12 @@
 const gulp = require('gulp')
 const sass = require('gulp-sass')
-const tree = require('directory-tree')
 const markdown = require('gulp-markdown')
 const handlebars = require('gulp-hb')
 const frontmatter = require('gulp-front-matter')
 const through = require('through2')
 const fs = require('fs')
 const path = require('path')
-const serve = require('serve')
-const open = require('open')
+const browsersync = require('browser-sync')
 
 gulp.task('css', () => {
   return gulp.src('./static/**/*.scss', {
@@ -114,10 +112,14 @@ gulp.task('build', ['css', 'html'], (cb) => {
 })
 
 gulp.task('default', ['build'], () => {
-  const server = serve('./build')
+  const server = browsersync.create()
 
-  open('http://localhost:5000')
+  server.init({
+    server: {
+      baseDir: './build'
+    }
+  })
 
   gulp.watch(['./static/**/*.scss'], ['css'])
-  gulp.watch(['./pages/**/*.md', './layouts/*.hbs'], ['html'])
+  gulp.watch(['./pages/**/*.md', './layouts/*.hbs', './partials/*.hbs'], ['html'])
 })
