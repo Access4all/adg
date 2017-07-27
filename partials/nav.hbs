@@ -1,11 +1,11 @@
 <ul>
-{{#each pages}}
-  {{#unless isChild}}
+{{#each navigation}}
+  {{#unless (skipPage this ../sublevel)}}
     <li>
       <a href="{{url}}">{{title}}</a>
 
       {{#if children}}
-        {{> "partials/nav" pages=children}}
+        {{> "partials/nav" navigation=children sublevel=true}}
       {{/if}}
     </li>
   {{/unless}}

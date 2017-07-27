@@ -19,24 +19,35 @@ gulp.task('css', () => {
 })
 
 gulp.task('html', (cb) => {
-  const pages = {}
-  const layouts = {}
+  const config = {
+    src: './pages/**/*.md',
+    base: './pages'
+  }
+  let pages = {}
+  let layouts = {}
+  let navigation = []
 
-  const getFileName = (file) => {
-    return path.relative('./pages', file.path).replace(path.extname(file.path), '')
+  const getUrl = (filePath) => {
+    return path.relative(config.base, filePath)
+      .replace(path.basename(filePath), '')
+      .replace(/\/$/, '')
   }
 
-  const getLayout = (config) => {
-    const layoutName = config.layout || 'layout'
+  const getIdentifier = (filePath) => {
+    return filePath.replace(path.extname(filePath), '')
+  }
+
+  const getLayout = (layoutName) => {
+    layoutName = layoutName || 'layout'
 
     // Read layout file only once
-    const layout = layouts[layoutName] = layouts[layoutName] || fs.readFileSync('./layouts/' + layoutName + '.hbs')
+    const layout = layouts[layoutName] = (layouts[layoutName] || fs.readFileSync('./layouts/' + layoutName + '.hbs'))
 
     return layout
   }
 
-  gulp.src('./pages/**/*.md', {
-    base: './pages'
+  gulp.src(config.src, {
+    base: config.base
   })
 
     // Extract YAML front matter
@@ -45,17 +56,22 @@ gulp.task('html', (cb) => {
     // Compile Markdown to HTML
     .pipe(markdown())
 
-    // Save result to `pages`
-    // TODO: Create hierarchy
+    // Save result to `pages` to prevent having to read the file again in the second build step
     .pipe(through.obj((file, enc, cb) => {
-      const fileName = getFileName(file)
-      
-      pages[fileName] = {
+      const url = getUrl(file.path)
+      const parents = url.split('/').slice(0, -1).filter((item) => item !== '')
+      const identifier = getIdentifier(file.path)
+
+      pages[identifier] = {
         contents: file.contents,
-        data: file.frontMatter,
-        url: '/' + path.dirname(fileName),
-        title: file.frontMatter.title
+        data: file.frontMatter
       }
+
+      navigation.push({
+        url,
+        parents,
+        title: file.frontMatter.title
+      })
 
       return cb(null, file)
     }))
@@ -63,39 +79,29 @@ gulp.task('html', (cb) => {
     // Second build step
     .on('finish', () => {
 
-      // Create basic page hierarchy
-      for (let page in pages) {
-        let parents = page.split('/')
-          .filter((item) => item !== 'index')
-          .slice(0, -1)
-          .map((item) => item + '/index')
-    
-        if (!parents.length) continue
+      // Create navigation hierarchy
+      navigation = navigation.map((page) => {
+        page.children = navigation.filter((child) => child.parents.includes(page.url))
 
-        parents.forEach((item) => {
-          let clone = Object.assign({}, pages[page])
-          pages[item].children = (pages[item].children || []).concat([clone])
-        })
-
-        pages[page].isChild = true
-      }
+        return page
+      })
 
       // Skip reading file contents and use cached `pages` instead
-      gulp.src('./pages/**/*.md', {
-        base: './pages',
+      gulp.src(config.src, {
+        base: config.base,
         read: false
       })
 
         // Prepare for Handlebars compiling by replacing file content with layout and saving content to `contents` property
         .pipe(through.obj((file, enc, cb) => {
-          const fileName = getFileName(file)
-          const page = pages[fileName]
-          const layout = getLayout(page.data)
+          const identifier = getIdentifier(file.path)
+          const page = pages[identifier]
+          const layout = getLayout(page.data.layout)
           
           file.data = {
             title: page.data.title,
             contents: page.contents,
-            pages: pages
+            navigation: navigation
           }
 
           file.contents = layout
@@ -108,6 +114,12 @@ gulp.task('html', (cb) => {
           partials: './partials/**/*.hbs',
           parsePartialName: (options, file) => {
             return path.relative('./', file.path).replace(path.extname(file.path), '')
+          },
+          helpers: {
+            skipPage: (page, sublevel, options) => {
+              // Skip sublevels in first navigation iteration
+              return !sublevel && page.parents.length
+            }
           }
         }))
 
@@ -117,9 +129,9 @@ gulp.task('html', (cb) => {
           max_preserve_newlines: 1
         }))
 
-        // Rename to `.html`
+        // Rename to `index.html`
         .pipe(through.obj((file, enc, cb) => {
-          file.path = file.path.replace(path.extname(file.path), '.html')
+          file.path = file.path.replace(path.basename(file.path), 'index.html')
 
           return cb(null, file)
         }))
