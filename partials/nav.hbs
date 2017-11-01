@@ -2,7 +2,7 @@
 {{#each navigation}}
   {{#unless (skipPage this ../sublevel)}}
     <li>
-      <a href="{{url}}">{{title}}</a>
+      <a href="/{{url}}">{{title}}</a>
 
       {{#if children}}
         {{> "partials/nav" navigation=children sublevel=true}}
