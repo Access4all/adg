@@ -7,8 +7,8 @@ title: Dialog
 
 Hi there!
 
-[Demo: JSFiddle](/examples/dialog)
+[[CodePen]](/examples/dialog)
 
-[JSFiddle](https://jsfiddle.net/gh/get/library/pure/backflip/adg/tree/master/examples/dialog)
+[[JSFiddle]](https://jsfiddle.net/gh/get/library/pure/backflip/adg/tree/master/examples/dialog)
 
 [Link to Parent](../)

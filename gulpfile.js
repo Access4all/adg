@@ -1,6 +1,5 @@
 const gulp = require('gulp')
 const sass = require('gulp-sass')
-const markdown = require('gulp-markdown')
 const handlebars = require('gulp-hb')
 const prettify = require('gulp-prettify')
 const frontMatter = require('gulp-front-matter')
@@ -8,6 +7,7 @@ const through = require('through2')
 const fs = require('fs')
 const path = require('path')
 const browserSync = require('browser-sync').create()
+const requireNew = require('require-new')
 
 gulp.task('css', () => {
   return gulp.src('./static/**/*.scss', {
@@ -19,6 +19,8 @@ gulp.task('css', () => {
 })
 
 gulp.task('html', (cb) => {
+  const markdown = requireNew('./helpers/markdown')
+  
   const config = {
     src: './pages/**/*.md',
     base: './pages'
@@ -157,5 +159,5 @@ gulp.task('default', ['build'], () => {
   })
 
   gulp.watch(['./static/**/*.scss'], ['css'])
-  gulp.watch(['./pages/**/*.md', './layouts/*.hbs', './partials/*.hbs'], ['html'])
+  gulp.watch(['./pages/**/*.md', './layouts/*.hbs', './partials/*.hbs', './helpers/*'], ['html'])
 })

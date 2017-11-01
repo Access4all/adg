@@ -17,6 +17,7 @@
     "gulp-hb": "^6.0.2",
     "gulp-markdown": "^1.2.0",
     "gulp-prettify": "^0.5.0",
-    "gulp-sass": "^3.1.0"
+    "gulp-sass": "^3.1.0",
+    "require-new": "^1.1.1"
   }
 }
