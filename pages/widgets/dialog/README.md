@@ -5,10 +5,8 @@ title: Dialog
 
 # Dialog
 
-Hi there!
+[[Code]](/examples/dialog)
 
 [[CodePen]](/examples/dialog)
 
-[[JSFiddle]](https://jsfiddle.net/gh/get/library/pure/backflip/adg/tree/master/examples/dialog)
-
-[Link to Parent](../)
+[[JSFiddle]](/examples/dialog)
