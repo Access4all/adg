@@ -1,31 +1,65 @@
 const markdown = require('gulp-markdown')
 const fs = require('fs')
 const path = require('path')
+const frontMatter = require('front-matter')
+const hljs = require('highlight.js')
 
 const getFile = (files, type, href) => {
   const match = files.find((file) => path.extname(file) === `.${type}`)
+  const content = match ? fs.readFileSync(path.join('.', href, match)).toString() : ''
 
-  return match ? fs.readFileSync(path.join('.', href, match)).toString() : ''
+  if (type === 'details') {
+    return frontMatter(content).attributes
+  }
+
+  return content
+}
+
+const getCode = (href) => {
+  const files = fs.readdirSync(path.join('.', href))
+
+  return {
+    details: getFile(files, 'details', href),
+    html: getFile(files, 'html', href),
+    css: getFile(files, 'css', href),
+    js: getFile(files, 'js', href)
+  }
 }
 
 const renderer = new markdown.marked.Renderer()
 
 renderer.link = function(href, title, text) {
+  let code
   switch (text) {
+    case '[Code]':
+      code = getCode(href)
+
+      const description = `<p>${code.details.description}</p>`
+
+      const blocks = ['html', 'css', 'js'].map((type) => {
+        const markup = hljs.highlightAuto(code[type])
+
+        return `<div class="code">
+          <h3 class="title">${type}</h3>
+          <pre><code>${markup.value}</code></pre>
+        </div>`
+      })
+
+      return `${description}${blocks.join('')}`
     case '[CodePen]':
-      const files = fs.readdirSync(path.join('.', href))
+      code = getCode(href)
 
       return `<form action="https://codepen.io/pen/define" method="POST" target="_blank">
         <input type="hidden" name="data" value="${JSON.stringify({
-          title: 'Test',
-          description: '',
-          html: getFile(files, 'html', href),
+          title: code.details.name,
+          description: code.details.description,
+          html: code.html,
           // html_pre_processor: 'none',
-          css: getFile(files, 'css', href),
+          css: code.css,
           css_pre_processor: 'scss',
           // css_starter: 'neither',
           // css_prefix_free: false,
-          js: getFile(files, 'js', href),
+          js: code.js,
           // js_pre_processor: 'none',
           // js_modernizr: false,
           // js_library: '',
@@ -35,10 +69,8 @@ renderer.link = function(href, title, text) {
         }).replace(/"/g, '&quot;')}">
         <button type="submit">CodePen</button>
       </form>`
-      break
     case '[JSFiddle]':
-      return `<a href="${href}" target="_blank">${text.replace(/\[|\]/g, '')}</a>`
-      break
+      return `<a href="${href}" target="_blank">https://jsfiddle.net/gh/get/library/pure/backflip/adg/tree/master${text.replace(/\[|\]/g, '')}</a>`
     default:
       return markdown.marked.Renderer.prototype.link.apply(this, arguments)
   }

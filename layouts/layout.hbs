@@ -5,10 +5,12 @@
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-  {{{contents}}}
+  <div class="container">
+    {{> "partials/nav"}}
 
-  <hr>
-
-  {{> "partials/nav"}}
+    {{{contents}}}
+  </div>
+  
+  <script src="/js/scripts.js"></script>
 </body>
 </html>

@@ -8,19 +8,86 @@ const fs = require('fs')
 const path = require('path')
 const browserSync = require('browser-sync').create()
 const requireNew = require('require-new')
+const webpack = require('webpack')
+
+gulp.task('js', (cb) => {
+  const compiler = webpack({
+    entry: {
+      scripts: './static/js/scripts.js'
+    },
+    module: {
+      loaders: [
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          loader: 'babel-loader',
+          options: {
+            presets: ['env']
+          }
+        }
+      ]
+    },
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery',
+        Popper: ['popper.js', 'default'],
+        // In case you imported plugins individually, you must also require them here:
+        // Util: "exports-loader?Util!bootstrap/js/dist/util",
+        // Dropdown: "exports-loader?Dropdown!bootstrap/js/dist/dropdown",
+      }),
+      new webpack.optimize.UglifyJsPlugin()
+    ],
+    output: {
+      path: path.resolve('./build/js/'),
+      filename: '[name].js'
+    },
+    devtool: 'eval-cheap-module-source-map'
+  })
+
+  compiler.run((err, stats) => {
+    if (err) {
+      console.log(err)
+
+      return cb()
+    }
+
+    console.log(stats.toString({
+      colors: true,
+      hash: false,
+      timings: false,
+      chunks: false,
+      chunkModules: false,
+      modules: false,
+      children: true,
+      version: true,
+      cached: false,
+      cachedAssets: false,
+      reasons: false,
+      source: false,
+      errorDetails: false,
+      assetsSort: 'name'
+    }))
+
+    return cb()
+  })
+})
 
 gulp.task('css', () => {
   return gulp.src('./static/**/*.scss', {
     base: './static'
   })
-    .pipe(sass())
+    .pipe(sass({
+      includePaths: ['node_modules']
+    }).on('error', console.log))
     .pipe(gulp.dest('./build'))
     .pipe(browserSync.stream())
 })
 
 gulp.task('html', (cb) => {
   const markdown = requireNew('./helpers/markdown')
-  
+
   const config = {
     src: './pages/**/*.md',
     base: './pages'
@@ -53,10 +120,10 @@ gulp.task('html', (cb) => {
   })
 
     // Extract YAML front matter
-    .pipe(frontMatter())
+    .pipe(frontMatter().on('error', console.log))
 
     // Compile Markdown to HTML
-    .pipe(markdown())
+    .pipe(markdown().on('error', console.log))
 
     // Save result to `pages` to prevent having to read the file again in the second build step
     .pipe(through.obj((file, enc, cb) => {
