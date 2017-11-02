@@ -214,7 +214,7 @@ gulp.task('html', (cb) => {
     })
 })
 
-gulp.task('build', ['css', 'html'], (cb) => {
+gulp.task('build', ['css', 'html', 'js'], (cb) => {
   return cb()
 })
 
