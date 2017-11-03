@@ -214,7 +214,14 @@ gulp.task('html', (cb) => {
     })
 })
 
-gulp.task('build', ['css', 'html', 'js'], (cb) => {
+gulp.task('media', () => {
+  return gulp.src('./pages/{,**/}_media/**/*', {
+    base: './pages'
+  })
+    .pipe(gulp.dest('./build'))
+})
+
+gulp.task('build', ['css', 'html', 'js', 'media'], (cb) => {
   return cb()
 })
 
@@ -227,4 +234,5 @@ gulp.task('default', ['build'], () => {
 
   gulp.watch(['./static/**/*.scss'], ['css'])
   gulp.watch(['./pages/**/*.md', './layouts/*.hbs', './partials/*.hbs', './helpers/*'], ['html'])
+  gulp.watch(['./pages/{,**/}_media/**/*'], ['media'])
 })
