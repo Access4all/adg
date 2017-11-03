@@ -67,12 +67,12 @@ renderer.link = function(href, title, text) {
           // css_external: '',
           // js_external: ''
         }).replace(/"/g, '&quot;')}">
-        <button type="submit">CodePen</button>
+        <button type="submit" class="btn btn-primary">CodePen</button>
       </form>`
     case '[JSFiddle]':
       let link = `https://jsfiddle.net/gh/get/library/pure/backflip/adg/tree/master${href.replace(/\[|\]/g, '')}`
 
-      return `<a href="${link}" target="_blank">JSFiddle</a>`
+      return `<a href="${link}" target="_blank" class="btn btn-primary">JSFiddle</a>`
     default:
       return markdown.marked.Renderer.prototype.link.apply(this, arguments)
   }
