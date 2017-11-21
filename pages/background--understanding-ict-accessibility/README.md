@@ -5,8 +5,6 @@ title: "Background: Understanding ICT Accessibility"
 
 # Background: Understanding ICT Accessibility
 
-
-
 # What you will get
 
 You'll learn in a very pragmatic way many important things you need to know when creating accessible websites. We'll provide you with both **background information** and **concrete, sensible code examples** that you can experiment with so you get a profound feeling about what's needed to make a website accessible.

@@ -5,8 +5,6 @@ title: "About the Accessibility Developer Guide (ADG)"
 
 # About the Accessibility Developer Guide (ADG)
 
-
-
 # Joshua Muheim
 
 ![Joshua Muheim](_media/joshua-muheim-1487955187611.png){.image}

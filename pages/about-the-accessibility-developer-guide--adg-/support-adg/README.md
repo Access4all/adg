@@ -5,8 +5,6 @@ title: "Support ADG"
 
 # Support ADG
 
-
-
 There are different ways to support us. Choose the one that fits you.
 
 # Financial support

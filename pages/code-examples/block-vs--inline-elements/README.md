@@ -5,8 +5,6 @@ title: "Block vs. Inline Elements"
 
 # Block vs. Inline Elements
 
-
-
 - Show difference of `display: block/inline-block/inline`
 - JAWS and NVDA behave differently (because they don't have the same default value for screen layout setting)
 - Show problem with many block elements within e.g. a link (teaser) and how to fix

@@ -5,8 +5,6 @@ title: "Typical Use Cases"
 
 # Typical Use Cases
 
-
-
 ## Keyboard users with a motor disability
 
   There are two kinds of Users that can’t use a pointing device to control a Computer.  The first category of disabled keyboard users suffers from a motor disability which affects the hands so that they are unable to physically hold or to manipulate a pointing device. On the other hand there are blind users there are unable to see the mouse pointer at all. About these users I will talk later.

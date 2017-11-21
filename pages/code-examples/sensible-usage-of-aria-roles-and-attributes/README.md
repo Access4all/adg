@@ -5,8 +5,6 @@ title: "Sensible Usage of ARIA Roles and Attributes"
 
 # Sensible Usage of ARIA Roles and Attributes
 
-
-
 - `aria-expanded`, but only on focusable elements!
 - `aria-label`
 - `aria-selected` and `aria-pressed` on `<button>`, more inspiration see <https://www.w3.org/WAI/WCAG20/quickref/>

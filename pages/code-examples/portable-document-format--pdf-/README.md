@@ -5,8 +5,6 @@ title: "Portable Document Format (PDF)"
 
 # Portable Document Format (PDF)
 
-
-
 To find out, whether a PDF is accessible:
 
 Open it in JAWS. When the following dialog is displayed, the PDF isn't tagged at all:

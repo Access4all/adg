@@ -5,8 +5,6 @@ title: "How we evaluate JavaScript widgets"
 
 # How we evaluate JavaScript widgets
 
-
-
 Take look at our #{link_to 'widgets section', page_path('widgets_overview')}, where we offer reviews about some well-known 3rd party widgets.
 
 

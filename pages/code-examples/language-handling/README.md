@@ -5,8 +5,6 @@ title: "Language Handling"
 
 # Language Handling
 
-
-
 Probleme aufzeigen der Screenreader beim Wechseln der Sprache!
 
 - NVDA unterstützt autom. Wechseln nicht, JAWS schon

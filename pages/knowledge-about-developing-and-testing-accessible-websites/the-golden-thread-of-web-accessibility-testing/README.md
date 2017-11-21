@@ -5,8 +5,6 @@ title: "The Golden Thread of Web-Accessibility Testing"
 
 # The Golden Thread of Web-Accessibility Testing
 
-
-
 The following document is an **attempt** to describe how we typically proceed when testing websites for common accessibility issues.
 
 We've documented recurring requests by our customers. It is **neither exhaustive nor imperative**, but it will serve you as a **golden thread** when you are in the need of testing a website thoroughly yourself.

@@ -5,8 +5,6 @@ title: "Why Accessible ICT Are Important"
 
 # Why Accessible ICT Are Important
 
-
-
 Why should you go the extra mile for an accessible website - besides the fact that **15% of the world population** ([World report on disability](http://www.who.int/disabilities/world_report/2011/en/), Table 2.2, p. 30, [June, 1, 2017]) are affected by some sort of disability? 
 
 ## Some ideas to think about

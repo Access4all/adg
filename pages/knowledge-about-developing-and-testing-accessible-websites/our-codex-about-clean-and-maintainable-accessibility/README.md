@@ -5,8 +5,6 @@ title: "Our Codex About Clean and Maintainable Accessibility"
 
 # Our Codex About Clean and Maintainable Accessibility
 
-
-
 Aufzeigen, dass es für die meisten Ansprüche genau einen perfekten Weg gibt, sie umzusetzen! Typischerweise ist das "plain old HTML". Und auch wenn es oftmals diverse weitere Möglichkeiten gibt, um WCAG-konform zu sein, so ist dieser eine perfekte Weg wann immer möglich vorzuziehen.
 
 Beispiel zeigen mit Formularfeld und Labels: es gibt **einen perfekten Weg** mittels ID und `for`-Attribut, welcher für alle funktioniert. Wenn man stattdessen z.B. mit `aria-label` oder `aria-labelledby` arbeitet, dann funktioniert das auch für Screenreader, aber das Label ist nicht mehr klickbar für Mausnutzer, und auch gängige automatisierte Test-Tools geben dann falsch-positive Fehler aus (z.B. WAVE, vielleicht auch andere wie TotalValidator?)! Oder theoretisch könnte man auch ein `<th>`-Element als Label programmatisch zuordnen (wenn das Eingabefeld sich in einer Tabelle befindet), aber das funktioniert nicht gleich gut in allen Screenreadern (soweit ich weiss).

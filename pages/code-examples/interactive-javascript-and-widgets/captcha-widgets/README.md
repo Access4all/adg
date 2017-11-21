@@ -5,5 +5,3 @@ title: "Captcha widgets"
 
 # Captcha widgets
 
-
-

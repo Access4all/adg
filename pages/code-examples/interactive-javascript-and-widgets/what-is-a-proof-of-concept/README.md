@@ -5,8 +5,6 @@ title: "What is a "Proof of concept"?"
 
 # What is a "Proof of concept"?
 
-
-
 **Important**: these widgets are proofs of concept and thus are not intended to be used as-is in a "real world" project, as they are only optimised for specific versions of screen readers and browsers.
 
 Our proofs of concepts are exact that: proofs of a given concept with main focus on accessibility, optimised for the most widely used combinations of browsers and screen readers. As such, they're not meant to be copied&pasted 1:1 into real projects. 

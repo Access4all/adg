@@ -5,5 +5,3 @@ title: "Asynchronous chat"
 
 # Asynchronous chat
 
-
-

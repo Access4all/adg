@@ -5,8 +5,6 @@ title: "ARIA label, describedby and labelledby Attributes"
 
 # ARIA label, describedby and labelledby Attributes
 
-
-
 - `aria-describedby`, but only on focusable elements! `display: none` bleibt dafür sichtbar! [Short note on aria-labelledby and aria-describedby](https://developer.paciellogroup.com/blog/2015/05/short-note-on-aria-labelledby-and-aria-describedby/)
 - `aria-labelledby`
 
