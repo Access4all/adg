@@ -2,7 +2,7 @@
 layout: layout
 title: Home
 tags:
- - bla
+ - bla2
 includeRelated: true
 ---
 
