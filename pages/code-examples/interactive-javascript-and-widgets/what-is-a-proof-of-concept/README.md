@@ -1,6 +1,6 @@
 ---
 layout: layout
-title: "What is a "Proof of concept"?"
+title: "What is a \"Proof of concept\"?"
 ---
 
 # What is a "Proof of concept"?
