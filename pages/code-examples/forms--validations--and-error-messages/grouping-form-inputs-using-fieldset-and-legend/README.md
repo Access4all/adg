@@ -15,6 +15,10 @@ The `<fieldset>`/`<legend>` combination can be used for two things.
 
 **Multiple radio buttons always must be grouped**. Yes, that's exactly how it is. No exceptions.
 
+[[Code]](pages/code-examples/forms--validations--and-error-messages/grouping-form-inputs-using-fieldset-and-legend/_examples/grouped-radio-buttons)
+
+[[CodePen]](pages/code-examples/forms--validations--and-error-messages/grouping-form-inputs-using-fieldset-and-legend/_examples/grouped-radio-buttons)
+
 [**Grouped Radio Buttons**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.WEqVdR.small.42ecc2c1-e754-4794-89b9-786505d6a14e.png)](https://codepen.io/accessibility-developer-guide/pen/WEqVdR){.code}
 
 Also, **multiple check boxes always must be grouped**.
