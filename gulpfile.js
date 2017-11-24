@@ -12,6 +12,7 @@ const webpack = require('webpack')
 const plumber = require('gulp-plumber')
 const util = require('gulp-util')
 const exhaustively = require('stream-exhaust')
+const changed = require('gulp-changed')
 
 function errorHandler(err) {
   util.log(err.plugin || '', util.colors.cyan(err.fileName), util.colors.red(err.message));
@@ -103,6 +104,10 @@ gulp.task('html', (cb) => {
   let layouts = {}
   let navigation = []
 
+  const skipUnchanged = () => changed('./build', {
+      transformPath: filePath => filePath.replace(path.basename(filePath), 'index.html')
+  })
+
   const getUrl = (filePath) => {
     return path.relative(config.base, filePath)
       .replace(path.basename(filePath), '')
@@ -126,6 +131,9 @@ gulp.task('html', (cb) => {
     base: config.base
   })
     .pipe(plumber())
+
+    // Skip unchanged files
+    .pipe(skipUnchanged())
 
     // Extract YAML front matter
     .pipe(frontMatter().on('error', errorHandler))
@@ -170,6 +178,9 @@ gulp.task('html', (cb) => {
           read: false
         })
           .pipe(plumber())
+
+          // Skip unchanged files
+          .pipe(skipUnchanged())
 
           // Prepare for Handlebars compiling by replacing file content with layout and saving content to `contents` property
           .pipe(through.obj((file, enc, cb) => {
