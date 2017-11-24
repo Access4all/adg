@@ -15,6 +15,7 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.18.12",
+    "del": "^3.0.0",
     "front-matter": "^2.2.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-changed": "^3.1.1",

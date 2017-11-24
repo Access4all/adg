@@ -13,6 +13,7 @@ const plumber = require('gulp-plumber')
 const util = require('gulp-util')
 const exhaustively = require('stream-exhaust')
 const changed = require('gulp-changed')
+const del = require('del')
 
 function errorHandler(err) {
   util.log(err.plugin || '', util.colors.cyan(err.fileName), util.colors.red(err.message));
@@ -167,10 +168,10 @@ gulp.task('html', (cb) => {
       .on('end', () => {
         // Create navigation hierarchy
         navigation = navigation.map((page) => {
-          page.children = navigation.filter((child) => child.parents.includes(page.url))
+          page.children = navigation.filter((child) => child.parents.includes(page.url)).sort((a, b) => a.position - b.position)
 
           return page
-        })
+        }).sort((a, b) => a.position - b.position)
 
         // Skip reading file contents and use cached `pages` instead
         gulp.src(config.src, {
@@ -249,7 +250,9 @@ gulp.task('media', () => {
     .pipe(gulp.dest('./build'))
 })
 
-gulp.task('build', gulp.series('css', 'html', 'js', 'media'))
+gulp.task('clean', () => del('./build'))
+
+gulp.task('build', gulp.series('clean', 'css', 'html', 'js', 'media'))
 
 gulp.task('default', gulp.series('build', function serveAndWatch() {
   browserSync.init({
