@@ -240,14 +240,14 @@ gulp.task('media', () => {
 
 gulp.task('build', gulp.series('css', 'html', 'js', 'media'))
 
-gulp.task('default', gulp.series('build', () => {
+gulp.task('default', gulp.series('build', function serveAndWatch() {
   browserSync.init({
     server: {
       baseDir: './build'
     }
   })
 
-  gulp.watch(['./static/**/*.scss'], ['css'])
-  gulp.watch(['./pages/**/*.md', './layouts/*.hbs', './partials/*.hbs', './helpers/*'], ['html'])
-  gulp.watch(['./pages/{,**/}_media/**/*'], ['media'])
+  gulp.watch(['./static/**/*.scss'], gulp.series('css'))
+  gulp.watch(['./pages/**/*.md', './layouts/*.hbs', './partials/*.hbs', './helpers/*'], gulp.series('html'))
+  gulp.watch(['./pages/{,**/}_media/**/*'], gulp.series('media'))
 }))
