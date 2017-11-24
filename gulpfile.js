@@ -9,6 +9,13 @@ const path = require('path')
 const browserSync = require('browser-sync').create()
 const requireNew = require('require-new')
 const webpack = require('webpack')
+const plumber = require('gulp-plumber')
+const util = require('gulp-util')
+const exhaustively = require('stream-exhaust')
+
+function errorHandler(err) {
+  util.log(err.plugin || '', util.colors.cyan(err.fileName), util.colors.red(err.message));
+}
 
 gulp.task('js', (cb) => {
   const compiler = webpack({
@@ -80,7 +87,7 @@ gulp.task('css', () => {
   })
     .pipe(sass({
       includePaths: ['node_modules']
-    }).on('error', console.log))
+    }).on('error', errorHandler))
     .pipe(gulp.dest('./build'))
     .pipe(browserSync.stream())
 })
@@ -115,15 +122,16 @@ gulp.task('html', (cb) => {
     return layout
   }
 
-  gulp.src(config.src, {
+  const stream = gulp.src(config.src, {
     base: config.base
   })
+    .pipe(plumber())
 
     // Extract YAML front matter
-    .pipe(frontMatter().on('error', console.log))
+    .pipe(frontMatter().on('error', errorHandler))
 
     // Compile Markdown to HTML
-    .pipe(markdown().on('error', console.log))
+    .pipe(markdown().on('error', errorHandler))
 
     // Save result to `pages` to prevent having to read the file again in the second build step
     .pipe(through.obj((file, enc, cb) => {
@@ -145,73 +153,82 @@ gulp.task('html', (cb) => {
       return cb(null, file)
     }))
 
-    // Second build step
-    .on('finish', () => {
+    // Make sure the stream is flowing even without having a sink 
+    exhaustively(stream)
+      // Second build step
+      .on('end', () => {
+        // Create navigation hierarchy
+        navigation = navigation.map((page) => {
+          page.children = navigation.filter((child) => child.parents.includes(page.url))
 
-      // Create navigation hierarchy
-      navigation = navigation.map((page) => {
-        page.children = navigation.filter((child) => child.parents.includes(page.url))
-
-        return page
-      })
-
-      // Skip reading file contents and use cached `pages` instead
-      gulp.src(config.src, {
-        base: config.base,
-        read: false
-      })
-
-        // Prepare for Handlebars compiling by replacing file content with layout and saving content to `contents` property
-        .pipe(through.obj((file, enc, cb) => {
-          const identifier = getIdentifier(file.path)
-          const page = pages[identifier]
-          const layout = getLayout(page.data.layout)
-          
-          file.data = {
-            title: page.data.title,
-            contents: page.contents,
-            navigation: navigation
-          }
-
-          file.contents = layout
-
-          return cb(null, file)
-        }))
-
-        // Compile Handlebars to HTML
-        .pipe(handlebars({
-          partials: './partials/**/*.hbs',
-          parsePartialName: (options, file) => {
-            return path.relative('./', file.path).replace(path.extname(file.path), '')
-          },
-          helpers: {
-            skipPage: (page, sublevel, options) => {
-              // Skip sublevels in first navigation iteration
-              return !sublevel && page.parents.length
-            }
-          }
-        }))
-
-        // Format
-        .pipe(prettify({
-          indent_with_tabs: false,
-          max_preserve_newlines: 1
-        }))
-
-        // Rename to `index.html`
-        .pipe(through.obj((file, enc, cb) => {
-          file.path = file.path.replace(path.basename(file.path), 'index.html')
-
-          return cb(null, file)
-        }))
-
-        .pipe(gulp.dest('./build'))
-        .on('finish', () => {
-          browserSync.reload()
-
-          return cb()
+          return page
         })
-    })
+
+        // Skip reading file contents and use cached `pages` instead
+        gulp.src(config.src, {
+          base: config.base,
+          read: false
+        })
+          .pipe(plumber())
+
+          // Prepare for Handlebars compiling by replacing file content with layout and saving content to `contents` property
+          .pipe(through.obj((file, enc, cb) => {
+            try {
+              const identifier = getIdentifier(file.path)
+              const page = pages[identifier]
+              const layout = getLayout(page.data.layout)
+              
+              file.data = {
+                title: page.data.title,
+                contents: page.contents,
+                navigation: navigation
+              }
+
+              file.contents = layout
+
+              return cb(null, file)
+            } catch (err) {
+              err.plugin = 'data'
+              err.fileName = file.path
+
+              return cb(err, file)
+            }
+          }).on('error', errorHandler))
+
+          // Compile Handlebars to HTML
+          .pipe(handlebars({
+            partials: './partials/**/*.hbs',
+            parsePartialName: (options, file) => {
+              return path.relative('./', file.path).replace(path.extname(file.path), '')
+            },
+            helpers: {
+              skipPage: (page, sublevel, options) => {
+                // Skip sublevels in first navigation iteration
+                return !sublevel && page.parents.length
+              }
+            }
+          }).on('error', errorHandler))
+
+          // Format
+          .pipe(prettify({
+            indent_with_tabs: false,
+            max_preserve_newlines: 1
+          }))
+
+          // Rename to `index.html`
+          .pipe(through.obj((file, enc, cb) => {
+            file.path = file.path.replace(path.basename(file.path), 'index.html')
+
+            return cb(null, file)
+          }))
+
+          .pipe(gulp.dest('./build'))
+          .on('finish', () => {
+            browserSync.reload()
+
+            return cb()
+          })
+      })
 })
 
 gulp.task('media', () => {
@@ -221,11 +238,9 @@ gulp.task('media', () => {
     .pipe(gulp.dest('./build'))
 })
 
-gulp.task('build', ['css', 'html', 'js', 'media'], (cb) => {
-  return cb()
-})
+gulp.task('build', gulp.series('css', 'html', 'js', 'media'))
 
-gulp.task('default', ['build'], () => {
+gulp.task('default', gulp.series('build', () => {
   browserSync.init({
     server: {
       baseDir: './build'
@@ -235,4 +250,4 @@ gulp.task('default', ['build'], () => {
   gulp.watch(['./static/**/*.scss'], ['css'])
   gulp.watch(['./pages/**/*.md', './layouts/*.hbs', './partials/*.hbs', './helpers/*'], ['html'])
   gulp.watch(['./pages/{,**/}_media/**/*'], ['media'])
-})
+}))
