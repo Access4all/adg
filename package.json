@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "prettier": "prettier-standard '*.js'",
+    "precommit": "npm run prettier"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +18,11 @@
     "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.18.12",
     "del": "^3.0.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
     "front-matter": "^2.2.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-front-matter": "^1.3.0",
@@ -26,6 +33,8 @@
     "gulp-sass": "^3.1.0",
     "gulp-util": "^3.0.8",
     "highlight.js": "^9.12.0",
+    "husky": "^0.14.3",
+    "prettier-standard": "^7.0.3",
     "require-new": "^1.1.1",
     "webpack": "^3.8.1"
   },
