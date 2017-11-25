@@ -11,8 +11,6 @@ const requireNew = require('require-new')
 const webpack = require('webpack')
 const plumber = require('gulp-plumber')
 const util = require('gulp-util')
-const exhaustively = require('stream-exhaust')
-const changed = require('gulp-changed')
 const del = require('del')
 
 function errorHandler(err) {
@@ -101,22 +99,15 @@ gulp.task('html', (cb) => {
     src: './pages/**/*.md',
     base: './pages'
   }
-  let pages = {}
-  let layouts = {}
-  let navigation = []
 
-  const skipUnchanged = () => changed('./build', {
-      transformPath: filePath => filePath.replace(path.basename(filePath), 'index.html')
-  })
+  const files = []
+  const layouts = {}
+  let navigation = []
 
   const getUrl = (filePath) => {
     return path.relative(config.base, filePath)
       .replace(path.basename(filePath), '')
       .replace(/\/$/, '')
-  }
-
-  const getIdentifier = (filePath) => {
-    return filePath.replace(path.extname(filePath), '')
   }
 
   const getLayout = (layoutName) => {
@@ -128,13 +119,10 @@ gulp.task('html', (cb) => {
     return layout
   }
 
-  const stream = gulp.src(config.src, {
+  return gulp.src(config.src, {
     base: config.base
   })
     .pipe(plumber())
-
-    // Skip unchanged files
-    .pipe(skipUnchanged())
 
     // Extract YAML front matter
     .pipe(frontMatter().on('error', errorHandler))
@@ -142,16 +130,12 @@ gulp.task('html', (cb) => {
     // Compile Markdown to HTML
     .pipe(markdown().on('error', errorHandler))
 
-    // Save result to `pages` to prevent having to read the file again in the second build step
+    // Build up navigation
     .pipe(through.obj((file, enc, cb) => {
       const url = getUrl(file.path)
       const parents = url.split('/').slice(0, -1).filter((item) => item !== '')
-      const identifier = getIdentifier(file.path)
 
-      pages[identifier] = {
-        contents: file.contents,
-        data: file.frontMatter
-      }
+      files.push(file);
 
       navigation.push({
         url,
@@ -159,88 +143,75 @@ gulp.task('html', (cb) => {
         title: file.frontMatter.title
       })
 
+      return cb()
+    }, function(cb) {
+      // Create navigation hierarchy
+      navigation = navigation.map((page) => {
+        page.children = navigation.filter((child) => child.parents.includes(page.url)).sort((a, b) => a.position - b.position)
+
+        return page
+      }).sort((a, b) => a.position - b.position)
+
+      // Return files back to stream
+      files.forEach(this.push.bind(this))
+
+      return cb()
+    }))
+
+    // Prepare for Handlebars compiling by replacing file content with layout and saving content to `contents` property
+    .pipe(through.obj((file, enc, cb) => {
+      try {
+        const layout = getLayout(file.frontMatter.layout)
+        
+        file.data = {
+          title: file.frontMatter.title,
+          contents: file.contents,
+          navigation: navigation
+        }
+
+        file.contents = layout
+
+        return cb(null, file)
+      } catch (err) {
+        err.plugin = 'data'
+        err.fileName = file.path
+
+        return cb(err, file)
+      }
+    }).on('error', errorHandler))
+
+    // Compile Handlebars to HTML
+    .pipe(handlebars({
+      partials: './partials/**/*.hbs',
+      parsePartialName: (options, file) => {
+        return path.relative('./', file.path).replace(path.extname(file.path), '')
+      },
+      helpers: {
+        skipPage: (page, sublevel, options) => {
+          // Skip sublevels in first navigation iteration
+          return !sublevel && page.parents.length
+        }
+      }
+    }).on('error', errorHandler))
+
+    // Format
+    .pipe(prettify({
+      indent_with_tabs: false,
+      max_preserve_newlines: 1
+    }))
+
+    // Rename to `index.html`
+    .pipe(through.obj((file, enc, cb) => {
+      file.path = file.path.replace(path.basename(file.path), 'index.html')
+
       return cb(null, file)
     }))
 
-    // Make sure the stream is flowing even without having a sink 
-    exhaustively(stream)
-      // Second build step
-      .on('end', () => {
-        // Create navigation hierarchy
-        navigation = navigation.map((page) => {
-          page.children = navigation.filter((child) => child.parents.includes(page.url)).sort((a, b) => a.position - b.position)
+    .pipe(gulp.dest('./build'))
 
-          return page
-        }).sort((a, b) => a.position - b.position)
-
-        // Skip reading file contents and use cached `pages` instead
-        gulp.src(config.src, {
-          base: config.base,
-          read: false
-        })
-          .pipe(plumber())
-
-          // Skip unchanged files
-          .pipe(skipUnchanged())
-
-          // Prepare for Handlebars compiling by replacing file content with layout and saving content to `contents` property
-          .pipe(through.obj((file, enc, cb) => {
-            try {
-              const identifier = getIdentifier(file.path)
-              const page = pages[identifier]
-              const layout = getLayout(page.data.layout)
-              
-              file.data = {
-                title: page.data.title,
-                contents: page.contents,
-                navigation: navigation
-              }
-
-              file.contents = layout
-
-              return cb(null, file)
-            } catch (err) {
-              err.plugin = 'data'
-              err.fileName = file.path
-
-              return cb(err, file)
-            }
-          }).on('error', errorHandler))
-
-          // Compile Handlebars to HTML
-          .pipe(handlebars({
-            partials: './partials/**/*.hbs',
-            parsePartialName: (options, file) => {
-              return path.relative('./', file.path).replace(path.extname(file.path), '')
-            },
-            helpers: {
-              skipPage: (page, sublevel, options) => {
-                // Skip sublevels in first navigation iteration
-                return !sublevel && page.parents.length
-              }
-            }
-          }).on('error', errorHandler))
-
-          // Format
-          .pipe(prettify({
-            indent_with_tabs: false,
-            max_preserve_newlines: 1
-          }))
-
-          // Rename to `index.html`
-          .pipe(through.obj((file, enc, cb) => {
-            file.path = file.path.replace(path.basename(file.path), 'index.html')
-
-            return cb(null, file)
-          }))
-
-          .pipe(gulp.dest('./build'))
-          .on('finish', () => {
-            browserSync.reload()
-
-            return cb()
-          })
-      })
+    .on('finish', () => {
+      browserSync.reload()
+    })
 })
 
 gulp.task('media', () => {
