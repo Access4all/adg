@@ -34,7 +34,7 @@ renderer.link = function(href, title, text) {
     case '[Code]':
       code = getCode(href)
 
-      const description = `<p>${code.details.description}</p>`
+      const description = code.details.description ? `<p>${code.details.description}</p>` : ''
 
       const blocks = ['html', 'css', 'js'].map((type) => {
         const markup = hljs.highlightAuto(code[type])
