@@ -13,6 +13,7 @@ const webpack = require('webpack')
 const plumber = require('gulp-plumber')
 const util = require('gulp-util')
 const del = require('del')
+const once = require('once')
 
 function errorHandler (err) {
   util.log(
@@ -57,34 +58,50 @@ gulp.task('js', cb => {
     }
   })
 
-  compiler.run((err, stats) => {
+  const log = (err, stats) => {
     if (err) {
       console.log(err)
 
       return cb()
     }
 
-    console.log(
-      stats.toString({
-        colors: true,
-        hash: false,
-        timings: false,
-        chunks: false,
-        chunkModules: false,
-        modules: false,
-        children: true,
-        version: true,
-        cached: false,
-        cachedAssets: false,
-        reasons: false,
-        source: false,
-        errorDetails: false,
-        assetsSort: 'name'
-      })
-    )
+    const formattedStats = stats.toString({
+      colors: true,
+      hash: false,
+      timings: false,
+      chunks: false,
+      chunkModules: false,
+      modules: false,
+      children: true,
+      version: true,
+      cached: false,
+      cachedAssets: false,
+      reasons: false,
+      source: false,
+      errorDetails: false,
+      assetsSort: 'name'
+    })
 
-    return cb()
-  })
+    console.log(formattedStats)
+  }
+
+  if (util.env.watch) {
+    compiler.watch({}, (err, stats) => {
+      cb = once(cb)
+
+      log(err, stats)
+
+      browserSync.reload()
+
+      return cb()
+    })
+  } else {
+    compiler.run((err, stats) => {
+      log(err, stats)
+
+      return cb()
+    })
+  }
 })
 
 gulp.task('css', () => {
@@ -277,26 +294,34 @@ gulp.task('build', gulp.series('clean', 'css', 'html', 'js', 'media'))
 
 gulp.task(
   'default',
-  gulp.series('build', function serveAndWatch () {
-    browserSync.init({
-      server: {
-        baseDir: './dist'
-      }
-    })
+  gulp.series(
+    function setWatchEnv (cb) {
+      util.env.watch = true
 
-    gulp.watch(
-      ['./src/assets/css/**/*.scss', './src/components/**/*.scss'],
-      gulp.series('css')
-    )
-    gulp.watch(
-      [
-        './pages/**/*.md',
-        './src/templates/**/*.hbs',
-        './src/components/**/*.hbs',
-        './helpers/*'
-      ],
-      gulp.series('html')
-    )
-    gulp.watch(['./pages/{,**/}_media/**/*'], gulp.series('media'))
-  })
+      return cb()
+    },
+    'build',
+    function serveAndWatch () {
+      browserSync.init({
+        server: {
+          baseDir: './dist'
+        }
+      })
+
+      gulp.watch(
+        ['./src/assets/css/**/*.scss', './src/components/**/*.scss'],
+        gulp.series('css')
+      )
+      gulp.watch(
+        [
+          './pages/**/*.md',
+          './src/templates/**/*.hbs',
+          './src/components/**/*.hbs',
+          './helpers/*'
+        ],
+        gulp.series('html')
+      )
+      gulp.watch(['./pages/{,**/}_media/**/*'], gulp.series('media'))
+    }
+  )
 )
