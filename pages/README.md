@@ -1,22 +1,17 @@
 ---
 layout: layout
-title: Home
-tags:
- - bla2
-includeRelated: true
+title: "Welcome to the Accessibility Developer Guide (ADG)"
+lead: "Lead. Lead. Lead. Lead. Lead. Lead. Lead. Lead. Lead. Lead. Lead."
 ---
 
-# Hello
+# Here is a title
 
-Yay!
+## And a sub title
 
-```js
-const x = 'bla';
-```
+And there is a text.
 
-![Screenshot](_media/screenshot.png)
+Yeah.
 
-[[News]](news/)
 
 ## Abbreviations
 
@@ -45,7 +40,3 @@ you should *style me*{.red} in red
 ```python {data=asdf}
 nums = [x for x in range(10)]
 ```
-
-## Sample (currently non fully working)
-
-´´´\nresult\n´´´\n

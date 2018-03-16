@@ -1,0 +1,26 @@
+.breadcrumbs {
+    margin-bottom: 2 * $gutter;
+}
+
+
+.breadcrumbs--list {
+    display: block;
+    font-size: 0;
+}
+
+.breadcrumbs--list--item {
+    display: inline-block;
+    & + & {
+        margin-left: $gutter / 2;
+    }
+}
+
+.breadcrumbs--list--item--link {
+    display: block;
+    @include font-s;
+    &:after {
+        content: "/";
+        padding-left: $gutter / 2;
+        display: inline-block;
+    }
+}

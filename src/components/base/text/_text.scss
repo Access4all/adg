@@ -1,0 +1,7 @@
+
+.richtext {
+	@include richtext(all);
+	& > *:first-child {
+		margin-top: 0;
+	}
+}

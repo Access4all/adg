@@ -1,0 +1,26 @@
+.control, fieldset {
+  margin: 6px 0;
+}
+
+label {
+  display: inline-block;
+  width: 120px;
+  vertical-align: top;
+}
+
+input + label {
+  width: auto;
+}
+
+.description {
+  margin-top: 0;
+  margin-left: 120px;
+}
+
+fieldset .description {
+  margin-left: 22px;
+}
+
+ul {
+  margin-top: 0;
+}

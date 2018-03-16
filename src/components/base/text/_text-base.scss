@@ -1,0 +1,233 @@
+@mixin body-font {
+	font-family: $base_font;
+	@include font-size($base-font-size);
+	line-height: $base-line-height;
+	color: $base-font-color;
+}
+
+@mixin font-xxl {
+	@include font-size(110px);
+	line-height: 1.1;
+}
+
+@mixin font-xl {
+	@include font-size(64px);
+	line-height: 1.22;
+}
+
+@mixin font-l {
+	@include font-size(48px);
+	line-height: 1.13;
+}
+
+@mixin font-m {
+	@include font-size(24px);
+	line-height: 1.37;
+}
+
+@mixin font-s {
+	@include font-size(20px);
+	line-height: 1.5;
+}
+
+@mixin font-xs {
+	@include font-size(16px);
+	line-height: 1.5;
+}
+
+
+@mixin h1 {
+	@include font-xxl;
+	font-family: $brand-font;
+}
+
+@mixin h2 {
+	@include font-l;
+	font-family: $brand-font;
+}
+
+@mixin h3 {
+	@include font-m;
+	font-family: $base-font;
+}
+
+@mixin h4 {
+	@include font-s;
+	@include font-weight(bold);
+	font-family: $base-font;
+}
+
+@mixin paragraph {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+@mixin strong {
+	@include font-weight(bold);
+}
+
+@mixin a {
+	text-decoration: underline;
+	&:hover {
+		color: $c-green-light;
+	}
+}
+
+@mixin pre {
+	padding: 20px;
+	background: $c-white;
+}
+@mixin code {
+	background: white;
+}
+
+
+@mixin ul {
+	margin-top: 1ex;
+	margin-bottom: 1em;
+	> li {
+		@include ul_li;
+	}
+}
+
+@mixin ul_li {
+	position: relative;
+	padding-left: 1.333333em;
+	padding-bottom: .25em;
+	list-style-type: none;
+	&:before {
+		position: absolute;
+		left: 0;
+		display: inline-block;
+		width: 2ex;
+		content: "\2013";
+	}
+}
+
+%ul {
+	@include ul;
+}
+
+@mixin ol {
+	html.no-ie & {
+		@include ul;
+		counter-reset: ol--counter;
+		> li {
+			@include ol_li;
+		}
+	}
+	html.ie & {
+		> li {
+			list-style: decimal inside none;
+		}
+	}
+}
+@mixin ol_li {
+	list-style-type: none;
+	&:before {
+		counter-increment: ol--counter;
+		content: counter(ol--counter) '.';
+		text-align: right;
+	}
+}
+%ol {
+	@include ol;
+}
+@mixin dl {
+	display: block;
+	@include clearfix;
+	position: relative;
+	> dt,
+	> dd {
+		float: left;
+		margin-bottom: 20px;
+		&:last-of-type {
+			margin-bottom: 0px;
+		}
+	}
+	> dt {
+		@include font-weight(bold);
+		clear: left;
+		margin-right: 1ex;
+		&:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			border-bottom: 1px solid $c-font;
+			transform: translateY(-10px);
+		}
+		&:first-child {
+			&:after {
+				border-bottom: 0;
+			}
+		}
+	}
+	> dd {
+	}
+}
+
+@mixin table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+@mixin richtext($include: most) {
+	@if $include == all {
+		h1 {
+			@include h1;
+			margin-bottom: 0.5ex;
+		}
+		h2 {
+			@include h2;
+			margin-top: 1.5em;
+			margin-bottom: 0.5ex;
+		}
+		h3 {
+			@include h3;
+			margin-top: 1.5em;
+			margin-bottom: 0.5ex;
+		}
+		pre {
+			margin: 1em 0;
+			@include pre;
+		}
+		code {
+			@include code;
+		}
+		pre code, pre pre, code pre {
+			background: transparent;
+		}
+
+	}
+	@if $include == most or $include == all {
+		table {
+			@include table;
+		}
+		p {
+			@include paragraph;
+		}
+
+		ul {
+			margin: 1em 0;
+			@include ul;
+		}
+		ol {
+			margin: 1em 0;
+			@include ol;
+		}
+		dl {
+			margin: 1em 0;
+			@include dl;
+		}
+	}
+	strong {
+		@include strong;
+	}
+	a {
+		@include a;
+	}
+}

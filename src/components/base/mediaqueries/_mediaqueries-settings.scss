@@ -7,6 +7,17 @@ $mq-tablet             : 1050px !default;
 $mq-desktop            : 1382px !default;
 
 
+@mixin max-width($width) {
+	@media (max-width : $width) {
+		@content;
+	}
+}
+@mixin min-width($width) {
+	@media (min-width : $width) {
+		@content;
+	}
+}
+
 
 @mixin mobile-portrait {
 	@media (max-width : $mq-mobile-portrait) {

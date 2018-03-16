@@ -1,0 +1,72 @@
+html {
+	width: 100%;
+	overflow-x: hidden;
+	font-size: $base-font-size;
+	font-size: $base-font-size / 16px * 100%;
+	@include tablet {
+		font-size: $base-font-size / 16px * 95%;
+	}
+	@include mobile {
+		font-size: $base-font-size / 16px * 90%;
+	}
+	@include mobile-portrait {
+		font-size: $base-font-size / 16px * 85%;
+	}
+	text-size-adjust: 100%;
+	background-color: $c-white;
+	&.no-overflow {
+		overflow-y: hidden;
+	}
+}
+
+body {
+	@include body-font;
+	overflow-x: hidden;
+	background-color: $c-background;
+
+	@media print {
+		background-color: $c-white;
+	}
+}
+
+body,
+input,
+select,
+button,
+textarea {
+	@include textantialiasing;
+}
+
+
+// links
+a:active {
+	outline: none;
+}
+
+a:selected {
+	border: none;
+	outline: none;
+}
+
+*:focus {
+	outline: none;
+}
+
+abbr {
+	border-bottom: 1px dotted gray;
+}
+
+p sup {
+	position: relative;
+	top: -0.75ex;
+}
+
+p sub {
+	position: relative;
+	top: 0.5ex;
+}
+
+button {
+	cursor: pointer;
+	border-radius: 0;
+}

@@ -1,0 +1,56 @@
+.visuallyhidden {
+	@include visuallyhidden;
+}
+
+tr.visuallyhidden {
+	position: static !important;
+	> tr, > th {
+		@extend %visuallyhidden-tablecell;
+	}
+}
+th.visuallyhidden,
+td.visuallyhidden {
+	@extend %visuallyhidden-tablecell;
+}
+
+
+.is-screenreader {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.is-screenreader {
+	&:focus,
+	&:active,
+	&.had-focus {
+		clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
+
+	}
+}
+button.is-screenreader:focus {
+	background-color: black;
+	color: white;
+	padding: 5px 10px;
+}
+.aa-fixed_button:focus {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+}
+.aa-fixed_button.at-bottom:focus {
+	top: auto;
+	left: auto;
+	bottom: 20px;
+	right: 20px;
+}

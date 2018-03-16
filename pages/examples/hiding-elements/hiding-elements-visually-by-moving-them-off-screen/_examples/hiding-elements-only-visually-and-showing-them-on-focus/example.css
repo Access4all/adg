@@ -1,0 +1,17 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  left: -10000px;
+}
+.visually-hidden:focus {
+  width: auto;
+  height: auto;
+}
+
+#jump {
+  left: 0;
+  background-color: white;
+  border: 1px solid black;
+}
