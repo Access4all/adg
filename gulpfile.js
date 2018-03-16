@@ -95,11 +95,7 @@ gulp.task('css', () => {
     .pipe(
       sass({
         importer: nodeSassGlobbing,
-        includePaths: [
-          'node_modules',
-          './src/assets/css/',
-          './src/components/'
-        ]
+        includePaths: ['node_modules', './src/assets/css/', './src/components/']
       }).on('error', errorHandler)
     )
     .pipe(gulp.dest('./dist'))
