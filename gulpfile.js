@@ -155,7 +155,7 @@ gulp.task('html', cb => {
             navigation.push({
               url,
               parents,
-              title: file.frontMatter.title
+              title: file.frontMatter.navigation_title
             })
 
             return cb()
