@@ -24,7 +24,7 @@ function errorHandler (err) {
 gulp.task('js', cb => {
   const compiler = webpack({
     entry: {
-      scripts: './static/js/scripts.js'
+      scripts: './source/assets/js/scripts.js'
     },
     mode: 'development',
     module: {
@@ -88,8 +88,8 @@ gulp.task('js', cb => {
 
 gulp.task('css', () => {
   return gulp
-    .src('./static/**/*.scss', {
-      base: './static'
+    .src('./source/assets/**/*.scss', {
+      base: './source/assets'
     })
     .pipe(
       sass({
@@ -125,7 +125,7 @@ gulp.task('html', cb => {
     // Read layout file only once
     const layout = (layouts[layoutName] =
       layouts[layoutName] ||
-      fs.readFileSync('./layouts/' + layoutName + '.hbs'))
+      fs.readFileSync('./source/templates/' + layoutName + '.hbs'))
 
     return layout
   }
@@ -136,10 +136,13 @@ gulp.task('html', cb => {
         base: config.base
       })
       .pipe(plumber())
+
       // Extract YAML front matter
       .pipe(frontMatter().on('error', errorHandler))
+
       // Compile Markdown to HTML
       .pipe(markdown().on('error', errorHandler))
+
       // Build up navigation
       .pipe(
         through.obj(
@@ -179,6 +182,7 @@ gulp.task('html', cb => {
           }
         )
       )
+
       // Prepare for Handlebars compiling by replacing file content with layout and saving content to `contents` property
       .pipe(
         through
@@ -204,13 +208,14 @@ gulp.task('html', cb => {
           })
           .on('error', errorHandler)
       )
+
       // Compile Handlebars to HTML
       .pipe(
         handlebars({
-          partials: './partials/**/*.hbs',
+          partials: './source/components/**/*.hbs',
           parsePartialName: (options, file) => {
             return path
-              .relative('./', file.path)
+              .relative('./source/components', file.path)
               .replace(path.extname(file.path), '')
           },
           helpers: {
@@ -221,6 +226,7 @@ gulp.task('html', cb => {
           }
         }).on('error', errorHandler)
       )
+
       // Format
       .pipe(
         prettify({
@@ -228,6 +234,7 @@ gulp.task('html', cb => {
           max_preserve_newlines: 1
         })
       )
+
       // Rename to `index.html`
       .pipe(
         through.obj((file, enc, cb) => {
@@ -264,9 +271,14 @@ gulp.task(
       }
     })
 
-    gulp.watch(['./static/**/*.scss'], gulp.series('css'))
+    gulp.watch(['./source/assets/**/*.scss'], gulp.series('css'))
     gulp.watch(
-      ['./pages/**/*.md', './layouts/*.hbs', './partials/*.hbs', './helpers/*'],
+      [
+        './pages/**/*.md',
+        './source/templates/*.hbs',
+        './source/components/*.hbs',
+        './helpers/*'
+      ],
       gulp.series('html')
     )
     gulp.watch(['./pages/{,**/}_media/**/*'], gulp.series('media'))
