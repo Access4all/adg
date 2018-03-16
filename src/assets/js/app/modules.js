@@ -2,9 +2,6 @@ import contextTrigger from '../lib/util/contextTrigger'
 import ModuleManager from '../lib/util/ModuleManager'
 
 export default () => {
-  contextTrigger = contextTrigger.default
-  ModuleManager = ModuleManager.default
-
   // every module should at least implement two methods
   // Module.init = function( HTMLElement )
   // Module.destroy = function()

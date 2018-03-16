@@ -54,7 +54,9 @@ gulp.task('js', cb => {
     plugins: [],
     output: {
       path: path.resolve('./dist/js/'),
-      filename: '[name].js'
+      filename: '[name].js',
+      chunkFilename: 'async/[name].js',
+      publicPath: '/js/'
     }
   })
 
