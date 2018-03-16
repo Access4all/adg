@@ -1,12 +1,5 @@
-const markdown = require('markdown-it')({
-  plugins: [
-    'markdown-it-abbr',
-    'markdown-it-attrs',
-    'markdown-it-deflist',
-    'markdown-it-kbd',
-    'markdown-it-samp'
-  ]
-})
+const markdown = require('markdown-it')()
+const iterator = require('markdown-it-for-inline')
 const markdownPlugin = require('markdown-it-regexp')
 const fs = require('fs')
 const path = require('path')
@@ -16,7 +9,7 @@ const hljs = require('highlight.js')
 const getFile = (files, type, href) => {
   const match = files.find(file => path.extname(file) === `.${type}`)
   const content = match
-    ? fs.readFileSync(path.join('.', href, match)).toString()
+    ? fs.readFileSync(path.join('./pages', href, match)).toString()
     : ''
 
   if (type === 'details') {
@@ -27,7 +20,7 @@ const getFile = (files, type, href) => {
 }
 
 const getCode = href => {
-  const files = fs.readdirSync(path.join('.', href))
+  const files = fs.readdirSync(path.join('./pages', href))
 
   return {
     details: getFile(files, 'details', href),
@@ -35,6 +28,19 @@ const getCode = href => {
     css: getFile(files, 'css', href),
     js: getFile(files, 'js', href)
   }
+}
+
+const getTitle = href => {
+  const filePath = path.join('./pages', href, '/README.md')
+
+  if (!fs.existsSync(filePath)) {
+    return false
+  }
+
+  const file = fs.readFileSync(filePath).toString()
+  const meta = frontMatter(file).attributes
+
+  return meta.title
 }
 
 const codePlugin = markdownPlugin(/@code\((.*?)\)/, (match, utils) => {
@@ -81,6 +87,28 @@ const codePlugin = markdownPlugin(/@code\((.*?)\)/, (match, utils) => {
   ${codePenForm}`
 })
 
-markdown.use(codePlugin)
+markdown
+  .use(codePlugin)
+  .use(require('markdown-it-abbr'))
+  .use(require('markdown-it-attrs'))
+  .use(require('markdown-it-deflist'))
+  .use(require('markdown-it-kbd'))
+  .use(require('markdown-it-samp'))
+  .use(iterator, 'add_link_title', 'link_open', function (tokens, idx) {
+    const title = tokens[idx].attrGet('title')
+
+    if (title) {
+      return
+    }
+
+    const href = tokens[idx].attrGet('href')
+    const metaTitle = getTitle(href)
+
+    if (!metaTitle) {
+      return
+    }
+
+    tokens[idx].attrSet('title', metaTitle)
+  })
 
 module.exports = markdown

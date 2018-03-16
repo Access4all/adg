@@ -41,6 +41,7 @@
     "markdown-it-abbr": "^1.0.4",
     "markdown-it-attrs": "^1.2.1",
     "markdown-it-deflist": "^2.0.3",
+    "markdown-it-for-inline": "^0.1.1",
     "markdown-it-kbd": "^1.1.1",
     "markdown-it-regexp": "^0.4.0",
     "markdown-it-samp": "0.0.4",
