@@ -12,7 +12,7 @@ lead: "JAWS (Job Access With Speech) is one of the most used screen readers. The
 
 # Installation
 
-JAWS is a quite heavy piece of software that installs itself deeply into the Windows operating system. To keep your existing Windows clean, it is a good idea to install JAWS inside a virtual machine (VM), see [Windows virtual machine](/setup/windows){.page}.
+JAWS is a quite heavy piece of software that installs itself deeply into the Windows operating system. To keep your existing Windows clean, it is a good idea to install JAWS inside a virtual machine (VM), see [Windows operating system](/setup/windows){.page}.
 
 The demo version of JAWS forces you to restart your computer after 40 minutes (which is another good reason to have it run inside a VM).
 

@@ -2,7 +2,7 @@
 layout: layout
 title: "About the Accessibility Developer Guide (ADG)"
 navigation_title: "About"
-position: 10
+position: 9
 lead: ""
 ---
 

@@ -12,7 +12,7 @@ lead: "As forms are generally interacted with using focus mode in screen readers
 
 It's very tempting to simply span the `<label>` element around additional content:
 
-[**More Content in Form Labels**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.rzXMLG.small.bf8c2078-c0af-460d-966a-d9d60c478eca.png)](https://codepen.io/accessibility-developer-guide/pen/rzXMLG){.code}
+@code(/pages/examples/forms/non-interactive-content-in-forms/_examples/more-content-in-form-labels/){.code}
 
 For mouse users, this enlarges the clickable area: for example, click on the descriptive text below an input field, and the focus will be set into the input.
 
@@ -30,13 +30,13 @@ While it's perfectly valid HTML to associate more than a single `<label>` elemen
 
 So the following is no recommended solution:
 
-[**Associating Content to Form Inputs Using Multiple Labels**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.gxVzLN.small.a8318052-9415-468b-aa66-2ffe945b0ceb.png)](https://codepen.io/accessibility-developer-guide/pen/gxVzLN){.code}
+@code(/pages/examples/forms/non-interactive-content-in-forms/_examples/associating-content-to-form-inputs-using-multiple-labels/){.code}
 
 # A better approach: describing inputs using ARIA
 
 It's easy to attach descriptive text to any form element using `aria-describedby`:
 
-[**Associating Content to Form Inputs Using ARIA**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.xLvEaQ.small.2c42e7f7-9b7e-4d65-9515-97b47e7d300e.png)](https://codepen.io/accessibility-developer-guide/pen/xLvEaQ){.code}
+@code(/pages/examples/forms/non-interactive-content-in-forms/_examples/associating-content-to-form-inputs-using-aria/){.code}
 
 This works very well.
 
@@ -51,7 +51,7 @@ You can use `aria-describedby` on structured text (as you see in the example abo
 
 Take a look at the following example which overdoes the usage of `aria-describedby`:
 
-[**Associating Too Much Content to Form Inputs Using ARIA**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.wqVzLJ.small.9e91c9df-9eea-4579-87e2-b811b361f8e1.png)](https://codepen.io/accessibility-developer-guide/pen/wqVzLJ){.code}
+@code(/pages/examples/forms/non-interactive-content-in-forms/_examples/associating-too-much-content-to-form-inputs-using-aria/){.code}
 
 Admittedly, this example feels a bit artificial. But you get the point:
 
@@ -64,7 +64,7 @@ Admittedly, this example feels a bit artificial. But you get the point:
 
 Instead of referencing all the info, simply give the user a clue that there is more info somewhere (below a form field, at the end of the page, or wherever):
 
-[**Giving Clue About Additional Content in a Form**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.eEqBJP.small.ad4dcde6-0288-4c7c-bf43-144ab1287305.png)](https://codepen.io/accessibility-developer-guide/pen/eEqBJP){.code}
+@code(/pages/examples/forms/non-interactive-content-in-forms/_examples/giving-clue-about-additional-content-in-a-form/){.code}
 
 The example above shows three ways to give a user clue about additional info:
 

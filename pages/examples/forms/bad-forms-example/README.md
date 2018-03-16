@@ -10,7 +10,7 @@ lead: "There can be a lot messed up in a form, making it hardly accessible in ma
 
 The following example shows a basic form which (technically) is **perfect HTML code, but lacking a lot of standard features** needed for setting elements in relationship with each other properly and triggering browser standard functionality.
 
-[**Bad Forms Example**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.JyQmgb.small.22f3865d-d744-4b69-bead-d744b2c6d43b.png)](https://codepen.io/accessibility-developer-guide/pen/JyQmgb){.code}
+@code(/pages/examples/forms/bad-forms-example/_examples/bad-forms-example/){.code}
 
 # Missing form container
 

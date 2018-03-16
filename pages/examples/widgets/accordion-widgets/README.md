@@ -32,7 +32,7 @@ See: [What is a "Proof of concept"?](/examples/widgets/what-is-a-proof-of-concep
 
 Based on the tablists' proof of concept, simply the layout is different.
 
-[**Proof of concept: Accordion**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.JOMZXE.small.5ba8271b-8d10-48c0-8617-35f3c8f511ee.png)](https://codepen.io/accessibility-developer-guide/pen/JOMZXE){.code}
+@code(/pages/examples/widgets/accordion-widgets/_examples/proof-of-concept-accordion/){.code}
 
 ## Checkboxes implementation
 
@@ -42,7 +42,7 @@ Based on the tablists' proof of concept:
 - Checkboxes replace the radio buttons to offer multiple selection
     - We waived using a `<fieldset>`/`<legend>` combination, as this is no traditional group of checkboxes (also, JAWS tends to be very wordy with focusable items nested within those)
 
-[**Proof of concept: Accordion Multi**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.eeyKgp.small.49eaa56f-7c43-4c5d-8c57-b3020138913b.png)](https://codepen.io/accessibility-developer-guide/pen/eeyKgp){.code}
+@code(/pages/examples/widgets/accordion-widgets/_examples/proof-of-concept-accordion-multi/){.code}
 
 **Notice:** By default, only the `Space` key is used to toggle a checkbox (while pressing `Enter` submits a form). To make it more intuitive for visual users (who don't know about any checkbox behind the scenes, and thinking they're interacting with a link or button), the `Enter` key was re-wired to also toggle the checkboxes.
 
@@ -50,7 +50,7 @@ Based on the tablists' proof of concept:
 
 It's relatively simple to create a custom carousel implementation using simple ARIA: Just add a link around each panel's header, and an `aria-expanded` attribute. Then toggle its value (`true`/`false`) and the visibility of the corresponding panel using JavaScript!
 
-[**Accordion: Proof of concept**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.vWpWmq.small.59afb197-3c42-4e1d-80a2-911ce179ac16.png)](https://codepen.io/accessibility-developer-guide/pen/vWpWmq){.code}
+@code(/pages/examples/widgets/accordion-widgets/_examples/accordion-proof-of-concept/){.code}
 
 While this may feel tempting in some circumstances, there are several drawbacks:
 
@@ -58,7 +58,7 @@ While this may feel tempting in some circumstances, there are several drawbacks:
 - This solution is less intuitive: a screen reader announcement "link X collapsed" is less expressive than "show panel X checkbox not checked" or "show panel X radio button not checked 2 of 3"
 - Missing backwards compatibility for older clients with incomplete/missing ARIA support
 
-So in line with [Our codex about clean and maintainable accessibility](/knowledge/codex){.page}, we urge you to always favour browser standard behaviour over ARIA.
+So in line with [Our codex about clean and maintainable accessibility](/welcome/how-to-read-use/codex){.page}, we urge you to always favour browser standard behaviour over ARIA.
 
 # 3rd party widgets
 

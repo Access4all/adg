@@ -17,7 +17,7 @@ In addition, they announce the frame:
 
 Also, both NVDA and JAWS allow navigating directly to any frame using the `m` key.
 
-[**General iFrame Example**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.aybwMM.small.c05e6cd2-1c8b-44aa-9d0b-65417ded8708.png)](https://codepen.io/accessibility-developer-guide/pen/aybwMM){.code}
+@code(/pages/examples/iframes/_examples/general-iframe-example/){.code}
 
 # Headings in iframes
 
@@ -25,7 +25,7 @@ Screen readers integrate headings from iframes directly into the heading outline
 
 The following bad example illustrates what can happen: the embedded content is meant to be part of the heading on level 2 "Dancing", but it defines its own headings on level 1.
 
-[**iFrame Example With Wrong Embedded Heading**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.BdNBVG.small.8bfd8393-09a4-473c-8970-7a23e118cb26.png)](https://codepen.io/accessibility-developer-guide/pen/BdNBVG){.code}
+@code(/pages/examples/iframes/_examples/iframe-example-with-wrong-embedded-heading/){.code}
 
 The resulting headings outline looks like this to a screen reader:
 
@@ -40,7 +40,7 @@ The resulting headings outline looks like this to a screen reader:
 
 To fix it, the headings in the embedded content need to be on the correct level relatively to the parent page.
 
-[**iFrame Example With Correct Embedded Heading**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.oeXvRp.small.4fd6f01b-19e9-42a3-bb00-e232b3be1960.png)](https://codepen.io/accessibility-developer-guide/pen/oeXvRp){.code}
+@code(/pages/examples/iframes/_examples/iframe-example-with-correct-embedded-heading/){.code}
 
 Now the resulting headings outline looks correct:
 

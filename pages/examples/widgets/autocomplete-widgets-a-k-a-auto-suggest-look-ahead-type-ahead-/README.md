@@ -14,11 +14,11 @@ Best known from search fields (like [Google](https://www.google.com) or [YouTube
 
 Von allen aktuell getestete Variante:
 
-[](@code-accessibility-developer-guide-VrqoXj)
+Link wurde falsch exportiert!
 
 Fork (Weiterentwicklung aktiv):
 
-[**Autocomplete: Proof of concept**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.aVMqdb.small.6d572e01-1736-44e4-91a8-3618896b5bf3.png)](https://codepen.io/accessibility-developer-guide/pen/aVMqdb){.code}
+@code(/pages/examples/widgets/autocomplete-widgets-a-k-a-auto-suggest-look-ahead-type-ahead-/_examples/autocomplete-proof-of-concept/){.code}
 
 # Multiple
 
@@ -26,4 +26,4 @@ Man kann dasselbe Prinzip auf Checkboxen statt Radiobuttons anwenden! Man müsst
 
 # Severin's Variante
 
-[**Autocomplete AA –– Vanilla**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/96540.dRvLvj.small.2647a45b-498d-4491-bf74-2ecb1f98ca08.png)](https://codepen.io/betabong/pen/dRvLvj){.code}
+@code(/pages/examples/widgets/autocomplete-widgets-a-k-a-auto-suggest-look-ahead-type-ahead-/_examples/autocomplete-aa-vanilla/){.code}

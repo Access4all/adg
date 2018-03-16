@@ -18,7 +18,7 @@ The following example shows the correct usage of the HTML5 outline algorithm. Ch
 
 If you want to see how it **should** work, use [HeadingsMap](@page-59)'s experimental feature for displaying HTML5 outlines.
 
-[**HTML5 Headings Outline Algorithm Example**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.owyXqN.small.2f94c6cb-a57a-40b5-bd39-37ddad8c32bf.png)](https://codepen.io/accessibility-developer-guide/pen/owyXqN){.code}
+@code(/pages/examples/headings/html5s-headings-outline-algorithm/_examples/html5-headings-outline-algorithm-example/){.code}
 
 # How to fix HTML5 outlines
 
@@ -26,10 +26,10 @@ If you want to see how it **should** work, use [HeadingsMap](@page-59)'s experim
 
 The best is to simply avoid relying on the HTML5 outline algorithm. Instead, use the traditional HTML heading mechanism (irrespective of whether you're combining them with elements like `<main>` or `<article>`).
 
-[**HTML5 Headings Outline Algorithm Example with Numbered Headings**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.OgEVEm.small.0f84404f-900d-4551-a232-832603042c22.png)](https://codepen.io/accessibility-developer-guide/pen/OgEVEm){.code}
+@code(/pages/examples/headings/html5s-headings-outline-algorithm/_examples/html5-headings-outline-algorithm-example-with-numbered-headings/){.code}
 
 ## Otherwise: use ARIA to overrule heading levels!
 
 If you really need to use HTML5 outline, you can try to use ARIA's `role="heading"` together with `aria-level` (to set a specific level, e.g. `aria-level="3"` for heading level 3). You could do that even programmatically using JavaScript.
 
-[**HTML5 Headings Outline Algorithm Example With Fixed ARIA Levels**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.dRKVdb.small.6008d13b-5105-45fe-92f3-f510ecfc6995.png)](https://codepen.io/accessibility-developer-guide/pen/dRKVdb){.code}
+@code(/pages/examples/headings/html5s-headings-outline-algorithm/_examples/html5-headings-outline-algorithm-example-with-fixed-aria-levels/){.code}

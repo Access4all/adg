@@ -30,7 +30,7 @@ As the inputs are surrounded with a `<form>` tag, the form can be submitted with
 
 In the example, all attributes that aren't necessary for demonstration (e.g. `name`) are omitted.
 
-[**General Forms Example**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.PKoRLG.small.6a7b1012-93dd-423f-8917-f8a87c7291a0.png)](https://codepen.io/accessibility-developer-guide/pen/PKoRLG){.code}
+@code(/pages/examples/forms/general-forms-example/_examples/general-forms-example/){.code}
 
 # Some important notes
 

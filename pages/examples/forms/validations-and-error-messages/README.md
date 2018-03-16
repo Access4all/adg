@@ -22,7 +22,7 @@ If there are any validation errors, the focus is set to the first invalid input 
 - This announces the error message, so the user knows that there was at least this one error
 - After fixing the invalid input, the user can search for other invalid ones or simply submit the form again to repeat the process
 
-[**Forms Validation Example With Message After The Input**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.LjwyoR.small.e75d8f52-5a33-4c00-b359-37f11a500674.png)](https://codepen.io/accessibility-developer-guide/pen/LjwyoR){.code}
+@code(/pages/examples/forms/validations-and-error-messages/_examples/forms-validation-example-with-message-after-the-input/){.code}
 
 # Displaying all errors on top of the form
 
@@ -40,7 +40,7 @@ If there are any validation errors, the focus is set to the first error message 
     - The user also may decide to stay in the error messages block and read the other messages
 - Again, after fixing the invalid input, the user can search for other invalid ones or simply submit the form again to repeat the process
 
-[**Forms Validation Example With Messages On Top**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.XavEyp.small.3e33e11f-1ee6-4147-ad32-331f6f5602db.png)](https://codepen.io/accessibility-developer-guide/pen/XavEyp){.code}
+@code(/pages/examples/forms/validations-and-error-messages/_examples/forms-validation-example-with-messages-on-top/){.code}
 
 # What about HTML5 client side validations?
 

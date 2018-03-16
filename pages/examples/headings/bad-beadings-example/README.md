@@ -10,7 +10,7 @@ lead: "To be meaningful, heading outlines must be coherent on both a technical a
 
 This headings outline in the following example has three problems.
 
-[**Bad Headings Example**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.GEdbqO.small.bc1ebb80-58de-45b7-9f56-864c97182ae8.png)](https://codepen.io/accessibility-developer-guide/pen/GEdbqO){.code}
+@code(/pages/examples/headings/bad-beadings-example/_examples/bad-headings-example/){.code}
 
 The problems are:
 
