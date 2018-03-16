@@ -1,11 +1,11 @@
 ---
 layout: layout
 title: "How to read websites using a desktop screen reader"
+position: 7
+lead: "For a sighted person, it's hard to imagine how a screen reader user surfs the internet. Get a concrete idea of the main strategies available to read a website!"
 ---
 
 # How to read websites using a desktop screen reader
-
-For a sighted person, it's hard to imagine how a screen reader user surfs the internet. Get a concrete idea of the main strategies available to read a website!
 
 Due to the limiting one-dimensional perception of screen readers (see [Screen readers are one-dimensional](/knowledge-about-developing-and-testing-accessible-websites/introduction-to-desktop-screen-reader-usage/screen-readers-are-one-dimensional){.page}), when browsing a website for the first time, blind users first have to manually get a general idea of its layout by combing through its content from top to bottom.
 
@@ -48,7 +48,7 @@ Today, in the so called Web 2.0, websites often are very dynamic:
 
 For the time being: don't be worried too much if after a page load the screen reader focus is somewhere you didn't expect it to be! Just press `Ctrl + Home` and make your way from there through the page.
 
-If you want to know more about proper focus handling, see [Focus Handling](/code-examples/focus-handling){.page}.
+If you want to know more about proper focus handling, see [Focus Handling](/code-examples-of-common-patterns-and-daily-requirements/focus-handling){.page}.
 
 # Reading through a document
 
@@ -61,7 +61,7 @@ Important note: As opposed to keyboard-only users, **screen reader users usually
 
 ## Reading headings
 
-As seen in [Accessible heading outlines](/code-examples/accessible-heading-outlines){.page}, an accessible website introduces all of its page areas using headings (`<h1>` to `<h6>`).
+As seen in [Heading outlines](/code-examples-of-common-patterns-and-daily-requirements/heading-outlines){.page}, an accessible website introduces all of its page areas using headings (`<h1>` to `<h6>`).
 
 **In short:** Press `H` to jump to headings, or press `1` to `6` to jump to headings on specific levels.
 
@@ -71,7 +71,7 @@ Examples:
 - If you know that the login form on a specific page is introduced by the 2nd heading on level 3, simply press 2 times the `3` key!
 - If you open a page on Wikipedia and want to read its main content, simply press the `1` key once (because the first `<h1>` is the main content's heading)!
 
-See [How to browse headings](/code-examples/accessible-heading-outlines/how-to-browse-headings){.page} for more detailed info about reading headings.
+See [How to work with headings](/code-examples-of-common-patterns-and-daily-requirements/heading-outlines/how-to-work-with-headings){.page} for more detailed info about reading headings.
 
 ## Reading links
 
@@ -79,7 +79,7 @@ See [How to browse headings](/code-examples/accessible-heading-outlines/how-to-b
 
 Example: To quickly find links that you haven't visited yet, simply toggle through them by pressing `U`!
 
-See [How to browse links and buttons](/code-examples/links-and-buttons/how-to-browse-links-and-buttons){.page} for more detailed info about reading links (and also how to interact with them).
+See [How to browse links and buttons](/code-examples-of-common-patterns-and-daily-requirements/links-and-buttons/how-to-browse-links-and-buttons){.page} for more detailed info about reading links (and also how to interact with them).
 
 ## Reading lists
 
@@ -103,7 +103,7 @@ TODO: Link to "more detailed info"!
 
 Example: To compare the price of several products in a table, simply navigate the column "price" by pressing `Ctrl + Alt + Down`!
 
-See [How to browse tables](/code-examples/data-and-layout-tables/how-to-browse-tables){.page} for more detailed info about reading tables.
+See [How to browse tables](/code-examples-of-common-patterns-and-daily-requirements/data-and-layout-tables/how-to-browse-tables){.page} for more detailed info about reading tables.
 
 ## Reading forms
 
@@ -111,4 +111,4 @@ See [How to browse tables](/code-examples/data-and-layout-tables/how-to-browse-t
 
 Example: To quickly find the login form, simply search for the respective input field by pressing `I`!
 
-See [How to browse forms](/code-examples/forms--validations--and-error-messages/how-to-browse-forms){.page} for more detailed info about reading forms (and also how to interact with them).
+See [How to browse forms](/code-examples-of-common-patterns-and-daily-requirements/forms--validations--and-error-messages/how-to-browse-forms){.page} for more detailed info about reading forms (and also how to interact with them).

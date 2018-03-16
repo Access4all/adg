@@ -1,11 +1,11 @@
 ---
 layout: layout
 title: "How to implement screen reader ready websites"
+position: 10
+lead: "TODO"
 ---
 
 # How to implement screen reader ready websites
-
-TODO
 
 # Use proper semantic HTML
 
@@ -19,4 +19,4 @@ See [How to implement keyboard-only ready websites](/knowledge-about-developing-
 
 - Konstant mit NVDA+FF testen, regelmässig mit JAWS+FF/IE Funktionalität sicherstellen!
 
-See [Relevant screen readers and browsers](/knowledge-about-developing-and-testing-accessible-websites/introduction-to-desktop-screen-reader-usage/relevant-screen-readers-and-browsers){.page}
+See [Relevant combinations of screen readers and browsers](/knowledge-about-developing-and-testing-accessible-websites/introduction-to-desktop-screen-reader-usage/relevant-combinations-of-screen-readers-and-browsers){.page}

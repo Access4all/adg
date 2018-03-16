@@ -1,11 +1,12 @@
 ---
 layout: layout
 title: "What are semantics and why are they important for accessibility?"
+navigation_title: "Semantics"
+position: 5
+lead: "While today's trend goes for more and more fancy visuals everywhere, it's important to care about proper semantics of content."
 ---
 
 # What are semantics and why are they important for accessibility?
-
-While today's trend goes for more and more fancy visuals everywhere, it's important to care about proper semantics of content.
 
 HTML offers a lot of elements that have inherent meaning - so called "semantics".
 
@@ -20,7 +21,7 @@ The only difference between `<div>` and `<span>` is how they are painted:
 - `<span>` is an inline element, so it will stay on the same line with prior and following content
     - This means the browser applies `display: inline` to it
 
-(For more info about CSS' `display` attribute, see [Block vs. Inline Elements](/code-examples/block-vs--inline-elements){.page}.)
+(For more info about CSS' `display` attribute, see [Block vs. Inline Elements](/code-examples-of-common-patterns-and-daily-requirements/block-vs--inline-elements){.page}.)
 
 ## Visual vs. aural presentation 
 
@@ -83,9 +84,9 @@ A screen reader conveys this additional information by announcing the element's 
 >
 > Dancing: heading level 2
 >
-> Playing: soccer heading level 2
+> Playing soccer: heading level 2
 
-(To read more about accessible heading outline, read [Accessible heading outlines](/code-examples/accessible-heading-outlines){.page}.)
+(To read more about accessible heading outline, read [Heading outlines](/code-examples-of-common-patterns-and-daily-requirements/heading-outlines){.page}.)
 
 # Semantics provide proper presentation
 
@@ -160,4 +161,4 @@ Many of today's problems regarding accessibility are linked to developer's not k
 
 Caring for proper semantics will make you a so much more exquisite frontend developer than you could ever imagine. Trust us.
 
-To learn more about how to develop high quality, maintainable, accessible websites, read [Our Codex About Clean and Maintainable Accessibility](/knowledge-about-developing-and-testing-accessible-websites/our-codex-about-clean-and-maintainable-accessibility){.page}
+To learn more about how to develop high quality, maintainable, accessible websites, read [Our codex about clean and maintainable accessibility](/knowledge-about-developing-and-testing-accessible-websites/our-codex-about-clean-and-maintainable-accessibility){.page}

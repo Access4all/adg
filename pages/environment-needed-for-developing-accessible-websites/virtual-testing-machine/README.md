@@ -1,41 +1,24 @@
 ---
 layout: layout
-title: "Virtual Testing Machine"
+title: "Virtual testing machine"
+position: 1
+lead: "Regardless of which operating system you're running: you'll need a Windows system to develop for and test about accessibility. And it's best to use a virtual machine (VM) for this."
 ---
 
-# Virtual Testing Machine
+# Virtual testing machine
 
-Windows is a must have when it comes to testing for accessibility. To prevent disruption of your daily workflow (by an annoying synthesized screen reader voice), having a separate Windows instance in a virtual machine is a good idea. Believe us!
+![](_media/1511793759628.png){.image}
 
-# Why Windows is a must-have
+# TL;DR - Too long, didn't read
 
-  - Blind internet surfers use screenreader software to let it read the screen contents to them 
-      - [JAWS](http://www.freedomscientific.com/Products/Blindness/Jaws) is the most prevalent commercial screenreader
-      - [NVDA](http://www.nvaccess.org/) is the most prevalent open source screenreader
-      - Source: [WebAIM: Screen Reader User Survey 2015 Results](http://webaim.org/projects/screenreadersurvey6/)
-      - Both are native Windows applications
-  - You won't get around acquiring some Windows operating system
-      - If you're on a Mac or Linux computer, you can install Windows as a virtual machine (see below)
-      - Even if Windows is your host OS already, it's a good thing to do accessibility testing in a virtual machine, as otherwise, running test tools (like a screenreader) may impair your daily workflow
+First you'll want to know [why Windows is a must-have](/environment-needed-for-developing-accessible-websites/virtual-testing-machine/why-windows-is-a-must-have-for-accessibility-testing){.page title="Why Windows is a must-have for accessibility testing"} when it comes to accessibility testing, and why it's sensible to run it in its own virtual machine.
 
-# Using a virtual machine (VM)
+Then you will be pleasantly surprised that [you can download a free and legal copy of Windows](/environment-needed-for-developing-accessible-websites/virtual-testing-machine/getting-a-free-windows-vm-from-modern-ie){.page title="Getting a free Windows VM from modern.ie"} from modern.ie (running for 90 days, but resettable endlessly).
 
-  - The easiest way is to grab a [free Windows VM from modern.IE](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/) and run it using [VMWare virtualisation software] (http://www.vmware.com/)
-  - All VMs from modern.IE are free and legal, as they will expire after some time period (90 days?)
-  - We suggest you download the VM `IE11 on Win7` as it can be re-activated a few times after expiration
+![](_media/1511825066609.png){.image}
 
-# Get, install and set up your Virtual Machine for convenient accessibility testing
+In the upcoming pages you'll learn how to run the virtual machine using either [VMware Fusion (macOS)](/environment-needed-for-developing-accessible-websites/virtual-testing-machine/configuring-vmware-fusion--macos--for-accessibility-testing){.page title="Configuring VMware Fusion (macOS) for accessibility testing"} or [VMware Workstation Player](/environment-needed-for-developing-accessible-websites/virtual-testing-machine/configuring-vmware-workstation-player--win--linux--for-accessibility-testing){.page title="Configuring VMware Workstation Player (Win, Linux) for accessibility testing"}; and if you're on a low budget, there's also some info about using it in [VirtualBox](/environment-needed-for-developing-accessible-websites/virtual-testing-machine/configuring-virtualbox-for-accessibility-testing){.page title="Configuring VirtualBox for accessibility testing"}.
 
-Follow the Sub Pages links below to get up running
+Why install and configure all needed tools yourself? If you ask nicely, you can simply [get our pre-configured accessibility testing vm](/environment-needed-for-developing-accessible-websites/virtual-testing-machine/pre-configured-virtual-machine){.page title="Pre-configured virtual machine"}!
 
-  - VMWare Fusion (for Mac)
-  - VMWare Workstation Player (for Windows)
-
-## Additional information
-
-  - Because these free VMs expire after some time (and you have to download a new one), it's better to get a registered copy of Windows yourself because many accessibility related tools only run on Windows and you will customize and maintain your own selection over time.
-  - If you already own a Windows serial, you can download the appropriate official ISO file directly from Microsoft → look here: [Where can I download Windows 7 (legally from Microsoft)?](https://superuser.com/questions/78761/where-can-i-download-windows-7-legally-from-microsoft/305434#305434)
-
-## Antivirus
-
-  - We hightly recommend to install an antivirus software in your VM, for example [Microsoft Security Essentials](https://support.microsoft.com/en-us/help/14210/security-essentials-download)
+Finally, if you don't have the rights to install new software (or simply don't have the time to), you can get [portable versions of some of the most important apps](/environment-needed-for-developing-accessible-websites/virtual-testing-machine/better-than-nothing--portable-apps){.page title="Better than nothing: portable apps"}.

@@ -1,11 +1,11 @@
 ---
 layout: layout
 title: "Addendum: Basic Windows keyboard shortcuts"
+position: 5
+lead: "For some more inspiration, find here some info about system-wide and application-specific keyboard shortcuts."
 ---
 
 # Addendum: Basic Windows keyboard shortcuts
-
-For some more inspiration, find here some info about system-wide and application-specific keyboard shortcuts.
 
 If you know and use the following keyboard shortcuts by heart, you can officially call yourself a power user!
 

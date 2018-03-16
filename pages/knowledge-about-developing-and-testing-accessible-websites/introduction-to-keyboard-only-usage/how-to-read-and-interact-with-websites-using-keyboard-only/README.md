@@ -1,11 +1,11 @@
 ---
 layout: layout
 title: "How to read and interact with websites using keyboard-only"
+position: 2
+lead: "Get a concrete idea of the main strategies available to read and interact with a website using keyboard only!"
 ---
 
 # How to read and interact with websites using keyboard-only
-
-Get a concrete idea of the main strategies available to read and interact with a website using keyboard only!
 
 When browsing a website with keyboard only, the following keys typically are used.
 

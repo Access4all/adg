@@ -1,11 +1,11 @@
 ---
 layout: layout
 title: "How screen readers work - and why they seem so buggy"
+position: 12
+lead: "Sitting on top of another application, screen readers announce the underlying content - often trying to compensate for inadequate presentation of these."
 ---
 
 # How screen readers work - and why they seem so buggy
-
-Sitting on top of another application, screen readers announce the underlying content - often trying to compensate for inadequate presentation of these.
 
 Screen readers always sit on top of another application, conveying its contents aurally to the user.
 
@@ -66,4 +66,4 @@ This is a **devastating situation**:
 
 # How can running into screen reader bugs be prevented?
 
-See [Our Codex About Clean and Maintainable Accessibility](/knowledge-about-developing-and-testing-accessible-websites/our-codex-about-clean-and-maintainable-accessibility){.page} for thoughts and guidelines on how to circumvent the biggest dangers.
+See [Our codex about clean and maintainable accessibility](/knowledge-about-developing-and-testing-accessible-websites/our-codex-about-clean-and-maintainable-accessibility){.page} for thoughts and guidelines on how to circumvent the biggest dangers.

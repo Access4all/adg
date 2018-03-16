@@ -1,11 +1,11 @@
 ---
 layout: layout
 title: "Screen reader interaction modes"
+position: 5
+lead: "Screen readers offer two different ways to interact with the underlying application: browse mode and focus mode. It's very important to know the differences!"
 ---
 
 # Screen reader interaction modes
-
-Screen readers offer two different ways to interact with the underlying application: browse mode and focus mode. It's very important to know the differences!
 
 # Browse mode
 
@@ -52,9 +52,9 @@ Looked at it this way, screen readers in fact simply introduce only one special 
 
 This is a rather rare mode: it is triggered under certain circumstances and is very similar to focus mode:
 
-- Most of the time, application mode feels exactly the same like focus mode, e.g. when interacting with an ARIA widget (see [Creating an ARIA widget - and why we usually advise against it](/code-examples/sensible-usage-of-aria-roles-and-attributes/creating-an-aria-widget---and-why-we-usually-advise-against-it){.page})
+- Most of the time, application mode feels exactly the same like focus mode, e.g. when interacting with an ARIA widget (see [Creating an ARIA widget - and why we usually advise against it](/code-examples-of-common-patterns-and-daily-requirements/sensible-usage-of-aria-roles-and-attributes/creating-an-aria-widget---and-why-we-usually-advise-against-it){.page})
 - When a widget is implemented using `role="application"`, application mode needs some special attention
-    - If you're tempted to implement a widget with `role="application"`, before doing it, please thoroughly read [Why using ARIA role="application" is never a good idea](/code-examples/sensible-usage-of-aria-roles-and-attributes/why-using-aria-role-application-is-never-a-good-idea){.page}! (We're pretty sure you'll change your opinion reading it.)
+    - If you're tempted to implement a widget with `role="application"`, before doing it, please thoroughly read [Why using ARIA role="application" is never a good idea](/code-examples-of-common-patterns-and-daily-requirements/sensible-usage-of-aria-roles-and-attributes/why-using-aria-role-application-is-never-a-good-idea){.page}! (We're pretty sure you'll change your opinion reading it.)
 
 # Which one to choose?
 
@@ -68,4 +68,4 @@ So when a user reaches a page, he typically starts reading it from top to bottom
 - Either he uses the `Tab` key to move the focus to the next interactive element
     - If entering data into a form, usually the user expects to come more form elements until a submit button is reached
 - Or he switches back to browse mode by pressing `Esc` and reads on using `Down` key
-    - This usually is only necessary if a form isn't structured well (to read more about well structured forms, see [Forms, validations, and error messages](/code-examples/forms--validations--and-error-messages){.page})
+    - This usually is only necessary if a form isn't structured well (to read more about well structured forms, see [Forms, validations, and error messages](/code-examples-of-common-patterns-and-daily-requirements/forms--validations--and-error-messages){.page})

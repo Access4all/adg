@@ -1,11 +1,11 @@
 ---
 layout: layout
 title: "How to implement keyboard-only ready websites"
+position: 4
+lead: "There's very little to consider to make sure a website is keyboard-only ready. Still, a lot can go wrong if not paying attention."
 ---
 
 # How to implement keyboard-only ready websites
-
-There's very little to consider to make sure a website is keyboard-only ready. Still, a lot can go wrong if not paying attention.
 
 # HTML is keyboard-only ready
 
@@ -42,4 +42,4 @@ Then, implement any functionality as needed by adding appropriate events, e.g. `
 
 # Be careful with custom functionalities!
 
-In our opinion, there are very few cases which really need optimisation for keyboard interaction. Read more here: [Our Codex About Clean and Maintainable Accessibility](/knowledge-about-developing-and-testing-accessible-websites/our-codex-about-clean-and-maintainable-accessibility){.page}.
+In our opinion, there are very few cases which really need optimisation for keyboard interaction. Read more here: [Our codex about clean and maintainable accessibility](/knowledge-about-developing-and-testing-accessible-websites/our-codex-about-clean-and-maintainable-accessibility){.page}.

@@ -1,11 +1,11 @@
 ---
 layout: layout
 title: "Controlling a computer with a keyboard only"
+position: 1
+lead: "Many users control a computer using keyboard only, so no mouse or similar pointing device is available. Thus, it's crucial that any software (incl. websites) is usable by keyboard only."
 ---
 
 # Controlling a computer with a keyboard only
-
-Many users control a computer using keyboard only, so no mouse or similar pointing device is available. Thus, it's crucial that any software (incl. websites) is usable by keyboard only.
 
 # Why not use a mouse?
 
@@ -19,7 +19,7 @@ It's crucial to make sure that a website (including all their interactive contro
 - If you use standard HTML controls, you're all set (because the browser takes responsibility of making them keyboard accessible)
 - If you create custom elements, be sure to make them keyboard accessible yourself!
 
-Be sure to read [Our Codex About Clean and Maintainable Accessibility](/knowledge-about-developing-and-testing-accessible-websites/our-codex-about-clean-and-maintainable-accessibility){.page} to find out more about how websites can be implemented in an accessible way with least efforts.
+Be sure to read [Our codex about clean and maintainable accessibility](/knowledge-about-developing-and-testing-accessible-websites/our-codex-about-clean-and-maintainable-accessibility){.page} to find out more about how websites can be implemented in an accessible way with least efforts.
 
 # Keyboard-only navigation
 

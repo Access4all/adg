@@ -1,11 +1,12 @@
 ---
 layout: layout
 title: "Introduction to keyboard-only usage"
+navigation_title: "Keyboard-only"
+position: 2
+lead: "Many users can't control a pointing device (like a mouse or touch screen) and rely on keyboard usage only. Thus, a website (and any other software) must be fully functional with a keyboard."
 ---
 
 # Introduction to keyboard-only usage
-
-Many users can't control a pointing device (like a mouse or touch screen) and rely on keyboard usage only. Thus, a website (and any other software) must be fully functional with a keyboard.
 
 ![](_media/1511094201689.png){.image}
 

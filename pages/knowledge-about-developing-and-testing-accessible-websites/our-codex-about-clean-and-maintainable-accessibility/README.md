@@ -1,9 +1,12 @@
 ---
 layout: layout
-title: "Our Codex About Clean and Maintainable Accessibility"
+title: "Our codex about clean and maintainable accessibility"
+navigation_title: "Codex"
+position: 6
+lead: "TODO"
 ---
 
-# Our Codex About Clean and Maintainable Accessibility
+# Our codex about clean and maintainable accessibility
 
 Aufzeigen, dass es für die meisten Ansprüche genau einen perfekten Weg gibt, sie umzusetzen! Typischerweise ist das "plain old HTML". Und auch wenn es oftmals diverse weitere Möglichkeiten gibt, um WCAG-konform zu sein, so ist dieser eine perfekte Weg wann immer möglich vorzuziehen.
 
@@ -26,4 +29,4 @@ Auch gute Punkte: <http://vanseodesign.com/web-design/five-rules-aria-html/> Wir
 # Gute Tools nutzen!
 
 - Z.B. Präprozessoren! Es ist unglaublich, wieviele "menschliche" (vermeidbare) Probleme auch heute noch dadurch entstehen, dass einfach nur schlechte Tools eingesetzt werden...!
-- Oder CodePen für rapid Prototyping zwischen Agentur, Kunde, und Accessibility-Tester! Siehe auch [How to use our code examples on CodePen.io](/knowledge-about-developing-and-testing-accessible-websites/how-to-use-our-code-examples-on-codepen-io){.page}. Ein Hinweis irgendwo, dass man am besten agil vorgeht (statt Wasserfall-artig) wäre auch gut.
+- Oder CodePen für rapid Prototyping zwischen Agentur, Kunde, und Accessibility-Tester! Siehe auch [How to use our code examples on CodePen.io](/code-examples-of-common-patterns-and-daily-requirements/how-to-use-our-code-examples-on-codepen-io){.page}. Ein Hinweis irgendwo, dass man am besten agil vorgeht (statt Wasserfall-artig) wäre auch gut.
