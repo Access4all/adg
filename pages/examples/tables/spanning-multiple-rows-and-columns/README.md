@@ -14,7 +14,7 @@ It groups work days and leisure days together using `colspan`. Also, while most 
 
 Navigate the table using a screen reader using table navigation (explained [here](/examples/headings/html5s-headings-outline-algorithm){.page title="HTML5's headings outline algorithm"}). Do you note any possible problems?
 
-[**Data Table Spanning Multiple Rows And Columns Example**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.jLbxZw.small.48fd8000-86ce-40b6-9dd3-7e9fda0d929a.png)](https://codepen.io/accessibility-developer-guide/pen/jLbxZw){.code}
+@code(/pages/examples/tables/spanning-multiple-rows-and-columns/_examples/data-table-spanning-multiple-rows-and-columns-example/){.code}
 
 While the very most of the table is announced very well by the screen reader, as soon as cells span multiple rows or columns, it's getting a bit tricky (if not to say: confusing).
 

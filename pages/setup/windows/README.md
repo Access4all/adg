@@ -1,12 +1,12 @@
 ---
 layout: layout
-title: "Windows virtual machine"
+title: "Windows operating system"
 navigation_title: "Windows"
 position: 1
 lead: "To ensure the accessibility of websites, the most important software is native Windows software, such as screen readers. In this chapter, you will learn how to prepare everything for the upcoming installation tasks. And if you want to keep your own Windows working environment clean (or if you aren't using Windows anyway), we suggest to set up a dedicated Windows installation within a virtual machine."
 ---
 
-# Windows virtual machine
+# Windows operating system
 
 First you need to know [why Windows is required](/setup/windows/why){.page title="Why Windows is a must-have for accessible websites development"} when it comes to ensuring accessibility of websites and why it is sensible to run it in its own virtual machine (VM).
 

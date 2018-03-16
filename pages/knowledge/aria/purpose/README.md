@@ -1,12 +1,12 @@
 ---
 layout: layout
-title: "ARIA - when HTML simply isn't enough"
-navigation_title: "ARIA"
-position: 3
+title: "The purpose behind the WAI-ARIA standard"
+navigation_title: "Purpose"
+position: 1
 lead: "HTML provides standard tags for the very most requirements of a modern website. When it comes to interactive elements, though, sometimes plain HTML may not be enough anymore. The Accessible Rich Internet Application (ARIA) standard was introduced to fill this gap. But careful: there are pitfalls you need to know about."
 ---
 
-# ARIA - when HTML simply isn't enough
+# The purpose behind the WAI-ARIA standard
 
 # Handling HTML shortcomings
 
@@ -91,19 +91,14 @@ Marked up with ARIA, our tablist example would look something like this:
 </div>
 ```
 
-Some general explanations:
+First, `role="tablist"` was added to the list container (containing the tabs). The `<ul>` element won't be announced as list now anymore by screen readers, but as something like "tablist" (depending on the screen reader).
 
-- `role="tablist"` was added to the list container (containing the tabs).
-    - The `<ul>` element won't be announced as list now anymore by screen readers, but as something like "tablist" (depending on the screen reader).
-- `role="presentation"` was added to the list elements of the former list.
-    - As the list isn't a list anymore, the specific `<li>` elements must not have specific list semantics anymore.
-    - The `presentation` role removes any semantical information: the `<li>` elements are now treated similar to plain `<div>` elements.
-    - It may seem silly to use a semantic container and then remove its semantics. But this is generally a good practice for providing backwards compatibility with legacy screen readers that may not support ARIA.
-- `role="tab"` was added to each tab element.
-    - The `<button>` element won't be announced as button now anymore by screen readers, but as something like "tab" (depending on the screen reader).
-    - In addition, some special `aria-*` attributes were added:
-        - `aria-controls` lets screen readers know, which tabpanel's visibility is toggled upon activation or deactivation of the tab. This allows to quickly jump from tabitem to tabpanel forth and back (depending on the screen reader).
-        - `aria-selected` lets screen readers know, which tab is currently the active one, and announces this to the user with something like "active" (depending on the screen reader).
+Then, `role="presentation"` was added to the list elements of the former list. As the list isn't a list anymore, the specific `<li>` elements must not have specific list semantics anymore. The `presentation` role removes any semantical information: the `<li>` elements are now treated similar to plain `<div>` elements. It may seem silly to use a semantic container and then remove its semantics. But this is generally a good practice for providing backwards compatibility with legacy screen readers that may not support ARIA.
+
+Finally, `role="tab"` was added to each tab element. The `<button>` element won't be announced as button now anymore by screen readers, but as something like "tab" (depending on the screen reader). In addition, some special `aria-*` attributes were added:
+
+- `aria-controls` lets screen readers know, which tabpanel's visibility is toggled upon activation or deactivation of the tab. This allows to quickly jump from tabitem to tabpanel forth and back (depending on the screen reader).
+- `aria-selected` lets screen readers know, which tab is currently the active one, and announces this to the user with something like "active" (depending on the screen reader).
 
 Nice and clean. This looks pretty promising, doesn't it?
 
@@ -125,58 +120,3 @@ To make things even less satisfying, ARIA support among browsers and screen read
 As such, there are extremely few truly working examples of ARIA widgets available on the web. And those few ones usually need a lot of complex code to work around known problems.
 
 But don't worry, read on, and we will provide you with alternative techniques that are very easy to implement and work reliably.
-
-# Safe use of ARIA
-
-There are a few `aria-*` attributes that fill some gaps HTML doesn't provide a native solution for. Working pretty reliably in modern browsers and screen readers, the following attributes can be recommended as safe to use:
-
-- `aria-label` and `aria-labelledby` are used to label an element
-- `aria-describedby` is used to add description to an element
-- `aria-expanded` is used to describe an element's expand/collapse status
-- `aria-hidden` is used to hide non-focusable elements (including children) from screen readers
-
-## Discretion advised
-
-There are only very rare situations where HTML isn't enough. In those (and only those) situations, using ARIA is advised. In any other situation, when using a clean and semantically correct HTML structure can provide for a situation, using ARIA is strongly discouraged. This is due to its heterogenous support among browsers and screen readers (see above).
-
-If you are really curious and want to learn more about this, skip ahead and read [Sensible Usage of ARIA Roles and Attributes](/examples/sensible-usage-of-aria-roles-and-attributes){.page}.
-
-# Mis-use of ARIA
-
-One last problematic topic with ARIA is that it is often misunderstood as "general repair kit" for accessibility problems. Developers new to accessibility usually think that ARIA that can be used to fix accessibility problems for all sorts of bad HTML code. In general though, throwing some ARIA attributes into the mix of bad semantics doesn't leverage any problem. Most of the time, the exact opposite is the case.
-
-## Fixing broken semantics
-
-ARIA isn't meant to be used to "fix" standard elements that lack semantical meaning.
-
-Let's look again at an example of a link that isn't properly marked up as such. But this time, it is spiced up with `role="link"`:
-
-```html
-<span class="link" onclick="..." role="link">
-  Google
-</span>
-```
-
-Admittedly, this makes screen readers announce the element as link. But still, this approach is missing a lot of standard functionality: it isn't focusable, it needs custom JavaScript, browser history may be broken, just to name a few. And legacy screen readers may have no support for `role="link"` anyway.
-
-So remember: adding ARIA to add missing semantical meaning is never a good solution. Always use the proper HTML tag itself!
-
-## Adding redundant semantics
-
-We also sometimes see overzealous developers adding redundant ARIA roles to elements, thinking it would enhance accessibility:
-
-```html
-<form role="form">
-  ...
-</form>
-
-<a href="..." role="link">
-  Google
-</a>
-```
-
-It doesn't - quite the contrary often is the case, as screen readers seem to behave buggy from stuff like this.
-
-## Providing missing content
-
-TODO: always use "real" content! If you face a situation where a screen reader user needs different information, you're on the wrong track. only if you're adding additional info (enhancing existing), usage of ARIA may be a good idea.

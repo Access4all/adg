@@ -24,7 +24,7 @@ TODO: Beste aktuelle Implementation hier: <https://medium.com/@matuzo/writing-cs
 
 For example, this technique is useful to visually hide headings, as described here: [Adding visually hidden headings to complete a page's outline](/examples/headings/adding-visually-hidden-headings-to-complete-a-pages-outline){.page}.
 
-[**Hiding elements only visually**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.EwxJgN.small.b8210f2e-a0a8-4e88-860d-44350a67f06b.png)](https://codepen.io/accessibility-developer-guide/pen/EwxJgN){.code}
+@code(/pages/examples/hiding-elements/hiding-elements-visually-by-moving-them-off-screen/_examples/hiding-elements-only-visually/){.code}
 
 ## Showing visually hidden elements on focus
 
@@ -32,19 +32,19 @@ If you're hiding focusable elements using this technique, make sure that they'll
 
 In the following example, press the `Tab` key to focus and show the (previously invisible) "Jump to content" link.
 
-[**Hiding Elements Only Visually And Showing Them On Focus**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.aydLwr.small.faea00e6-ca14-43e6-b1b3-d68ce46e8b01.png)](https://codepen.io/accessibility-developer-guide/pen/aydLwr){.code}
+@code(/pages/examples/hiding-elements/hiding-elements-visually-by-moving-them-off-screen/_examples/hiding-elements-only-visually-and-showing-them-on-focus/){.code}
 
 ## VoiceOver/iOS peculiarities
 
 TODO: Scheint unter VoiceOver/iOS "nicht in einem Zug" ausgegeben zu werden, so dass Texte auseinander geschnitten werden!
 
-[**Hiding elements only visually: iOS peculiarities**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.LzEqPd.small.890c3ba3-e6f8-499f-a968-2d7f763b4a5c.png)](https://codepen.io/accessibility-developer-guide/pen/LzEqPd){.code}
+@code(/pages/examples/hiding-elements/hiding-elements-visually-by-moving-them-off-screen/_examples/hiding-elements-only-visually-ios-peculiarities/){.code}
 
 Im Zeilen-Lese-Modus wird es aber in einem Zug ausgegeben.
 
 Vielleicht besser, nicht zuviel zu trennen, und stattdessen zwei Info-Blöcke:
 
-[**Hiding elements only visually: iOS peculiarities alternative**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.QqwYdN.small.f0577e05-8f6f-455c-99ad-194f84d6993a.png)](https://codepen.io/accessibility-developer-guide/pen/QqwYdN){.code}
+@code(/pages/examples/hiding-elements/hiding-elements-visually-by-moving-them-off-screen/_examples/hiding-elements-only-visually-ios-peculiarities-alternative/){.code}
 
 # Side effects for visual users
 

@@ -52,7 +52,7 @@ See: [What is a "Proof of concept"?](/examples/widgets/what-is-a-proof-of-concep
 
 ## Simple tooltip
 
-[**Tooltips: Proof of concept**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.rYpLep.small.7807c10f-6de8-47a5-93d0-f946d884be0a.png)](https://codepen.io/accessibility-developer-guide/pen/rYpLep){.code}
+@code(/pages/examples/widgets/tooltip-widgets/_examples/tooltips-proof-of-concept/){.code}
 
 Features:
 

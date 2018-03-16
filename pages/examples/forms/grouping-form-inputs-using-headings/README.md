@@ -25,7 +25,7 @@ In the following example, ARIA is used to group form inputs using headings:
 - Each container as a heading
 - The headings are associated to the surrounding container using `aria-describedby`
 
-[**Headings Mixed Into a Form Using ARIA**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.gxVMYe.small.0be9315c-b8d6-4909-a504-c4aa4c498876.png)](https://codepen.io/accessibility-developer-guide/pen/gxVMYe){.code}
+@code(/pages/examples/forms/grouping-form-inputs-using-headings/_examples/headings-mixed-into-a-form-using-aria/){.code}
 
 More info about faking `<fieldset>` / `<legend>` combinations here: [Faking fieldset / legend using ARIA](/examples/forms/faking-fieldset-legend-using-aria){.page}.
 
@@ -33,6 +33,6 @@ More info about faking `<fieldset>` / `<legend>` combinations here: [Faking fiel
 
 [In HTML 5.2, headings are allowed within `<legend>`](https://www.w3.org/TR/html52/sec-forms.html#the-legend-element) elements.
 
-[**Headings Mixed Into a Form As Children Of Legends**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.qXeNRm.small.2313b161-8bfd-43af-815c-67c1e6a02c01.png)](https://codepen.io/accessibility-developer-guide/pen/qXeNRm){.code}
+@code(/pages/examples/forms/grouping-form-inputs-using-headings/_examples/headings-mixed-into-a-form-as-children-of-legends/){.code}
 
 By the way, the other way round (placing legends into headings) doesn't work, because a `<legend>` always has to be the first child of its `<fieldset>`.

@@ -74,7 +74,7 @@ This is a devastating situation:
 
 # How to avoid bugs
 
-The best way to avoid such situations is to follow established standards and best practices - essentially the ones we are presenting in our guide. If you are really curious and want to learn more about this, skip ahead and read [Our codex about clean and maintainable accessibility](/knowledge/codex){.page}.
+The best way to avoid such situations is to follow established standards and best practices - essentially the ones we are presenting in our guide. If you are really curious and want to learn more about this, skip ahead and read [Our codex about clean and maintainable accessibility](/welcome/how-to-read-use/codex){.page}.
 
 # What will the future bring?
 

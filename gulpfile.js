@@ -206,7 +206,7 @@ gulp.task('html', cb => {
                 return page
               })
               .sort((a, b) => a.position - b.position)
-
+console.log(navigation)
             // Return files back to stream
             files.forEach(this.push.bind(this))
 

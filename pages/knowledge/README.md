@@ -18,6 +18,6 @@ BE SURE TO HAVE WORKED THROUGH SET UP ALREADY!
 
 [Semantics and their importance for accessibility](/knowledge/semantics){.page}
 
-[Our codex about clean and maintainable accessibility](/knowledge/codex){.page}
+[Our codex about clean and maintainable accessibility](/welcome/how-to-read-use/codex){.page}
 
 # How to go through this part

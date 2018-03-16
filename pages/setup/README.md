@@ -19,7 +19,7 @@ The good news with that is: most of the proposed software can be used free of ch
 
 # Chapters
 
-We begin with [Windows virtual machine](/setup/windows){.page}. Here you will learn why Windows is a must-have for developing accessible websites, and optionally how you can run it inside a dedicated environment (a virtual machine).
+We begin with [Windows operating system](/setup/windows){.page}. Here you will learn why Windows is a must-have for developing accessible websites, and optionally how you can run it inside a dedicated environment (a virtual machine).
 
 In [Web browsers](/setup/browsers){.page}, you will encounter the list of needed browsers. No surprise, you are certainly already familiar with them.
 
@@ -41,7 +41,7 @@ For this, please work through all chapters of this part thoroughly.
 
 Maybe you are not interested in having all the tools, or your company doesn't allow you to install new software at all. In this case, we propose you a minimal setup. Although it's definitely not on par with a complete setup, it still will serve you very well and quite far.
 
-In order to get there, please work through the following list of pages, as it will guide you to the software that's most important for having a well working, minimal environment available. If you're not running a Windows system yet, please work through the chapter [Windows virtual machine](/setup/windows){.page} first.
+In order to get there, please work through the following list of pages, as it will guide you to the software that's most important for having a well working, minimal environment available. If you're not running a Windows system yet, please work through the chapter [Windows operating system](/setup/windows){.page} first.
 
 - [Firefox installation and configuration](/setup/browsers/firefox){.page}
 - [NVDA installation and configuration](/setup/screen-readers/nvda){.page}

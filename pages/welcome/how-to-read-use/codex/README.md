@@ -2,7 +2,7 @@
 layout: layout
 title: "Our codex about clean and maintainable accessibility"
 navigation_title: "Codex"
-position: 6
+position: 2
 lead: "TODO"
 ---
 

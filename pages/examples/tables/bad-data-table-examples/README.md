@@ -12,7 +12,7 @@ lead: "Data tables lacking header cells are very hard to read by screen reader u
 
 The table in the following example doesn't offer any real header cells (`<th>` elements); instead, only data cells are used (`<td>` elements). Those cells that are meant to be headers are only styled visually using CSS `font-weight: bold`, attached to a `.th` class.
 
-[**Bad Data Table Example Without Header Cells**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.brVvaP.small.086f7feb-5a51-4202-ad29-4b9cc7f377fb.png)](https://codepen.io/accessibility-developer-guide/pen/brVvaP){.code}
+@code(/pages/examples/tables/bad-data-table-examples/_examples/bad-data-table-example-without-header-cells/){.code}
 
 This makes it very hard for screen reader users to keep orientation, as they don't know in which column (Name? Description? Additional Resources?) and row (Playing Soccer? Dancing? Gardening?) they are. It's especially hard in the column "Additional Resources", where the cell's content doesn't offer any hint on what the Wikipedia link is about.
 
@@ -24,7 +24,7 @@ The table in the following example indeed has a header cell for each column (the
 
 This makes it hard to identify the current data row when navigating the table vertically.
 
-[**Bad Data Table Example With Only Horizontal Header Cells**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.MvaVzj.small.65e1439d-da20-4b92-a03f-9eadf8ec4608.png)](https://codepen.io/accessibility-developer-guide/pen/MvaVzj){.code}
+@code(/pages/examples/tables/bad-data-table-examples/_examples/bad-data-table-example-with-only-horizontal-header-cells/){.code}
 
 ## Possible solution: adding a unique identifier column as header cell
 
@@ -32,11 +32,11 @@ Sometimes a data table doesn't offer a column that identifies the current row (s
 
 For example, when having a huge database of addresses, chances are high that you have multiple records with very similar data, as demonstrated in the following example: here you have many John Does residing on similar addresses.
 
-[**Bad Data Table Example With No Header Cells And Ambiguous Data**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.xLwjwj.small.1e48d2a1-f509-4bab-ade5-b23cc0a580d2.png)](https://codepen.io/accessibility-developer-guide/pen/xLwjwj){.code}
+@code(/pages/examples/tables/bad-data-table-examples/_examples/bad-data-table-example-with-no-header-cells-and-ambiguous-data/){.code}
 
 In such a case, you should try to introduce an additional unique column, like a record ID.
 
-[**Data Table Example With Ambiguous Data And Added IDs**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.ayvGpK.small.d694d987-560e-4988-86a1-73fae1581ad3.png)](https://codepen.io/accessibility-developer-guide/pen/ayvGpK){.code}
+@code(/pages/examples/tables/bad-data-table-examples/_examples/data-table-example-with-ambiguous-data-and-added-ids/){.code}
 
 ## Possible solution: using multiple cells as header cells
 
@@ -44,7 +44,7 @@ TODO: Eigentlich schade dass dieser gute Tipp unter "Bad forms example" drin ist
 
 If there's really no identifying column (and you can't introduce one), you can mark more than a single data cell as header cell, and then the combination of the cells is announced by the screen reader, identifying the current row as good as possible.
 
-[**Data Table Example With Ambiguous Data And Multiple Header Cells**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/1279260.jLbxwB.small.afb208ad-1688-462d-a23b-7d85d0be3d1c.png)](https://codepen.io/accessibility-developer-guide/pen/jLbxwB){.code}
+@code(/pages/examples/tables/bad-data-table-examples/_examples/data-table-example-with-ambiguous-data-and-multiple-header-cells/){.code}
 
 As you see in the example above, the combinations of first and last names still aren't unique. So you could add even more cells as header cells...
 

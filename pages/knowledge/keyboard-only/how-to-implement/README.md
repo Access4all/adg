@@ -42,4 +42,4 @@ Then, implement any functionality as needed by adding appropriate events, for ex
 
 # Careful with custom functionalities!
 
-In our opinion, there are very few cases which really need optimisation for keyboard interaction. If you are really curious and want to learn more about this, skip ahead and read [Our codex about clean and maintainable accessibility](/knowledge/codex){.page}.
+In our opinion, there are very few cases which really need optimisation for keyboard interaction. If you are really curious and want to learn more about this, skip ahead and read [Our codex about clean and maintainable accessibility](/welcome/how-to-read-use/codex){.page}.

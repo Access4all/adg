@@ -16,7 +16,7 @@ They have the purpose to give you an idea about how an accessible widget should 
 
 ARIA roles and states were relinquished wherever possible, as they seem to be supported to different degrees by common browsers and screenreaders. So to prevent unforseeable problems, only plain ol' HTML and basic JavaScript was used.
 
-See [Our codex about clean and maintainable accessibility](/knowledge/codex){.page}.
+See [Our codex about clean and maintainable accessibility](/welcome/how-to-read-use/codex){.page}.
 
 See [Introduction to keyboard only usage](/knowledge/keyboard-only){.page}.
 
