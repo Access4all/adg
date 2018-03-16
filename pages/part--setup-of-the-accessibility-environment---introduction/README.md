@@ -1,0 +1,52 @@
+---
+layout: layout
+title: "Part: Setup of the accessibility environment - introduction"
+navigation_title: "Setup"
+position: 2
+lead: "For creating websites with accessibility in mind, you need to have some specific software at hand. In this 2nd part of this guide, the Setup part, you learn how to set up all the software. The complete setup is tailored to the needs of developers, but for readers with lesser demands, there's also a pragmatic minimal version of the setup."
+---
+
+# Part: Setup of the accessibility environment - introduction
+
+To guarantee accessibility of your websites, you must ensure that they are compatible with commonly used input and output tools (software and/or devices). This also includes Assistive Technologies which are created specifically for people with special needs, like blind, hard-of-hearing, or motor impaired people.
+
+- Input tools: pointing devices (mouse), keyboards, touch screens, alternative controlling systems, etc.
+- Output tools: visual displays (monitors), audio (produced for example by screen readers), braille displays, etc.
+
+Luckily, you don't need to own and control each and every single one of them. In the following chapters, the presented list of software covers most, if not all requirements. Furthermore, we show how to configure everything properly so that you can use them effectively.
+
+The good news with that is: most of the proposed software can be used free of charge.
+
+# Chapters
+
+We begin with [Chapter: Windows virtual machine - overview](/part--setup-of-the-accessibility-environment---introduction/chapter--windows-virtual-machine---overview){.page}. Here you will learn why Windows is a must-have for developing accessible websites, and optionally how you can run it inside a dedicated environment (a virtual machine).
+
+In [Chapter: Web browsers - overview](/part--setup-of-the-accessibility-environment---introduction/chapter--web-browsers---overview){.page}, you will encounter the list of needed browsers. No surprise, you are certainly already familiar with them.
+
+In [Chapter: Screen readers - overview](/part--setup-of-the-accessibility-environment---introduction/chapter--screen-readers---overview){.page}, there's the list of relevant screen readers. Used mainly by blind people, screen readers are probably the most important tools when it comes to accessibility.
+
+Finally, [Chapter: Other accessibility tools - overview](/part--setup-of-the-accessibility-environment---introduction/chapter--other-accessibility-tools---overview){.page} presents a few more tools supporting your daily accessibility routine.
+
+# How to go through this part
+
+Not everyone reading this guide may be involved as deeply in accessibility as the typical frontend developer. And thus, not everyone may have the same setup requirements.
+
+## Complete setup: all the power you need
+
+If you are a developer, you'll have to perform the complete setup of most (if not all) proposed software. As it is quite a bunch (and a few of the tools will hook themselves deeply into the operating system), we show how to set up a self-contained environment that doesn't interfere with your main one.
+
+For this, please work through all chapters of this part thoroughly.
+
+## Minimal setup: a pragmatic quick solution
+
+Maybe you are not interested in having all the tools, or your company doesn't allow you to install new software at all. In this case, we propose you a minimal setup. Although it's definitely not on par with a complete setup, it still will serve you very well and quite far.
+
+In order to get there, please work through the following list of pages, as it will guide you to the software that's most important for having a well working, minimal environment available. If you're not running a Windows system yet, please work through the chapter [Chapter: Windows virtual machine - overview](/part--setup-of-the-accessibility-environment---introduction/chapter--windows-virtual-machine---overview){.page} first.
+
+- [Firefox installation and configuration](/part--setup-of-the-accessibility-environment---introduction/chapter--web-browsers---overview/firefox-installation-and-configuration){.page}
+- [NVDA installation and configuration](/part--setup-of-the-accessibility-environment---introduction/chapter--screen-readers---overview/nvda-installation-and-configuration){.page}
+- [Colour Contrast Analyser](/part--setup-of-the-accessibility-environment---introduction/chapter--other-accessibility-tools---overview/colour-contrast-analyser){.page}
+- [PDF Accessibility Checker](/part--setup-of-the-accessibility-environment---introduction/chapter--other-accessibility-tools---overview/pdf-accessibility-checker){.page}
+- [Windows High Contrast Mode](/part--setup-of-the-accessibility-environment---introduction/chapter--other-accessibility-tools---overview/windows-high-contrast-mode){.page}
+
+By the way: all of the minimal software is available in some portable version. Thus, it doesn't need any admin rights for installation. See [What is a portable app? (PortableApps.com)](https://portableapps.com/about/what_is_a_portable_app) for more information.
