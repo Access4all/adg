@@ -6,7 +6,7 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
-    "prettier": "prettier-standard '*.js'",
+    "prettier": "prettier-standard '**/*.js'",
     "precommit": "npm run prettier"
   },
   "keywords": [],
