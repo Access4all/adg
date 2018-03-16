@@ -1,4 +1,12 @@
-const markdown = require('gulp-markdown')
+const markdown = require('gulp-markdownit')({
+  plugins: [
+    'markdown-it-abbr',
+    'markdown-it-attrs',
+    'markdown-it-deflist',
+    'markdown-it-kbd',
+    'markdown-it-samp'
+  ]
+})
 const fs = require('fs')
 const path = require('path')
 const frontMatter = require('front-matter')
@@ -28,9 +36,7 @@ const getCode = href => {
   }
 }
 
-const renderer = new markdown.marked.Renderer()
-
-renderer.link = function (href, title, text) {
+markdown.link = function (href, title, text) {
   let code
   switch (text) {
     case '[Code]':
@@ -85,4 +91,4 @@ renderer.link = function (href, title, text) {
   }
 }
 
-module.exports = () => markdown({ renderer })
+module.exports = () => markdown
