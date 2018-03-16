@@ -1,3 +1,14 @@
 .text_container {
-
+	@include richtext;
+	h1 {
+		@include h2;
+		margin-bottom: 1.5 * $gutter;
+		color: $c-green;
+	}
+	h2 {
+		@include h3;
+	}
+	h3 {
+		@include h4;
+	}
 }

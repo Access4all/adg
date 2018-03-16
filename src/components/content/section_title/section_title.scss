@@ -1,3 +1,5 @@
 .section_title {
 	@include h2;
+	margin-bottom: 1.5 * $gutter;
+	color: $c-green;
 }
