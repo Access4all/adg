@@ -36,7 +36,7 @@ Term 2
 
 This is the [[help command]]
 
-## Element attibutes
+## Element attributes
 
 dummy paragraph {data-toggle=modal}
 
