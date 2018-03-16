@@ -1,0 +1,48 @@
+* {
+  font: 20px/1.5 Helvetica;
+}
+
+.autocomplete {
+  display: inline-block;
+  position: relative;
+}
+
+label {
+  display: block;
+}
+
+input, button {
+  border: 1px solid;
+  padding: 5px 10px;
+}
+
+button {
+  background: #333;
+  color: white;
+  border-color: #333;
+}
+
+.autocomplete--suggestions {
+  position: absolute;
+  z-index: 10000;
+  width: 100%;
+  padding: 5px 0;
+  margin: 0;
+  border: 1px solid #777;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  background: white;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  max-height: 90vh;
+}
+.autocomplete--suggestions > li {
+  list-style: none;
+  margin: -3px 0;
+  padding: 3px 10px;
+}
+.autocomplete--suggestions > li:hover, .autocomplete--suggestions > li.is-selected {
+  background: #333;
+  color: white;
+  cursor: pointer;
+}

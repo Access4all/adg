@@ -1,19 +1,13 @@
 ---
 layout: layout
-title: Home
-tags:
- - bla2
-includeRelated: true
+title: "Welcome to the Accessibility Developer Guide (ADG)"
+lead: "Lead. Lead. Lead. Lead. Lead. Lead. Lead. Lead. Lead. Lead. Lead."
 ---
 
-# Hello
+# Here is a title
 
-Yay!
+## And a sub title
 
-```js
-const x = 'bla';
-```
+And there is a text.
 
-![Screenshot](_media/screenshot.png)
-
-[[News]](news/)
+Yeah.

@@ -1,0 +1,27 @@
+.control, fieldset {
+  margin: 6px 0;
+}
+
+label {
+  display: inline-block;
+  width: 120px;
+  vertical-align: top;
+}
+
+input + label {
+  width: auto;
+}
+
+.error {
+  color: red;
+  margin-top: 0;
+  margin-left: 120px;
+}
+
+label + .error {
+  margin-left: 0;
+}
+
+fieldset .error {
+  margin-left: 0;
+}
