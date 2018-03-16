@@ -1,12 +1,12 @@
 {{#each navigation}}
   {{#unless (skipPage this ../sublevel)}}
-    <li class="nav-item{{#if children}} dropdown{{/if}}">
-      <a class="nav-link{{#if children}} dropdown-toggle{{/if}}" href="/{{url}}"{{#if children}} id="nav{{@key}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{{/if}}>
+    <li class="nav-list--item js-collapsible">
+      <a class="nav-list--link " href="/{{url}}"{{#if children}} id="nav{{@key}}" aria-haspopup="true" aria-expanded="false"{{/if}}>
         {{title}}
       </a>
 
       {{#if children}}
-        <ul class="dropdown-menu" aria-labelledby="nav{{@key}}">
+        <ul class="nav-list nav-list-subnav" aria-labelledby="nav{{@key}}">
           {{> "global/nav-list/nav-list" navigation=children sublevel=true}}
         </ul>
       {{/if}}

@@ -1,3 +1,8 @@
 .navbar {
-	background-color: lime;
+	display: block;
+	@include above-tablet {
+		position: absolute;
+		left: 0;
+		width: 200px;
+	}
 }

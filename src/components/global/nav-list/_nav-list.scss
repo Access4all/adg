@@ -1,0 +1,18 @@
+.nav-list {
+	margin-bottom: $gutter;
+	&-main {
+		margin-top: - $gutter / 2;
+		& > .nav-list--item {
+			padding-left: 20px;
+			& > .nav-list--link {
+				display: block;
+				@include font-weight(bold);
+				padding: $gutter / 2 0;
+			}
+		}
+	}
+}
+.nav-list--link {
+	display: block;
+	padding: $gutter / 4 0;
+}
