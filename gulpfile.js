@@ -143,14 +143,18 @@ gulp.task('html', cb => {
       .pipe(frontMatter().on('error', errorHandler))
 
       // Compile Markdown to HTML
-      .pipe(through.obj((file, enc, cb) => {
-        const contents = file.contents.toString()
-        const html = markdown.render(contents)
+      .pipe(
+        through
+          .obj((file, enc, cb) => {
+            const contents = file.contents.toString()
+            const html = markdown.render(contents)
 
-        file.contents = Buffer.from(html)
+            file.contents = Buffer.from(html)
 
-        return cb(null, file)
-      }).on('error', errorHandler))
+            return cb(null, file)
+          })
+          .on('error', errorHandler)
+      )
 
       // Build up navigation
       .pipe(

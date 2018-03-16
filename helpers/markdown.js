@@ -72,8 +72,8 @@ const codePlugin = markdownPlugin(/@code\((.*?)\)/, (match, utils) => {
   }
   const codePenForm = `<form action="https://codepen.io/pen/define" method="POST" target="_blank">
     <input type="hidden" name="data" value="${JSON.stringify(
-codePenConfig
-).replace(/"/g, '&quot;')}">
+    codePenConfig
+  ).replace(/"/g, '&quot;')}">
     <button type="submit" class="btn btn-primary">CodePen</button>
   </form>`
 
