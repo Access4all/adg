@@ -1,0 +1,130 @@
+
+$mq-mobile-portrait    : 400px !default;
+$mq-mobile-narrow      : 580px !default;
+$mq-mobile             : 750px !default;
+$mq-tablet-portrait    : 900px !default;
+$mq-tablet             : 1050px !default;
+$mq-desktop            : 1382px !default;
+
+
+
+@mixin mobile-portrait {
+	@media (max-width : $mq-mobile-portrait) {
+		@content;
+	}
+}
+@mixin above-mobile-portrait {
+	@media (min-width : ($mq-mobile-portrait + 1px)) {
+		@content;
+	}
+}
+
+
+
+@mixin mobile-narrow {
+	@media (max-width : $mq-mobile-narrow) {
+		@content;
+	}
+}
+@mixin above-mobile-narrow {
+	@media (min-width : ($mq-mobile-narrow + 1px)) {
+		@content;
+	}
+}
+
+
+
+@mixin mobile {
+	@media (max-width : $mq-mobile) {
+		@content;
+	}
+}
+@mixin above-mobile {
+	@media (min-width : ($mq-mobile + 1px)) {
+		@content;
+	}
+}
+
+
+
+@mixin tablet-portrait {
+	@media (max-width : $mq-tablet-portrait) {
+		@content;
+	}
+}
+@mixin above-tablet-portrait {
+	@media (min-width : ($mq-tablet-portrait + 1px)) {
+		@content;
+	}
+}
+
+
+
+@mixin tablet {
+	@media (max-width : $mq-tablet) {
+		@content;
+	}
+}
+@mixin above-tablet {
+	@media (min-width : ($mq-tablet + 1px)) {
+		@content;
+	}
+}
+
+
+
+@mixin desktop {
+	@media (max-width : $mq-desktop) {
+		@content;
+	}
+}
+@mixin above-desktop {
+	@media (min-width : ($mq-desktop + 1px)) {
+		@content;
+	}
+}
+
+
+
+
+
+
+// Retina screens have a 1.5 pixel ratio, not 2
+@mixin retina {
+	@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+		@content;
+	}
+}
+
+// printer
+@mixin print {
+	@media print {
+		@content;
+	}
+}
+// printer
+@mixin not-print {
+	@media only screen {
+		@content;
+	}
+}
+
+
+
+// windows high contrast mode
+
+@mixin windows-contrast-mode {
+	@media screen and (-ms-high-contrast: active) {
+		@content;
+	}
+}
+@mixin windows-contrast-mode-bow {
+	@media screen and (-ms-high-contrast: black-on-white) {
+		@content;
+	}
+}
+@mixin windows-contrast-mode-wob {
+	@media screen and (-ms-high-contrast: white-on-black) {
+		@content;
+	}
+}

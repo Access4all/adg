@@ -44,6 +44,7 @@
     "markdown-it-deflist": "^2.0.3",
     "markdown-it-kbd": "^1.1.1",
     "markdown-it-samp": "0.0.4",
+    "node-sass-globbing": "0.0.23",
     "prettier-standard": "^8.0.0",
     "require-new": "^1.1.1",
     "webpack": "^4.1.1"

@@ -55,37 +55,39 @@ markdown.link = function (href, title, text) {
         </div>`
       })
 
-      return `${description}${blocks.join('')}`
-    case '[CodePen]':
-      code = getCode(href)
-
-      return `<form action="https://codepen.io/pen/define" method="POST" target="_blank">
-        <input type="hidden" name="data" value="${JSON.stringify({
-    title: code.details.name,
-    description: code.details.description,
-    html: code.html,
-    // html_pre_processor: 'none',
-    css: code.css,
-    css_pre_processor: 'scss',
-    // css_starter: 'neither',
-    // css_prefix_free: false,
-    js: code.js
-    // js_pre_processor: 'none',
-    // js_modernizr: false,
-    // js_library: '',
-    // html_classes: '',
-    // css_external: '',
-    // js_external: ''
-  }).replace(/"/g, '&quot;')}">
+      const codePenConfig = {
+        title: code.details.name,
+        description: code.details.description,
+        html: code.html,
+        // html_pre_processor: 'none',
+        css: code.css,
+        css_pre_processor: 'scss',
+        // css_starter: 'neither',
+        // css_prefix_free: false,
+        js: code.js
+        // js_pre_processor: 'none',
+        // js_modernizr: false,
+        // js_library: '',
+        // html_classes: '',
+        // css_external: '',
+        // js_external: ''
+      }
+      const codePenForm = `<form action="https://codepen.io/pen/define" method="POST" target="_blank">
+        <input type="hidden" name="data" value="${JSON.stringify(
+    codePenConfig
+  ).replace(/"/g, '&quot;')}">
         <button type="submit" class="btn btn-primary">CodePen</button>
       </form>`
-    case '[JSFiddle]':
-      let link = `https://jsfiddle.net/gh/get/library/pure/backflip/adg/tree/master${href.replace(
-        /\[|\]/g,
-        ''
-      )}`
 
-      return `<a href="${link}" target="_blank" class="btn btn-primary">JSFiddle</a>`
+      return `${description}${blocks.join('')}
+      ${codePenForm}`
+    // case '[JSFiddle]':
+    //   let link = `https://jsfiddle.net/gh/get/library/pure/backflip/adg/tree/master${href.replace(
+    //     /\[|\]/g,
+    //     ''
+    //   )}`
+
+    //   return `<a href="${link}" target="_blank" class="btn btn-primary">JSFiddle</a>`
     default:
       return markdown.marked.Renderer.prototype.link.apply(this, arguments)
   }
