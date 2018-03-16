@@ -1,0 +1,31 @@
+
+@mixin font-weight($weight){
+	font-weight: normal;
+	@if $weight == "bold" {
+		font-weight: bold;
+	}
+}
+
+
+@mixin font-size($px) {
+	font-size: ($px);
+	font-size: px2rem($px);
+	@if $px < 16px {
+		@include mobile {
+			font-size: 16px;
+			font-size: px2rem(16px);
+		}
+	}
+}
+
+@mixin line-height($px) {
+	line-height: ($px);
+	line-height: px2rem($px);
+}
+
+
+
+@mixin textantialiasing() {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

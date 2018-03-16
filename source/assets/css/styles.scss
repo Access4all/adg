@@ -1,8 +1,26 @@
+
+
+// Settings
+@import "settings",
+		"../../components/**/*-settings.scss";
+
+// Reset & asics
+@import "vendor/reset",
+		"helpers/clearfix",
+		"helpers/fonts",
+		"../../components/**/*-base.scss";
+
+
+// Content
+@import "../../components/**/*!(-base|-settings).scss";
+
+
+
+
+
+
+//@import "bootstrap/scss/bootstrap";
 @import "highlight.js/styles/github";
-@import "bootstrap/scss/bootstrap";
-
-
-@import "../../components/components";
 
 // $colors: (
 //   default: black,
