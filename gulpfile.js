@@ -35,19 +35,21 @@ gulp.task('js', cb => {
           loader: 'babel-loader',
           options: {
             presets: [
-              ['@babel/preset-env', {
-                useBuiltIns: 'usage',
-                targets: {
-                  browsers: ['last 2 versions']
+              [
+                '@babel/preset-env',
+                {
+                  useBuiltIns: 'usage',
+                  targets: {
+                    browsers: ['last 2 versions']
+                  }
                 }
-              }]
+              ]
             ]
           }
         }
       ]
     },
-    plugins: [
-    ],
+    plugins: [],
     output: {
       path: path.resolve('./build/js/'),
       filename: '[name].js'
