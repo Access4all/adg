@@ -13,11 +13,11 @@ const plumber = require('gulp-plumber')
 const util = require('gulp-util')
 const del = require('del')
 
-function errorHandler(err) {
+function errorHandler (err) {
   util.log(
-  err.plugin || '',
-  util.colors.cyan(err.fileName),
-  util.colors.red(err.message)
+    err.plugin || '',
+    util.colors.cyan(err.fileName),
+    util.colors.red(err.message)
   )
 }
 
@@ -30,22 +30,22 @@ gulp.task('js', cb => {
     module: {
       rules: [
         {
-  test: /\.js$/,
-  exclude: /node_modules/,
-  loader: 'babel-loader',
-  options: {
-    presets: [
-    [
-    '@babel/preset-env',
+          test: /\.js$/,
+          exclude: /node_modules/,
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              [
+                '@babel/preset-env',
                 {
-  useBuiltIns: 'usage',
-  targets: {
-    browsers: ['last 2 versions']
-  }
+                  useBuiltIns: 'usage',
+                  targets: {
+                    browsers: ['last 2 versions']
+                  }
                 }
               ]
             ]
-  }
+          }
         }
       ]
     },
@@ -65,20 +65,20 @@ gulp.task('js', cb => {
 
     console.log(
       stats.toString({
-  colors: true,
-  hash: false,
-  timings: false,
-  chunks: false,
-  chunkModules: false,
-  modules: false,
-  children: true,
-  version: true,
-  cached: false,
-  cachedAssets: false,
-  reasons: false,
-  source: false,
-  errorDetails: false,
-  assetsSort: 'name'
+        colors: true,
+        hash: false,
+        timings: false,
+        chunks: false,
+        chunkModules: false,
+        modules: false,
+        children: true,
+        version: true,
+        cached: false,
+        cachedAssets: false,
+        reasons: false,
+        source: false,
+        errorDetails: false,
+        assetsSort: 'name'
       })
     )
 
@@ -89,11 +89,11 @@ gulp.task('js', cb => {
 gulp.task('css', () => {
   return gulp
     .src('./source/assets/**/*.scss', {
-  base: './source/assets'
+      base: './source/assets'
     })
     .pipe(
       sass({
-  includePaths: ['node_modules']
+        includePaths: ['node_modules']
       }).on('error', errorHandler)
     )
     .pipe(gulp.dest('./build'))
@@ -114,9 +114,9 @@ gulp.task('html', cb => {
 
   const getUrl = filePath => {
     return path
-    .relative(config.base, filePath)
-    .replace(path.basename(filePath), '')
-    .replace(/\/$/, '')
+      .relative(config.base, filePath)
+      .replace(path.basename(filePath), '')
+      .replace(/\/$/, '')
   }
 
   const getLayout = layoutName => {
@@ -124,16 +124,16 @@ gulp.task('html', cb => {
 
     // Read layout file only once
     const layout = (layouts[layoutName] =
-    layouts[layoutName] ||
-    fs.readFileSync('./source/templates/' + layoutName + '.hbs'))
+      layouts[layoutName] ||
+      fs.readFileSync('./source/templates/' + layoutName + '.hbs'))
 
     return layout
   }
 
   return (
-  gulp
+    gulp
       .src(config.src, {
-  base: config.base
+        base: config.base
       })
       .pipe(plumber())
 
@@ -147,38 +147,38 @@ gulp.task('html', cb => {
       .pipe(
         through.obj(
           (file, enc, cb) => {
-  const url = getUrl(file.path)
-  const parents = url
-  .split('/')
-  .slice(0, -1)
-  .filter(item => item !== '')
+            const url = getUrl(file.path)
+            const parents = url
+              .split('/')
+              .slice(0, -1)
+              .filter(item => item !== '')
 
-  files.push(file)
+            files.push(file)
 
-  navigation.push({
-    url,
-    parents,
-    title: file.frontMatter.title
-  })
+            navigation.push({
+              url,
+              parents,
+              title: file.frontMatter.title
+            })
 
-  return cb()
+            return cb()
           },
-          function(cb) {
-  // Create navigation hierarchy
-  navigation = navigation
+          function (cb) {
+            // Create navigation hierarchy
+            navigation = navigation
               .map(page => {
-  page.children = navigation
-  .filter(child => child.parents.includes(page.url))
-  .sort((a, b) => a.position - b.position)
+                page.children = navigation
+                  .filter(child => child.parents.includes(page.url))
+                  .sort((a, b) => a.position - b.position)
 
-  return page
+                return page
               })
               .sort((a, b) => a.position - b.position)
 
-  // Return files back to stream
-  files.forEach(this.push.bind(this))
+            // Return files back to stream
+            files.forEach(this.push.bind(this))
 
-  return cb()
+            return cb()
           }
         )
       )
@@ -187,24 +187,24 @@ gulp.task('html', cb => {
       .pipe(
         through
           .obj((file, enc, cb) => {
-  try {
-    const layout = getLayout(file.frontMatter.layout)
+            try {
+              const layout = getLayout(file.frontMatter.layout)
 
-    file.data = {
-      title: file.frontMatter.title,
-      contents: file.contents,
-      navigation: navigation
-    }
+              file.data = {
+                title: file.frontMatter.title,
+                contents: file.contents,
+                navigation: navigation
+              }
 
-    file.contents = layout
+              file.contents = layout
 
-    return cb(null, file)
-  } catch (err) {
-    err.plugin = 'data'
-    err.fileName = file.path
+              return cb(null, file)
+            } catch (err) {
+              err.plugin = 'data'
+              err.fileName = file.path
 
-    return cb(err, file)
-  }
+              return cb(err, file)
+            }
           })
           .on('error', errorHandler)
       )
@@ -212,40 +212,40 @@ gulp.task('html', cb => {
       // Compile Handlebars to HTML
       .pipe(
         handlebars({
-  partials: './source/components/**/*.hbs',
-  parsePartialName: (options, file) => {
-    return path
-    .relative('./source/components', file.path)
-    .replace(path.extname(file.path), '')
-  },
-  helpers: {
-    skipPage: (page, sublevel, options) => {
-      // Skip sublevels in first navigation iteration
-      return !sublevel && page.parents.length
-    }
-  }
+          partials: './source/components/**/*.hbs',
+          parsePartialName: (options, file) => {
+            return path
+              .relative('./source/components', file.path)
+              .replace(path.extname(file.path), '')
+          },
+          helpers: {
+            skipPage: (page, sublevel, options) => {
+              // Skip sublevels in first navigation iteration
+              return !sublevel && page.parents.length
+            }
+          }
         }).on('error', errorHandler)
       )
 
       // Format
       .pipe(
         prettify({
-  indent_with_tabs: false,
-  max_preserve_newlines: 1
+          indent_with_tabs: false,
+          max_preserve_newlines: 1
         })
       )
 
       // Rename to `index.html`
       .pipe(
         through.obj((file, enc, cb) => {
-  file.path = file.path.replace(path.basename(file.path), 'index.html')
+          file.path = file.path.replace(path.basename(file.path), 'index.html')
 
-  return cb(null, file)
+          return cb(null, file)
         })
       )
       .pipe(gulp.dest('./build'))
       .on('finish', () => {
-  browserSync.reload()
+        browserSync.reload()
       })
   )
 })
@@ -253,7 +253,7 @@ gulp.task('html', cb => {
 gulp.task('media', () => {
   return gulp
     .src('./pages/{,**/}_media/**/*', {
-  base: './pages'
+      base: './pages'
     })
     .pipe(gulp.dest('./build'))
 })
@@ -264,18 +264,23 @@ gulp.task('build', gulp.series('clean', 'css', 'html', 'js', 'media'))
 
 gulp.task(
   'default',
-  gulp.series('build', function serveAndWatch() {
-  browserSync.init({
-    server: {
-      baseDir: './build'
-    }
-  })
+  gulp.series('build', function serveAndWatch () {
+    browserSync.init({
+      server: {
+        baseDir: './build'
+      }
+    })
 
-  gulp.watch(['./source/assets/**/*.scss'], gulp.series('css'))
-  gulp.watch(
-  ['./pages/**/*.md', './source/templates/*.hbs', './source/components/*.hbs', './helpers/*'],
-  gulp.series('html')
-  )
-  gulp.watch(['./pages/{,**/}_media/**/*'], gulp.series('media'))
+    gulp.watch(['./source/assets/**/*.scss'], gulp.series('css'))
+    gulp.watch(
+      [
+        './pages/**/*.md',
+        './source/templates/*.hbs',
+        './source/components/*.hbs',
+        './helpers/*'
+      ],
+      gulp.series('html')
+    )
+    gulp.watch(['./pages/{,**/}_media/**/*'], gulp.series('media'))
   })
 )
