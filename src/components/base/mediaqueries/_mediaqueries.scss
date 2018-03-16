@@ -1,0 +1,136 @@
+
+
+html.js .is-hidden-js {
+	display: none !important;
+}
+html.no-js .is-visible-js {
+	display: none !important;
+}
+
+
+@include above-tablet {
+	.is-hidden-desktop {
+		display: none !important;
+	}
+	.is-visible-tablet {
+		display: none !important;
+	}
+}
+@include tablet {
+	.is-visible-desktop {
+		display: none !important;
+	}
+	.is-hidden-tablet {
+		display: none !important;
+	}
+}
+@include above-tablet-portrait {
+	.is-visible-tablet-portrait {
+		display: none !important;
+	}
+}
+@include tablet-portrait {
+	.is-hidden-tablet-portrait {
+		display: none !important;
+	}
+}
+
+@include above-mobile {
+	.is-visible-mobile {
+		display: none !important;
+	}
+}
+@include mobile {
+	.is-hidden-mobile {
+		display: none !important;
+	}
+}
+
+@include above-mobile-narrow {
+	.is-visible-mobile-narrow {
+		display: none !important;
+	}
+}
+@include mobile-narrow {
+	.is-hidden-mobile-narrow {
+		display: none !important;
+	}
+}
+
+@include above-mobile-portrait {
+	.is-visible-mobile-portrait {
+		display: none !important;
+	}
+}
+@include mobile-portrait {
+	.is-hidden-mobile-portrait {
+		display: none !important;
+	}
+}
+
+@include not-print {
+	.is-visible-print {
+		display: none !important;
+	}
+}
+@include print {
+	.is-hidden-print {
+		display: none !important;
+	}
+}
+
+
+
+
+
+
+// Media dispatcher
+
+
+body:after {
+	display: none;
+	content: 'desktop';
+	@include tablet {
+		content: 'tablet';
+	}
+	@include tablet-portrait {
+		content: 'tablet-portrait';
+	}
+	@include mobile {
+		content: 'mobile';
+	}
+	@include mobile-narrow {
+		content: 'mobile-narrow';
+	}
+	@include mobile-portrait {
+		content: 'mobile-portrait';
+	}
+}
+
+.media-dispatcher-fallback {
+	display: none;
+	margin-bottom: 0px;
+	@include tablet {
+		margin-bottom: 1px;
+	}
+	@include tablet-portrait {
+		margin-bottom: 2px;
+	}
+	@include mobile {
+		margin-bottom: 3px;
+	}
+	@include mobile-narrow {
+		margin-bottom: 4px;
+	}
+	@include mobile-portrait {
+		margin-bottom: 5px;
+	}
+}
+
+body:before {
+	display: none;
+	content: '';
+	@include retina {
+		content: 'retina';
+	}
+}

@@ -1,5 +1,6 @@
 const gulp = require('gulp')
 const sass = require('gulp-sass')
+const nodeSassGlobbing = require('node-sass-globbing')
 const handlebars = require('gulp-hb')
 const prettify = require('gulp-prettify')
 const frontMatter = require('gulp-front-matter')
@@ -24,7 +25,7 @@ function errorHandler (err) {
 gulp.task('js', cb => {
   const compiler = webpack({
     entry: {
-      scripts: './source/assets/js/scripts.js'
+      scripts: './src/assets/js/scripts.js'
     },
     mode: 'development',
     module: {
@@ -51,7 +52,7 @@ gulp.task('js', cb => {
     },
     plugins: [],
     output: {
-      path: path.resolve('./build/js/'),
+      path: path.resolve('./dist/js/'),
       filename: '[name].js'
     }
   })
@@ -88,15 +89,16 @@ gulp.task('js', cb => {
 
 gulp.task('css', () => {
   return gulp
-    .src('./source/assets/**/*.scss', {
-      base: './source/assets'
+    .src('./src/assets/**/*.scss', {
+      base: './src/assets'
     })
     .pipe(
       sass({
-        includePaths: ['node_modules']
+        importer: nodeSassGlobbing,
+        includePaths: ['node_modules', './src/assets/css/', './src/components/']
       }).on('error', errorHandler)
     )
-    .pipe(gulp.dest('./build'))
+    .pipe(gulp.dest('./dist'))
     .pipe(browserSync.stream())
 })
 
@@ -125,7 +127,7 @@ gulp.task('html', cb => {
     // Read layout file only once
     const layout = (layouts[layoutName] =
       layouts[layoutName] ||
-      fs.readFileSync('./source/templates/' + layoutName + '.hbs'))
+      fs.readFileSync('./src/templates/' + layoutName + '.hbs'))
 
     return layout
   }
@@ -207,10 +209,10 @@ gulp.task('html', cb => {
       // Compile Handlebars to HTML
       .pipe(
         handlebars({
-          partials: './source/components/**/*.hbs',
+          partials: './src/components/**/*.hbs',
           parsePartialName: (options, file) => {
             return path
-              .relative('./source/components', file.path)
+              .relative('./src/components', file.path)
               .replace(path.extname(file.path), '')
           },
           helpers: {
@@ -236,7 +238,7 @@ gulp.task('html', cb => {
           return cb(null, file)
         })
       )
-      .pipe(gulp.dest('./build'))
+      .pipe(gulp.dest('./dist'))
       .on('finish', () => {
         browserSync.reload()
       })
@@ -248,10 +250,10 @@ gulp.task('media', () => {
     .src('./pages/{,**/}_media/**/*', {
       base: './pages'
     })
-    .pipe(gulp.dest('./build'))
+    .pipe(gulp.dest('./dist'))
 })
 
-gulp.task('clean', () => del('./build'))
+gulp.task('clean', () => del('./dist'))
 
 gulp.task('build', gulp.series('clean', 'css', 'html', 'js', 'media'))
 
@@ -260,16 +262,16 @@ gulp.task(
   gulp.series('build', function serveAndWatch () {
     browserSync.init({
       server: {
-        baseDir: './build'
+        baseDir: './dist'
       }
     })
 
-    gulp.watch(['./source/assets/**/*.scss'], gulp.series('css'))
+    gulp.watch(['./src/assets/**/*.scss'], gulp.series('css'))
     gulp.watch(
       [
         './pages/**/*.md',
-        './source/templates/*.hbs',
-        './source/components/*.hbs',
+        './src/templates/*.hbs',
+        './src/components/*.hbs',
         './helpers/*'
       ],
       gulp.series('html')
