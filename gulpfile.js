@@ -26,35 +26,32 @@ gulp.task('js', cb => {
     entry: {
       scripts: './static/js/scripts.js'
     },
+    mode: 'development',
     module: {
-      loaders: [
+      rules: [
         {
           test: /\.js$/,
           exclude: /node_modules/,
           loader: 'babel-loader',
           options: {
-            presets: ['env']
+            presets: [
+              ['@babel/preset-env', {
+                useBuiltIns: 'usage',
+                targets: {
+                  browsers: ['last 2 versions']
+                }
+              }]
+            ]
           }
         }
       ]
     },
     plugins: [
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.jQuery': 'jquery',
-        Popper: ['popper.js', 'default']
-        // In case you imported plugins individually, you must also require them here:
-        // Util: "exports-loader?Util!bootstrap/js/dist/util",
-        // Dropdown: "exports-loader?Dropdown!bootstrap/js/dist/dropdown",
-      }),
-      new webpack.optimize.UglifyJsPlugin()
     ],
     output: {
       path: path.resolve('./build/js/'),
       filename: '[name].js'
-    },
-    devtool: 'eval-cheap-module-source-map'
+    }
   })
 
   compiler.run((err, stats) => {
