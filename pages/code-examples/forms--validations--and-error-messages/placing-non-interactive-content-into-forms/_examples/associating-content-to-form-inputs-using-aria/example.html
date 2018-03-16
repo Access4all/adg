@@ -1,0 +1,80 @@
+<form>
+  <div class="control">
+    <label for="full_name">Full name</label><input aria-describedby="full_name_description" id="full_name" type="text" />
+    <p class="description" id="full_name_description">
+      Please tell us your name.
+    </p>
+  </div>
+  <div class="control">
+    <label for="biography">Biography</label><textarea aria-describedby="biography_description" id="biography"></textarea>
+    <p class="description" id="biography_description">
+      Please tell us something about your history.
+    </p>
+  </div>
+  <fieldset>
+    <legend>Gender</legend>
+    <div class="control">
+      <input aria-describedby="gender_male_description" id="gender_male" name="gender" type="radio" /><label for="gender_male">Male</label>
+      <p class="description" id="gender_male_description">
+        You may be this if you like beer, gadgets, and Playboy Magazine.
+      </p>
+    </div>
+    <div class="control">
+      <input aria-describedby="gender_female_description" id="gender_female" name="gender" type="radio" /><label for="gender_female">Female</label>
+      <p class="description" id="gender_female_description">
+        You may be this if you like prosecco, make up, and Playgirl Magazine.
+      </p>
+    </div>
+  </fieldset>
+  <div class="control">
+    <label for="age_group">Age Group</label><select aria-describedby="age_group_description" id="age_group">
+      <option>
+        0 to 9 Years
+      </option>
+      <option>
+        10 to 19 Years
+      </option>
+      <option>
+        20 to 29 Years
+      </option>
+      <option>
+        30 to 39 Years
+      </option>
+      <option>
+        40 to 49 Years
+      </option>
+      <option>
+        50 to 59 Years
+      </option>
+      <option>
+        60 to 69 Years
+      </option>
+      <option>
+        70 to 79 Years
+      </option>
+      <option>
+        80 to 89 Years
+      </option>
+      <option>
+        90 to 99 Years
+      </option>
+    </select>
+    <p class="description" id="age_group_description">
+      Tell us how old you are.
+    </p>
+  </div>
+  <div class="control">
+    <input aria-describedby="accept_agbs_description" id="accept_agbs" type="checkbox" /><label for="accept_agbs">I accept the following terms and conditions:</label>
+    <ul id="accept_agbs_description">
+      <li>
+        I entered all data truthfully
+      </li>
+      <li>
+        I'm a good person
+      </li>
+      <li>
+        I won't vote for Donald Trump next time
+      </li>
+    </ul>
+  </div>
+</form>
