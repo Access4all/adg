@@ -25,7 +25,7 @@ function errorHandler (err) {
 gulp.task('js', cb => {
   const compiler = webpack({
     entry: {
-      scripts: './src/assets/js/scripts.js'
+      scripts: './src/assets/js/ui.js'
     },
     mode: 'development',
     module: {
@@ -284,7 +284,10 @@ gulp.task(
       }
     })
 
-    gulp.watch(['./src/assets/**/*.scss'], gulp.series('css'))
+    gulp.watch(
+      ['./src/assets/css/**/*.scss', './src/components/**/*.scss'],
+      gulp.series('css')
+    )
     gulp.watch(
       [
         './pages/**/*.md',
