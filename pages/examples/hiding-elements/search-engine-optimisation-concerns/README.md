@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Search engine optimisation concerns"
+navigation_title: "Search engine optimisation concerns"
 position: 5
 lead: "Search engines are very smart, so hiding a few elements specifically from one or another channel shouldn't be much of a problem for page rankings."
 ---

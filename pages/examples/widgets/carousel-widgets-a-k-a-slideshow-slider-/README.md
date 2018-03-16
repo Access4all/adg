@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Carousel widgets (a.k.a. slideshow, slider)"
+navigation_title: "Carousel widgets (a.k.a. slideshow, slider)"
 position: 6
 lead: "Very similar to tablists, carousels also help to split up a page's content into smaller and thus more digestible parts which can be toggled visible one at a time."
 ---

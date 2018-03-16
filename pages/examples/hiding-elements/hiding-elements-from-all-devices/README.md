@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Hiding elements from all devices"
+navigation_title: "Hiding elements from all devices"
 position: 3
 lead: "Hiding elements from all devices means just that: no single device will perceive it anymore (although the element still is present in the DOM)."
 ---

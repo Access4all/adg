@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Autocomplete widgets (a.k.a. auto-suggest, look-ahead, type-ahead)"
+navigation_title: "Autocomplete widgets (a.k.a. auto-suggest, look-ahead, type-ahead)"
 position: 8
 lead: "TODO"
 ---

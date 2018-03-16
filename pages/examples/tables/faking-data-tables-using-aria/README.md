@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Faking data tables using ARIA"
+navigation_title: "Faking data tables using ARIA"
 position: 5
 lead: "Sometimes it's necessary to visually style tables in a way that standard tables aren't supposed to, e.g. when stacking table data vertically on small devices."
 ---

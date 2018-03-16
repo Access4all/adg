@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Tooltip widgets"
+navigation_title: "Tooltip widgets"
 position: 4
 lead: "Tooltips present additional information in a kind of \"mini dialog\", typically when hovering over or focusing an element. They offer different levels of complexity."
 ---

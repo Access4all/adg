@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Spanning multiple rows and columns"
+navigation_title: "Spanning multiple rows and columns"
 position: 4
 lead: "While `rowspan` and `colspan` are standard HTML attributes, they can be a bit tricky for screen readers. Be sure not to overuse them!"
 ---

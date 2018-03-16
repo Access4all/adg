@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Responsive data tables"
+navigation_title: "Responsive data tables"
 position: 7
 lead: "TODO"
 ---

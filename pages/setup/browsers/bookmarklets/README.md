@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Bookmarklets"
+navigation_title: "Bookmarklets"
 position: 4
 lead: "Bookmarklets are bookmarks that contain some JavaScript instead of a URL. You can execute them while reading a webpage, and they typically do some quick analysis and display their results."
 ---

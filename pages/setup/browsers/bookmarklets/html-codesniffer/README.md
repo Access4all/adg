@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "HTML_CodeSniffer"
+navigation_title: "HTML_CodeSniffer"
 position: 3
 lead: "This bookmarklet analyses the displayed page's HTML source and detects violations of the coding standard. It offers a huge amount of predefined rules and can be extended with custom rules."
 ---

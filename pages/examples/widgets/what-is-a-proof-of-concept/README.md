@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "What is a \"Proof of concept\"?"
+navigation_title: "What is a \"Proof of concept\"?"
 position: 2
 lead: "TODO"
 ---

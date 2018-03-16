@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "How to work with headings"
+navigation_title: "How to work with headings"
 position: 1
 lead: "Browsing headings is easily possible using screen readers. On the other hand, keyboard-only doesn't offer any specific interaction."
 ---

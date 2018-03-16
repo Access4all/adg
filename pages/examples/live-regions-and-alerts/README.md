@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Live Regions And Alerts"
+navigation_title: "Live Regions And Alerts"
 position: 19
 lead: "TODO"
 ---

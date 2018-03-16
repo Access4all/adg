@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Grouping form inputs using fieldset and legend"
+navigation_title: "Grouping form inputs using fieldset and legend"
 position: 4
 lead: "Grouping form inputs in a meaningful way can make forms much easier to handle for everyone. Be sure to use the correct mechanism(s) for it!"
 ---

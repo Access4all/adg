@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Grouping form inputs using headings"
+navigation_title: "Grouping form inputs using headings"
 position: 6
 lead: "It sometimes feels necessary to group complex forms visually using headings. If you do, be sure to associate them explicitly to the form yourself!"
 ---

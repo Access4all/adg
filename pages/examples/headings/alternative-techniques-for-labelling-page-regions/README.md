@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Alternative techniques for labelling page regions"
+navigation_title: "Alternative techniques for labelling page regions"
 position: 6
 lead: "While headings are the most widely known technique to label page regions, there exist other ways to label content in HTML."
 ---

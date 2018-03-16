@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Faking fieldset / legend using ARIA"
+navigation_title: "Faking fieldset / legend using ARIA"
 position: 5
 lead: "If for any reason you don't want to use fieldset and legend, you can fake them using ARIA."
 ---

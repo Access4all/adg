@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Web Developer toolbar"
+navigation_title: "Web Developer toolbar"
 position: 1
 lead: "Probably well known by most web developers already, the Web Developer toolbar extension adds various tools to Firefox that are incredibly useful for all sorts of code inspection and debugging."
 ---

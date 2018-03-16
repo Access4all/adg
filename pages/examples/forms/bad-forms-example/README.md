@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Bad forms example"
+navigation_title: "Bad forms example"
 position: 3
 lead: "There can be a lot messed up in a form, making it hardly accessible in many ways. The most common ones are shown here."
 ---

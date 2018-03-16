@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Accordion widgets"
+navigation_title: "Accordion widgets"
 position: 7
 lead: "Accordions contain of a number of content panels, each of wich can be expanded or collapsed vertically by the user."
 ---

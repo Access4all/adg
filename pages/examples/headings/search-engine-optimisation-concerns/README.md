@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Search engine optimisation concerns"
+navigation_title: "Search engine optimisation concerns"
 position: 5
 lead: "Websites optimised for accessibility also result in better search engine rankings. There are a few questions though that sometimes concern search engine optimisation experts."
 ---

@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Sensible Usage of ARIA Roles and Attributes"
+navigation_title: "Sensible Usage of ARIA Roles and Attributes"
 position: 14
 lead: "TODO"
 ---

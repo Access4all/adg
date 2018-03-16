@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Is CSS discriminating people with special needs?"
+navigation_title: "Is CSS discriminating people with special needs?"
 position: 6
 lead: "It seems that CSS is all about targeting the visual channel. Can this be interpreted as discrimination towards people with special needs?"
 ---

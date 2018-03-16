@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Adding visually hidden headings to complete a page's outline"
+navigation_title: "Adding visually hidden headings to complete a page's outline"
 position: 4
 lead: "Not only the main content of a web page needs to be marked up using headings, but also other elements like header, navigation, footer, etc."
 ---

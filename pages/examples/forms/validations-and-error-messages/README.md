@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Validations and error messages"
+navigation_title: "Validations and error messages"
 position: 8
 lead: "Data entered into form inputs usually is validated by the server: if there's any inacceptable data, the form usually is re-displayed, together with error messages."
 ---

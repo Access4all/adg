@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Hiding elements visually by moving them off-screen"
+navigation_title: "Hiding elements visually by moving them off-screen"
 position: 1
 lead: "Hiding an element visually means that visually it isn't perceivable, but non-visual clients (e.g. screen readers) still perceive it."
 ---

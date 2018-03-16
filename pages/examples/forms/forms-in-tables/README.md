@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Forms in tables"
+navigation_title: "Forms in tables"
 position: 11
 lead: "TODO"
 ---

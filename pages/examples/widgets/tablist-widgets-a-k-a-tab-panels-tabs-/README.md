@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Tablist widgets (a.k.a. tab panels, tabs)"
+navigation_title: "Tablist widgets (a.k.a. tab panels, tabs)"
 position: 5
 lead: "Tablists help to split up a page's content into smaller and thus more digestible parts which can be toggled visible one at a time. They can be thought of as \"small pages inside a page\"."
 ---

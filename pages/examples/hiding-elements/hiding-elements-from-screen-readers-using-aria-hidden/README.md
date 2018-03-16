@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Hiding elements from screen readers using aria-hidden"
+navigation_title: "Hiding elements from screen readers using aria-hidden"
 position: 2
 lead: "Hiding elements from screen readers means that an element visually is perceivable, but screen readers ignore it."
 ---

@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "General headings example"
+navigation_title: "General headings example"
 position: 2
 lead: "Headings work the same way on websites as they do on print documents (e.g. PDF)."
 ---

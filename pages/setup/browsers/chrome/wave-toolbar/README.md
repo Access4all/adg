@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "WAVE toolbar"
+navigation_title: "WAVE toolbar"
 position: 1
 lead: "WAVE toolbar gives you a very quick first impression about the quality of the currently browsed webpage's accessibility. At the press of a button, it provides visual cues by injecting icons and detailed information right into the page."
 ---

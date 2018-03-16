@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "How to browse forms"
+navigation_title: "How to browse forms"
 position: 1
 lead: "Browsing forms and interacting with their elements requires some special knowledge in both screen readers and keyboard-only usage."
 ---

@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "General forms example"
+navigation_title: "General forms example"
 position: 2
 lead: "HTML delivers you everything you need to create basic accessible forms."
 ---

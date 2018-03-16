@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "h123"
+navigation_title: "h123"
 position: 2
 lead: "This bookmarklet provides an efficient way to display the current webpage's heading outline, very close to how screen readers do. In addition, it has some pretty useful features like displaying potentially incorrectly hidden headings."
 ---

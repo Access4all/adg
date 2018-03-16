@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Changing a table's visual display"
+navigation_title: "Changing a table's visual display"
 position: 6
 lead: "When changing a \"real\" table's display settings, you also change how it's announced to the screen reader! This can be fixed with ARIA though."
 ---

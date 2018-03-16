@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Bad beadings example"
+navigation_title: "Bad beadings example"
 position: 3
 lead: "To be meaningful, heading outlines must be coherent on both a technical and textual level."
 ---

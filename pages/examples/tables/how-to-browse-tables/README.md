@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "How to browse tables"
+navigation_title: "How to browse tables"
 position: 1
 lead: "Browsing tables is easily possible using screen readers. On the other hand, keyboard-only doesn't offer any specific interaction."
 ---

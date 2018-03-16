@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Contents Structured"
+navigation_title: "Contents Structured"
 position: 1
 lead: "This bookmarklet highlights a lot of typical semantic HTML elements, conveying their tag names. This makes inspection of the current page's semantic structure pretty easy."
 ---

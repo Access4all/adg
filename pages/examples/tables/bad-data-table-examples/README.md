@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Bad data table examples"
+navigation_title: "Bad data table examples"
 position: 3
 lead: "Data tables lacking header cells are very hard to read by screen reader users."
 ---

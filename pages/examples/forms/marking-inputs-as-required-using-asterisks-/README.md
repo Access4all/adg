@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "Marking inputs as required using asterisks (*)"
+navigation_title: "Marking inputs as required using asterisks (*)"
 position: 9
 lead: "It's a typical technique to add an asterisk (*) to an input's label to mark it as \"required\". Be sure to make this information accessible for screen readers, too!"
 ---

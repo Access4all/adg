@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "HTML5's headings outline algorithm"
+navigation_title: "HTML5's headings outline algorithm"
 position: 8
 lead: "The idea behind HTML5's heading algorithm is great, it sadly was never picked up by any browser or screen reader."
 ---

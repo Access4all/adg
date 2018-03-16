@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "HTML5 client-side validations"
+navigation_title: "HTML5 client-side validations"
 position: 10
 lead: "HTML5 client side validations are very useful feature and (thank heavens!) are supported to a high degree by screen readers."
 ---

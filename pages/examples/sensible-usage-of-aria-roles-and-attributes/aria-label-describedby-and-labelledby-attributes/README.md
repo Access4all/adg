@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "ARIA label, describedby and labelledby Attributes"
+navigation_title: "ARIA label, describedby and labelledby Attributes"
 position: 1
 lead: ""
 ---

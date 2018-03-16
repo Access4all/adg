@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "General data table example"
+navigation_title: "General data table example"
 position: 2
 lead: "Tables are widely used to display tabular data, and HTML provides everything you need to make them accessible to assistive devices."
 ---

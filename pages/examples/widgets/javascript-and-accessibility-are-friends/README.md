@@ -1,6 +1,7 @@
 ---
 layout: layout
 title: "JavaScript and accessibility are friends"
+navigation_title: "JavaScript and accessibility are friends"
 position: 1
 lead: "TODO"
 ---
