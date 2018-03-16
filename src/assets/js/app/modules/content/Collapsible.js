@@ -12,188 +12,188 @@ import Accessibility from '../../../lib/browser/Accessibility'
  * @enabled true
  */
 export default class Collapsible extends BaseModule {
-  constructor () {
-    super()
+  constructor() {
+	super()
 
-    this.DEFAULT_OPTIONS = {
-      deviceMin: false, // included
-      deviceMax: false // included
-    }
+	this.DEFAULT_OPTIONS = {
+		deviceMin: false, // included
+		deviceMax: false // included
+	}
 
-    this.INPUT = 'input[type="checkbox"], input[type="radio"]'
+	this.INPUT = 'input[type="checkbox"], input[type="radio"]'
   }
 
-  init (element) {
-    var self = this
+  init(element) {
+	var self = this
 
-    this.$el = $(element)
-    this.options = $.extend(
-      {},
-      this.DEFAULT_OPTIONS,
-      this.$el.data('collapsible-options')
-    )
-    this.getContainerElement()
+	this.$el = $(element)
+	this.options = $.extend(
+	{},
+	this.DEFAULT_OPTIONS,
+	this.$el.data('collapsible-options')
+	)
+	this.getContainerElement()
 
-    return this
+	return this
   }
 
-  enable () {
-    if (!this.$el.hasClass('is-disabled')) {
-      this.bindListeners()
-      this.getToggleElement().attr('aria-expanded', 'false')
-      this.validate()
-    }
+  enable() {
+	if (!this.$el.hasClass('is-disabled')) {
+		this.bindListeners()
+		this.getToggleElement().attr('aria-expanded', 'false')
+		this.validate()
+	}
   }
 
-  disable () {
-    this.enabled = false
+  disable() {
+	this.enabled = false
 
-    this.$el.removeClass('is-opened')
-    this.getToggleElement()
-      .removeClass('is-opened')
-      .removeAttr('aria-expanded')
-    this.getContainerElement().removeClass('is-opened')
+	this.$el.removeClass('is-opened')
+	this.getToggleElement()
+	.removeClass('is-opened')
+	.removeAttr('aria-expanded')
+	this.getContainerElement().removeClass('is-opened')
 
-    this.$el.off(this.ns)
+	this.$el.off(this.ns)
   }
 
-  validate () {
-    if (
-      this.getToggleElement().is(this.INPUT) &&
-      this.getToggleElement().prop('checked')
-    ) {
-      this.getToggleElement().trigger('click')
-    }
+  validate() {
+	if (
+	this.getToggleElement().is(this.INPUT) &&
+	this.getToggleElement().prop('checked')
+	) {
+		this.getToggleElement().trigger('click')
+	}
   }
 
-  bindListeners () {
-    this.getToggleElement().on(`click${this.ns}`, this.onToggleClick.bind(this))
+  bindListeners() {
+	this.getToggleElement().on(`click${this.ns}`, this.onToggleClick.bind(this))
 
-    this.on('close', e => {
-      e.stopPropagation()
-      this.close()
-    })
+	this.on('close', e => {
+		e.stopPropagation()
+		this.close()
+	})
   }
 
-  onClose (e) {
-    e.preventDefault()
+  onClose(e) {
+	e.preventDefault()
 
-    this.close()
+	this.close()
   }
 
-  onToggleClick (e) {
-    if (!this.getToggleElement().hasClass('clickable')) {
-      if (
-        !this.getToggleElement().is(this.INPUT) ||
-        (this.getToggleElement().is(this.INPUT) &&
-          !this.getToggleElement().prop('checked'))
-      ) {
-        e.preventDefault()
-      }
-    }
+  onToggleClick(e) {
+	if (!this.getToggleElement().hasClass('clickable')) {
+		if (
+		!this.getToggleElement().is(this.INPUT) ||
+		(this.getToggleElement().is(this.INPUT) &&
+		!this.getToggleElement().prop('checked'))
+		) {
+			e.preventDefault()
+		}
+	}
 
-    if (
-      this.getToggleElement().hasClass('is-opened') &&
-      !this.getToggleElement().is('input[type="radio"]')
-    ) {
-      this.close()
-    } else {
-      if (this.getToggleElement().hasClass('clickable')) {
-        e.preventDefault()
-      }
+	if (
+	this.getToggleElement().hasClass('is-opened') &&
+	!this.getToggleElement().is('input[type="radio"]')
+	) {
+		this.close()
+	} else {
+		if (this.getToggleElement().hasClass('clickable')) {
+			e.preventDefault()
+		}
 
-      this.open()
-    }
+		this.open()
+	}
   }
 
-  close (callback) {
-    var heightAnim = new HeightAnimation(this.$el, { duration: 300 })
-    this._close()
-    heightAnim.complete(callback)
+  close(callback) {
+	var heightAnim = new HeightAnimation(this.$el, { duration: 300 })
+	this._close()
+	heightAnim.complete(callback)
 
-    // trigger resize to relayout items inside of the collapsible-element
-    $(window).trigger('resize')
+	// trigger resize to relayout items inside of the collapsible-element
+	$(window).trigger('resize')
   }
 
-  _close () {
-    this.$el.removeClass('is-opened')
-    this.getToggleElement()
-      .removeClass('is-opened')
-      .attr('aria-expanded', 'false')
-    this.getContainerElement().removeClass('is-opened')
+  _close() {
+	this.$el.removeClass('is-opened')
+	this.getToggleElement()
+	.removeClass('is-opened')
+	.attr('aria-expanded', 'false')
+	this.getContainerElement().removeClass('is-opened')
   }
 
-  open (callback) {
-    var self = this
-    var $active = this.getGroup().filter('.is-opened')
-    var closeAnim
+  open(callback) {
+	var self = this
+	var $active = this.getGroup().filter('.is-opened')
+	var closeAnim
 
-    var heightAnim = new HeightAnimation(this.$el, { duration: 300 })
+	var heightAnim = new HeightAnimation(this.$el, { duration: 300 })
 
-    // close active collapsible if there is
-    if ($active) {
-      closeAnim = new HeightAnimation($active, { duration: 300 })
+	// close active collapsible if there is
+	if ($active) {
+		closeAnim = new HeightAnimation($active, { duration: 300 })
 
-      $active.trigger('close')
-    }
+		$active.trigger('close')
+	}
 
-    this.$el.addClass('is-opened')
-    this.getToggleElement()
-      .addClass('is-opened')
-      .attr('aria-expanded', 'true')
-    this.getContainerElement().addClass('is-opened')
+	this.$el.addClass('is-opened')
+	this.getToggleElement()
+	.addClass('is-opened')
+	.attr('aria-expanded', 'true')
+	this.getContainerElement().addClass('is-opened')
 
-    scrollToView(self.$el)
+	scrollToView(self.$el)
 
-    if (closeAnim) {
-      closeAnim.complete(function () {})
-    }
+	if (closeAnim) {
+		closeAnim.complete(function() {})
+	}
 
-    heightAnim.complete(function () {
-      Accessibility.focusFirst(self.getContainerElement())
+	heightAnim.complete(function() {
+		Accessibility.focusFirst(self.getContainerElement())
 
-      // trigger resize to relayout items inside of the collapsible-element
-      $(window).trigger('resize')
-      $(window).trigger('collapsibleOpened')
-    })
+		// trigger resize to relayout items inside of the collapsible-element
+		$(window).trigger('resize')
+		$(window).trigger('collapsibleOpened')
+	})
   }
 
   /**
    * if a data-collapsible-group attribute is set, collapse all others when opening a pannel
    */
-  getGroup () {
-    var group = this.$el.data('collapsible-group')
+  getGroup() {
+	var group = this.$el.data('collapsible-group')
 
-    if (group) {
-      return $('[data-collapsible-group="' + group + '"]')
-    } else {
-      return $([])
-    }
+	if (group) {
+		return $('[data-collapsible-group="' + group + '"]')
+	} else {
+		return $([])
+	}
   }
 
-  getToggleElement () {
-    let $toggles = this.$el.find(
-      '.js-Collapsible--toggle, .js-Collapsible--toggle-dummy'
-    )
+  getToggleElement() {
+	let $toggles = this.$el.find(
+	'.js-collapsible--toggle, .js-collapsible--toggle-dummy'
+	)
 
-    for (let i = 0, len = $toggles.length; i < len; i++) {
-      var $toggle = $toggles.eq(i)
+	for (let i = 0, len = $toggles.length; i < len; i++) {
+		var $toggle = $toggles.eq(i)
 
-      if (this.$el[0] !== $toggle.closest('.js-collapsible')[0]) {
-        $toggles.splice($.inArray($toggle, $toggles), 1)
-      }
-    }
+		if (this.$el[0] !== $toggle.closest('.js-collapsible')[0]) {
+			$toggles.splice($.inArray($toggle, $toggles), 1)
+		}
+	}
 
-    return $toggles
+	return $toggles
   }
 
-  getContainerElement () {
-    return (
-      this.$container ||
-      (this.$container =
-        typeof this.options.containerSelector !== 'undefined'
-          ? $(this.options.containerSelector)
-          : this.$el.find('.js-Collapsible--container').first())
-    )
+  getContainerElement() {
+	return (
+	this.$container ||
+	(this.$container =
+	typeof this.options.containerSelector !== 'undefined'
+	? $(this.options.containerSelector)
+	: this.$el.find('.js-collapsible--container').first())
+	)
   }
 }

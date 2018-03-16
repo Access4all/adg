@@ -1,6 +1,6 @@
 {{#each navigation}}
   {{#unless (skipPage this ../sublevel)}}
-    <li class="nav-list--item js-collapsible">
+    <li class="nav-list--item">
       <a class="nav-list--link " href="/{{url}}"{{#if children}} id="nav{{@key}}" aria-haspopup="true" aria-expanded="false"{{/if}}>
         {{title}}
       </a>
