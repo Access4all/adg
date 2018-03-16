@@ -1,9 +1,11 @@
-<nav class="navbar">
+<nav class="navbar js-collapsible">
 	{{> "global/logo/logo"}}
 
   <div class="navbar--nav">
-    <ul class="nav-list nav-list-main">
+  	<button class="navbar--nav--btn js-collapsible--toggle" role="button">Open/Close Menu</button>
+    <ul class="navbar--nav--list nav-list nav-list-main js-collapsible--container">
       {{> "global/nav-list/nav-list"}}
     </ul>
   </div>
+  {{> "global/search/search"}}
 </nav>
