@@ -1,5 +1,6 @@
 const gulp = require('gulp')
 const sass = require('gulp-sass')
+const nodeSassGlobbing = require('node-sass-globbing')
 const handlebars = require('gulp-hb')
 const prettify = require('gulp-prettify')
 const frontMatter = require('gulp-front-matter')
@@ -93,7 +94,8 @@ gulp.task('css', () => {
     })
     .pipe(
       sass({
-        includePaths: ['node_modules']
+        includePaths: ['node_modules'],
+        importer: nodeSassGlobbing
       }).on('error', errorHandler)
     )
     .pipe(gulp.dest('./build'))
