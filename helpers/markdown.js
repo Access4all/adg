@@ -67,7 +67,9 @@ renderer.link = function (href, title, text) {
         // js_external: ''
       }
       const codePenForm = `<form action="https://codepen.io/pen/define" method="POST" target="_blank">
-        <input type="hidden" name="data" value="${JSON.stringify(codePenConfig).replace(/"/g, '&quot;')}">
+        <input type="hidden" name="data" value="${JSON.stringify(
+    codePenConfig
+  ).replace(/"/g, '&quot;')}">
         <button type="submit" class="btn btn-primary">CodePen</button>
       </form>`
 
