@@ -1,4 +1,13 @@
-const markdown = require('gulp-markdown')
+const markdown = require('markdown-it')({
+  plugins: [
+    'markdown-it-abbr',
+    'markdown-it-attrs',
+    'markdown-it-deflist',
+    'markdown-it-kbd',
+    'markdown-it-samp'
+  ]
+})
+const markdownPlugin = require('markdown-it-regexp')
 const fs = require('fs')
 const path = require('path')
 const frontMatter = require('front-matter')
@@ -28,63 +37,50 @@ const getCode = href => {
   }
 }
 
-const renderer = new markdown.marked.Renderer()
+const codePlugin = markdownPlugin(/@code\((.*?)\)/, (match, utils) => {
+  const code = getCode(match[1])
 
-renderer.link = function (href, title, text) {
-  let code
-  switch (text) {
-    case '[Code]':
-      code = getCode(href)
+  const description = code.details.description
+    ? `<p>${code.details.description}</p>`
+    : ''
 
-      const description = code.details.description
-        ? `<p>${code.details.description}</p>`
-        : ''
+  const blocks = ['html', 'css', 'js'].map(type => {
+    const markup = hljs.highlightAuto(code[type])
 
-      const blocks = ['html', 'css', 'js'].map(type => {
-        const markup = hljs.highlightAuto(code[type])
+    return `<div class="code">
+      <h3 class="title">${type}</h3>
+      <pre><code>${markup.value}</code></pre>
+    </div>`
+  })
 
-        return `<div class="code">
-          <h3 class="title">${type}</h3>
-          <pre><code>${markup.value}</code></pre>
-        </div>`
-      })
-
-      const codePenConfig = {
-        title: code.details.name,
-        description: code.details.description,
-        html: code.html,
-        // html_pre_processor: 'none',
-        css: code.css,
-        css_pre_processor: 'scss',
-        // css_starter: 'neither',
-        // css_prefix_free: false,
-        js: code.js
-        // js_pre_processor: 'none',
-        // js_modernizr: false,
-        // js_library: '',
-        // html_classes: '',
-        // css_external: '',
-        // js_external: ''
-      }
-      const codePenForm = `<form action="https://codepen.io/pen/define" method="POST" target="_blank">
-        <input type="hidden" name="data" value="${JSON.stringify(
+  const codePenConfig = {
+    title: code.details.name,
+    description: code.details.description,
+    html: code.html,
+    // html_pre_processor: 'none',
+    css: code.css,
+    css_pre_processor: 'scss',
+    // css_starter: 'neither',
+    // css_prefix_free: false,
+    js: code.js
+    // js_pre_processor: 'none',
+    // js_modernizr: false,
+    // js_library: '',
+    // html_classes: '',
+    // css_external: '',
+    // js_external: ''
+  }
+  const codePenForm = `<form action="https://codepen.io/pen/define" method="POST" target="_blank">
+    <input type="hidden" name="data" value="${JSON.stringify(
     codePenConfig
   ).replace(/"/g, '&quot;')}">
-        <button type="submit" class="btn btn-primary">CodePen</button>
-      </form>`
+    <button type="submit" class="btn btn-primary">CodePen</button>
+  </form>`
 
-      return `${description}${blocks.join('')}
-      ${codePenForm}`
-    // case '[JSFiddle]':
-    //   let link = `https://jsfiddle.net/gh/get/library/pure/backflip/adg/tree/master${href.replace(
-    //     /\[|\]/g,
-    //     ''
-    //   )}`
+  return `${description}${blocks.join('')}
+  ${codePenForm}`
+})
 
-    //   return `<a href="${link}" target="_blank" class="btn btn-primary">JSFiddle</a>`
-    default:
-      return markdown.marked.Renderer.prototype.link.apply(this, arguments)
-  }
-}
+markdown.use(codePlugin)
 
-module.exports = () => markdown({ renderer })
+module.exports = markdown
