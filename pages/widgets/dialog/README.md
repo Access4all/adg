@@ -5,8 +5,4 @@ title: Dialog
 
 # Dialog
 
-[[Code]](/examples/dialog)
-
-[[CodePen]](/examples/dialog)
-
-[[JSFiddle]](/examples/dialog)
+[[Code]](pages/widgets/dialog/_examples/dialog)
