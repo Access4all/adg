@@ -50,7 +50,7 @@ We advise to create tablists as a simple group of radio buttons:
 - Spiced up with (very little) JavaScript, they behave like perfect tablists
 - Sensible naming of elements (and a few specifically added visually hidden texts) guarantees that screen reader users know how to handle the element - even if they haven't seen any other tablist before!
 
-@code(/pages/examples/widgets/tablist-widgets-a-k-a-tab-panels-tabs-/_examples/proof-of-concept-tablist/){.code}
+@code(/examples/widgets/tablist-widgets-a-k-a-tab-panels-tabs-/_examples/proof-of-concept-tablist/){.code}
 
 Features:
 

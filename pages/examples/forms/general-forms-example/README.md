@@ -30,7 +30,7 @@ As the inputs are surrounded with a `<form>` tag, the form can be submitted with
 
 In the example, all attributes that aren't necessary for demonstration (e.g. `name`) are omitted.
 
-@code(/pages/examples/forms/general-forms-example/_examples/general-forms-example/){.code}
+@code(/examples/forms/general-forms-example/_examples/general-forms-example/){.code}
 
 # Some important notes
 

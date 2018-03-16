@@ -10,7 +10,7 @@ lead: "To be meaningful, heading outlines must be coherent on both a technical a
 
 This headings outline in the following example has three problems.
 
-@code(/pages/examples/headings/bad-beadings-example/_examples/bad-headings-example/){.code}
+@code(/examples/headings/bad-beadings-example/_examples/bad-headings-example/){.code}
 
 The problems are:
 

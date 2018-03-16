@@ -52,7 +52,7 @@ See: [What is a "Proof of concept"?](/examples/widgets/what-is-a-proof-of-concep
 
 ## Simple tooltip
 
-@code(/pages/examples/widgets/tooltip-widgets/_examples/tooltips-proof-of-concept/){.code}
+@code(/examples/widgets/tooltip-widgets/_examples/tooltips-proof-of-concept/){.code}
 
 Features:
 

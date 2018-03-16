@@ -36,7 +36,7 @@ Based on the tablists' proof of concept:
 
 - Additional controls (previous/next panel, autoplay) are implemented as buttons
 
-@code(/pages/examples/widgets/carousel-widgets-a-k-a-slideshow-slider-/_examples/proof-of-concept-carousel/){.code}
+@code(/examples/widgets/carousel-widgets-a-k-a-slideshow-slider-/_examples/proof-of-concept-carousel/){.code}
 
 TODO: Autoplay not available yet!
 

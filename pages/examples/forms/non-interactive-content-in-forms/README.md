@@ -12,7 +12,7 @@ lead: "As forms are generally interacted with using focus mode in screen readers
 
 It's very tempting to simply span the `<label>` element around additional content:
 
-@code(/pages/examples/forms/non-interactive-content-in-forms/_examples/more-content-in-form-labels/){.code}
+@code(/examples/forms/non-interactive-content-in-forms/_examples/more-content-in-form-labels/){.code}
 
 For mouse users, this enlarges the clickable area: for example, click on the descriptive text below an input field, and the focus will be set into the input.
 
@@ -30,13 +30,13 @@ While it's perfectly valid HTML to associate more than a single `<label>` elemen
 
 So the following is no recommended solution:
 
-@code(/pages/examples/forms/non-interactive-content-in-forms/_examples/associating-content-to-form-inputs-using-multiple-labels/){.code}
+@code(/examples/forms/non-interactive-content-in-forms/_examples/associating-content-to-form-inputs-using-multiple-labels/){.code}
 
 # A better approach: describing inputs using ARIA
 
 It's easy to attach descriptive text to any form element using `aria-describedby`:
 
-@code(/pages/examples/forms/non-interactive-content-in-forms/_examples/associating-content-to-form-inputs-using-aria/){.code}
+@code(/examples/forms/non-interactive-content-in-forms/_examples/associating-content-to-form-inputs-using-aria/){.code}
 
 This works very well.
 
@@ -51,7 +51,7 @@ You can use `aria-describedby` on structured text (as you see in the example abo
 
 Take a look at the following example which overdoes the usage of `aria-describedby`:
 
-@code(/pages/examples/forms/non-interactive-content-in-forms/_examples/associating-too-much-content-to-form-inputs-using-aria/){.code}
+@code(/examples/forms/non-interactive-content-in-forms/_examples/associating-too-much-content-to-form-inputs-using-aria/){.code}
 
 Admittedly, this example feels a bit artificial. But you get the point:
 
@@ -64,7 +64,7 @@ Admittedly, this example feels a bit artificial. But you get the point:
 
 Instead of referencing all the info, simply give the user a clue that there is more info somewhere (below a form field, at the end of the page, or wherever):
 
-@code(/pages/examples/forms/non-interactive-content-in-forms/_examples/giving-clue-about-additional-content-in-a-form/){.code}
+@code(/examples/forms/non-interactive-content-in-forms/_examples/giving-clue-about-additional-content-in-a-form/){.code}
 
 The example above shows three ways to give a user clue about additional info:
 

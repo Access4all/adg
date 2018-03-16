@@ -15,4 +15,4 @@ So if for visual (or any other serious) reason you can't use the `<fieldset>`/`<
 - Use `role="group"` to give a `<div>` container the semantics of a `<fieldset>`
 - Associate any other text to the grouping container using `aria-describedby`
 
-@code(/pages/examples/forms/faking-fieldset-legend-using-aria/_examples/faking-fieldset-legend-using-aria/){.code}
+@code(/examples/forms/faking-fieldset-legend-using-aria/_examples/faking-fieldset-legend-using-aria/){.code}

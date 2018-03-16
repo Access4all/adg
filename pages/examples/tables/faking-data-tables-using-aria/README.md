@@ -12,7 +12,7 @@ lead: "Sometimes it's necessary to visually style tables in a way that standard 
 
 The following example contains an HTML structure that's made of pure `<div>` elements. Due to adding an appropriate `role` attribute to each element, it's conveyed to screen readers like a table.
 
-@code(/pages/examples/tables/faking-data-tables-using-aria/_examples/faking-table-using-aria/){.code}
+@code(/examples/tables/faking-data-tables-using-aria/_examples/faking-table-using-aria/){.code}
 
 - `role="grid"` corresponds to `<table>`
 - `role="row"` corresponds to `<tr>`
@@ -26,7 +26,7 @@ This works in NVDA, JAWS, and VoiceOver/iOS, but **not** in TalkBack.
 
 As the table role is explicitly set using ARIA, you're not bound to display the table in a certain way. For example, instead of using `display: table`, `display: table-row`, and `display: table-cell`, you could display it as a Flexbox:
 
-@code(/pages/examples/tables/faking-data-tables-using-aria/_examples/faking-table-using-aria-flexbox-/){.code}
+@code(/examples/tables/faking-data-tables-using-aria/_examples/faking-table-using-aria-flexbox-/){.code}
 
 # The importance of a valid structure
 
@@ -34,13 +34,13 @@ When faking a table using ARIA roles, it's very important that the used structur
 
 The following example adds another `<div>` container (with the class `.favourites`) around the second and third hobby's `<tr>` elements to style them differently. This breaks the table for some screen readers: In NVDA it's announced as **"table with 2 rows and 3 columns"** (instead of 4 rows), and for the second and third hobby, [table navigation](/examples/tables){.page title="Data and layout tables"} doesn't work anymore.
 
-@code(/pages/examples/tables/faking-data-tables-using-aria/_examples/faking-table-using-aria-and-invalid-structure/){.code}
+@code(/examples/tables/faking-data-tables-using-aria/_examples/faking-table-using-aria-and-invalid-structure/){.code}
 
 This shouldn't be surprising too much: in standard HTML, adding a container around `<tr>` elements isn't valid, either! And although the above example is still working in JAWS and VoiceOver/iOS, the following always holds true: the messier the HTML code is, the more problems will occur.
 
 The good news: by adding `role="presentation"` to this additional container, we remove its semantical meaning, and the table is working again also in NVDA!
 
-@code(/pages/examples/tables/faking-data-tables-using-aria/_examples/faking-table-using-aria-and-invalid-structure-but-presentation-role/){.code}
+@code(/examples/tables/faking-data-tables-using-aria/_examples/faking-table-using-aria-and-invalid-structure-but-presentation-role/){.code}
 
 # Only fake tables if really needed!
 

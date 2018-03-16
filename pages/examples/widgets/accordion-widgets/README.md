@@ -32,7 +32,7 @@ See: [What is a "Proof of concept"?](/examples/widgets/what-is-a-proof-of-concep
 
 Based on the tablists' proof of concept, simply the layout is different.
 
-@code(/pages/examples/widgets/accordion-widgets/_examples/proof-of-concept-accordion/){.code}
+@code(/examples/widgets/accordion-widgets/_examples/proof-of-concept-accordion/){.code}
 
 ## Checkboxes implementation
 
@@ -42,7 +42,7 @@ Based on the tablists' proof of concept:
 - Checkboxes replace the radio buttons to offer multiple selection
     - We waived using a `<fieldset>`/`<legend>` combination, as this is no traditional group of checkboxes (also, JAWS tends to be very wordy with focusable items nested within those)
 
-@code(/pages/examples/widgets/accordion-widgets/_examples/proof-of-concept-accordion-multi/){.code}
+@code(/examples/widgets/accordion-widgets/_examples/proof-of-concept-accordion-multi/){.code}
 
 **Notice:** By default, only the `Space` key is used to toggle a checkbox (while pressing `Enter` submits a form). To make it more intuitive for visual users (who don't know about any checkbox behind the scenes, and thinking they're interacting with a link or button), the `Enter` key was re-wired to also toggle the checkboxes.
 
@@ -50,7 +50,7 @@ Based on the tablists' proof of concept:
 
 It's relatively simple to create a custom carousel implementation using simple ARIA: Just add a link around each panel's header, and an `aria-expanded` attribute. Then toggle its value (`true`/`false`) and the visibility of the corresponding panel using JavaScript!
 
-@code(/pages/examples/widgets/accordion-widgets/_examples/accordion-proof-of-concept/){.code}
+@code(/examples/widgets/accordion-widgets/_examples/accordion-proof-of-concept/){.code}
 
 While this may feel tempting in some circumstances, there are several drawbacks:
 

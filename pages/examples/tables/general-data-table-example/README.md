@@ -17,4 +17,4 @@ Navigate it using table navigation and notice how the screen reader always annou
 
 This provides all information needed to browse a table efficiently using a screen reader - easy and effective!
 
-@code(/pages/examples/tables/general-data-table-example/_examples/general-data-table-example/){.code}
+@code(/examples/tables/general-data-table-example/_examples/general-data-table-example/){.code}

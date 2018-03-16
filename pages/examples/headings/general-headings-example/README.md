@@ -10,7 +10,7 @@ lead: "Headings work the same way on websites as they do on print documents (e.g
 
 The following example contains a very basic headings outline - it may look familiar to you from "normal" print documents (e.g. Word or PDF) and books.
 
-@code(/pages/examples/headings/general-headings-example/_examples/general-headings-example/){.code}
+@code(/examples/headings/general-headings-example/_examples/general-headings-example/){.code}
 
 Structuring content with headings is always a good thing: no published book containing text content could ever live without it! Headings allow to skim through the book, and the table of contents of a book is based on them.
 

@@ -24,7 +24,7 @@ TODO: Beste aktuelle Implementation hier: <https://medium.com/@matuzo/writing-cs
 
 For example, this technique is useful to visually hide headings, as described here: [Adding visually hidden headings to complete a page's outline](/examples/headings/adding-visually-hidden-headings-to-complete-a-pages-outline){.page}.
 
-@code(/pages/examples/hiding-elements/hiding-elements-visually-by-moving-them-off-screen/_examples/hiding-elements-only-visually/){.code}
+@code(/examples/hiding-elements/hiding-elements-visually-by-moving-them-off-screen/_examples/hiding-elements-only-visually/){.code}
 
 ## Showing visually hidden elements on focus
 
@@ -32,19 +32,19 @@ If you're hiding focusable elements using this technique, make sure that they'll
 
 In the following example, press the `Tab` key to focus and show the (previously invisible) "Jump to content" link.
 
-@code(/pages/examples/hiding-elements/hiding-elements-visually-by-moving-them-off-screen/_examples/hiding-elements-only-visually-and-showing-them-on-focus/){.code}
+@code(/examples/hiding-elements/hiding-elements-visually-by-moving-them-off-screen/_examples/hiding-elements-only-visually-and-showing-them-on-focus/){.code}
 
 ## VoiceOver/iOS peculiarities
 
 TODO: Scheint unter VoiceOver/iOS "nicht in einem Zug" ausgegeben zu werden, so dass Texte auseinander geschnitten werden!
 
-@code(/pages/examples/hiding-elements/hiding-elements-visually-by-moving-them-off-screen/_examples/hiding-elements-only-visually-ios-peculiarities/){.code}
+@code(/examples/hiding-elements/hiding-elements-visually-by-moving-them-off-screen/_examples/hiding-elements-only-visually-ios-peculiarities/){.code}
 
 Im Zeilen-Lese-Modus wird es aber in einem Zug ausgegeben.
 
 Vielleicht besser, nicht zuviel zu trennen, und stattdessen zwei Info-Blöcke:
 
-@code(/pages/examples/hiding-elements/hiding-elements-visually-by-moving-them-off-screen/_examples/hiding-elements-only-visually-ios-peculiarities-alternative/){.code}
+@code(/examples/hiding-elements/hiding-elements-visually-by-moving-them-off-screen/_examples/hiding-elements-only-visually-ios-peculiarities-alternative/){.code}
 
 # Side effects for visual users
 

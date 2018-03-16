@@ -16,11 +16,11 @@ The `<fieldset>`/`<legend>` combination can be used for two things.
 
 **Multiple radio buttons always must be grouped**. Yes, that's exactly how it is. No exceptions.
 
-@code(/pages/examples/forms/grouping-form-inputs-using-fieldset-and-legend/_examples/grouped-radio-buttons/){.code}
+@code(/examples/forms/grouping-form-inputs-using-fieldset-and-legend/_examples/grouped-radio-buttons/){.code}
 
 Also, **multiple check boxes always must be grouped**.
 
-@code(/pages/examples/forms/grouping-form-inputs-using-fieldset-and-legend/_examples/grouped-checkboxes/){.code}
+@code(/examples/forms/grouping-form-inputs-using-fieldset-and-legend/_examples/grouped-checkboxes/){.code}
 
 You may have noticed that NVDA doesn't activate focus mode when jumping to a checkbox using `Tab` key. More info here: [Why do radio buttons trigger focus mode, but checkboxes don't?](https://github.com/nvaccess/nvda/issues/7578).
 
@@ -30,13 +30,13 @@ You may have noticed that NVDA doesn't activate focus mode when jumping to a che
 
 Especially in complex forms, **thematically related form inputs should be grouped**.
 
-@code(/pages/examples/forms/grouping-form-inputs-using-fieldset-and-legend/_examples/grouping-thematically-related-form-inputs/){.code}
+@code(/examples/forms/grouping-form-inputs-using-fieldset-and-legend/_examples/grouping-thematically-related-form-inputs/){.code}
 
 # Nesting fieldset / legend combinations
 
 Nesting `<fieldset>`/`<legend>` combinations is absolutely possible, especially when radio buttons or checkboxes play a role.
 
-@code(/pages/examples/forms/grouping-form-inputs-using-fieldset-and-legend/_examples/nested-fieldset-legend-combinations/){.code}
+@code(/examples/forms/grouping-form-inputs-using-fieldset-and-legend/_examples/nested-fieldset-legend-combinations/){.code}
 
 # Difference between Firefox and Internet Explorer
 
@@ -47,7 +47,7 @@ Regarding `<fieldset>` / `<legend>` combinations, **Internet Explorer is much wo
 - **Firefox only announces the `<legend>`'s text when entering the `<fieldset>`**
     - Again, for a `<legend>` with the text "Personal Details" and two fields "First Name" and "Last Name", it literally announces "Personal Details, Grouping", then "First Name" and "Last Name".
 
-@code(/pages/examples/forms/grouping-form-inputs-using-fieldset-and-legend/_examples/grouped-form-inputs-with-way-too-long-legend/){.code}
+@code(/examples/forms/grouping-form-inputs-using-fieldset-and-legend/_examples/grouped-form-inputs-with-way-too-long-legend/){.code}
 
 Conclustion: **Never put long texts into the `<legend>` element** to prevent wordiness in Internet Explorer! If you really need to put long text into a form, use one of the following approaches: [Placing non-interactive content into forms](/examples/forms/non-interactive-content-in-forms){.page}
 

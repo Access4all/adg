@@ -19,7 +19,7 @@ On the visual level, these regions typically are designed very succinct:
 - Related sections may be at the right side of the main content, or below it
 - The footer usually sits at the bottom of the page
 
-@code(/pages/examples/headings/adding-visually-hidden-headings-to-complete-a-pages-outline/_examples/headings-example-with-additional-page-regions-without-headings-/){.code}
+@code(/examples/headings/adding-visually-hidden-headings-to-complete-a-pages-outline/_examples/headings-example-with-additional-page-regions-without-headings-/){.code}
 
 Visual website users are able to recognise these elements within the first glance at a page. (If not, the visual design is pretty bad.)
 
@@ -27,12 +27,12 @@ Visual website users are able to recognise these elements within the first glanc
 
 Screen reader users don't perceive any visual attributes like size, shape, colour, etc. They rely solely on semantic info and descriptive text labels. For them, additional descriptive elements are needed to give a page region a label: and again, the best way to do provide such labels is using headings.
 
-@code(/pages/examples/headings/adding-visually-hidden-headings-to-complete-a-pages-outline/_examples/headings-example-with-additional-page-regions-with-headings-/){.code}
+@code(/examples/headings/adding-visually-hidden-headings-to-complete-a-pages-outline/_examples/headings-example-with-additional-page-regions-with-headings-/){.code}
 
 # Hiding additional headings visually
 
 To make sure these additional headings don't mess up the visual design, they can be hidden visually.
 
-@code(/pages/examples/headings/adding-visually-hidden-headings-to-complete-a-pages-outline/_examples/headings-example-with-additional-page-regions-with-visually-hidden-headings-/){.code}
+@code(/examples/headings/adding-visually-hidden-headings-to-complete-a-pages-outline/_examples/headings-example-with-additional-page-regions-with-visually-hidden-headings-/){.code}
 
 The technique used for this is described here: [Hiding elements correctly](/examples/hiding-elements){.page}.

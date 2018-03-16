@@ -17,7 +17,7 @@ In addition, they announce the frame:
 
 Also, both NVDA and JAWS allow navigating directly to any frame using the `m` key.
 
-@code(/pages/examples/iframes/_examples/general-iframe-example/){.code}
+@code(/examples/iframes/_examples/general-iframe-example/){.code}
 
 # Headings in iframes
 
@@ -25,7 +25,7 @@ Screen readers integrate headings from iframes directly into the heading outline
 
 The following bad example illustrates what can happen: the embedded content is meant to be part of the heading on level 2 "Dancing", but it defines its own headings on level 1.
 
-@code(/pages/examples/iframes/_examples/iframe-example-with-wrong-embedded-heading/){.code}
+@code(/examples/iframes/_examples/iframe-example-with-wrong-embedded-heading/){.code}
 
 The resulting headings outline looks like this to a screen reader:
 
@@ -40,7 +40,7 @@ The resulting headings outline looks like this to a screen reader:
 
 To fix it, the headings in the embedded content need to be on the correct level relatively to the parent page.
 
-@code(/pages/examples/iframes/_examples/iframe-example-with-correct-embedded-heading/){.code}
+@code(/examples/iframes/_examples/iframe-example-with-correct-embedded-heading/){.code}
 
 Now the resulting headings outline looks correct:
 

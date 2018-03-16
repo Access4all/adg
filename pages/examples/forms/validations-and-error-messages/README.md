@@ -22,7 +22,7 @@ If there are any validation errors, the focus is set to the first invalid input 
 - This announces the error message, so the user knows that there was at least this one error
 - After fixing the invalid input, the user can search for other invalid ones or simply submit the form again to repeat the process
 
-@code(/pages/examples/forms/validations-and-error-messages/_examples/forms-validation-example-with-message-after-the-input/){.code}
+@code(/examples/forms/validations-and-error-messages/_examples/forms-validation-example-with-message-after-the-input/){.code}
 
 # Displaying all errors on top of the form
 
@@ -40,7 +40,7 @@ If there are any validation errors, the focus is set to the first error message 
     - The user also may decide to stay in the error messages block and read the other messages
 - Again, after fixing the invalid input, the user can search for other invalid ones or simply submit the form again to repeat the process
 
-@code(/pages/examples/forms/validations-and-error-messages/_examples/forms-validation-example-with-messages-on-top/){.code}
+@code(/examples/forms/validations-and-error-messages/_examples/forms-validation-example-with-messages-on-top/){.code}
 
 # What about HTML5 client side validations?
 

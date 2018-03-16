@@ -12,7 +12,7 @@ lead: "When changing a \"real\" table's display settings, you also change how it
 
 In the following example, all elements (`<table>`, `<caption>`, `<thead>`, `<tbody>`, `<tr>`, `<th>`, `<td>`) are set to `display: block`. Because of this, not only the table is visually displayed differently, it also isn't announced as a table anymore to the following screen readers (and thus making it impossible to browse it using table navigation): NVDA, VoiceOver/iOS, and TalkBack. JAWS announces the element still as a table.
 
-@code(/pages/examples/tables/changing-a-tables-visual-display/_examples/general-data-table-example-with-overridden-display-options/){.code}
+@code(/examples/tables/changing-a-tables-visual-display/_examples/general-data-table-example-with-overridden-display-options/){.code}
 
 # Re-adding table roles
 
@@ -20,7 +20,7 @@ You can re-add the table roles by using ARIA (as described here: [Faking data ta
 
 This works for NVDA and VoiceOver/iOS. Only TalkBack lacks support for this, and we don't know of any way to fix it at the time being.
 
-@code(/pages/examples/tables/changing-a-tables-visual-display/_examples/general-data-table-example-with-overridden-display-options-and-aria/){.code}
+@code(/examples/tables/changing-a-tables-visual-display/_examples/general-data-table-example-with-overridden-display-options-and-aria/){.code}
 
 # Always use ARIA when messing with tables!
 

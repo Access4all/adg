@@ -32,7 +32,7 @@ The following example demonstrates a few of those validations:
 - The "Gender" radio buttons are required (again using `required` attribute)
 - The "Terms and conditions" checkbox now also is required (again using `required` attribute)
 
-@code(/pages/examples/forms/html5-client-side-validations/_examples/forms-validation-example-with-html5-client-side-validation/){.code}
+@code(/examples/forms/html5-client-side-validations/_examples/forms-validation-example-with-html5-client-side-validation/){.code}
 
 # Same same but different
 
@@ -71,7 +71,7 @@ From an accessibility point of view, for Internet Explorer it's not only good pr
 
 The following example is especially problematic, as the field not only requires a specific pattern - it's also marked up as `required`: so the user feels like he has done everything right after filling something into the input, but still he can't submit the form.
 
-@code(/pages/examples/forms/html5-client-side-validations/_examples/forms-validation-example-with-html5-client-side-validation-pattern-without-title/){.code}
+@code(/examples/forms/html5-client-side-validations/_examples/forms-validation-example-with-html5-client-side-validation-pattern-without-title/){.code}
 
 # Never trust user data!
 

@@ -18,7 +18,7 @@ Link wurde falsch exportiert!
 
 Fork (Weiterentwicklung aktiv):
 
-@code(/pages/examples/widgets/autocomplete-widgets-a-k-a-auto-suggest-look-ahead-type-ahead-/_examples/autocomplete-proof-of-concept/){.code}
+@code(/examples/widgets/autocomplete-widgets-a-k-a-auto-suggest-look-ahead-type-ahead-/_examples/autocomplete-proof-of-concept/){.code}
 
 # Multiple
 
@@ -26,4 +26,4 @@ Man kann dasselbe Prinzip auf Checkboxen statt Radiobuttons anwenden! Man müsst
 
 # Severin's Variante
 
-@code(/pages/examples/widgets/autocomplete-widgets-a-k-a-auto-suggest-look-ahead-type-ahead-/_examples/autocomplete-aa-vanilla/){.code}
+@code(/examples/widgets/autocomplete-widgets-a-k-a-auto-suggest-look-ahead-type-ahead-/_examples/autocomplete-aa-vanilla/){.code}

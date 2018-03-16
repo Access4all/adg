@@ -21,7 +21,7 @@ In the following example, the required input field is only announced as "Full Na
 - An experienced user will probably know what this is intended for, but many users will have no clue
 - As the text explanation even is below the submit button of the form, a screen reader user probably will never read it, as clicking on the button usually is the last thing a user does after filling a form
 
-@code(/pages/examples/forms/marking-inputs-as-required-using-asterisks-/_examples/bad-forms-example-with-required-inputs/){.code}
+@code(/examples/forms/marking-inputs-as-required-using-asterisks-/_examples/bad-forms-example-with-required-inputs/){.code}
 
 # Better solution using ARIA (?)
 
@@ -40,7 +40,7 @@ Instead of working around the problem using ARIA, we can use an approach that wo
 
 TODO: SVG sieht noch scheisse aus, siehe <https://stackoverflow.com/questions/46193453/replacing-asterisks-in-a-text-with-svg>. Vielleicht kann der visuell versteckte Text auch in das SVG gesetzt werden?
 
-@code(/pages/examples/forms/marking-inputs-as-required-using-asterisks-/_examples/good-forms-example-with-required-inputs/){.code}
+@code(/examples/forms/marking-inputs-as-required-using-asterisks-/_examples/good-forms-example-with-required-inputs/){.code}
 
 This technique can even be enhanced using tooltips: [Tooltip widgets](/examples/widgets/tooltip-widgets){.page}.
 

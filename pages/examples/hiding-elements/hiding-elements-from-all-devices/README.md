@@ -10,7 +10,7 @@ lead: "Hiding elements from all devices means just that: no single device will p
 
 Using the HTML attribute `hidden`, CSS `display: none` or `visibility: hidden`, elements can be hidden completely from all devices (including screen readers).
 
-@code(/pages/examples/hiding-elements/hiding-elements-from-all-devices/_examples/hiding-elements-from-all-devices/){.code}
+@code(/examples/hiding-elements/hiding-elements-from-all-devices/_examples/hiding-elements-from-all-devices/){.code}
 
 # Cross browser compatibility of the hidden attribute
 

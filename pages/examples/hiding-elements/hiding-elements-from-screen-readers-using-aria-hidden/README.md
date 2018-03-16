@@ -10,11 +10,11 @@ lead: "Hiding elements from screen readers means that an element visually is per
 
 This can be achieved by using `aria-hidden="true"` on an element like this:
 
-@code(/pages/examples/hiding-elements/hiding-elements-from-screen-readers-using-aria-hidden/_examples/hiding-elements-from-screen-readers-using-aria-hidden/){.code}
+@code(/examples/hiding-elements/hiding-elements-from-screen-readers-using-aria-hidden/_examples/hiding-elements-from-screen-readers-using-aria-hidden/){.code}
 
 Important: all child elements will also be hidden! So it's not possible to change this manually by setting `aria-hidden="false"` on a child element:
 
-@code(/pages/examples/hiding-elements/hiding-elements-from-screen-readers-using-aria-hidden/_examples/hiding-elements-from-screen-readers-using-aria-hidden-2-/){.code}
+@code(/examples/hiding-elements/hiding-elements-from-screen-readers-using-aria-hidden/_examples/hiding-elements-from-screen-readers-using-aria-hidden-2-/){.code}
 
 # Danger: Don't try this with focusable elements!
 
@@ -22,4 +22,4 @@ You shouldn't use `aria-hidden` on focusable elements, as during usage of a scre
 
 For more info, see [Fourth Rule of ARIA Use (vanseodesign.com)](http://vanseodesign.com/web-design/five-rules-aria-html/).
 
-@code(/pages/examples/hiding-elements/hiding-elements-from-screen-readers-using-aria-hidden/_examples/hiding-elements-from-screen-readers-using-aria-hidden-3-/){.code}
+@code(/examples/hiding-elements/hiding-elements-from-screen-readers-using-aria-hidden/_examples/hiding-elements-from-screen-readers-using-aria-hidden-3-/){.code}
