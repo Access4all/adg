@@ -3,16 +3,24 @@
 <head>
   <title>{{title}}</title>
   <link rel="stylesheet" href="/css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    {{> "global/nav/nav"}}
-
-    <div class="container">
+  <div id="body">
+    <header class="header" id="header">
+        <h1 class="visuallyhidden">Accessibility Developer Guide</h1>
+        {{> "global/navbar/navbar"}}
+    </header>
+    <div id="main-content" class="site-content" role="main">
+      {{> "global/breadcrumbs/breadcrumbs"}}
+      {{> "content/main_title/main_title" title="Main Title (h1)"}}
+      {{> "content/section_title/section_title" title="Section Title (h2)"}}
       {{{contents}}}
-    </div>      
+    </div>
   </div>
-  
+
+  <script src="/js/vendor/jquery.min.js"></script>
   <script src="/js/scripts.js"></script>
 </body>
 </html>

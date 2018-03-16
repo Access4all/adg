@@ -1,0 +1,71 @@
+
+
+.l-clearfix {
+	@extend %clearfix;
+}
+
+#body {
+	position: relative;
+	overflow-x: hidden;
+	@media screen and (min-height: 600px) {
+		> .site-content {
+			min-height: 100vh;
+		}
+	}
+}
+.l-site_width {
+	position: relative;
+	width: $site-width;
+	width: ($site-width / $base-font-size) * 1rem;
+	margin: 0 auto;
+	@include max-width($site-width + 4 * $gutter) {
+		box-sizing: border-box;
+		width: auto;
+		padding: 0 2 * $gutter;
+	}
+	@include mobile-portrait {
+		box-sizing: border-box;
+		width: auto;
+		padding: 0 $gutter;
+	}
+}
+
+.site-content {
+	position: relative; // for breadcrumbs
+	width: $site-maxWidth;
+	@media (max-width: $site-maxWidth) {
+		width: 100%;
+	}
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -1px;
+	clear: both;
+
+	@include rem(margin-bottom, 6 * $gutter);
+	@include mobile {
+		@include rem(margin-bottom, 4 * $gutter);
+	}
+
+}
+
+
+// Footer always at the end of the page
+// Only works for firefox/webkit browsers
+// ie11 won't have flexboxlegacy
+// (there may be a better way to do this, more future proof, but we really need a fix)
+html.flex.no-ie {
+
+	@media screen and (min-height: 600px) {
+		#body {
+			display: flex;
+			min-height: 100vh;
+			flex-direction: column;
+
+			> .site-content {
+				height: auto;
+				flex: 1 0 auto;
+				min-height: 0;
+			}
+		}
+	}
+}
