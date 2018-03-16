@@ -138,10 +138,13 @@ gulp.task('html', cb => {
         base: config.base
       })
       .pipe(plumber())
+
       // Extract YAML front matter
       .pipe(frontMatter().on('error', errorHandler))
+
       // Compile Markdown to HTML
       .pipe(markdown().on('error', errorHandler))
+
       // Build up navigation
       .pipe(
         through.obj(
@@ -157,7 +160,7 @@ gulp.task('html', cb => {
             navigation.push({
               url,
               parents,
-              title: file.frontMatter.navigation_title
+              title: file.frontMatter.title
             })
 
             return cb()
@@ -181,6 +184,7 @@ gulp.task('html', cb => {
           }
         )
       )
+
       // Prepare for Handlebars compiling by replacing file content with layout and saving content to `contents` property
       .pipe(
         through
@@ -206,6 +210,7 @@ gulp.task('html', cb => {
           })
           .on('error', errorHandler)
       )
+
       // Compile Handlebars to HTML
       .pipe(
         handlebars({
@@ -223,6 +228,7 @@ gulp.task('html', cb => {
           }
         }).on('error', errorHandler)
       )
+
       // Format
       .pipe(
         prettify({
@@ -230,6 +236,7 @@ gulp.task('html', cb => {
           max_preserve_newlines: 1
         })
       )
+
       // Rename to `index.html`
       .pipe(
         through.obj((file, enc, cb) => {
