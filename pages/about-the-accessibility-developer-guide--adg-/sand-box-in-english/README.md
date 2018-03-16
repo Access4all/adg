@@ -20,3 +20,37 @@ Copy & Paste screenshot:
 Let's add a new code:
 
 [**Responsive SBB Timetable**![](https://s3-us-west-2.amazonaws.com/i.cdpn.io/81089.ayNJMK.small.21ca8e8b-b4ee-44f9-8d28-35dc2f5caea8.png)](https://codepen.io/jmuheim/pen/ayNJMK){.code}
+
+## Abbreviations
+
+This is HTML abbreviation example.
+
+*[HTML]: Hyper Text Markup Language
+
+## Definition lists
+
+Term 1
+: Definition 1
+
+Term 2
+: Definition 2
+
+## Keyboard
+
+This is the [[help command]]
+
+## Element attibutes
+
+dummy paragraph {data-toggle=modal}
+
+you should *style me*{.red} in red
+
+```python {data=asdf}
+nums = [x for x in range(10)]
+```
+
+## Sample (currently non fully working)
+
+´´´\nresult\n´´´\n
+
+
