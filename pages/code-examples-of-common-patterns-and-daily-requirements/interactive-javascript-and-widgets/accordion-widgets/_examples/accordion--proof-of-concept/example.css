@@ -1,0 +1,12 @@
+*:focus {
+  outline: 2px dotted #000;
+}
+
+#first_entry,
+#second_entry {
+  display: none;
+}
+
+[data-adg-accordion] > a {
+  display: block;
+}

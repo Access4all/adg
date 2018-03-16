@@ -27,9 +27,9 @@ Some examples:
 ## Alternatives to the `Insert` key
 
 - If you're on a Mac running NVDA or JAWS in a virtual machine, there are several ways you can work around the missing `Insert` key
-    - For more info, see [Configuring VMware Fusion (macOS) for accessibility testing](/environment-needed-for-developing-accessible-websites/virtual-testing-machine/configuring-vmware-fusion--macos--for-accessibility-testing){.page}
+    - For more info, see [Configuring VMware Fusion (macOS) for accessibility testing](/section--setting-up-the-accessibility-testing-environment---introduction/virtual-testing-machine/configuring-vmware-fusion--macos--for-accessibility-testing){.page}
 - NVDA has the option to use `Caps Lock` instead of `Insert` as a modifier key
-    - For more info, see [Configuring VMware Workstation Player (Win, Linux) for accessibility testing](/environment-needed-for-developing-accessible-websites/virtual-testing-machine/configuring-vmware-workstation-player--win--linux--for-accessibility-testing){.page}
+    - For more info, see [Configuring VMware Workstation Player (Win, Linux) for accessibility testing](/section--setting-up-the-accessibility-testing-environment---introduction/virtual-testing-machine/configuring-vmware-workstation-player--win--linux--for-accessibility-testing){.page}
     - This doesn't seem to work in VMware Fusion (TODO: Why?)
 
 # Naming convention in this guide
@@ -47,7 +47,7 @@ So the examples above look like this:
 
 # Mouse features
 
-Some desktop screen readers offer special functionality for mouse users. For example, NVDA automatically reads aloud elements hovered using the mouse. This can be useful to search for elements on a screen. For developing purposes, we feel this feature is rather distracting, so you should disable it as described here: [NVDA screen reader: installation and configuration](/environment-needed-for-developing-accessible-websites/screen-readers/nvda-screen-reader--installation-and-configuration){.page}.
+Some desktop screen readers offer special functionality for mouse users. For example, NVDA automatically reads aloud elements hovered using the mouse. This can be useful to search for elements on a screen. For developing purposes, we feel this feature is rather distracting, so you should disable it as described here: [NVDA screen reader: installation and configuration](/section--setting-up-the-accessibility-testing-environment---introduction/screen-readers/nvda-screen-reader--installation-and-configuration){.page}.
 
 # Mouse emulation
 

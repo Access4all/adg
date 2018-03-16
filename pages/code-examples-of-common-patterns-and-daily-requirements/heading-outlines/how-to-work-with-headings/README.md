@@ -54,6 +54,6 @@ JAWS's "Heading List" displays a page's heading outline in a **list view**:
     - Highlights a lot of HTML elements (incl. headings), conveying their tag names
     - Allows for fast visual detection of wrong (or missing) headings!
 
-See [Bookmarks and bookmarklets](/environment-needed-for-developing-accessible-websites/web-browsers/bookmarks-and-bookmarklets){.page}.
+See [Bookmarks and bookmarklets](/section--setting-up-the-accessibility-testing-environment---introduction/web-browsers/bookmarks-and-bookmarklets){.page}.
 
 TODO: More?!

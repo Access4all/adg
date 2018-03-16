@@ -35,6 +35,6 @@ In addition to the content of the current cell, this announces the column's and/
     - Highlights a lot of HTML elements (incl. tables), conveying their tag names
     - Allows for fast visual detection of wrong (or missing) tables!
 
-See [Bookmarks and bookmarklets](/environment-needed-for-developing-accessible-websites/web-browsers/bookmarks-and-bookmarklets){.page}.
+See [Bookmarks and bookmarklets](/section--setting-up-the-accessibility-testing-environment---introduction/web-browsers/bookmarks-and-bookmarklets){.page}.
 
 TODO: More?!

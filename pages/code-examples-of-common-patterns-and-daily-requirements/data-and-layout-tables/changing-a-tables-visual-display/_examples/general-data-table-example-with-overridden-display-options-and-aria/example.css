@@ -1,0 +1,20 @@
+table {
+  display: block;
+  border-bottom: 1px solid;
+}
+
+caption, tr, thead, tbody {
+  display: block;
+}
+
+td, th {
+  border-top: 1px solid;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  padding: 4px 8px;
+  display: block;
+}
+
+th {
+  text-align: left;
+}
