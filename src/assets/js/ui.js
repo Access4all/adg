@@ -1,7 +1,3 @@
-import { $, jQuery } from 'jquery'
+import modules from './app/modules'
 
-import _modules from './app/modules'
-
-export default function (x) {
-  return _modules(x)
-}
+modules()
