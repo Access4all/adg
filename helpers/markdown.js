@@ -110,5 +110,17 @@ markdown
 
     tokens[idx].attrSet('title', metaTitle)
   })
+  .use(() => {
+    markdown.core.ruler.push('increase_heading_level', state => {
+      state.tokens.forEach(token => {
+        if (['heading_open', 'heading_close'].includes(token.type)) {
+          token.tag = token.tag.replace(
+            /[0-9]+/,
+            match => parseInt(match, 10) + 1
+          )
+        }
+      })
+    })
+  })
 
 module.exports = markdown
