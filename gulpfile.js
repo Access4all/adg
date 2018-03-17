@@ -187,7 +187,8 @@ gulp.task('html', cb => {
             navigation.push({
               url,
               parent: parent !== url ? parent : null,
-              title: file.frontMatter.title
+              title: file.frontMatter.title,
+              position: file.frontMatter.position
             })
 
             return cb()
