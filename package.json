@@ -49,6 +49,7 @@
     "node-sass-globbing": "0.0.23",
     "prettier-standard": "^8.0.0",
     "require-new": "^1.1.1",
+    "sitemap": "^1.13.0",
     "webpack": "^4.1.1"
   },
   "dependencies": {
