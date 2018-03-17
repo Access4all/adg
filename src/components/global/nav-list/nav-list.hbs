@@ -1,11 +1,11 @@
 {{#each this}}
   <li class="nav-list--item">
-    <a class="nav-list--link{{#isActive @root.currentUrl url}} nav-list--link-active{{/isActive}}{{#isCurrent @root.currentUrl url}} nav-list--link-current{{/isCurrent}}" href="/{{url}}"{{#if children}} id="nav{{@key}}" aria-haspopup="true" aria-expanded="false"{{/if}}>
+    <a class="nav-list--link{{#if isActive}} nav-list--link-active{{/if}}{{#if isCurrent}} nav-list--link-current{{/if}}" href="/{{url}}"{{#if children}} id="nav{{@key}}" aria-haspopup="true" aria-expanded="false"{{/if}}>
       {{title}}
 
       <span class="visuallyhidden">
-        {{#isActive @root.currentUrl url}}(active page){{/isActive}}
-        {{#isCurrent @root.currentUrl url}}(current page){{/isCurrent}}
+        {{#if isActive}}(active page){{/if}}
+        {{#if isCurrent}}(current page){{/if}}
       </span>
     </a>
 

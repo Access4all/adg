@@ -37,6 +37,7 @@
     "gulp-util": "^3.0.8",
     "highlight.js": "^9.12.0",
     "husky": "^0.14.3",
+    "lodash": "^4.17.5",
     "markdown-it": "^8.4.1",
     "markdown-it-abbr": "^1.0.4",
     "markdown-it-attrs": "^1.2.1",
@@ -46,7 +47,6 @@
     "markdown-it-regexp": "^0.4.0",
     "markdown-it-samp": "0.0.4",
     "node-sass-globbing": "0.0.23",
-    "once": "^1.4.0",
     "prettier-standard": "^8.0.0",
     "require-new": "^1.1.1",
     "webpack": "^4.1.1"

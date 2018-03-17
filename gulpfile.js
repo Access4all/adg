@@ -13,7 +13,7 @@ const webpack = require('webpack')
 const plumber = require('gulp-plumber')
 const util = require('gulp-util')
 const del = require('del')
-const once = require('once')
+const _ = require('lodash')
 
 function errorHandler (err) {
   util.log(
@@ -89,7 +89,7 @@ gulp.task('js', cb => {
 
   if (util.env.watch) {
     compiler.watch({}, (err, stats) => {
-      cb = once(cb)
+      cb = _.once(cb)
 
       log(err, stats)
 
@@ -149,6 +149,51 @@ gulp.task('html', cb => {
       fs.readFileSync('./src/templates/' + layoutName + '.hbs'))
 
     return layout
+  }
+
+  const getPageNavigation = options =>
+    options.items.map((item, index) =>
+      extendNavigationItem(item, index, options)
+    )
+
+  // Add isCurrent / isActive properties, extend options.prevNext
+  const extendNavigationItem = (origItem, index, options) => {
+    const item = _.merge({}, origItem)
+
+    if (item.url === options.currentUrl) {
+      const prev = options.items[index - 1]
+      const next = options.items[index + 1]
+
+      item.isCurrent = true
+
+      if (prev) {
+        options.prevNext.prev = {
+          title: prev.title,
+          url: prev.url
+        }
+      }
+
+      if (next) {
+        options.prevNext.next = {
+          title: next.title,
+          url: next.url
+        }
+      }
+    } else if (options.currentUrl.includes(item.url)) {
+      item.isActive = true
+    }
+
+    if (item.children) {
+      item.children = item.children.map((child, childIndex) => {
+        const childOptions = Object.assign({}, options, {
+          items: item.children
+        })
+
+        return extendNavigationItem(child, childIndex, childOptions)
+      })
+    }
+
+    return item
   }
 
   return (
@@ -222,12 +267,19 @@ gulp.task('html', cb => {
               const layout = getLayout(file.frontMatter.layout)
               const relPath = path.relative('./pages', file.path)
               const currentUrl = relPath.substring(0, relPath.lastIndexOf('/'))
+              const prevNext = {}
+              const pageNavigation = getPageNavigation({
+                items: navigation,
+                currentUrl,
+                prevNext
+              })
 
               file.data = {
                 title: file.frontMatter.title,
                 contents: file.contents,
-                navigation,
-                currentUrl
+                navigation: pageNavigation,
+                previousPage: prevNext.prev,
+                nextPage: prevNext.next
               }
 
               file.contents = layout
@@ -251,22 +303,6 @@ gulp.task('html', cb => {
             return path
               .relative('./src/components', file.path)
               .replace(path.extname(file.path), '')
-          },
-          helpers: {
-            isCurrent: (currentUrl, itemUrl, options) => {
-              if (currentUrl === itemUrl) {
-                return options.fn(this)
-              } else {
-                return options.inverse(this)
-              }
-            },
-            isActive: (currentUrl, itemUrl, options) => {
-              if (currentUrl !== itemUrl && currentUrl.includes(itemUrl)) {
-                return options.fn(this)
-              } else {
-                return options.inverse(this)
-              }
-            }
           }
         }).on('error', errorHandler)
       )
