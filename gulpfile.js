@@ -180,16 +180,13 @@ gulp.task('html', cb => {
         through.obj(
           (file, enc, cb) => {
             const url = getUrl(file.path)
-            const parents = url
-              .split('/')
-              .slice(0, -1)
-              .filter(item => item !== '')
+            const parent = url.substring(0, url.lastIndexOf('/'))
 
             files.push(file)
 
             navigation.push({
               url,
-              parents,
+              parent: parent !== url ? parent : null,
               title: file.frontMatter.title
             })
 
@@ -200,13 +197,14 @@ gulp.task('html', cb => {
             navigation = navigation
               .map(page => {
                 page.children = navigation
-                  .filter(child => child.parents.includes(page.url))
+                  .filter(child => child.parent === page.url)
                   .sort((a, b) => a.position - b.position)
 
                 return page
               })
+              .filter(page => !page.parent && page.parent !== null)
               .sort((a, b) => a.position - b.position)
-console.log(navigation)
+
             // Return files back to stream
             files.forEach(this.push.bind(this))
 
@@ -221,11 +219,14 @@ console.log(navigation)
           .obj((file, enc, cb) => {
             try {
               const layout = getLayout(file.frontMatter.layout)
+              const relPath = path.relative('./pages', file.path)
+              const currentUrl = relPath.substring(0, relPath.lastIndexOf('/'))
 
               file.data = {
                 title: file.frontMatter.title,
                 contents: file.contents,
-                navigation: navigation
+                navigation,
+                currentUrl
               }
 
               file.contents = layout
@@ -251,9 +252,19 @@ console.log(navigation)
               .replace(path.extname(file.path), '')
           },
           helpers: {
-            skipPage: (page, sublevel, options) => {
-              // Skip sublevels in first navigation iteration
-              return !sublevel && page.parents.length
+            isCurrent: (currentUrl, itemUrl, options) => {
+              if (currentUrl === itemUrl) {
+                return options.fn(this)
+              } else {
+                return options.inverse(this)
+              }
+            },
+            isActive: (currentUrl, itemUrl, options) => {
+              if (currentUrl !== itemUrl && currentUrl.includes(itemUrl)) {
+                return options.fn(this)
+              } else {
+                return options.inverse(this)
+              }
             }
           }
         }).on('error', errorHandler)

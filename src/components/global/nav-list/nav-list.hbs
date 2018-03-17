@@ -1,15 +1,18 @@
-{{#each navigation}}
-  {{#unless (skipPage this ../sublevel)}}
-    <li class="nav-list--item">
-      <a class="nav-list--link " href="/{{url}}"{{#if children}} id="nav{{@key}}" aria-haspopup="true" aria-expanded="false"{{/if}}>
-        {{title}}
-      </a>
+{{#each this}}
+  <li class="nav-list--item">
+    <a class="nav-list--link{{#isActive @root.currentUrl url}} nav-list--link-active{{/isActive}}{{#isCurrent @root.currentUrl url}} nav-list--link-current{{/isCurrent}}" href="/{{url}}"{{#if children}} id="nav{{@key}}" aria-haspopup="true" aria-expanded="false"{{/if}}>
+      {{title}}
 
-      {{#if children}}
-        <ul class="nav-list nav-list-subnav" aria-labelledby="nav{{@key}}">
-          {{> "global/nav-list/nav-list" navigation=children sublevel=true}}
-        </ul>
-      {{/if}}
-    </li>
-  {{/unless}}
+      <span class="visuallyhidden">
+        {{#isActive @root.currentUrl url}}(active page){{/isActive}}
+        {{#isCurrent @root.currentUrl url}}(current page){{/isCurrent}}
+      </span>
+    </a>
+
+    {{#if children}}
+      <ul class="nav-list nav-list-subnav" aria-labelledby="nav{{@key}}">
+        {{> "global/nav-list/nav-list" children}}
+      </ul>
+    {{/if}}
+  </li>
 {{/each}}

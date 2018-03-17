@@ -11,8 +11,17 @@
 			}
 		}
 	}
+	&-subnav {
+		margin-left: 20px;
+	}
 }
 .nav-list--link {
 	display: block;
 	padding: $gutter / 4 0;
+	&-current {
+		color: red;
+	}
+	&-active {
+		@include font-weight(bold);
+	}
 }
