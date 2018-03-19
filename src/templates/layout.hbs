@@ -12,14 +12,14 @@
         <h1 class="visuallyhidden">Accessibility Developer Guide</h1>
         {{> "global/navbar/navbar"}}
     </header>
-    <div id="main-content" class="site-content" role="main">
+    <main id="main-content" class="site-content">
       {{> "global/breadcrumbs/breadcrumbs"}}
       {{> "content/main_title/main_title" title=title}}
       {{> "content/text_container/text_container" content=contents}}
 
       {{#if previousPage}}<br><a href="/{{previousPage.url}}">👈 {{previousPage.title}}</a>{{/if}}
       {{#if nextPage}}<br><a href="/{{nextPage.url}}">{{nextPage.title}} 👉</a>{{/if}}
-    </div>
+    </main>
   </div>
 
   <script src="/js/scripts.js"></script>
