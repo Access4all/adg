@@ -4,6 +4,7 @@ title: "ARIA - when HTML simply isn't enough"
 navigation_title: "ARIA"
 position: 2
 lead: "There are situations where HTML doesn't provide for all the requirements of developers of modern and interactive websites. For this, the Accessible Rich Internet Applications (ARIA) standard was introduced. In this chapter, we introduce how it is purposely used, show its potential and shortcomings as well as alternatives to it."
+changed: "2018-03-17"
 ---
 
 # ARIA - when HTML simply isn't enough

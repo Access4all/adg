@@ -4,6 +4,7 @@ title: "Semantics and their importance for accessibility"
 navigation_title: "Semantics"
 position: 1
 lead: "While today's trend goes for more and more fancy visuals everywhere, it keeps being important to mark up content with proper HTML. In this chapter, you will learn about so-called \"semantics\", and why they are indispensable in website development."
+changed: "2018-03-17"
 ---
 
 # Semantics and their importance for accessibility

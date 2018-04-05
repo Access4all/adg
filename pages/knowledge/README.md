@@ -4,6 +4,7 @@ title: "Knowledge about accessibility"
 navigation_title: "Knowledge"
 position: 3
 lead: "To begin developing accessible websites, some basic knowledge about the required tools and techniques is needed. The chapters in this 3rd part of our guide, the Knowledge part, will support you to get acquainted with various important topics of rather theoretical nature. They will prepare you to dive into the world of accessible website development!"
+changed: "2018-04-02"
 ---
 
 # Knowledge about accessibility

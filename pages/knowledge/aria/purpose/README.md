@@ -4,6 +4,7 @@ title: "The purpose behind the WAI-ARIA standard"
 navigation_title: "Purpose"
 position: 1
 lead: "HTML provides standard tags for the very most requirements of a modern website. When it comes to interactive elements, though, sometimes plain HTML may not be enough anymore. The Accessible Rich Internet Application (ARIA) standard was introduced to fill this gap. But careful: there are pitfalls you need to know about."
+changed: "2018-03-17"
 ---
 
 # The purpose behind the WAI-ARIA standard

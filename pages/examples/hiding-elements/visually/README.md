@@ -4,6 +4,7 @@ title: "Hiding elements visually by moving them off-screen"
 navigation_title: "Visually"
 position: 1
 lead: "To hide an element visually means: visually (on a computer screen) it isn't perceivable anymore, but non-visual clients (for example screen readers) still perceive it. There is no official technique for doing this, but there's a well proven workaround."
+changed: "2018-03-24"
 ---
 
 # Hiding elements visually by moving them off-screen

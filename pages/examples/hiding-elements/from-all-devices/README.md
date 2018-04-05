@@ -4,6 +4,7 @@ title: "Hiding elements from all devices"
 navigation_title: "From all devices"
 position: 3
 lead: "To hide an element from all devices means just that: no single device will perceive it anymore (although the element still is present in the DOM). This can be achieved using either a CSS or an HTML technique."
+changed: "2018-04-02"
 ---
 
 # Hiding elements from all devices

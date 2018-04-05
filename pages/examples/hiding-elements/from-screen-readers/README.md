@@ -4,6 +4,7 @@ title: "Hiding elements from screen readers using aria-hidden"
 navigation_title: "From screen readers"
 position: 2
 lead: "To hide an element from screen readers means: visually (on a computer screen) it is perceivable, but non-visual clients (for example screen readers) ignore it. This is done easily using ARIA, but you should never try this on focusable elements."
+changed: "2018-03-24"
 ---
 
 # Hiding elements from screen readers using aria-hidden

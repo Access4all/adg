@@ -4,6 +4,7 @@ title: "Widgets simply working for all"
 navigation_title: "Widgets"
 position: 3
 lead: "HTML provides interactive controls for most thinkable requirements. Surprisingly to many, standard browser behaviour (through using form controls) is also a fool-proof way to provide even complex custom functionalities in the style of modern widgets."
+changed: "2018-03-17"
 ---
 
 # Widgets simply working for all

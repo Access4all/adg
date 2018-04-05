@@ -4,6 +4,7 @@ title: "How to handle headings"
 navigation_title: "Handling"
 position: 1
 lead: "To work through and understand the examples in this chapter, it is good to have a screen reader at hand and know how to handle it. In addition to this, there are some tools and bookmarklets that can be a huge help in your development workflow."
+changed: "2018-04-02"
 ---
 
 # How to handle headings

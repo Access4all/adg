@@ -4,6 +4,7 @@ title: "Semantics provide meaning"
 navigation_title: "Meaning"
 position: 1
 lead: "HTML (not surprisingly) is a markup language. This means, that it's not only plain text, but text marked up with meaning - so called \"semantics\". For this, HTML offers a lot of tags, each with an inherent, unique meaning. And it is absolutely crucial that those tags are used properly."
+changed: "2018-03-17"
 ---
 
 # Semantics provide meaning
