@@ -73,6 +73,7 @@ const extendNavigationItem = (origItem, index, options) => {
 
 module.exports = (config, cb) => {
   const markdown = requireNew('./helpers/markdown')
+  const metatags = requireNew('./helpers/metatags')
 
   const files = []
   const sitemap = []
@@ -162,13 +163,25 @@ module.exports = (config, cb) => {
               currentUrl,
               prevNext
             })
+            const metatagsData = {
+              title: file.frontMatter.title,
+              description: file.frontMatter.lead,
+              card: 'summary',
+              site_name: 'The Accessibility Developer Guide'
+            }
+
+            // TODO: add absolute url
+            if (currentUrl !== '') {
+              metatagsData.url = currentUrl
+            }
 
             file.data = {
               title: file.frontMatter.title,
               contents: file.contents,
               navigation: pageNavigation,
               previousPage: prevNext.prev,
-              nextPage: prevNext.next
+              nextPage: prevNext.next,
+              metatags: metatags.generateTags(metatagsData)
             }
 
             sitemap.push({
