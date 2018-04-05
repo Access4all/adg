@@ -7,19 +7,24 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
 </head>
-<body>
+<body class="js-theme theme theme-1">
   <div id="body">
     <header class="header" id="header">
-        <h1 class="visuallyhidden">Accessibility Developer Guide</h1>
-        {{> "global/navbar/navbar"}}
+        <div class="l-site_width">
+          {{> "global/logo/logo"}}
+          <h1 class="visuallyhidden">Accessibility Developer Guide</h1>
+        </div>
     </header>
+    {{> "global/navbar/navbar"}}
     <main id="main-content" class="site-content">
-      {{> "global/breadcrumbs/breadcrumbs"}}
-      {{> "content/main_title/main_title" title=title}}
-      {{> "content/text_container/text_container" content=contents}}
+      <div class="l-site_width">
+        {{> "global/breadcrumbs/breadcrumbs"}}
+        {{> "content/main_title/main_title" title=title}}
+        {{> "content/text_container/text_container" content=contents}}
 
-      {{#if previousPage}}<br><a href="/{{previousPage.url}}">👈 {{previousPage.title}}</a>{{/if}}
-      {{#if nextPage}}<br><a href="/{{nextPage.url}}">{{nextPage.title}} 👉</a>{{/if}}
+        {{#if previousPage}}<br><a href="/{{previousPage.url}}">👈 {{previousPage.title}}</a>{{/if}}
+        {{#if nextPage}}<br><a href="/{{nextPage.url}}">{{nextPage.title}} 👉</a>{{/if}}
+      </div>
     </main>
   </div>
 
