@@ -8,6 +8,8 @@ lead: "While today's trend goes for more and more fancy visuals everywhere, it k
 
 # Semantics and their importance for accessibility
 
-We explain how [semantics provide meaning](/knowledge/semantics/meaning){.page title="Semantics provide meaning"}, and what the typical problems with missing, wrong and invalid semantics look like.
+We start with explaining how [semantics provide meaning](/knowledge/semantics/meaning){.page title="Semantics provide meaning"}, and what the typical problems with missing, wrong and invalid semantics look like.
 
-Then we show show [semantics provide interactivity](/knowledge/semantics/interaction){.page title="Semantics provide interaction"}, and why you should choose this standard behaviour over custom implementations whenever possible.
+Then we show [semantics provide interactivity](/knowledge/semantics/interaction){.page title="Semantics provide interaction"}, and why you should choose this standard behaviour over custom implementations whenever possible.
+
+Finally we present you with a [fool-proof way of creating JavaScript widgets](/knowledge/semantics/widgets){.page title="Widgets simply working for all"}, by using browser standard functionality.
