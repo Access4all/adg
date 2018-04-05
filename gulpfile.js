@@ -90,7 +90,13 @@ gulp.task('media', () => {
 
 gulp.task('clean', () => del('./dist'))
 
-gulp.task('build', gulp.series('clean', 'css', 'html', 'js', 'media'))
+gulp.task(
+  'build',
+  gulp.series(
+    'clean',
+    gulp.parallel('css', 'js', 'media', 'html', 'html:examples')
+  )
+)
 
 gulp.task(
   'default',
