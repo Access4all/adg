@@ -6,6 +6,7 @@
 	height: 100vh;
 	display: inline-block;
 	padding-right: 40px;
+  max-width: 100vw;
 }
 
 .navbar--toggle {
@@ -21,15 +22,16 @@
   display: none;
   height: 100%;
   overflow: auto;
-
-  width: 200vw;
-  padding-right: calc(200vw - 400px);
-  margin-right: calc(-200vw + 400px);
+  width: 100%;
+  @include min-width(500px) {
+    width: 200vw;
+    padding-right: calc(200vw - 400px);
+    margin-right: calc(-200vw + 400px);
+  }
   pointer-events: none;
 }
 
 .navbar--inner {
-
   pointer-events: auto;
 }
 
