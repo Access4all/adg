@@ -77,16 +77,19 @@ const getExample = href => {
 
   const blocks = ['html', 'css', 'js'].map(type => {
     const markup = hljs.highlightAuto(code[type])
+    var id =
+      href
+        .toLowerCase()
+        .replace(/ /g, '-')
+        .replace(/[^\w-]+/g, '') + type
 
-    return `<details class="code">
-      <summary>${type}</summary>
-      <pre><code>${markup.value}</code></pre>
-    </details>`
+    return `<div class="control"><input type="checkbox" class="sr-only" id="${id}" /><label for="${id}">${type}</label></div>
+      <div class="panel"><pre><code>${markup.value}</code></pre></div>`
   })
 
   const codePenForm = getCodePenForm(code)
 
-  return `${description}${blocks.join('')}
+  return `${description}<div class="accordion">${blocks.join('')}</div>
   ${codePenForm}`
 }
 
