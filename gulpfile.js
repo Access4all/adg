@@ -86,7 +86,7 @@ gulp.task('js', cb => {
 })
 
 gulp.task(
-  'media',
+  'media:copy',
   gulp.parallel(
     function content () {
       return gulp
@@ -104,6 +104,45 @@ gulp.task(
     }
   )
 )
+
+gulp.task('media:resize', () => {
+  const resize = require('gulp-jimp-resize')
+  const through = require('through2')
+  const path = require('path')
+
+  return gulp
+    .src(['./pages/{,**/}_media/**/*', './pages/**/example.png'], {
+      base: './pages'
+    })
+    .pipe(
+      resize({
+        // TODO: Configure sizes
+        sizes: [
+          {
+            suffix: 'medium',
+            width: 1000,
+            upscale: false
+          },
+          {
+            suffix: 'small',
+            width: 500,
+            upscale: false
+          }
+        ]
+      })
+    )
+    .pipe(
+      // `base` option seems to be ignored by plugin
+      through.obj((file, enc, cb) => {
+        file.path = path.relative('./pages', file.path)
+
+        cb(null, file)
+      })
+    )
+    .pipe(gulp.dest('./dist'))
+})
+
+gulp.task('media', gulp.parallel('media:copy', 'media:resize'))
 
 gulp.task('clean', () => del('./dist'))
 
