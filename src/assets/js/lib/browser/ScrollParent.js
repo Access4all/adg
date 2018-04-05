@@ -68,7 +68,7 @@ define(['jquery'], function ($) {
           {
             scrollTop: value
           },
-          $.extend({ duration: 250, easing: 'easeInOutQuart' }, animation)
+          $.extend({ duration: 250 }, animation)
         )
     } else {
       $target.scrollTop(value)
