@@ -54,8 +54,12 @@ const extendNavigationItem = (origItem, index, options) => {
         url: next.url
       }
     }
+
+    options.breadcrumb.push(item)
   } else if (options.currentUrl.includes(item.url)) {
     item.isActive = true
+
+    options.breadcrumb.push(item)
   }
 
   if (item.children) {
@@ -157,10 +161,12 @@ module.exports = (config, cb) => {
             const relPath = path.relative('./pages', file.path)
             const currentUrl = relPath.substring(0, relPath.lastIndexOf('/'))
             const prevNext = {}
+            const breadcrumb = []
             const pageNavigation = getPageNavigation({
               items: navigation,
               currentUrl,
-              prevNext
+              prevNext,
+              breadcrumb
             })
 
             file.data = {
@@ -168,7 +174,10 @@ module.exports = (config, cb) => {
               contents: file.contents,
               navigation: pageNavigation,
               previousPage: prevNext.prev,
-              nextPage: prevNext.next
+              nextPage: prevNext.next,
+              breadcrumb: breadcrumb.sort((a, b) => {
+                return a.url.length - b.url.length
+              })
             }
 
             sitemap.push({
