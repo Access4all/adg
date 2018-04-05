@@ -8,6 +8,7 @@ const html = require('./gulp/html')
 const css = require('./gulp/css')
 const js = require('./gulp/javascript')
 const examples = require('./gulp/examples')
+const concat = require('gulp-concat')
 
 function errorHandler (err) {
   util.log(
@@ -78,6 +79,11 @@ gulp.task('js', cb => {
       done()
     }
   )
+
+  gulp
+    .src('./src/assets/js/lib/vendor/**/*.js')
+    .pipe(concat('vendor.js'))
+    .pipe(gulp.dest('./dist/js/'))
 })
 
 gulp.task('media', () => {
