@@ -64,7 +64,7 @@ const getCodePenForm = code => {
     /"/g,
     '&quot;'
   )}">
-    <button type="submit" class="codepen">CodePen</button>
+    <button type="submit" class="codepen">Play around on CodePen</button>
   </form>`
 }
 
@@ -84,16 +84,24 @@ const getExample = href => {
         .replace(/[^\w-]+/g, '') + type
 
     return `<div class="control"><input type="checkbox" class="sr-only" id="${id}" /><label for="${id}">${type}</label></div>
-      <div class="panel"><pre><code>${markup.value}</code></pre></div>`
+      <div class="panel" id="${id}_panel" style="display: none"><pre><code>${
+  markup.value
+}</code></pre></div>`
   })
 
   const codePenForm = getCodePenForm(code)
 
-  const exampleLink = `<a href="${path.join(href, 'example.html')}">Example</a>`
+  const exampleLink = `<a href="${path.join(
+    href,
+    'example.html'
+  )}">Example<img src="${path.join(
+    href,
+    'example.png'
+  )}" alt="Example preview" /></a>`
 
-  return `${description}<div class="accordion">${blocks.join('')}</div>
-  ${codePenForm}
-  ${exampleLink}`
+  return `${exampleLink}
+  ${description}<div class="accordion">${blocks.join('')}</div>
+  ${codePenForm}`
 }
 
 module.exports = {
