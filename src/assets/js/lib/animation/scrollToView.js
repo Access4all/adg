@@ -27,8 +27,12 @@ export default function scrollToView (el, options) {
   $el.each(function () {
     var top = scrollParent.getOffset(el)
     var bottom = top + $(this).outerHeight()
-    if (top < offsetTop) offsetTop = top
-    if (bottom > offsetBottom) offsetBottom = bottom
+    if (top < offsetTop) {
+      offsetTop = top
+    }
+    if (bottom > offsetBottom) {
+      offsetBottom = bottom
+    }
   })
 
   var topScroll = -1,

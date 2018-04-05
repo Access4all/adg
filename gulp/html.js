@@ -54,8 +54,12 @@ const extendNavigationItem = (origItem, index, options) => {
         url: next.url
       }
     }
+
+    options.breadcrumb.push(item)
   } else if (options.currentUrl.includes(item.url)) {
     item.isActive = true
+
+    options.breadcrumb.push(item)
   }
 
   if (item.children) {
@@ -74,6 +78,7 @@ const extendNavigationItem = (origItem, index, options) => {
 module.exports = (config, cb) => {
   const markdown = requireNew('./helpers/markdown')
   const metatags = requireNew('./helpers/metatags')
+  const appConfig = requireNew('../config')
 
   const files = []
   const sitemap = []
@@ -101,7 +106,7 @@ module.exports = (config, cb) => {
       through
         .obj((file, enc, cb) => {
           const contents = file.contents.toString()
-          const html = markdown.render(contents)
+          const html = markdown(file.path).render(contents)
 
           file.contents = Buffer.from(html)
 
@@ -158,21 +163,19 @@ module.exports = (config, cb) => {
             const relPath = path.relative('./pages', file.path)
             const currentUrl = relPath.substring(0, relPath.lastIndexOf('/'))
             const prevNext = {}
+            const breadcrumb = []
             const pageNavigation = getPageNavigation({
               items: navigation,
               currentUrl,
-              prevNext
+              prevNext,
+              breadcrumb
             })
             const metatagsData = {
               title: file.frontMatter.title,
               description: file.frontMatter.lead,
               card: 'summary',
-              site_name: 'The Accessibility Developer Guide'
-            }
-
-            // TODO: add absolute url
-            if (currentUrl !== '') {
-              metatagsData.url = currentUrl
+              site_name: appConfig.title,
+              url: `${appConfig.url}/${currentUrl}`
             }
 
             file.data = {
@@ -181,7 +184,10 @@ module.exports = (config, cb) => {
               navigation: pageNavigation,
               previousPage: prevNext.prev,
               nextPage: prevNext.next,
-              metatags: metatags.generateTags(metatagsData)
+              metatags: metatags.generateTags(metatagsData),
+              breadcrumb: breadcrumb.sort((a, b) => {
+                return a.url.length - b.url.length
+              })
             }
 
             sitemap.push({

@@ -1,11 +1,13 @@
-<nav class="navbar js-collapsible">
-	{{> "global/logo/logo"}}
-
-  <div class="navbar--nav">
-  	<button class="navbar--nav--btn js-collapsible--toggle">Open/Close Menu</button>
-    <ul class="navbar--nav--list nav-list nav-list-main js-collapsible--container">
-      {{> "global/nav-list/nav-list" navigation}}
-    </ul>
+<nav class="navbar js-collapsible" data-collapsible-options='{"containerSelector": "html"}'>
+  <button class="navbar--toggle js-collapsible--toggle"><span class="navbar--toggle--line"></span><span class="navbar--toggle--line"></span><span class="navbar--toggle--line"></span><span class="visuallyhidden">Open/Close Menu</span></button>
+  <div class="navbar--container">
+    <div class="navbar--inner">
+  	  <div class="navbar--nav">
+  	    <ul class="navbar--nav--list nav-list nav-list-main js-collapsible--container">
+  	      {{> "global/nav-list/nav-list" navigation}}
+  	    </ul>
+  	  </div>
+    	{{> "global/search/search"}}
+    </div>
   </div>
-  {{> "global/search/search"}}
 </nav>

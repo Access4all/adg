@@ -3,11 +3,9 @@ const path = require('path')
 const frontMatter = require('front-matter')
 const hljs = require('highlight.js')
 
-const getFile = (files, type, href) => {
+const getFile = (files, type, dir) => {
   const match = files.find(file => path.extname(file) === `.${type}`)
-  const content = match
-    ? fs.readFileSync(path.join('./pages', href, match)).toString()
-    : ''
+  const content = match ? fs.readFileSync(path.join(dir, match)).toString() : ''
 
   if (type === 'details') {
     return frontMatter(content).attributes
@@ -16,14 +14,14 @@ const getFile = (files, type, href) => {
   return content
 }
 
-const getCode = href => {
-  const files = fs.readdirSync(path.join('./pages', href))
+const getCode = dir => {
+  const files = fs.readdirSync(dir)
 
   return {
-    details: getFile(files, 'details', href),
-    html: getFile(files, 'html', href),
-    css: getFile(files, 'css', href),
-    js: getFile(files, 'js', href)
+    details: {}, // TODO: Add reasonable details
+    html: getFile(files, 'html', dir),
+    css: getFile(files, 'css', dir),
+    js: getFile(files, 'js', dir)
   }
 }
 
@@ -68,9 +66,13 @@ const getCodePenForm = code => {
   </form>`
 }
 
-const getExample = href => {
-  const code = getCode(href)
-
+const getExample = (title, href, filePath) => {
+  const dir = path.join(
+    filePath.replace(path.basename(filePath), ''),
+    '_examples',
+    href
+  )
+  const code = getCode(dir)
   const description = code.details.description
     ? `<p>${code.details.description}</p>`
     : ''
@@ -86,8 +88,14 @@ const getExample = href => {
 
   const codePenForm = getCodePenForm(code)
 
+  const exampleLink = `<a href="/${path.join(
+    path.relative('./pages', dir),
+    'example.html'
+  )}">Example</a>`
+
   return `${description}${blocks.join('')}
-  ${codePenForm}`
+  ${codePenForm}
+  ${exampleLink}`
 }
 
 module.exports = {

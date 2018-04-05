@@ -3,11 +3,10 @@
         Sie befinden sich hier:
     </h2>
     <ol class="breadcrumbs--list">
-        <li class="breadcrumbs--list--item" role="presentation">
-            <a class="breadcrumbs--list--item--link" href="">Ebene 1</a>
+      {{#each breadcrumb}}
+        <li class="breadcrumbs--list--item{{#if @last}} is-back-link{{/if}}" role="presentation">
+            <a class="breadcrumbs--list--item--link" href="/{{url}}">{{title}}</a>
         </li>
-        <li class="breadcrumbs--list--item is-back-link" role="presentation">
-            <a class="breadcrumbs--list--item--link" href="">Ebene 2</a>
-        </li>
+      {{/each}}
     </ol>
 </nav>
