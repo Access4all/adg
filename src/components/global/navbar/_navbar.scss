@@ -1,3 +1,79 @@
 .navbar {
-	display: block;
+	position: fixed;
+	left: 0; top: 0;
+	background-color: $c-white;
+	z-index: 1;
+	height: 100vh;
+	display: inline-block;
+	padding-right: 40px;
+  max-width: 100vw;
 }
+
+.navbar--toggle {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 40px;
+	padding: 0 5px;
+}
+
+.navbar--container {
+  display: none;
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+  @include min-width(500px) {
+    width: 200vw;
+    padding-right: calc(200vw - 400px);
+    margin-right: calc(-200vw + 400px);
+  }
+  pointer-events: none;
+}
+
+.navbar--inner {
+  pointer-events: auto;
+}
+
+.navbar.is-opened {
+	.navbar--container {
+		display: block;
+	}
+}
+
+.navbar--toggle--line {
+  display: block;
+  width: 30px;
+  height: 4px;
+  margin-bottom: 6px;
+  position: relative;
+
+  background: $c-black;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 50% 50%;
+
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+
+
+	.navbar.is-opened & {
+	  opacity: 1;
+	  transform: translateY(10px) rotate(45deg) ;
+
+	  &:nth-last-child(3) {
+		  opacity: 0;
+		  transform: rotate(0deg) scale(0.2, 0.2);
+		}
+
+		&:nth-last-child(2) {
+		  transform: translateY(-10px) rotate(-45deg) ;
+		}
+	}
+}
+
+
+

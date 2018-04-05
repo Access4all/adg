@@ -13,7 +13,9 @@ export default (() => {
       var $target = $(el)
       var prevTabIndex
 
-      if (!$target.length) return // return if element doens't exists
+      if (!$target.length) {
+        return
+      } // return if element doens't exists
 
       el = $target.get(0)
       el.focus()

@@ -14,6 +14,7 @@ import Accessibility from '../../../lib/browser/Accessibility'
 export default class Collapsible extends BaseModule {
   constructor () {
     super()
+    this.ns = BaseModule.ns('Collapsible')
 
     this.DEFAULT_OPTIONS = {
       deviceMin: false, // included
@@ -32,7 +33,7 @@ export default class Collapsible extends BaseModule {
       this.DEFAULT_OPTIONS,
       this.$el.data('collapsible-options')
     )
-    this.getContainerElement()
+    this.enable()
 
     return this
   }
@@ -142,7 +143,7 @@ export default class Collapsible extends BaseModule {
       .addClass('is-opened')
       .attr('aria-expanded', 'true')
     this.getContainerElement().addClass('is-opened')
-
+    console.log(this.$container, this.options)
     scrollToView(self.$el)
 
     if (closeAnim) {
@@ -183,7 +184,6 @@ export default class Collapsible extends BaseModule {
         $toggles.splice($.inArray($toggle, $toggles), 1)
       }
     }
-
     return $toggles
   }
 
