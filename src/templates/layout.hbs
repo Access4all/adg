@@ -31,10 +31,14 @@
 
         {{#if previousPage}}<br><a href="/{{previousPage.url}}">👈 {{previousPage.title}}</a>{{/if}}
         {{#if nextPage}}<br><a href="/{{nextPage.url}}">{{nextPage.title}} 👉</a>{{/if}}
+        <p>
+          <input class="js-search" type="text" placeholder="Search the guide" />
+        </p>
       </div>
     </main>
   </div>
 
+  <script src="/js/vendor.js"></script>
   <script src="/js/scripts.js"></script>
 </body>
 </html>
