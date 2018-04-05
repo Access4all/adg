@@ -77,6 +77,8 @@ const extendNavigationItem = (origItem, index, options) => {
 
 module.exports = (config, cb) => {
   const markdown = requireNew('./helpers/markdown')
+  const metatags = requireNew('./helpers/metatags')
+  const appConfig = requireNew('../config')
 
   const files = []
   const sitemap = []
@@ -168,6 +170,13 @@ module.exports = (config, cb) => {
               prevNext,
               breadcrumb
             })
+            const metatagsData = {
+              title: file.frontMatter.title,
+              description: file.frontMatter.lead,
+              card: 'summary',
+              site_name: appConfig.title,
+              url: `${appConfig.url}/${currentUrl}`
+            }
 
             file.data = {
               title: file.frontMatter.title,
@@ -175,6 +184,7 @@ module.exports = (config, cb) => {
               navigation: pageNavigation,
               previousPage: prevNext.prev,
               nextPage: prevNext.next,
+              metatags: metatags.generateTags(metatagsData),
               breadcrumb: breadcrumb.sort((a, b) => {
                 return a.url.length - b.url.length
               })

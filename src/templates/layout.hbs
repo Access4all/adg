@@ -6,6 +6,13 @@
   <link rel="stylesheet" href="/css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+  {{#each metatags.og}}
+    <meta property="{{this.property}}" content="{{this.content}}">
+  {{/each}}
+
+  {{#each metatags.standard}}
+      <meta name="{{this.name}}" content="{{this.content}}">
+  {{/each}}
 </head>
 <body class="js-theme theme theme-1">
   <div id="body">
