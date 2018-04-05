@@ -80,13 +80,25 @@ gulp.task('js', cb => {
   )
 })
 
-gulp.task('media', () => {
-  return gulp
-    .src(['./pages/{,**/}_media/**/*', './pages/**/example.png'], {
-      base: './pages'
-    })
-    .pipe(gulp.dest('./dist'))
-})
+gulp.task(
+  'media',
+  gulp.parallel(
+    function content () {
+      return gulp
+        .src(['./pages/{,**/}_media/**/*', './pages/**/example.png'], {
+          base: './pages'
+        })
+        .pipe(gulp.dest('./dist'))
+    },
+    function assets () {
+      return gulp
+        .src(['./src/assets/img/**/*'], {
+          base: './src/assets'
+        })
+        .pipe(gulp.dest('./dist'))
+    }
+  )
+)
 
 gulp.task('clean', () => del('./dist'))
 
