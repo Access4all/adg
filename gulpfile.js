@@ -24,6 +24,11 @@ gulp.task('html', cb =>
       base: './pages',
       host: 'https://accessibility-developer-guide.netlify.com',
       sitemap: './dist/sitemap.xml',
+      feed: {
+        json: './dist/feed/feed.json',
+        atom: './dist/feed/atom.xml',
+        rss: './dist/feed/rss.xml'
+      },
       errorHandler
     },
     () => {

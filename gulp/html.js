@@ -78,6 +78,7 @@ const extendNavigationItem = (origItem, index, options) => {
 module.exports = (config, cb) => {
   const markdown = requireNew('./helpers/markdown')
   const metatags = requireNew('./helpers/metatags')
+  const Feed = requireNew('./helpers/rss')
   const appConfig = requireNew('../config')
 
   const files = []
@@ -121,6 +122,10 @@ module.exports = (config, cb) => {
         (file, enc, cb) => {
           const url = getUrl(file.path, config.base)
           const parent = url.substring(0, url.lastIndexOf('/'))
+
+          file.data = Object.assign({}, file.data, {
+            url
+          })
 
           files.push(file)
 
@@ -178,7 +183,8 @@ module.exports = (config, cb) => {
               url: `${appConfig.url}/${currentUrl}`
             }
 
-            file.data = {
+            file.data = Object.assign({}, file.data, {
+              changed: file.frontMatter.changed,
               title: file.frontMatter.title,
               contents: file.contents,
               navigation: pageNavigation,
@@ -188,7 +194,7 @@ module.exports = (config, cb) => {
               breadcrumb: breadcrumb.sort((a, b) => {
                 return a.url.length - b.url.length
               })
-            }
+            })
 
             sitemap.push({
               url: currentUrl
@@ -237,6 +243,18 @@ module.exports = (config, cb) => {
     )
     .pipe(gulp.dest('./dist'))
     .on('finish', () => {
+      // Generate RSS feeds
+      const feed = Feed(files)
+
+      if (!fs.existsSync(path.dirname(config.feed.rss))) {
+        fs.mkdirSync(path.dirname(config.feed.rss))
+      }
+
+      fs.writeFileSync(config.feed.json, feed.json1())
+      fs.writeFileSync(config.feed.atom, feed.atom1())
+      fs.writeFileSync(config.feed.rss, feed.rss2())
+
+      // Generate sitemap
       const generatedSitemap = sm.createSitemap({
         hostname: config.host,
         urls: sitemap
