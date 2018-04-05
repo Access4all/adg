@@ -57,12 +57,12 @@ const getCodePenForm = (code, title) => {
     // js_external: ''
   }
 
-  return `<form action="https://codepen.io/pen/define" method="POST" target="_blank">
+  return `<form action="https://codepen.io/pen/define" method="POST">
     <input type="hidden" name="data" value="${JSON.stringify(config).replace(
     /"/g,
     '&quot;'
   )}">
-    <button type="submit" class="codepen">Open example on CodePen</button>
+    <button type="submit" class="codepen">🕹 Play around with the example on CodePen</button>
   </form>`
 }
 
@@ -74,15 +74,15 @@ const getExample = (title, href, filePath) => {
   )
   const code = getCode(dir)
 
-  const blocks = ['html', 'css', 'js'].map(type => {
-    const markup = hljs.highlightAuto(code[type])
+  const blocks = ['html', 'css', 'js'].filter(type => code[type]).map(type => {
+    const markup = hljs.highlightAuto(code[type], [type])
     var id =
       href
         .toLowerCase()
         .replace(/ /g, '-')
         .replace(/[^\w-]+/g, '') + type
 
-    return `<div class="control"><input type="checkbox" class="sr-only" id="${id}" /><label for="${id}">${type}</label></div>
+    return `<div class="control"><input type="checkbox" class="visually-hidden" id="${id}" /><label for="${id}">🔦 Show ${type.toUpperCase()} code</label></div>
       <div class="panel" id="${id}_panel" style="display: none"><pre><code>${
   markup.value
 }</code></pre></div>`
@@ -93,15 +93,15 @@ const getExample = (title, href, filePath) => {
   const exampleLink = `<a href="/${path.join(
     path.relative('./pages', dir),
     'example.html'
-  )}"><span>${title}</span><img src="/${path.join(
+  )}"><span>Example: ${title}</span><img src="/${path.join(
     path.relative('./pages', dir),
     'example.png'
   )}" alt="Example preview" /></a>`
 
   return `
   ${exampleLink}
-  <!--<div class="accordion">${blocks.join('')}</div>-->
-  ${codePenForm}`
+  ${codePenForm}
+  <div class="accordion">${blocks.join('')}</div>`
 }
 
 module.exports = {

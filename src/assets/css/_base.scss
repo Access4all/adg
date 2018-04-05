@@ -72,7 +72,7 @@ button {
 
 	// DEV, replace with real styles
 	&.codepen {
-		background: red;
+    font-weight: bold;
 	}
 }
 
@@ -80,10 +80,33 @@ p img {
   border: 1px solid;
 }
 
+.visually-hidden {
+  position: absolute;
+  left:     -10000px;
+  top:      auto;
+  width:    1px;
+  height:   1px;
+  overflow: hidden;
+}
 
 p.example {
+  margin-bottom: 0 !important; /* This is ugly... */
+  font-weight: bold;
+
   span {
     display: inline-block;
     width: 100%;
+  }
+}
+
+.accordion {
+  font-weight: bold;
+
+  label:hover {
+    cursor: pointer;
+  }
+
+  input:focus + label {
+    outline: auto;
   }
 }
