@@ -82,7 +82,7 @@ In this case, while visual and aural presentation may feel quite different, the 
 
 ## Missing semantics
 
-It is very important to acknowledge that while visual attributes are displayed in web browsers, screen readers don't care about them. Regardless whether text has `color: blue` or `color: red`, whether it is `font-size: 1px` or `font-size: 100px`, whether it has a `border` or a `text-shadow`, it's always announced as plain text. Only if it is marked up with semantics, screen readers do care.
+It is very important to acknowledge that while visual attributes are displayed in web browsers, screen readers don't care about them. Regardless whether text has `color: blue` or `color: red`, whether it is `font-size: 1px` or `font-size: 100px`, whether it has a `border` or a `text-shadow`, it's always announced as plain text. Only if it is marked up with semantics, screen readers do care (if you are really curious and want to learn more about this, skip ahead and read [Screen readers don't convey visual attributes](/knowledge/desktop-screen-readers/no-visual-attributes){.page}).
 
 Let's look at the following example, where the developer may not have felt like overriding default browser styles. So they decided to avoid real headings and just apply some visual attributes to meaningless containers:
 

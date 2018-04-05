@@ -7,6 +7,7 @@ const _ = require('lodash')
 const html = require('./gulp/html')
 const css = require('./gulp/css')
 const js = require('./gulp/javascript')
+const examples = require('./gulp/examples')
 
 function errorHandler (err) {
   util.log(
@@ -23,6 +24,21 @@ gulp.task('html', cb =>
       base: './pages',
       host: 'https://accessibility-developer-guide.netlify.com',
       sitemap: './dist/sitemap.xml',
+      errorHandler
+    },
+    () => {
+      browserSync.reload()
+
+      cb()
+    }
+  )
+)
+
+gulp.task('html:examples', cb =>
+  examples(
+    {
+      src: './pages/**/example.html',
+      base: './pages',
       errorHandler
     },
     () => {
@@ -101,10 +117,11 @@ gulp.task(
           './pages/**/*.md',
           './src/templates/**/*.hbs',
           './src/components/**/*.hbs',
-          './helpers/*'
+          './gulp/helpers/*'
         ],
         gulp.series('html')
       )
+      gulp.watch(['./pages/**/example.*'], gulp.series('html:examples'))
       gulp.watch(['./pages/{,**/}_media/**/*'], gulp.series('media'))
     }
   )

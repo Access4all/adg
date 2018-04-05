@@ -62,7 +62,7 @@ $(".tablist [data-target]").click(function() {
 </div>
 ```
 
-But as it should be clear by now, simply presenting something visually isn't enough. For example, though visually the currently active tabitem can be distinguished using `class="active"`, screen readers won't know which tabitem in fact is the active one. True semantical information is missing.
+But simply presenting something visually isn't enough for screen readers (if you are really curious and want to learn more about this, skip ahead and read [Screen readers don't convey visual attributes](/knowledge/desktop-screen-readers/no-visual-attributes){.page}). For example, though visually the currently active tabitem can be distinguished using `class="active"`, screen readers won't know which tabitem in fact is the active one. True semantical information is missing.
 
 # ARIA to the rescue?
 
@@ -113,10 +113,14 @@ Don't be over-optimistic: ARIA is a bare set of attributes and their specific va
 
 Admitted, a tablist is a rather easy user interface pattern, so it's not too hard to provide this functionality yourself. But there are much more complex patterns (for example, autocompletes), where it can become a major challenge managing all the required attributes and keeping their states and visual representation in sync.
 
-## Heterogenous support
+## Non-homogenous support
 
-To make things even less satisfying, ARIA support among browsers and screen readers varies a lot. And both browsers and screen readers are prone to being buggy. This is especially the case regarding ARIA support. If you are really curious and want to learn more about this, skip ahead and read [How screen readers work - and why they seem so buggy](/knowledge/desktop-screen-readers/so-buggy){.page}.
+To make things even less satisfying, ARIA support among browsers and screen readers varies a lot. And both browsers and screen readers are prone to being buggy. This is especially the case regarding ARIA support: as soon as the `role` attribute is used, unexpected things may happen. If you are really curious and want to learn more about this, skip ahead and read [How screen readers work - and why they seem so buggy](/knowledge/desktop-screen-readers/so-buggy){.page}.
 
 As such, there are extremely few truly working examples of ARIA widgets available on the web. And those few ones usually need a lot of complex code to work around known problems.
 
-But don't worry, read on, and we will provide you with alternative techniques that are very easy to implement and work reliably.
+# Conclusion
+
+Aside from the `role` attribute, there exist `aria-*` attributes that can be used standalone. In a few specific situations, they can be of real help, but you need to know exactly in which cases. Please read on.
+
+But regarding widgets: instead of using complex ARIA semantics and developing all interactivity on one's own, once again, using traditional HTML helps in creating even complex interactive usage patterns. So if you haven't done this yet, go back and read [Widgets simply working for all](/knowledge/semantics/widgets){.page}.

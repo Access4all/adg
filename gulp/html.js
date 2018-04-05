@@ -10,11 +10,6 @@ const plumber = require('gulp-plumber')
 const sm = require('sitemap')
 const _ = require('lodash')
 
-const files = []
-const sitemap = []
-const layouts = {}
-let navigation = []
-
 const getUrl = (filePath, base) => {
   return path
     .relative(base, filePath)
@@ -22,7 +17,7 @@ const getUrl = (filePath, base) => {
     .replace(/\/$/, '')
 }
 
-const getLayout = layoutName => {
+const getLayout = (layoutName, layouts) => {
   layoutName = layoutName || 'layout'
 
   // Read layout file only once
@@ -78,6 +73,11 @@ const extendNavigationItem = (origItem, index, options) => {
 
 module.exports = (config, cb) => {
   const markdown = requireNew('./helpers/markdown')
+
+  const files = []
+  const sitemap = []
+  const layouts = {}
+  let navigation = []
 
   // const config = {
   //   src: './pages/**/*.md',
@@ -153,7 +153,7 @@ module.exports = (config, cb) => {
       through
         .obj((file, enc, cb) => {
           try {
-            const layout = getLayout(file.frontMatter.layout)
+            const layout = getLayout(file.frontMatter.layout, layouts)
             const relPath = path.relative('./pages', file.path)
             const currentUrl = relPath.substring(0, relPath.lastIndexOf('/'))
             const prevNext = {}

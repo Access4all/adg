@@ -43,4 +43,4 @@ nums = [x for x in range(10)]
 
 ## Code example
 
-@code(/examples/widgets/accordion-widgets/_examples/accordion-proof-of-concept/)
+@code(/examples/headings/good-example/_examples/generally-good-headings/)
