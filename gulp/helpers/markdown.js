@@ -1,8 +1,9 @@
 const markdown = require('markdown-it')()
 const iterator = require('markdown-it-for-inline')
 const markdownPlugin = require('markdown-it-regexp')
+const requireNew = require('require-new')
 
-const examples = require('./examples')
+const examples = requireNew('./examples')
 
 markdown
   .use(
