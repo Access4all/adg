@@ -54,8 +54,12 @@ const extendNavigationItem = (origItem, index, options) => {
         url: next.url
       }
     }
+
+    options.breadcrumb.push(item)
   } else if (options.currentUrl.includes(item.url)) {
     item.isActive = true
+
+    options.breadcrumb.push(item)
   }
 
   if (item.children) {
@@ -73,6 +77,8 @@ const extendNavigationItem = (origItem, index, options) => {
 
 module.exports = (config, cb) => {
   const markdown = requireNew('./helpers/markdown')
+  const metatags = requireNew('./helpers/metatags')
+  const appConfig = requireNew('../config')
 
   const files = []
   const sitemap = []
@@ -157,18 +163,31 @@ module.exports = (config, cb) => {
             const relPath = path.relative('./pages', file.path)
             const currentUrl = relPath.substring(0, relPath.lastIndexOf('/'))
             const prevNext = {}
+            const breadcrumb = []
             const pageNavigation = getPageNavigation({
               items: navigation,
               currentUrl,
-              prevNext
+              prevNext,
+              breadcrumb
             })
+            const metatagsData = {
+              title: file.frontMatter.title,
+              description: file.frontMatter.lead,
+              card: 'summary',
+              site_name: appConfig.title,
+              url: `${appConfig.url}/${currentUrl}`
+            }
 
             file.data = {
               title: file.frontMatter.title,
               contents: file.contents,
               navigation: pageNavigation,
               previousPage: prevNext.prev,
-              nextPage: prevNext.next
+              nextPage: prevNext.next,
+              metatags: metatags.generateTags(metatagsData),
+              breadcrumb: breadcrumb.sort((a, b) => {
+                return a.url.length - b.url.length
+              })
             }
 
             sitemap.push({

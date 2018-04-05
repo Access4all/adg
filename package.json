@@ -10,7 +10,8 @@
     "gulp": "gulp",
     "prettier": "prettier-standard '**/*.js'",
     "precommit": "npm run prettier",
-    "update": "npx npm-check -u"
+    "update": "npx npm-check -u",
+    "dev": "node --inspect node_modules/.bin/gulp"
   },
   "keywords": [],
   "author": "",
