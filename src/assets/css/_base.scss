@@ -76,6 +76,14 @@ button {
 	}
 }
 
-img {
+p img {
   border: 1px solid;
+}
+
+
+p.example {
+  span {
+    display: inline-block;
+    width: 100%;
+  }
 }
