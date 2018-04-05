@@ -82,7 +82,7 @@ gulp.task('js', cb => {
 
 gulp.task('media', () => {
   return gulp
-    .src('./pages/{,**/}_media/**/*', {
+    .src(['./pages/{,**/}_media/**/*', './pages/**/example.png'], {
       base: './pages'
     })
     .pipe(gulp.dest('./dist'))
