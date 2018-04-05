@@ -86,8 +86,11 @@ const getExample = href => {
 
   const codePenForm = getCodePenForm(code)
 
+  const exampleLink = `<a href="${path.join(href, 'example.html')}">Example</a>`
+
   return `${description}${blocks.join('')}
-  ${codePenForm}`
+  ${codePenForm}
+  ${exampleLink}`
 }
 
 module.exports = {
