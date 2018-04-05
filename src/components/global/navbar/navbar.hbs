@@ -6,15 +6,21 @@
       <span class="navbar--toggle--line"></span>
       <span class="navbar--toggle--line"></span>
     </span>
-    <span class="visuallyhidden">Open/Close Menu</span></label>
+    <span class="visuallyhidden">Open/Close Menu</span>
+  </label>
   <div class="navbar--container">
+    <div class="navbar--logo">
+      {{> "global/logo/logo"}}
+    </div>
     <div class="navbar--inner">
   	  <div class="navbar--nav">
   	    <ul class="navbar--nav--list nav-list nav-list-main js-collapsible--container">
   	      {{> "global/nav-list/nav-list" navigation}}
   	    </ul>
   	  </div>
-    	{{> "global/search/search"}}
+    </div>
+    <div class="navbar--search">
+      {{> "global/search/search"}}
     </div>
   </div>
 </nav>
