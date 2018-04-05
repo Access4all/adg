@@ -120,7 +120,7 @@ module.exports = (config, cb) => {
           navigation.push({
             url,
             parent: parent !== url ? parent : null,
-            title: file.frontMatter.title,
+            title: file.frontMatter.navigation_title,
             position: file.frontMatter.position
           })
 
