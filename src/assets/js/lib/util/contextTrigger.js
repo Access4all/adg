@@ -161,7 +161,9 @@ export default (() => {
         any = true
       }
     }
-    if (!any) return
+    if (!any) {
+      return
+    }
 
     // only if we find at least one element we're going into the more
     // costly evaluation to find the top elements inserted and process those

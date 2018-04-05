@@ -73,7 +73,9 @@ define(['jquery'], function ($) {
       handler,
       target,
       args = []
-    for (var i = 0; i < arguments.length; i++) args[i] = arguments[i]
+    for (var i = 0; i < arguments.length; i++) {
+      args[i] = arguments[i]
+    }
     switch (arguments.length) {
       case 2:
         target = this.$el
@@ -110,11 +112,15 @@ define(['jquery'], function ($) {
   }
 
   BaseModule.prototype.off = function () {
-    if (this.$el) this.$el.off(this.ns)
+    if (this.$el) {
+      this.$el.off(this.ns)
+    }
     $(document).off(this.ns)
     $(window).off(this.ns)
     if (this.nstemp) {
-      if (this.$el) this.$el.off(this.nstemp)
+      if (this.$el) {
+        this.$el.off(this.nstemp)
+      }
       $(document).off(this.nstemp)
       $(window).off(this.nstemp)
     }
