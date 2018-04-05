@@ -69,4 +69,9 @@ p sub {
 button {
 	cursor: pointer;
 	border-radius: 0;
+
+	// DEV, replace with real styles
+	&.codepen {
+		background: red;
+	}
 }

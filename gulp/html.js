@@ -9,7 +9,6 @@ const requireNew = require('require-new')
 const plumber = require('gulp-plumber')
 const sm = require('sitemap')
 const _ = require('lodash')
-const markdown = requireNew('./helpers/markdown')
 
 const files = []
 const sitemap = []
@@ -78,6 +77,8 @@ const extendNavigationItem = (origItem, index, options) => {
 }
 
 module.exports = (config, cb) => {
+  const markdown = requireNew('./helpers/markdown')
+
   // const config = {
   //   src: './pages/**/*.md',
   //   base: './pages',

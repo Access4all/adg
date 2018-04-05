@@ -53,10 +53,10 @@ const codePlugin = markdownPlugin(/@code\((.*?)\)/, (match, utils) => {
   const blocks = ['html', 'css', 'js'].map(type => {
     const markup = hljs.highlightAuto(code[type])
 
-    return `<div class="code">
-      <h3 class="title">${type}</h3>
+    return `<details class="code">
+      <summary>${type}</summary>
       <pre><code>${markup.value}</code></pre>
-    </div>`
+    </details>`
   })
 
   const codePenConfig = {
@@ -80,7 +80,7 @@ const codePlugin = markdownPlugin(/@code\((.*?)\)/, (match, utils) => {
     <input type="hidden" name="data" value="${JSON.stringify(
     codePenConfig
   ).replace(/"/g, '&quot;')}">
-    <button type="submit" class="btn btn-primary">CodePen</button>
+    <button type="submit" class="codepen">CodePen</button>
   </form>`
 
   return `${description}${blocks.join('')}
