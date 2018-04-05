@@ -100,7 +100,7 @@ module.exports = (config, cb) => {
       through
         .obj((file, enc, cb) => {
           const contents = file.contents.toString()
-          const html = markdown.render(contents)
+          const html = markdown(file.path).render(contents)
 
           file.contents = Buffer.from(html)
 
