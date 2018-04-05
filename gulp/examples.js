@@ -12,62 +12,64 @@ module.exports = (config, cb) => {
 
   const layout = fs.readFileSync('./src/templates/example.hbs')
 
-  return gulp
-    .src(config.src, {
-      base: config.base,
-      read: false
-    })
-    .pipe(plumber())
+  return (
+    gulp
+      .src(config.src, {
+        base: config.base,
+        read: false
+      })
+      .pipe(plumber())
 
-    // Wrap layout, prepare data
-    .pipe(
-      through
-        .obj((file, enc, cb) => {
-          const relPath = path.dirname(path.relative(config.base, file.path))
-          const articlePath = path.join(
-            file.path.replace(/\/_examples\/(.*)/, ''),
-            'README.md'
-          )
-          const article = fs.existsSync(articlePath)
-            ? fs.readFileSync(articlePath, 'utf-8')
-            : ''
-          const articleMeta = frontMatter(article).attributes
-          const articleUrl = path.relative(
-            config.base,
-            path.dirname(articlePath)
-          )
-          const code = helpers.getCode(relPath)
-          const data = Object.assign(
-            {
-              codePen: helpers.getCodePenForm(code),
-              title: `${articleMeta.navigation_title}: Code example`,
-              article: {
-                url: `/${articleUrl}`,
-                title: articleMeta.navigation_title
-              }
-            },
-            code
-          )
+      // Wrap layout, prepare data
+      .pipe(
+        through
+          .obj((file, enc, cb) => {
+            const relPath = path.dirname(path.relative(config.base, file.path))
+            const articlePath = path.join(
+              file.path.replace(/\/_examples\/(.*)/, ''),
+              'README.md'
+            )
+            const article = fs.existsSync(articlePath)
+              ? fs.readFileSync(articlePath, 'utf-8')
+              : ''
+            const articleMeta = frontMatter(article).attributes
+            const articleUrl = path.relative(
+              config.base,
+              path.dirname(articlePath)
+            )
+            const code = helpers.getCode(relPath)
+            const data = Object.assign(
+              {
+                codePen: helpers.getCodePenForm(code),
+                title: `${articleMeta.navigation_title}: Code example`,
+                article: {
+                  url: `/${articleUrl}`,
+                  title: articleMeta.navigation_title
+                }
+              },
+              code
+            )
 
-          file.contents = layout
-          file.data = data
+            file.contents = layout
+            file.data = data
 
-          return cb(null, file)
-        })
-        .on('error', config.errorHandler)
-    )
+            return cb(null, file)
+          })
+          .on('error', config.errorHandler)
+      )
 
-    // Compile Handlebars to HTML
-    .pipe(
-      handlebars({
-        partials: './src/components/**/*.hbs',
-        parsePartialName: (options, file) => {
-          return path
-            .relative('./src/components', file.path)
-            .replace(path.extname(file.path), '')
-        }
-      }).on('error', config.errorHandler)
-    )
+      // Compile Handlebars to HTML
+      .pipe(
+        handlebars({
+          partials: './src/components/**/*.hbs',
+          parsePartialName: (options, file) => {
+            return path
+              .relative('./src/components', file.path)
+              .replace(path.extname(file.path), '')
+          }
+        }).on('error', config.errorHandler)
+      )
 
-    .pipe(gulp.dest('./dist'))
+      .pipe(gulp.dest('./dist'))
+  )
 }

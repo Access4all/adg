@@ -121,12 +121,7 @@ gulp.task(
         ],
         gulp.series('html')
       )
-      gulp.watch(
-        [
-          './pages/**/example.*'
-        ],
-        gulp.series('html:examples')
-      )
+      gulp.watch(['./pages/**/example.*'], gulp.series('html:examples'))
       gulp.watch(['./pages/{,**/}_media/**/*'], gulp.series('media'))
     }
   )
