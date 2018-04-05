@@ -40,7 +40,3 @@ you should *style me*{.red} in red
 ```python {data=asdf}
 nums = [x for x in range(10)]
 ```
-
-## Code example
-
-@code(/examples/headings/good-example/_examples/generally-good-headings/)

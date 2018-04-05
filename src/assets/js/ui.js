@@ -21,10 +21,8 @@ $(document).ready(function () {
       panel_id = `#${$checkbox.attr('id')}_panel`
       $panel = $(panel_id)
       if ($checkbox.is(':checked')) {
-        console.log(321)
         return $panel.show()
       } else {
-        console.log(123)
         return $panel.hide()
       }
     })

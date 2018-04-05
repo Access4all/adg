@@ -24,7 +24,7 @@ module.exports = (config, cb) => {
       .pipe(
         through
           .obj((file, enc, cb) => {
-            const relPath = path.dirname(path.relative(config.base, file.path))
+            const dir = path.dirname(file.path)
             const articlePath = path.join(
               file.path.replace(/\/_examples\/(.*)/, ''),
               'README.md'
@@ -37,7 +37,7 @@ module.exports = (config, cb) => {
               config.base,
               path.dirname(articlePath)
             )
-            const code = helpers.getCode(relPath)
+            const code = helpers.getCode(dir)
             const data = Object.assign(
               {
                 codePen: helpers.getCodePenForm(code),

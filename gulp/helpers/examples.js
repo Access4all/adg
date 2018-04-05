@@ -3,11 +3,9 @@ const path = require('path')
 const frontMatter = require('front-matter')
 const hljs = require('highlight.js')
 
-const getFile = (files, type, href) => {
+const getFile = (files, type, dir) => {
   const match = files.find(file => path.extname(file) === `.${type}`)
-  const content = match
-    ? fs.readFileSync(path.join('./pages', href, match)).toString()
-    : ''
+  const content = match ? fs.readFileSync(path.join(dir, match)).toString() : ''
 
   if (type === 'details') {
     return frontMatter(content).attributes
@@ -16,14 +14,14 @@ const getFile = (files, type, href) => {
   return content
 }
 
-const getCode = href => {
-  const files = fs.readdirSync(path.join('./pages', href))
+const getCode = dir => {
+  const files = fs.readdirSync(dir)
 
   return {
-    details: getFile(files, 'details', href),
-    html: getFile(files, 'html', href),
-    css: getFile(files, 'css', href),
-    js: getFile(files, 'js', href)
+    details: {}, // TODO: Add reasonable details
+    html: getFile(files, 'html', dir),
+    css: getFile(files, 'css', dir),
+    js: getFile(files, 'js', dir)
   }
 }
 
@@ -40,10 +38,10 @@ const getTitle = href => {
   return meta.title
 }
 
-const getCodePenForm = code => {
+const getCodePenForm = (code, title) => {
   const config = {
-    title: code.details.name,
-    description: code.details.description,
+    title: title,
+    // description: code.details.description,
     html: code.html,
     // html_pre_processor: 'none',
     css: code.css,
@@ -68,12 +66,13 @@ const getCodePenForm = code => {
   </form>`
 }
 
-const getExample = href => {
-  const code = getCode(href)
-
-  const description = code.details.description
-    ? `<p>${code.details.description}</p>`
-    : ''
+const getExample = (title, href, filePath) => {
+  const dir = path.join(
+    filePath.replace(path.basename(filePath), ''),
+    '_examples',
+    href
+  )
+  const code = getCode(dir)
 
   const blocks = ['html', 'css', 'js'].map(type => {
     const markup = hljs.highlightAuto(code[type])
@@ -89,18 +88,19 @@ const getExample = href => {
 }</code></pre></div>`
   })
 
-  const codePenForm = getCodePenForm(code)
+  const codePenForm = getCodePenForm(code, title)
 
-  const exampleLink = `<a href="${path.join(
-    href,
+  const exampleLink = `<a href="/${path.join(
+    path.relative('./pages', dir),
     'example.html'
-  )}">Example<img src="${path.join(
-    href,
+  )}">${title}<img src="/${path.join(
+    path.relative('./pages', dir),
     'example.png'
   )}" alt="Example preview" /></a>`
 
-  return `${exampleLink}
-  ${description}<div class="accordion">${blocks.join('')}</div>
+  return `
+  ${exampleLink}
+  <!--<div class="accordion">${blocks.join('')}</div>-->
   ${codePenForm}`
 }
 
