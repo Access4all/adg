@@ -117,7 +117,7 @@ gulp.task(
           './pages/**/*.md',
           './src/templates/**/*.hbs',
           './src/components/**/*.hbs',
-          './helpers/*'
+          './gulp/helpers/*'
         ],
         gulp.series('html')
       )
