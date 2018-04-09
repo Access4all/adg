@@ -13,12 +13,12 @@
   {{#each metatags.standard}}
       <meta name="{{this.name}}" content="{{this.content}}">
   {{/each}}
+  <link rel="alternate" type="application/rss+xml" href="/feed/rss.xml">
 </head>
 <body class="js-theme theme theme-1">
   <div id="body">
     <header class="header" id="header">
         <div class="l-site_width">
-          {{> "global/logo/logo"}}
           <h1 class="visuallyhidden">Accessibility Developer Guide</h1>
         </div>
     </header>
