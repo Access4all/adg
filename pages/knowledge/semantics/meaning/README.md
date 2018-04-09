@@ -4,7 +4,7 @@ title: "Semantics provide meaning"
 navigation_title: "Meaning"
 position: 1
 lead: "HTML (not surprisingly) is a markup language. This means, that it's not only plain text, but text marked up with meaning - so called \"semantics\". For this, HTML offers a lot of tags, each with an inherent, unique meaning. And it is absolutely crucial that those tags are used properly."
-changed: "2018-03-17"
+changed: "2018-04-09"
 ---
 
 # Semantics provide meaning
@@ -31,9 +31,9 @@ Take a look at the following example:
 </div>
 ```
 
-![Screenshot of non-semantical example](_media/screenshot-of-non-semantical-example.png){.image}
-
 A visual user agent (web browser) displays such elements' text contents (if any) in their standard font size, line height, color, etc.
+
+![Screenshot of non-semantical example](_media/screenshot-of-non-semantical-example.png){.image}
 
 An aural user agent (screen reader) simply announces such elements' text contents (if any). This will simply be announced as:
 
@@ -65,9 +65,9 @@ Let's take a look at the same example, now marked up using heading tags (`<h1>`,
 
 Marking up text using an `<h#>` tag tells the user agent that this isn't just plain text, but - in fact - a heading of a certain level!
 
-![Screenshot of semantical example](_media/screenshot-of-semantical-example.png){.image}
-
 A web browser conveys this additional information visually by increasing the element's font size, line-height and boldness (depending on the heading's level).
+
+![Screenshot of semantical example](_media/screenshot-of-semantical-example.png){.image}
 
 A screen reader conveys this additional information by announcing the element's meaning:
 
@@ -147,11 +147,10 @@ Needless to say that today's search engines know about such trickeries and penal
 
 Browsers are very forgiving with invalid HTML code. This is a good thing, as it allows everybody (including non-professionals) to participate in the worldwide exchange of knowledge through the internet.
 
-For example, the following table is coded extremely badly, because all closing tags are missing:
+For example, the following table is coded extremely bad:
 
 ```html
-<table>
-<tr>
+<table border=1>
   <td>Apples
   <td>Pears
 <tr>
@@ -159,9 +158,17 @@ For example, the following table is coded extremely badly, because all closing t
   <td>Potatoes
 ```
 
-![Screenshot of invalid semantical example](_media/screenshot-of-invalid-semantical-example.png){.image}
+- There is no `<tr>` tag for the first row
+- All closing tags are missing
+- The value of `border` has no quotes
 
 But most browsers still visually render it correctly.
+
+![Screenshot of invalid semantical example](_media/screenshot-of-invalid-semantical-example.png){.image}
+
+When inspecting the DOM, it is evident that the browser internally fixes the bad structure.
+
+![Screenshot of DOM](_media/screenshot-of-dom.png){.image}
 
 Still, HTML is a very strict standard and must be coded correctly to be truly valid. And again, screen readers are much more dependent on valid HTML code, and mistakes like the ones above often lead to big problems.
 

@@ -4,7 +4,7 @@ title: "How to handle headings"
 navigation_title: "Handling"
 position: 1
 lead: "To work through and understand the examples in this chapter, it is good to have a screen reader at hand and know how to handle it. In addition to this, there are some tools and bookmarklets that can be a huge help in your development workflow."
-changed: "2018-04-02"
+changed: "2018-04-09"
 ---
 
 # How to handle headings
@@ -32,23 +32,23 @@ In the upcoming text, we are referring to the keys `NVDA` and `JAWS`. If you don
 
 ### Elements List (NVDA)
 
-![NVDA's "Elements List" dialog](_media/nvdas-elements-list-dialog.png){.image}
-
 NVDA's "Elements List" displays a page's heading outline in a tree view. To open it:
 
 - First make sure you are in browse mode.
     - If unclear to you, see [Screen reader interaction modes](/knowledge/desktop-screen-readers/interaction-modes){.page}.
 - Press `Alt + H` to select the "Headings" area.
 
+![NVDA's "Elements List" dialog](_media/nvdas-elements-list-dialog.png){.image}
+
 Among other things, this dialog offers filter options.
 
 ### Heading List (JAWS)
 
-![JAWS' "Heading List" dialog](_media/jaws-heading-list-dialog.png){.image}
-
 JAWS' "Heading List" displays a page's heading outline in a list view.
 
 To open it, press `JAWS + F6`.
+
+![JAWS' "Heading List" dialog](_media/jaws-heading-list-dialog.png){.image}
 
 Among other things, this dialog offers sort and filter options.
 
