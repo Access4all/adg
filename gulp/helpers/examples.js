@@ -62,7 +62,7 @@ const getCodePenForm = (code, title) => {
     /"/g,
     '&quot;'
   )}">
-    <button type="submit" class="codepen">🕹 Play around with the example on CodePen</button>
+    <button type="submit" class="codepen">Play around with the example on CodePen</button>
   </form>`
 }
 
@@ -82,7 +82,7 @@ const getExample = (title, href, filePath) => {
         .replace(/ /g, '-')
         .replace(/[^\w-]+/g, '') + type
 
-    return `<div class="control"><input type="checkbox" class="visually-hidden" id="${id}" /><label for="${id}">🔦 Show ${type.toUpperCase()} code</label></div>
+    return `<div class="control"><input type="checkbox" id="${id}" /><label for="${id}">Show ${type.toUpperCase()} code</label></div>
       <div class="panel" id="${id}_panel" style="display: none"><pre><code>${
   markup.value
 }</code></pre></div>`

@@ -102,11 +102,19 @@ p.example {
 .accordion {
   font-weight: bold;
 
-  label:hover {
-    cursor: pointer;
-  }
+  .control {
+    label:hover {
+      cursor: pointer;
+    }
 
-  input:focus + label {
-    outline: auto;
+    input {
+      width: 10px;
+      margin-left: -10px;
+      opacity: 0;
+    }
+
+    input:focus + label {
+      outline: auto;
+    }
   }
 }
