@@ -2,15 +2,16 @@
   <p>
     <a href="{{href}}">
       <span class="title">{{title}}</span>
-      <img src="{{img}}" alt="Example preview" />
+      <img src="{{img}}" alt="Preview of: {{title}}" />
     </a>
   </p>
 
-  {{> "base/accordion/accordion" items=accordionItems}} // [{:title => "bla", :content => "bla"}]
+  {{> "base/accordion/accordion" items=accordionItems}} // [{:id => "slug-of-title", :title => "Show HTML/CSS/JavaScript code", :content => "<pre><code>PUT CODE HERE</code></pre>"}]
 
-  <form>
+  <form action="https://codepen.io/pen/define" method="POST">
+      <input type="hidden" name="data" value="{{codepen}}" />
     <button>
-      Play around on CodePen
+      Open on CodePen<span class="visually-hidden">: {{title}}</span>
     </button>
   </form>
 </div>
