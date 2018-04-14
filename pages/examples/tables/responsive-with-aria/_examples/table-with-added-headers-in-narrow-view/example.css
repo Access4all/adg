@@ -1,0 +1,55 @@
+table {
+  border-collapse: collapse;
+}
+
+thead th {
+  background-color: lightpink;
+}
+
+tbody th {
+  background-color: lightgreen;
+}
+
+th, td {
+  border: 1px solid;
+}
+
+.narrow-th {
+  font-weight: bold;
+  background-color: yellow;
+}
+
+@media only screen and (max-width: 600px) {
+  table {
+    display: block;
+    border-bottom: 1px solid;
+  }
+
+  caption, tr, tbody {
+    display: block;
+  }
+
+  thead {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  td, th {
+    border-bottom: 0;
+    padding: 4px 8px;
+    display: block;
+  }
+
+  th {
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 601px) {
+  .narrow-th {
+    display: none;
+  }
+}
