@@ -1,0 +1,36 @@
+table {
+  border-collapse: collapse;
+}
+
+thead th {
+  background-color: lightpink;
+}
+
+tbody th {
+  background-color: lightgreen;
+}
+
+th, td {
+  border: 1px solid;
+}
+
+@media only screen and (max-width: 600px) {
+  table {
+    display: block;
+    border-bottom: 1px solid;
+  }
+
+  caption, tr, tbody {
+    display: block;
+  }
+
+  td, th {
+    border-bottom: 0;
+    padding: 4px 8px;
+    display: block;
+  }
+
+  th {
+    text-align: left;
+  }
+}
