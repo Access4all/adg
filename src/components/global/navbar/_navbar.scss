@@ -18,6 +18,7 @@ $navWidthMin: 50px;
     height: auto;
   }
 
+  padding-top: 100px;
 }
 
 
@@ -82,8 +83,16 @@ $navWidthMin: 50px;
     .navbar--search {
       display: block;
     }
-
   }
+
+  & ~ label {
+    border-right: 1px solid;
+  }
+}
+
+.navbar--toggle--input:focus ~ label .navbar--toggle--inner {
+  outline: 1px dotted #212121;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 
@@ -115,7 +124,7 @@ $navWidthMin: 50px;
 
 
 .navbar--toggle--input {
-  @include visuallyhidden;
+  margin-left: -100px;
 }
 .navbar--toggle--line {
   display: block;

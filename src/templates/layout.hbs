@@ -18,11 +18,14 @@
 <body class="js-theme theme theme-1">
   <div id="body">
     <header class="header" id="header">
-        <div class="l-site_width">
-          <h1 class="visuallyhidden">Header</h1>
+      <h1 class="visuallyhidden">Header</h1>
+      <div class="navbar--logo">
+        {{> "global/logo/logo"}}
+      </div>
 
-          {{> "global/breadcrumbs/breadcrumbs"}}
-        </div>
+      <div class="l-site_width">
+        {{> "global/breadcrumbs/breadcrumbs"}}
+      </div>
     </header>
     {{> "global/navbar/navbar"}}
     <main id="main-content" class="site-content">
@@ -35,6 +38,11 @@
         <!-- {{#if nextPage}}<br><a href="/{{nextPage.url}}">{{nextPage.title}} 👉</a>{{/if}} -->
       </div>
     </main>
+
+    <footer>
+      <h1 class="visuallyhidden">Footer</h1>
+      Accessibility Developer Guide (ADG) - &copy; 2018 by the «Accessibility Alliance» - <a href="https://github.com/Access4all/adg/">Fork on GitHub!</a>
+    </footer>
   </div>
 
   <script src="/js/scripts.js"></script>
