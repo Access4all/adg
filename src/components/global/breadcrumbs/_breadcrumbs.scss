@@ -10,7 +10,7 @@
 }
 
 .breadcrumbs--list--item {
-    display: inline-block;
+    float: left;
     & + & {
         margin-left: $gutter / 2;
     }
@@ -19,9 +19,4 @@
 .breadcrumbs--list--item--link {
     display: block;
     @include font-s;
-    &:after {
-        content: "/";
-        padding-left: $gutter / 2;
-        display: inline-block;
-    }
 }
