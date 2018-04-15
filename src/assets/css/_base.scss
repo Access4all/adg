@@ -130,3 +130,8 @@ code {
   padding: 4px 8px;
   font-weight: bold;
 }
+
+/* Bugfix for https://github.com/Access4all/adg/issues/41 */
+article > h2:first-child {
+  display:none
+}
