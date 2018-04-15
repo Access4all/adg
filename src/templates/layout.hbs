@@ -20,13 +20,13 @@
     <header class="header" id="header">
         <div class="l-site_width">
           <h1 class="visuallyhidden">Header</h1>
+
+          {{> "global/breadcrumbs/breadcrumbs"}}
         </div>
     </header>
     {{> "global/navbar/navbar"}}
     <main id="main-content" class="site-content">
       <div class="l-site_width">
-        <!-- Breadcrumbs feel "out of place" here -->
-        <!-- {{> "global/breadcrumbs/breadcrumbs"}} -->
         {{> "content/main_title/main_title" title=title}}
         {{> "content/text_container/text_container" content=contents}}
 
