@@ -93,10 +93,10 @@ const getExample = (title, href, filePath) => {
   const exampleLink = `<a href="/${path.join(
     path.relative('./pages', dir),
     'example.html'
-  )}"><span>Example: ${title}</span><img src="/${path.join(
+  )}"><span>Example: ${title}</span><span class="visuallyhidden"> (opens new window)</span><img src="/${path.join(
     path.relative('./pages', dir),
     'example.png'
-  )}" alt="Example preview" /></a>`
+  )}" alt="Example preview" target="_blank"" /></a>`
 
   return `
   ${exampleLink}
