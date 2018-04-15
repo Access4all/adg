@@ -1,5 +1,4 @@
 .nav-list {
-	margin-bottom: 100px; /* Otherwise the last items don't show */
 	&-main {
 		margin-top: - $gutter / 2;
 		& > .nav-list--item {

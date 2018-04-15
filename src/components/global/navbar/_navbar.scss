@@ -55,6 +55,7 @@ $navWidthMin: 50px;
   overflow: auto;
   width: 400px;
   max-width: 100vw;
+	margin-bottom: 100px; /* Otherwise the last items don't show */
 }
 
 .navbar--logo {
