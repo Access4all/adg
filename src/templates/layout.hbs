@@ -35,8 +35,8 @@
         {{> "content/text_container/text_container" content=contents}}
 
         <!-- The previous/next links aren't fully functional yet, see https://github.com/Access4all/adg/issues/30#issuecomment-379798282 -->
-        <!-- {{#if previousPage}}<br><a href="/{{previousPage.url}}">👈 {{previousPage.title}}</a>{{/if}} -->
-        <!-- {{#if nextPage}}<br><a href="/{{nextPage.url}}">{{nextPage.title}} 👉</a>{{/if}} -->
+        <!-- {{#if previousPage}}<br><a href="/{{previousPage.url}}"><span aria-hidden="true">👈 </span>{{previousPage.title}}</a>{{/if}} -->
+        <!-- {{#if nextPage}}<br><a href="/{{nextPage.url}}">{{nextPage.title}}<span aria-hidden="true"> 👉</span></a>{{/if}} -->
       </div>
     </main>
 

@@ -16,7 +16,10 @@
   <script>{{{js}}}</script>
 
   <div class="footer footer--example">
-    <a href="{{article.url}}">👈 {{article.title}}</a>
+    <a href="{{article.url}}">
+      <span aria-hidden="true">👈</span>
+      {{article.title}}
+    </a>
 
    {{{codePen}}}
   </div>
