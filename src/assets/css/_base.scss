@@ -124,6 +124,10 @@ footer {;
 }
 
 code {
-  border: 1px solid var(--theme-main-color);
+  border: 1px solid #000;
   background-color: lightgreen;
+  border-radius: 5px;
+  padding: 4px 8px;
+  font-weight: bold;
+  white-space: nowrap;
 }
