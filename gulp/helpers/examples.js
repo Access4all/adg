@@ -93,10 +93,10 @@ const getExample = (title, href, filePath) => {
   const exampleLink = `<a href="/${path.join(
     path.relative('./pages', dir),
     'example.html'
-  )}"><span>Example: ${title}</span><span class="visuallyhidden"> (opens new window)</span><img src="/${path.join(
+  )}" target="_blank"><span>Example: ${title}</span><span class="visuallyhidden"> (opens new window)</span><img src="/${path.join(
     path.relative('./pages', dir),
     'example.png'
-  )}" alt="Example preview" target="_blank"" /></a>`
+  )}" alt="Example preview" /></a>`
 
   // Had to remove ${codePenForm} from middle of the following two, see https://github.com/Access4all/adg/issues/42
   return `
