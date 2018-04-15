@@ -98,9 +98,9 @@ const getExample = (title, href, filePath) => {
     'example.png'
   )}" alt="Example preview" target="_blank"" /></a>`
 
+  // Had to remove ${codePenForm} from middle of the following two, see https://github.com/Access4all/adg/issues/42
   return `
   ${exampleLink}
-  ${codePenForm}
   <div class="accordion">${blocks.join('')}</div>`
 }
 
