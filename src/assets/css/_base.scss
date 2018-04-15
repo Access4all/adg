@@ -130,8 +130,3 @@ code {
   padding: 4px 8px;
   font-weight: bold;
 }
-
-/* Bugfix for un-showing h1 (which is redundantly shown as h2 on top of each page) */
-main article h2::first-of-type; {
-  display: none;
-}
