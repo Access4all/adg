@@ -2,16 +2,16 @@
 layout: layout
 title: "The \"table of divs\" experiment"
 navigation_title: "\"Table of divs\" experiment"
-position: 8
+position: 10
 lead: "Instead of using traditional HTML table elements, it is also possible to convert a structure of non-table elements into a table using ARIA. This is an experiment, and we explicitly do not recommend using this on productive websites. So please, kids, don't try this at home!"
-changed: "2018-04-14"
+changed: "2018-04-16"
 ---
 
 # The "table of divs" experiment
 
 # A table of divs
 
-As we have seen, it is possible to re-apply semantics to an element that has somehow lost its inherent semantics. This is done using ARIA (if you haven't done this yet, go back and read [Accessible responsive tables using ARIA](/examples/tables/responsive-with-aria){.page}).
+As we have seen, it is possible to re-apply semantics to an element that has somehow lost its inherent semantics. This is done using ARIA (if you haven't done this yet, go back and read [Accessible responsive tables](/examples/tables/responsive){.page}).
 
 We can try to follow this approach "ad absurdum" by trying to add all needed semantics using ARIA alone.
 
