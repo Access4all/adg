@@ -1,13 +1,13 @@
 ---
 layout: layout
-title: "Tables with fixed or hidden headers"
+title: "Sticky table headers"
 navigation_title: "Sticky headers"
 position: 9
 lead: "In some situations, table headers need to be placed at a specific place on screen, and remain there, even when scrolling."
 changed: "2018-04-16"
 ---
 
-# Tables with fixed or hidden headers
+# Sticky table headers
 
 If tables are very long, it is useful to make the table header sticky on top so visual users always see it, even when scrolling vertically.
 

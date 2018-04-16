@@ -28,7 +28,7 @@ Most of all, special attention needs to be paid to the different values of the `
 - Some can change the way how screen readers split blocks of information.
     - If you are really curious and want to learn more about this, skip ahead and read [Block vs. Inline Elements](/examples/block-vs-inline-elements){.page}.
 - Some can change the role of an element.
-    - If you are really curious and want to learn more about this, skip ahead and read [Accessible responsive tables](/examples/tables/responsive){.page}.
+    - If you are really curious and want to learn more about this, skip ahead and read [Responsive tables](/examples/tables/responsive){.page}.
 - Fiddling around with the `content` attribute and pseudo elements sometimes may have unexpected side effects.
 
 So if you know its shortcomings, disabling CSS sometimes can be a useful "poor man's screen reader substitute". But it will never be a real replacement.

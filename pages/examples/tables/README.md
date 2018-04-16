@@ -17,8 +17,8 @@ This is followed by an explanation about how to [use multiple header cells](/exa
 
 We then show that [spanning multiple rows and columns](/examples/tables/spanning-rows-cols){.page title="Spanning multiple rows and columns"} is possible - but also a bit tricky to navigate in screen readers, so this should used carefully.
 
-One of the most important requests in recent website development are [responsive tables](/examples/tables/responsive){.page title="Accessible responsive tables"}, which we show how to implement (with the fundamental help of ARIA).
+One of the most important requests in recent website development are [responsive tables](/examples/tables/responsive){.page title="Responsive tables"}, which we show how to implement (with the fundamental help of ARIA).
 
-Another often seen requirement is [sticky and hidden headers](/examples/tables/sticky-headers){.page title="Tables with fixed or hidden headers"} in tables, which is especially useful for big tables that need a lot of space.
+Another often seen requirement is [sticky and hidden headers](/examples/tables/sticky-headers){.page title="Sticky table headers"} in tables, which is especially useful for big tables that need a lot of space.
 
 Finally, we do some crazy experiments with a [table made up of div elements only](/examples/tables/table-of-divs-experiment){.page title="The "table of divs" experiment"}, that are not meant to be used for productive websites.
