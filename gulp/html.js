@@ -63,7 +63,8 @@ const extendNavigationItem = (origItem, index, options) => {
     item.children.forEach(child => {
       options.subPages.push({
         title: child.title,
-        url: child.url
+        url: child.url,
+        type: 'article'
       })
     })
   } else if (options.currentUrl.includes(item.url)) {
@@ -146,7 +147,8 @@ module.exports = (config, cb) => {
           const parent = url.substring(0, url.lastIndexOf('/'))
 
           file.data = Object.assign({}, file.data, {
-            url
+            url,
+            isRoot: parent === url
           })
 
           files.push(file)
@@ -215,7 +217,13 @@ module.exports = (config, cb) => {
               navigation: pageNavigation,
               previousPage: prevNext.prev,
               nextPage: prevNext.next,
-              subPages,
+              subPages: file.data.isRoot
+                ? navigation.map(item => ({
+                  title: item.title,
+                  url: item.url,
+                  type: 'section'
+                }))
+                : subPages,
               metatags: metatags.generateTags(metatagsData),
               breadcrumb: breadcrumb.sort((a, b) => {
                 return a.url.length - b.url.length
