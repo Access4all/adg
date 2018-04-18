@@ -40,7 +40,10 @@ export default class Search extends BaseModule {
     initializeSs360()
 
     this.$el.find('.search--toggle').one('click', function () {
-      $(this).siblings('.search--input').addClass('search--input-expanded').focus()
-    });
+      $(this)
+        .siblings('.search--input')
+        .addClass('search--input-expanded')
+        .focus()
+    })
   }
 }
