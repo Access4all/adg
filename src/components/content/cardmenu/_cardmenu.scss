@@ -18,7 +18,7 @@
       width: calc(100% / 2 - 20px);
     }
 }
-.cardmenu--list--item--link {
+.cardmenu--card--link {
   @include cardmenu--card;
   width: 100%;
   height: 100%;
@@ -31,8 +31,7 @@
 }
 
 .cardmenu--card--icon {
-  display: block;
-  margin: 0 auto;
+  display: inline-block;
   width: auto;
   height: 35px;
   &:after {
@@ -45,23 +44,25 @@
   text-align: center;
 
   .cardmenu--card--icon {
+    display: block;
+    margin: 0 auto;
     height: 35px;
-    .cardmenu--list--item--link-welcome & {
+    .cardmenu--card--link-welcome & {
       &:after {
        @include sprite($shake);
       }
     }
-    .cardmenu--list--item--link-setup & {
+    .cardmenu--card--link-setup & {
       &:after {
       @include sprite($setup);
       }
     }
-    .cardmenu--list--item--link-knowledge & {
+    .cardmenu--card--link-knowledge & {
       &:after {
       @include sprite($bulb);
       }
     }
-    .cardmenu--list--item--link-examples & {
+    .cardmenu--card--link-examples & {
       &:after {
       @include sprite($book);
       }
@@ -71,6 +72,13 @@
 
 .cardmenu--card-article {
   @include font-xs;
+
+  .cardmenu--card--linklabel {
+    margin-top: 20px;
+    display: black;
+    text-align: right;
+    @include theme-color;
+  }
   .cardmenu--card--icon {
     height: 20px;
      &:after {

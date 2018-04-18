@@ -2,7 +2,7 @@
     <ul class="cardmenu--list">
       {{#each menuitem}}
         <li class="cardmenu--list--item" role="presentation">
-            <a class="cardmenu--list--item--link{{#if modifier}} cardmenu--list--item--link-{{modifier}}{{/if}}" href="/{{url}}">
+            <a class="cardmenu--card--link{{#if modifier}} cardmenu--card--link-{{modifier}}{{/if}}" href="/{{url}}">
               {{#if isSection}}
                 {{> "content/cardmenu/cardmenu-section-card" }}
               {{else}}
