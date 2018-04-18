@@ -2,6 +2,10 @@
 	@include richtext(all);
   h2 {
     @include theme-color;
+
+    &.first {
+      display: none;
+    }
   }
   code:not([class^="language-"]):not([class*=" language-"]) {
     @include theme(background-color, main);

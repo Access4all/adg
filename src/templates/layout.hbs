@@ -28,6 +28,11 @@
         {{> "global/breadcrumbs/breadcrumbs"}}
         {{> "content/main_title/main_title" title=title}}
         {{> "content/text_container/text_container" content=contents}}
+
+        {{#if subPages}}
+          {{> "content/cardmenu/cardmenu" menuitem=subPages}}
+        {{/if}}
+
         {{> "content/prev_next/prev_next" prev=previousPage next=nextPage}}
       </div>
     </main>
