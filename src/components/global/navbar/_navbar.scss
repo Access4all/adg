@@ -40,10 +40,6 @@ $navWidthMin: 80px;
     flex: 0 0 auto;
     align-self: auto;
   }
-  .navbar--search {
-    flex: 0 0 auto;
-    align-self: auto;
-  }
 
   .navbar--inner {
       flex: 1 1 auto;
@@ -68,9 +64,6 @@ $navWidthMin: 80px;
 
 
 
-
-
-.navbar--search,
 .navbar--inner {
   display: none;
 }
@@ -85,9 +78,6 @@ $navWidthMin: 80px;
       display: block;
     }
 
-  }
-  & ~ .navbar--toggle-search {
-    display: none;
   }
 }
 
@@ -110,16 +100,6 @@ $navWidthMin: 80px;
     bottom: auto;
     left: auto; right: 10px;
     top: 15px;
-  }
-  &.navbar--toggle-search {
-    @include searchbtn;
-    top: auto;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 20px;
-    @include mobile {
-      display: none;
-    }
   }
 }
 

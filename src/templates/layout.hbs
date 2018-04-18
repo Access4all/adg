@@ -23,6 +23,7 @@
         </div>
     </header>
     {{> "global/navbar/navbar"}}
+    {{> "global/search/search"}}
     <main id="main-content" class="site-content">
       <div class="l-site_width">
         {{> "global/breadcrumbs/breadcrumbs"}}
@@ -31,9 +32,6 @@
 
         {{#if previousPage}}<br><a href="/{{previousPage.url}}">👈 {{previousPage.title}}</a>{{/if}}
         {{#if nextPage}}<br><a href="/{{nextPage.url}}">{{nextPage.title}} 👉</a>{{/if}}
-        <p>
-          <input class="js-search" type="text" placeholder="Search the guide" />
-        </p>
       </div>
     </main>
   </div>

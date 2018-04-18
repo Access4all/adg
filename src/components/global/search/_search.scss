@@ -1,0 +1,25 @@
+.search {
+  position: absolute;
+  top: 35px;
+  right: 0;
+
+  .search--toggle {
+    @include searchbtn;
+    float: right;
+    transform: translateX(-50%);
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .search--input {
+    width: 263px;
+    height: 45px;
+    margin: 8px $gutter 0 0;
+    padding: 10px;
+    border: none;
+    border-radius: 34px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 34px 0 rgba(0, 0, 0, 0.2);
+  }
+}
