@@ -36,8 +36,11 @@ const extendNavigationItem = (origItem, index, options) => {
   const item = _.merge({}, origItem)
 
   if (item.url === options.currentUrl) {
-    const prev = options.items[index - 1]
-    const next = options.items[index + 1]
+    const flattenedIndex = options.flattened.findIndex(
+      flattenedItem => flattenedItem.url === item.url
+    )
+    const prev = options.flattened[flattenedIndex - 1]
+    const next = options.flattened[flattenedIndex + 1]
 
     item.isCurrent = true
 
@@ -74,6 +77,18 @@ const extendNavigationItem = (origItem, index, options) => {
 
   return item
 }
+
+// Create flat array of pages to be used for prev/next links
+const flattenNavigation = items =>
+  items.reduce((acc, item) => {
+    acc = acc.concat(item)
+
+    if (item.children) {
+      acc = acc.concat(flattenNavigation(item.children))
+    }
+
+    return acc
+  }, [])
 
 module.exports = (config, cb) => {
   const markdown = requireNew('./helpers/markdown')
@@ -173,7 +188,8 @@ module.exports = (config, cb) => {
               items: navigation,
               currentUrl,
               prevNext,
-              breadcrumb
+              breadcrumb,
+              flattened: flattenNavigation(navigation)
             })
             const metatagsData = {
               title: file.frontMatter.title,

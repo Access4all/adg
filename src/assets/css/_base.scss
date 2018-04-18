@@ -72,6 +72,39 @@ button {
 
 	// DEV, replace with real styles
 	&.codepen {
-		background: red;
+    font-weight: bold;
 	}
+}
+
+p img {
+  border: 1px solid;
+}
+
+p.example {
+  font-weight: bold;
+
+  span {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.accordion {
+  font-weight: bold;
+
+  .control {
+    label:hover {
+      cursor: pointer;
+    }
+
+    input {
+      width: 10px;
+      margin-left: -10px;
+      opacity: 0;
+    }
+
+    input:focus + label {
+      outline: auto;
+    }
+  }
 }
