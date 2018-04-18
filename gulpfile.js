@@ -3,8 +3,6 @@ const browserSync = require('browser-sync').create()
 const util = require('gulp-util')
 const del = require('del')
 const _ = require('lodash')
-const spritesmith = require('gulp.spritesmith')
-const merge = require('merge-stream')
 
 const html = require('./gulp/html')
 const css = require('./gulp/css')
@@ -19,19 +17,6 @@ function errorHandler (err) {
   )
 }
 
-gulp.task('sprite-retina', function () {
-  var data = gulp.src('./src/assets/img/icons/**/*.png').pipe(
-    spritesmith({
-      retinaSrcFilter: './src/assets/img/icons/2x/*.png',
-      imgName: 'sprite-1x.png',
-      retinaImgName: 'sprite-2x.png',
-      cssName: 'icon-sprite.scss'
-    })
-  )
-  var imgStream = data.img.pipe(gulp.dest('./dist/img/icons'))
-  var cssStream = data.css.pipe(gulp.dest('./temp'))
-  return merge(imgStream, cssStream)
-})
 gulp.task('html', cb =>
   html(
     {
@@ -157,6 +142,29 @@ gulp.task('media:resize', () => {
     .pipe(gulp.dest('./dist'))
 })
 
+gulp.task('sprite', () => {
+  const spritesmith = require('gulp.spritesmith')
+  const merge = require('merge-stream')
+
+  const data = gulp.src('./src/assets/img/icons/**/*.png').pipe(
+    spritesmith({
+      retinaSrcFilter: './src/assets/img/icons/2x/*.png',
+      imgName: 'sprite-1x.png',
+      retinaImgName: 'sprite-2x.png',
+      cssName: 'icon-sprite.scss',
+      cssVarMap: function (sprite) {
+        if (sprite.image.includes('-2x')) {
+          sprite.name = `${sprite.name}-2x`
+        }
+      }
+    })
+  )
+  const imgStream = data.img.pipe(gulp.dest('./dist/img/icons'))
+  const cssStream = data.css.pipe(gulp.dest('./tmp'))
+
+  return merge(imgStream, cssStream)
+})
+
 gulp.task('media', gulp.parallel('media:copy', 'media:resize'))
 
 gulp.task('clean', () => del('./dist'))
@@ -165,7 +173,7 @@ gulp.task(
   'build',
   gulp.series(
     'clean',
-    'sprite-retina',
+    'sprite',
     gulp.parallel('css', 'js', 'media', 'html', 'html:examples')
   )
 )
