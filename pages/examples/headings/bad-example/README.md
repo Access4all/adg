@@ -4,13 +4,14 @@ title: "General bad headings example"
 navigation_title: "Bad example"
 position: 3
 lead: "To be meaningful, heading outlines must be coherent on both a technical and textual level. While headings often are omitted completely by naive web developers, existing heading outlines can suffer of various accessibility problems on both a syntactical and a semantical level."
+changed: "2018-04-03"
 ---
 
 # General bad headings example
 
 This heading outline in the following example has three problems.
 
-@example[Generally bad headings](generally-bad-headings){.code}
+@example[Generally bad headings](generally-bad-headings){.example}
 
 On the visual level, the problems are hard to spot. So let's take a closer look at the document outline.
 

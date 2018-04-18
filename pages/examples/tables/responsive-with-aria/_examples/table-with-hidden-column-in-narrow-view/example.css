@@ -1,0 +1,21 @@
+table {
+  border-collapse: collapse;
+}
+
+thead th {
+  background-color: lightpink;
+}
+
+tbody th {
+  background-color: lightgreen;
+}
+
+th, td {
+  border: 1px solid;
+}
+
+@media only screen and (max-width: 600px) {
+  .hidden-narrow {
+    display: none;
+  }
+}

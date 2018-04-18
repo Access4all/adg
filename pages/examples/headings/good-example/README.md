@@ -4,6 +4,7 @@ title: "General good headings example"
 navigation_title: "Good example"
 position: 2
 lead: "Structuring content with headings is always a good thing: no published book containing structured text could ever live without it. Headings allow to skim through the book, and the table of contents (TOC) of a book is based on them. On websites, headings work the exact same way as they do on print documents."
+changed: "2018-04-03"
 ---
 
 # General good headings example
@@ -12,7 +13,7 @@ Headings are marked up in HTML using `<h1>` to `<h6>`. You knew that, didn't you
 
 The following example contains a very basic headings outline. It may look familiar to you from "normal" print documents (like PDF) and books.
 
-@code(/examples/headings/good-example/_examples/generally-good-headings/){.code}
+@example[Generally good headings](generally-good-headings){.example}
 
 On a visual level, the headings' prominent visual attributes (e.g. font size, weight, sometimes colours, etc.) allow visual users to know when a new chapter or sub chapter starts or ends, or to skim through the pages of a book looking for a specific chapter.
 

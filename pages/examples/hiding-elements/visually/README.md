@@ -4,6 +4,7 @@ title: "Hiding elements visually by moving them off-screen"
 navigation_title: "Visually"
 position: 1
 lead: "To hide an element visually means: visually (on a computer screen) it isn't perceivable anymore, but non-visual clients (for example screen readers) still perceive it. There is no official technique for doing this, but there's a well proven workaround."
+changed: "2018-03-24"
 ---
 
 # Hiding elements visually by moving them off-screen
@@ -23,7 +24,7 @@ It may be surprising, but the only way to hide an element visually while retaini
 
 There are several implementations of this workaround. The one presented here is from [CSS in Action (WebAIM.org)](https://webaim.org/techniques/css/invisiblecontent/).
 
-@code(/examples/hiding-elements/visually/_examples/hiding-an-element-visually/){.code}
+@example[Hiding an element visually](hiding-an-element-visually){.example}
 
 For example, this technique is useful to visually hide headings, as described here: [Adding visually hidden headings to complete a page's outline](/examples/headings/visually-hidden-headings){.page}.
 
@@ -33,7 +34,7 @@ If you are hiding focusable elements using the technique above, make sure that t
 
 In the following example, press the `Tab` key to focus and show the (previously invisible) "Jump to content" link.
 
-@code(/examples/hiding-elements/visually/_examples/toggling-visibility-of-a-hidden-element-on-focus/){.code}
+@example[Toggling visibility of a hidden element on focus](toggling-visibility-of-a-hidden-element-on-focus){.example}
 
 # Side effects for visual users
 
