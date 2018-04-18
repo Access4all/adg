@@ -60,7 +60,7 @@ const extendNavigationItem = (origItem, index, options) => {
 
     options.breadcrumb.push(item)
 
-    item.children.forEach((child) => {
+    item.children.forEach(child => {
       options.subPages.push({
         title: child.title,
         url: child.url
