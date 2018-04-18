@@ -33,7 +33,7 @@ export default class Search extends BaseModule {
       siteId: 'accessibility-developer-guide.netlify.com',
       searchBoxSelector: '.' + this.$el.find('input').attr('class'),
       enterCallback: function () {
-        return false;
+        return false
       }
     }
 
