@@ -31,7 +31,10 @@ export default class Search extends BaseModule {
   enable () {
     window.ss360Config = {
       siteId: 'accessibility-developer-guide.netlify.com',
-      searchBoxSelector: '.' + this.$el.find('input').attr('class')
+      searchBoxSelector: '.' + this.$el.find('input').attr('class'),
+      enterCallback: function () {
+        return false;
+      }
     }
 
     initializeSs360()
