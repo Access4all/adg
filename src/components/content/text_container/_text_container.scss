@@ -1,14 +1,18 @@
 .text_container {
-	@include richtext;
-	h1 {
-		@include h2;
-		margin-bottom: 1.5 * $gutter;
-		color: $c-green;
-	}
-	h2 {
-		@include h3;
-	}
-	h3 {
-		@include h4;
-	}
+	@include richtext(all);
+  h2 {
+    @include theme-color;
+  }
+  code:not([class^="language-"]):not([class*=" language-"]) {
+    @include theme(background-color, main);
+    @include theme(color, bg);
+    padding: .1em .25em;
+    border-radius: 3px;
+  }
+
+  code[class^="language-"],
+  code[class*=" language-"] {
+    border: 1px solid black;
+    @include theme(border-color, main);
+  }
 }

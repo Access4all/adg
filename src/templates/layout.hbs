@@ -1,7 +1,7 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <title>{{title}} - ADG</title>
+  <title>{{title}}</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="/css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -15,35 +15,22 @@
   {{/each}}
   <link rel="alternate" type="application/rss+xml" href="/feed/rss.xml">
 </head>
-<body class="js-theme theme theme-1">
+<body class="js-theme theme theme-{{#if breadcrumb }}{{ breadcrumb.length }}{{else}}0{{/if}}">
   <div id="body">
     <header class="header" id="header">
-      <h1 class="visuallyhidden">Header</h1>
-      <div class="navbar--logo">
-        {{> "global/logo/logo"}}
-      </div>
-
-      <!-- This should be in the <nav> container! -->
-      <div class="l-site_width">
-        {{> "global/breadcrumbs/breadcrumbs"}}
-      </div>
+        <div class="l-site_width">
+          <h1 class="visuallyhidden">Accessibility Developer Guide</h1>
+        </div>
     </header>
     {{> "global/navbar/navbar"}}
     <main id="main-content" class="site-content">
       <div class="l-site_width">
+        {{> "global/breadcrumbs/breadcrumbs"}}
         {{> "content/main_title/main_title" title=title}}
         {{> "content/text_container/text_container" content=contents}}
-
-        <!-- The previous/next links aren't fully functional yet, see https://github.com/Access4all/adg/issues/30#issuecomment-379798282 -->
-        <!-- {{#if previousPage}}<br><a href="/{{previousPage.url}}"><span aria-hidden="true">👈 </span>{{previousPage.title}}</a>{{/if}} -->
-        <!-- {{#if nextPage}}<br><a href="/{{nextPage.url}}">{{nextPage.title}}<span aria-hidden="true"> 👉</span></a>{{/if}} -->
+        {{> "content/prev_next/prev_next" prev=previousPage next=nextPage}}
       </div>
     </main>
-
-    <footer>
-      <h1 class="visuallyhidden">Footer</h1>
-      Accessibility Developer Guide (ADG) - &copy; 2018 by the «Accessibility Alliance» - <a href="https://github.com/Access4all/adg/">Fork on GitHub!</a>
-    </footer>
   </div>
 
   <script src="/js/scripts.js"></script>

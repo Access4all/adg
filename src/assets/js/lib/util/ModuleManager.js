@@ -38,7 +38,7 @@ function initialiseModule (Module, element) {
   }
 
   // } catch (error) {
-  // 	console.error(error.message, error);
+  //  console.error(error.message, error);
   // }
 
   measureStop(

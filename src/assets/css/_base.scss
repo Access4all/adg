@@ -80,17 +80,7 @@ p img {
   border: 1px solid;
 }
 
-.visually-hidden {
-  position: absolute;
-  left:     -10000px;
-  top:      auto;
-  width:    1px;
-  height:   1px;
-  overflow: hidden;
-}
-
 p.example {
-  margin-bottom: 0 !important; /* This is ugly... */
   font-weight: bold;
 
   span {
@@ -117,21 +107,4 @@ p.example {
       outline: auto;
     }
   }
-}
-
-footer {;
-  text-align: center;
-}
-
-code {
-  border: 1px solid #000;
-  background-color: lightgreen;
-  border-radius: 5px;
-  padding: 4px 8px;
-  font-weight: bold;
-}
-
-/* Bugfix for https://github.com/Access4all/adg/issues/41 */
-article > h2:first-child {
-  display:none
 }
