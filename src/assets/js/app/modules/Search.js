@@ -33,6 +33,9 @@ export default class Search extends BaseModule {
       siteId: 'accessibility-developer-guide.netlify.com',
       searchBoxSelector: '.' + this.$el.find('input').attr('class'),
       showImagesSuggestions: false,
+      specialMobileSuggest: {
+        enabled: false
+      },
       enterCallback: function () {
         return false
       }
