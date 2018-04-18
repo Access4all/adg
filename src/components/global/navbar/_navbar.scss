@@ -1,46 +1,122 @@
+$navWidthMin: 50px;
+
 .navbar {
-	position: fixed;
-	left: 0; top: 0;
+  @include above-mobile {
+  	position: fixed;
+  	left: 0; top: 0;
+  }
 	background-color: $c-white;
 	z-index: 1;
 	height: 100vh;
 	display: inline-block;
-	padding-right: 40px;
-  max-width: 100vw;
+  min-width: $navWidthMin;
+  font-size: 0;
+
+  @include mobile {
+    width: 100%;
+    left: auto;
+    height: auto;
+  }
+
 }
 
-.navbar--toggle {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	width: 40px;
-	padding: 0 5px;
+
+.navbar--container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .navbar--logo {
+    flex: 0 0 auto;
+    align-self: auto;
+  }
+  .navbar--search {
+    flex: 0 0 auto;
+    align-self: auto;
+  }
+
+  .navbar--inner {
+      flex: 1 1 auto;
+      align-self: auto;
+  }
 }
 
 .navbar--container {
-  display: none;
-  height: 100%;
-  overflow: auto;
-  width: 100%;
-  @include min-width(500px) {
-    width: 200vw;
-    padding-right: calc(200vw - 400px);
-    margin-right: calc(-200vw + 400px);
+  @include font-xs;
+
+  @include mobile {
+    height: auto;
   }
-  pointer-events: none;
 }
 
 .navbar--inner {
-  pointer-events: auto;
+  display: none;
+  overflow: auto;
+  width: 400px;
+  max-width: 100vw;
 }
 
-.navbar.is-opened {
-	.navbar--container {
-		display: block;
-	}
+.navbar--logo {
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-bottom: 30px;
+  @include above-mobile {
+    z-index: 1;
+  }
 }
 
+
+
+
+.navbar--search,
+.navbar--inner {
+  display: none;
+}
+
+.navbar--toggle--input:checked  {
+  & ~ .navbar--container {
+    @include mobile {
+      width: 100%;
+    }
+    .navbar--inner,
+    .navbar--search {
+      display: block;
+    }
+
+  }
+}
+
+
+
+
+
+.navbar--toggle {
+  cursor: pointer;
+  padding: 0 ($navWidthMin - 40px) / 2;
+  background-color: $c-white;
+  position: absolute;
+  right: 0;
+  top: 0; bottom: 0;
+  width: 40px;
+
+  @include mobile {
+    height: 40px;
+    bottom: auto;
+    left: auto; right: 10px;
+    top: 15px;
+  }
+}
+
+.navbar--toggle--inner {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.navbar--toggle--input {
+  @include visuallyhidden;
+}
 .navbar--toggle--line {
   display: block;
   width: 30px;
@@ -55,25 +131,25 @@
 
   transform-origin: 50% 50%;
 
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+  transition: transform 0.4s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.4s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.45s ease;
 
-
-	.navbar.is-opened & {
+	.navbar--toggle--input:checked ~ .navbar--toggle & {
 	  opacity: 1;
 	  transform: translateY(10px) rotate(45deg) ;
 
-	  &:nth-last-child(3) {
+	  &:nth-last-child(2) {
 		  opacity: 0;
 		  transform: rotate(0deg) scale(0.2, 0.2);
 		}
 
-		&:nth-last-child(2) {
+		&:nth-last-child(1) {
 		  transform: translateY(-10px) rotate(-45deg) ;
 		}
 	}
 }
+
 
 
 

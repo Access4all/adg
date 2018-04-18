@@ -25,6 +25,11 @@ gulp.task('html', cb =>
       base: './pages',
       host: 'https://accessibility-developer-guide.netlify.com',
       sitemap: './dist/sitemap.xml',
+      feed: {
+        json: './dist/feed/feed.json',
+        atom: './dist/feed/atom.xml',
+        rss: './dist/feed/rss.xml'
+      },
       errorHandler
     },
     () => {
@@ -86,13 +91,64 @@ gulp.task('js', cb => {
     .pipe(gulp.dest('./dist/js/'))
 })
 
-gulp.task('media', () => {
+gulp.task(
+  'media:copy',
+  gulp.parallel(
+    function content () {
+      return gulp
+        .src(['./pages/{,**/}_media/**/*', './pages/**/example.png'], {
+          base: './pages'
+        })
+        .pipe(gulp.dest('./dist'))
+    },
+    function assets () {
+      return gulp
+        .src(['./src/assets/img/**/*'], {
+          base: './src/assets'
+        })
+        .pipe(gulp.dest('./dist'))
+    }
+  )
+)
+
+gulp.task('media:resize', () => {
+  const resize = require('gulp-jimp-resize')
+  const through = require('through2')
+  const path = require('path')
+
   return gulp
-    .src('./pages/{,**/}_media/**/*', {
+    .src(['./pages/{,**/}_media/**/*', './pages/**/example.png'], {
       base: './pages'
     })
+    .pipe(
+      resize({
+        // TODO: Configure sizes
+        sizes: [
+          {
+            suffix: 'medium',
+            width: 1000,
+            upscale: false
+          },
+          {
+            suffix: 'small',
+            width: 500,
+            upscale: false
+          }
+        ]
+      })
+    )
+    .pipe(
+      // `base` option seems to be ignored by plugin
+      through.obj((file, enc, cb) => {
+        file.path = path.relative('./pages', file.path)
+
+        cb(null, file)
+      })
+    )
     .pipe(gulp.dest('./dist'))
 })
+
+gulp.task('media', gulp.parallel('media:copy', 'media:resize'))
 
 gulp.task('clean', () => del('./dist'))
 

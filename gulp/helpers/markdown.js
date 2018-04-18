@@ -1,24 +1,64 @@
 const markdownIt = require('markdown-it')
-const iterator = require('markdown-it-for-inline')
-const markdownPlugin = require('markdown-it-regexp')
 const requireNew = require('require-new')
 
+const plugins = {
+  iterator: require('markdown-it-for-inline'),
+  regexp: require('markdown-it-regexp'),
+  abbr: require('markdown-it-abbr'),
+  attrs: require('markdown-it-attrs'),
+  deflist: require('markdown-it-deflist'),
+  kbd: require('markdown-it-kbd'),
+  samp: require('markdown-it-samp'),
+  responsive: require('@gerhobbelt/markdown-it-responsive')
+}
+
 module.exports = filePath => {
-  const markdown = markdownIt()
+  const markdown = markdownIt({
+    html: true,
+    linkify: true,
+    typography: true
+  })
   const examples = requireNew('./examples')
 
   return markdown
     .use(
-      markdownPlugin(/@example\[(.*?)\]\((.*?)\)/, (match, utils) => {
+      plugins.regexp(/@example\[(.*?)\]\((.*?)\)/, (match, utils) => {
         return examples.getExample(match[1], match[2], filePath)
       })
     )
-    .use(require('markdown-it-abbr'))
-    .use(require('markdown-it-attrs'))
-    .use(require('markdown-it-deflist'))
-    .use(require('markdown-it-kbd'))
-    .use(require('markdown-it-samp'))
-    .use(iterator, 'add_link_title', 'link_open', function (tokens, idx) {
+    .use(plugins.abbr)
+    .use(plugins.attrs)
+    .use(plugins.deflist)
+    .use(plugins.kbd)
+    .use(plugins.samp)
+    .use(plugins.responsive, {
+      // TODO: Specify proper sizes
+      responsive: {
+        srcset: {
+          '*': [
+            {
+              width: 320,
+              rename: {
+                suffix: '-small'
+              }
+            },
+            {
+              width: 640,
+              rename: {
+                suffix: '-medium'
+              }
+            }
+          ]
+        },
+        sizes: {
+          '*': '(min-width: 36em) 33.3vw, 100vw'
+        }
+      }
+    })
+    .use(plugins.iterator, 'add_link_title', 'link_open', function (
+      tokens,
+      idx
+    ) {
       const title = tokens[idx].attrGet('title')
 
       if (title) {
