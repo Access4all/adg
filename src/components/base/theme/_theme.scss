@@ -1,0 +1,37 @@
+
+.theme {
+  @include theme-background-color;
+}
+
+.theme-0 {
+  --theme-bg-color: $c-yellow-light;
+  --theme-main-color: $c-black;
+  &.is-below {
+    --theme-bg-color: $c-white;
+    --theme-main-color: $c-yellow;
+  }
+}
+.theme-1 {
+	--theme-bg-color: $c-green-light;
+	--theme-main-color: $c-black;
+  &.is-below {
+    --theme-bg-color: $c-white;
+    --theme-main-color: $c-green;
+  }
+}
+.theme-2 {
+  --theme-bg-color: $c-red-light;
+  --theme-main-color: $c-black;
+  &.is-below {
+    --theme-bg-color: $c-white;
+    --theme-main-color: $c-red;
+  }
+}
+.theme-3 {
+  --theme-bg-color: $c-blue-light;
+  --theme-main-color: $c-black;
+  &.is-below {
+    --theme-bg-color: $c-white;
+  --theme-main-color: $c-blue;
+  }
+}

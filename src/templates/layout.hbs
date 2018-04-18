@@ -15,7 +15,7 @@
   {{/each}}
   <link rel="alternate" type="application/rss+xml" href="/feed/rss.xml">
 </head>
-<body class="js-theme theme theme-1">
+<body class="js-theme theme theme-{{#if breadcrumb }}{{ breadcrumb.length }}{{else}}0{{/if}}">
   <div id="body">
     <header class="header" id="header">
         <div class="l-site_width">

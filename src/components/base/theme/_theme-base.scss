@@ -1,0 +1,18 @@
+@mixin theme($property, $color: main) {
+  @if ($color == main) {
+    $color: var(--theme-main-color)
+  }
+  @if ($color == bg) {
+    $color: var(--theme-bg-color)
+  }
+  transition: #{$property} .6s ease;
+  #{$property}: $color;
+}
+
+@mixin theme-background-color {
+  @include theme(background-color, var(--theme-bg-color));
+}
+
+@mixin theme-color {
+  @include theme(color, var(--theme-main-color));
+}
