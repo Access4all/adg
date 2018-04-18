@@ -1,0 +1,19 @@
+.prev_next {
+  @include rem(margin-top, 4 * $gutter);
+
+  &__link {
+    display: block;
+    @include rem(margin-left, - $gutter);
+    @include rem(padding, 18px 15px);
+    @include rem(border-radius, 10px);
+    box-shadow: 0 10px 34px 0 rgba(0, 0, 0, 0.2);
+
+    &--next {
+      @include rem(padding, 18px 15px);
+      @include rem(margin-top, $gutter);
+      margin-left: 0;
+      @include rem(margin-right, - $gutter);
+      text-align: right;
+    }
+  }
+}
