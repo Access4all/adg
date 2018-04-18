@@ -6,7 +6,7 @@
 }
 
 @mixin font-xxl {
-	@include font-size(110px);
+	@include font-size(86px);
 	line-height: 1.1;
 }
 
@@ -48,6 +48,7 @@
 
 @mixin h3 {
 	@include font-m;
+  @include font-weight(bold);
 	font-family: $base-font;
 }
 
