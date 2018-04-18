@@ -1,4 +1,5 @@
 $navWidthMin: 80px;
+$navWidthMax: 300px;
 
 .navbar {
   @include above-mobile {
@@ -62,7 +63,7 @@ $navWidthMin: 80px;
 .navbar--inner {
   display: none;
   overflow: auto;
-  width: 300px;
+  width: $navWidthMax;
   max-width: 100vw;
 }
 
@@ -75,22 +76,25 @@ $navWidthMin: 80px;
   display: none;
 }
 
-.navbar--toggle--input:checked  {
-  & ~ .navbar--container {
-    @include mobile {
-      width: 100%;
-    }
-    .navbar--inner,
-    .navbar--search {
-      display: block;
-    }
-
+.navbar--toggle--input:checked ~ .navbar {
+  @include mobile {
+    width: 100%;
   }
-  & ~ .navbar--toggle-search {
+  .navbar--inner,
+  .navbar--search {
+    display: block;
+  }
+  .navbar--toggle-search {
     display: none;
   }
 }
 
+.navbar--toggle--input ~ .site-content {
+  margin-left: $navWidthMin;
+}
+.navbar--toggle--input:checked ~ .site-content {
+  margin-left: $navWidthMax;
+}
 
 
 
@@ -109,7 +113,7 @@ $navWidthMin: 80px;
     height: 40px;
     bottom: auto;
     left: auto; right: 10px;
-    top: 15px;
+    top: 30px;
   }
   &.navbar--toggle-search {
     @include searchbtn;
@@ -152,7 +156,7 @@ $navWidthMin: 80px;
               background 0.4s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.45s ease;
 
-	.navbar--toggle--input:checked ~ .navbar--toggle & {
+	.navbar--toggle--input:checked ~ .navbar .navbar--toggle & {
 	  opacity: 1;
 	  transform: translateY(10px) rotate(45deg) ;
 
