@@ -10,7 +10,7 @@ lead: "To be meaningful, heading outlines must be coherent on both a technical a
 
 This heading outline in the following example has three problems.
 
-@example[Generally bad headings](generally-bad-headings){.code}
+@example[Generally bad headings](generally-bad-headings){.example}
 
 On the visual level, the problems are hard to spot. So let's take a closer look at the document outline.
 
