@@ -36,8 +36,41 @@ export default class Search extends BaseModule {
       specialMobileSuggest: {
         enabled: false
       },
+
+      // we assign this property here so we can use it in the "suggestChangeCallback" callback
+      searchBox: this.$el,
+
       enterCallback: function () {
         return false
+      },
+      suggestChangeCallback: function () {
+        var searchBox = window.ss360Config.searchBox,
+          suggests = searchBox.find('#unibox-suggest-box section'),
+          radiosList = $('<ul/>')
+
+        suggests.find('a').each(function (index, item) {
+          var id = 'search-suggests-' + index,
+            radio,
+            label,
+            item
+
+          radio = $('<input type="radio" name="search-suggests"/>')
+            .attr('value', $(this).attr('href'))
+            .attr('id', id)
+            .on('change', function () {
+              window.location.assign(this.value)
+            })
+
+          label = $('<label/>')
+            .attr('for', id)
+            .html($(this).html())
+
+          item = $('<li/>').append(radio, label)
+
+          radiosList.append(item)
+        })
+
+        suggests.replaceWith(radiosList)
       }
     }
 
