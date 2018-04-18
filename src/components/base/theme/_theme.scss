@@ -4,6 +4,9 @@
 }
 
 .theme-0 {
+  --theme-color-dark: $c-yellow;
+  --theme-color-light: $c-yellow-light;
+
   --theme-bg-color: $c-yellow-light;
   --theme-main-color: $c-black;
   &.is-below {
@@ -12,6 +15,9 @@
   }
 }
 .theme-1 {
+  --theme-color-dark: $c-green;
+  --theme-color-light: $c-green-light;
+
 	--theme-bg-color: $c-green-light;
 	--theme-main-color: $c-black;
   &.is-below {
@@ -20,6 +26,9 @@
   }
 }
 .theme-2 {
+  --theme-color-dark: $c-red;
+  --theme-color-light: $c-red-light;
+  
   --theme-bg-color: $c-red-light;
   --theme-main-color: $c-black;
   &.is-below {
@@ -28,6 +37,9 @@
   }
 }
 .theme-3 {
+  --theme-color-dark: $c-blue;
+  --theme-color-light: $c-blue-light;
+  
   --theme-bg-color: $c-blue-light;
   --theme-main-color: $c-black;
   &.is-below {

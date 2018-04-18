@@ -64,7 +64,7 @@ const extendNavigationItem = (origItem, index, options) => {
       options.subPages.push({
         title: child.titleDetailed,
         url: child.url,
-        type: 'article'
+        isSection: false
       })
     })
   } else if (options.currentUrl.includes(item.url)) {
@@ -222,7 +222,7 @@ module.exports = (config, cb) => {
                 ? navigation.map(item => ({
                   title: item.title,
                   url: item.url,
-                  type: 'section',
+                  isSection: true,
                   modifier: item.url
                 }))
                 : subPages,

@@ -1,9 +1,80 @@
 .cardmenu {
 
 }
+
+.cardmenu--list--item {
+  display: inline-block;
+}
 .cardmenu--list {
-  display: block;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
 }
 .cardmenu--list--item {
+    display: inline-block;
+    margin: 10px;
+    width: calc(100% / 4 - 20px);
+    @include mobile {
+      width: calc(100% / 2 - 20px);
+    }
+}
+.cardmenu--list--item--link {
+  @include cardmenu--card;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--theme-color-dark);
+  &:hover,
+  &:focus {
+    @include theme(background-color, main);
+    @include theme(color, bg);
+  }
+}
+
+.cardmenu--card--icon {
   display: block;
+  margin: 0 auto;
+  width: auto;
+  height: 35px;
+  &:after {
+    content: "";
+    display: inline-block;
+  }
+}
+
+.cardmenu--card-section {
+  text-align: center;
+
+  .cardmenu--card--icon {
+    height: 35px;
+    .cardmenu--list--item--link-welcome & {
+      &:after {
+       @include sprite($shake);
+      }
+    }
+    .cardmenu--list--item--link-setup & {
+      &:after {
+      @include sprite($setup);
+      }
+    }
+    .cardmenu--list--item--link-knowledge & {
+      &:after {
+      @include sprite($bulb);
+      }
+    }
+    .cardmenu--list--item--link-examples & {
+      &:after {
+      @include sprite($book);
+      }
+    }
+  }
+}
+
+.cardmenu--card-article {
+  @include font-xs;
+  .cardmenu--card--icon {
+    height: 20px;
+     &:after {
+      @include sprite($books);
+    }
+  }
 }
