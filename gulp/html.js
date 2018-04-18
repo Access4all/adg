@@ -46,14 +46,14 @@ const extendNavigationItem = (origItem, index, options) => {
 
     if (prev) {
       options.prevNext.prev = {
-        title: prev.title,
+        title: prev.titleDetailed,
         url: prev.url
       }
     }
 
     if (next) {
       options.prevNext.next = {
-        title: next.title,
+        title: next.titleDetailed,
         url: next.url
       }
     }
@@ -62,7 +62,7 @@ const extendNavigationItem = (origItem, index, options) => {
 
     item.children.forEach(child => {
       options.subPages.push({
-        title: child.title,
+        title: child.titleDetailed,
         url: child.url,
         type: 'article'
       })
@@ -157,6 +157,7 @@ module.exports = (config, cb) => {
             url,
             parent: parent !== url ? parent : null,
             title: file.frontMatter.navigation_title,
+            titleDetailed: file.frontMatter.title,
             position: file.frontMatter.position
           })
 
@@ -221,7 +222,8 @@ module.exports = (config, cb) => {
                 ? navigation.map(item => ({
                   title: item.title,
                   url: item.url,
-                  type: 'section'
+                  type: 'section',
+                  modifier: item.url
                 }))
                 : subPages,
               metatags: metatags.generateTags(metatagsData),
