@@ -19,15 +19,12 @@
     }
 }
 .cardmenu--card--link {
-  @include cardmenu--card;
+  @include card;
+  box-shadow: 0 22px 30px -27px rgba(0, 0, 0, 0.3);
   width: 100%;
   height: 100%;
-  border: 1px solid var(--theme-color-dark);
-  &:hover,
-  &:focus {
-    @include theme(background-color, main);
-    @include theme(color, bg);
-  }
+  
+
 }
 
 .cardmenu--card--icon {
@@ -75,11 +72,13 @@
 
   .cardmenu--card--linklabel {
     margin-top: 20px;
+    vertical-align: middle;
     display: black;
     text-align: right;
-    @include theme-color;
+    color: var(--theme-color-dark);
   }
   .cardmenu--card--icon {
+    vertical-align: middle;
     height: 20px;
      &:after {
       @include sprite($books);

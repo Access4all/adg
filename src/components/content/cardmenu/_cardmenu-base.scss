@@ -1,8 +1,13 @@
 
-@mixin cardmenu--card {
+@mixin card {
   display: block;
   background: $c-white;
-  border-radius: 10px;
-  box-shadow: 0 22px 30px -27px rgba(0, 0, 0, 0.3);
-  padding: 20px;
+  @include rem(border-radius, 10px);
+  @include rem(padding, 18px 15px);
+  border: 2px solid $c-white;
+
+  &:hover,
+  &:focus {
+    border-color: var(--theme-color-dark);
+  }
 }

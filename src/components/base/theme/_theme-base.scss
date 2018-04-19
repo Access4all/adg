@@ -17,6 +17,17 @@
   @include theme(color, var(--theme-main-color));
 }
 
+@mixin theme-isDark {
+  .theme:not(.is-below) & {
+    @content;
+  }
+}
+@mixin theme-isLight {
+  .theme.is-below & {
+    @content;
+  }
+}
+
 
 $theme-0-dark: $c-yellow;
 $theme-0-light: $c-yellow-light;
