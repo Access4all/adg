@@ -56,9 +56,14 @@ gulp.task('html:examples', cb =>
 
 gulp.task('css', cb => {
   css({
-    src: './src/assets/**/*.scss',
+    src: ['./src/assets/**/*.scss'],
     srcBase: './src/assets',
-    includePaths: ['node_modules', './src/assets/css/', './src/components/'],
+    includePaths: [
+      'node_modules',
+      './src/assets/css/',
+      './src/components/',
+      './tmp/'
+    ],
     dist: './dist',
     errorHandler
   })
@@ -146,20 +151,22 @@ gulp.task('sprite', () => {
   const spritesmith = require('gulp.spritesmith')
   const merge = require('merge-stream')
 
-  const data = gulp.src('./src/assets/img/icons/**/*.png').pipe(
-    spritesmith({
-      retinaSrcFilter: './src/assets/img/icons/2x/*.png',
-      imgName: 'sprite-1x.png',
-      retinaImgName: 'sprite-2x.png',
-      cssName: 'icon-sprite.scss',
-      cssVarMap: function (sprite) {
-        if (sprite.image.includes('-2x')) {
-          sprite.name = `${sprite.name}-2x`
+  const data = gulp
+    .src(['./src/assets/img/icons/**/*.png', '!./src/assets/img/icons/*.png'])
+    .pipe(
+      spritesmith({
+        retinaSrcFilter: './src/assets/img/icons/2x/*.png',
+        imgName: '../../img/icons/sprite-1x.png',
+        retinaImgName: '../../img/icons/sprite-2x.png',
+        cssName: 'icon-sprite.scss',
+        cssVarMap: function (sprite) {
+          if (sprite.image.includes('-2x')) {
+            sprite.name = `${sprite.name}-2x`
+          }
         }
-      }
-    })
-  )
-  const imgStream = data.img.pipe(gulp.dest('./dist/img/icons'))
+      })
+    )
+  const imgStream = data.img.pipe(gulp.dest('./src/assets/img/icons'))
   const cssStream = data.css.pipe(gulp.dest('./tmp'))
 
   return merge(imgStream, cssStream)
