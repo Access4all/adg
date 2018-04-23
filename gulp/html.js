@@ -28,6 +28,8 @@ const getLayout = (layoutName, layouts) => {
   return layout
 }
 
+const getParentUrl = url => url.substring(0, url.lastIndexOf('/'))
+
 const getPageNavigation = options =>
   options.items.map((item, index) => extendNavigationItem(item, index, options))
 
@@ -71,6 +73,20 @@ const extendNavigationItem = (origItem, index, options) => {
     item.isActive = true
 
     options.breadcrumb.push(item)
+  } else {
+    const isInactive =
+      // Not current item
+      item.parent !== options.currentUrl &&
+      // Not a parent of the current item
+      item.parent !== getParentUrl(options.currentUrl) &&
+      // Not a grand parent of the current item
+      item.parent !== getParentUrl(getParentUrl(options.currentUrl)) &&
+      // Not a first level item
+      item.parent
+
+    if (isInactive) {
+      item.isInactive = true;
+    }
   }
 
   if (item.children) {
@@ -144,7 +160,7 @@ module.exports = (config, cb) => {
       through.obj(
         (file, enc, cb) => {
           const url = getUrl(file.path, config.base)
-          const parent = url.substring(0, url.lastIndexOf('/'))
+          const parent = getParentUrl(url)
 
           file.data = Object.assign({}, file.data, {
             url,
