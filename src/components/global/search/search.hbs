@@ -1,5 +1,10 @@
-<div class="search">
+<div class="search js-search" role="search">
 	<h2 class="visuallyhidden">Search</h2>
-	<input class="search--input" type="text">
-	<button class="search-btn">Search</button>
+	<div>
+    <button class="search--toggle">
+      <span class="visuallyhidden">Show search</span>
+    </button>
+    <label for="search--input" class="visuallyhidden">Search terms</label>
+    <input id="search--input" class="search--input" type="text">
+  </div>
 </div>

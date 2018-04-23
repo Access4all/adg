@@ -1,0 +1,49 @@
+.search {
+  position: absolute;
+  top: 25px;
+  right: 80px;
+
+  .search--toggle {
+    @include searchbtn;
+    float: right;
+    transform: translateX(-50%);
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .search--input {
+    width: 0;
+    height: 0;
+    margin: 8px $gutter 0 0;
+    padding: 0;
+    border: none;
+    border-radius: 34px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+
+  }
+
+  .search--input-expanded {
+    width: 300px;
+    height: 45px;
+    padding: 10px;
+    transition: width 0.25s, height 0.25s, padding 0.25s
+  }
+}
+
+// Overrides for the default SiteSearch 360 styles
+#unibox-suggest-box {
+  padding: 5px;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+
+  .unibox-selectable {
+    font-family: $base-font;
+    font-size: $base-font-size - 4px;
+
+    &.active,
+    &:hover {
+      background: $c-blue;
+    }
+  }
+}
