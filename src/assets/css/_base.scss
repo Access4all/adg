@@ -99,7 +99,7 @@ p.example {
 
     input {
       width: 10px;
-      margin-left: -17px;
+      margin-left: -17px; // Where is this whitespace coming from? We should only have to minus margin by 10px!
       opacity: 0;
     }
 
