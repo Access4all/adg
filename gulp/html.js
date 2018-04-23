@@ -85,7 +85,7 @@ const extendNavigationItem = (origItem, index, options) => {
       item.parent
 
     if (isInactive) {
-      item.isInactive = true;
+      item.isInactive = true
     }
   }
 
