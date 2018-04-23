@@ -14,6 +14,14 @@
 		margin-left: 20px;
 	}
 }
+.nav-list--item {
+  &:last-child {
+    margin-bottom: $gutter;
+  }
+  &-inactive {
+    display: none;
+  }
+}
 .nav-list--link {
 	display: block;
 	padding: $gutter / 4 0;
