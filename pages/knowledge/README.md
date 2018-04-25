@@ -1,9 +1,9 @@
 ---
 layout: layout
-title: "Knowledge about accessibility"
 navigation_title: "Knowledge"
 position: 3
-lead: "To begin developing accessible websites, some basic knowledge about the required tools and techniques is needed. The chapters in this 3rd part of our guide, the Knowledge part, will support you to get acquainted with various important topics of rather theoretical nature. They will prepare you to dive into the world of accessible website development!"
+lead: "To begin developing accessible websites, some basic knowledge about the required tools and techniques is needed. The chapters in this 3rd part of our guide, the Knowledge part, will support you to get acquainted with various important topics of rather theoretical nature - with high practical value though. They will prepare you to actively dive into the world of accessible website development."
+changed: "2018-04-12"
 ---
 
 # Knowledge about accessibility
@@ -12,9 +12,9 @@ To be able to ensure accessibility of your websites, you need to understand how 
 
 You may find it surprising that the first thing we will be talking about is explaining our good old friend, plain traditional HTML. You may feel that being a serious senior full stack web developer, this topic truly would not offer anything new to you. But acknowledging the fact that most accessibility problems are the result of just bad HTML, you may be surprised about the information value we provide you here. It will most certainly change the way you look at HTML.
 
-Then, while it may be the most natural thing in the world for you to read a website on a traditional screen and control it using a mouse and keyboard, you may not be familiar with some other devices that surprisingly many users worldwide rely on. So we will explain the basic fundamentals of those: how they work, how they are commonly used, and what you have to pay attention to when wanting to provide support for them.
+Then, while it may be the most natural thing in the world for you to read a website on a traditional screen and control it using a mouse and keyboard, you may not be familiar with alternative devices that surprisingly many users worldwide rely on. So, get the fundamentals of those: how they work, how they are commonly used, and what you have to pay attention to when providing support for them.
 
-# Chapters
+## Chapters
 
 We begin with [Semantics and their importance for accessibility](/knowledge/semantics){.page}, where we explain what power truly lies in HTML, and why using it properly is so important.
 
@@ -24,7 +24,7 @@ In [Introduction to keyboard only usage](/knowledge/keyboard-only){.page}, we ex
 
 Finally, in [Introduction to desktop screen reader usage](/knowledge/desktop-screen-readers){.page}, you finally get acquainted with the usage of screen readers.
 
-# How to go through this part
+## How to go through this part
 
 First of all, before you continue reading, be sure you have gone through the previous parts already:
 

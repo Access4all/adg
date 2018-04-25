@@ -1,18 +1,18 @@
 ---
 layout: layout
-title: "Heading outlines"
 navigation_title: "Headings"
 position: 3
 lead: "Like a traditional book's table of contents, a proper heading hierarchy allows screen reader users to quickly get an overview over the available areas of a page (including header, main, footer, and alike), and their respective contents. Furthermore, a comprehensive heading hierarchy supports quick navigation inside all those contents."
+changed: "2018-04-14"
 ---
 
 # Heading outlines
 
-First things first: you need to [learn how to handle headings](/examples/headings/handling){.page title="How to handle headings"} - using screen readers and other tools!
+First things first: you need to [learn how to handle headings](/examples/headings/handling){.page title="How to handle headings"} - using screen readers and other tools.
 
-We begin by explaining that [website content should be structured properly using headings](/examples/headings/good-example){.page title="General good headings example"} - very similar to books! This is followed by a [demonstration about what typically can go wrong](/examples/headings/bad-example){.page title="General bad headings example"} when developers aren't mindful and forget about proper semantics and logic of textual content.
+We begin by explaining that [website content should be structured properly using headings](/examples/headings/good-example){.page title="General good headings example"} - very similar to books. This is followed by a [demonstration about what typically can go wrong](/examples/headings/bad-example){.page title="General bad headings example"} when developers aren't mindful and forget about proper semantics and logic of textual content.
 
-Not only a page's main content - also recurring areas such as header, footer, and navigation need to provide proper headings! To not destroy the visual design, such headings can be inserted as [visually hidden headings](/examples/headings/visually-hidden-headings){.page title="Adding visually hidden headings to complete a page's outline"}.
+Not only a page's main content - also recurring areas such as header, footer, and navigation need to provide proper headings. To not destroy the visual design, such headings can be inserted as [visually hidden headings](/examples/headings/visually-hidden-headings){.page title="Adding visually hidden headings to complete a page's outline"}.
 
 We then address some often posed [concerns about search engine optimisation](/examples/headings/multiple-h1-okay-for-seo){.page title="Regarding search engine optimisation, is it okay to have multiple headings on level 1?"} and explain, why we think that a page absolutely can (and should) have more than a single heading on level 1. And for those who aren't convinced, we provide some alternate solutions with only a single heading on level 1. Yay!
 
