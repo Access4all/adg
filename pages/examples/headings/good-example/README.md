@@ -25,7 +25,7 @@ On a semantical level, headings also announce to screen reader users when a new 
 
 By the way, if you don't know about semantics, go back and read [Semantics and their importance for accessibility](/knowledge/semantics){.page}.
 
-## Hey, this is like in Word!
+# Hey, this is like in Word!
 
 HTML headings can be compared closely to heading styles in text processors like Word.
 

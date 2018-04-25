@@ -11,7 +11,7 @@ changed: "2018-04-12"
 
 **Semantic HTML does not only provide meaning to content elements, it also provides the foundation for elements' interactivity. Be it links, buttons or various form inputs - browsers know exactly how to deal with them, and they provide the user with everything needed for proper interaction with the website.**
 
-## Standard functionality is good
+# Standard functionality is good
 
 Let's look at this topic based on the example of the tag that made the internet what it is today: the hyperlink.
 
@@ -33,7 +33,7 @@ An aural user agent (screen reader) announces the element as:
 
 Both visual and aural presentation provide identical results to the user. Additionally, the link can be activated so the target page is loaded, all provided automatically. Thanks to standards.
 
-## Custom functionality is bad
+# Custom functionality is bad
 
 Many web developers still aren't aware of the importance of semantics and don't use them for various reasons. For example, to prevent default link styles, instead of using the proper `<a>` tag, an inventive developer may have come up with something like that:
 
@@ -63,7 +63,7 @@ In addition, the element won't be usable using a keyboard only: while a proper `
 
 Gimmicks like this can destroy the experience for lots of users and often create limits beyond remedy for them. So please: simply use the proper tags in the first place!
 
-## Conclusion: standard over custom!
+# Conclusion: standard over custom!
 
 As we have seen, adding proper standard HTML helps screen readers to announce elements in such a way that their users know how to interact with them. Additionally, HTML is the foundation for a lot of inherent standard functionality that is provided "for free" by the browser. That means that it just works for all kinds of devices.
 

@@ -11,13 +11,13 @@ changed: "2018-04-03"
 
 **Search engine optimisation (SEO) experts often are concerned about hiding elements visually. This due to the fear of being penalised for SEO fraud. But today's search engines are very smart, and sensible optimisation of content for accessibility reasons is honoured by them.**
 
-## The past: tricking search engines
+# The past: tricking search engines
 
 In earlier days, visually hidden elements have been used excessively to trick search engines. For examples, visually hidden keywords were placed on the page.
 
 When this fraud was detected, search engines began to punish such strategies with lower page rankings.
 
-## Today: serving everybody
+# Today: serving everybody
 
 Nowadays, search engines have become much smarter: they rely heavily on valid semantics of information (if you haven't done this yet, go back and read [Semantics and their importance for accessibility](/knowledge/semantics){.page}). In this respect, search engines can be compared very closely to users with special needs.
 

@@ -15,7 +15,7 @@ Let's think about the true spirit of a typical widget, for example a tablist: wh
 
 This sounds a lot like a group of radio buttons, doesn't it?
 
-## Tablist using radio buttons
+# Tablist using radio buttons
 
 Instead of re-inventing the wheel by creating our own tablist implementation using lots of more or less meaningful custom HTML containers and lots of JavaScript, why not simply re-use existing standard behaviour?
 
@@ -37,11 +37,11 @@ Instead of re-inventing the wheel by creating our own tablist implementation usi
 
 With this approach, we only need to react on the change of a radio button group using JavaScript and toggle the visibility of the respective tabpanel. Everything else works perfectly out of the box, also for keyboard only and screen reader users. And sure, we can change the visual properties to anything we like to resemble a tablist.
 
-## Conclusion
+# Conclusion
 
 This is a huge improvement in every aspect, be it usability, accessibility, readability of code (and thus maintainability), or performance.
 
-## Other patterns
+# Other patterns
 
 It isn't always as easy as with tablists. But the approach of using standard HTML form controls to mimic modern control patterns can be applied to most requirements. In fact, this approach is the basic of most complex interactive code examples in this guide.
 

@@ -11,7 +11,7 @@ changed: "2018-04-16"
 
 **Instead of using traditional HTML table elements, it is also possible to convert a structure of non-table elements into a table using ARIA. This is an experiment, and we explicitly do not recommend using this on productive websites. So please, kids, don't try this at home!**
 
-## A table of divs
+# A table of divs
 
 As we have seen, it is possible to re-apply semantics to an element that has somehow lost its inherent semantics. This is done using ARIA (if you haven't done this yet, go back and read [Accessible responsive tables](/examples/tables/responsive){.page}).
 
@@ -23,17 +23,17 @@ So the following example is an experiment with a purely demonstrative purpose. I
 
 _Q.E.D._ (Quod erat demonstrandum.)
 
-## Total freedom of styling
+# Total freedom of styling
 
 As all roles can be set explicitly using ARIA, we are not restricted anymore styling the table in any traditional way. For example, instead of using `display: table`, `display: table-row`, and `display: table-cell`, etc., we can now style a table as flexbox:
 
 @example[Table of divs with flexbox](table-of-divs-with-flexbox){.example}
 
-## Necessity of a valid structure
+# Necessity of a valid structure
 
 When tinkering up a table using random HTML elements and ARIA roles, it is very important that the used structure of elements (and roles) resembles a valid HTML table.
 
-### A slightly invalid structure
+## A slightly invalid structure
 
 The following example adds another `<div class="favorites">` container around the second and third hobby's `<tr>` elements so we can style those individually. This breaks the table for some screen readers: for example, NVDA announces it as "table with 2 rows and 3 columns" (instead of 4 rows), and for the second and third hobby, table navigation does not work anymore.
 
@@ -41,13 +41,13 @@ The following example adds another `<div class="favorites">` container around th
 
 This should not be too much surprising: in standard HTML, adding a container around `<tr>` elements is not valid, either. And although the above example is still working in some screen readers, the following always holds true: the messier the HTML code is, the more problems will occur.
 
-### Making it valid again
+## Making it valid again
 
 The good news: by adding `role="presentation"` to this additional container, we remove its semantical meaning, and the table is working again (also in NVDA).
 
 @example[Fixed table of divs](fixed-table-of-divs){.example}
 
-## Conclusion
+# Conclusion
 
 While pure ARIA tables seem to work pretty well in most modern screen readers, we highly discourage using them in productive websites.
 

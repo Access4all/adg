@@ -11,11 +11,11 @@ changed: "2018-04-13"
 
 **Desktop screen readers are usually controlled with the keyboard only. Offering tons of functionalities, all of them ought to be triggered by keyboard shortcuts. But what to do if none of the standard keyboard combinations are available anymore?**
 
-## Problem: no keyboard combinations left
+# Problem: no keyboard combinations left
 
 Most traditional keyboard shortcuts (a combination of at least one modifier key and any other key, if you haven't done this yet, go back and read [Controlling a computer with a keyboard only](/knowledge/keyboard-only/controlling-a-computer){.page}) are already in use by the operating system and running applications.
 
-## Solution: using Insert as modifier key
+# Solution: using Insert as modifier key
 
 Both screen readers NVDA and JAWS worked around this problem by hijacking the `Insert` key as their modifier key. So most interaction with desktop screen readers involves a combination of `Insert` and other keys.
 
@@ -28,13 +28,13 @@ Some examples:
     - `Insert + J` shows the JAWS menu.
     - `Insert + F6` displays the heading list.
 
-### Alternatives to the Insert key
+## Alternatives to the Insert key
 
 If you're on a Mac running NVDA or JAWS in a virtual machine, there are several ways you can work around the missing `Insert` key; if you haven't done this yet, go back and read [Configuring VMware Fusion on macOS](/setup/windows/vmware-on-macos){.page}.
 
 Both NVDA and JAWS offer the option to use `Caps Lock` instead of `Insert` as a modifier key. For some reason though, this doesn't seem to work in VMware Fusion.
 
-## Naming convention
+# Naming convention
 
 In this guide, we don't talk about the `Insert` key. Instead, when running NVDA, we talk about the `NVDA` key. And when running JAWS, we talk about the `JAWS` key.
 

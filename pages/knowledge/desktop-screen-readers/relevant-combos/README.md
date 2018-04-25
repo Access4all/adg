@@ -13,7 +13,7 @@ changed: "2018-04-12"
 
 As web developers, we're aware of how hard it is to support all relevant devices, operating systems, and browsers. Adding screen readers to the mixture doesn't make things easier: a long list of screen readers can potentially be combined with another long list of browsers, each combination possibly having its own characteristics.
 
-## TL;DR (too long, didn't read)
+# TL;DR (too long, didn't read)
 
 It is impossible to develop and test for dozens of possible combinations of browsers and screen readers. We have had good experiences with taking the following pragmatic approach, namely aiming at the most widely used combinations (newest stable versions):
 
@@ -23,11 +23,11 @@ It is impossible to develop and test for dozens of possible combinations of brow
 
 **Notice:** an exception from this rule is valid in closed environments, where only specific browsers or screen readers are available.
 
-## Exhaustive explanation
+# Exhaustive explanation
 
 If you are interested to find out more about the reasoning behind this, continue reading. Otherwise just skip the rest of this page.
 
-### Determining screen reader market share
+## Determining screen reader market share
 
 Screen readers aren't an integral part of the browser: they simply "sit" on top of it, announcing the available contents to the user. As such, they don't send anything like user agent data or similar to the server, making it impossible to identify them programmatically.
 
@@ -37,11 +37,11 @@ As such it is very hard to examine:
 - In which versions they are used.
 - And in combination with which browsers they are used.
 
-### WebAIM's screen reader user survey
+## WebAIM's screen reader user survey
 
 The initiative [Web Accessibility In Mind (WebAIM.org)](https://webaim.org/) conducts regular surveys among users of assistive software, which gives us at least some insight into the topic.
 
-#### Limitations
+### Limitations
 
 Like every other survey, the WebAIM screen reader survey is expected to reach a rather deterministic sample only: exclusively screen reader users who somehow got to know about the survey and were eager to fill it out are included. As such, its results may be heavily biased and its representativeness may be limited.
 
@@ -49,7 +49,7 @@ Also, we only gain an outline about rough proportions, but no detailed data abou
 
 Finally, we don't have detailed information about differences between countries and continents, nor any details about specific versions of software being used.
 
-#### Results
+### Results
 
 Here's the available data regarding combinations of browsers and screen readers used according to [WebAIM's Screen Reader User Survey #7](https://webaim.org/projects/screenreadersurvey7/), conducted in October 2017:
 
@@ -63,11 +63,11 @@ Here's the available data regarding combinations of browsers and screen readers 
 - VoiceOver with Chrome: 1.4%
 - Other combinations: 10.5%
 
-#### What about Edge?
+### What about Edge?
 
 Accessibility support in Microsoft's current browser Edge was very low upon release. Meanwhile, Edge was improved in some respects. But most screen reader users didn't switch from Internet Explorer yet, and it may still take quite some time until this will have happened.
 
-### Software versions
+## Software versions
 
 To make the whole topic even more complex, we could ask for combinations of specific software versions of both browsers and screen readers. This would definitely result in an explosion of possible combinations.
 
@@ -82,7 +82,7 @@ Even though having current versions of both screen readers and browsers availabl
 
 As it is not feasible to test dozens of possible software versions, we follow a pragmatic way which is to test always the newest stable versions of both browsers and screen readers.
 
-### Diverging requirements in closed environments
+## Diverging requirements in closed environments
 
 In closed environments, where a web application is only exposed to a deterministic group of users, requirements different to the ones outlined above may be feasible.
 

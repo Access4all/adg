@@ -11,7 +11,7 @@ changed: "2018-04-13"
 
 **Sitting on top of another application, screen readers announce the underlying content - often trying to compensate for inadequate presentation by both the underlying application and its content. This is a very hard task and prone to regressions, as we are trying to explain here.**
 
-## TL;DR (too long, didn't read)
+# TL;DR (too long, didn't read)
 
 Screen readers "sit" on top of another application, conveying its contents to the user through audio or braille.
 
@@ -21,11 +21,11 @@ While this works sometimes, it often results in strange behaviours. Thus, screen
 
 To prevent bugs, it is best to follow established standards and best practices.
 
-## Exhaustive explanation
+# Exhaustive explanation
 
 In the following article, we are trying to explain the problem buggy screen readers a little deeper. Keep in mind that we are whether browser developers nor screen reader developers, so the following information may be incomplete, biased, or even wrong in some parts. But it is the best we can currently provide from our years long experience with the topic.
 
-### Don't kill the messenger!
+## Don't kill the messenger!
 
 Screen readers always "sit" on top of another application (for example a web browser or PDF viewer), conveying its contents to the user through audio (synthetic speech) or braille.
 
@@ -49,7 +49,7 @@ Still, a broken message is highly prone to remain broken. And this makes clear w
 
 So please, don't kill the messenger - instead, follow this guide and provide high quality messages!
 
-### Reasons for bugs
+## Reasons for bugs
 
 Screen readers sadly seem to be very prone to regressions, meaning that a feature which worked well in an earlier combination of browser and screen reader versions, doesn't work anymore in subsequent versions. For example, the fact that a specific accessibility feature worked well in the combination of NVDA 2018.1 and Firefox 58 is no guarantee that it will still work in NVDA 2018.2 with Firefox 58 (or NVDA 2018.1 and Firefox 59).
 
@@ -68,11 +68,11 @@ This is a devastating situation:
 - For screen reader manufacturers, as they have to deal with the untenable situation of reluctantly maintained accessibility APIs. And so they always have to catch up with changes in browsers and other apps. And usually they're the ones who are blamed for creating buggy software - how ungrateful.
 - For web developers aiming to design accessible websites, as they are using screen readers to ensure that their products work. Only to see it break "by itself" later again...
 
-### How to avoid bugs
+## How to avoid bugs
 
 The best way to avoid such situations is to follow established standards and best practices - essentially the ones we are presenting in our guide, which rely on pure and basic HTML most of the time. So if you haven't done this yet, go back and read [Semantics and their importance for accessibility](/knowledge/semantics){.page}.
 
-### How to deal with bugs
+## How to deal with bugs
 
 If you find bugs in either screen readers or browsers, we highly urge you to get in contact with their manufacturers, so fixes can be worked out together.
 
@@ -84,7 +84,7 @@ If you find bugs in either screen readers or browsers, we highly urge you to get
 - Regarding Internet Explorer, there doesn't seem to be a way for filing issues.
     - Maybe this will be of some further help though: [How to log a bug on Internet Explorer? (StackOverflow.com)](https://stackoverflow.com/questions/258168/how-to-log-a-bug-on-internet-explorer).
 
-### What will the future bring?
+## What will the future bring?
 
 Traditionally, desktop screen readers haven't been incorporated into operating systems. As such, they never really felt like being an integral part of them (some reasons for this are outlined in the text above), but rather like a parasite sucking for information wherever possible.
 

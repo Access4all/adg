@@ -11,7 +11,7 @@ changed: "2018-03-09"
 
 **Bookmarklets are bookmarks that contain some JavaScript instead of a URL. You can execute them while reading a webpage, and they typically do some quick analysis and display their results.**
 
-## Installation
+# Installation
 
 ![A bookmark and its JavaScript content](_media/a-bookmark-and-its-javascript-content.png){.image}
 

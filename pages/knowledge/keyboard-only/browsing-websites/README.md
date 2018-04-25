@@ -13,21 +13,21 @@ changed: "2018-04-12"
 
 **Notice:** we are talking specifically about Windows browsers here. For macOS, Linux, and others, there exist similar keyboard shortcuts.
 
-## Opening a website
+# Opening a website
 
 First, make sure your web browser is open. Then:
 
 - By pressing `Ctrl + L` (or `F6`), the focus is placed in the web browser's address bar.
 - Now enter the domain as usual (e.g. `www.google.com`) and submit using `Enter`.
 
-## Reading a website
+# Reading a website
 
 After a while of reading, you usually have to adjust the scrolling of the page:
 
 - To scroll the viewport down, up, left, or right, use the respective arrow keys.
 - When tabbing through a page (see below), the viewport is scrolled automatically to the currently focused element, so using the arrow keys often isn't necessary.
 
-## Interacting with a website
+# Interacting with a website
 
 Mouse users can interact with any visible element on a page directly by clicking on it.
 
@@ -53,7 +53,7 @@ To interact with an element, keyboard users need to move the so called "focus" s
     - Cancel a prompt.
     - Close elements like dialogs or expanded comboboxes.
 
-## Now it's your turn!
+# Now it's your turn!
 
 Using the keyboard shortcuts above (and maybe more), you should be able to use any website to its fullest.
 

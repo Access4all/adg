@@ -13,13 +13,13 @@ changed: "2018-03-09"
 
 ![CCA icon](_media/colour-contrast-analyser-icon.png){.image}
 
-## Installation
+# Installation
 
 [Download Colour Contrast Analyser](https://www.paciellogroup.com/resources/contrastanalyser/).
 
 As it doesn't have an installer, you can simply extract it to a folder of your liking.
 
-## Usage
+# Usage
 
 ![Colour Contrast Analyser window](_media/colour-contrast-analyser-window.png){.image}
 

@@ -13,13 +13,13 @@ changed: "2018-04-09"
 
 ![TotalValidator icon](_media/totalvalidator-icon.png){.image}
 
-## Installation
+# Installation
 
 [Download TotalValidator](https://www.totalvalidator.com/downloads/index.html) and run the installer. Then install [Chrome and Firefox extensions](https://www.totalvalidator.com/downloads/extension.html).
 
-## Configuration
+# Configuration
 
-## Usage
+# Usage
 
 ![TotalValidator window](_media/totalvalidator-window.png){.image}
 

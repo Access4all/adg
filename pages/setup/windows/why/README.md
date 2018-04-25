@@ -13,23 +13,23 @@ changed: "2018-04-03"
 
 ![Windows 7 logo](_media/windows-7-logo.png){.image}
 
-## Indispensable software
+# Indispensable software
 
 From this day on, you will be developing websites with accessibility in mind. Congratulations! Luckily, you can keep using all the software you already know and love.
 
 But to ensure your websites' accessibility, you need some Windows specific software, especially regarding screen readers (if you are really curious and want to learn more about them, skip ahead and read [Relevant combinations of screen readers and browsers](/knowledge/desktop-screen-readers/relevant-combos){.page}).
 
-## Virtual machine: necessary or not?
+# Virtual machine: necessary or not?
 
 If you're not running Windows yourself already, the use of a [virtual machine (Wikipedia.org)](https://en.wikipedia.org/wiki/Virtual_machine) (VM) to run all the needed Windows software is an obvious necessity.
 
 And even if Windows is your used operating system already, we still advise you to run a dedicated Windows system inside a VM. This prevents pollution of your main environment, and also most probably disruption of your daily workflow (for example by a constantly talking synthesised screen reader voice, aggressively commenting on everything you are doing while developing).
 
-## Other desktop operating systems
+# Other desktop operating systems
 
 While macOS is heavily gaining popularity within the community of the blind, it is still much less used than Windows. And to this day, Linux isn't a popular player at all in this respect.
 
-## Mobile operating systems
+# Mobile operating systems
 
 For people with special needs, smartphones open a whole new world of possibilities. As such, mobile operating systems are becoming more and more important.
 

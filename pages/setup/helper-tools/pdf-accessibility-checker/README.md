@@ -13,13 +13,13 @@ changed: "2018-04-06"
 
 ![PAC icon](_media/pac-icon.png){.image}
 
-## Installation
+# Installation
 
 [Download PDF Accessibility Checker](http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html).
 
 As it doesn't have an installer, you can simply extract it to a folder of your liking.
 
-## Usage
+# Usage
 
 Launch PAC. To examine a PDF document, click on the `Select PDF File` button.
 

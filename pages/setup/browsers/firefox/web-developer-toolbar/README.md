@@ -13,11 +13,11 @@ changed: "2018-04-06"
 
 ![Web Developer toolbar](_media/web-developer-toolbar.png){.image}
 
-## Installation
+# Installation
 
 Install the [Web Developer toolbar](https://addons.mozilla.org/de/firefox/addon/web-developer/).
 
-## Usage
+# Usage
 
 Open the features menu by clicking its icon in the browser toolbar.
 

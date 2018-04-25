@@ -13,7 +13,7 @@ changed: "2018-04-03"
 
 ![Modern.IE logo](_media/modernie-logo.png){.image}
 
-## What is Modern.IE?
+# What is Modern.IE?
 
 [Modern.IE](http://modern.ie) is a service provided by Microsoft. It is used by web developers in need of testing different versions of Internet Explorer:
 
@@ -23,7 +23,7 @@ changed: "2018-04-03"
 
 We suggest you download the VM `IE11 on Win7`, but any modern Windows version should do.
 
-## Default user and password
+# Default user and password
 
 VMs from Modern.IE have the following login credentials:
 

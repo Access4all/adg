@@ -15,7 +15,7 @@ Screen readers don't announce visual attributes of elements (for example a text'
 
 So if you haven't done this yet, go back and read [Semantics and their importance for accessibility](/knowledge/semantics){.page}.
 
-## Disabled CSS equals screen reader? No.
+# Disabled CSS equals screen reader? No.
 
 _**Or:** Does a webpage with disabled CSS correspond to how a screen reader perceives it? No, it doesn't._
 

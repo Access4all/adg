@@ -17,7 +17,7 @@ You may find it surprising that the first thing we will be talking about is expl
 
 Then, while it may be the most natural thing in the world for you to read a website on a traditional screen and control it using a mouse and keyboard, you may not be familiar with alternative devices that surprisingly many users worldwide rely on. So, get the fundamentals of those: how they work, how they are commonly used, and what you have to pay attention to when providing support for them.
 
-## Chapters
+# Chapters
 
 We begin with [Semantics and their importance for accessibility](/knowledge/semantics){.page}, where we explain what power truly lies in HTML, and why using it properly is so important.
 
@@ -27,7 +27,7 @@ In [Introduction to keyboard only usage](/knowledge/keyboard-only){.page}, we ex
 
 Finally, in [Introduction to desktop screen reader usage](/knowledge/desktop-screen-readers){.page}, you finally get acquainted with the usage of screen readers.
 
-## How to go through this part
+# How to go through this part
 
 First of all, before you continue reading, be sure you have gone through the previous parts already:
 

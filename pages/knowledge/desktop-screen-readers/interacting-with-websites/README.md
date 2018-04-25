@@ -15,11 +15,11 @@ Beneath simple reading of information, most modern websites offer a lot of inter
 
 **Important:** For this article you need to know how to read websites using a desktop screen reader. If you haven't done so yet, go back and read [How to read websites using a desktop screen reader](/knowledge/desktop-screen-readers/reading-websites){.page} thoroughly before you continue here.
 
-## Activating links
+# Activating links
 
 Press `Enter` to activate links.
 
-## Interacting with forms
+# Interacting with forms
 
 Press `Enter` to interact with editable form elements, or to submit a form. Use `Space` to expand/collapse comboboxes or to toggle checkboxes. Use `Left/Right/Up/Down` keys to toggle values. Press `Enter` to activate buttons.
 
@@ -34,7 +34,7 @@ Use cases:
 
 If you are really curious and want to learn more about this, skip ahead and read [How to browse forms](/examples/forms/how-to-browse-forms){.page}.
 
-## Interacting with widgets
+# Interacting with widgets
 
 Interacting with widgets can be tricky, especially when ARIA roles are used (if you haven't done this yet, go back and read [ARIA - when HTML simply isn't enough](/knowledge/aria){.page}).
 

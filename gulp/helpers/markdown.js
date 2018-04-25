@@ -74,4 +74,26 @@ module.exports = filePath => {
 
       tokens[idx].attrSet('title', metaTitle)
     })
+    .use(() => {
+      let c = 0
+
+      markdown.core.ruler.push('manipulate_titles', state => {
+        state.tokens.forEach(token => {
+          if (['heading_open', 'heading_close'].includes(token.type)) {
+            // Identify first content title
+            if (c === 0) {
+              token.attrs = [['class', 'first']]
+            }
+
+            // Increase heading level
+            token.tag = token.tag.replace(
+              /[0-9]+/,
+              match => parseInt(match, 10) + 1
+            )
+
+            c++
+          }
+        })
+      })
+    })
 }

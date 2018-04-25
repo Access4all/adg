@@ -31,11 +31,11 @@ By the way, while NVDA doesn't propagate the first problem to the user, the book
 
 ![Document outline of h123](_media/document-outline-of-h123.png){.image}
 
-## Syntactical problems
+# Syntactical problems
 
 Most syntactical problems can be evaluated automatically: it's no problem for a computer to make sure that there's no heading level skipped. So the first problem in our list above is an easy one to examine.
 
-## Semantical problems
+# Semantical problems
 
 Semantical problems, however, usually must be examined manually by a human who has certain knowledge about the presented content.
 

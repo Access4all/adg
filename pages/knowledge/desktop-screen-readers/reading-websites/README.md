@@ -15,24 +15,24 @@ Screen readers have a linear, one-dimensional scope on webpages (if you haven't 
 
 The more users have accustomed to a website, over time, they will work out quicker ways of navigating between blocks of information, or of using its interactive features.
 
-## Opening a website
+# Opening a website
 
 This is done the same way like using a keyboard only. So if you haven't done this yet, go back and read [How to browse websites using a keyboard only](/knowledge/keyboard-only/browsing-websites){.page}.
 
-## Autofocus workaround
+# Autofocus workaround
 
 After the page has loaded (indicated by screen readers by announcing the current page's `<title>` attribute), most blind users always intuitively press `Ctrl + Home` first.
 
 This is to work around various kinds of autofocus functionality, so the user can be sure that the screen reader starts reading from the very beginning of the document.
 
-### Website autofocus
+## Website autofocus
 
 Some websites automatically set the initial focus to a specific element of the page (using `autofocus` attribute or by running some JavaScript):
 
 - This can be helpful, for example on sites like [Google.com](http://www.google.com) where most of the time users want to enter a search term right into the search field.
 - But when opening a site for the first time, blind users usually want to read through the whole content (top to bottom) to get a general, exhaustive overview.
 
-### Screen reader autofocus
+## Screen reader autofocus
 
 When leaving a page, some screen readers try to remember the current reading position. When re-visiting the same page, they try to set the focus to the remembered position (but this only happens when the website itself doesn't have any autofocus functionality):
 
@@ -44,11 +44,11 @@ This functionality dates from a passed internet era. Back then, the internet was
 
 Today, in the so called Web 2.0, websites often are very dynamic. Thus, pages often change during each re-visit. Sadly, screen readers didn't adapt to this situation yet.
 
-### Conclusion
+## Conclusion
 
 Don't be worried too much if after a page load the screen reader focus is somewhere you didn't expect it to be. Simply press `Ctrl + Home` and make your way through the page from the top.
 
-## Reading through a document
+# Reading through a document
 
 The easiest way to read through a document is line by line:
 
@@ -61,7 +61,7 @@ Instead of browsing line by line, the NVDA screen reader allows to read full blo
 
 **Important:** as opposed to keyboard-only users, screen reader users usually don't use the `Tab` key to read a page! If you haven't done this yet, go back and read [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes){.page} to know the difference between navigation using `Arrow` keys and `Tab` key.
 
-### Reading headings
+## Reading headings
 
 Press `H` to jump to headings, or press `1` to `6` to jump to headings on specific levels. Add `Shift` to reverse direction.
 
@@ -73,25 +73,25 @@ Use cases:
 
 If you are really curious and want to learn more about this, skip ahead and read [How to handle headings](/examples/headings/handling){.page}.
 
-### Reading links
+## Reading links
 
 Press `K` to jump to links, or press `V` / `U` to jump to visited / unvisited links. Add `Shift` to reverse direction.
 
 Use case: to quickly find links that you haven't visited yet, simply toggle through them by pressing `U`.
 
-### Reading lists
+## Reading lists
 
 Press `L` key to jump to lists, or press `I` to jump to list items. Add `Shift` to reverse direction.
 
 Use case: to quickly find the list with the social media "share" links, simply toggle through lists by pressing `L`.
 
-### Reading images
+## Reading images
 
 Press `G` key to jump to images. Add `Shift` to reverse direction.
 
 Use case: to quickly find the "avatar" image on your StackOverflow's profile page, simply toggle through images by pressing `G` (and hope that the avatar's alternative text is set to something that you recognise as such).
 
-### Reading tables
+## Reading tables
 
 Press `T` to jump to tables, then press `Ctrl + Alt + Left/Right/Up/Down` to navigate a its cells.
 
@@ -99,7 +99,7 @@ Use case: to compare the price of several products in a table, simply navigate t
 
 If you are really curious and want to learn more about this, skip ahead and read [How to handle tables](/examples/tables/handling){.page}.
 
-### Reading forms
+## Reading forms
 
 Press `F` to jump to form elements, or press `B` to jump to buttons. Add `Shift` to reverse direction.
 

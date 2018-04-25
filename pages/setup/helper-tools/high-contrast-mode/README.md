@@ -11,11 +11,11 @@ changed: "2018-04-06"
 
 **Windows high contrast mode (Win HCM) changes the colours on the screen to a specific high contrast scheme. It is used by visually impaired people. It is a useful tool to ensure that visual information isn't conveyed with purely decorative styles.**
 
-## Installation
+# Installation
 
 HCM is a built-in feature of the Windows operating systems and doesn't need to be installed separately.
 
-## Usage
+# Usage
 
 You can toggle HCM using the keyboard shortcut `Alt + Shift + PrtScn`. Alternatively, you can manually go to `Control Panel` -> `Change the theme` and select one of the "High Contrast" themes.
 

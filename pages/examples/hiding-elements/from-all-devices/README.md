@@ -15,7 +15,7 @@ Elements can be hidden completely from all devices (including screen readers). F
 
 @example[Hiding elements from all devices](hiding-elements-from-all-devices){.example}
 
-## Cross browser compatibility
+# Cross browser compatibility
 
 To make the `hidden` attribute work in older browsers, simply do:
 
@@ -25,12 +25,12 @@ To make the `hidden` attribute work in older browsers, simply do:
 }
 ```
 
-## Which one to use?
+# Which one to use?
 
 We strongly suggest using the HTML attribute `hidden`, as it separates content clearly from presentation. Notice: hiding an element from all channels is a question of content, not of visual presentation.
 
 In addition, it makes obvious in the DOM already what elements are hidden, so it leads to better readable code.
 
-## Marginal note about ARIA references
+# Marginal note about ARIA references
 
 Elements hidden with the techniques shown on this page can still provide content when being referenced using `aria-labelledby` or `aria-describedby`. More info here: [ARIA label, describedby and labelledby Attributes](/examples/sensible-usage-of-aria-roles-and-attributes/aria-label-describedby-and-labelledby-attributes){.page}.

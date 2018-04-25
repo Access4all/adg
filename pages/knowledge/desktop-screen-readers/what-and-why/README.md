@@ -11,13 +11,13 @@ changed: "2018-04-12"
 
 **Blind people are only one of many groups of people with special needs. Still, to develop and test accessible websites, screen readers are considered the most important addition to a web developer's toolset. But why is that? And what are screen readers anyway?**
 
-## What are screen readers?
+# What are screen readers?
 
 > A screen reader is a form of assistive technology which is essential to people who are blind, as well as useful to people who are visually impaired, illiterate, or have a learning disability. Screen readers are software applications that attempt to convey what people with normal eyesight see on a display to their users via non-visual means, like text-to-speech, sound icons, or a Braille device.
 >
 > <cite>[Screen reader (Wikipedia.org)](https://en.wikipedia.org/wiki/Screen_reader)</cite>
 
-## Why are they so important?
+# Why are they so important?
 
 Screen reader tests are considered the "litmus tests" in the development of accessible user interfaces.
 
@@ -31,6 +31,6 @@ In addition, while modern web browsers are pretty forgiving with malformed websi
 
 Still, there are a few areas that can't be validated with screen readers and thus need some special attention on their own (use of colour, contrasts, some audio and video requirements, just to name a few).
 
-## Conclusion
+# Conclusion
 
 If you want to design modern accessible websites, you won't get around learning how to use screen readers. Our guide will be a huge help for this.
