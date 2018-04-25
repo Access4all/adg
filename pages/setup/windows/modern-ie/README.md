@@ -9,9 +9,11 @@ changed: "2018-04-03"
 
 # Getting a free Windows virtual machine from Modern.IE
 
+**Microsoft's service Modern.IE offers to download pre-configured virtual machines running Windows. While their licenses expire after 90 days of use, by creating a snapshot before activation, they can easily be reset again. This is the easiest way to get your needed Windows environment up and running quickly.**
+
 ![Modern.IE logo](_media/modernie-logo.png){.image}
 
-# What is Modern.IE?
+## What is Modern.IE?
 
 [Modern.IE](http://modern.ie) is a service provided by Microsoft. It is used by web developers in need of testing different versions of Internet Explorer:
 
@@ -21,7 +23,7 @@ changed: "2018-04-03"
 
 We suggest you download the VM `IE11 on Win7`, but any modern Windows version should do.
 
-# Default user and password
+## Default user and password
 
 VMs from Modern.IE have the following login credentials:
 

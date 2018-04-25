@@ -9,7 +9,9 @@ changed: "2018-04-13"
 
 # Screen readers process contents in a linear way
 
-# Visual perception: two dimensions
+**Sighted users perceive a webpage as a two-dimensional, graphical area. Meanwhile, screen reader users perceive a page in a one-dimensional (linear) way: one element after the other, from top to bottom. Similar to reading a book, browsing websites in this way is usually considerably slow, as a lot of time is needed to get a proper overview of a full page.**
+
+## Visual perception: two dimensions
 
 A sighted user using a traditional display perceives the full two-dimensional layout of a page. Within fractions of a second, the user perceives the different areas of a page, for example:
 
@@ -19,7 +21,7 @@ A sighted user using a traditional display perceives the full two-dimensional la
 - Footer (typically at the bottom)
 - Etc.
 
-# Auditive perception: one dimension
+## Auditive perception: one dimension
 
 Blind users using a screen reader perceive a page in a linear, one-dimensional way. Like a traditional book (or better, an audiobook), a page is read aloud by the screen reader sequentially from top left to bottom right: character by character, word by word, sentence by sentence; or content element by content element.
 
@@ -31,7 +33,7 @@ Blind users using a screen reader perceive a page in a linear, one-dimensional w
 
 This way, users typically make their way through the whole document from the very top to the very bottom - or until they find the information they are looking for. In many cases, this means that screen reader users need a lot more time to browse a webpage than visual users do.
 
-# Observation of content changes
+## Observation of content changes
 
 While looking at a page, visual users usually notice any change that may happen to some element. For example, a red container suddenly appears on the top right corner of the screen, containing the warning "Your session will expire in 1 minute, please extend". Visual users will usually notice something like that automatically, regardless what exactly they are looking at.
 

@@ -9,15 +9,17 @@ changed: "2018-04-13"
 
 # How to handle tables
 
-# Keyboard only handling
+**To work through and understand the examples in this chapter, it is good to have a screen reader at hand and know how to handle it. In addition to this, there are some tools and bookmarklets that can be a huge help in your development workflow.**
+
+## Keyboard only handling
 
 For keyboard only users, tables don't offer any special functionality. So there's nothing to say here. Still, you may want to check out [How to browse websites using a keyboard only](/knowledge/keyboard-only/browsing-websites){.page}.
 
-# Screen reader handling
+## Screen reader handling
 
 For screen reader users, headings offer a lot of special functionalities. Here follows a quick nomination of the most important features. Besides this, check out [How to read websites using a desktop screen reader](/knowledge/desktop-screen-readers/reading-websites){.page}.
 
-## Quick navigation
+### Quick navigation
 
 - `T`: jump to next table
 
@@ -27,7 +29,7 @@ Screen readers will then announce the number of rows and columns, together with 
 
 You can add `Shift` to most shortcuts to reverse direction. For example press `Shift + T` to jump to the previous table.
 
-## Table navigation
+### Table navigation
 
 Both NVDA and JAWS provide a special navigation within tables:
 
@@ -37,15 +39,15 @@ In addition to the content of the currently focused cell, this announces the col
 
 > Row 1, column 1: Name.
 
-### JAWS braille viewer
+#### JAWS braille viewer
 
 In JAWS' braille viewer, next to the cell's content, the current row and column numbers are displayed like this: `r1c2` for row 1, column 2.
 
 ![JAWS braille viewer with table row and column](_media/jaws-braille-viewer-with-table-row-and-column.png){.image}
 
-# Useful bookmarklets
+## Useful bookmarklets
 
-## Contents Structured
+### Contents Structured
 
 This conveys the tag names of a lot of HTML elements, including tables. It allows fast visual examination of wrong (or missing) elements.
 

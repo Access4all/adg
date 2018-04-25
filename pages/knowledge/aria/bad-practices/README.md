@@ -9,9 +9,11 @@ changed: "2018-04-12"
 
 # Bad ARIA practices
 
+**There are certain situations where ARIA is a good (and maybe the only) way to go. But if done wrong, usage of ARIA often leads to even worse accessibility. Especially accessibility novices tend to misuse ARIA to optimise smelly code. Here we explain some of the typical dos and don'ts.**
+
 ARIA is often misunderstood as "general repair kit" for accessibility problems. Developers new to accessibility usually think that ARIA that can be used to fix accessibility problems for all sorts of bad HTML code. In general though, throwing some ARIA attributes into the mix of bad semantics doesn't leverage any problem. Most of the time, the exact opposite is the case.
 
-# Fixing broken semantics
+## Fixing broken semantics
 
 ARIA isn't meant to be used to "fix" standard elements that lack semantical meaning.
 
@@ -27,7 +29,7 @@ Admittedly, this makes screen readers announce the element as link. But still, t
 
 So remember: using ARIA to add missing semantical information is never a good solution. Always use the proper HTML tag itself!
 
-# Adding redundant semantics
+## Adding redundant semantics
 
 We also sometimes see overzealous developers adding redundant ARIA roles to elements, thinking it would enhance accessibility:
 
@@ -43,7 +45,7 @@ We also sometimes see overzealous developers adding redundant ARIA roles to elem
 
 It doesn't - quite the contrary is often the case, as screen readers seem to behave buggy from stuff like this.
 
-# Adding missing labels
+## Adding missing labels
 
 ARIA offers ways to label elements, for example `aria-label`. This means adding text to (or sometimes changing an existing text of) an element. This label is then announced by screen readers. Alas, it may be tempting to add such labels to all elements on a page that are missing descriptive text themselves.
 
@@ -61,7 +63,7 @@ a.cart {
 </a>
 ```
 
-## Approach using ARIA
+### Approach using ARIA
 
 To make the image accessible, it could be tempting now to simply add an ARIA label:
 
@@ -83,7 +85,7 @@ While this certainly is an improvement over offering no label at all, it isn't t
 - Furthermore, commonly used browser tools may not work with ARIA.
     - For example, people using the search of their browser wouldn't be able to look for a link with the name "shopping cart", as the browser doesn't search within ARIA labels.
 
-## Approach using visually hidden text
+### Approach using visually hidden text
 
 Again, there are traditional techniques to achieve the wanted result that are much more robust. In the case of our example, simply add a real text label, and hide it visually:
 
@@ -95,7 +97,7 @@ Again, there are traditional techniques to achieve the wanted result that are mu
 
 If you are really curious and want to learn more about this, skip ahead and read [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually){.page}.
 
-## Approach using a real image
+### Approach using a real image
 
 An even more robust way in case of bad internet connection is to not use a CSS background image, but a "real" image with an alternative text:
 
@@ -107,7 +109,7 @@ An even more robust way in case of bad internet connection is to not use a CSS b
 
 The downside to this is that it isn't searchable with the browser.
 
-## Approach using a combination
+### Approach using a combination
 
 You still could combine both techniques to cover all possible problems outlined above:
 
@@ -120,13 +122,13 @@ You still could combine both techniques to cover all possible problems outlined 
 
 This may feel a bit over-engineered, it also leads to redundancy in screen readers. But if you want to go the extra mile, it is a perfectly valid approach: it is better to have a little bit of redundant information than no information.
 
-## Conclusion
+### Conclusion
 
 As you can see, there sometimes are cases that offer several traditional solutions with various pros and cons. Usually though each one (or a combination) of them is better than using ARIA.
 
 Generally speaking, adding labels using ARIA is a case of treating disabled users differently to other users, which is never a good thing (see below).
 
-# Treating disabled users differently
+## Treating disabled users differently
 
 It sometimes may seem tempting to give a different user experience to some user group - or to hide some functionality completely using ARIA.
 
@@ -146,7 +148,7 @@ Generally speaking: it is very questionable to treat different users differently
 
 So in most cases this holds true: if you face a situation where a screen reader user will be presented with different information or functionality than other users, you are most probably on the wrong track.
 
-# Hiding focusable elements
+## Hiding focusable elements
 
 Sometimes, developers try to hide focusable elements (or elements that contain focusable children) from screen readers using `aria-hidden`. This leads to unpredictable behaviour in many screen readers, as the browser still allows to focus such elements using the `Tab` key, but because of `aria-hidden` screen readers will not announce it.
 
@@ -154,6 +156,6 @@ If you are really curious and want to learn more about this, skip ahead and read
 
 The purpose of hiding something from a specific user group leads us to the next misuse of ARIA. Read on.
 
-# Conclusion: caution with ARIA!
+## Conclusion: caution with ARIA!
 
 ARIA is an intriguing approach to make the web a more accessible place. In most situations though, it is neither needed (because there are usually better ways to achieve the same result) nor useful (because browser and screen reader support is still shaky).

@@ -9,11 +9,13 @@ changed: "2018-04-13"
 
 # Screen readers don't convey visual attributes
 
+**Similar to the reading of a traditional book, screen readers only announce plain content, enriched with semantical info. Visual attributes are totally ignored. Interestingly, this still doesn't mean that CSS doesn't have any influence on screen readers.**
+
 Screen readers don't announce visual attributes of elements (for example a text's font-size and color). Only plain text and semantical information (for example "heading level 3" or "link") is announced by them.
 
 So if you haven't done this yet, go back and read [Semantics and their importance for accessibility](/knowledge/semantics){.page}.
 
-# Disabled CSS equals screen reader? No.
+## Disabled CSS equals screen reader? No.
 
 _**Or:** Does a webpage with disabled CSS correspond to how a screen reader perceives it? No, it doesn't._
 
@@ -28,7 +30,7 @@ Most of all, special attention needs to be paid to the different values of the `
 - Some can change the way how screen readers split blocks of information.
     - If you are really curious and want to learn more about this, skip ahead and read [Block vs. Inline Elements](/examples/block-vs-inline-elements){.page}.
 - Some can change the role of an element.
-    - If you are really curious and want to learn more about this, skip ahead and read [Responsive tables](/examples/tables/responsive){.page}.
+    - If you are really curious and want to learn more about this, skip ahead and read [Accessible responsive tables](/examples/tables/responsive){.page}.
 - Fiddling around with the `content` attribute and pseudo elements sometimes may have unexpected side effects.
 
 So if you know its shortcomings, disabling CSS sometimes can be a useful "poor man's screen reader substitute". But it will never be a real replacement.

@@ -9,6 +9,8 @@ changed: "2018-04-03"
 
 # General good headings example
 
+**Structuring content with headings is always a good thing: no published book containing structured text could ever live without it. Headings allow to skim through the book, and the table of contents (TOC) of a book is based on them. On websites, headings work the exact same way as they do on print documents.**
+
 Headings are marked up in HTML using `<h1>` to `<h6>`. You knew that, didn't you?
 
 The following example contains a very basic headings outline. It may look familiar to you from "normal" print documents (like PDF) and books.
@@ -23,7 +25,7 @@ On a semantical level, headings also announce to screen reader users when a new 
 
 By the way, if you don't know about semantics, go back and read [Semantics and their importance for accessibility](/knowledge/semantics){.page}.
 
-# Hey, this is like in Word!
+## Hey, this is like in Word!
 
 HTML headings can be compared closely to heading styles in text processors like Word.
 

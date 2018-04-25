@@ -9,7 +9,9 @@ changed: "2018-04-09"
 
 # Alternative techniques for labelling page regions
 
-# TL;DR - too long, didn't read
+**Although headings are the most widely known technique to label page regions (like header, navigation, etc.), there exist other ways to label content in HTML. In our opinion though, headings are both the most expressive and simple technique. But let's examine the situation a bit deeper.**
+
+## TL;DR - too long, didn't read
 
 Besides traditional headings, there exists at least one other way to label regions: a combination of HTML5 structural elements, labelled using ARIA.
 
@@ -17,9 +19,9 @@ In general, the use of structural elements can be fully recommended. But they ar
 
 So you should always provide a proper headings outline which covers all regions on a page.
 
-# Exhaustive explanation
+## Exhaustive explanation
 
-## Using HTML5 structural elements
+### Using HTML5 structural elements
 
 Since HTML5 there are some new containers that provide semantical context:
 
@@ -48,7 +50,7 @@ Even navigation between them while reading a document is easily possible:
 
 By the way, you may have noticed already that screen readers have their own landmarks jargon: for example `<header>` elements are announced as "banner", and `<footer>` elements as "content info".
 
-## Labelling regions using ARIA
+### Labelling regions using ARIA
 
 The more complex a website is, the more regions it probably has. So if you think of a website with both a user navigation (with sign up, login, etc.) and a content navigation (both marked up as `<nav>`), then those regions need an explicit label. Otherwise, screen reader users can't distinguish between the two in the landmarks outline.
 
@@ -62,7 +64,7 @@ Screen readers now can display the given label in their landmarks outline.
 
 ![NVDA landmarks outline with labels](_media/nvda-landmarks-outline-with-labels.png){.image}
 
-## The downsides
+### The downsides
 
 In current screen readers, landmarks don't add anything to the traditional heading outlines: they look identical regardless whether there are landmarks available on the page or not.
 
@@ -72,13 +74,13 @@ In the example above, when using a screen reader's document outline, it is impos
 
 Another annoyance is that not all screen readers announce these elements consistently: for example, NVDA surprisingly doesn't announce `<main>`, neither while browsing the page nor in its landmarks outline.
 
-## Verdict: use plain old heading outlines
+### Verdict: use plain old heading outlines
 
 Using the document outline traditionally is the preferred navigation method by most screen reader users. So we highly suggest to always use traditional headings everywhere on your website, as seen here: [Adding visually hidden headings to complete a page's outline](/examples/headings/visually-hidden-headings){.page}.
 
 Besides that, using ARIA to enhance semantics is bad practice anyway, see [Bad ARIA practices](/knowledge/aria/bad-practices){.page}.
 
-### Even better with landmarks
+#### Even better with landmarks
 
 Having HTML5 structural elements on the page is always a good thing, too. So a combination of both headings and landmarks is perfect:
 
@@ -88,7 +90,7 @@ By following this approach, screen reader users can use both heading navigation 
 
 ![Headings outline](_media/headings-outline.png){.image}
 
-### Description using ARIA (optional)
+#### Description using ARIA (optional)
 
 Sadly though, this leads to another case of non-unique landmarks.
 

@@ -9,7 +9,9 @@ changed: "2018-04-13"
 
 # Screen readers' browse and focus modes
 
-# Browse mode
+**The relevant desktop screen readers on Windows offer different ways of interacting with the underlying application. The most common ones are browse mode and focus mode. We cannot overestimate the importance of thoroughly knowing their differences.**
+
+## Browse mode
 
 Reading through a website by moving the screen reader's cursor through a page's information fragments is called "browse" mode:
 
@@ -23,7 +25,7 @@ Reading through a website by moving the screen reader's cursor through a page's 
 
 Notice: in other resources, browse mode may sometimes also be called "read" mode.
 
-# Focus mode
+## Focus mode
 
 While browse mode allows reading elements, it doesn't allow interaction with them (for example entering text into a field or choosing a value from a combobox).
 
@@ -45,13 +47,13 @@ This mode - where keystrokes aren't intercepted but sent directly to the active 
 
 Notice: in other resources, focus mode may sometimes also be called "forms" or "interaction" mode.
 
-## Focus mode vs. keyboard only
+### Focus mode vs. keyboard only
 
 Focus mode in screen readers is exactly the same like tabbing through a page with keyboard only (if you haven't done this yet, go back and read [Introduction to keyboard only usage](/knowledge/keyboard-only){.page}).
 
 Looked at it this way, screen readers in fact simply introduce only one special interaction mode: the browse mode. So when using the `Tab` key, everything is just plain keyboard only navigation (handled by the underlying browser).
 
-# Side note: application mode
+## Side note: application mode
 
 The so called "application" mode is rather rare. If implemented properly, it feels very similar to focus mode to the user.
 
@@ -73,7 +75,7 @@ All in all, this does not sound promising at all, does it? So why should anyone 
 
 So if you are tempted to implement a widget with `role="application"`, before doing it, please thoroughly read this: [If you use the WAI-ARIA role "application", please do so wisely! (MarcoZehe.de)](https://www.marcozehe.de/2012/02/06/if-you-use-the-wai-aria-role-application-please-do-so-wisely/).
 
-# Which mode to use when?
+## Which mode to use when?
 
 It's important to know under which circumstances which interaction mode is used:
 

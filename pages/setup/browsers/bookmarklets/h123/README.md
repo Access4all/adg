@@ -9,11 +9,13 @@ changed: "2018-04-06"
 
 # h123
 
-# Installation
+**This bookmarklet provides an efficient way to display the current webpage's heading outline, very close to how screen readers do. In addition, it has some pretty useful features like displaying potentially incorrectly hidden headings.**
+
+## Installation
 
 Go to [hinderlingvolkart.github.io/h123](https://hinderlingvolkart.github.io/h123) and get the bookmarklet there.
 
-# Usage
+## Usage
 
 Activate the bookmarklet by clicking on it. A popover outlining the page's heading structure is then getting displayed on the top right of the page.
 

@@ -9,6 +9,8 @@ changed: "2018-04-03"
 
 # General bad headings example
 
+**To be meaningful, heading outlines must be coherent on both a technical and textual level. While headings often are omitted completely by naive web developers, existing heading outlines can suffer of various accessibility problems on both a syntactical and a semantical level.**
+
 This heading outline in the following example has three problems.
 
 @example[Generally bad headings](generally-bad-headings){.example}
@@ -29,11 +31,11 @@ By the way, while NVDA doesn't propagate the first problem to the user, the book
 
 ![Document outline of h123](_media/document-outline-of-h123.png){.image}
 
-# Syntactical problems
+## Syntactical problems
 
 Most syntactical problems can be evaluated automatically: it's no problem for a computer to make sure that there's no heading level skipped. So the first problem in our list above is an easy one to examine.
 
-# Semantical problems
+## Semantical problems
 
 Semantical problems, however, usually must be examined manually by a human who has certain knowledge about the presented content.
 

@@ -9,6 +9,8 @@ changed: "2018-04-13"
 
 # Introduction to desktop screen reader usage
 
+**To develop accessible modern websites, it's absolutely crucial to have basic skills in both reading and interacting with websites using desktop screen readers. In this chapter, you will learn everything you need to know about using a screen reader to browse the web.**
+
 First things first: you need to know [why screen readers are so crucial for accessibility testing](/knowledge/desktop-screen-readers/what-and-why){.page title="What screen readers are - and why they are so important to accessibility testing"} and which (of the nearly endless number of) [combinations of browsers and screen readers](/knowledge/desktop-screen-readers/relevant-combos){.page title="Relevant combinations of screen readers and browsers"} are important to care about.
 
 We begin by explaining that [screen readers process contents in a linear way](/knowledge/desktop-screen-readers/linear-processing){.page title="Screen readers process contents in a linear way"}, meaning that they announce content and semantics sequentially, one piece of information after the other. Also, [visual attributes aren't conveyed](/knowledge/desktop-screen-readers/no-visual-attributes){.page title="Screen readers don't convey visual attributes"} in any way!

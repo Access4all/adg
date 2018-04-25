@@ -1,15 +1,17 @@
 ---
 layout: layout
-title: "Responsive tables"
+title: "Accessible responsive tables"
 navigation_title: "Responsive"
 position: 7
 lead: "The introduction of smartphones increasingly led web designers to avoid traditional \"bulky\" HTML tables - because these would exceed the limited screen dimensions. Others tried to find ways to change the layout of tables so they would not need so much horizontal space anymore. Responsive tables were born. But to make them accessible, the use of some ARIA is essential."
 changed: "2018-04-16"
 ---
 
-# Responsive tables
+# Accessible responsive tables
 
-# Tables - a relic of days gone by?
+**The introduction of smartphones increasingly led web designers to avoid traditional "bulky" HTML tables - because these would exceed the limited screen dimensions. Others tried to find ways to change the layout of tables so they would not need so much horizontal space anymore. Responsive tables were born. But to make them accessible, the use of some ARIA is essential.**
+
+## Tables - a relic of days gone by?
 
 Tables exist since the very early days of the internet. In and by themselves, their layout is meant to have a lot of horizontal space available.
 
@@ -17,11 +19,11 @@ Since portable devices like smartphones have become increasingly popular, screen
 
 On the other side, there have also been attempts to change the layout of traditional tables so they would fit these new requirements. Sadly, most of these attempts left accessibility behind. So we show you to change a table's visual appearance while keeping accessibility intact.
 
-# Saving space
+## Saving space
 
 Instead of transforming a traditional table's full layout into a responsive one (as will be explained below), it can be useful already to simply hide some of its elements on smaller screens.
 
-## Hiding negligible data
+### Hiding negligible data
 
 The following table about hobbies displays columns for a "Name", a "Description" and a link to "Additional resources".
 
@@ -31,7 +33,7 @@ As the description in fact simply is taken from the linked additional resources,
 
 By the way, we added distinctive background colours so it will be easier for you to spot any differences.
 
-## Replacing bulky elements
+### Replacing bulky elements
 
 In the following example, the bulky "Wikipedia" links are hidden, and only small icons are shown in narrow view.
 
@@ -39,7 +41,7 @@ In the following example, the bulky "Wikipedia" links are hidden, and only small
 
 Please don't forget to set a proper alternative text to those icons.
 
-# Changing the visual layout
+## Changing the visual layout
 
 Sometimes, the visual layout of a table needs to be changed completely to fit small screens.
 
@@ -47,19 +49,19 @@ As we already know: to alter a table's visual appearance, the `display` property
 
 @example[Table with block elements in narrow view](table-with-block-elements-in-narrow-view){.example}
 
-## Optimisation for visual users
+### Optimisation for visual users
 
 Screen reader users are very happy with this result. But visually, our table is not fully appealing yet, because in narrow view, the table headers' position on top of the table feels wrong.
 
 ![Strange position of table headers](_media/strange-position-of-table-headers.png){.image}
 
-### Hiding table headers visually
+#### Hiding table headers visually
 
 In a first attempt, we can hide them visually in narrow view (if you haven't done this yet, go back and read [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually){.page}). This way, they keep working for screen readers.
 
 @example[Table with visually hidden headers in narrow view](table-with-visually-hidden-headers-in-narrow-view){.example}
 
-### Adding visual table header per element
+#### Adding visual table header per element
 
 It would be even more beautiful if the table headers could be displayed visually next to each table cell. For this, we have to add them in each cell, but display them only in narrow view.
 
@@ -67,7 +69,7 @@ But this is redundant information for screen readers, so we use `aria-hidden="tr
 
 @example[Table with added headers in narrow view](table-with-added-headers-in-narrow-view){.example}
 
-## Final result
+### Final result
 
 There we are: here you have the perfectly accessible responsive table.
 

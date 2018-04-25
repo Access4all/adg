@@ -9,11 +9,13 @@ changed: "2018-04-13"
 
 # Good ARIA practices
 
-# Standalone ARIA attributes
+**There are a few ARIA features that truly fill some gaps HTML doesn't provide a solution for. Working pretty reliably in modern browsers and screen readers, the following techniques can be recommended as safe to use.**
+
+## Standalone ARIA attributes
 
 The following `aria-*` attributes can be used on most HTML elements. No `role` attribute is needed.
 
-## Labelling elements
+### Labelling elements
 
 To label an element, `aria-label` and `aria-labelledby` can be used.
 
@@ -38,19 +40,19 @@ However, why not present this information to every user, for example using a too
 
 So if you are thinking about enhancing existing information, in most cases there are better ways than using ARIA - ways that provide use to all users.
 
-## Describing elements
+### Describing elements
 
 To describe an element, `aria-describedby` can be used.
 
 When using a simple label isn't enough and you need to connect additional information to a form input, this is the way to go. For example, a paragraph with information about terms and conditions needs to be connected to its respective "I have read the terms and conditions" checkbox. If you are really curious and want to learn more about this, skip ahead and read [Placing non-interactive content into forms](/examples/forms/non-interactive-content-in-forms){.page}.
 
-## Delivering expandable status
+### Delivering expandable status
 
 To deliver an expandable/collapsible status of an element, `aria-expanded` can be used.
 
 This is especially useful for interactive dropdown menus. If you are really curious and want to learn more about this, skip ahead and read [Dropdown widgets (a.k.a. menu)](/examples/widgets/dropdown-widgets-a-k-a-menu-){.page}.
 
-## Delivering selected and pressed status
+### Delivering selected and pressed status
 
 To describe an element's selected or pressed status, `aria-selected` and `aria-pressed` can be used.
 
@@ -58,13 +60,13 @@ This may seem useful for buttons that can be toggled, like a "Mute sound" button
 
 Caution though: neither `aria-selected` nor `aria-pressed` are intended to be used for marking active items in a link list! For this, `aria-current` is an option, but browser support still isn't fully provided, so we don't recommend using it (yet). The best way to provide information like this to screen readers, is using visually hidden text; if you are really curious and want to learn more about this, skip ahead and read [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually){.page}.
 
-## Hiding non-focusable elements
+### Hiding non-focusable elements
 
 To hide a non-focusable element (including children) from screen readers, `aria-hidden` can be used.
 
 If you are really curious and want to learn more about this, skip ahead and read [Hiding elements from screen readers using aria-hidden](/examples/hiding-elements/from-screen-readers){.page}.
 
-# ARIA examples
+## ARIA examples
 
 In this guide, we are carefully using ARIA here and there to optimise some of our proposed examples:
 
@@ -75,6 +77,6 @@ In this guide, we are carefully using ARIA here and there to optimise some of ou
 - [Interactive JavaScript and widgets](/examples/widgets){.page}
 - [Live Regions And Alerts](/examples/live-regions-and-alerts){.page}
 
-# Conclusion: be careful with ARIA!
+## Conclusion: be careful with ARIA!
 
 There are only rare situations where HTML isn't enough. In those (and only those) situations, using ARIA is advised. In other situations, when the use of a clean and semantically correct HTML structure can provide a solution, usage of ARIA is (currently) strongly discouraged. This is due to its non-homogenous support among browsers and screen readers.

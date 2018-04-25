@@ -9,6 +9,8 @@ changed: "2018-03-16"
 
 # Web browsers
 
+**For developing accessible websites, you need some common Windows web browsers. In this chapter, you will learn how to install and configure them. Additionally, we introduce some useful extensions and bookmarklets that will support you in your daily routine.**
+
 First, read how to [install and configure Internet Explorer 11](/setup/browsers/internet-explorer-11){.page title="Internet Explorer 11 installation and configuration"}, the longtime nightmare of all web developers.
 
 Then read on how to [install and configure Firefox](/setup/browsers/firefox){.page title="Firefox installation and configuration"}, our sympathetic fellow.

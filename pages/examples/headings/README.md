@@ -9,6 +9,8 @@ changed: "2018-04-14"
 
 # Heading outlines
 
+**Like a traditional book's table of contents, a proper heading hierarchy allows screen reader users to quickly get an overview over the available areas of a page (including header, main, footer, and alike), and their respective contents. Furthermore, a comprehensive heading hierarchy supports quick navigation inside all those contents.**
+
 First things first: you need to [learn how to handle headings](/examples/headings/handling){.page title="How to handle headings"} - using screen readers and other tools.
 
 We begin by explaining that [website content should be structured properly using headings](/examples/headings/good-example){.page title="General good headings example"} - very similar to books. This is followed by a [demonstration about what typically can go wrong](/examples/headings/bad-example){.page title="General bad headings example"} when developers aren't mindful and forget about proper semantics and logic of textual content.

@@ -9,7 +9,9 @@ changed: "2018-04-03"
 
 # Adding visually hidden headings to complete a page's outline
 
-# Additional regions on a web page
+**Not only the main content of a web page needs to be marked up using headings, but also other elements like header, navigation, footer, etc. As the visual design usually doesn't include those headings, they need to be visually hidden by moving them off-screen.**
+
+## Additional regions on a web page
 
 Besides the main content, a web page usually consists of many additional regions: a header, navigation(s), related sections (like advertisements), and a footer.
 
@@ -28,7 +30,7 @@ Screen reader users don't perceive any visual attributes like size, shape, colou
 
 ![Incomplete document outline](_media/incomplete-document-outline.png){.image}
 
-# Adding headings to additional regions
+## Adding headings to additional regions
 
 For screen reader users, descriptive elements are needed to give a page region a label. Again, the best way to provide such labels is using headings. So let's add those missing headings.
 
@@ -40,7 +42,7 @@ To screen reader users, the document outline now is complete.
 
 But the additional headings mess up the visual design. How awkward!
 
-# Hiding additional headings visually
+## Hiding additional headings visually
 
 To make sure that the additional headings don't mess up the visual design, they can be hidden visually.
 

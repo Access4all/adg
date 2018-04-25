@@ -9,6 +9,8 @@ changed: "2018-04-13"
 
 # General good table example
 
+**Tables are widely used to display tabular data, complex or simple. HTML provides everything needed for accessibility, so cleanly laid out and marked up tables are already fully accessible all by themselves.**
+
 The following example provides a very basic table. Navigate it using table navigation and notice how the screen reader announces the current data cell's (`<td>`) corresponding header cells (`<th>`):
 
 - If you navigate horizontally (using `Ctrl + Alt + Left/Right`), in addition to the current cell's content, the screen reader also announces the current column's header cell.

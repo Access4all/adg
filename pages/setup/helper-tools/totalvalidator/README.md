@@ -9,15 +9,17 @@ changed: "2018-04-09"
 
 # TotalValidator
 
+**TotalValidator checks your website regarding various web and accessibility standards by the press of a button. Building valid code is one of the highest goals developers should strive for. TotalValidator helps a lot with achieving this.**
+
 ![TotalValidator icon](_media/totalvalidator-icon.png){.image}
 
-# Installation
+## Installation
 
 [Download TotalValidator](https://www.totalvalidator.com/downloads/index.html) and run the installer. Then install [Chrome and Firefox extensions](https://www.totalvalidator.com/downloads/extension.html).
 
-# Configuration
+## Configuration
 
-# Usage
+## Usage
 
 ![TotalValidator window](_media/totalvalidator-window.png){.image}
 
