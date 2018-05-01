@@ -44,7 +44,7 @@ So if you are thinking about enhancing existing information, in most cases there
 
 To describe an element, `aria-describedby` can be used.
 
-When using a simple label isn't enough and you need to connect additional information to a form input, this is the way to go. For example, a paragraph with information about terms and conditions needs to be connected to its respective "I have read the terms and conditions" checkbox. If you are really curious and want to learn more about this, skip ahead and read [Placing non-interactive content into forms](/examples/forms/non-interactive-content-in-forms){.page}.
+When using a simple label isn't enough and you need to connect additional information to a form input, this is the way to go. For example, a paragraph with information about terms and conditions needs to be connected to its respective "I have read the terms and conditions" checkbox. If you are really curious and want to learn more about this, skip ahead and read [Placing non-interactive content between form controls](/examples/forms/non-interactive-content){.page}.
 
 ## Delivering expandable status
 
@@ -70,10 +70,10 @@ If you are really curious and want to learn more about this, skip ahead and read
 
 In this guide, we are carefully using ARIA here and there to optimise some of our proposed examples:
 
-- [HTML5's headings outline algorithm](/examples/headings/html5-outline){.page}
+- [HTML 5's headings outline algorithm](/examples/headings/html-5-outline){.page}
 - [](@page-81)
-- [Faking fieldset / legend using ARIA](/examples/forms/faking-fieldset-legend-using-aria){.page}
-- [Validations and error messages](/examples/forms/validations-and-error-messages){.page}
+- [](@page-106)
+- [Validation messages](/examples/forms/validation-messages){.page}
 - [Interactive JavaScript and widgets](/examples/widgets){.page}
 - [Live Regions And Alerts](/examples/live-regions-and-alerts){.page}
 

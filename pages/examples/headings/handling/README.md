@@ -3,13 +3,13 @@ layout: layout
 title: "How to handle headings"
 navigation_title: "Handling"
 position: 1
-lead: "To work through and understand the examples in this chapter, it is good to have a screen reader at hand and know how to handle it. In addition to this, there are some tools and bookmarklets that can be a huge help in your development workflow."
-changed: "2018-04-13"
+lead: "Headings are solely browsable elements and do not offer any interactivity. To work through and understand the examples in this chapter, it is good to have a screen reader at hand and know how to handle it. In addition to this, there are some tools and bookmarklets that can be a huge help in your development workflow."
+changed: "2018-04-18"
 ---
 
 # How to handle headings
 
-**To work through and understand the examples in this chapter, it is good to have a screen reader at hand and know how to handle it. In addition to this, there are some tools and bookmarklets that can be a huge help in your development workflow.**
+**Headings are solely browsable elements and do not offer any interactivity. To work through and understand the examples in this chapter, it is good to have a screen reader at hand and know how to handle it. In addition to this, there are some tools and bookmarklets that can be a huge help in your development workflow.**
 
 # Keyboard only handling
 
@@ -46,8 +46,6 @@ NVDA's "Elements List" displays a page's heading outline in a tree view. To open
 
 ![NVDA's "Elements List" dialog](_media/nvdas-elements-list-dialog.png){.image}
 
-Among other things, this dialog offers filter options.
-
 ### Heading List (JAWS)
 
 JAWS' "Heading List" displays a page's heading outline in a list view.
@@ -55,8 +53,6 @@ JAWS' "Heading List" displays a page's heading outline in a list view.
 To open it, press `JAWS + F6`.
 
 ![JAWS' "Heading List" dialog](_media/jaws-heading-list-dialog.png){.image}
-
-Among other things, this dialog offers sort and filter options.
 
 # Useful helper tools
 

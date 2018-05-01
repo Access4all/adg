@@ -32,7 +32,7 @@ Use cases:
 - To toggle through the values of a combobox, make sure you are in focus mode, then use `Up` or `Down`.
 - To toggle the value of a checkbox, simply hit `Space` (regardless of whether you're in browse or focus mode).
 
-If you are really curious and want to learn more about this, skip ahead and read [How to browse forms](/examples/forms/how-to-browse-forms){.page}.
+If you are really curious and want to learn more about this, skip ahead and read [How to handle forms](/examples/forms/handling){.page}.
 
 # Interacting with widgets
 

@@ -4,7 +4,7 @@ title: "Relevant combinations of screen readers and browsers"
 navigation_title: "Relevant combos"
 position: 2
 lead: "To reach as many users as possible, it's a pragmatic approach to support the most widely used combinations of browsers and screen readers. Here you learn, which those are. Other requirements may only apply in closed environments that are only open to a specific, deterministic group of users."
-changed: "2018-04-12"
+changed: "2018-05-01"
 ---
 
 # Relevant combinations of screen readers and browsers
@@ -13,7 +13,7 @@ changed: "2018-04-12"
 
 As web developers, we're aware of how hard it is to support all relevant devices, operating systems, and browsers. Adding screen readers to the mixture doesn't make things easier: a long list of screen readers can potentially be combined with another long list of browsers, each combination possibly having its own characteristics.
 
-# TL;DR (too long, didn't read)
+# Short summary
 
 It is impossible to develop and test for dozens of possible combinations of browsers and screen readers. We have had good experiences with taking the following pragmatic approach, namely aiming at the most widely used combinations (newest stable versions):
 

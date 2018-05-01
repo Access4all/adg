@@ -1,13 +1,13 @@
 ---
 layout: layout
-title: "Accessible responsive tables"
+title: "Responsive tables"
 navigation_title: "Responsive"
 position: 7
 lead: "The introduction of smartphones increasingly led web designers to avoid traditional \"bulky\" HTML tables - because these would exceed the limited screen dimensions. Others tried to find ways to change the layout of tables so they would not need so much horizontal space anymore. Responsive tables were born. But to make them accessible, the use of some ARIA is essential."
 changed: "2018-04-16"
 ---
 
-# Accessible responsive tables
+# Responsive tables
 
 **The introduction of smartphones increasingly led web designers to avoid traditional "bulky" HTML tables - because these would exceed the limited screen dimensions. Others tried to find ways to change the layout of tables so they would not need so much horizontal space anymore. Responsive tables were born. But to make them accessible, the use of some ARIA is essential.**
 

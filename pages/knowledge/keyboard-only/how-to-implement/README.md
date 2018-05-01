@@ -4,7 +4,7 @@ title: "How to implement websites that are ready for keyboard only usage"
 navigation_title: "How to implement"
 position: 4
 lead: "Fortunately, to make sure a website is ready to be used by keyboard only, there is very little you need to consider. Still, a lot can go wrong if not paying attention, and bad old habits of some web developers seem to be hard to overcome."
-changed: "2018-04-13"
+changed: "2018-04-30"
 ---
 
 # How to implement websites that are ready for keyboard only usage
@@ -29,6 +29,7 @@ First, be sure any relevant element is focusable by keyboard:
     - Whenever an element should be interacted with, this is the proper way to go.
 - Or by adding the `tabindex="0"` attribute, for example `<div tabindex="0">`
     - This should only be used in situations when an element shall be focusable, but not interactive (a very rare case).
+- A special case are `<a>` tags: if they have an `href` attribute, they are focusable; otherwise, in most browsers they are not.
 
 ## Keyboard operability
 

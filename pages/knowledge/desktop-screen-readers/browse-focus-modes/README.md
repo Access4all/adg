@@ -4,7 +4,7 @@ title: "Screen readers' browse and focus modes"
 navigation_title: "Browse & focus modes"
 position: 5
 lead: "The relevant desktop screen readers on Windows offer different ways of interacting with the underlying application. The most common ones are browse mode and focus mode. We cannot overestimate the importance of thoroughly knowing their differences."
-changed: "2018-04-13"
+changed: "2018-05-01"
 ---
 
 # Screen readers' browse and focus modes
@@ -21,7 +21,7 @@ Reading through a website by moving the screen reader's cursor through a page's 
     - By pressing the `K` key, the cursor is moved to the next link.
 - This allows quick navigation through different elements of a website.
 - In browse mode, the screen reader cursor can be placed on every element on a website, even on those which aren't inherently focusable, e.g. headings (`<h1>`, `<h2>`, etc.) or paragraphs (`<p>`).
-    - Just to make it clear: the web browser's focus is not the same thing as the screen reader cursor (although they often move synchronously)
+    - Just to make it clear: the web browser's focus is not the same thing as the screen reader cursor (although they often move synchronously).
 
 Notice: in other resources, browse mode may sometimes also be called "read" mode.
 
@@ -40,12 +40,18 @@ This mode - where keystrokes aren't intercepted but sent directly to the active 
     - When focus mode is active, a "beep" sound is played.
     - By pressing `Esc`, focus mode can be left (announced by a different sound) and browse mode is active again.
 - If you use the `Tab` key to jump from focusable element to focusable element, focus mode is activated automatically when appropriate:
-    - For elements allowing only basic interaction (for example links or checkboxes), focus mode isn't activated.
+    - For elements allowing only basic interaction (for example links, buttons, and checkboxes), focus mode isn't activated.
         - Basic interaction means that only the `Enter` or `Space` key triggers some interaction.
     - If the element allows complex interaction (for example textareas or comboboxes), focus mode is activated.
         - Complex interaction means that there are additional ways to interact, for example by pressing an arrow key or by entering a value directly.
 
 Notice: in other resources, focus mode may sometimes also be called "forms" or "interaction" mode.
+
+## Associated information
+
+In contrast to browse mode, when in focus mode, screen readers do not only announce the element on which the cursor currently is placed. In addition, they also try to find any information that is in some form associated to it.
+
+For example, when focusing an `<input>` field, its `<label>` is announced, and (if available) also the surrounding `<fieldset>`'s `<legend>`. But also any other reasonable information that can be programmatically determined, like content associated using ARIA's `aria-describedby` (if you haven't done this yet, go back and read [ARIA - when HTML simply isn't enough](/knowledge/aria){.page}).
 
 ## Focus mode vs. keyboard only
 
@@ -87,4 +93,4 @@ When users reach a page, they typically start reading it from top to bottom usin
 - Either they use the `Tab` key to move the focus to the next interactive element.
     - If entering data into a form, usually the user expects more form elements to come until a submit button is reached at the end of the process.
 - Or they switch back to browse mode by pressing `Esc` and read on using `Down` key.
-    - This usually is only necessary if a form isn't structured well (if you are really curious and want to learn more about this, skip ahead and read [Forms, validations, and error messages](/examples/forms){.page}).
+    - This usually is only necessary if a form isn't structured well (if you are really curious and want to learn more about this, skip ahead and read [Forms](/examples/forms){.page}).

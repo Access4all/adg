@@ -4,14 +4,14 @@ title: "Alternative techniques for labelling page regions"
 navigation_title: "Alternative techniques"
 position: 6
 lead: "Although headings are the most widely known technique to label page regions (like header, navigation, etc.), there exist other ways to label content in HTML. In our opinion though, headings are both the most expressive and simple technique. But let's examine the situation a bit deeper."
-changed: "2018-04-09"
+changed: "2018-05-01"
 ---
 
 # Alternative techniques for labelling page regions
 
 **Although headings are the most widely known technique to label page regions (like header, navigation, etc.), there exist other ways to label content in HTML. In our opinion though, headings are both the most expressive and simple technique. But let's examine the situation a bit deeper.**
 
-# TL;DR - too long, didn't read
+# Short summary
 
 Besides traditional headings, there exists at least one other way to label regions: a combination of HTML5 structural elements, labelled using ARIA.
 

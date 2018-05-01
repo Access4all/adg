@@ -13,7 +13,7 @@ changed: "2018-04-16"
 
 # A table of divs
 
-As we have seen, it is possible to re-apply semantics to an element that has somehow lost its inherent semantics. This is done using ARIA (if you haven't done this yet, go back and read [Accessible responsive tables](/examples/tables/responsive){.page}).
+As we have seen, it is possible to re-apply semantics to an element that has somehow lost its inherent semantics. This is done using ARIA (if you haven't done this yet, go back and read [Responsive tables](/examples/tables/responsive){.page}).
 
 We can try to follow this approach "ad absurdum" by trying to add all needed semantics using ARIA alone.
 

@@ -4,14 +4,16 @@ title: "General bad table examples"
 navigation_title: "Bad examples"
 position: 3
 lead: "Oftentimes, developers forget to mark up a table's header cells with the proper HTML tag. Instead, they are styled only visually as headers. But tables lacking proper header cells are tricky to navigate by screen reader users, and the more complex they are, the less they can be understood."
-changed: "2018-04-13"
+changed: "2018-04-30"
 ---
 
 # General bad table examples
 
 **Oftentimes, developers forget to mark up a table's header cells with the proper HTML tag. Instead, they are styled only visually as headers. But tables lacking proper header cells are tricky to navigate by screen reader users, and the more complex they are, the less they can be understood.**
 
-# A table without header cells
+Most accessibility problems regarding tables are caused due to bad semantics. So if you haven't done this yet, go back and read [Semantics and their importance for accessibility](/knowledge/semantics){.page}.
+
+# No header cells
 
 The table in the following example doesn't offer any real header cells (`<th>` elements); instead, only data cells are used (`<td>` elements). Those cells that are meant to be headers are only styled visually using CSS `font-weight: bold`, attached to a `.th` class.
 
@@ -23,7 +25,7 @@ And while this is a very small table, you may imagine how hard it will be to bro
 
 ![The bookmarklet "Contents Structured" applied to the table](_media/the-bookmarklet-contents-structured-applied-to-the-table.png){.image}
 
-# A table with only horizontal header cells
+# Header cells for columns, but not for rows
 
 The table in the following example indeed has a header cell for each column (the top row), but the data rows don't have one.
 

@@ -4,14 +4,14 @@ title: "How screen readers work - and why they seem so buggy"
 navigation_title: "So buggy!"
 position: 12
 lead: "Sitting on top of another application, screen readers announce the underlying content - often trying to compensate for inadequate presentation by both the underlying application and its content. This is a very hard task and prone to regressions, as we are trying to explain here."
-changed: "2018-04-13"
+changed: "2018-05-01"
 ---
 
 # How screen readers work - and why they seem so buggy
 
 **Sitting on top of another application, screen readers announce the underlying content - often trying to compensate for inadequate presentation by both the underlying application and its content. This is a very hard task and prone to regressions, as we are trying to explain here.**
 
-# TL;DR (too long, didn't read)
+# Short summary
 
 Screen readers "sit" on top of another application, conveying its contents to the user through audio or braille.
 

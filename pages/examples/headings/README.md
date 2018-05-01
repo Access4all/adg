@@ -21,4 +21,4 @@ We then address some often posed [concerns about search engine optimisation](/ex
 
 While headings are the most widely known and robust technique to label page regions, there exist [other ways to label content](/examples/headings/alternative-techniques){.page title="Alternative techniques for labelling page regions"} in HTML (though we don't recommend to use them).
 
-Finally, we explain why the seemingly genius [HTML5's heading algorithm](/examples/headings/html5-outline){.page title="HTML5's headings outline algorithm"} is not accessible, and what alternatives there are.
+Finally, we explain why the seemingly genius [HTML5's heading algorithm](/examples/headings/html-5-outline){.page title="HTML 5's headings outline algorithm"} is not accessible, and what alternatives there are.

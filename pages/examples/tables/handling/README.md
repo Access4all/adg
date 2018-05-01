@@ -3,13 +3,13 @@ layout: layout
 title: "How to handle tables"
 navigation_title: "Handling"
 position: 1
-lead: "To work through and understand the examples in this chapter, it is good to have a screen reader at hand and know how to handle it. In addition to this, there are some tools and bookmarklets that can be a huge help in your development workflow."
-changed: "2018-04-13"
+lead: "Tables consist of solely browsable elements and do not offer any interactivity. To work through and understand the examples in this chapter, it is good to have a screen reader at hand and know how to handle it. In addition to this, there are some tools and bookmarklets that can be a huge help in your development workflow."
+changed: "2018-04-18"
 ---
 
 # How to handle tables
 
-**To work through and understand the examples in this chapter, it is good to have a screen reader at hand and know how to handle it. In addition to this, there are some tools and bookmarklets that can be a huge help in your development workflow.**
+**Tables consist of solely browsable elements and do not offer any interactivity. To work through and understand the examples in this chapter, it is good to have a screen reader at hand and know how to handle it. In addition to this, there are some tools and bookmarklets that can be a huge help in your development workflow.**
 
 # Keyboard only handling
 
@@ -23,7 +23,7 @@ For screen reader users, headings offer a lot of special functionalities. Here f
 
 - `T`: jump to next table
 
-Screen readers will then announce the number of rows and columns, together with the table's `<caption>` (if available):
+When reaching a table, screen readers will announce the number of rows and columns, together with the table's `<caption>` (if available):
 
 > My hobbies. Table with 4 rows and 3 columns.
 

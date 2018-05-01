@@ -105,4 +105,4 @@ Press `F` to jump to form elements, or press `B` to jump to buttons. Add `Shift`
 
 Use case: to quickly find the login form, simply search for the respective input field by pressing `F`.
 
-If you are really curious and want to learn more about this, skip ahead and read [How to browse forms](/examples/forms/how-to-browse-forms){.page}.
+If you are really curious and want to learn more about this, skip ahead and read [How to handle forms](/examples/forms/handling){.page}.
