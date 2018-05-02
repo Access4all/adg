@@ -4,7 +4,7 @@ title: "General good form example"
 navigation_title: "Good example"
 position: 2
 lead: "Forms are widely used to accept user input, be it for transferring it to the server or to act upon it locally using some JavaScript. HTML provides for accessibility, so cleanly laid out and marked up form controls are already fully accessible all by themselves. Still, screen readers may sometimes announce specific elements a bit irritatingly."
-changed: "2018-05-01"
+changed: "2018-05-02"
 ---
 
 # General good form example
@@ -55,7 +55,15 @@ Another such attribute is `readonly`: it makes a form control immutable by the u
 
 Some other attributes are not announced equally intuitive. For example, plain text inputs are announced as "has autocomplete" by NVDA. This is because HTML offers an [`autocomplete` attribute for single line text inputs](https://www.w3schools.com/tags/att_input_autocomplete.asp), which by default is set to `true`.
 
-This option tells the browser to remember data previously input by the user and to offer those in a dropdown for re-use. This may be counter-intuitive, because it doesn't have anything to do with an autosuggest feature like it is offered for example by [Google Search](https://www.google.com) (if you are really curious and want to learn more about this, skip ahead and read [](/examples/widgets/autocomplete-widgets-a-k-a-auto-suggest-look-ahead-type-ahead-){.page title="Autocomplete widgets (a.k.a. auto-suggest, look-ahead, type-ahead)"}).
+This option tells the browser to remember data previously input by the user and to offer those in a dropdown for re-use.
+
+![Browser standard autocomplete](_media/browser-standard-autocomplete.png){.image}
+
+This may be counter-intuitive, because it doesn't have anything to do with an autosuggest feature like it is offered for example by [Google Search](https://www.google.com):
+
+![Google autosuggest](_media/google-autosuggest.png){.image}
+
+If you are really curious and want to learn more about this, skip ahead and read [Autocomplete widgets (a.k.a. auto-suggest, look-ahead, type-ahead)](/examples/widgets/autocomplete-widgets-a-k-a-auto-suggest-look-ahead-type-ahead-){.page}.
 
 ### Missing announcements
 
