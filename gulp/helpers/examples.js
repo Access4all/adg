@@ -41,14 +41,18 @@ const getTitle = href => {
 const getCodePenForm = (code, title) => {
   const config = {
     title: title,
+
     // description: code.details.description,
     html: code.html,
+
     // html_pre_processor: 'none',
     css: code.css,
     css_pre_processor: 'scss',
+
     // css_starter: 'neither',
     // css_prefix_free: false,
     js: code.js
+
     // js_pre_processor: 'none',
     // js_modernizr: false,
     // js_library: '',
@@ -74,6 +78,17 @@ const getExample = (title, href, filePath) => {
   )
   const code = getCode(dir)
 
+  const btns = ['html', 'css', 'js'].filter(type => code[type]).map(type => {
+    const markup = hljs.highlightAuto(code[type], [type])
+    var id = href
+      .toLowerCase()
+      .replace(/ /g, '-')
+      .replace(/[^\w-]+/g, '')
+
+    return `<div class="control"><input type="checkbox" id="${id +
+      type}" name="${id}" value="${type}" /><label class="button" for="${id +
+      type}">Show ${type.toUpperCase()} code</label></div>`
+  })
   const blocks = ['html', 'css', 'js'].filter(type => code[type]).map(type => {
     const markup = hljs.highlightAuto(code[type], [type])
     var id =
@@ -82,10 +97,9 @@ const getExample = (title, href, filePath) => {
         .replace(/ /g, '-')
         .replace(/[^\w-]+/g, '') + type
 
-    return `<div class="control"><input type="checkbox" id="${id}" /><label for="${id}">Show ${type.toUpperCase()} code</label></div>
-      <div class="panel" id="${id}_panel" style="display: none"><pre><code>${
-  markup.value
-}</code></pre></div>`
+    return `<div class="panel" id="${id}_panel" style="display: none"><pre><code>${
+      markup.value
+    }</code></pre></div>`
   })
 
   const codePenForm = getCodePenForm(code, title)
@@ -101,7 +115,9 @@ const getExample = (title, href, filePath) => {
   return `
   ${exampleLink}
   ${codePenForm}
-  <div class="accordion">${blocks.join('')}</div>`
+  <div class="accordion"><div class="controlls">${btns.join(
+    ''
+  )}</div><div class="panels">${blocks.join('')}</div></div>`
 }
 
 module.exports = {

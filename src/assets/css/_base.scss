@@ -93,14 +93,12 @@ p.example {
   font-weight: bold;
 
   .control {
+    display: inline-block;
     label:hover {
       cursor: pointer;
     }
-
     input {
-      width: 10px;
-      margin-left: -10px;
-      opacity: 0;
+      @include visuallyhidden;
     }
 
     input:focus + label {

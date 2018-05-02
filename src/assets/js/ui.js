@@ -17,14 +17,28 @@ $(document).ready(function () {
       }
     })
     return $checkbox.change(function () {
-      var $panel, panel_id
-      panel_id = `#${$checkbox.attr('id')}_panel`
-      $panel = $(panel_id)
-      if ($checkbox.is(':checked')) {
-        return $panel.show()
-      } else {
-        return $panel.hide()
+      function hideShowPanel (hide, id) {
+        var $trigger = $("[for='" + id + "']"),
+          $panel = $(`#${id}_panel`)
+
+        if (!hide) {
+          $trigger.addClass('is-active')
+          $panel.show()
+        } else {
+          $trigger.removeClass('is-active')
+          $panel.hide()
+        }
       }
+
+      $("[name='" + $(this).attr('name') + "']")
+        .not($(this))
+        .each(function () {
+          var $btn = $(this)
+          $btn.prop('checked', false)
+          hideShowPanel(true, $btn.attr('id'))
+        })
+
+      return hideShowPanel(!$(this).is(':checked'), $(this).attr('id'))
     })
   })
 })

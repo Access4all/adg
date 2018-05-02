@@ -45,6 +45,7 @@ const extendNavigationItem = (origItem, index, options) => {
     const next = options.flattened[flattenedIndex + 1]
 
     item.isCurrent = true
+    item.isActive = true
 
     if (prev) {
       options.prevNext.prev = {
