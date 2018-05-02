@@ -21,10 +21,27 @@
 .cardmenu--card--link {
   @include card;
   box-shadow: 0 22px 30px -27px rgba(0, 0, 0, 0.3);
+  @include theme-isLight {
+    box-shadow: 0 10px 34px 0 rgba(0, 0, 0, 0.2);
+  }
   width: 100%;
   height: 100%;
   
-
+  &:hover,
+  &:focus {
+    &.cardmenu--card--link-welcome {
+      @include theme(border-color, 0);
+    }
+    &.cardmenu--card--link-setup {
+      @include theme(border-color, 1);
+    }
+    &.cardmenu--card--link-knowledge {
+      @include theme(border-color, 2);
+    }
+    &.cardmenu--card--link-examples {
+      @include theme(border-color, 3);
+    }
+  }
 }
 
 .cardmenu--card--icon {
@@ -44,24 +61,25 @@
     display: block;
     margin: 0 auto;
     height: 35px;
+
     .cardmenu--card--link-welcome & {
       &:after {
-       @include sprite($shake);
+        @include sprite($shake);
       }
     }
     .cardmenu--card--link-setup & {
       &:after {
-      @include sprite($setup);
+        @include sprite($setup);
       }
     }
     .cardmenu--card--link-knowledge & {
       &:after {
-      @include sprite($bulb);
+        @include sprite($bulb);
       }
     }
     .cardmenu--card--link-examples & {
       &:after {
-      @include sprite($book);
+        @include sprite($book);
       }
     }
   }
@@ -69,6 +87,15 @@
 
 .cardmenu--card-article {
   @include font-xs;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .cardmenu--card--label {
+    height: auto;
+    flex: 1 0 auto;
+    min-height: 0;
+  }
 
   .cardmenu--card--linklabel {
     margin-top: 20px;

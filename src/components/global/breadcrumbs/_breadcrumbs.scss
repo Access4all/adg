@@ -1,10 +1,21 @@
 .breadcrumbs {
-    margin-bottom: 2 * $gutter;
+    margin-top: $gutter;
+    margin-bottom: $gutter;
+    @include mobile {
+        margin-top: $gutter / 2;
+        margin-bottom: $gutter / 2;
+    }
+    &:before {
+        content: "";
+        display: inline-block;
+        @include sprite($pin);
+        vertical-align: middle;
+    }
 }
 
 
 .breadcrumbs--list {
-    display: block;
+    display: inline-block;
     font-size: 0;
 }
 

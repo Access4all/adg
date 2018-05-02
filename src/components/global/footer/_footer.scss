@@ -1,0 +1,15 @@
+.footer {
+  padding: $gutter 60px;
+  @include theme(background-color, var(--theme-bg-color-inverse));
+}
+
+.footer--inner {
+  @include l-site_width;
+  @include clearfix;
+}
+.footer--left {
+  float: left;
+}
+.footer--right {
+  float: right;
+}

@@ -17,25 +17,28 @@
 </head>
 <body class="js-theme theme{{#if section }} theme-{{section}}{{/if}}">
   <div id="body">
-    <header class="header" id="header">
+    <div id="main">
+      <header class="header" id="header">
+          <div class="l-site_width">
+            <h1 class="visuallyhidden">Accessibility Developer Guide</h1>
+          </div>
+      </header>
+      {{> "global/navbar/navbar"}}
+      <main id="main-content" class="site-content">
         <div class="l-site_width">
-          <h1 class="visuallyhidden">Accessibility Developer Guide</h1>
+          {{> "global/breadcrumbs/breadcrumbs"}}
+          {{> "content/main_title/main_title" title=title}}
+          {{#if subPages}}
+            {{> "content/cardmenu/cardmenu" menuitem=subPages}}
+          {{/if}}
+          {{#if contents}}
+            {{> "content/text_container/text_container" content=contents}}
+          {{/if}}
+          {{> "content/prev_next/prev_next" prev=previousPage next=nextPage}}
         </div>
-    </header>
-    {{> "global/navbar/navbar"}}
-    <main id="main-content" class="site-content">
-      <div class="l-site_width">
-        {{> "global/breadcrumbs/breadcrumbs"}}
-        {{> "content/main_title/main_title" title=title}}
-        {{#if subPages}}
-          {{> "content/cardmenu/cardmenu" menuitem=subPages}}
-        {{/if}}
-        {{> "content/text_container/text_container" content=contents}}
-
-
-        {{> "content/prev_next/prev_next" prev=previousPage next=nextPage}}
-      </div>
-    </main>
+      </main>
+    </div>
+    {{> "global/footer/footer"}}
   </div>
 
   <script src="/js/scripts.js"></script>
