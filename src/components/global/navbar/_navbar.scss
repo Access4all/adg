@@ -87,19 +87,19 @@ $navWidthMax: 300px;
 }
 
 @include above-mobile {
-  .navbar--toggle--input ~ .site-content {
+  .footer,
+  .site-content {
     padding-left: $navWidthMin;
   }
+  .navbar--toggle--input:checked ~ .footer,
   .navbar--toggle--input:checked ~ .site-content {
     padding-left: $navWidthMax;
   }
 }
 
 @include above-tablet {
-  .navbar--toggle--input ~ .site-content {
-    padding-left: $navWidthMin;
-  }
-  .navbar--toggle--input ~ .site-content {
+  .footer,
+  .site-content {
     padding-left: $navWidthMax;
   }
   .navbar--toggle {
