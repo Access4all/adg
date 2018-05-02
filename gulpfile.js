@@ -29,7 +29,8 @@ gulp.task('html', cb =>
         atom: './dist/feed/atom.xml',
         rss: './dist/feed/rss.xml'
       },
-      errorHandler
+      errorHandler,
+      rootDir: __dirname
     },
     () => {
       browserSync.reload()

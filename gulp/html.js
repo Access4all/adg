@@ -115,7 +115,7 @@ const flattenNavigation = items =>
   }, [])
 
 module.exports = (config, cb) => {
-  const markdown = requireNew('./helpers/markdown')
+  const markdown = requireNew('./helpers/markdown')(config.rootDir)
   const metatags = requireNew('./helpers/metatags')
   const Feed = requireNew('./helpers/rss')
   const appConfig = requireNew('../config')

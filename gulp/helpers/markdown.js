@@ -12,7 +12,7 @@ const plugins = {
   responsive: require('@gerhobbelt/markdown-it-responsive')
 }
 
-module.exports = filePath => {
+module.exports = rootDir => filePath => {
   const markdown = markdownIt({
     html: true,
     linkify: true,
@@ -21,11 +21,6 @@ module.exports = filePath => {
   const examples = requireNew('./examples')
 
   return markdown
-    .use(
-      plugins.regexp(/@example\[(.*?)\]\((.*?)\)/, (match, utils) => {
-        return examples.getExample(match[1], match[2], filePath)
-      })
-    )
     .use(plugins.abbr)
     .use(plugins.attrs)
     .use(plugins.deflist)
@@ -75,24 +70,75 @@ module.exports = filePath => {
       tokens[idx].attrSet('title', metaTitle)
     })
     .use(() => {
-      let c = 0
-
-      markdown.core.ruler.push('manipulate_titles', state => {
+      markdown.core.ruler.push('increase_heading_level', state => {
         state.tokens.forEach(token => {
           if (['heading_open', 'heading_close'].includes(token.type)) {
-            // Identify first content title
-            if (c === 0) {
-              token.attrs = [['class', 'first']]
-            }
-
-            // Increase heading level
             token.tag = token.tag.replace(
               /[0-9]+/,
               match => parseInt(match, 10) + 1
             )
-
-            c++
           }
+        })
+      })
+    })
+    .use(() => {
+      markdown.core.ruler.push('wrap_example_links', state => {
+        state.tokens.forEach(token => {
+          const exampleLinkToken = token.children
+            ? token.children.find(examples.getLink)
+            : null
+
+          if (!exampleLinkToken) {
+            return
+          }
+
+          const exampleLink = examples.getLink(exampleLinkToken)
+
+          const wrappedTokens = []
+
+          token.children = token.children.reduce((acc, child, i) => {
+            if (wrappedTokens.includes(i)) {
+              return acc
+            }
+
+            // Wrap link with container and add example code
+            if (exampleLink === examples.getLink(child)) {
+              const openingWrapper = new state.Token('html_inline', '', 0)
+              const closingWrapper = new state.Token('html_inline', '', 0)
+              let title = ''
+
+              openingWrapper.content = '<div class="example">'
+
+              acc.push(openingWrapper)
+
+              token.children.slice(i).some((item, ii) => {
+                wrappedTokens.push(i + ii)
+                acc.push(item)
+
+                if (item.type === 'text') {
+                  title += item.content
+                }
+
+                if (item.type === 'link_close') {
+                }
+              })
+
+              const examplePath = path.isAbsolute(exampleLink)
+                ? path.join(rootDir, exampleLink)
+                : path.resolve(path.dirname(filePath), exampleLink)
+              const example = examples.getExample(title, examplePath, filePath)
+
+              closingWrapper.content = `${example}</div>`
+
+              acc.push(closingWrapper)
+
+              return acc
+            }
+
+            acc.push(child)
+
+            return acc
+          }, [])
         })
       })
     })
