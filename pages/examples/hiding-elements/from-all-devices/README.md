@@ -30,4 +30,4 @@ In addition, it makes obvious in the DOM already what elements are hidden, so it
 
 ## Marginal note about ARIA references
 
-Elements hidden with the techniques shown on this page can still provide content when being referenced using `aria-labelledby` or `aria-describedby`. More info here: [ARIA label, describedby and labelledby Attributes](/examples/sensible-usage-of-aria-roles-and-attributes/aria-label-describedby-and-labelledby-attributes).
+Elements hidden with the techniques shown on this page can still provide content when being referenced using `aria-labelledby` or `aria-describedby`. More info here: [ARIA label, describedby and labelledby Attributes](/pages/examples/sensible-usage-of-aria-roles-and-attributes/aria-label-describedby-and-labelledby-attributes).

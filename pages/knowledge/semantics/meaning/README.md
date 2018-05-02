@@ -118,7 +118,7 @@ Screen readers recognise these containers, announce them to the user and offer a
 
 ### Missing semantics
 
-It is very important to acknowledge that while visual attributes are displayed in web browsers, screen readers don't care about them. Regardless whether text has `color: blue` or `color: red`, whether it is `font-size: 1px` or `font-size: 100px`, whether it has a `border` or a `text-shadow`, it's always announced as plain text. Only if it is semantically marked up, screen readers do care (if you are really curious and want to learn more about this, skip ahead and read [Screen readers don't convey visual attributes](/knowledge/desktop-screen-readers/no-visual-attributes)).
+It is very important to acknowledge that while visual attributes are displayed in web browsers, screen readers don't care about them. Regardless whether text has `color: blue` or `color: red`, whether it is `font-size: 1px` or `font-size: 100px`, whether it has a `border` or a `text-shadow`, it's always announced as plain text. Only if it is semantically marked up, screen readers do care (if you are really curious and want to learn more about this, skip ahead and read [Screen readers don't convey visual attributes](/pages/knowledge/desktop-screen-readers/no-visual-attributes)).
 
 Let's now look at the following example, where the developers may not have felt like overriding default browser styles. So they decided to avoid real headings and just apply some visual attributes to meaningless containers:
 
@@ -217,4 +217,4 @@ In addition to this, proper semantics allow the user to navigate content quickly
 
 So to create accessible websites, it is highest priority to provide correct semantics, while presentation always has lower priority. Please live with that.
 
-By the way, there are a lot of automated test tools that help preventing many of the problems described above, for example [TotalValidator](/setup/helper-tools/totalvalidator).
+By the way, there are a lot of automated test tools that help preventing many of the problems described above, for example [TotalValidator](/pages/setup/helper-tools/totalvalidator).

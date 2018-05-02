@@ -36,4 +36,4 @@ While looking at a page, visual users usually notice any change that may happen 
 
 To screen readers, such a change to the page can potentially only be observed if their focus is placed on the element in question. Changes to any other elements generally are not observed and thus not conveyed to users. In the example above, screen reader users will simply loose their session, without ever knowing that there had been a well-meant warning.
 
-To handle situations like this, there are ways to tell screen readers to observe specific elements for changes; so if you are really curious and want to learn more about this, skip ahead and read [How to implement websites that are ready for screen reader usage](/knowledge/desktop-screen-readers/how-to-implement).
+To handle situations like this, there are ways to tell screen readers to observe specific elements for changes; so if you are really curious and want to learn more about this, skip ahead and read [How to implement websites that are ready for screen reader usage](/pages/knowledge/desktop-screen-readers/how-to-implement).

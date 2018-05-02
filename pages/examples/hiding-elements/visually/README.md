@@ -25,7 +25,7 @@ There are several implementations of this workaround. The one presented here is 
 
 [Hiding an element visually (example) ![Preview](_examples/hiding-an-element-visually/_preview.png)](_examples/hiding-an-element-visually)
 
-For example, this technique is useful to visually hide headings, as described here: [Adding visually hidden headings to complete a page's outline](/examples/headings/visually-hidden-headings).
+For example, this technique is useful to visually hide headings, as described here: [Adding visually hidden headings to complete a page's outline](/pages/examples/headings/visually-hidden-headings).
 
 ## Toggling visibility on focus
 
@@ -46,4 +46,4 @@ The usage of this technique has some side effects for visual users:
 
 ## Further possibilities using ARIA
 
-Instead of moving elements out of the viewport, it is possible to replace or add text content specifically for screen readers using ARIA: [ARIA label, describedby and labelledby Attributes](/examples/sensible-usage-of-aria-roles-and-attributes/aria-label-describedby-and-labelledby-attributes).
+Instead of moving elements out of the viewport, it is possible to replace or add text content specifically for screen readers using ARIA: [ARIA label, describedby and labelledby Attributes](/pages/examples/sensible-usage-of-aria-roles-and-attributes/aria-label-describedby-and-labelledby-attributes).
