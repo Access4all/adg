@@ -10,7 +10,7 @@ changed: "2018-04-30"
 
 The following example provides a very basic table: both the first row and first column are made up of header cells (`<th>`), while the respective data columns are made up of data cells (`<td>`). A `<caption>` adds a useful description to the table.
 
-[Example: Generally good table ![Preview](_examples/preview.png)](_examples/generally-good-table)
+[Generally good table (example) ![Preview](_examples/_preview.png)](_examples/generally-good-table)
 
 Navigate the example using table navigation and notice how the screen reader announces the current data cell's corresponding header cells:
 

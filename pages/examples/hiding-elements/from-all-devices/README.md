@@ -10,7 +10,7 @@ changed: "2018-04-02"
 
 Elements can be hidden completely from all devices (including screen readers). For this, the HTML attribute `hidden` can be set on an element directly. Or using CSS, either `display: none` or `visibility: hidden` can be set.
 
-[Example: Hiding elements from all devices ![Preview](_examples/preview.png)](_examples/hiding-elements-from-all-devices)
+[Hiding elements from all devices (example) ![Preview](_examples/_preview.png)](_examples/hiding-elements-from-all-devices)
 
 ## Cross browser compatibility
 

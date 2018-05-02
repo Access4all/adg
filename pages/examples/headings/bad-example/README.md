@@ -10,7 +10,7 @@ changed: "2018-04-03"
 
 This heading outline in the following example has three problems.
 
-[Example: Generally bad headings ![Preview](_examples/preview.png)](_examples/generally-bad-headings)
+[Generally bad headings (example) ![Preview](_examples/_preview.png)](_examples/generally-bad-headings)
 
 On the visual level, the problems are hard to spot. So let's take a closer look at the document outline.
 

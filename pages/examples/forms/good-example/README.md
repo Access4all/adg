@@ -1,7 +1,7 @@
 ---
 navigation_title: "Good example"
 position: 2
-changed: "2018-05-01"
+changed: "2018-05-02"
 ---
 
 # General good form example
@@ -30,7 +30,7 @@ As the controls are surrounded with a `<form>` tag, the form can be submitted wi
 
 In the example, all attributes irrelevant for demonstration purposes (for example `name`) are omitted.
 
-[Example: Generally good form ![Preview](_examples/preview.png)](_examples/generally-good-form)
+[Generally good form (example) ![Preview](_examples/_preview.png)](_examples/generally-good-form)
 
 Navigate the example using `Tab` and notice how the screen reader announces all relevant information about the current form control.
 
@@ -52,7 +52,15 @@ Another such attribute is `readonly`: it makes a form control immutable by the u
 
 Some other attributes are not announced equally intuitive. For example, plain text inputs are announced as "has autocomplete" by NVDA. This is because HTML offers an [`autocomplete` attribute for single line text inputs](https://www.w3schools.com/tags/att_input_autocomplete.asp), which by default is set to `true`.
 
-This option tells the browser to remember data previously input by the user and to offer those in a dropdown for re-use. This may be counter-intuitive, because it doesn't have anything to do with an autosuggest feature like it is offered for example by [Google Search](https://www.google.com) (if you are really curious and want to learn more about this, skip ahead and read [](/examples/widgets/autocomplete-widgets-a-k-a-auto-suggest-look-ahead-type-ahead-){title="Autocomplete widgets (a.k.a. auto-suggest, look-ahead, type-ahead)"}).
+This option tells the browser to remember data previously input by the user and to offer those in a dropdown for re-use.
+
+![Browser standard autocomplete](_media/browser-standard-autocomplete.png)
+
+This may be counter-intuitive, because it doesn't have anything to do with an autosuggest feature like it is offered for example by [Google Search](https://www.google.com):
+
+![Google autosuggest](_media/google-autosuggest.png)
+
+If you are really curious and want to learn more about this, skip ahead and read [Autocomplete widgets (a.k.a. auto-suggest, look-ahead, type-ahead)](/examples/widgets/autocomplete-widgets-a-k-a-auto-suggest-look-ahead-type-ahead-).
 
 #### Missing announcements
 
