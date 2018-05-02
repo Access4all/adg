@@ -51,7 +51,7 @@ module.exports = filePath => {
           ]
         },
         sizes: {
-          '*': '(min-width: 36em) 33.3vw, 100vw'
+          '*': '(max-width: 400px) 75vw, ((min-width: 401px) and (max-width: 750px)) 80vw, autoc'
         }
       }
     })

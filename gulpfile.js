@@ -125,12 +125,12 @@ gulp.task('media:resize', () => {
         sizes: [
           {
             suffix: 'medium',
-            width: 1000,
+            width: 640,
             upscale: false
           },
           {
             suffix: 'small',
-            width: 500,
+            width: 320,
             upscale: false
           }
         ]
