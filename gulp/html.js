@@ -45,6 +45,7 @@ const extendNavigationItem = (origItem, index, options) => {
     const next = options.flattened[flattenedIndex + 1]
 
     item.isCurrent = true
+    item.isActive = true
 
     if (prev) {
       options.prevNext.prev = {
@@ -64,7 +65,8 @@ const extendNavigationItem = (origItem, index, options) => {
 
     item.children.forEach(child => {
       options.subPages.push({
-        title: child.titleDetailed,
+        title: child.title,
+        lead: child.lead,
         url: child.url,
         isSection: false
       })
@@ -176,6 +178,7 @@ module.exports = (config, cb) => {
             parent: parent !== url ? parent : null,
             title: file.frontMatter.navigation_title,
             titleDetailed: file.frontMatter.title,
+            lead: file.frontMatter.lead,
             position: file.frontMatter.position
           })
 

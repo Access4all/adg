@@ -17,6 +17,25 @@
     @include mobile {
       width: calc(100% / 2 - 20px);
     }
+
+    .cardmenu-article & {
+      width: calc(100% / 2 - 20px);
+      @include mobile {
+        width: calc(100% / 1 - 20px);
+      }
+    }
+}
+.cardmenu--card {
+  @include font-xs;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .cardmenu--card--inner {
+    height: auto;
+    flex: 1 0 auto;
+    min-height: 0;
+  }
 }
 .cardmenu--card--link {
   @include card;
@@ -26,7 +45,7 @@
   }
   width: 100%;
   height: 100%;
-  
+
   &:hover,
   &:focus {
     &.cardmenu--card--link-welcome {
@@ -86,15 +105,10 @@
 }
 
 .cardmenu--card-article {
-  @include font-xs;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-
   .cardmenu--card--label {
-    height: auto;
-    flex: 1 0 auto;
-    min-height: 0;
+    display: block;
+    margin-bottom: .5em;
+    @include font-weight(bold);
   }
 
   .cardmenu--card--linklabel {

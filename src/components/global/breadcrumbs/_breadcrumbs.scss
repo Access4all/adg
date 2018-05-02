@@ -2,8 +2,8 @@
     margin-top: $gutter;
     margin-bottom: $gutter;
     @include mobile {
-        margin-top: $gutter / 2;
-        margin-bottom: $gutter / 2;
+        margin-top: $gutter / 4;
+        margin-bottom: $gutter / 4;
     }
     &:before {
         content: "";
@@ -22,16 +22,22 @@
 .breadcrumbs--list--item {
     display: inline-block;
     & + & {
-        margin-left: $gutter / 2;
+        margin-left: $gutter / 4;
     }
 }
 
 .breadcrumbs--list--item--link {
     display: block;
-    @include font-s;
+    @include font-xs;
     &:after {
         content: "/";
-        padding-left: $gutter / 2;
+        padding-left: $gutter / 4;
         display: inline-block;
     }
+    //.is-back-link &,
+    &:hover {
+      @include theme(color, var(--theme-color-dark));
+      text-decoration: underline;
+    }
+
 }
