@@ -7,8 +7,8 @@
   --theme-bg-color-inverse: var(--theme-color-dark);
 
   &.is-below {
-    --theme-bg-color: $c-white;
     --theme-main-color: var(--theme-color-dark);
+    --theme-bg-color: $c-white;
     --theme-main-color-inverse: $c-black;
     --theme-bg-color-inverse: var(--theme-color-light);
   }
