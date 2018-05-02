@@ -1,6 +1,6 @@
 .main_title {
 	@include h1;
-  @include theme-color;
-	margin-top: 8 * $gutter;
-	margin-bottom: 4 * $gutter;
+	@include theme-color;
+	padding-top: 2em;
+	padding-bottom: 1.5em;
 }

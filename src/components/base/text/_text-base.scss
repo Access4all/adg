@@ -39,6 +39,16 @@
 @mixin h1 {
 	@include font-xxl;
 	font-family: $brand-font;
+	@include tablet {
+		@include font-xl;
+	}
+	@include mobile {
+		@include font-l;
+	}
+	@include mobile-narrow {
+		@include font-m;
+		@include font-weight(bold);
+	}
 }
 
 @mixin h2 {

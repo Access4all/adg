@@ -90,13 +90,15 @@ $navWidthMax: 300px;
 }
 
 .navbar--toggle--input ~ .site-content {
-  margin-left: $navWidthMin;
+  @include above-mobile {
+    padding-left: $navWidthMin;
+  }
 }
 .navbar--toggle--input:checked ~ .site-content {
-  margin-left: $navWidthMax;
+  @include above-mobile {
+    padding-left: $navWidthMax;
+  }
 }
-
-
 
 
 .navbar--toggle {
