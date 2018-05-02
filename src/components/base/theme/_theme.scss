@@ -2,12 +2,15 @@
 .theme {
   @include theme-background-color;
   --theme-main-color: $c-black;
-
   --theme-bg-color: var(--theme-color-light);
+  --theme-main-color-inverse: $c-white;
+  --theme-bg-color-inverse: var(--theme-color-dark);
 
   &.is-below {
     --theme-bg-color: $c-white;
     --theme-main-color: var(--theme-color-dark);
+    --theme-main-color-inverse: $c-black;
+    --theme-bg-color-inverse: var(--theme-color-light);
   }
 }
 
