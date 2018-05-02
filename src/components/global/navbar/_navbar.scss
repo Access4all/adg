@@ -61,7 +61,6 @@ $navWidthMax: 300px;
 }
 
 .navbar--inner {
-  display: none;
   overflow: auto;
   width: $navWidthMax;
   max-width: 100vw;
@@ -71,32 +70,40 @@ $navWidthMax: 300px;
 
 
 
-.navbar--search,
-.navbar--inner {
-  display: none;
-}
-
-.navbar--toggle--input:checked ~ .navbar {
-  @include mobile {
-    width: 100%;
-  }
-  .navbar--inner,
-  .navbar--search {
-    display: block;
-  }
-  .navbar--toggle-search {
+@include tablet {
+  .navbar--search,
+  .navbar--inner {
     display: none;
   }
-}
-
-.navbar--toggle--input ~ .site-content {
-  @include above-mobile {
-    padding-left: $navWidthMin;
+  .navbar--toggle--input:checked ~ .navbar {
+    .navbar--inner,
+    .navbar--search {
+      display: block;
+    }
+    .navbar--toggle-search {
+      display: none;
+    }
   }
 }
-.navbar--toggle--input:checked ~ .site-content {
-  @include above-mobile {
+
+@include above-mobile {
+  .navbar--toggle--input ~ .site-content {
+    padding-left: $navWidthMin;
+  }
+  .navbar--toggle--input:checked ~ .site-content {
     padding-left: $navWidthMax;
+  }
+}
+
+@include above-tablet {
+  .navbar--toggle--input ~ .site-content {
+    padding-left: $navWidthMin;
+  }
+  .navbar--toggle--input ~ .site-content {
+    padding-left: $navWidthMax;
+  }
+  .navbar--toggle {
+    display: none;
   }
 }
 
