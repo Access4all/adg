@@ -1,16 +1,16 @@
 ---
-layout: layout
 navigation_title: "From all devices"
 position: 3
-lead: "To hide an element from all devices means just that: no single device will perceive it anymore (although the element still is present in the DOM). This can be achieved using either a CSS or an HTML technique."
 changed: "2018-04-02"
 ---
 
 # Hiding elements from all devices
 
+**To hide an element from all devices means just that: no single device will perceive it anymore (although the element still is present in the DOM). This can be achieved using either a CSS or an HTML technique.**
+
 Elements can be hidden completely from all devices (including screen readers). For this, the HTML attribute `hidden` can be set on an element directly. Or using CSS, either `display: none` or `visibility: hidden` can be set.
 
-@example[Hiding elements from all devices](hiding-elements-from-all-devices){.example}
+[Example: Hiding elements from all devices ![Preview](_examples/preview.png)](_examples/hiding-elements-from-all-devices)
 
 ## Cross browser compatibility
 
@@ -30,4 +30,4 @@ In addition, it makes obvious in the DOM already what elements are hidden, so it
 
 ## Marginal note about ARIA references
 
-Elements hidden with the techniques shown on this page can still provide content when being referenced using `aria-labelledby` or `aria-describedby`. More info here: [ARIA label, describedby and labelledby Attributes](/examples/sensible-usage-of-aria-roles-and-attributes/aria-label-describedby-and-labelledby-attributes){.page}.
+Elements hidden with the techniques shown on this page can still provide content when being referenced using `aria-labelledby` or `aria-describedby`. More info here: [ARIA label, describedby and labelledby Attributes](/examples/sensible-usage-of-aria-roles-and-attributes/aria-label-describedby-and-labelledby-attributes).

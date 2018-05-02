@@ -1,12 +1,12 @@
 ---
-layout: layout
 navigation_title: "Purpose"
 position: 1
-lead: "When it comes to requirements of modern interactive websites, sometimes the semantic vocabulary of HTML may not be enough anymore. To fill this gap, the Accessible Rich Internet Application (ARIA) specification was introduced: it describes how to add semantics to HTML content in order to make user controls and dynamic content more accessible. However, there are pitfalls you need to know about."
-changed: "2018-04-12"
+changed: "2018-05-01"
 ---
 
 # The purpose behind the WAI-ARIA standard
+
+**When it comes to requirements of modern interactive websites, sometimes the semantic vocabulary of HTML may not be enough anymore. To fill this gap, the Accessible Rich Internet Application (ARIA) specification was introduced: it describes how to add semantics to HTML content in order to make user controls and dynamic content more accessible. However, there are pitfalls you need to know about.**
 
 ## Handling HTML shortcomings
 
@@ -62,7 +62,7 @@ $(".tablist [data-target]").click(function() {
 </div>
 ```
 
-But simply presenting something visually isn't enough for screen readers (if you are really curious and want to learn more about this, skip ahead and read [Screen readers don't convey visual attributes](/knowledge/desktop-screen-readers/no-visual-attributes){.page}). For example, although the currently active tabitem can be distinguished visually using `class="active"` and some CSS styling, screen readers won't know which tabitem in fact is the active one. Proper semantical information is missing.
+But simply presenting something visually isn't enough for screen readers (if you are really curious and want to learn more about this, skip ahead and read [Screen readers don't convey visual attributes](/knowledge/desktop-screen-readers/no-visual-attributes)). For example, although the currently active tabitem can be distinguished visually using `class="active"` and some CSS styling, screen readers won't know which tabitem in fact is the active one. Proper semantical information is missing.
 
 ## ARIA to the rescue (?)
 
@@ -118,16 +118,53 @@ Don't be too optimistic: ARIA is a bare set of attributes and their specific val
 
 Admitted, a tablist is a rather easy user interface pattern, so it's not too hard to provide this functionality yourself. But there are much more complex patterns (for example, autocompletes), where it can become a major challenge managing all the required attributes and keeping their states and visual representation in sync.
 
-### Non-homogenous support
+#### Varying support
 
-To make things even trickier, ARIA support among browsers and screen readers varies a lot. And both browsers and screen readers are prone to being buggy. This is particularly true regarding ARIA support: as soon as the `role` attribute is used, unexpected things may happen. If you are really curious and want to learn more about this, skip ahead and read [How screen readers work - and why they seem so buggy](/knowledge/desktop-screen-readers/so-buggy){.page}.
+To make things even trickier, ARIA support among browsers and screen readers varies a lot. While some may support an autocomplete or tablist pattern, others may not. And even those claiming to support a pattern are prone to being buggy. This is particularly true regarding ARIA roles: as soon as the `role` attribute is used, unexpected things may happen (if you are really curious and want to learn more about this, skip ahead and read [How screen readers work - and why they seem so buggy](/knowledge/desktop-screen-readers/so-buggy)).
 
 As such, there are extremely few truly working examples of ARIA widgets available on the web. And those few ones usually need a lot of complex code to work around known problems.
 
+#### Non-homogenous behaviour
+
+Besides bugs and many unsupported features, the ARIA specification also often is not strictly black or white, leaving it up to the manufacturers of browsers and screen readers to decide how certain functionalities should behave.
+
+So screen reader behaviour varies a lot regarding ARIA, especially regarding differences between browse and focus modes (if you haven't done this yet, go back and read [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes)). For example, while all screen readers announce content associated using `aria-describedby` in focus mode, some ignore it in browse mode. And while some screen readers announce the associated content right away, others leave it up to the user whether they want to hear it (by pressing a keyboard shortcut).
+
+Another example is `aria-hidden`. Its specification promises to hide elements from screen readers. The first surprise is that `aria-hidden` simply does not work on focusable elements in most browsers. The next surprise is that `aria-hidden` does not have any effect on elements that are referenced using `aria-describedby`.
+
+Take a look at this example:
+
+```html
+<a href="..." aria-describedby="description">
+  Please click me
+</a>
+
+<p id="description">
+  This link is
+  <span aria-hidden="true">not</span>
+  great.
+</p>
+```
+
+In browse mode, many screen reader's output will be:
+
+> Please click me. Link.
+> This link is great.
+
+But in focus mode, the output will be:
+
+> Please click me. Link. This link is not great.
+
+All this is not because of varying support degrees among modern screen readers or browsers (all of them claim to fully support `aria-describedby` and `aria-hidden`), but because of non-homogenous behaviour caused by the manufacturers' different opinions.
+
+And as long as no quasi-standard, no ubiquitous convention has been established, working with ARIA will keep being risky.
+
 ## Conclusion
 
-The intention behind ARIA is intriguing: it could be a big help in making the web a more accessible place. And knowing that ARIA was released in 2014, it is a real shame that browsers and screen readers still by far aren't capable of truly handling it. Alas, even if developers use ARIA in perfect accordance to its technical specification, this will not be of much use for the targeted users. So at the time being, in most cases we don't recommend the use of ARIA. Let us hope that the situation will soon change for the better.
+The intention behind ARIA is intriguing: it could be a big help in making the web a more accessible place. And knowing that ARIA was released in 2014, it is a real shame that browsers and screen readers still by far aren't capable of truly handling it in a homogenous and robust way. Alas, even if developers use ARIA in perfect accordance to its technical specification, this often will not be of much use for the targeted users. So at the time being, in most cases we don't recommend the use of ARIA. Let us hope that the situation will change for the better some time in the future.
 
-Aside from the `role` attribute (which you should try to avoid in most cases), there exist `aria-*` attributes that can be used standalone and are supported by all modern browsers and screen readers. In a few specific situations, these attributes can be of real help, but you need to know exactly in which cases (please read on).
+Aside from the `role` attribute (which you should try to avoid in most cases), after all there exist some `aria-*` attributes that can be used standalone and are supported by all modern browsers and screen readers - more or less both homogeneously and robustly. So in some specific situations, these attributes can be of real help, but you need to know exactly in which cases.
 
-And regarding widgets: instead of using complex ARIA semantics and developing all interactivity on one's own, once again, the usage of traditional HTML helps in creating even complex interactive usage patterns. So if you haven't done this yet, go back and read [Widgets simply working for all](/knowledge/semantics/widgets){.page}.
+In our guide, we stick to traditional HTML solutions wherever possible to avoid shaky ARIA ground. And if we do suggest ARIA once in a while, you can be confident that it is based on years of experience, so the proposed solution is known to work and has stood the test of time.
+
+And regarding widgets: instead of using complex ARIA semantics and developing all interactivity on one's own, once again, the usage of traditional HTML helps in creating even complex interactive usage patterns. So if you haven't done this yet, go back and read [Widgets simply working for all](/knowledge/semantics/widgets).

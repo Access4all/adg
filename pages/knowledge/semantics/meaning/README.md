@@ -1,12 +1,12 @@
 ---
-layout: layout
 navigation_title: "Meaning"
 position: 1
-lead: "Not surprisingly, HTML (Hyper Text Markup Language) is exactly that: a markup language. This means that it is not only plain text, but text marked up with meaning - so called \"semantics\". For this, HTML offers a lot of tags, each with an inherent, unique semantic meaning. And it is absolutely crucial that those tags are used properly."
 changed: "2018-04-12"
 ---
 
 # Semantics provide meaning
+
+**Not surprisingly, HTML (Hyper Text Markup Language) is exactly that: a markup language. This means that it is not only plain text, but text marked up with meaning - so called "semantics". For this, HTML offers a lot of tags, each with an inherent, unique semantic meaning. And it is absolutely crucial that those tags are used properly.**
 
 ## Tags with no meaning
 
@@ -32,7 +32,7 @@ Take a look at the following example:
 
 A visual user agent (web browser) displays such elements' text contents (if any) in their standard font size, line height, color, etc.
 
-![Screenshot of a non-semantical example](_media/screenshot-of-non-semantical-example.png){.image}
+![Screenshot of a non-semantical example](_media/screenshot-of-non-semantical-example.png)
 
 An aural user agent (screen reader) simply announces such elements' text contents (if any). This will simply be announced as:
 
@@ -70,7 +70,7 @@ Marking up text using an `<h#>` tag tells the user agent that this isn't just pl
 
 A web browser conveys this additional information visually by increasing the element's font size, line-height and boldness (depending on the heading's level).
 
-![Screenshot of a semantical example](_media/screenshot-of-semantical-example.png){.image}
+![Screenshot of a semantical example](_media/screenshot-of-semantical-example.png)
 
 A screen reader conveys this additional information by announcing the element's meaning:
 
@@ -118,7 +118,7 @@ Screen readers recognise these containers, announce them to the user and offer a
 
 ### Missing semantics
 
-It is very important to acknowledge that while visual attributes are displayed in web browsers, screen readers don't care about them. Regardless whether text has `color: blue` or `color: red`, whether it is `font-size: 1px` or `font-size: 100px`, whether it has a `border` or a `text-shadow`, it's always announced as plain text. Only if it is semantically marked up, screen readers do care (if you are really curious and want to learn more about this, skip ahead and read [Screen readers don't convey visual attributes](/knowledge/desktop-screen-readers/no-visual-attributes){.page}).
+It is very important to acknowledge that while visual attributes are displayed in web browsers, screen readers don't care about them. Regardless whether text has `color: blue` or `color: red`, whether it is `font-size: 1px` or `font-size: 100px`, whether it has a `border` or a `text-shadow`, it's always announced as plain text. Only if it is semantically marked up, screen readers do care (if you are really curious and want to learn more about this, skip ahead and read [Screen readers don't convey visual attributes](/knowledge/desktop-screen-readers/no-visual-attributes)).
 
 Let's now look at the following example, where the developers may not have felt like overriding default browser styles. So they decided to avoid real headings and just apply some visual attributes to meaningless containers:
 
@@ -201,11 +201,11 @@ For example, the following table is coded extremely bad:
 
 However, most browsers still visually render it correctly.
 
-![Screenshot of syntactically invalid example](_media/screenshot-of-invalid-semantical-example.png){.image}
+![Screenshot of syntactically invalid example](_media/screenshot-of-invalid-semantical-example.png)
 
 When inspecting the DOM, it is evident that the browser internally tried to fix the bad structure: all closing tags are there, the border width of `1` could be parsed successfully without quotes, and even an additional `<tbody>` element was added (which is optional here).
 
-![Screenshot of the example's "fixed" DOM structure](_media/screenshot-of-dom.png){.image}
+![Screenshot of the example's "fixed" DOM structure](_media/screenshot-of-dom.png)
 
 Still, HTML is a very strict standard and must be coded correctly to be truly valid. And because invalid syntax usually leads to missing or incorrect semantics, screen readers are much more dependent on valid HTML code. So mistakes like the ones above often lead to big problems.
 
@@ -217,4 +217,4 @@ In addition to this, proper semantics allow the user to navigate content quickly
 
 So to create accessible websites, it is highest priority to provide correct semantics, while presentation always has lower priority. Please live with that.
 
-By the way, there are a lot of automated test tools that help preventing many of the problems described above, for example [TotalValidator](/setup/helper-tools/totalvalidator){.page}.
+By the way, there are a lot of automated test tools that help preventing many of the problems described above, for example [TotalValidator](/setup/helper-tools/totalvalidator).

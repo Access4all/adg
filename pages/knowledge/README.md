@@ -1,12 +1,12 @@
 ---
-layout: layout
 navigation_title: "Knowledge"
 position: 3
-lead: "To begin developing accessible websites, some basic knowledge about the required tools and techniques is needed. The chapters in this 3rd part of our guide, the Knowledge part, will support you to get acquainted with various important topics of rather theoretical nature - with high practical value though. They will prepare you to actively dive into the world of accessible website development."
 changed: "2018-04-12"
 ---
 
 # Knowledge about accessibility
+
+**To begin developing accessible websites, some basic knowledge about the required tools and techniques is needed. The chapters in this 3rd part of our guide, the Knowledge part, will support you to get acquainted with various important topics of rather theoretical nature - with high practical value though. They will prepare you to actively dive into the world of accessible website development.**
 
 To be able to ensure accessibility of your websites, you need to understand how its visitors use them, and what you have to pay attention to when optimising your websites for their specific needs.
 
@@ -16,20 +16,20 @@ Then, while it may be the most natural thing in the world for you to read a webs
 
 ## Chapters
 
-We begin with [Semantics and their importance for accessibility](/knowledge/semantics){.page}, where we explain what power truly lies in HTML, and why using it properly is so important.
+We begin with [Semantics and their importance for accessibility](/knowledge/semantics), where we explain what power truly lies in HTML, and why using it properly is so important.
 
-This is followed by [ARIA - when HTML simply isn't enough](/knowledge/aria){.page}, something many developers may not have heard about yet - and while it provides powerful techniques for optimising a website's accessibility, there are some huge pitfalls you need to know about first.
+This is followed by [ARIA - when HTML simply isn't enough](/knowledge/aria), something many developers may not have heard about yet - and while it provides powerful techniques for optimising a website's accessibility, there are some huge pitfalls you need to know about first.
 
-In [Introduction to keyboard only usage](/knowledge/keyboard-only){.page}, we explain everything you need to know about browsing a website using a keyboard only, something that is very usual for many people with disabilities.
+In [Introduction to keyboard only usage](/knowledge/keyboard-only), we explain everything you need to know about browsing a website using a keyboard only, something that is very usual for many people with disabilities.
 
-Finally, in [Introduction to desktop screen reader usage](/knowledge/desktop-screen-readers){.page}, you finally get acquainted with the usage of screen readers.
+Finally, in [Introduction to desktop screen reader usage](/knowledge/desktop-screen-readers), you finally get acquainted with the usage of screen readers.
 
 ## How to go through this part
 
 First of all, before you continue reading, be sure you have gone through the previous parts already:
 
-- [Welcome to this guide](/welcome){.page}
-- [Setup of the accessibility environment](/setup){.page}
+- [Welcome to this guide](/welcome)
+- [Setup of the accessibility environment](/setup)
 
 We recommend reading all chapters of the current part thoroughly without exception, even when you may feel like you are knowing certain topics inside out. Accessibility is a topic full of misunderstandings, half-truths, and technical peculiarities. Our guide aims to provide fool-proof knowledge that should finally give answers to the most relevant questions.
 

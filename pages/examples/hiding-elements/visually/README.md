@@ -1,12 +1,12 @@
 ---
-layout: layout
 navigation_title: "Visually"
 position: 1
-lead: "To hide an element visually means: visually (on a computer screen) it isn't perceivable anymore, but non-visual clients (for example screen readers) still perceive it. There is no official technique for doing this, but there's a well proven workaround."
 changed: "2018-03-24"
 ---
 
 # Hiding elements visually by moving them off-screen
+
+**To hide an element visually means: visually (on a computer screen) it isn't perceivable anymore, but non-visual clients (for example screen readers) still perceive it. There is no official technique for doing this, but there's a well proven workaround.**
 
 It may be surprising, but the only way to hide an element visually while retaining its perceptibility for screen readers is moving them out of the viewport using absolute positioning:
 
@@ -23,9 +23,9 @@ It may be surprising, but the only way to hide an element visually while retaini
 
 There are several implementations of this workaround. The one presented here is from [CSS in Action (WebAIM.org)](https://webaim.org/techniques/css/invisiblecontent/).
 
-@example[Hiding an element visually](hiding-an-element-visually){.example}
+[Example: Hiding an element visually ![Preview](_examples/preview.png)](_examples/hiding-an-element-visually)
 
-For example, this technique is useful to visually hide headings, as described here: [Adding visually hidden headings to complete a page's outline](/examples/headings/visually-hidden-headings){.page}.
+For example, this technique is useful to visually hide headings, as described here: [Adding visually hidden headings to complete a page's outline](/examples/headings/visually-hidden-headings).
 
 ## Toggling visibility on focus
 
@@ -33,7 +33,7 @@ If you are hiding focusable elements using the technique above, make sure that t
 
 In the following example, press the `Tab` key to focus and show the (previously invisible) "Jump to content" link.
 
-@example[Toggling visibility of a hidden element on focus](toggling-visibility-of-a-hidden-element-on-focus){.example}
+[Example: Toggling visibility of a hidden element on focus ![Preview](_examples/preview.png)](_examples/toggling-visibility-of-a-hidden-element-on-focus)
 
 ## Side effects for visual users
 
@@ -46,4 +46,4 @@ The usage of this technique has some side effects for visual users:
 
 ## Further possibilities using ARIA
 
-Instead of moving elements out of the viewport, it is possible to replace or add text content specifically for screen readers using ARIA: [ARIA label, describedby and labelledby Attributes](/examples/sensible-usage-of-aria-roles-and-attributes/aria-label-describedby-and-labelledby-attributes){.page}.
+Instead of moving elements out of the viewport, it is possible to replace or add text content specifically for screen readers using ARIA: [ARIA label, describedby and labelledby Attributes](/examples/sensible-usage-of-aria-roles-and-attributes/aria-label-describedby-and-labelledby-attributes).
