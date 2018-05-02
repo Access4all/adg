@@ -1,0 +1,6 @@
+
+@mixin textoverflow {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}

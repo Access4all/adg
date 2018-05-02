@@ -1,10 +1,17 @@
 .breadcrumbs {
+    margin-top: $gutter;
     margin-bottom: 2 * $gutter;
+    &:before {
+        content: "";
+        display: inline-block;
+        @include sprite($pin);
+        vertical-align: middle;
+    }
 }
 
 
 .breadcrumbs--list {
-    display: block;
+    display: inline-block;
     font-size: 0;
 }
 

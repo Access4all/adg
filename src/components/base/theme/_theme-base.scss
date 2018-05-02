@@ -1,9 +1,47 @@
+$theme-0-dark: $c-yellow;
+$theme-0-light: $c-yellow-light;
+
+$theme-1-dark: $c-green;
+$theme-1-light: $c-green-light;
+
+$theme-2-dark: $c-red;
+$theme-2-light: $c-red-light;
+
+$theme-3-dark: $c-blue;
+$theme-3-light: $c-blue-light;
+
+
+
 @mixin theme($property, $color: main) {
   @if ($color == main) {
     $color: var(--theme-main-color)
   }
   @if ($color == bg) {
     $color: var(--theme-bg-color)
+  }
+  @if ($color == 0) {
+    $color: $theme-0-dark
+  }
+  @if ($color == 1) {
+    $color: $theme-1-dark
+  }
+  @if ($color == 2) {
+    $color: $theme-2-dark
+  }
+  @if ($color == 3) {
+    $color: $theme-3-dark
+  }
+  @if ($color == 0_light) {
+    $color: $theme-0-light
+  }
+  @if ($color == 1_light) {
+    $color: $theme-1-light
+  }
+  @if ($color == 2_light) {
+    $color: $theme-2-light
+  }
+  @if ($color == 3_light) {
+    $color: $theme-3-light
   }
   transition: #{$property} .6s ease;
   #{$property}: $color;
@@ -27,16 +65,3 @@
     @content;
   }
 }
-
-
-$theme-0-dark: $c-yellow;
-$theme-0-light: $c-yellow-light;
-
-$theme-1-dark: $c-green;
-$theme-1-light: $c-green-light;
-
-$theme-2-dark: $c-red;
-$theme-2-light: $c-red-light;
-
-$theme-3-dark: $c-blue;
-$theme-3-light: $c-blue-light;
