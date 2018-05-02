@@ -1,12 +1,16 @@
-<nav class="breadcrumbs">
+<div class="breadcrumbs">
     <h2 class="visuallyhidden">
-        Sie befinden sich hier:
+        You are here:
     </h2>
     <ol class="breadcrumbs--list">
       {{#each breadcrumb}}
         <li class="breadcrumbs--list--item{{#if @last}} is-back-link{{/if}}" role="presentation">
-            <a class="breadcrumbs--list--item--link" href="/{{url}}">{{title}}</a>
+            <a class="breadcrumbs--list--item--link" href="/{{url}}">
+              {{title}}
+              <!-- Would be better to have it outside the link -->
+              <span aria-hidden="true">/</span>
+            </a>
         </li>
       {{/each}}
     </ol>
-</nav>
+</div>

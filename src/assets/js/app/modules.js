@@ -22,6 +22,18 @@ export default () => {
     })
   })
 
+  contextTrigger.add('.js-search', function () {
+    var elem = this
+
+    require(['./modules/Search'], function (Module) {
+      if (Module.default) {
+        ModuleManager.connect(Module.default, elem)
+      } else {
+        ModuleManager.connect(Module, elem)
+      }
+    })
+  })
+
   contextTrigger.add('.js-theme', function () {
     var elem = this
 

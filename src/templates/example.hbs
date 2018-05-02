@@ -1,24 +1,20 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>{{title}}</title>
+  <title>{{title}} - ADG example</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="/css/styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
   <style>{{{css}}}</style>
 </head>
 <body>
-  <div class="site-content site-content--example">
-  	{{{html}}}
-  </div>
+	{{{html}}}
 
   <script>{{{js}}}</script>
 
-  <div class="footer footer--example">
-    <a href="{{article.url}}">👈 {{article.title}}</a>
-
-   {{{codePen}}}
-  </div>
+  <hr />
+ {{{codePen}}}
+  <a href="{{article.url}}">
+    <span aria-hidden="true">👈 </span>
+    Back to article "{{article.title}}" on «Accessibility Developer Guide»
+  </a>
 </body>
 </html>

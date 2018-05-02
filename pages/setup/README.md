@@ -4,9 +4,12 @@ title: "Setup of the accessibility environment"
 navigation_title: "Setup"
 position: 2
 lead: "For creating websites with accessibility in mind, you need to have some specific software at hand. The chapters in this 2nd part of our guide, the Setup part, will teach you how to set up all the software. The complete setup is tailored to the needs of developers, but for readers with lesser demands, we provide also a pragmatic minimal version of the setup."
+changed: "2018-04-02"
 ---
 
 # Setup of the accessibility environment
+
+**For creating websites with accessibility in mind, you need to have some specific software at hand. The chapters in this 2nd part of our guide, the Setup part, will teach you how to set up all the software. The complete setup is tailored to the needs of developers, but for readers with lesser demands, we provide also a pragmatic minimal version of the setup.**
 
 To guarantee accessibility of your websites, you must ensure that they are compatible with commonly used input and output tools (software and/or devices). This also includes Assistive Technologies which are created specifically for people with special needs, like blind, hard-of-hearing, or motor impaired people.
 

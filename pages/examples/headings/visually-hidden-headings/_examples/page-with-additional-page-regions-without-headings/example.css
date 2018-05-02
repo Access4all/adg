@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+}
+
+#header {
+  background-color: lightpink;
+  overflow: hidden;
+  border-bottom: 1px solid black;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#nav {
+  background-color: lightgreen;
+  float: left;
+  width: 200px;
+  border-bottom: 1px solid black;
+}
+
+#main {
+  margin-left: 200px;
+  overflow: hidden;
+  border-left: 1px solid black;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#footer {
+  background-color: lightsteelblue;
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-top: 1px solid black;
+}
