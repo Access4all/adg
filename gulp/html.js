@@ -161,7 +161,7 @@ module.exports = (config, cb) => {
         (file, enc, cb) => {
           const url = getUrl(file.path, config.base)
           const parent = getParentUrl(url)
-          const section = url.substring(0, url.indexOf('/'))
+          const section = url.substring(0, url.indexOf('/')) || url || 'welcome'
 
           file.data = Object.assign({}, file.data, {
             url,
