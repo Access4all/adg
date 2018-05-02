@@ -16,3 +16,27 @@
 @mixin theme-color {
   @include theme(color, var(--theme-main-color));
 }
+
+@mixin theme-isDark {
+  .theme:not(.is-below) & {
+    @content;
+  }
+}
+@mixin theme-isLight {
+  .theme.is-below & {
+    @content;
+  }
+}
+
+
+$theme-0-dark: $c-yellow;
+$theme-0-light: $c-yellow-light;
+
+$theme-1-dark: $c-green;
+$theme-1-light: $c-green-light;
+
+$theme-2-dark: $c-red;
+$theme-2-light: $c-red-light;
+
+$theme-3-dark: $c-blue;
+$theme-3-light: $c-blue-light;

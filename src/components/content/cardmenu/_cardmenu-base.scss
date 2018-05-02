@@ -1,0 +1,13 @@
+
+@mixin card {
+  display: block;
+  background: $c-white;
+  @include rem(border-radius, 10px);
+  @include rem(padding, 18px 15px);
+  border: 2px solid $c-white;
+
+  &:hover,
+  &:focus {
+    border-color: var(--theme-color-dark);
+  }
+}

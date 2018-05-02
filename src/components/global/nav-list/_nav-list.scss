@@ -1,5 +1,4 @@
 .nav-list {
-	margin-bottom: $gutter;
 	&-main {
 		margin-top: - $gutter / 2;
 		& > .nav-list--item {
@@ -14,6 +13,14 @@
 	&-subnav {
 		margin-left: 20px;
 	}
+}
+.nav-list--item {
+  &:last-child {
+    margin-bottom: $gutter;
+  }
+  &-inactive {
+    display: none;
+  }
 }
 .nav-list--link {
 	display: block;
