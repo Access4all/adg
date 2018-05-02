@@ -1,20 +1,20 @@
 ---
-layout: layout
-title: "General bad headings example"
 navigation_title: "Bad example"
 position: 3
-lead: "To be meaningful, heading outlines must be coherent on both a technical and textual level. While headings often are omitted completely by naive web developers, existing heading outlines can suffer of various accessibility problems on both a syntactical and a semantical level."
+changed: "2018-04-03"
 ---
 
 # General bad headings example
 
+**To be meaningful, heading outlines must be coherent on both a technical and textual level. While headings often are omitted completely by naive web developers, existing heading outlines can suffer of various accessibility problems on both a syntactical and a semantical level.**
+
 This heading outline in the following example has three problems.
 
-[Example: Generally bad headings](_examples/generally-bad-headings)
+[Generally bad headings (example) ![Preview](_examples/generally-bad-headings/_preview.png)](_examples/generally-bad-headings)
 
 On the visual level, the problems are hard to spot. So let's take a closer look at the document outline.
 
-![Document outline of NVDA](_media/document-outline-of-nvda.png){.image}
+![Document outline of NVDA](_media/document-outline-of-nvda.png)
 
 The problems are:
 
@@ -24,15 +24,15 @@ The problems are:
 
 The first problem is clearly a syntactical ones, the second and third problems are semantical ones.
 
-By the way, while NVDA doesn't propagate the first problem to the user, the bookmarklet [h123](/setup/browsers/bookmarklets/h123){.page} does so by marking it visually:
+By the way, while NVDA doesn't propagate the first problem to the user, the bookmarklet [h123](/pages/setup/browsers/bookmarklets/h123) does so by marking it visually:
 
-![Document outline of h123](_media/document-outline-of-h123.png){.image}
+![Document outline of h123](_media/document-outline-of-h123.png)
 
-# Syntactical problems
+## Syntactical problems
 
 Most syntactical problems can be evaluated automatically: it's no problem for a computer to make sure that there's no heading level skipped. So the first problem in our list above is an easy one to examine.
 
-# Semantical problems
+## Semantical problems
 
 Semantical problems, however, usually must be examined manually by a human who has certain knowledge about the presented content.
 
@@ -46,4 +46,4 @@ A computer probably will never be able to do that.
 
 Finally, to examine the third problem in our list above, one has to conclude that a very short paragraph that is displayed in **bold** (and is placed above at least one following paragraph) might be meant as a heading, but has been marked up improperly. A computer can make an assumption about this alike, but it will never be a 100% certain.
 
-To find out more about this, see [Semantics and their importance for accessibility](/knowledge/semantics){.page}.
+To find out more about this, see [Semantics and their importance for accessibility](/pages/knowledge/semantics).
