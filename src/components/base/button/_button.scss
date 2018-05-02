@@ -1,16 +1,16 @@
 
 .button {
   border: 1px solid var(--theme-color-dark);
-  @include theme(color, var(--theme-color-dark));
-  @include theme(background-color, white);
 
+  @include theme(color, white);
+  @include theme(background-color, var(--theme-color-dark));
   padding: .25em .5em;
   border-radius: 3px;
   display: inline-block;
   margin-bottom: .5em; margin-right: .5em;
   &.is-active {
-    @include theme(color, white);
-    @include theme(background-color, var(--theme-color-dark));
+    @include theme(color, var(--theme-color-dark));
+    @include theme(background-color, white);
   }
   &:hover {
     @include theme(background-color, var(--theme-color-light));
