@@ -87,6 +87,15 @@
 
 .cardmenu--card-article {
   @include font-xs;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .cardmenu--card--label {
+    height: auto;
+    flex: 1 0 auto;
+    min-height: 0;
+  }
 
   .cardmenu--card--linklabel {
     margin-top: 20px;
