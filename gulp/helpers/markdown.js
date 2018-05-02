@@ -117,6 +117,12 @@ module.exports = rootDir => filePath => {
 
                 if (item.type === 'text') {
                   title += item.content
+
+                  // Wrap text with span
+                  item.type = 'html_inline'
+                  item.content = `<span class="example-link">${
+                    item.content
+                  }</span>`
                 }
 
                 if (item.type === 'link_close') {
