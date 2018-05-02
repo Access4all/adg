@@ -12,9 +12,9 @@ const _ = require('lodash')
 
 const getUrl = (filePath, base) => {
   return path
-  .relative(base, filePath)
-  .replace(path.basename(filePath), '')
-  .replace(/\/$/, '')
+    .relative(base, filePath)
+    .replace(path.basename(filePath), '')
+    .replace(/\/$/, '')
 }
 
 const getLayout = (layoutName, layouts) => {
@@ -22,8 +22,8 @@ const getLayout = (layoutName, layouts) => {
 
   // Read layout file only once
   const layout = (layouts[layoutName] =
-  layouts[layoutName] ||
-  fs.readFileSync('./src/templates/' + layoutName + '.hbs'))
+    layouts[layoutName] ||
+    fs.readFileSync('./src/templates/' + layoutName + '.hbs'))
 
   return layout
 }
@@ -39,7 +39,7 @@ const extendNavigationItem = (origItem, index, options) => {
 
   if (item.url === options.currentUrl) {
     const flattenedIndex = options.flattened.findIndex(
-    flattenedItem => flattenedItem.url === item.url
+      flattenedItem => flattenedItem.url === item.url
     )
     const prev = options.flattened[flattenedIndex - 1]
     const next = options.flattened[flattenedIndex + 1]
@@ -76,18 +76,14 @@ const extendNavigationItem = (origItem, index, options) => {
     options.breadcrumb.push(item)
   } else {
     const isInactive =
-
-    // Not current item
-    item.parent !== options.currentUrl &&
-
-    // Not a parent of the current item
-    item.parent !== getParentUrl(options.currentUrl) &&
-
-    // Not a grand parent of the current item
-    item.parent !== getParentUrl(getParentUrl(options.currentUrl)) &&
-
-    // Not a first level item
-    item.parent
+      // Not current item
+      item.parent !== options.currentUrl &&
+      // Not a parent of the current item
+      item.parent !== getParentUrl(options.currentUrl) &&
+      // Not a grand parent of the current item
+      item.parent !== getParentUrl(getParentUrl(options.currentUrl)) &&
+      // Not a first level item
+      item.parent
 
     if (isInactive) {
       item.isInactive = true
@@ -110,13 +106,13 @@ const extendNavigationItem = (origItem, index, options) => {
 // Create flat array of pages to be used for prev/next links
 const flattenNavigation = items =>
   items.reduce((acc, item) => {
-  acc = acc.concat(item)
+    acc = acc.concat(item)
 
-  if (item.children) {
-    acc = acc.concat(flattenNavigation(item.children))
-  }
+    if (item.children) {
+      acc = acc.concat(flattenNavigation(item.children))
+    }
 
-  return acc
+    return acc
   }, [])
 
 module.exports = (config, cb) => {
@@ -139,7 +135,7 @@ module.exports = (config, cb) => {
 
   gulp
     .src(config.src, {
-  base: config.base
+      base: config.base
     })
     .pipe(plumber())
 
@@ -150,12 +146,12 @@ module.exports = (config, cb) => {
     .pipe(
       through
         .obj((file, enc, cb) => {
-  const contents = file.contents.toString()
-  const html = markdown(file.path).render(contents)
+          const contents = file.contents.toString()
+          const html = markdown(file.path).render(contents)
 
-  file.contents = Buffer.from(html)
+          file.contents = Buffer.from(html)
 
-  return cb(null, file)
+          return cb(null, file)
         })
         .on('error', config.errorHandler)
     )
@@ -164,46 +160,46 @@ module.exports = (config, cb) => {
     .pipe(
       through.obj(
         (file, enc, cb) => {
-  const url = getUrl(file.path, config.base)
-  const parent = getParentUrl(url)
-  const section = url.substring(0, url.indexOf('/')) || url || 'welcome'
+          const url = getUrl(file.path, config.base)
+          const parent = getParentUrl(url)
+          const section = url.substring(0, url.indexOf('/')) || url || 'welcome'
 
-  file.data = Object.assign({}, file.data, {
-    url,
-    isRoot: parent === url,
-    section
-  })
+          file.data = Object.assign({}, file.data, {
+            url,
+            isRoot: parent === url,
+            section
+          })
 
-  files.push(file)
+          files.push(file)
 
-  navigation.push({
-    url,
-    parent: parent !== url ? parent : null,
-    title: file.frontMatter.navigation_title,
-    titleDetailed: file.frontMatter.title,
-    lead: file.frontMatter.lead,
-    position: file.frontMatter.position
-  })
+          navigation.push({
+            url,
+            parent: parent !== url ? parent : null,
+            title: file.frontMatter.navigation_title,
+            titleDetailed: file.frontMatter.title,
+            lead: file.frontMatter.lead,
+            position: file.frontMatter.position
+          })
 
-  return cb()
+          return cb()
         },
-        function(cb) {
-  // Create navigation hierarchy
-  navigation = navigation
+        function (cb) {
+          // Create navigation hierarchy
+          navigation = navigation
             .map(page => {
-  page.children = navigation
-  .filter(child => child.parent === page.url)
-  .sort((a, b) => a.position - b.position)
+              page.children = navigation
+                .filter(child => child.parent === page.url)
+                .sort((a, b) => a.position - b.position)
 
-  return page
+              return page
             })
             .filter(page => !page.parent && page.parent !== null)
             .sort((a, b) => a.position - b.position)
 
-  // Return files back to stream
-  files.forEach(this.push.bind(this))
+          // Return files back to stream
+          files.forEach(this.push.bind(this))
 
-  return cb()
+          return cb()
         }
       )
     )
@@ -212,63 +208,63 @@ module.exports = (config, cb) => {
     .pipe(
       through
         .obj((file, enc, cb) => {
-  try {
-    const layout = getLayout(file.frontMatter.layout, layouts)
-    const relPath = path.relative('./pages', file.path)
-    const currentUrl = relPath.substring(0, relPath.lastIndexOf('/'))
-    const prevNext = {}
-    const breadcrumb = []
-    const subPages = []
-    const pageNavigation = getPageNavigation({
-      items: navigation,
-      currentUrl,
-      prevNext,
-      breadcrumb,
-      flattened: flattenNavigation(navigation),
-      subPages
-    })
-    const metatagsData = {
-      title: file.frontMatter.title,
-      description: file.frontMatter.lead,
-      card: 'summary',
-      site_name: appConfig.title,
-      url: `${appConfig.url}/${currentUrl}`
-    }
+          try {
+            const layout = getLayout(file.frontMatter.layout, layouts)
+            const relPath = path.relative('./pages', file.path)
+            const currentUrl = relPath.substring(0, relPath.lastIndexOf('/'))
+            const prevNext = {}
+            const breadcrumb = []
+            const subPages = []
+            const pageNavigation = getPageNavigation({
+              items: navigation,
+              currentUrl,
+              prevNext,
+              breadcrumb,
+              flattened: flattenNavigation(navigation),
+              subPages
+            })
+            const metatagsData = {
+              title: file.frontMatter.title,
+              description: file.frontMatter.lead,
+              card: 'summary',
+              site_name: appConfig.title,
+              url: `${appConfig.url}/${currentUrl}`
+            }
 
-    file.data = Object.assign({}, file.data, {
-      changed: file.frontMatter.changed,
-      title: file.frontMatter.title,
-      contents: file.contents,
-      navigation: pageNavigation,
-      previousPage: prevNext.prev,
-      nextPage: prevNext.next,
-      subPages: file.data.isRoot
+            file.data = Object.assign({}, file.data, {
+              changed: file.frontMatter.changed,
+              title: file.frontMatter.title,
+              contents: file.contents,
+              navigation: pageNavigation,
+              previousPage: prevNext.prev,
+              nextPage: prevNext.next,
+              subPages: file.data.isRoot
                 ? navigation.map(item => ({
-  title: item.title,
-  url: item.url,
-  isSection: true,
-  modifier: item.url
+                  title: item.title,
+                  url: item.url,
+                  isSection: true,
+                  modifier: item.url
                 }))
                 : subPages,
-      metatags: metatags.generateTags(metatagsData),
-      breadcrumb: breadcrumb.sort((a, b) => {
-        return a.url.length - b.url.length
-      })
-    })
+              metatags: metatags.generateTags(metatagsData),
+              breadcrumb: breadcrumb.sort((a, b) => {
+                return a.url.length - b.url.length
+              })
+            })
 
-    sitemap.push({
-      url: currentUrl
-    })
+            sitemap.push({
+              url: currentUrl
+            })
 
-    file.contents = layout
+            file.contents = layout
 
-    return cb(null, file)
-  } catch (err) {
-    err.plugin = 'data'
-    err.fileName = file.path
+            return cb(null, file)
+          } catch (err) {
+            err.plugin = 'data'
+            err.fileName = file.path
 
-    return cb(err, file)
-  }
+            return cb(err, file)
+          }
         })
         .on('error', config.errorHandler)
     )
@@ -276,58 +272,58 @@ module.exports = (config, cb) => {
     // Compile Handlebars to HTML
     .pipe(
       handlebars({
-  partials: './src/components/**/*.hbs',
-  parsePartialName: (options, file) => {
-    return path
-    .relative('./src/components', file.path)
-    .replace(path.extname(file.path), '')
-  }
+        partials: './src/components/**/*.hbs',
+        parsePartialName: (options, file) => {
+          return path
+            .relative('./src/components', file.path)
+            .replace(path.extname(file.path), '')
+        }
       }).on('error', config.errorHandler)
     )
 
     // Format
     .pipe(
       prettify({
-  indent_with_tabs: false,
-  max_preserve_newlines: 1
+        indent_with_tabs: false,
+        max_preserve_newlines: 1
       })
     )
 
     // Rename to `index.html`
     .pipe(
       through.obj((file, enc, cb) => {
-  file.path = file.path.replace(path.basename(file.path), 'index.html')
+        file.path = file.path.replace(path.basename(file.path), 'index.html')
 
-  return cb(null, file)
+        return cb(null, file)
       })
     )
     .pipe(gulp.dest('./dist'))
     .on('finish', () => {
-  // Generate RSS feeds
-  const feed = Feed(files)
+      // Generate RSS feeds
+      const feed = Feed(files)
 
-  if (!fs.existsSync(path.dirname(config.feed.rss))) {
-    fs.mkdirSync(path.dirname(config.feed.rss))
-  }
+      if (!fs.existsSync(path.dirname(config.feed.rss))) {
+        fs.mkdirSync(path.dirname(config.feed.rss))
+      }
 
-  fs.writeFileSync(config.feed.json, feed.json1())
-  fs.writeFileSync(config.feed.atom, feed.atom1())
-  fs.writeFileSync(config.feed.rss, feed.rss2())
+      fs.writeFileSync(config.feed.json, feed.json1())
+      fs.writeFileSync(config.feed.atom, feed.atom1())
+      fs.writeFileSync(config.feed.rss, feed.rss2())
 
-  // Generate sitemap
-  const generatedSitemap = sm.createSitemap({
-    hostname: config.host,
-    urls: sitemap
-  })
+      // Generate sitemap
+      const generatedSitemap = sm.createSitemap({
+        hostname: config.host,
+        urls: sitemap
+      })
 
-  generatedSitemap.toXML((err, xml) => {
-    if (err) {
-      console.log(err)
-    }
+      generatedSitemap.toXML((err, xml) => {
+        if (err) {
+          console.log(err)
+        }
 
-    fs.writeFileSync(config.sitemap, xml)
+        fs.writeFileSync(config.sitemap, xml)
 
-    cb()
-  })
+        cb()
+      })
     })
 }
