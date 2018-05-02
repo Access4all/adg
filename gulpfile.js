@@ -121,16 +121,20 @@ gulp.task('media:resize', () => {
     })
     .pipe(
       resize({
-        // TODO: Configure sizes
         sizes: [
           {
+            suffix: 'large',
+            width: 680,
+            upscale: false
+          },
+          {
             suffix: 'medium',
-            width: 640,
+            width: 546,
             upscale: false
           },
           {
             suffix: 'small',
-            width: 320,
+            width: 340,
             upscale: false
           }
         ]
