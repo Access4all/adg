@@ -81,6 +81,7 @@
 	text-decoration: underline;
 	&:hover {
 		color: $c-green-light;
+    @include theme(color, var(--theme-color-dark));
 	}
 }
 

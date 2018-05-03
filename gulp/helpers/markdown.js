@@ -28,26 +28,31 @@ module.exports = rootDir => filePath => {
       .use(plugins.kbd)
       .use(plugins.samp)
       .use(plugins.responsive, {
-        // TODO: Specify proper sizes
         responsive: {
           srcset: {
             '*': [
               {
-                width: 320,
+                width: 680,
                 rename: {
-                  suffix: '-small'
+                  suffix: '-large'
                 }
               },
               {
-                width: 640,
+                width: 546,
                 rename: {
                   suffix: '-medium'
+                }
+              },
+              {
+                width: 340,
+                rename: {
+                  suffix: '-small'
                 }
               }
             ]
           },
           sizes: {
-            '*': '(min-width: 36em) 33.3vw, 100vw'
+            '*': '(max-width: 399px) 85vw, (min-width: 400px) 73vw'
           }
         }
       })
