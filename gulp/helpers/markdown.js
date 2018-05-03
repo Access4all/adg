@@ -107,6 +107,12 @@ module.exports = rootDir => filePath => {
                   .some((followingChildToken, followingChildIdx) => {
                     if (followingChildToken.type === 'text') {
                       exampleTitle += followingChildToken.content
+
+                      // Wrap link text with span
+                      followingChildToken.type = 'html_inline'
+                      followingChildToken.content = `<span class="example-link">${
+                        followingChildToken.content
+                      }</span>`
                     }
 
                     if (followingChildToken.type === 'link_close') {
