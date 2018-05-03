@@ -1,4 +1,4 @@
-<nav class="cardmenu">
+<nav class="cardmenu{{#if menuitem.0.isSection}} cardmenu-section{{else}} cardmenu-article{{/if}}">
     <ul class="cardmenu--list">
       {{#each menuitem}}
         <li class="cardmenu--list--item" role="presentation">

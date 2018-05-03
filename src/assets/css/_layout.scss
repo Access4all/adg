@@ -13,10 +13,11 @@
 		}
 	}
 }
-.l-site_width {
+@mixin l-site_width {
 	position: relative;
-	width: $site-width;
-	width: ($site-width / $base-font-size) * 1rem;
+  width: 100%;
+	max-width: $site-width;
+	max-width: ($site-width / $base-font-size) * 1rem;
 	margin: 0 auto;
 	@include max-width($site-width + 4 * $gutter) {
 		box-sizing: border-box;
@@ -28,6 +29,9 @@
 		width: auto;
 		padding: 0 $gutter;
 	}
+}
+.l-site_width {
+	@include l-site_width;
 }
 
 .site-content {
@@ -48,20 +52,14 @@
 
 }
 
-
-// Footer always at the end of the page
-// Only works for firefox/webkit browsers
-// ie11 won't have flexboxlegacy
-// (there may be a better way to do this, more future proof, but we really need a fix)
-html.flex.no-ie {
-
+html {
 	@media screen and (min-height: 600px) {
 		#body {
 			display: flex;
 			min-height: 100vh;
 			flex-direction: column;
 
-			> .site-content {
+			#main {
 				height: auto;
 				flex: 1 0 auto;
 				min-height: 0;

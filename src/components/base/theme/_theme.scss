@@ -2,31 +2,34 @@
 .theme {
   @include theme-background-color;
   --theme-main-color: $c-black;
-
   --theme-bg-color: var(--theme-color-light);
+  --theme-main-color-inverse: $c-white;
+  --theme-bg-color-inverse: var(--theme-color-dark);
 
   &.is-below {
-    --theme-bg-color: $c-white;
     --theme-main-color: var(--theme-color-dark);
+    --theme-bg-color: $c-white;
+    --theme-main-color-inverse: $c-black;
+    --theme-bg-color-inverse: var(--theme-color-light);
   }
 }
 
-.theme-0 {
+.theme-welcome {
   --theme-color-dark: $theme-0-dark;
   --theme-color-light: $theme-0-light;
 }
 
-.theme-1 {
+.theme-setup {
   --theme-color-dark: $theme-1-dark;
   --theme-color-light: $theme-1-light;
 }
 
-.theme-2 {
+.theme-knowledge {
   --theme-color-dark: $theme-2-dark;
   --theme-color-light: $theme-2-light;
 }
 
-.theme-3 {
+.theme-examples {
   --theme-color-dark: $theme-3-dark;
   --theme-color-light: $theme-3-light;
 }

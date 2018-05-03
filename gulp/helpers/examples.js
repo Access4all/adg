@@ -41,14 +41,18 @@ const getTitle = href => {
 const getCodePenForm = (code, title) => {
   const config = {
     title: title,
+
     // description: code.details.description,
     html: code.html,
+
     // html_pre_processor: 'none',
     css: code.css,
     css_pre_processor: 'scss',
+
     // css_starter: 'neither',
     // css_prefix_free: false,
     js: code.js
+
     // js_pre_processor: 'none',
     // js_modernizr: false,
     // js_library: '',
@@ -66,47 +70,54 @@ const getCodePenForm = (code, title) => {
   </form>`
 }
 
-const getExample = (title, href, filePath) => {
-  const dir = path.join(
-    filePath.replace(path.basename(filePath), ''),
-    '_examples',
-    href
-  )
-  const code = getCode(dir)
+const getExample = (title, examplePath, filePath) => {
+  const relExamplePath = path.relative(examplePath, filePath)
+  const code = getCode(examplePath)
 
+  const btns = ['html', 'css', 'js'].filter(type => code[type]).map(type => {
+    const markup = hljs.highlightAuto(code[type], [type])
+    var id = relExamplePath
+      .toLowerCase()
+      .replace(/ /g, '-')
+      .replace(/[^\w-]+/g, '')
+
+    return `<div class="control"><input type="checkbox" id="${id +
+      type}" name="${id}" value="${type}" /><label class="button" for="${id +
+      type}">Show ${type.toUpperCase()} code</label></div>`
+  })
   const blocks = ['html', 'css', 'js'].filter(type => code[type]).map(type => {
     const markup = hljs.highlightAuto(code[type], [type])
     var id =
-      href
+      relExamplePath
         .toLowerCase()
         .replace(/ /g, '-')
         .replace(/[^\w-]+/g, '') + type
 
-    return `<div class="control"><input type="checkbox" id="${id}" /><label for="${id}">Show ${type.toUpperCase()} code</label></div>
-      <div class="panel" id="${id}_panel" style="display: none"><pre><code>${
-  markup.value
-}</code></pre></div>`
+    return `<div class="panel" id="${id}_panel" style="display: none"><pre><code>${
+      markup.value
+    }</code></pre></div>`
   })
 
   const codePenForm = getCodePenForm(code, title)
 
-  const exampleLink = `<a href="/${path.join(
-    path.relative('./pages', dir),
-    'example.html'
-  )}" target="_blank"><span>Example: ${title}</span><span class="visuallyhidden"> (opens new window)</span><img src="/${path.join(
-    path.relative('./pages', dir),
-    'example.png'
-  )}" alt="Example preview" /></a>`
-
   return `
-  ${exampleLink}
   ${codePenForm}
-  <div class="accordion">${blocks.join('')}</div>`
+  <div class="accordion"><div class="controls">${btns.join(
+    ''
+  )}</div><div class="panels">${blocks.join('')}</div></div>`
+}
+
+const getLink = token => {
+  const href = token.attrGet('href') || ''
+  const match = href.match(/_examples/)
+
+  return href.match(/_examples/) ? href : null
 }
 
 module.exports = {
   getCode,
   getTitle,
   getCodePenForm,
-  getExample
+  getExample,
+  getLink
 }

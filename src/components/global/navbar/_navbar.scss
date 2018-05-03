@@ -61,7 +61,6 @@ $navWidthMax: 300px;
 }
 
 .navbar--inner {
-  display: none;
   overflow: auto;
   width: $navWidthMax;
   max-width: 100vw;
@@ -71,32 +70,42 @@ $navWidthMax: 300px;
 
 
 
-.navbar--search,
-.navbar--inner {
-  display: none;
+@include tablet {
+  .navbar--search,
+  .navbar--inner {
+    display: none;
+  }
+  .navbar--toggle--input:checked ~ .navbar {
+    .navbar--inner,
+    .navbar--search {
+      display: block;
+    }
+    .navbar--toggle-search {
+      display: none;
+    }
+  }
 }
 
-.navbar--toggle--input:checked ~ .navbar {
-  @include mobile {
-    width: 100%;
+@include above-mobile {
+  .footer,
+  .site-content {
+    padding-left: $navWidthMin;
   }
-  .navbar--inner,
-  .navbar--search {
-    display: block;
+  .navbar--toggle--input:checked ~ .footer,
+  .navbar--toggle--input:checked ~ .site-content {
+    padding-left: $navWidthMax;
   }
-  .navbar--toggle-search {
+}
+
+@include above-tablet {
+  .footer,
+  .site-content {
+    padding-left: $navWidthMax;
+  }
+  .navbar--toggle {
     display: none;
   }
 }
-
-.navbar--toggle--input ~ .site-content {
-  margin-left: $navWidthMin;
-}
-.navbar--toggle--input:checked ~ .site-content {
-  margin-left: $navWidthMax;
-}
-
-
 
 
 .navbar--toggle {

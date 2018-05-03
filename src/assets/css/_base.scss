@@ -78,29 +78,25 @@ button {
 
 p img {
   border: 1px solid;
+  max-width: 100%;
 }
 
-p.example {
+.example-link {
   font-weight: bold;
-
-  span {
-    display: inline-block;
-    width: 100%;
-  }
+  display: inline-block;
+  width: 100%;
 }
 
 .accordion {
   font-weight: bold;
 
   .control {
+    display: inline-block;
     label:hover {
       cursor: pointer;
     }
-
     input {
-      width: 10px;
-      margin-left: -10px;
-      opacity: 0;
+      @include visuallyhidden;
     }
 
     input:focus + label {
