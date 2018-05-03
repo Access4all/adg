@@ -4,7 +4,7 @@ title: "Placing non-interactive content between form controls"
 navigation_title: "Non-interactive content"
 position: 6
 lead: "Screen reader interaction with forms usually happens in focus mode. So if there are any non-interactive elements (like a paragraph) in the form, they are prone to be missed. To prevent this, they need to be attached specifically to the form controls. There are several ways to achieve this goal."
-changed: "2018-05-02"
+changed: "2018-05-03"
 ---
 
 # Placing non-interactive content between form controls
@@ -54,6 +54,8 @@ The example above shows three ways to give a user clue about additional informat
 2. For "Biography", a clue was added anywhere on the page, then hidden completely and referenced to the input using `aria-describedby`.
     - For more information about this, read [Hiding elements from all devices](/examples/hiding-elements/from-all-devices){.page}.
 3. For "Terms and conditions", the label text was changed so it gives a clue itself (making it "self speaking"). This does not only serve screen reader users, but also visual users who could miss the terms and conditions because of not scrolling enough vertically.
+
+In general, when doing something like that, be sure the referenced content is easily discoverable by the user.
 
 # Less good approaches
 

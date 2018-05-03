@@ -55,7 +55,7 @@ So a screen reader user has to guess what the provided plain text element may st
 
 # Bad submit button
 
-Remember the days when `<input type="submit" />` elements were impossible to style the way fancy designers wanted them to look? These times are gone: `<input type="submit" />` can nowadays be styled as fancy as most other HTML elements. And as an alternative, you can even use `<button>` elements.
+Remember the days when `<input type="submit" />` elements were impossible to style the way fancy designers wanted them to look? These times are gone: `<input type="submit" />` can nowadays be styled as fancy as most other HTML elements. And as an alternative, you can even use `<button type="submit">` elements.
 
 Still, instead of "real" buttons often different substitutes are used, for example `<a>`, `<div>`, or `<span>` tags with an `onclick` JavaScript handler. Admittedly, links seem to resemble buttons sort of a little bit (which means: you can press them), but still - they are a completely different kind of element.
 

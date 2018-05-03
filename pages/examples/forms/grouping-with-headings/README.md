@@ -4,7 +4,7 @@ title: "Grouping form controls with headings"
 navigation_title: "Grouping with headings"
 position: 5
 lead: "It sometimes feels necessary to group complex forms visually using headings. As traditionally used headings are non-focusable elements, you have to make sure that they are not missed by screen reader users in focus mode."
-changed: "2018-05-02"
+changed: "2018-05-03"
 ---
 
 # Grouping form controls with headings
@@ -30,3 +30,9 @@ Here is the same example as above, but with ARIA:
 @example[Headings mixed into a form using ARIA](headings-mixed-into-a-form-using-aria){.example}
 
 We advise to rather stick to the solution of HTML 5.2 instead of using ARIA.
+
+# Conclusion
+
+Although it is possible to mix headings into forms, you should be careful with that. For example, when a heading is announced as part of a `<fieldset>`'s `<legend>`, its level (`<h1>`, `<h2>`, etc.) is omitted, which then could lead to confusion.
+
+So in general, try to keep your forms as easy as possible. It often is better to split a complex form into different steps than displaying it on one single page.
