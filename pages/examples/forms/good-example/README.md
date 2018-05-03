@@ -24,7 +24,7 @@ The following example contains all basic HTML form controls:
 
 Each form control has a corresponding `<label>` element that is connected to it using the `for` attribute (pointing to the control's ID). This allows screen readers to announce the controls correctly.
 
-Each group of radio buttons and checkboxes has a surrounding `<fieldset>`/`<legend>` structure: in addition to the control's `<label>`, screen readers also announce the `<legend>` of the surrounding `<fieldset>`.
+Each group of radio buttons and checkboxes has a surrounding `<fieldset>`/`<legend>` structure: in addition to the control's `<label>`, screen readers also announce the `<legend>` of the surrounding `<fieldset>`. The usage of this structure is not limited to radio buttons and checkboxes: all kinds of related form controls can be grouped like this.
 
 As the controls are surrounded with a `<form>` tag, the form can be submitted without hitting the submit button: simply press the `Enter` key while you are focusing a control (except multi line text input and file upload).
 
