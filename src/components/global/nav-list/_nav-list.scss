@@ -40,8 +40,9 @@
 	&-active {
 		@include font-weight(bold);
 	}
-  &:hover {
+  &:hover, &:focus {
     @include theme(color, var(--theme-color-dark));
     text-decoration: underline;
+    outline: none;
   }
 }

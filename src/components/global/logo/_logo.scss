@@ -1,4 +1,15 @@
 .logo {
-	display: block;
+  margin-left: 20px;
+	float: left;
 	text-decoration: none;
+  overflow: hidden;
+
+  img {
+    float: left;
+    padding: 10px;
+  }
+
+  &:hover, &:focus {
+    outline: 1px solid;
+  }
 }
