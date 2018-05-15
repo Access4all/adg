@@ -1,0 +1,28 @@
+table {
+  border-collapse: collapse;
+  display: block;
+  border-bottom: 1px solid;
+}
+
+caption, tr, tbody {
+  display: block;
+}
+
+thead th {
+  background-color: lightpink;
+}
+
+tbody th {
+  background-color: lightgreen;
+}
+
+th, td {
+  border: 1px solid;
+  border-bottom: 0;
+  padding: 4px 8px;
+  display: block;
+}
+
+th {
+  text-align: left;
+}

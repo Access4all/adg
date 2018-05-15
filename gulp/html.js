@@ -9,6 +9,7 @@ const requireNew = require('require-new')
 const plumber = require('gulp-plumber')
 const sm = require('sitemap')
 const _ = require('lodash')
+const { JSDOM } = require('jsdom')
 
 const getUrl = (filePath, base) => {
   return path
@@ -117,7 +118,7 @@ const flattenNavigation = items =>
   }, [])
 
 module.exports = (config, cb) => {
-  const markdown = requireNew('./helpers/markdown')
+  const markdown = requireNew('./helpers/markdown')(config.rootDir)
   const metatags = requireNew('./helpers/metatags')
   const Feed = requireNew('./helpers/rss')
   const appConfig = requireNew('../config')
@@ -148,9 +149,12 @@ module.exports = (config, cb) => {
       through
         .obj((file, enc, cb) => {
           const contents = file.contents.toString()
-          const html = markdown(file.path).render(contents)
+          const env = {}
+          const html = markdown(file.path).render(contents, env)
 
           file.contents = Buffer.from(html)
+
+          file.data = Object.assign({}, file.data, env)
 
           return cb(null, file)
         })
@@ -177,8 +181,8 @@ module.exports = (config, cb) => {
             url,
             parent: parent !== url ? parent : null,
             title: file.frontMatter.navigation_title,
-            titleDetailed: file.frontMatter.title,
-            lead: file.frontMatter.lead,
+            titleDetailed: file.data.title,
+            lead: file.data.lead,
             position: file.frontMatter.position
           })
 
@@ -225,8 +229,8 @@ module.exports = (config, cb) => {
               subPages
             })
             const metatagsData = {
-              title: file.frontMatter.title,
-              description: file.frontMatter.lead,
+              title: file.data.title,
+              description: file.data.lead,
               card: 'summary',
               site_name: appConfig.title,
               url: `${appConfig.url}/${currentUrl}`
@@ -234,7 +238,7 @@ module.exports = (config, cb) => {
 
             file.data = Object.assign({}, file.data, {
               changed: file.frontMatter.changed,
-              title: file.frontMatter.title,
+              title: file.data.title,
               contents: file.contents,
               navigation: pageNavigation,
               previousPage: prevNext.prev,
@@ -280,6 +284,27 @@ module.exports = (config, cb) => {
             .replace(path.extname(file.path), '')
         }
       }).on('error', config.errorHandler)
+    )
+
+    // Move cards in generated markup
+    // We can't do this earlier since the cards are not yet know when we parse the markdown
+    .pipe(
+      through.obj((file, enc, cb) => {
+        const dom = new JSDOM(file.contents.toString())
+        const cards = dom.window.document.querySelector('.cardmenu')
+
+        if (cards) {
+          const lead = dom.window.document.querySelector('.text_container p')
+
+          if (lead) {
+            lead.after(cards)
+
+            file.contents = Buffer.from(dom.serialize())
+          }
+        }
+
+        return cb(null, file)
+      })
     )
 
     // Format

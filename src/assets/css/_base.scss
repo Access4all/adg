@@ -81,13 +81,10 @@ p img {
   max-width: 100%;
 }
 
-p.example {
+.example-link {
   font-weight: bold;
-
-  span {
-    display: inline-block;
-    width: 100%;
-  }
+  display: inline-block;
+  width: 100%;
 }
 
 .accordion {

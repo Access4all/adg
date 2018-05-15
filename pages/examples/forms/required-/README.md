@@ -1,0 +1,55 @@
+---
+navigation_title: "Required (*)"
+position: 8
+changed: "2018-05-02"
+---
+
+# Indicating form controls as required using asterisks (*)
+
+**Asterisk (*) next to a form control's label usually indicates it as "required". Oftentimes, this asterisk's purpose is then explained somewhere else on the page. Many users (especially screen reader users) may be confused with that, so be sure to make this information is easily accessible.**
+
+## Foot notes explaining asterisks
+
+It is a common technique to add an asterisk `*` to a form control's label. Then, somewhere else on the page, for example below the form, this asterisk is explained to indicate a required input (in allusion to foot notes in text documents).
+
+While visual users usually see both the asterisk and the explanation at a glance and can connect them with each other intuitively, screen reader users have to manually search for the asterisk's purpose. In addition to this, screen readers are often configured in such that they do not read all special characters, and thus ignoring asterisks completely.
+
+## Bad example
+
+In the following example, the required input field is announced as "Full Name Asterisk" in most screen readers. An experienced user will probably know what this is intended for, but many users will have no clue.
+
+[Required input with asterisk (example) ![Preview](_examples/required-input-with-asterisk/_preview.png)](_examples/required-input-with-asterisk)
+
+As the text explanation "required field" even is below the submit button of the form, a screen reader user probably will never read it, as activating the button usually is the last thing a user does when filling a form.
+
+## First approach: using ARIA
+
+As we know from [Placing non-interactive content between form controls](/pages/examples/forms/non-interactive-content), the text "required field" can be associated to the form control by using `aria-describedby`. And as we now don't need the text by itself anymore for screen readers, we can also hide it from them using `aria-hidden` (see [Hiding elements from screen readers using aria-hidden](/pages/examples/hiding-elements/from-screen-readers)).
+
+[Required input with asterisk and ARIA (example) ![Preview](_examples/required-input-with-asterisk-and-aria/_preview.png)](_examples/required-input-with-asterisk-and-aria)
+
+The screen reader now announces the control as required - but it also announces the confusing asterisks.
+
+We can try to remove them also using `aria-hidden`:
+
+[Required input with hidden asterisks and ARIA (example) ![Preview](_examples/required-input-with-hidden-asterisks-and-aria/_preview.png)](_examples/required-input-with-hidden-asterisks-and-aria)
+
+But `aria-hidden` does not seem to be respected in focus mode. What a bummer.
+
+## Better approach: using an icon
+
+Instead of trying to work around the problem using ARIA, we can take an approach that works perfectly using plain old HTML.
+
+Instead of trying to hide the plain text asterisk `*` in the label, we replace it with a decent icon. In our case, it is a fancy SVG graphic. Then we simply add the text "required" as a visually hidden element (for more info, see [Hiding elements correctly](/pages/examples/hiding-elements)).
+
+[Required input with asterisks as icons (example) ![Preview](_examples/required-input-with-asterisks-as-icons/_preview.png)](_examples/required-input-with-asterisks-as-icons)
+
+Instead of an SVG, you could also use a traditional image with empty alternative text (`<img src="..." alt="" />`).
+
+And if you really want to make it fancy, you could combine this technique with a tooltip showing "Required" on hover: [Tooltip widgets (or: screen tip, balloon)](/pages/examples/widgets/tooltips).
+
+## Using HTML5 client side validations
+
+Instead of a applying a visually hidden text "required", one can set a `required` attribute to the input: this makes screen readers announce an input as a required one.
+
+Technically this is much easier and cleaner (more info here: [HTML 5 client side validations](/pages/examples/forms/html-5-validations)). Still, there may be cases where other texts than simply "required" are needed (and where there is no standard HTML attribute available), so it's good to have a flexible solution.

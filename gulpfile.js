@@ -29,7 +29,8 @@ gulp.task('html', cb =>
         atom: './dist/feed/atom.xml',
         rss: './dist/feed/rss.xml'
       },
-      errorHandler
+      errorHandler,
+      rootDir: __dirname
     },
     () => {
       browserSync.reload()
@@ -42,7 +43,7 @@ gulp.task('html', cb =>
 gulp.task('html:examples', cb =>
   examples(
     {
-      src: './pages/**/example.html',
+      src: './pages/**/_examples/**/*.html',
       base: './pages',
       errorHandler
     },
@@ -95,7 +96,7 @@ gulp.task(
   gulp.parallel(
     function content () {
       return gulp
-        .src(['./pages/{,**/}_media/**/*', './pages/**/example.png'], {
+        .src(['./pages/{,**/}_media/**/*', './pages/**/*.png'], {
           base: './pages'
         })
         .pipe(gulp.dest('./dist'))
@@ -116,7 +117,7 @@ gulp.task('media:resize', () => {
   const path = require('path')
 
   return gulp
-    .src(['./pages/{,**/}_media/**/*', './pages/**/example.png'], {
+    .src(['./pages/{,**/}_media/**/*', './pages/**/_examples/**/*.png'], {
       base: './pages'
     })
     .pipe(

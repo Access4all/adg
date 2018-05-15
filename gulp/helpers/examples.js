@@ -70,17 +70,13 @@ const getCodePenForm = (code, title) => {
   </form>`
 }
 
-const getExample = (title, href, filePath) => {
-  const dir = path.join(
-    filePath.replace(path.basename(filePath), ''),
-    '_examples',
-    href
-  )
-  const code = getCode(dir)
+const getExample = (title, examplePath, filePath) => {
+  const relExamplePath = path.relative(examplePath, filePath)
+  const code = getCode(examplePath)
 
   const btns = ['html', 'css', 'js'].filter(type => code[type]).map(type => {
     const markup = hljs.highlightAuto(code[type], [type])
-    var id = href
+    var id = relExamplePath
       .toLowerCase()
       .replace(/ /g, '-')
       .replace(/[^\w-]+/g, '')
@@ -92,7 +88,7 @@ const getExample = (title, href, filePath) => {
   const blocks = ['html', 'css', 'js'].filter(type => code[type]).map(type => {
     const markup = hljs.highlightAuto(code[type], [type])
     var id =
-      href
+      relExamplePath
         .toLowerCase()
         .replace(/ /g, '-')
         .replace(/[^\w-]+/g, '') + type
@@ -104,25 +100,24 @@ const getExample = (title, href, filePath) => {
 
   const codePenForm = getCodePenForm(code, title)
 
-  const exampleLink = `<a href="/${path.join(
-    path.relative('./pages', dir),
-    'example.html'
-  )}" target="_blank"><span>Example: ${title}</span><span class="visuallyhidden"> (opens new window)</span><img src="/${path.join(
-    path.relative('./pages', dir),
-    'example.png'
-  )}" alt="Example preview" /></a>`
-
   return `
-  ${exampleLink}
   ${codePenForm}
-  <div class="accordion"><div class="controlls">${btns.join(
+  <div class="accordion"><div class="controls">${btns.join(
     ''
   )}</div><div class="panels">${blocks.join('')}</div></div>`
+}
+
+const getLink = token => {
+  const href = token.attrGet('href') || ''
+  const match = href.match(/_examples/)
+
+  return href.match(/_examples/) ? href : null
 }
 
 module.exports = {
   getCode,
   getTitle,
   getCodePenForm,
-  getExample
+  getExample,
+  getLink
 }
