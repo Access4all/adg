@@ -20,4 +20,8 @@
     @include theme(border-color, main);
     @include font-xs;
   }
+
+  a:focus {
+    outline: 2px solid var(--theme-color-dark);
+  }
 }
