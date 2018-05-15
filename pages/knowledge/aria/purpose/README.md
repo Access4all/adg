@@ -1,7 +1,7 @@
 ---
 navigation_title: "Purpose"
 position: 1
-changed: "2018-05-01"
+changed: "2018-05-14"
 ---
 
 # The purpose behind the WAI-ARIA standard
@@ -27,7 +27,7 @@ Take a look at the following fictional code:
 </tablist>
 ```
 
-It would be great to have something like this natively in HTML, where the browser would provide all behaviour of toggling visibility of elements when activating a tabitem. But this didn't happen yet, and maybe never will.
+It would be great to have something like this natively in HTML, where the browser would provide all behaviour of toggling visibility of elements when activating a tabitem. But this did not happen yet, and maybe never will.
 
 ### Mimicking a tablist visually
 
@@ -62,7 +62,7 @@ $(".tablist [data-target]").click(function() {
 </div>
 ```
 
-But simply presenting something visually isn't enough for screen readers (if you are really curious and want to learn more about this, skip ahead and read [Screen readers don't convey visual attributes](/pages/knowledge/desktop-screen-readers/no-visual-attributes)). For example, although the currently active tabitem can be distinguished visually using `class="active"` and some CSS styling, screen readers won't know which tabitem in fact is the active one. Proper semantical information is missing.
+But simply presenting something visually is not enough for screen readers (if you are really curious and want to learn more about this, skip ahead and read [Screen readers don't convey visual attributes](/pages/knowledge/desktop-screen-readers/no-visual-attributes)). For example, although the currently active tabitem can be distinguished visually using `class="active"` and some CSS styling, screen readers will not know which tabitem in fact is the active one. Proper semantical information is missing.
 
 ## ARIA to the rescue (?)
 
@@ -95,6 +95,8 @@ Marked up with ARIA, our tablist example would look something like this:
 </div>
 ```
 
+We will take a closer look at what these attributes do (or better: what they should do) later in this chapter. For the time being, just take the following for granted.
+
 First, `role="tablist"` was added to the list container (containing the tabs). The `<ul>` element won't be announced as list now anymore by screen readers, but as something like "tablist" (depending on the screen reader).
 
 Then, `role="presentation"` was added to the list elements of the former list. As the list isn't a list anymore, the specific `<li>` elements must not have specific list semantics anymore. The `presentation` role removes any semantical information: the `<li>` elements are now treated similar to plain `<div>` elements. It may seem silly to use a semantic container and then remove its semantics. But this is generally a good practice for providing backwards compatibility with legacy screen readers that may not support ARIA.
@@ -110,13 +112,13 @@ Nice and clean. This looks pretty promising, doesn't it?
 
 Are you in hope of ARIA "magically" solving all the problems with missing semantics?
 
-Don't be too optimistic: ARIA is a bare set of attributes and their specific values. So in contrast to traditional HTML, the browser doesn't take care of anything itself. You still have to provide all the interactivity yourself using JavaScript! In the current example, you need to:
+Do not be too optimistic: ARIA is a bare set of attributes and their specific values. So in contrast to traditional HTML, the browser doesn't take care of anything itself. You still have to provide all the interactivity yourself using JavaScript! In the current example, you need to:
 
 - Implement an intuitive keyboard control pattern (or provide clear instruction of how to control the widget with keyboard only and screen readers).
 - Take care of toggling the visibility of the tabpanels.
 - Take care of toggling `aria-selected`.
 
-Admitted, a tablist is a rather easy user interface pattern, so it's not too hard to provide this functionality yourself. But there are much more complex patterns (for example, autocompletes), where it can become a major challenge managing all the required attributes and keeping their states and visual representation in sync.
+Admitted, a tablist is a rather easy user interface pattern, so it is not too hard to provide this functionality yourself. But there are much more complex patterns (for example, autocompletes), where it can become a major challenge managing all the required attributes and keeping their states and visual representation in sync.
 
 #### Varying support
 
@@ -128,32 +130,11 @@ As such, there are extremely few truly working examples of ARIA widgets availabl
 
 Besides bugs and many unsupported features, the ARIA specification also often is not strictly black or white, leaving it up to the manufacturers of browsers and screen readers to decide how certain functionalities should behave.
 
-So screen reader behaviour varies a lot regarding ARIA, especially regarding differences between browse and focus modes (if you haven't done this yet, go back and read [Screen readers' browse and focus modes](/pages/knowledge/desktop-screen-readers/browse-focus-modes)). For example, while all screen readers announce content associated using `aria-describedby` in focus mode, some ignore it in browse mode. And while some screen readers announce the associated content right away, others leave it up to the user whether they want to hear it (by pressing a keyboard shortcut).
+So screen reader behaviour varies a lot regarding ARIA, especially regarding differences between browse and focus modes (if you haven't done this yet, go back and read [Screen readers' browse and focus modes](/pages/knowledge/desktop-screen-readers/browse-focus-modes)).
 
-Another example is `aria-hidden`. Its specification promises to hide elements from screen readers. The first surprise is that `aria-hidden` simply does not work on focusable elements in most browsers. The next surprise is that `aria-hidden` does not have any effect on elements that are referenced using `aria-describedby`.
+For example, while all screen readers announce content associated using `aria-describedby` in focus mode, some ignore it in browse mode. And while some screen readers announce the associated content right away, others leave it up to the user whether they want to hear it (by pressing a keyboard shortcut). If you are really curious and want to learn more about this, skip forward and read [Adding descriptions to elements using aria-describedby](/pages/examples/sensible-aria-usage/describedby).
 
-Take a look at this example:
-
-```html
-<a href="..." aria-describedby="description">
-  Please click me
-</a>
-
-<p id="description">
-  This link is
-  <span aria-hidden="true">not</span>
-  great.
-</p>
-```
-
-In browse mode, many screen reader's output will be:
-
-> Please click me. Link.
-> This link is great.
-
-But in focus mode, the output will be:
-
-> Please click me. Link. This link is not great.
+Another example is `aria-hidden`. Its specification promises to hide elements from screen readers. The first surprise is that `aria-hidden` simply does not work on focusable elements in most browsers. The next surprise is that `aria-hidden` does not have any effect on elements that are referenced using `aria-describedby`. If you are really curious and want to learn more about this, skip forward and read [Hiding elements from screen readers using aria-hidden](/pages/examples/sensible-aria-usage/hidden).
 
 All this is not because of varying support degrees among modern screen readers or browsers (all of them claim to fully support `aria-describedby` and `aria-hidden`), but because of non-homogenous behaviour caused by the manufacturers' different opinions.
 
@@ -163,7 +144,7 @@ And as long as no quasi-standard, no ubiquitous convention has been established,
 
 The intention behind ARIA is intriguing: it could be a big help in making the web a more accessible place. And knowing that ARIA was released in 2014, it is a real shame that browsers and screen readers still by far aren't capable of truly handling it in a homogenous and robust way. Alas, even if developers use ARIA in perfect accordance to its technical specification, this often will not be of much use for the targeted users. So at the time being, in most cases we don't recommend the use of ARIA. Let us hope that the situation will change for the better some time in the future.
 
-Aside from the `role` attribute (which you should try to avoid in most cases), after all there exist some `aria-*` attributes that can be used standalone and are supported by all modern browsers and screen readers - more or less both homogeneously and robustly. So in some specific situations, these attributes can be of real help, but you need to know exactly in which cases.
+Aside from the `role` attribute (which you should try to avoid in most cases), after all there exist some `aria-*` attributes that can be used standalone and are supported by all modern browsers and screen readers - more or less both homogeneously and robustly. So in some specific situations, these attributes can be of real help, but you need to know exactly in which cases. You will learn more about these in this chapter.
 
 In our guide, we stick to traditional HTML solutions wherever possible to avoid shaky ARIA ground. And if we do suggest ARIA once in a while, you can be confident that it is based on years of experience, so the proposed solution is known to work and has stood the test of time.
 

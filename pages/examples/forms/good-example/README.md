@@ -1,7 +1,7 @@
 ---
 navigation_title: "Good example"
 position: 2
-changed: "2018-05-02"
+changed: "2018-05-11"
 ---
 
 # General good form example
@@ -10,7 +10,7 @@ changed: "2018-05-02"
 
 The following example contains all basic HTML form controls:
 
-- Single line text input: `<input type="text">` (with `readonly` and a `disabled` variants).
+- Single line text input: `<input type="text">` (with `maxlength`, `readonly`, and `disabled` variants).
 - Multi line text input: `<textarea>`.
 - File upload: `<input type="file">`.
 - Radio buttons: `<input type="radio">`.
@@ -60,13 +60,17 @@ This may be counter-intuitive, because it doesn't have anything to do with an au
 
 ![Google autosuggest](_media/google-autosuggest.png)
 
-If you are really curious and want to learn more about this, skip ahead and read [Autocomplete widgets (a.k.a. auto-suggest, look-ahead, type-ahead)](/pages/examples/widgets/autocomplete-widgets-a-k-a-auto-suggest-look-ahead-type-ahead-).
+If you are really curious and want to learn more about this, skip ahead and read [Autosuggest widget (or: autocomplete, lookahead, typeahead)](/pages/examples/widgets/autocomplete).
 
 #### Missing announcements
 
-Yet other attributes surprisingly seem not to be announced at all. For example, `<select>`'s `multiple` option currently is not announced by NVDA, making it really hard for its users to deal with this special control.
+Yet other attributes surprisingly seem not to be announced at all.
 
-For more info, see: [For select lists, why is the "multiple" option not announced? (GitHub.com)](https://github.com/nvaccess/nvda/issues/7579).
+For example, the `<input type="text">`'s `maxlength` option is not announced by both NVDA and JAWS. Even if users reach this limit while inputting, they are given no clue. For more info, see: [No announcement of maxlength (GitHub.com)](https://github.com/nvaccess/nvda/issues/7579).
+
+Also, `<select>`'s `multiple` option currently is not announced by NVDA, making it really hard for its users to deal with this special control. JAWS announces this as "multi select". For more info, see: [For select lists, why is the "multiple" option not announced? (GitHub.com)](https://github.com/nvaccess/nvda/issues/7910).
+
+If you test your forms and stumble over such missing (or irritating) announcements, you should add information about it in plain text to your form controls. For example, when using `maxlength="20"`, you can add this information to the control's label, like "Full name (max. 20 characters)".
 
 ### Missing labels of upload fields (FF)
 

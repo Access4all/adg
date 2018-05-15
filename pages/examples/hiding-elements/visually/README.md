@@ -46,4 +46,4 @@ The usage of this technique has some side effects for visual users:
 
 ## Further possibilities using ARIA
 
-Instead of moving elements out of the viewport, it is possible to replace or add text content specifically for screen readers using ARIA: [ARIA label, describedby and labelledby Attributes](/pages/examples/sensible-usage-of-aria-roles-and-attributes/aria-label-describedby-and-labelledby-attributes).
+Instead of moving elements out of the viewport, it is possible to replace or add text content specifically for screen readers using ARIA: [Labelling elements using aria-label and aria-labelledby](/pages/examples/sensible-aria-usage/label-labelledby).
