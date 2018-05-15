@@ -40,4 +40,7 @@
       text-decoration: underline;
     }
 
+    &:focus {
+      outline: 2px dotted var(--theme-color-dark);
+    }
 }

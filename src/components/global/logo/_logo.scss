@@ -9,7 +9,11 @@
     padding: 10px;
   }
 
-  &:hover, &:focus {
-    outline: 1px solid;
+  &:hover {
+    color: var(--theme-color-dark);
+  }
+
+  &:focus {
+    outline: 2px dotted var(--theme-color-dark);
   }
 }
