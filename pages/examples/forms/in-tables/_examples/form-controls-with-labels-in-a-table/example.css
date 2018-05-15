@@ -1,0 +1,15 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  left: -10000px;
+  overflow: hidden;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid;
+}

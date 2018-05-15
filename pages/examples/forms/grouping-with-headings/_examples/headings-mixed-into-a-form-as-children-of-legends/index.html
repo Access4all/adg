@@ -1,0 +1,76 @@
+<h1>
+  Tell us something about you
+</h1>
+<p>
+  Please fill out the following form.
+</p>
+<form>
+  <fieldset>
+    <legend>
+      <h2>
+        General information
+      </h2>
+    </legend>
+    <div class="control">
+      <label for="name">Full name</label><input id="name" type="text" />
+    </div>
+    <div class="control">
+      <label for="biography">Biography</label><textarea id="biography"></textarea>
+    </div>
+    <fieldset>
+      <legend>Gender</legend>
+      <div class="control">
+        <input id="gender_male" name="gender" type="radio" /><label for="gender_male">Male</label>
+      </div>
+      <div class="control">
+        <input id="gender_female" name="gender" type="radio" /><label for="gender_female">Female</label>
+      </div>
+    </fieldset>
+  </fieldset>
+  <fieldset>
+    <legend>
+      <h2>
+        Additional information
+      </h2>
+    </legend>
+    <div class="control">
+      <label for="idol">Idol</label><select id="idol" size="2">
+        <option>
+          Michael Jackson
+        </option>
+        <option>
+          Jesus
+        </option>
+        <option>
+          Mahatma Gandhi
+        </option>
+        <option>
+          John Doe
+        </option>
+      </select>
+    </div>
+    <div class="control">
+      <label for="favourite_car">Favourite Car</label><select id="favourite_car"><optgroup label="Swedish Cars">
+          <option>
+            Volvo
+          </option>
+          <option>
+            Saab
+          </option>
+        </optgroup><optgroup label="German Cars">
+          <option>
+            Mercedes
+          </option>
+          <option>
+            Audi
+          </option>
+        </optgroup></select>
+    </div>
+    <div class="control">
+      <input id="accept_agbs" type="checkbox" /><label for="accept_agbs">I accept the terms and conditions</label>
+    </div>
+    <div class="control">
+      <input type="submit" value="Register" />
+    </div>
+  </fieldset>
+</form>

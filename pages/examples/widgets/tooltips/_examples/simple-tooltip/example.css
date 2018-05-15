@@ -1,0 +1,47 @@
+*:focus {
+  outline: 2px dotted #000;
+}
+
+.adg-visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.adg-tooltip-simple {
+  position: relative;
+}
+
+.adg-tooltip-simple-icon {
+  padding: 0 4px;
+}
+.adg-tooltip-simple-icon:hover {
+  cursor: default;
+}
+
+.adg-tooltip-simple-balloon {
+  background-color: #fff;
+  font-weight: normal;
+  border: 1px solid;
+  border-radius: 3px;
+  padding: 2px 6px;
+  position: absolute;
+  z-index: 1;
+  left: 100%;
+  top: -5px;
+  white-space: nowrap;
+  background-color: lightyellow;
+}
+
+svg#definition {
+  display: none;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  fill: #000;
+}
