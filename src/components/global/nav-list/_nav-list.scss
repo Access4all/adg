@@ -29,12 +29,12 @@
 	&-current {
     @include theme(color, var(--theme-color-dark));
     &:before {
-      content: ">";
+      content: "•";
       position: absolute;
       transform: translate(-.25em, -50%);
       right: 100%;
       top: 50%;
-      font-size: 10px;
+      font-size: 22px;
     }
 	}
 	&-active {
