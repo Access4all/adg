@@ -14,7 +14,7 @@ Elements can be hidden completely from all devices (including screen readers).
 
 In HTML 5, the `hidden` attribute was introduced. It can be set on an element directly and makes it completely invisible to any device.
 
-[Hiding elements from all devices using hidden attribute (example) ![Preview](_examples/hiding-elements-from-all-devices-using-hidden-attribute/_preview.png)](_examples/hiding-elements-from-all-devices-using-hidden-attribute)
+[](_examples/hiding-elements-from-all-devices-using-hidden-attribute)
 
 ### Cross browser compatibility
 
@@ -30,11 +30,11 @@ To make the `hidden` attribute work in older browsers, simply do:
 
 Setting `display: none` to an element has the same effect like the `hidden` attribute:
 
-[Hiding elements from all devices using display none (example) ![Preview](_examples/hiding-elements-from-all-devices-using-display-none/_preview.png)](_examples/hiding-elements-from-all-devices-using-display-none)
+[](_examples/hiding-elements-from-all-devices-using-display-none)
 
 The same applies for `visibility: hidden`:
 
-[Hiding elements from all devices using visibility hidden (example) ![Preview](_examples/hiding-elements-from-all-devices-using-visibility-hidden/_preview.png)](_examples/hiding-elements-from-all-devices-using-visibility-hidden)
+[](_examples/hiding-elements-from-all-devices-using-visibility-hidden)
 
 ## Which one to use?
 
