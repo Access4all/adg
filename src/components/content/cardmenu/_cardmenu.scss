@@ -31,7 +31,7 @@
       width: calc(100% / 2 - 20px);
     }
 
-    .cardmenu-article & {
+    .cardmenu-default & {
       width: calc(100% / 2 - 20px);
       @include mobile {
         width: calc(100% / 1 - 20px);
@@ -96,7 +96,7 @@
   }
 }
 
-.cardmenu--card-section {
+.cardmenu--card-part {
   text-align: center;
 
   .cardmenu--card--icon {
@@ -127,7 +127,7 @@
   }
 }
 
-.cardmenu--card-article {
+.cardmenu--card-default {
   .cardmenu--card--label {
     display: block;
     margin-bottom: .5em;
