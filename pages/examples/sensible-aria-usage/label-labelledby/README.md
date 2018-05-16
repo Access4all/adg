@@ -40,7 +40,7 @@ So a screen reader will announce:
 
 > No, Bing! Link.
 
-[](_examples/labelling-an-element-using-aria-label)
+[Example](_examples/labelling-an-element-using-aria-label)
 
 ### Referencing a label
 
@@ -68,7 +68,7 @@ Again, a screen reader will announce:
 
 > No, Bing! Link.
 
-[](_examples/labelling-an-element-using-aria-labelledby)
+[Example](_examples/labelling-an-element-using-aria-labelledby)
 
 ## Peculiarities and side effects
 

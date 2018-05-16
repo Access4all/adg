@@ -29,7 +29,7 @@ If you definitely don't want to have more than a single heading on level 1, we c
 
 One approach is to add the single heading on level 1 at the very top of the page, then indenting all other headings below.
 
-[](_examples/page-with-only-one-h1-on-top-of-page)
+[Example](_examples/page-with-only-one-h1-on-top-of-page)
 
 To screen readers, this looks like so:
 
@@ -52,7 +52,7 @@ It might feel a bit awkward to have the main heading as both an `<h1>` and an `<
 
 If you prefer to have the single heading on level 1 directly on top of the main content, it is also okay. If you still need headings for the elements above it (e.g. the header), you can start on level 2 for them.
 
-[](_examples/page-with-only-one-h1-on-top-of-main-content)
+[Example](_examples/page-with-only-one-h1-on-top-of-main-content)
 
 To screen readers, this looks like so:
 

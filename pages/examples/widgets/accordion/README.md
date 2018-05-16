@@ -28,13 +28,13 @@ Find more detailed requirements here: [WAI-WAI-ARIA Authoring Practices: Accordi
 
 Based on the tablists' proof of concept, simply the layout is different.
 
-[](_examples/accordion-with-radio-buttons)
+[Example](_examples/accordion-with-radio-buttons)
 
 ### Checkboxes implementation
 
 Based on the tablists' proof of concept, with a slightly different layout:
 
-[](_examples/multi-accordion-with-checkboxes)
+[Example](_examples/multi-accordion-with-checkboxes)
 
 #### Implementation details
 
@@ -49,7 +49,7 @@ Some interesting peculiarities:
 
 Instead of using radio buttons or checkboxes, it is relatively simple to create a custom carousel implementation with ARIA:
 
-[](_examples/accordion-with-aria)
+[Example](_examples/accordion-with-aria)
 
 #### Implementation details
 

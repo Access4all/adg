@@ -30,7 +30,7 @@ Unlike most other common widget patterns, the [WAI-ARIA Authoring Practices](htt
 
 Based on the tablists' proof of concept, with additional controls:
 
-[](_examples/carousel-with-radio-buttons)
+[Example](_examples/carousel-with-radio-buttons)
 
 ### Implementation details
 

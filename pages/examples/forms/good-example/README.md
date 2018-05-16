@@ -30,7 +30,7 @@ As the controls are surrounded with a `<form>` tag, the form can be submitted wi
 
 In the example, all attributes irrelevant for demonstration purposes (for example `name`) are omitted.
 
-[](_examples/generally-good-form)
+[Example](_examples/generally-good-form)
 
 Navigate the example using `Tab` and notice how the screen reader announces all relevant information about the current form control.
 

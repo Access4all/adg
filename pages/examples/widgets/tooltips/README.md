@@ -42,7 +42,7 @@ Use cases:
 
 Simple tooltips usually appear automatically on both hovering and focusing the described element. Their contents are announced immediately by screen readers; as such, screen reader users usually don't even have to know about the existence of such a tooltip.
 
-[](_examples/simple-tooltip)
+[Example](_examples/simple-tooltip)
 
 #### Implementation details
 
@@ -70,7 +70,7 @@ Use cases:
 
 Complex tooltips usually require manual activation to appear. For this, they need their own focusable toggle button: upon activation, the tooltip's content can be browsed manually by screen reader users.
 
-[](_examples/complex-tooltip)
+[Example](_examples/complex-tooltip)
 
 By the way: complex tooltips sort of are the "little brothers" of non-modal dialogs, see [Dialog widget (or: modal, popup, lightbox, alert)](/pages/examples/widgets/dialog).
 

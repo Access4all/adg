@@ -14,7 +14,7 @@ Although it is the traditional way to group form controls using `<fieldset>`/`<l
 
 The good news: since HTML 5.2, headings are allowed within `<legend>` elements, see [The legend element (W3.org)](https://www.w3.org/TR/html52/sec-forms.html#the-legend-element).
 
-[](_examples/headings-mixed-into-a-form-as-children-of-legends)
+[Example](_examples/headings-mixed-into-a-form-as-children-of-legends)
 
 By the way, the other way round (placing legends into headings) doesn't work, because a `<legend>` always has to be the first child of its `<fieldset>`.
 
@@ -24,7 +24,7 @@ Just for the sake of completeness, here is another possible solution. As we know
 
 Here is the same example as above, but with ARIA:
 
-[](_examples/headings-mixed-into-a-form-using-aria)
+[Example](_examples/headings-mixed-into-a-form-using-aria)
 
 We advise to rather stick to the solution of HTML 5.2 instead of using ARIA.
 
