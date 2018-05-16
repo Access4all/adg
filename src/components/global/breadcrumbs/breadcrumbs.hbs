@@ -3,7 +3,7 @@
     <h2>You are here<span class="visuallyhidden">:</span></h2>
     <ol class="breadcrumbs--list">
       {{#each breadcrumb}}
-        <li class="breadcrumbs--list--item{{#if @last}} is-back-link{{/if}}" role="presentation">
+        <li class="breadcrumbs--list--item{{#if @last}} is-back-link{{/if}}">
             <a class="breadcrumbs--list--item--link" href="/{{url}}">{{title}}</a>
         </li>
       {{/each}}
