@@ -105,6 +105,10 @@ $navWidthMax: 300px;
   .navbar--toggle {
     display: none;
   }
+  // Avoid focus for checkbox when toggeling of the menu is not needed
+  .navbar--toggle--input {
+    display: none;
+  }
 }
 
 
