@@ -5,15 +5,22 @@
     @include theme-color;
     padding-top: 2em;
     padding-bottom: 1.5em;
+
+    + p strong {
+      font-size: 1.5em;
+      font-weight: normal;
+    }
   }
   h2 {
     @include theme-color;
   }
-  p > code {
-    @include theme(background-color, main);
-    @include theme(color, bg);
-    padding: .1em .25em;
-    border-radius: 3px;
+  p, li {
+    > code {
+      @include theme(background-color, main);
+      @include theme(color, bg);
+      padding: .1em .25em;
+      border-radius: 3px;
+    }
   }
   pre code {
     border: 1px solid black;
