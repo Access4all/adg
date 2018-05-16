@@ -72,7 +72,11 @@ button {
 
 	// DEV, replace with real styles
 	&.codepen {
-    font-weight: bold;
+		background-image: url("/img/logo/codepen.svg");
+		background-repeat: no-repeat;
+		background-position: .5em center;
+		background-size: 20px;
+		padding-left: 40px;
 	}
 }
 
@@ -82,9 +86,10 @@ p img {
 }
 
 .example-link {
-  font-weight: bold;
   display: inline-block;
   width: 100%;
+	text-decoration: underline;
+	padding-bottom: 5px;
 }
 
 .accordion {

@@ -66,7 +66,7 @@ const getCodePenForm = (code, title) => {
     /"/g,
     '&quot;'
   )}">
-    <button type="submit" class="codepen">Play around with the example on CodePen</button>
+    <button type="submit" class="button codepen">Play around with the example on CodePen</button>
   </form>`
 }
 
