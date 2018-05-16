@@ -115,26 +115,37 @@ module.exports = rootDir => filePath => {
             }
 
             let exampleLink
-            let exampleTitle = ''
+            let examplePath
+            let example
             let insertToken
             let exampleLinkClass
 
             token.children.some((childToken, childIdx) => {
               exampleLink = examples.getLink(childToken)
 
-              // Extract link title (to be used in codepen link, e.g.)
+              // Add title
               if (exampleLink) {
+                examplePath = path.isAbsolute(exampleLink)
+                  ? path.join(rootDir, exampleLink)
+                  : path.resolve(path.dirname(filePath), exampleLink)
+                example = examples.getExample(examplePath, filePath)
+
                 token.children
                   .slice(childIdx)
                   .some((followingChildToken, followingChildIdx) => {
                     if (followingChildToken.type === 'text') {
-                      exampleTitle += followingChildToken.content
-
-                      // Wrap link text with span
+                      // Change link title and wrap with span
                       followingChildToken.type = 'html_inline'
                       followingChildToken.content = `<span class="example-link-text">${
-                        followingChildToken.content
-                      }</span>`
+                        example.code.details.title
+                      }</span>${
+                        example.code.preview
+                          ? `<img src="/${path.relative(
+                            path.join(rootDir, 'pages'),
+                            example.code.preview
+                          )}" alt="Preview">`
+                          : ''
+                      }`
                     }
 
                     if (followingChildToken.type === 'link_close') {
@@ -142,9 +153,9 @@ module.exports = rootDir => filePath => {
                     }
                   })
 
+                // Add custom class to link
                 exampleLinkClass = childToken.attrGet('class')
 
-                // Add custom class to link
                 childToken.attrSet(
                   'class',
                   `${
@@ -157,16 +168,7 @@ module.exports = rootDir => filePath => {
             })
 
             // Create new token to be inserted
-            if (exampleLink) {
-              const examplePath = path.isAbsolute(exampleLink)
-                ? path.join(rootDir, exampleLink)
-                : path.resolve(path.dirname(filePath), exampleLink)
-              const example = examples.getExample(
-                exampleTitle,
-                examplePath,
-                filePath
-              )
-
+            if (example) {
               // Insert after closing paragraph tag to avoid invalid markup
               const insertTokenIdx =
                 idx +
@@ -176,7 +178,7 @@ module.exports = rootDir => filePath => {
                 1
 
               insertToken = new state.Token('html_inline', '', 0)
-              insertToken.content = example
+              insertToken.content = example.form
 
               state.tokens.splice(insertTokenIdx, 0, insertToken)
             }
