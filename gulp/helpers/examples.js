@@ -52,14 +52,14 @@ const getCodePenForm = (code, title) => {
 
     // css_starter: 'neither',
     // css_prefix_free: false,
-    js: code.js
+    js: code.js,
 
-    // js_pre_processor: 'none',
+    js_pre_processor: 'babel',
     // js_modernizr: false,
-    // js_library: '',
+    // js_library: 'jquery',
     // html_classes: '',
     // css_external: '',
-    // js_external: ''
+    js_external: '//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'
   }
 
   return `<form action="https://codepen.io/pen/define" method="POST">
