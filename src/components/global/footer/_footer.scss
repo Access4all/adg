@@ -1,6 +1,5 @@
 .footer {
   padding: $gutter 60px;
-  @include theme(background-color, var(--theme-bg-color-inverse));
 }
 
 .footer--inner {
