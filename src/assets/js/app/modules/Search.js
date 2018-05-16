@@ -59,9 +59,6 @@ export default class Search extends BaseModule {
             .attr('value', $(this).attr('href'))
             .attr('id', id)
             .attr('class', 'visuallyhidden')
-            .on('change', function () {
-              // window.location.assign(this.value)
-            })
 
           label = $('<label/>')
             .attr('for', id)
@@ -81,6 +78,12 @@ export default class Search extends BaseModule {
     }
 
     initializeSs360()
+
+    this.$el
+      .find('input')
+      .on('adg-autocomplete-option-selected', function (e, option) {
+        window.location.assign(option.val())
+      })
 
     window.ADGAutocomplete = new ADGAutocomplete(this.$el)
 

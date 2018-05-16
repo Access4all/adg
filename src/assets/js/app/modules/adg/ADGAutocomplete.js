@@ -116,9 +116,16 @@ export default class ADGAutocomplete extends ADGBase {
 
   attachEnterKeyToFilter () {
     return this.$filter.keydown(e => {
+      var $checkedOption
       if (e.which === 13) {
         this.debugMessage('enter')
         if (this.$optionsContainer.is(':visible')) {
+          $checkedOption = this.$options.filter(':checked')
+          if ($checkedOption.length === 1) {
+            this.$filter.trigger('adg-autocomplete-option-selected', [
+              $checkedOption
+            ])
+          }
           this.applyCheckedOptionToFilterAndResetOptions()
           return e.preventDefault() // Needed for automatic testing only
         } else {
