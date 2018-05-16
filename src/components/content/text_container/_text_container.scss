@@ -1,22 +1,27 @@
 .text_container {
 	@include richtext(all);
+  h1 {
+    @include h1;
+    @include theme-color;
+    padding-top: 2em;
+    padding-bottom: 1.5em;
+  }
   h2 {
     @include theme-color;
-
-    &.first {
-      display: none;
-    }
   }
-  code:not([class^="language-"]):not([class*=" language-"]) {
+  p > code {
     @include theme(background-color, main);
     @include theme(color, bg);
     padding: .1em .25em;
     border-radius: 3px;
   }
-
-  code[class^="language-"],
-  code[class*=" language-"] {
+  pre code {
     border: 1px solid black;
     @include theme(border-color, main);
+    @include font-xs;
+  }
+
+  a:focus {
+    outline: 2px solid var(--theme-color-dark);
   }
 }

@@ -1,4 +1,19 @@
 .logo {
-  display: block;
+  margin-left: 20px;
+	float: left;
 	text-decoration: none;
+  overflow: hidden;
+
+  img {
+    float: left;
+    padding: 10px;
+  }
+
+  &:hover {
+    color: var(--theme-color-dark);
+  }
+
+  &:focus {
+    outline: 2px dotted var(--theme-color-dark);
+  }
 }

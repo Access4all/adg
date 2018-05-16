@@ -1,0 +1,52 @@
+<form>
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Delivery provider
+        </th>
+        <th>
+          Insurance
+        </th>
+        <th>
+          Comment
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>
+          <input id="dhl" name="provider" type="radio" /><label for="dhl">DHL</label>
+        </th>
+        <td>
+          <input id="dhl_insurance" type="checkbox" /><label class="visually-hidden" for="dhl_insurance">Insurance</label>
+        </td>
+        <td>
+          <label class="visually-hidden" for="dhl_comment">Comment</label><textarea id="dhl_comment"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <input id="ups" name="provider" type="radio" /><label for="ups">UPS</label>
+        </th>
+        <td>
+          <input id="ups_insurance" type="checkbox" /><label class="visually-hidden" for="ups_insurance">Insurance</label>
+        </td>
+        <td>
+          <label class="visually-hidden" for="ups_comment">Comment</label><textarea id="ups_comment"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <input id="post" name="provider" type="radio" /><label for="post">Post</label>
+        </th>
+        <td>
+          <input id="post_insurance" type="checkbox" /><label class="visually-hidden" for="post_insurance">Insurance</label>
+        </td>
+        <td>
+          <label class="visually-hidden" for="post_comment">Comment</label><textarea id="post_comment"></textarea>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>

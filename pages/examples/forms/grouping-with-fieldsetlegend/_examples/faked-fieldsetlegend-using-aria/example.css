@@ -1,0 +1,28 @@
+.control, .fieldset {
+  margin: 6px 0;
+}
+
+label, .label {
+  display: inline-block;
+  width: 120px;
+  vertical-align: top;
+}
+
+input + .label {
+  width: auto;
+}
+
+.fieldset {
+  position: relative;
+  border: 2px groove threedface;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+legend, .legend {
+  background-color: #fff;
+  position: absolute;
+  left: 10px;
+  top: -12px;
+  padding: 2px;
+}

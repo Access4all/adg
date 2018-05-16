@@ -1,0 +1,51 @@
+*:focus {
+  outline: 2px dotted #000;
+}
+
+.adg-visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.adg-tooltip-complex {
+  position: relative;
+}
+
+.adg-tooltip-complex-icon {
+  border: 0;
+  padding: 0 4px;
+}
+.adg-tooltip-complex-icon:hover {
+  cursor: pointer;
+}
+
+.adg-tooltip-complex-balloon {
+  background-color: #fff;
+  font-weight: normal;
+  border: 1px solid;
+  border-radius: 3px;
+  padding: 2px 6px;
+  position: absolute;
+  z-index: 1;
+  left: 100%;
+  top: -5px;
+  background-color: lightyellow;
+  width: 300px;
+}
+.adg-tooltip-complex-balloon img {
+  max-width: 100%;
+}
+
+svg#definition {
+  display: none;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  fill: #000;
+}

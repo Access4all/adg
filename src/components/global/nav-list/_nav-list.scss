@@ -25,10 +25,28 @@
 .nav-list--link {
 	display: block;
 	padding: $gutter / 4 0;
+  position: relative;
 	&-current {
-		color: red;
+    @include theme(color, var(--theme-color-dark));
+    &:before {
+      content: "•";
+      position: absolute;
+      transform: translate(-.25em, -50%);
+      right: 100%;
+      top: 50%;
+      font-size: 22px;
+    }
 	}
 	&-active {
 		@include font-weight(bold);
 	}
+  &:hover {
+    @include theme(color, var(--theme-color-dark));
+    text-decoration: underline;
+    outline: none;
+  }
+
+  &:focus {
+    outline: 2px dotted var(--theme-color-dark);
+  }
 }
