@@ -82,9 +82,12 @@ p img {
 }
 
 .example-link {
-  font-weight: bold;
-  display: inline-block;
-  width: 100%;
+
+  &-text {
+    font-weight: bold;
+    display: inline-block;
+    width: 100%;
+  }
 }
 
 .accordion {

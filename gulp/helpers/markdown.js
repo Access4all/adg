@@ -101,6 +101,7 @@ module.exports = rootDir => filePath => {
             let exampleLink
             let exampleTitle = ''
             let insertToken
+            let exampleLinkClass
 
             token.children.some((childToken, childIdx) => {
               exampleLink = examples.getLink(childToken)
@@ -115,7 +116,7 @@ module.exports = rootDir => filePath => {
 
                       // Wrap link text with span
                       followingChildToken.type = 'html_inline'
-                      followingChildToken.content = `<span class="example-link">${
+                      followingChildToken.content = `<span class="example-link-text">${
                         followingChildToken.content
                       }</span>`
                     }
@@ -124,6 +125,16 @@ module.exports = rootDir => filePath => {
                       return true
                     }
                   })
+
+                exampleLinkClass = childToken.attrGet('class')
+
+                // Add custom class to link
+                childToken.attrSet(
+                  'class',
+                  `${
+                    exampleLinkClass ? `${exampleLinkClass} ` : ''
+                  }example-link`
+                )
 
                 return true
               }
