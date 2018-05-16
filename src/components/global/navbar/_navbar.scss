@@ -105,6 +105,10 @@ $navWidthMax: 300px;
   .navbar--toggle {
     display: none;
   }
+  // Avoid focus for checkbox when toggeling of the menu is not needed
+  .navbar--toggle--input {
+    display: none;
+  }
 }
 
 
@@ -146,6 +150,12 @@ $navWidthMax: 300px;
 
 .navbar--toggle--input {
   @include visuallyhidden;
+
+  // Outline the hamburger navigation to toggle the navigation when using the keyboard only
+  &:focus + .navbar .navbar--toggle .navbar--toggle--inner {
+    outline: 2px dotted var(--theme-color-dark);
+    outline-offset: 6px;
+  }
 }
 .navbar--toggle--line {
   display: block;
@@ -179,7 +189,3 @@ $navWidthMax: 300px;
 		}
 	}
 }
-
-
-
-

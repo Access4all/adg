@@ -6,6 +6,8 @@ const frontMatter = require('front-matter')
 const requireNew = require('require-new')
 const fs = require('fs')
 const path = require('path')
+const babel = require('@babel/core')
+const babelPreset = require('@babel/preset-env')
 
 module.exports = (config, cb) => {
   const helpers = requireNew('./helpers/examples')
@@ -38,6 +40,18 @@ module.exports = (config, cb) => {
               path.dirname(articlePath)
             )
             const code = helpers.getCode(dir)
+            code.js = babel.transform(code.js, {
+              presets: [
+                [
+                  babelPreset,
+                  {
+                    targets: {
+                      browsers: ['last 2 versions', 'ie 11']
+                    }
+                  }
+                ]
+              ]
+            }).code
             const data = Object.assign(
               {
                 codePen: helpers.getCodePenForm(code),
