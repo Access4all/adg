@@ -32,7 +32,7 @@ If the button is activated (and the `aria-expanded` status is changed to `true` 
 
 > Expanded.
 
-[Marking an element expandable using aria-expanded (example) ![Preview](_examples/marking-an-element-expandable-using-aria-expanded/_example.png)](_examples/marking-an-element-expandable-using-aria-expanded)
+[](_examples/marking-an-element-expandable-using-aria-expanded)
 
 ### Adding hasmenu (optional)
 
@@ -48,7 +48,7 @@ A screen reader will announce:
 
 > Toggle. Button has menu.
 
-[Marking an element expandable using aria-hasmenu (example) ![Preview](_examples/marking-an-element-expandable-using-aria-hasmenu/_example.png)](_examples/marking-an-element-expandable-using-aria-hasmenu)
+[](_examples/marking-an-element-expandable-using-aria-hasmenu)
 
 In contrast to `aria-expanded`, `aria-hasmenu` does not offer anything better than `aria-expanded`: both tell the user that there is something to be toggled. But while `aria-expanded` can be used for whatever "something" needed (menus of all sorts, dialogs, tooltips, etc.), `aria-hasmenu` is constrained to menus.
 
@@ -82,7 +82,7 @@ For example, if a navigation is made of nested lists of links, and clicking a li
 
 Instead of fiddling around with ARIA, you can achieve the same result using a traditional checkbox (styled to your likings).
 
-[Marking an element expandable using a checkbox (example) ![Preview](_examples/marking-an-element-expandable-using-a-checkbox/_example.png)](_examples/marking-an-element-expandable-using-a-checkbox)
+[](_examples/marking-an-element-expandable-using-a-checkbox)
 
 While this is even more robust than using `aria-expanded`, it may feel out of place within a "real" form.
 

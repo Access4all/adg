@@ -1,0 +1,26 @@
+<form>
+  <div class="control">
+    <label for="name">Full name</label><input id="name" required="" type="text" />
+  </div>
+  <div class="control">
+    <label for="email">Email</label><input id="email" required="" type="email" />
+  </div>
+  <div class="control">
+    <label for="password">Password</label><input id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required="" title="Minimum 6 characters containing lowercase, uppercase, and at least one number" type="password" />
+  </div>
+  <fieldset>
+    <legend>Gender</legend>
+    <div class="control">
+      <input id="gender_male" name="gender" required="" type="radio" value="male" /><label for="gender_male">Male</label>
+    </div>
+    <div class="control">
+      <input id="gender_female" name="gender" type="radio" value="female" /><label for="gender_female">Female</label>
+    </div>
+  </fieldset>
+  <div class="control">
+    <input id="accept_agbs" required="" type="checkbox" /><label for="accept_agbs">I accept the terms and conditions</label>
+  </div>
+  <div class="control">
+    <input type="submit" value="Register" />
+  </div>
+</form>

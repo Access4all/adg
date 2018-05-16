@@ -28,7 +28,7 @@ The HTML 5 outline algorithm sadly was never implemented by any relevant assisti
 
 The following example shows the technically correct usage of the HTML 5 outline algorithm.
 
-[HTML 5 headings outline (example) ![Preview](_examples/html-5-headings-outline/_example.png)](_examples/html-5-headings-outline)
+[](_examples/html-5-headings-outline)
 
 On a visual level, browsers apply stylings that resemble correct indentation of nested heading levels.
 
@@ -50,7 +50,7 @@ As seen in [Alternative techniques for labelling page regions](/pages/examples/h
 
 The best is to simply avoid relying on the HTML 5 outline algorithm. Instead, use the traditional HTML heading mechanism (irrespective of whether you're combining them with elements like `<main>` or `<article>`).
 
-[HTML 5 headings outline with traditionally numbered headings (example) ![Preview](_examples/html-5-headings-outline-with-traditionally-numbered-headings/_example.png)](_examples/html-5-headings-outline-with-traditionally-numbered-headings)
+[](_examples/html-5-headings-outline-with-traditionally-numbered-headings)
 
 Here's the result in NVDA:
 
@@ -62,7 +62,7 @@ Backwards compatibility is guaranteed with this solution.
 
 If you really need to use HTML 5 outline, you can try to use ARIA's `role="heading"` together with `aria-level` (to set a specific level, e.g. `aria-level="3"` for heading level 3). You could do that even programmatically using JavaScript.
 
-[HTML 5 headings outline with ARIA level fixes (example) ![Preview](_examples/html-5-headings-outline-with-aria-level-fixes/_example.png)](_examples/html-5-headings-outline-with-aria-level-fixes)
+[](_examples/html-5-headings-outline-with-aria-level-fixes)
 
 And for the sake of completeness, here's the result in NVDA:
 

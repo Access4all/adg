@@ -38,13 +38,13 @@ So a screen reader will announce:
 
 > Google. The world's best known search engine. Link.
 
-[Adding a description to an element using aria-describedby (example) ![Preview](_examples/adding-a-description-to-an-element-using-aria-describedby/_example.png)](_examples/adding-a-description-to-an-element-using-aria-describedby)
+[](_examples/adding-a-description-to-an-element-using-aria-describedby)
 
 ### Multiple descriptions
 
 The value of `aria-describedby` can contain more than a single ID. Each referenced ID is attached as a description.
 
-[Adding multiple descriptions to an element using aria-describedby (example) ![Preview](_examples/adding-multiple-descriptions-to-an-element-using-aria-describedby/_example.png)](_examples/adding-multiple-descriptions-to-an-element-using-aria-describedby)
+[](_examples/adding-multiple-descriptions-to-an-element-using-aria-describedby)
 
 ## Peculiarities and side effects
 

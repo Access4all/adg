@@ -35,7 +35,7 @@ According to our credo [Widgets simply working for all](/pages/knowledge/semanti
 
 Sensible naming of elements (and a few specifically added visually hidden texts and alerts) guarantees that screen reader users know how to handle the element - even if they have not seen any other autosuggest before.
 
-[Autocomplete with radio buttons (example) ![Preview](_examples/autocomplete-with-radio-buttons/_example.png)](_examples/autocomplete-with-radio-buttons)
+[](_examples/autocomplete-with-radio-buttons)
 
 ### Implementation details
 

@@ -19,7 +19,7 @@ In this use case, messages are associated to the invalid form inputs using `aria
 - For multiple radio buttons or checkboxes, the message is associated to the surrounding `<fieldset>`.
 - For all other inputs, the message is associated to the input itself.
 
-[Form validation with messages next to controls (example) ![Preview](_examples/form-validation-with-messages-next-to-controls/_example.png)](_examples/form-validation-with-messages-next-to-controls)
+[](_examples/form-validation-with-messages-next-to-controls)
 
 If there are any validation messages, the focus is set to the first invalid input: this way, a screen reader will immediately announce the associated message, so the user knows that there is at least one invalid input to be fixed.
 
@@ -31,7 +31,7 @@ The following example is very similar to the one above, except in this use case,
 
 In addition to this, each invalid input is associated to its message using `aria-describedby`. This is important, as it makes sure that screen readers also announce the messages when navigating through the inputs using the `Tab` key.
 
-[Form validation with messages on top (example) ![Preview](_examples/form-validation-with-messages-on-top/_example.png)](_examples/form-validation-with-messages-on-top)
+[](_examples/form-validation-with-messages-on-top)
 
 If there are any validation messages, the focus is set to the first message: this way, a screen reader will immediately announce it, so the user knows that there is at least one invalid input to be fixed. As the message is also announced as "in-page link", the user can activate it and jump to the respective input; but the user also may decide to stay in the messages block and read the other messages before fixing any of the inputs.
 

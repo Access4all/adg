@@ -1,0 +1,29 @@
+.table {
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.tr {
+  display: flex;
+}
+
+.th, .td {
+  border-top: 1px solid;
+  border-right: 1px solid;
+  padding: 4px 8px;
+  flex: 1;
+}
+
+.th {
+  font-weight: bold;
+}
+.th[role="rowheader"] {
+  background-color: lightgreen;
+}
+.th[role="columnheader"] {
+  background-color: lightpink;
+}
+
+.favourites {
+  font-style: italic;
+}

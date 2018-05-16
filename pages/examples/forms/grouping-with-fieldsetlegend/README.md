@@ -16,7 +16,7 @@ changed: "2018-05-03"
 
 The more complex forms are, the more it makes sense to group thematically related form controls of any kind.
 
-[Grouped thematically related form controls (example) ![Preview](_examples/grouped-thematically-related-form-controls/_example.png)](_examples/grouped-thematically-related-form-controls)
+[](_examples/grouped-thematically-related-form-controls)
 
 By the way, it is not mandatory to group all your form controls. In the example above, you could easily drop the grouping of interests (or any other). In general: use groupings of thematically related controls whenever it feels meaningful to you and your users.
 
@@ -24,7 +24,7 @@ By the way, it is not mandatory to group all your form controls. In the example 
 
 Another use case is differentiating groups with similar input fields, for example to tell apart shipping and billing address.
 
-[Grouped and differentiated form controls (example) ![Preview](_examples/grouped-and-differentiated-form-controls/_example.png)](_examples/grouped-and-differentiated-form-controls)
+[](_examples/grouped-and-differentiated-form-controls)
 
 ## Grouping certain kind of controls
 
@@ -32,7 +32,7 @@ Another use case is differentiating groups with similar input fields, for exampl
 
 Groups of radio buttons are used as possible answers to a certain question, and as such they are always related to each other. Hence they are always grouped, while the `<fieldset>`'s `<legend>` contains the question and each control's `<label>` contains an answer.
 
-[Grouped radio buttons (example) ![Preview](_examples/grouped-radio-buttons/_example.png)](_examples/grouped-radio-buttons)
+[](_examples/grouped-radio-buttons)
 
 This is also reflected by the fact that each radio button's `name` attribute is identical.
 
@@ -40,11 +40,11 @@ This is also reflected by the fact that each radio button's `name` attribute is 
 
 Groups of checkboxes are very similar to radio buttons, and hence are grouped most of the time:
 
-[Grouped checkboxes (example) ![Preview](_examples/grouped-checkboxes/_example.png)](_examples/grouped-checkboxes)
+[](_examples/grouped-checkboxes)
 
 In contrast to radio buttons though, checkboxes do not imperatively relate to each other. So there may be situations where a number of non-related checkboxes can stand on their own, without being grouped:
 
-[Non related checkboxes (example) ![Preview](_examples/non-related-checkboxes/_example.png)](_examples/non-related-checkboxes)
+[](_examples/non-related-checkboxes)
 
 This is also reflected by the fact that each checkbox's `name` attribute is different.
 
@@ -54,7 +54,7 @@ Notice: single checkboxes, like "Accept terms and conditions", do not need a `<f
 
 Nesting `<fieldset>`/`<legend>` structures is possible, especially when groups of radio buttons or checkboxes play a role.
 
-[Nested fieldset/legend structures (example) ![Preview](_examples/nested-fieldsetlegend-structures/_example.png)](_examples/nested-fieldsetlegend-structures)
+[](_examples/nested-fieldsetlegend-structures)
 
 But you should not overdo that: while screen readers uniformly announce when a grouping is entered, some do not announce when it is exited. As such, too much nesting can quickly become confusing.
 
@@ -72,7 +72,7 @@ On the other side, NVDA only announces the `<legend>`'s text when entering the `
 > Personal Details, Grouping. First Name.
 > Last Name.
 
-[Grouped form controls with too long legend (example) ![Preview](_examples/grouped-form-controls-with-too-long-legend/_example.png)](_examples/grouped-form-controls-with-too-long-legend)
+[](_examples/grouped-form-controls-with-too-long-legend)
 
 Conclusion: never put long texts into the `<legend>` element. If you really need to put long text into a form, there are other approaches, see [Placing non-interactive content between form controls](/pages/examples/forms/non-interactive-content).
 
@@ -118,6 +118,6 @@ So if for visual (or any other serious) reason you can't use standard `<fieldset
 - Use `role="group"` to give a `<div>` container the semantics of a `<fieldset>`.
 - Associate any other text to the grouping container using `aria-describedby`.
 
-[Faked fieldset/legend using ARIA (example) ![Preview](_examples/faked-fieldsetlegend-using-aria/_example.png)](_examples/faked-fieldsetlegend-using-aria)
+[](_examples/faked-fieldsetlegend-using-aria)
 
 As always, we highly recommend to use traditional solutions over ARIA, so if you haven't done this yet, go back and read [ARIA - when HTML simply isn't enough](/pages/knowledge/aria).

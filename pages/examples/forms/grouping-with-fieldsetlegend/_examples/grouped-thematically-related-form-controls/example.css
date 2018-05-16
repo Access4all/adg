@@ -1,0 +1,13 @@
+.control, fieldset {
+  margin: 6px 0;
+}
+
+label {
+  display: inline-block;
+  width: 200px;
+  vertical-align: top;
+}
+
+input + label {
+  width: auto;
+}
