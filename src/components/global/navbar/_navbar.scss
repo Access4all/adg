@@ -146,6 +146,11 @@ $navWidthMax: 300px;
 
 .navbar--toggle--input {
   @include visuallyhidden;
+
+  // Outline the hamburger navigation to toggle the navigation when using the keyboard only
+  &:focus + .navbar .navbar--toggle .navbar--toggle--inner {
+    outline: 2px dotted var(--theme-color-dark);
+  }
 }
 .navbar--toggle--line {
   display: block;
