@@ -83,7 +83,7 @@ const getExample = (title, examplePath, filePath) => {
 
     return `<div class="control"><input type="checkbox" id="${id +
       type}" name="${id}" value="${type}" /><label class="button" for="${id +
-      type}"><span class="visuallyhidden">Show </span>${type.toUpperCase()}<span class="visuallyhidden"> code</span></label></div>`
+      type}">▼ <span class="visuallyhidden">Show </span>${type.toUpperCase()}<span class="visuallyhidden"> code</span></label></div>`
   })
   const blocks = ['html', 'css', 'js'].filter(type => code[type]).map(type => {
     const markup = hljs.highlightAuto(code[type], [type])
