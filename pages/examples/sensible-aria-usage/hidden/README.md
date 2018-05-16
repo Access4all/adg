@@ -22,7 +22,7 @@ The following paragraph is ignored by screen readers:
 </p>
 ```
 
-[Hiding an element using aria-hidden (example) ![Preview](_examples/hiding-an-element-using-aria-hidden/_preview.png)](_examples/hiding-an-element-using-aria-hidden)
+[Hiding an element using aria-hidden (example) ![Preview](_examples/hiding-an-element-using-aria-hidden/_example.png)](_examples/hiding-an-element-using-aria-hidden)
 
 ## Peculiarities and side effects
 
@@ -30,7 +30,7 @@ The following paragraph is ignored by screen readers:
 
 When setting `aria-hidden="true"` to an element, all children will also be hidden. It is not possible to override this by setting `aria-hidden="false"` to a child element.
 
-[Trying to unhide an aria-hidden child (example) ![Preview](_examples/trying-to-unhide-an-aria-hidden-child/_preview.png)](_examples/trying-to-unhide-an-aria-hidden-child)
+[Trying to unhide an aria-hidden child (example) ![Preview](_examples/trying-to-unhide-an-aria-hidden-child/_example.png)](_examples/trying-to-unhide-an-aria-hidden-child)
 
 ### Does not work on focusable elements
 
@@ -38,13 +38,13 @@ You must never use `aria-hidden="true"` on any focusable element, or on any elem
 
 This is due to the fact that `aria-hidden` indeed is respected by screen readers even on focusable elements while reading them in browse mode - but during usage of focus mode, focusable elements are still reachable by the browser (with the `Tab` key), which leads to strange (or missing) announcements of hidden elements.
 
-[Hiding an element with a focusable child (example) ![Preview](_examples/hiding-an-element-with-a-focusable-child/_preview.png)](_examples/hiding-an-element-with-a-focusable-child)
+[Hiding an element with a focusable child (example) ![Preview](_examples/hiding-an-element-with-a-focusable-child/_example.png)](_examples/hiding-an-element-with-a-focusable-child)
 
 ### Not hidden anymore as description
 
 Elements hidden using `aria-hidden` are not hidden anymore when referencing them using `aria-describedby`.
 
-[Elements hidden with aria-hidden are not hidden when referenced (example) ![Preview](_examples/elements-hidden-with-aria-hidden-are-not-hidden-when-referenced/_preview.png)](_examples/elements-hidden-with-aria-hidden-are-not-hidden-when-referenced)
+[Elements hidden with aria-hidden are not hidden when referenced (example) ![Preview](_examples/elements-hidden-with-aria-hidden-are-not-hidden-when-referenced/_example.png)](_examples/elements-hidden-with-aria-hidden-are-not-hidden-when-referenced)
 
 In focus mode, a screen reader's announcement of the link will be:
 

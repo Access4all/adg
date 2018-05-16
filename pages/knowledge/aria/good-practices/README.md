@@ -74,7 +74,7 @@ To remove the semantical role of an element, `role="presentation"` can be used.
 
 While browser and screen reader behaviour is quite homogenous, this technique is scarcely needed, except when fiddling around with ARIA widgets (which we highly discourage).
 
-If you are really curious and want to learn more about this, skip forward and read [Removing semantics using role=presentation](/pages/examples/sensible-aria-usage/presentation).
+If you are really curious and want to learn more about this, skip forward and read [Removing semantics using presentation role](/pages/examples/sensible-aria-usage/presentation).
 
 ### Noticing screen readers (alerts)
 

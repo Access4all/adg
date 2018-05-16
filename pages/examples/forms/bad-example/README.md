@@ -12,7 +12,7 @@ Most accessibility problems regarding form are caused due to bad semantics. So i
 
 The following example shows a basic form which is technically perfectly valid HTML code.
 
-[Generally bad form (example) ![Preview](_examples/generally-bad-form/_preview.png)](_examples/generally-bad-form)
+[Generally bad form (example) ![Preview](_examples/generally-bad-form/_example.png)](_examples/generally-bad-form)
 
 But it lacks a lot of standard features needed for setting elements in relationship with each other properly and triggering browser standard functionality.
 

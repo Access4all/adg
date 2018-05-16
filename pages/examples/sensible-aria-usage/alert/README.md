@@ -39,7 +39,7 @@ sayHello = function() {
 return setTimeout(sayHello, 10000);
 ```
 
-[Single announcement of an element using alert role (example) ![Preview](_examples/single-announcement-of-an-element-using-alert-role/_preview.png)](_examples/single-announcement-of-an-element-using-alert-role)
+[Single announcement of an element using alert role (example) ![Preview](_examples/single-announcement-of-an-element-using-alert-role/_example.png)](_examples/single-announcement-of-an-element-using-alert-role)
 
 ## Peculiarities and side effects
 
@@ -60,7 +60,7 @@ setInterval(sayHello, 2000);
 
 This is extremely disturbing, as the user is interrupted again and again while browsing the page. Something like this can destroy the whole user experience for screen reader users.
 
-[Loop announcement of an element using alert role (example) ![Preview](_examples/loop-announcement-of-an-element-using-alert-role/_preview.png)](_examples/loop-announcement-of-an-element-using-alert-role)
+[Loop announcement of an element using alert role (example) ![Preview](_examples/loop-announcement-of-an-element-using-alert-role/_example.png)](_examples/loop-announcement-of-an-element-using-alert-role)
 
 ### Where does it come from?
 
@@ -80,7 +80,7 @@ It is important to note that the element with `role="alert"` must be visible on 
 
 In the following example, the element containing the alerts are hidden using `hidden` attribute (see [Hiding elements from all devices](/pages/examples/hiding-elements/from-all-devices)). As such, the alerts are not announced by screen readers.
 
-[Loop announcement of an element using hidden alert role (example) ![Preview](_examples/loop-announcement-of-an-element-using-hidden-alert-role/_preview.png)](_examples/loop-announcement-of-an-element-using-hidden-alert-role)
+[Loop announcement of an element using hidden alert role (example) ![Preview](_examples/loop-announcement-of-an-element-using-hidden-alert-role/_example.png)](_examples/loop-announcement-of-an-element-using-hidden-alert-role)
 
 ## Live regions - an alternative?
 
@@ -94,4 +94,4 @@ In our opinion, the only appropriate use for `role="alert"` is to announce a cha
 
 For example, when letting the user filter a list of elements using a text input. In this case, after the user typed a letter "T", the list is reduced to elements that contain a "T" in their name, and the screen reader would immediately alert "2 of 5 elements filtered".
 
-You can find an example for this here: [Autosuggest widget (or: autocomplete, lookahead, typeahead)](/pages/examples/widgets/autocomplete).
+You can find an example for this here: [Autosuggest widget (or: autocomplete, lookahead, typeahead)](/pages/examples/widgets/autosuggest).

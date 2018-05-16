@@ -6,7 +6,7 @@ changed: "2018-05-15"
 
 # What is a "Proof of concept"?
 
-**All our widgets are so called "Proofs of concepts" (POCs), meaning they show how an interaction pattern implemented in an accessible way. As such, they are intended to serve as inspiration for your own implementations, but are not meant to be copied 1:1 into real projects.**
+**All our widgets are so called "Proofs of concepts" (POCs), meaning they show how an interaction pattern can be implemented in an accessible way. As such, they are intended to serve as inspiration for your own implementations, but are not meant to be copied 1:1 into real projects.**
 
 ## Proofing a concept
 
