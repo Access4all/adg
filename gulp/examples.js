@@ -42,11 +42,14 @@ module.exports = (config, cb) => {
             const code = helpers.getCode(dir)
             code.js = babel.transform(code.js, {
               presets: [
-                [babelPreset, {
-                  targets: {
-                    browsers: ['last 2 versions', 'ie 11']
+                [
+                  babelPreset,
+                  {
+                    targets: {
+                      browsers: ['last 2 versions', 'ie 11']
+                    }
                   }
-                }]
+                ]
               ]
             }).code
             const data = Object.assign(
