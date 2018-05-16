@@ -2,6 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const frontMatter = require('front-matter')
 const hljs = require('highlight.js')
+const _ = require('lodash')
 
 const getFile = (files, type, dir) => {
   const match = files.find(file => path.extname(file) === `.${type}`)
@@ -73,27 +74,17 @@ const getCodePenForm = (code, title) => {
 const getExample = (title, examplePath, filePath) => {
   const relExamplePath = path.relative(examplePath, filePath)
   const code = getCode(examplePath)
+  const id = _.uniqueId('example-')
 
   const btns = ['html', 'css', 'js'].filter(type => code[type]).map(type => {
     const markup = hljs.highlightAuto(code[type], [type])
-    var id = relExamplePath
-      .toLowerCase()
-      .replace(/ /g, '-')
-      .replace(/[^\w-]+/g, '')
 
-    return `<div class="control"><input type="checkbox" id="${id +
-      type}" name="${id}" value="${type}" /><label class="button" for="${id +
-      type}">▼ <span class="visuallyhidden">Show </span>${type.toUpperCase()}<span class="visuallyhidden"> code</span></label></div>`
+    return `<div class="control"><input type="checkbox" id="${id}-${type}" name="${id}" value="${type}" /><label class="button" for="${id}-${type}"><span class="visuallyhidden">Show </span>${type.toUpperCase()}<span class="visuallyhidden"> code</span></label></div>`
   })
   const blocks = ['html', 'css', 'js'].filter(type => code[type]).map(type => {
     const markup = hljs.highlightAuto(code[type], [type])
-    var id =
-      relExamplePath
-        .toLowerCase()
-        .replace(/ /g, '-')
-        .replace(/[^\w-]+/g, '') + type
 
-    return `<div class="panel" id="${id}_panel" style="display: none"><pre><code>${
+    return `<div class="panel" id="${id}-${type}_panel" style="display: none"><pre><code>${
       markup.value
     }</code></pre></div>`
   })

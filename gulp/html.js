@@ -288,24 +288,24 @@ module.exports = (config, cb) => {
 
     // Move cards in generated markup
     // We can't do this earlier since the cards are not yet know when we parse the markdown
-    .pipe(
-      through.obj((file, enc, cb) => {
-        const dom = new JSDOM(file.contents.toString())
-        const cards = dom.window.document.querySelector('.cardmenu')
+    // .pipe(
+    //   through.obj((file, enc, cb) => {
+    //     const dom = new JSDOM(file.contents.toString())
+    //     const cards = dom.window.document.querySelector('.cardmenu')
 
-        if (cards) {
-          const lead = dom.window.document.querySelector('.text_container p')
+    //     if (cards) {
+    //       const lead = dom.window.document.querySelector('.text_container p')
 
-          if (lead) {
-            lead.after(cards)
+    //       if (lead) {
+    //         lead.after(cards)
 
-            file.contents = Buffer.from(dom.serialize())
-          }
-        }
+    //         file.contents = Buffer.from(dom.serialize())
+    //       }
+    //     }
 
-        return cb(null, file)
-      })
-    )
+    //     return cb(null, file)
+    //   })
+    // )
 
     // Format
     .pipe(

@@ -82,9 +82,12 @@ p img {
 }
 
 .example-link {
-  font-weight: bold;
-  display: inline-block;
-  width: 100%;
+
+  &-text {
+    font-weight: bold;
+    display: inline-block;
+    width: 100%;
+  }
 }
 
 .accordion {
@@ -97,10 +100,18 @@ p img {
     }
     input {
       @include visuallyhidden;
-    }
 
-    input:focus + label {
-      outline: auto;
+      + label::before {
+        content: '▾';
+      }
+
+      &:checked + label::before {
+        content: '▴';
+      }
+
+      &:focus + label {
+        outline: auto;
+      }
     }
   }
 }
