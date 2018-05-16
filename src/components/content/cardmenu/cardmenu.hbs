@@ -1,17 +1,25 @@
-<nav class="cardmenu{{#if menuitem.0.isSection}} cardmenu-section{{else}} cardmenu-article{{/if}}">
+<nav class="cardmenu{{#eq menuitem.0.level 1}} cardmenu-parts{{else}} cardmenu-default{{/eq}}">
     <div class="text_container">
-      <h2>Sub pages</h2>
+      <h2>
+        {{#eq menuitem.0.level 1}}
+          Parts
+        {{else eq menuitem.0.level 2}}
+          Chapters
+        {{else}}
+          Pages
+        {{/eq}}
+      </h2>
     </div>
 
     <ul class="cardmenu--list">
       {{#each menuitem}}
-        <li class="cardmenu--list--item" role="presentation">
+        <li class="cardmenu--list--item cardmenu--list--item-level{{level}}" role="presentation">
             <a class="cardmenu--card--link{{#if modifier}} cardmenu--card--link-{{modifier}}{{/if}}" href="/{{url}}">
-              {{#if isSection}}
-                {{> "content/cardmenu/cardmenu-section-card" }}
+              {{#eq level 1}}
+                {{> "content/cardmenu/cardmenu-card-part" }}
               {{else}}
-                {{> "content/cardmenu/cardmenu-article-card" }}
-              {{/if}}
+                {{> "content/cardmenu/cardmenu-card" }}
+              {{/eq}}
             </a>
         </li>
       {{/each}}
