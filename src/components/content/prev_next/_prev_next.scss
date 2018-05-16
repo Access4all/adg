@@ -60,7 +60,7 @@
     }
 
     &:focus {
-      outline: 2px dotted red;
+      outline: 2px dotted var(--theme-color-dark);
     }
   }
 }
