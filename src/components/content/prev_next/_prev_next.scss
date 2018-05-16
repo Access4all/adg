@@ -1,16 +1,66 @@
 .prev_next {
   @include rem(margin-top, 4 * $gutter);
 
+  li {
+    float: left;
+    width: 50%;
+    position: relative;
+
+    &:first-child {
+      padding-right: .25em;
+    }
+
+    &:last-child {
+      padding-left: .25em;
+    }
+  }
+
   &__link {
-    @include card;
-    box-shadow: 0 10px 34px 0 rgba(0, 0, 0, 0.2);
-    @include rem(margin-left, - $gutter);
+    display: block;
+
+    .text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+      width: 100%;
+      line-height: 2em;
+    }
+
+    &--previous {
+      &::before {
+        content: '👈';
+        font-size: 1.5em;
+        position: absolute;
+      }
+
+      .text {
+        padding-left: 2em;
+      }
+    }
 
     &--next {
-      @include rem(margin-top, $gutter);
-      margin-left: 0;
-      @include rem(margin-right, - $gutter);
       text-align: right;
+
+      &::after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 1.5em;
+        content: '👉';
+      }
+
+      .text {
+        padding-right: 2em;
+      }
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:focus {
+      outline: 2px dotted var(--theme-color-dark);
     }
   }
 }

@@ -9,7 +9,8 @@ const plugins = {
   deflist: require('markdown-it-deflist'),
   kbd: require('markdown-it-kbd'),
   samp: require('markdown-it-samp'),
-  responsive: require('@gerhobbelt/markdown-it-responsive')
+  responsive: require('@gerhobbelt/markdown-it-responsive'),
+  replacements: require('markdown-it-replacements')
 }
 
 module.exports = rootDir => filePath => {
@@ -29,6 +30,20 @@ module.exports = rootDir => filePath => {
     return BAD_PROTO_RE.test(str) ? !!GOOD_DATA_RE.test(str) : true
   }
 
+  plugins.replacements.replacements.push({
+    name: 'right-arrow',
+    re: /->/g,
+    sub: () => '→',
+    default: true
+  })
+
+  plugins.replacements.replacements.push({
+    name: 'left-arrow',
+    re: /<-/g,
+    sub: () => '←',
+    default: true
+  })
+
   return (
     markdown
       .use(plugins.abbr)
@@ -36,6 +51,7 @@ module.exports = rootDir => filePath => {
       .use(plugins.deflist)
       .use(plugins.kbd)
       .use(plugins.samp)
+      .use(plugins.replacements)
       .use(plugins.responsive, {
         responsive: {
           srcset: {
@@ -110,6 +126,7 @@ module.exports = rootDir => filePath => {
             let exampleLink
             let exampleTitle = ''
             let insertToken
+            let exampleLinkClass
 
             token.children.some((childToken, childIdx) => {
               exampleLink = examples.getLink(childToken)
@@ -124,7 +141,7 @@ module.exports = rootDir => filePath => {
 
                       // Wrap link text with span
                       followingChildToken.type = 'html_inline'
-                      followingChildToken.content = `<span class="example-link">${
+                      followingChildToken.content = `<span class="example-link-text">${
                         followingChildToken.content
                       }</span>`
                     }
@@ -133,6 +150,16 @@ module.exports = rootDir => filePath => {
                       return true
                     }
                   })
+
+                exampleLinkClass = childToken.attrGet('class')
+
+                // Add custom class to link
+                childToken.attrSet(
+                  'class',
+                  `${
+                    exampleLinkClass ? `${exampleLinkClass} ` : ''
+                  }example-link`
+                )
 
                 return true
               }

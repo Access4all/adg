@@ -1,5 +1,5 @@
 {{#each this}}
-  <li class="nav-list--item{{#if isInactive}} nav-list--item-inactive{{/if}}">
+  <li class="nav-list--item nav-list--item-level{{level}}{{#if isInactive}} nav-list--item-inactive{{/if}}">
     <a class="nav-list--link{{#if isActive}} nav-list--link-active{{/if}}{{#if isCurrent}} nav-list--link-current{{/if}}" href="/{{url}}"{{#if children}} id="nav{{@key}}" aria-haspopup="true" aria-expanded="false"{{/if}}>
       {{title}}
 

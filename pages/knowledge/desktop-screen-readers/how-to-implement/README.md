@@ -42,7 +42,7 @@ And by the way, you should not set the focus on a big container of information, 
 
 When the screen reader's focus is placed on an element, and suddenly this element is modified in some way, in certain cases the screen reader notices the modification and announces it to the user.
 
-This works best for form controls, for example text inputs: if it is focused, and its value is changed using JavaScript, screen readers announce the new value. This can be very useful, for example when implementing an autocomplete: when users toggle through the suggestions with the arrow keys, the currently selected value is set to the input field and is directly announced. If you are really curious and want to learn more about this, skip ahead and read [Autosuggest widget (or: autocomplete, lookahead, typeahead)](/pages/examples/widgets/autocomplete).
+This works best for form controls, for example text inputs: if it is focused, and its value is changed using JavaScript, screen readers announce the new value. This can be very useful, for example when implementing an autocomplete: when users toggle through the suggestions with the arrow keys, the currently selected value is set to the input field and is directly announced. If you are really curious and want to learn more about this, skip ahead and read [Autosuggest widget (or: autocomplete, lookahead, typeahead)](/pages/examples/widgets/autosuggest).
 
 Sadly, for non-interactive elements, this doesn't seem to work reliably. So for example, if a link is focused by the screen reader, it doesn't notice modifications to its attributes (like `aria-label` or `title`), and also replacing its content isn't noticed.
 

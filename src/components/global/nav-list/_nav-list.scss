@@ -16,7 +16,8 @@
 }
 .nav-list--item {
   &:last-child {
-    margin-bottom: $gutter;
+    // Does not look good in my opinion.
+    // margin-bottom: $gutter;
   }
   &-inactive {
     display: none;
