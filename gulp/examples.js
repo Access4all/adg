@@ -44,11 +44,11 @@ module.exports = (config, cb) => {
               presets: [
                 [babelPreset, {
                   targets: {
-                    node: 'current'
+                    browsers: ['last 2 versions', 'ie 11']
                   }
                 }]
               ]
-            })
+            }).code
             const data = Object.assign(
               {
                 codePen: helpers.getCodePenForm(code),
