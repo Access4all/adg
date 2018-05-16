@@ -1,6 +1,7 @@
 import $ from 'jquery'
 
 import BaseModule from './BaseModule'
+import ADGAutocomplete from './adg/ADGAutocomplete'
 
 /**
  * Search
@@ -31,7 +32,7 @@ export default class Search extends BaseModule {
   enable () {
     window.ss360Config = {
       siteId: 'accessibility-developer-guide.netlify.com',
-      searchBoxSelector: '.' + this.$el.find('input').attr('class'),
+      searchBoxSelector: '#' + this.$el.find('input').attr('id'),
       showImagesSuggestions: false,
       specialMobileSuggest: {
         enabled: false
@@ -57,8 +58,9 @@ export default class Search extends BaseModule {
           radio = $('<input type="radio" name="search-suggests"/>')
             .attr('value', $(this).attr('href'))
             .attr('id', id)
+            .attr('class', 'visuallyhidden')
             .on('change', function () {
-              window.location.assign(this.value)
+              // window.location.assign(this.value)
             })
 
           label = $('<label/>')
@@ -71,10 +73,16 @@ export default class Search extends BaseModule {
         })
 
         suggests.replaceWith(radiosList)
+
+        // Update the options list
+        window.ADGAutocomplete.initOptions()
+        window.ADGAutocomplete.attachChangeEventToOptions()
       }
     }
 
     initializeSs360()
+
+    window.ADGAutocomplete = new ADGAutocomplete(this.$el)
 
     this.$el.find('.search--toggle').one('click', function () {
       $(this)

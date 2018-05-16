@@ -2,6 +2,7 @@
   position: absolute;
   top: 25px;
   right: 80px;
+  z-index: 1;
 
   .search--toggle {
     @include searchbtn;
@@ -37,13 +38,15 @@
   padding: 5px;
   box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
 
-  .unibox-selectable {
-    font-family: $base-font;
-    font-size: $base-font-size - 4px;
+  [data-adg-autocomplete-option] {
+    display: block;
+    padding: 5px;
+  }
 
-    &.active,
-    &:hover {
-      background: $c-blue;
-    }
+  [data-adg-autocomplete-option]:hover,
+  [data-adg-autocomplete-option-selected] {
+    cursor: pointer;
+    background: $c-blue;
+    color: $c-background;
   }
 }
