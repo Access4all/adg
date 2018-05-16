@@ -97,10 +97,18 @@ p img {
     }
     input {
       @include visuallyhidden;
-    }
 
-    input:focus + label {
-      outline: auto;
+      + label::before {
+        content: '▼';
+      }
+
+      &:checked + label::before {
+        content: '▲';
+      }
+
+      &:focus + label {
+        outline: auto;
+      }
     }
   }
 }
