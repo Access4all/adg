@@ -37,6 +37,9 @@ const getPageNavigation = options =>
 // Add isCurrent / isActive properties, extend options.prevNext
 const extendNavigationItem = (origItem, index, options) => {
   const item = _.merge({}, origItem)
+  const level = options.level || 1
+
+  item.level = level
 
   if (item.url === options.currentUrl) {
     const flattenedIndex = options.flattened.findIndex(
@@ -69,7 +72,7 @@ const extendNavigationItem = (origItem, index, options) => {
         title: child.title,
         lead: child.lead,
         url: child.url,
-        isSection: false
+        level: level + 1
       })
     })
   } else if (options.currentUrl.includes(item.url)) {
@@ -95,7 +98,8 @@ const extendNavigationItem = (origItem, index, options) => {
   if (item.children) {
     item.children = item.children.map((child, childIndex) => {
       const childOptions = Object.assign({}, options, {
-        items: item.children
+        items: item.children,
+        level: level + 1
       })
 
       return extendNavigationItem(child, childIndex, childOptions)
@@ -247,8 +251,8 @@ module.exports = (config, cb) => {
                 ? navigation.map(item => ({
                   title: item.title,
                   url: item.url,
-                  isSection: true,
-                  modifier: item.url
+                  modifier: item.url,
+                  level: 1
                 }))
                 : subPages,
               metatags: metatags.generateTags(metatagsData),
@@ -282,30 +286,39 @@ module.exports = (config, cb) => {
           return path
             .relative('./src/components', file.path)
             .replace(path.extname(file.path), '')
+        },
+        helpers: {
+          eq: function (v1, v2, options) {
+            if (v1 === v2) {
+              return options.fn(this)
+            }
+
+            return options.inverse(this)
+          }
         }
       }).on('error', config.errorHandler)
     )
 
     // Move cards in generated markup
     // We can't do this earlier since the cards are not yet know when we parse the markdown
-    .pipe(
-      through.obj((file, enc, cb) => {
-        const dom = new JSDOM(file.contents.toString())
-        const cards = dom.window.document.querySelector('.cardmenu')
+    // .pipe(
+    //   through.obj((file, enc, cb) => {
+    //     const dom = new JSDOM(file.contents.toString())
+    //     const cards = dom.window.document.querySelector('.cardmenu')
 
-        if (cards) {
-          const lead = dom.window.document.querySelector('.text_container p')
+    //     if (cards) {
+    //       const lead = dom.window.document.querySelector('.text_container p')
 
-          if (lead) {
-            lead.after(cards)
+    //       if (lead) {
+    //         lead.after(cards)
 
-            file.contents = Buffer.from(dom.serialize())
-          }
-        }
+    //         file.contents = Buffer.from(dom.serialize())
+    //       }
+    //     }
 
-        return cb(null, file)
-      })
-    )
+    //     return cb(null, file)
+    //   })
+    // )
 
     // Format
     .pipe(

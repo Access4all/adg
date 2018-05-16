@@ -86,10 +86,13 @@ p img {
 }
 
 .example-link {
-  display: inline-block;
-  width: 100%;
-	text-decoration: underline;
-	padding-bottom: 5px;
+
+  &-text {
+    display: inline-block;
+    width: 100%;
+		text-decoration: underline;
+		padding-bottom: 5px;
+  }
 }
 
 .accordion {

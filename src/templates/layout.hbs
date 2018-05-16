@@ -27,11 +27,11 @@
       <main id="main-content" class="site-content">
         <div class="l-site_width">
           {{> "global/breadcrumbs/breadcrumbs"}}
-          {{#if subPages}}
-            {{> "content/cardmenu/cardmenu" menuitem=subPages}}
-          {{/if}}
           {{#if contents}}
             {{> "content/text_container/text_container" content=contents}}
+          {{/if}}
+          {{#if subPages}}
+            {{> "content/cardmenu/cardmenu" menuitem=subPages}}
           {{/if}}
           {{> "content/prev_next/prev_next" prev=previousPage next=nextPage}}
         </div>

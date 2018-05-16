@@ -4,12 +4,11 @@
   &__link {
     @include card;
     box-shadow: 0 10px 34px 0 rgba(0, 0, 0, 0.2);
-    @include rem(margin-left, - $gutter);
+    width: 48%;
+    float: left;
 
     &--next {
-      @include rem(margin-top, $gutter);
-      margin-left: 0;
-      @include rem(margin-right, - $gutter);
+      float: right;
       text-align: right;
     }
   }
