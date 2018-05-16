@@ -5,8 +5,10 @@
           Parts
         {{else eq menuitem.0.level 2}}
           Chapters
-        {{else}}
+        {{else eq menuitem.0.level 3}}
           Pages
+        {{else}}
+          Sub pages
         {{/eq}}
       </h2>
     </div>
