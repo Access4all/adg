@@ -99,11 +99,11 @@ p img {
       @include visuallyhidden;
 
       + label::before {
-        content: '▼';
+        content: '▾';
       }
 
       &:checked + label::before {
-        content: '▲';
+        content: '▴';
       }
 
       &:focus + label {
