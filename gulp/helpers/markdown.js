@@ -9,7 +9,8 @@ const plugins = {
   deflist: require('markdown-it-deflist'),
   kbd: require('markdown-it-kbd'),
   samp: require('markdown-it-samp'),
-  responsive: require('@gerhobbelt/markdown-it-responsive')
+  responsive: require('@gerhobbelt/markdown-it-responsive'),
+  replacements: require('markdown-it-replacements')
 }
 
 module.exports = rootDir => filePath => {
@@ -20,6 +21,20 @@ module.exports = rootDir => filePath => {
   })
   const examples = requireNew('./examples')
 
+  plugins.replacements.replacements.push({
+    name: 'right-arrow',
+    re: /->/g,
+    sub: () => '→',
+    default: true
+  })
+
+  plugins.replacements.replacements.push({
+    name: 'left-arrow',
+    re: /<-/g,
+    sub: () => '←',
+    default: true
+  })
+
   return (
     markdown
       .use(plugins.abbr)
@@ -27,6 +42,7 @@ module.exports = rootDir => filePath => {
       .use(plugins.deflist)
       .use(plugins.kbd)
       .use(plugins.samp)
+      .use(plugins.replacements)
       .use(plugins.responsive, {
         responsive: {
           srcset: {
