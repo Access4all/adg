@@ -1,7 +1,7 @@
 ---
-navigation_title: "Autocomplete"
+navigation_title: "Autosuggest"
 position: 9
-changed: "2018-05-14"
+changed: "2018-05-15"
 ---
 
 # Autosuggest widget (or: autocomplete, lookahead, typeahead)
@@ -35,14 +35,16 @@ According to our credo [Widgets simply working for all](/pages/knowledge/semanti
 
 Sensible naming of elements (and a few specifically added visually hidden texts and alerts) guarantees that screen reader users know how to handle the element - even if they have not seen any other autosuggest before.
 
-[Autocomplete with radio buttons (example) ![Preview](_examples/autocomplete-with-radio-buttons/_preview.png)](_examples/autocomplete-with-radio-buttons)
+[Autocomplete with radio buttons (example) ![Preview](_examples/autocomplete-with-radio-buttons/_example.png)](_examples/autocomplete-with-radio-buttons)
 
 ### Implementation details
 
 Some interesting peculiarities:
 
-- The filter input has a descriptive text attached to it using `aria-describedby` (see [Adding descriptions to elements using aria-describedby](/pages/examples/sensible-aria-usage/describedby)), giving a clue that the element provides suggestions upon entering text, and how many options there are available.
-- The filter input has an `aria-expanded="true"` attribute (see [Marking elements expandable using aria-expanded](/pages/examples/sensible-aria-usage/expanded)), giving a clue that there is something to be expanded (the suggestions).
+- The filter input has:
+    - A descriptive text attached to it using `aria-describedby` (see [Adding descriptions to elements using aria-describedby](/pages/examples/sensible-aria-usage/describedby)), giving a clue that the element provides suggestions upon entering text, and how many options there are available.
+    - An `aria-expanded="true"` attribute (see [Marking elements expandable using aria-expanded](/pages/examples/sensible-aria-usage/expanded)), giving a clue that there is something to be expanded (the suggestions).
+    - An `autocomplete="off"` attribute so it does not trigger the browser's autocomplete feature (which remembers previous user input and offers it again).
 - The suggestions appear upon pressing `Up`/`Down`, `Esc`, or upon a first character is entered into the filter input.
 - The suggestions are filtered by the characters entered by the user.
     - The individual radio buttons are hidden from all devices using `display: none`, see [Hiding elements from all devices](/pages/examples/hiding-elements/from-all-devices).

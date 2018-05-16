@@ -32,7 +32,7 @@ If the button is activated (and the `aria-pressed` status is changed to `true` b
 
 > Pressed.
 
-[Marking an element togglable using aria-pressed (example) ![Preview](_examples/marking-an-element-togglable-using-aria-pressed/_preview.png)](_examples/marking-an-element-togglable-using-aria-pressed)
+[Marking an element togglable using aria-pressed (example) ![Preview](_examples/marking-an-element-togglable-using-aria-pressed/_example.png)](_examples/marking-an-element-togglable-using-aria-pressed)
 
 ## Real world use
 
@@ -46,7 +46,7 @@ But in fact, there is an even simpler and more robust way to implement this usin
 
 Instead of fiddling around with ARIA, you can achieve the same result using a traditional checkbox (styled to your likings).
 
-[Marking an element toggleable using a checkbox (example) ![Preview](_examples/marking-an-element-toggleable-using-a-checkbox/_preview.png)](_examples/marking-an-element-toggleable-using-a-checkbox)
+[Marking an element toggleable using a checkbox (example) ![Preview](_examples/marking-an-element-toggleable-using-a-checkbox/_example.png)](_examples/marking-an-element-toggleable-using-a-checkbox)
 
 While this is even more robust than using `aria-pressed`, it may feel out of place within a "real" form.
 

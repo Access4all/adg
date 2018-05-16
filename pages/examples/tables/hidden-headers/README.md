@@ -10,6 +10,6 @@ changed: "2018-04-16"
 
 Simply add the table headers, then hide them visually (if you haven't done this yet, go back and read [Hiding elements visually by moving them off-screen](/pages/examples/hiding-elements/visually)).
 
-[Table with hidden headers (example) ![Preview](_examples/table-with-hidden-headers/_preview.png)](_examples/table-with-hidden-headers)
+[Table with hidden headers (example) ![Preview](_examples/table-with-hidden-headers/_example.png)](_examples/table-with-hidden-headers)
 
 This works for both horizontal and vertical table headers.
