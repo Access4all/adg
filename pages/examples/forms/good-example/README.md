@@ -30,7 +30,7 @@ As the controls are surrounded with a `<form>` tag, the form can be submitted wi
 
 In the example, all attributes irrelevant for demonstration purposes (for example `name`) are omitted.
 
-[Generally good form (example) ![Preview](_examples/generally-good-form/_preview.png)](_examples/generally-good-form)
+[Generally good form (example) ![Preview](_examples/generally-good-form/_example.png)](_examples/generally-good-form)
 
 Navigate the example using `Tab` and notice how the screen reader announces all relevant information about the current form control.
 
@@ -60,7 +60,7 @@ This may be counter-intuitive, because it doesn't have anything to do with an au
 
 ![Google autosuggest](_media/google-autosuggest.png)
 
-If you are really curious and want to learn more about this, skip ahead and read [Autosuggest widget (or: autocomplete, lookahead, typeahead)](/pages/examples/widgets/autocomplete).
+If you are really curious and want to learn more about this, skip ahead and read [Autosuggest widget (or: autocomplete, lookahead, typeahead)](/pages/examples/widgets/autosuggest).
 
 #### Missing announcements
 

@@ -18,7 +18,7 @@ While visual users usually see both the asterisk and the explanation at a glance
 
 In the following example, the required input field is announced as "Full Name Asterisk" in most screen readers. An experienced user will probably know what this is intended for, but many users will have no clue.
 
-[Required input with asterisk (example) ![Preview](_examples/required-input-with-asterisk/_preview.png)](_examples/required-input-with-asterisk)
+[Required input with asterisk (example) ![Preview](_examples/required-input-with-asterisk/_example.png)](_examples/required-input-with-asterisk)
 
 As the text explanation "required field" even is below the submit button of the form, a screen reader user probably will never read it, as activating the button usually is the last thing a user does when filling a form.
 
@@ -26,13 +26,13 @@ As the text explanation "required field" even is below the submit button of the 
 
 As we know from [Placing non-interactive content between form controls](/pages/examples/forms/non-interactive-content), the text "required field" can be associated to the form control by using `aria-describedby`. And as we now don't need the text by itself anymore for screen readers, we can also hide it from them using `aria-hidden` (see [Hiding elements from screen readers using aria-hidden](/pages/examples/hiding-elements/from-screen-readers)).
 
-[Required input with asterisk and ARIA (example) ![Preview](_examples/required-input-with-asterisk-and-aria/_preview.png)](_examples/required-input-with-asterisk-and-aria)
+[Required input with asterisk and ARIA (example) ![Preview](_examples/required-input-with-asterisk-and-aria/_example.png)](_examples/required-input-with-asterisk-and-aria)
 
 The screen reader now announces the control as required - but it also announces the confusing asterisks.
 
 We can try to remove them also using `aria-hidden`:
 
-[Required input with hidden asterisks and ARIA (example) ![Preview](_examples/required-input-with-hidden-asterisks-and-aria/_preview.png)](_examples/required-input-with-hidden-asterisks-and-aria)
+[Required input with hidden asterisks and ARIA (example) ![Preview](_examples/required-input-with-hidden-asterisks-and-aria/_example.png)](_examples/required-input-with-hidden-asterisks-and-aria)
 
 But `aria-hidden` does not seem to be respected in focus mode. What a bummer.
 
@@ -42,7 +42,7 @@ Instead of trying to work around the problem using ARIA, we can take an approach
 
 Instead of trying to hide the plain text asterisk `*` in the label, we replace it with a decent icon. In our case, it is a fancy SVG graphic. Then we simply add the text "required" as a visually hidden element (for more info, see [Hiding elements correctly](/pages/examples/hiding-elements)).
 
-[Required input with asterisks as icons (example) ![Preview](_examples/required-input-with-asterisks-as-icons/_preview.png)](_examples/required-input-with-asterisks-as-icons)
+[Required input with asterisks as icons (example) ![Preview](_examples/required-input-with-asterisks-as-icons/_example.png)](_examples/required-input-with-asterisks-as-icons)
 
 Instead of an SVG, you could also use a traditional image with empty alternative text (`<img src="..." alt="" />`).
 

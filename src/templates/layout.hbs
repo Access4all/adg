@@ -11,7 +11,7 @@
   {{/each}}
 
   {{#each metatags.standard}}
-      <meta name="{{this.name}}" content="{{this.content}}">
+    <meta name="{{this.name}}" content="{{this.content}}">
   {{/each}}
   <link rel="alternate" type="application/rss+xml" href="/feed/rss.xml">
 </head>
@@ -19,9 +19,9 @@
   <div id="body">
     <div id="main">
       <header class="header" id="header">
-          <div class="l-site_width">
-            <h1 class="visuallyhidden">Header</h1>
-          </div>
+        <div class="l-site_width">
+          <h1 class="visuallyhidden">Header</h1>
+        </div>
       </header>
       {{> "global/navbar/navbar"}}
       {{> "global/search/search"}}
@@ -29,13 +29,14 @@
         <div class="l-site_width">
           {{> "global/breadcrumbs/breadcrumbs"}}
           {{#if contents}}
-            {{> "content/text_container/text_container" content=contents}}
+{{> "content/text_container/text_container" content=contents}} {{!-- needs to have zero space indenting for code examples --}}
           {{/if}}
           {{#if subPages}}
             {{> "content/cardmenu/cardmenu" menuitem=subPages}}
           {{/if}}
-          {{> "content/prev_next/prev_next" prev=previousPage next=nextPage}}
         </div>
+
+        {{> "content/prev_next/prev_next" prev=previousPage next=nextPage}}
       </main>
     </div>
     {{> "global/footer/footer"}}

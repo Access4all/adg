@@ -32,7 +32,7 @@ A screen reader will announce:
 > Home. Link
 > Blog. Current link.
 
-[Marking an element as current using aria-current (example) ![Preview](_examples/marking-an-element-as-current-using-aria-current/_preview.png)](_examples/marking-an-element-as-current-using-aria-current)
+[Marking an element as current using aria-current (example) ![Preview](_examples/marking-an-element-as-current-using-aria-current/_example.png)](_examples/marking-an-element-as-current-using-aria-current)
 
 ### Possible values
 
@@ -46,7 +46,7 @@ There are various possible values for `aria-current`:
 - `true`: current item within a set.
 - `false`: no an item within a set.
 
-[Marking elements using different aria-current values (example) ![Preview](_examples/marking-elements-using-different-aria-current-values/_preview.png)](_examples/marking-elements-using-different-aria-current-values)
+[Marking elements using different aria-current values (example) ![Preview](_examples/marking-elements-using-different-aria-current-values/_example.png)](_examples/marking-elements-using-different-aria-current-values)
 
 ## Peculiarities and side effects
 
@@ -62,7 +62,7 @@ So instead of using it, for the time being, we recommend using a more traditiona
 
 Instead of fiddling around with ARIA, you can achieve the same result using visually hidden text, see [Hiding elements visually by moving them off-screen](/pages/examples/hiding-elements/visually).
 
-[Marking elements using visually hidden text (example) ![Preview](_examples/marking-elements-using-visually-hidden-text/_preview.png)](_examples/marking-elements-using-visually-hidden-text)
+[Marking elements using visually hidden text (example) ![Preview](_examples/marking-elements-using-visually-hidden-text/_example.png)](_examples/marking-elements-using-visually-hidden-text)
 
 While this may seem like a little more work, it is very robust and leaves you much more freedom in choosing adequate labels for describing your current elements.
 
