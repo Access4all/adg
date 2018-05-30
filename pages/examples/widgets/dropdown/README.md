@@ -24,12 +24,12 @@ Besides many other requirements, we want to stress out explicitly the following:
 
 By the way, dropdowns are very similar to:
 
-- Non-modal dialogs, see [Dialog widget (or: modal, popup, lightbox, alert)](/pages/examples/widgets/dialog)
-- Complex tooltips, see [Tooltip widgets (or: screen tip, balloon)](/pages/examples/widgets/tooltips)
+- Non-modal dialogs, see [Dialog widget (or: modal, popup, lightbox, alert)](/examples/widgets/dialog)
+- Complex tooltips, see [Tooltip widgets (or: screen tip, balloon)](/examples/widgets/tooltips)
 
 ## Proof of concepts
 
-Before you go on, please read [What is a "Proof of concept"?](/pages/examples/widgets/proof-of-concept).
+Before you go on, please read [What is a "Proof of concept"?](/examples/widgets/proof-of-concept).
 
 ### Simple dropdown
 
@@ -41,8 +41,8 @@ This simple dropdown offers a single expandable level.
 
 Some interesting peculiarities:
 
-- Each dropdown toggler has an `aria-expanded="false"` attribute; its value (`true`/`false`) and the visibility of the corresponding content is toggled using JavaScript. See [Marking elements expandable using aria-expanded](/pages/examples/sensible-aria-usage/expanded).
-- The dropdown's content is toggled using `hidden` attribute (see [Hiding elements from all devices](/pages/examples/hiding-elements/from-all-devices)).
+- Each dropdown toggler has an `aria-expanded="false"` attribute; its value (`true`/`false`) and the visibility of the corresponding content is toggled using JavaScript. See [Marking elements expandable using aria-expanded](/examples/sensible-aria-usage/expanded).
+- The dropdown's content is toggled using `hidden` attribute (see [Hiding elements from all devices](/examples/hiding-elements/from-all-devices)).
 - Dropdown togglers are implemented as `<button>` elements (in contrast to the links, see below for further explanations).
 - By using nested lists, screen readers can announce when entering (and leaving) lists, and the total number of elements of the current list.
 
@@ -87,7 +87,7 @@ A mega dropdown can contain much more than a simple collection of links: it can 
 
 As explained above, mega dropdowns can contain structured content of various kind. Be sure not overuse this possibility though. For example, stuffing "big" structural elements like headings (`<h1>` to `<h6>`) or HTML 5 sectioning elements (like `<article>` or `<header>`) into these pretty basic structures of nested lists (`<ol>`) does not feel right.
 
-If you really want to do something like that though, you should rather think of it as non-modal dialogs, see [Dialog widget (or: modal, popup, lightbox, alert)](/pages/examples/widgets/dialog).
+If you really want to do something like that though, you should rather think of it as non-modal dialogs, see [Dialog widget (or: modal, popup, lightbox, alert)](/examples/widgets/dialog).
 
 ### Comboboxes as alternative?
 

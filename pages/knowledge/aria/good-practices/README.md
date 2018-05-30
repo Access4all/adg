@@ -10,7 +10,7 @@ changed: "2018-05-30"
 
 While ARIA is not needed most of the time when developing accessible websites, it can help in certain situations to make the user experience better for screen readers.
 
-The ARIA techniques that have proven to be useful and robust will be explained in detail throughout the 4th part of this guide, [Examples of accessibility patterns](/pages/examples), specifically in [Sensible usage of ARIA roles and attributes](/pages/examples/sensible-aria-usage). We are carefully using ARIA here and there to optimise some of our proposed examples; this is especially true for our widgets, which are all made of traditional HTML form controls, spiced up with some JavaScript and ARIA, see [Interactive widgets](/pages/examples/widgets).
+The ARIA techniques that have proven to be useful and robust will be explained in detail throughout the 4th part of this guide, [Examples of accessibility patterns](/examples), specifically in [Sensible usage of ARIA roles and attributes](/examples/sensible-aria-usage). We are carefully using ARIA here and there to optimise some of our proposed examples; this is especially true for our widgets, which are all made of traditional HTML form controls, spiced up with some JavaScript and ARIA, see [Interactive widgets](/examples/widgets).
 
 ## Conclusion: be careful with ARIA!
 

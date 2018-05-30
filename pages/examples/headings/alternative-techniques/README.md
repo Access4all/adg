@@ -73,9 +73,9 @@ Another annoyance is that not all screen readers announce these elements consist
 
 ### Verdict: use plain old heading outlines
 
-Using the document outline traditionally is the preferred navigation method by most screen reader users. So we highly suggest to always use traditional headings everywhere on your website, as seen here: [Adding visually hidden headings to complete a page's outline](/pages/examples/headings/visually-hidden-headings).
+Using the document outline traditionally is the preferred navigation method by most screen reader users. So we highly suggest to always use traditional headings everywhere on your website, as seen here: [Adding visually hidden headings to complete a page's outline](/examples/headings/visually-hidden-headings).
 
-Besides that, using ARIA to enhance semantics is bad practice anyway, see [Bad ARIA practices](/pages/knowledge/aria/bad-practices).
+Besides that, using ARIA to enhance semantics is bad practice anyway, see [Bad ARIA practices](/knowledge/aria/bad-practices).
 
 #### Even better with landmarks
 

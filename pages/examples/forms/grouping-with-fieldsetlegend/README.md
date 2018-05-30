@@ -48,7 +48,7 @@ In contrast to radio buttons though, checkboxes do not imperatively relate to ea
 
 This is also reflected by the fact that each checkbox's `name` attribute is different.
 
-Notice: single checkboxes, like "Accept terms and conditions", do not need a `<fieldset>`/`<legend>`. Still, it can make perfect sense to put them into their own `<fieldset>`/`<legend>`, maybe together with some related link(s) or text (see [Placing non-interactive content between form controls](/pages/examples/forms/non-interactive-content)).
+Notice: single checkboxes, like "Accept terms and conditions", do not need a `<fieldset>`/`<legend>`. Still, it can make perfect sense to put them into their own `<fieldset>`/`<legend>`, maybe together with some related link(s) or text (see [Placing non-interactive content between form controls](/examples/forms/non-interactive-content)).
 
 ## Nesting
 
@@ -74,7 +74,7 @@ On the other side, NVDA only announces the `<legend>`'s text when entering the `
 
 [Example](_examples/grouped-form-controls-with-too-long-legend)
 
-Conclusion: never put long texts into the `<legend>` element. If you really need to put long text into a form, there are other approaches, see [Placing non-interactive content between form controls](/pages/examples/forms/non-interactive-content).
+Conclusion: never put long texts into the `<legend>` element. If you really need to put long text into a form, there are other approaches, see [Placing non-interactive content between form controls](/examples/forms/non-interactive-content).
 
 ## Legend must be a direct child of fieldset
 
@@ -120,4 +120,4 @@ So if for visual (or any other serious) reason you can't use standard `<fieldset
 
 [Example](_examples/faked-fieldsetlegend-using-aria)
 
-As always, we highly recommend to use traditional solutions over ARIA, so if you haven't done this yet, go back and read [ARIA - when HTML simply isn't enough](/pages/knowledge/aria).
+As always, we highly recommend to use traditional solutions over ARIA, so if you haven't done this yet, go back and read [ARIA - when HTML simply isn't enough](/knowledge/aria).

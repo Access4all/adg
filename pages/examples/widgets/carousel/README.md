@@ -14,7 +14,7 @@ Carousels are well known especially from photo galleries. They offer a list of c
 
 We do not call carousels "sliders" so the difference to the slider pattern (selecting a value in a min/max range) is obvious.
 
-Before you continue, please read [Tablist widgets (or: tab panels, tabs)](/pages/examples/widgets/tablists) to understand why carousels are extended variants of tablists, simply providing additional controls like previous/next buttons, and sometimes autoplay functionality.
+Before you continue, please read [Tablist widgets (or: tab panels, tabs)](/examples/widgets/tablists) to understand why carousels are extended variants of tablists, simply providing additional controls like previous/next buttons, and sometimes autoplay functionality.
 
 ## General requirements
 
@@ -37,7 +37,7 @@ Based on the tablists' proof of concept, with additional controls:
 Some interesting peculiarities:
 
 - Previous/next controls are implemented as buttons and simply change the currently active radio button.
-    - The currently active panel is announced using `role="alert"`, see [Noticing screen readers using alert role](/pages/examples/sensible-aria-usage/alert).
-- Autoplay functionality is implemented using a simple timer that clicks the "Next" button every 2 seconds, as long as the "Autoplay" button has `aria-pressed="true"`, see [Marking elements activatable using aria-pressed](/pages/examples/sensible-aria-usage/pressed).
+    - The currently active panel is announced using `role="alert"`, see [Noticing screen readers using alert role](/examples/sensible-aria-usage/alert).
+- Autoplay functionality is implemented using a simple timer that clicks the "Next" button every 2 seconds, as long as the "Autoplay" button has `aria-pressed="true"`, see [Marking elements activatable using aria-pressed](/examples/sensible-aria-usage/pressed).
     - The autoplay functionality can be toggled: it simply changes the value of `aria-pressed="true"`.
     - It is important that the autoplay button is before the radio buttons in the DOM, so screen reader users can disable it before interacting with them.

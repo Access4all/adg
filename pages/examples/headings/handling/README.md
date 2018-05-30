@@ -10,11 +10,11 @@ changed: "2018-04-18"
 
 ## Keyboard only handling
 
-For keyboard only users, headings don't offer any special functionality. So there's nothing to say here. Still, you may want to check out [How to browse websites using a keyboard only](/pages/knowledge/keyboard-only/browsing-websites).
+For keyboard only users, headings don't offer any special functionality. So there's nothing to say here. Still, you may want to check out [How to browse websites using a keyboard only](/knowledge/keyboard-only/browsing-websites).
 
 ## Screen reader handling
 
-For screen reader users, headings offer a lot of special functionalities. Here follows a quick nomination of the most important features. Besides this, check out [How to read websites using a desktop screen reader](/pages/knowledge/desktop-screen-readers/reading-websites).
+For screen reader users, headings offer a lot of special functionalities. Here follows a quick nomination of the most important features. Besides this, check out [How to read websites using a desktop screen reader](/knowledge/desktop-screen-readers/reading-websites).
 
 ### Quick navigation
 
@@ -31,14 +31,14 @@ You can add `Shift` to most shortcuts to reverse direction. For example press `S
 
 As an alternative to navigating through the headings directly on the page, screen readers offer a heading outline view. It resembles the table of contents of a traditional book.
 
-In the upcoming text, we are referring to the keys `NVDA` and `JAWS`. If you don't know about them, see [Screen readers are keyboard shortcut monsters](/pages/knowledge/desktop-screen-readers/shortcut-monsters).
+In the upcoming text, we are referring to the keys `NVDA` and `JAWS`. If you don't know about them, see [Screen readers are keyboard shortcut monsters](/knowledge/desktop-screen-readers/shortcut-monsters).
 
 #### Elements List (NVDA)
 
 NVDA's "Elements List" displays a page's heading outline in a tree view. To open it:
 
 - First make sure you are in browse mode.
-    - If unclear to you, see [Screen readers' browse and focus modes](/pages/knowledge/desktop-screen-readers/browse-focus-modes).
+    - If unclear to you, see [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes).
 - Press `Alt + H` to select the "Headings" area.
 
 ![NVDA's "Elements List" dialog](_media/nvdas-elements-list-dialog.png)
@@ -61,7 +61,7 @@ WAVE toolbar checks for some well-known problems regarding heading outlines, for
 - It makes sure there are no skipped levels.
 - It tries to detect elements that should be headings, but aren't marked up like headings (like a short paragraph written in bold).
 
-For more details, see [WAVE toolbar](/pages/setup/browsers/chrome/wave-toolbar).
+For more details, see [WAVE toolbar](/setup/browsers/chrome/wave-toolbar).
 
 ## Useful bookmarklets
 
@@ -69,10 +69,10 @@ For more details, see [WAVE toolbar](/pages/setup/browsers/chrome/wave-toolbar).
 
 This is an efficient way to display and debug the correctness of the current webpage's heading outline, without the need to fire up a screen reader.
 
-For more details, see [h123](/pages/setup/browsers/bookmarklets/h123).
+For more details, see [h123](/setup/browsers/bookmarklets/h123).
 
 ### Contents Structured
 
 This conveys the tag names of a lot of HTML elements, including headings. It allows fast visual examination of wrong (or missing) headings.
 
-For more details, see [Contents Structured](/pages/setup/browsers/bookmarklets/contents-structured).
+For more details, see [Contents Structured](/setup/browsers/bookmarklets/contents-structured).

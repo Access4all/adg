@@ -37,7 +37,7 @@ To screen readers, this looks like so:
 
 This way it is a bit harder for screen reader users to find the "real" main content. But by using HTML 5 elements like `<header>`, `<footer>`, and especially `<main>`, you can work around this problem effectively.
 
-It might feel a bit awkward to have the main heading as both an `<h1>` and an `<h2>`. If you like, you can add a prefix to the heading in the `<main>` region and hide it visually (see [Hiding elements visually by moving them off-screen](/pages/examples/hiding-elements/visually)), for example "Main content: ":
+It might feel a bit awkward to have the main heading as both an `<h1>` and an `<h2>`. If you like, you can add a prefix to the heading in the `<main>` region and hide it visually (see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually)), for example "Main content: ":
 
 ```html
 <main>

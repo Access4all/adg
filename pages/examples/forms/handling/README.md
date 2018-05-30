@@ -10,14 +10,14 @@ changed: "2018-04-30"
 
 ## Keyboard only handling
 
-Forms offer a lot of keyboard interactivity, so please check out thoroughly [How to browse websites using a keyboard only](/pages/knowledge/keyboard-only/browsing-websites).
+Forms offer a lot of keyboard interactivity, so please check out thoroughly [How to browse websites using a keyboard only](/knowledge/keyboard-only/browsing-websites).
 
 ## Screen reader handling
 
 For screen reader users, forms offer a lot of special functionalities. Here follows a quick nomination of the most important features. Besides this, check out:
 
-- [How to read websites using a desktop screen reader](/pages/knowledge/desktop-screen-readers/reading-websites)
-- [How to interact with websites using a desktop screen reader](/pages/knowledge/desktop-screen-readers/interacting-with-websites)
+- [How to read websites using a desktop screen reader](/knowledge/desktop-screen-readers/reading-websites)
+- [How to interact with websites using a desktop screen reader](/knowledge/desktop-screen-readers/interacting-with-websites)
 
 ### Quick navigation
 
@@ -57,14 +57,14 @@ In addition to this, grouped elements are indicated with their legend like `Hobb
 
 As an alternative to navigating through the form elements directly on the page, screen readers offer a form outline view.
 
-In the upcoming text, we are referring to the keys `NVDA` and `JAWS`. If you don't know about them, see [Screen readers are keyboard shortcut monsters](/pages/knowledge/desktop-screen-readers/shortcut-monsters).
+In the upcoming text, we are referring to the keys `NVDA` and `JAWS`. If you don't know about them, see [Screen readers are keyboard shortcut monsters](/knowledge/desktop-screen-readers/shortcut-monsters).
 
 #### Elements List (NVDA)
 
 NVDA's "Elements List" displays a page's form outline. To open it:
 
 - First make sure you are in browse mode.
-    - If unclear to you, see [Screen readers' browse and focus modes](/pages/knowledge/desktop-screen-readers/browse-focus-modes).
+    - If unclear to you, see [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes).
 - Press `Alt + F` to select the "Form fields" area.
 - Press `Alt + B` to select the "Buttons" area.
 
@@ -87,7 +87,7 @@ WAVE toolbar checks for some well-known problems regarding forms, for example:
 - It makes sure that every form element has an associated label.
 - It warns about improper form structures (like a `<fieldset>` without `<legend>`).
 
-For more details, see [WAVE toolbar](/pages/setup/browsers/chrome/wave-toolbar).
+For more details, see [WAVE toolbar](/setup/browsers/chrome/wave-toolbar).
 
 ### Your mouse
 
@@ -99,7 +99,7 @@ By clicking on an input's label, you can verify whether the two are associated: 
 
 This conveys the tag names of a lot of HTML elements, including form elements. It allows fast visual examination of wrong (or missing) form structures.
 
-For more details, see [Contents Structured](/pages/setup/browsers/bookmarklets/contents-structured).
+For more details, see [Contents Structured](/setup/browsers/bookmarklets/contents-structured).
 
 ### HTML_CodeSniffer
 
@@ -107,4 +107,4 @@ Similar to WAVE toolbar, HTML_CodeSniffer checks for some additional well-known 
 
 - Missing `<submit>` button.
 
-For more details, see [HTML_CodeSniffer](/pages/setup/browsers/bookmarklets/html-codesniffer).
+For more details, see [HTML_CodeSniffer](/setup/browsers/bookmarklets/html-codesniffer).

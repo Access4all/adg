@@ -16,7 +16,7 @@ While the following instructions are written specifically for the Windows versio
 
 ## Preparing the virtual machine
 
-Before you proceed, be sure you have downloaded a pre-configured VM like described here: [Getting a free Windows virtual machine from Modern.IE](/pages/setup/windows/modern-ie).
+Before you proceed, be sure you have downloaded a pre-configured VM like described here: [Getting a free Windows virtual machine from Modern.IE](/setup/windows/modern-ie).
 
 Then extract the VM to a proper location, for example `C:\Virtual Machines\Accessibility Testing`.
 
@@ -38,7 +38,7 @@ After downloading VMware Workstation Pro, installing and launching it:
 
 ## Booting up the VM for the first time
 
-Start the VM. User and password can be found here: [Getting a free Windows virtual machine from Modern.IE](/pages/setup/windows/modern-ie).
+Start the VM. User and password can be found here: [Getting a free Windows virtual machine from Modern.IE](/setup/windows/modern-ie).
 
 ## Improving seamless integration
 

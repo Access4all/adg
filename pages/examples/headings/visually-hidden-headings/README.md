@@ -21,9 +21,9 @@ On the visual level, these regions typically are designed very distinct:
 
 [Example](_examples/page-with-additional-page-regions-without-headings)
 
-Visual website users are able to recognise these elements within the first glance at a page (if not, the visual design would be pretty bad). As a contrast, see [Screen readers process contents in a linear way](/pages/knowledge/desktop-screen-readers/linear-processing).
+Visual website users are able to recognise these elements within the first glance at a page (if not, the visual design would be pretty bad). As a contrast, see [Screen readers process contents in a linear way](/knowledge/desktop-screen-readers/linear-processing).
 
-Screen reader users don't perceive any visual attributes like size, shape, colour, etc., see [Screen readers don't convey visual attributes](/pages/knowledge/desktop-screen-readers/no-visual-attributes). They rely solely on semantic info and descriptive text labels. The above example is missing all additional regions in the document outline.
+Screen reader users don't perceive any visual attributes like size, shape, colour, etc., see [Screen readers don't convey visual attributes](/knowledge/desktop-screen-readers/no-visual-attributes). They rely solely on semantic info and descriptive text labels. The above example is missing all additional regions in the document outline.
 
 ![Incomplete document outline](_media/incomplete-document-outline.png)
 
@@ -45,4 +45,4 @@ To make sure that the additional headings don't mess up the visual design, they 
 
 [Example](_examples/page-with-additional-page-regions-with-visually-hidden-headings)
 
-This way, all users benefit from a proper and exhaustive document outline. The technique used for this is described here: [Hiding elements visually by moving them off-screen](/pages/examples/hiding-elements/visually).
+This way, all users benefit from a proper and exhaustive document outline. The technique used for this is described here: [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually).

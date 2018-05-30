@@ -10,7 +10,7 @@ changed: "2018-04-13"
 
 ## Problem: no keyboard combinations left
 
-Most traditional keyboard shortcuts (a combination of at least one modifier key and any other key, if you haven't done this yet, go back and read [Controlling a computer with a keyboard only](/pages/knowledge/keyboard-only/controlling-a-computer)) are already in use by the operating system and running applications.
+Most traditional keyboard shortcuts (a combination of at least one modifier key and any other key, if you haven't done this yet, go back and read [Controlling a computer with a keyboard only](/knowledge/keyboard-only/controlling-a-computer)) are already in use by the operating system and running applications.
 
 ## Solution: using Insert as modifier key
 
@@ -27,7 +27,7 @@ Some examples:
 
 ### Alternatives to the Insert key
 
-If you're on a Mac running NVDA or JAWS in a virtual machine, there are several ways you can work around the missing `Insert` key; if you haven't done this yet, go back and read [Configuring VMware Fusion on macOS](/pages/setup/windows/vmware-on-macos).
+If you're on a Mac running NVDA or JAWS in a virtual machine, there are several ways you can work around the missing `Insert` key; if you haven't done this yet, go back and read [Configuring VMware Fusion on macOS](/setup/windows/vmware-on-macos).
 
 Both NVDA and JAWS offer the option to use `Caps Lock` instead of `Insert` as a modifier key. For some reason though, this doesn't seem to work in VMware Fusion.
 

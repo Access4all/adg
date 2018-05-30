@@ -12,7 +12,7 @@ changed: "2018-04-06"
 
 ## Preparing the virtual machine
 
-Before you proceed, be sure you have downloaded a pre-configured virtual machine (VM) like described here: [Getting a free Windows virtual machine from Modern.IE](/pages/setup/windows/modern-ie).
+Before you proceed, be sure you have downloaded a pre-configured virtual machine (VM) like described here: [Getting a free Windows virtual machine from Modern.IE](/setup/windows/modern-ie).
 
 Then extract the VM (using [The Unarchiver](http://wakaba.c3.cx/s/apps/unarchiver.html), as the built-in unzip version isn't capable of zip64 files) to a proper location, for example `~/Virtual Machines`.
 
@@ -32,7 +32,7 @@ After downloading [VMware Fusion](http://www.vmware.com/ch/products/fusion), ins
 
 ## Booting up the VM for the first time
 
-Start the VM. User and password can be found here: [Getting a free Windows virtual machine from Modern.IE](/pages/setup/windows/modern-ie).
+Start the VM. User and password can be found here: [Getting a free Windows virtual machine from Modern.IE](/setup/windows/modern-ie).
 
 ## Improving seamless integration
 
@@ -59,7 +59,7 @@ Windows screen readers make use of the function keys (`F1` to `F12`) a lot.
 
 By default, in macOS, you have to press the `Fn` key in addition to the specific function key to trigger it.
 
-Keyboard shortcuts of screen readers are quite tricky (if you are really curious and want to learn more about this, skip ahead and read [Screen readers are keyboard shortcut monsters](/pages/knowledge/desktop-screen-readers/shortcut-monsters)). As the function keys are often part of them, we suggest that you [change the behaviour of function keys (Apple Support)](https://support.apple.com/en-us/HT204436) so you don't have to use the `Fn` key for them, too.
+Keyboard shortcuts of screen readers are quite tricky (if you are really curious and want to learn more about this, skip ahead and read [Screen readers are keyboard shortcut monsters](/knowledge/desktop-screen-readers/shortcut-monsters)). As the function keys are often part of them, we suggest that you [change the behaviour of function keys (Apple Support)](https://support.apple.com/en-us/HT204436) so you don't have to use the `Fn` key for them, too.
 
 ### Emulating the Insert key
 

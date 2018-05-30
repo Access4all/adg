@@ -24,12 +24,12 @@ Besides many other requirements, we want to stress out explicitly the following:
 
 By the way, non-modal dialogs are very similar to:
 
-- Complex tooltips, see [Tooltip widgets (or: screen tip, balloon)](/pages/examples/widgets/tooltips)
-- Dropdowns, see [Dropdown widget (or: menu, pulldown)](/pages/examples/widgets/dropdown)
+- Complex tooltips, see [Tooltip widgets (or: screen tip, balloon)](/examples/widgets/tooltips)
+- Dropdowns, see [Dropdown widget (or: menu, pulldown)](/examples/widgets/dropdown)
 
 ## Proofs of concept
 
-Before you go on, please read [What is a "Proof of concept"?](/pages/examples/widgets/proof-of-concept).
+Before you go on, please read [What is a "Proof of concept"?](/examples/widgets/proof-of-concept).
 
 ### Non-modal dialog
 
@@ -41,11 +41,11 @@ This dialog simply displays some content above the page, while the rest of the p
 
 Some interesting peculiarities:
 
-- Each dialog toggler has an `aria-expanded="false"` attribute; its value (`true`/`false`) and the visibility of the corresponding dialog is toggled using JavaScript. See [Marking elements expandable using aria-expanded](/pages/examples/sensible-aria-usage/expanded).
-- The dialog is toggled using `hidden` attribute (see [Hiding elements from all devices](/pages/examples/hiding-elements/from-all-devices)).
+- Each dialog toggler has an `aria-expanded="false"` attribute; its value (`true`/`false`) and the visibility of the corresponding dialog is toggled using JavaScript. See [Marking elements expandable using aria-expanded](/examples/sensible-aria-usage/expanded).
+- The dialog is toggled using `hidden` attribute (see [Hiding elements from all devices](/examples/hiding-elements/from-all-devices)).
 - The dialog's first element is a "Close dialog" button.
     - Upon opening the dialog, the focus is set on this button, which announces its caption; this way users immediately know they are in a dialog now.
-    - The button has a visible SVG icon (also an image with empty `alt` attribute would work), and a visually hidden text (see [Hiding elements visually by moving them off-screen](/pages/examples/hiding-elements/visually)).
+    - The button has a visible SVG icon (also an image with empty `alt` attribute would work), and a visually hidden text (see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually)).
     - Upon clicking it, the dialog is closed and focus is set on the dialog toggler again button, which makes screen readers announce its caption; this way users immediately know they are out of the dialog now.
 - The dialog's last element is a "Confirm" button.
     - Upon clicking it, the dialog is closed and focus is set on the dialog toggler again button, which makes screen readers announce its caption; this way users immediately know they are out of the dialog now.

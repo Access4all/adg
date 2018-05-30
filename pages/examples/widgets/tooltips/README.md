@@ -29,7 +29,7 @@ Besides many other requirements, we want to stress out explicitly the following:
 
 ## Proofs of concept
 
-Before you go on, please read [What is a "Proof of concept"?](/pages/examples/widgets/proof-of-concept).
+Before you go on, please read [What is a "Proof of concept"?](/examples/widgets/proof-of-concept).
 
 ### Automatically displayed tooltip
 
@@ -50,10 +50,10 @@ Use cases:
 
 Some interesting peculiarities:
 
-- The tooltip's content is toggled using the `hidden` attribute (see [Hiding elements from all devices](/pages/examples/hiding-elements/from-all-devices)).
-- By duplicating the tooltip's content to each label as visually hidden text (see [Hiding elements visually by moving them off-screen](/pages/examples/hiding-elements/visually)), screen reader users will find it in both browse and focus mode.
-    - This is more robust than `aria-describedby` (see [Adding descriptions to elements using aria-describedby](/pages/examples/sensible-aria-usage/describedby)).
-    - To prevent redundant announcements in screen readers, we hide the tooltip from them using `aria-hidden` (see [Hiding elements from screen readers using aria-hidden](/pages/examples/hiding-elements/from-screen-readers)).
+- The tooltip's content is toggled using the `hidden` attribute (see [Hiding elements from all devices](/examples/hiding-elements/from-all-devices)).
+- By duplicating the tooltip's content to each label as visually hidden text (see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually)), screen reader users will find it in both browse and focus mode.
+    - This is more robust than `aria-describedby` (see [Adding descriptions to elements using aria-describedby](/examples/sensible-aria-usage/describedby)).
+    - To prevent redundant announcements in screen readers, we hide the tooltip from them using `aria-hidden` (see [Hiding elements from screen readers using aria-hidden](/examples/hiding-elements/from-screen-readers)).
 - Visibility of the tooltip can be toggled by pressing `Esc` (when the described element is focused).
     - This is useful if the tooltip overlaps some important information.
 
@@ -76,8 +76,8 @@ Use cases:
 
 By the way, complex tooltips are very similar to:
 
-- Non-modal dialogs, see [Dialog widget (or: modal, popup, lightbox, alert)](/pages/examples/widgets/dialog)
-- Dropdowns, see [Dropdown widget (or: menu, pulldown)](/pages/examples/widgets/dropdown)
+- Non-modal dialogs, see [Dialog widget (or: modal, popup, lightbox, alert)](/examples/widgets/dialog)
+- Dropdowns, see [Dropdown widget (or: menu, pulldown)](/examples/widgets/dropdown)
 
 #### Implementation details
 
@@ -88,4 +88,4 @@ Some interesting peculiarities:
 - The toggle button has a visually hidden label to provide a proper name, while the visible SVG icon is ignored by screen readers.
     - To prevent Internet Explorer from making the SVGs focusable, the `focusable="false"` attribute is used.
     - Instead of an SVG icon, also a traditional image with empty alternative text would work: `<img src="..." alt="" />`.
-- The toggle button has an `aria-expanded` attribute to announce its expandability status (see [Marking elements expandable using aria-expanded](/pages/examples/sensible-aria-usage/expanded)).
+- The toggle button has an `aria-expanded` attribute to announce its expandability status (see [Marking elements expandable using aria-expanded](/examples/sensible-aria-usage/expanded)).

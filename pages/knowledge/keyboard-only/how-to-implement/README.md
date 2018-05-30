@@ -12,7 +12,7 @@ changed: "2018-05-30"
 
 As HTML is fully keyboard only ready, all standard HTML controls offer built-in support for keyboard interaction. This is provided by the browser. So if you stick to using proper semantic HTML markup, you're all fine.
 
-Thus, if you haven't done this yet, go back and read [Semantics and their importance for accessibility](/pages/knowledge/semantics).
+Thus, if you haven't done this yet, go back and read [Semantics and their importance for accessibility](/knowledge/semantics).
 
 ## Custom functionality
 
@@ -53,7 +53,7 @@ In our opinion, there are very few cases which really need optimisation for keyb
 
 Another facet of keyboard optimisation is setting the focus properly if needed.
 
-This can be explained especially well by looking at the dialog pattern. Indeed, our guide has such a dialog implementaion available as a fully working example, so if you are really curious and want to learn more about this, skip ahead and read [Dialog widget (or: modal, popup, lightbox, alert)](/pages/examples/widgets/dialog).
+This can be explained especially well by looking at the dialog pattern. Indeed, our guide has such a dialog implementaion available as a fully working example, so if you are really curious and want to learn more about this, skip ahead and read [Dialog widget (or: modal, popup, lightbox, alert)](/examples/widgets/dialog).
 
 ### Setting focus to an element
 
@@ -118,4 +118,4 @@ However, in our dialog example above, leaving the focus in the darkened (or even
 
 Optimising a website for keyboard only usage needs some awareness of the typical pitfalls. Providing proper HTML elements helps truly a lot already, but the full deal requires some additional developer skills.
 
-All of the code examples in our guide are fully accessible to the most common assistive software and devices and can provide you a lot of inspiration. If you are really curious and want to learn more about this, skip ahead and read [Examples of accessibility patterns](/pages/examples).
+All of the code examples in our guide are fully accessible to the most common assistive software and devices and can provide you a lot of inspiration. If you are really curious and want to learn more about this, skip ahead and read [Examples of accessibility patterns](/examples).

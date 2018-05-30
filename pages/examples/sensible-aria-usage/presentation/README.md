@@ -10,7 +10,7 @@ changed: "2018-05-15"
 
 ## Background
 
-As we know from [Semantics and their importance for accessibility](/pages/knowledge/semantics), HTML elements all have their inherent role. If for some reason you need to remove this role from an element, you can do this by setting `role="presentation"`.
+As we know from [Semantics and their importance for accessibility](/knowledge/semantics), HTML elements all have their inherent role. If for some reason you need to remove this role from an element, you can do this by setting `role="presentation"`.
 
 ## Intended use
 
@@ -34,6 +34,6 @@ For example, a link with `role="presentation"` neither will be announced as "lin
 
 ## Real world use (and conclusion)
 
-There are only very few edge cases where removing semantics makes sense, usually when fiddling around with ARIA widgets (see [The purpose behind the WAI-ARIA standard](/pages/knowledge/aria/purpose)).
+There are only very few edge cases where removing semantics makes sense, usually when fiddling around with ARIA widgets (see [The purpose behind the WAI-ARIA standard](/knowledge/aria/purpose)).
 
-In general, when sticking to this guide's recommendations (especially that widgets should be created using traditional HTML controls, see [Widgets simply working for all](/pages/knowledge/semantics/widgets)), you will not need `role="presentation"` at all.
+In general, when sticking to this guide's recommendations (especially that widgets should be created using traditional HTML controls, see [Widgets simply working for all](/knowledge/semantics/widgets)), you will not need `role="presentation"` at all.

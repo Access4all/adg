@@ -20,7 +20,7 @@ On a semantical level, headings also announce to screen reader users when a new 
 
 ![Document outline in NVDA](_media/document-outline-in-nvda.png)
 
-By the way, if you don't know about semantics, go back and read [Semantics and their importance for accessibility](/pages/knowledge/semantics).
+By the way, if you don't know about semantics, go back and read [Semantics and their importance for accessibility](/knowledge/semantics).
 
 ## Hey, this is like in Word!
 

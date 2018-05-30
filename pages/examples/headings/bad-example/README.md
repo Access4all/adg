@@ -24,7 +24,7 @@ The problems are:
 
 The first problem is clearly a syntactical ones, the second and third problems are semantical ones.
 
-By the way, while NVDA doesn't propagate the first problem to the user, the bookmarklet [h123](/pages/setup/browsers/bookmarklets/h123) does so by marking it visually:
+By the way, while NVDA doesn't propagate the first problem to the user, the bookmarklet [h123](/setup/browsers/bookmarklets/h123) does so by marking it visually:
 
 ![Document outline of h123](_media/document-outline-of-h123.png)
 
@@ -46,4 +46,4 @@ A computer probably will never be able to do that.
 
 Finally, to examine the third problem in our list above, one has to conclude that a very short paragraph that is displayed in **bold** (and is placed above at least one following paragraph) might be meant as a heading, but has been marked up improperly. A computer can make an assumption about this alike, but it will never be a 100% certain.
 
-To find out more about this, see [Semantics and their importance for accessibility](/pages/knowledge/semantics).
+To find out more about this, see [Semantics and their importance for accessibility](/knowledge/semantics).

@@ -12,7 +12,7 @@ changed: "2018-04-16"
 
 First things first: we are not talking about layout tables here. We really do hope nobody is using tables for layout purposes anymore (although screen readers can handle them quite well).
 
-In this article, we are talking about changing the visual appearance of a table while retaining its semantics (if you haven't done this yet, go back and read [Semantics and their importance for accessibility](/pages/knowledge/semantics)).
+In this article, we are talking about changing the visual appearance of a table while retaining its semantics (if you haven't done this yet, go back and read [Semantics and their importance for accessibility](/knowledge/semantics)).
 
 ## Changing the display property
 
@@ -41,7 +41,7 @@ In our example, we changed these values from their defaults to `display: block`.
 
 ## Re-applying proper semantics using ARIA
 
-Fortunately, the lost semantics can be re-applied using ARIA (if you haven't done this yet, go back and read [ARIA - when HTML simply isn't enough](/pages/knowledge/aria)).
+Fortunately, the lost semantics can be re-applied using ARIA (if you haven't done this yet, go back and read [ARIA - when HTML simply isn't enough](/knowledge/aria)).
 
 This is done by adding a `role` attribute with the appropriate value to each element:
 

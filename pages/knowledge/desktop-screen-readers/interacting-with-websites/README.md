@@ -10,7 +10,7 @@ changed: "2018-04-13"
 
 Beneath simple reading of information, most modern websites offer a lot of interactivity.
 
-**Important:** For this article you need to know how to read websites using a desktop screen reader. If you haven't done so yet, go back and read [How to read websites using a desktop screen reader](/pages/knowledge/desktop-screen-readers/reading-websites) thoroughly before you continue here.
+**Important:** For this article you need to know how to read websites using a desktop screen reader. If you haven't done so yet, go back and read [How to read websites using a desktop screen reader](/knowledge/desktop-screen-readers/reading-websites) thoroughly before you continue here.
 
 ## Activating links
 
@@ -29,10 +29,10 @@ Use cases:
 - To toggle through the values of a combobox, make sure you are in focus mode, then use `Up` or `Down`.
 - To toggle the value of a checkbox, simply hit `Space` (regardless of whether you're in browse or focus mode).
 
-If you are really curious and want to learn more about this, skip ahead and read [How to handle forms](/pages/examples/forms/handling).
+If you are really curious and want to learn more about this, skip ahead and read [How to handle forms](/examples/forms/handling).
 
 ## Interacting with widgets
 
-Interacting with widgets can be tricky, especially when ARIA roles are used (if you haven't done this yet, go back and read [ARIA - when HTML simply isn't enough](/pages/knowledge/aria)).
+Interacting with widgets can be tricky, especially when ARIA roles are used (if you haven't done this yet, go back and read [ARIA - when HTML simply isn't enough](/knowledge/aria)).
 
 In general, widgets should be controllable similarly to other interactive elements.

@@ -60,7 +60,7 @@ So instead of using it, for the time being, we recommend using a more traditiona
 
 ### Alternative technique using visually hidden text
 
-Instead of fiddling around with ARIA, you can achieve the same result using visually hidden text, see [Hiding elements visually by moving them off-screen](/pages/examples/hiding-elements/visually).
+Instead of fiddling around with ARIA, you can achieve the same result using visually hidden text, see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually).
 
 [Example](_examples/marking-elements-using-visually-hidden-text)
 

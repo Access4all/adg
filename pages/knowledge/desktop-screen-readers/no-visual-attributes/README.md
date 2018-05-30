@@ -10,7 +10,7 @@ changed: "2018-04-13"
 
 Screen readers don't announce visual attributes of elements (for example a text's font-size and color). Only plain text and semantical information (for example "heading level 3" or "link") is announced by them.
 
-So if you haven't done this yet, go back and read [Semantics and their importance for accessibility](/pages/knowledge/semantics).
+So if you haven't done this yet, go back and read [Semantics and their importance for accessibility](/knowledge/semantics).
 
 ## Disabled CSS equals screen reader? No.
 
@@ -23,11 +23,11 @@ But even if this may give a rudimentary feeling of what the website "looks" to a
 Most of all, special attention needs to be paid to the different values of the `display` attribute:
 
 - Some can hide elements from screen readers.
-    - If you are really curious and want to learn more about this, skip ahead and read [Hiding elements correctly](/pages/examples/hiding-elements).
+    - If you are really curious and want to learn more about this, skip ahead and read [Hiding elements correctly](/examples/hiding-elements).
 - Some can change the way how screen readers split blocks of information.
-    - If you are really curious and want to learn more about this, skip ahead and read [Block vs. Inline Elements](/pages/examples/block-vs-inline-elements).
+    - If you are really curious and want to learn more about this, skip ahead and read [Block vs. Inline Elements](/examples/block-vs-inline-elements).
 - Some can change the role of an element.
-    - If you are really curious and want to learn more about this, skip ahead and read [Responsive tables](/pages/examples/tables/responsive).
+    - If you are really curious and want to learn more about this, skip ahead and read [Responsive tables](/examples/tables/responsive).
 - Fiddling around with the `content` attribute and pseudo elements sometimes may have unexpected side effects.
 
 So if you know its shortcomings, disabling CSS sometimes can be a useful "poor man's screen reader substitute". But it will never be a real replacement.

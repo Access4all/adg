@@ -10,7 +10,7 @@ changed: "2018-04-16"
 
 ## A table of divs
 
-As we have seen, it is possible to re-apply semantics to an element that has somehow lost its inherent semantics. This is done using ARIA (if you haven't done this yet, go back and read [Responsive tables](/pages/examples/tables/responsive)).
+As we have seen, it is possible to re-apply semantics to an element that has somehow lost its inherent semantics. This is done using ARIA (if you haven't done this yet, go back and read [Responsive tables](/examples/tables/responsive)).
 
 We can try to follow this approach "ad absurdum" by trying to add all needed semantics using ARIA alone.
 
@@ -48,6 +48,6 @@ The good news: by adding `role="presentation"` to this additional container, we 
 
 While pure ARIA tables seem to work pretty well in most modern screen readers, we highly discourage using them in productive websites.
 
-Generally speaking, the above example is a case of one of ARIA's typical mis-usages, namely fixing broken semantics (if you haven't done this yet, go back and read [Bad ARIA practices](/pages/knowledge/aria/bad-practices)).
+Generally speaking, the above example is a case of one of ARIA's typical mis-usages, namely fixing broken semantics (if you haven't done this yet, go back and read [Bad ARIA practices](/knowledge/aria/bad-practices)).
 
 The use of real, traditional table structures makes it much easier to spot table-like data directly in the DOM. Also, they are fully backwards compatible, while ARIA requires pretty advanced browsers and screen readers.

@@ -8,13 +8,13 @@ changed: "2018-04-13"
 
 **For a sighted person, it's hard to imagine how a screen reader user surfs the internet. For a web developer with accessibility in mind, it's crucial to have a basic knowledge about this topic. So be ready to get a concrete idea of the main strategies available to read a website using a screen reader!**
 
-Screen readers have a linear, one-dimensional scope on webpages (if you haven't done this yet, go back and read [Screen readers process contents in a linear way](/pages/knowledge/desktop-screen-readers/linear-processing)). So when browsing a website for the first time, blind users first have to manually get a general idea of its layout. They usually achieve that by combing through the content from top to bottom, trying to identify meaningful blocks of information.
+Screen readers have a linear, one-dimensional scope on webpages (if you haven't done this yet, go back and read [Screen readers process contents in a linear way](/knowledge/desktop-screen-readers/linear-processing)). So when browsing a website for the first time, blind users first have to manually get a general idea of its layout. They usually achieve that by combing through the content from top to bottom, trying to identify meaningful blocks of information.
 
 The more users have accustomed to a website, over time, they will work out quicker ways of navigating between blocks of information, or of using its interactive features.
 
 ## Opening a website
 
-This is done the same way like using a keyboard only. So if you haven't done this yet, go back and read [How to browse websites using a keyboard only](/pages/knowledge/keyboard-only/browsing-websites).
+This is done the same way like using a keyboard only. So if you haven't done this yet, go back and read [How to browse websites using a keyboard only](/knowledge/keyboard-only/browsing-websites).
 
 ## Autofocus workaround
 
@@ -56,7 +56,7 @@ Depending on the screen reader, a "line" is around 80 characters and can be comp
 
 Instead of browsing line by line, the NVDA screen reader allows to read full blocks (for example, paragraph by paragraph, or any other kind of container). For this, simply use `Ctrl + Down` (or `Ctrl + Up`).
 
-**Important:** as opposed to keyboard-only users, screen reader users usually don't use the `Tab` key to read a page! If you haven't done this yet, go back and read [Screen readers' browse and focus modes](/pages/knowledge/desktop-screen-readers/browse-focus-modes) to know the difference between navigation using `Arrow` keys and `Tab` key.
+**Important:** as opposed to keyboard-only users, screen reader users usually don't use the `Tab` key to read a page! If you haven't done this yet, go back and read [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes) to know the difference between navigation using `Arrow` keys and `Tab` key.
 
 ### Reading headings
 
@@ -68,7 +68,7 @@ Use cases:
 - If you know that the login form on a specific page is introduced by the 2nd heading on level 3, simply press 2 times the `3` key.
 - If you open a page on Wikipedia and want to read its main content, simply press the `1` key once (because the first `<h1>` is the main content's heading).
 
-If you are really curious and want to learn more about this, skip ahead and read [How to handle headings](/pages/examples/headings/handling).
+If you are really curious and want to learn more about this, skip ahead and read [How to handle headings](/examples/headings/handling).
 
 ### Reading links
 
@@ -94,7 +94,7 @@ Press `T` to jump to tables, then press `Ctrl + Alt + Left/Right/Up/Down` to nav
 
 Use case: to compare the price of several products in a table, simply navigate the column "price" by pressing `Ctrl + Alt + Down`.
 
-If you are really curious and want to learn more about this, skip ahead and read [How to handle tables](/pages/examples/tables/handling).
+If you are really curious and want to learn more about this, skip ahead and read [How to handle tables](/examples/tables/handling).
 
 ### Reading forms
 
@@ -102,4 +102,4 @@ Press `F` to jump to form elements, or press `B` to jump to buttons. Add `Shift`
 
 Use case: to quickly find the login form, simply search for the respective input field by pressing `F`.
 
-If you are really curious and want to learn more about this, skip ahead and read [How to handle forms](/pages/examples/forms/handling).
+If you are really curious and want to learn more about this, skip ahead and read [How to handle forms](/examples/forms/handling).

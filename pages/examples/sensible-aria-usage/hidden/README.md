@@ -10,7 +10,7 @@ changed: "2018-05-14"
 
 ## Background
 
-While it is only possible using a workaround to hide elements visually but leave it there for screen readers (see [Hiding elements visually by moving them off-screen](/pages/examples/hiding-elements/visually)), there exists a specific ARIA attribute `aria-hidden` to hide elements from screen readers (but leaving them there visually).
+While it is only possible using a workaround to hide elements visually but leave it there for screen readers (see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually)), there exists a specific ARIA attribute `aria-hidden` to hide elements from screen readers (but leaving them there visually).
 
 ## Intended use
 
@@ -60,4 +60,4 @@ Very confusing stuff.
 
 While you can use `aria-hidden="true"` on any element that is not focusable and does not contain any focusable element itself, you must never use it on focusable elements. Also be careful when referencing hidden elements using `aria-describedby`.
 
-In general: whenever you think about hiding something from any audience (see [Hiding elements from screen readers using aria-hidden](/pages/examples/hiding-elements/from-screen-readers)), ask yourself whether this is really a good solution. Most of the time it is better to create a solution that works the same way for everybody, and which does not need any shaky ARIA.
+In general: whenever you think about hiding something from any audience (see [Hiding elements from screen readers using aria-hidden](/examples/hiding-elements/from-screen-readers)), ask yourself whether this is really a good solution. Most of the time it is better to create a solution that works the same way for everybody, and which does not need any shaky ARIA.

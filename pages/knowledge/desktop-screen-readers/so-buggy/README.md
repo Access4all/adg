@@ -67,7 +67,7 @@ This is a devastating situation:
 
 ### How to avoid bugs
 
-The best way to avoid such situations is to follow established standards and best practices - essentially the ones we are presenting in our guide, which rely on pure and basic HTML most of the time. So if you haven't done this yet, go back and read [Semantics and their importance for accessibility](/pages/knowledge/semantics).
+The best way to avoid such situations is to follow established standards and best practices - essentially the ones we are presenting in our guide, which rely on pure and basic HTML most of the time. So if you haven't done this yet, go back and read [Semantics and their importance for accessibility](/knowledge/semantics).
 
 ### How to deal with bugs
 

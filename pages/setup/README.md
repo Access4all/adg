@@ -19,17 +19,17 @@ The good news with that is: most of the proposed software can be used free of ch
 
 ## Chapters
 
-We begin with [Windows operating system](/pages/setup/windows). Here you will learn why Windows is a must-have for developing accessible websites, and optionally how you can run it inside a dedicated environment (a virtual machine).
+We begin with [Windows operating system](/setup/windows). Here you will learn why Windows is a must-have for developing accessible websites, and optionally how you can run it inside a dedicated environment (a virtual machine).
 
-In [Web browsers](/pages/setup/browsers), you will encounter the list of needed browsers. No surprise, you are certainly already familiar with them.
+In [Web browsers](/setup/browsers), you will encounter the list of needed browsers. No surprise, you are certainly already familiar with them.
 
-In [Screen readers](/pages/setup/screen-readers), there's the list of relevant screen readers. Used mainly by blind people, screen readers are probably the most important tools when it comes to accessibility.
+In [Screen readers](/setup/screen-readers), there's the list of relevant screen readers. Used mainly by blind people, screen readers are probably the most important tools when it comes to accessibility.
 
-Finally, [Accessibility helper tools](/pages/setup/helper-tools) presents a few more tools supporting your daily accessibility routine.
+Finally, [Accessibility helper tools](/setup/helper-tools) presents a few more tools supporting your daily accessibility routine.
 
 ## How to go through this part
 
-First of all, before you continue reading, be sure you have gone through the previous part already: [Welcome to this guide](/pages/welcome).
+First of all, before you continue reading, be sure you have gone through the previous part already: [Welcome to this guide](/welcome).
 
 Not everyone reading this guide may be involved as deeply in accessibility as the typical frontend developer. And thus, not everyone may have the same setup requirements.
 
@@ -43,12 +43,12 @@ You should stick to the sequential order of the chapters, as they build up on ea
 
 Maybe you are not interested in having all the tools, or your company doesn't allow you to install new software at all. In this case, we propose you a minimal setup. Although it's definitely not on par with a complete setup, it still will serve you very well and quite far.
 
-In order to get there, please work through the following list of pages, as it will guide you to the software that's most important for having a well working, minimal environment available. If you're not running a Windows system yet, please work through the chapter [Windows operating system](/pages/setup/windows) first.
+In order to get there, please work through the following list of pages, as it will guide you to the software that's most important for having a well working, minimal environment available. If you're not running a Windows system yet, please work through the chapter [Windows operating system](/setup/windows) first.
 
-- [Firefox installation and configuration](/pages/setup/browsers/firefox)
-- [NVDA installation and configuration](/pages/setup/screen-readers/nvda)
-- [Colour Contrast Analyser](/pages/setup/helper-tools/colour-contrast-analyser)
-- [PDF Accessibility Checker](/pages/setup/helper-tools/pdf-accessibility-checker)
-- [Windows High Contrast Mode](/pages/setup/helper-tools/high-contrast-mode)
+- [Firefox installation and configuration](/setup/browsers/firefox)
+- [NVDA installation and configuration](/setup/screen-readers/nvda)
+- [Colour Contrast Analyser](/setup/helper-tools/colour-contrast-analyser)
+- [PDF Accessibility Checker](/setup/helper-tools/pdf-accessibility-checker)
+- [Windows High Contrast Mode](/setup/helper-tools/high-contrast-mode)
 
 By the way: all of the minimal software is available in some portable version. Thus, it doesn't need any admin rights for installation. See [What is a portable app? (PortableApps.com)](https://portableapps.com/about/what_is_a_portable_app) for more information.

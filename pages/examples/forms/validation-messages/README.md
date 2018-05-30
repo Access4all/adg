@@ -8,13 +8,13 @@ changed: "2018-05-02"
 
 **Data submitted in a form is usually validated in some way. And if there is any unacceptable data, the form is traditionally re-displayed, together with validation messages. In such a case, it is important to immediately inform screen reader users, so they know that they have to look at their data and submit again.**
 
-As with any other non-interactive content, validation messages need to be associated to the form controls so screen readers don't miss them when using the `Tab` key to navigate the form. This is done best using ARIA (for more info, see [Placing non-interactive content between form controls](/pages/examples/forms/non-interactive-content)).
+As with any other non-interactive content, validation messages need to be associated to the form controls so screen readers don't miss them when using the `Tab` key to navigate the form. This is done best using ARIA (for more info, see [Placing non-interactive content between form controls](/examples/forms/non-interactive-content)).
 
 We will now show the two typical use cases of displaying validation messages. Both approaches work for full page reloads and AJAX validations.
 
 ## Messages next to controls
 
-In this use case, messages are associated to the invalid form inputs using `aria-describedby` (for more info, see [Labelling elements using aria-label and aria-labelledby](/pages/examples/sensible-aria-usage/label-labelledby)):
+In this use case, messages are associated to the invalid form inputs using `aria-describedby` (for more info, see [Labelling elements using aria-label and aria-labelledby](/examples/sensible-aria-usage/label-labelledby)):
 
 - For multiple radio buttons or checkboxes, the message is associated to the surrounding `<fieldset>`.
 - For all other inputs, the message is associated to the input itself.
@@ -61,4 +61,4 @@ It is also important to provide users with meaningful messages that help them fi
 
 ### Combining with HTML 5 client side validations?
 
-You can easily combine (but not replace) these techniques with HTML 5 client side validations, see [HTML 5 client side validations](/pages/examples/forms/html-5-validations).
+You can easily combine (but not replace) these techniques with HTML 5 client side validations, see [HTML 5 client side validations](/examples/forms/html-5-validations).

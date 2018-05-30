@@ -24,7 +24,7 @@ Instead of transforming a traditional table's full layout into a responsive one 
 
 The following table about hobbies displays columns for a "Name", a "Description" and a link to "Additional resources".
 
-As the description in fact simply is taken from the linked additional resources, we can easily hide it on narrow view to save horizontal space (if you haven't done this yet, go back and read [Hiding elements from all devices](/pages/examples/hiding-elements/from-all-devices)). In the following example, please resize your browser to trigger narrow view.
+As the description in fact simply is taken from the linked additional resources, we can easily hide it on narrow view to save horizontal space (if you haven't done this yet, go back and read [Hiding elements from all devices](/examples/hiding-elements/from-all-devices)). In the following example, please resize your browser to trigger narrow view.
 
 [Example](_examples/table-with-hidden-column-in-narrow-view)
 
@@ -42,7 +42,7 @@ Please don't forget to set a proper alternative text to those icons.
 
 Sometimes, the visual layout of a table needs to be changed completely to fit small screens.
 
-As we already know: to alter a table's visual appearance, the `display` property can be changed, and some ARIA needs to be added (if you haven't done this yet, go back and read [Changing a table's visual layout](/pages/examples/tables/layout-changes)). Take a look at the following example of a responsive table: when resizing the browser, you will see all elements stack on top of each other.
+As we already know: to alter a table's visual appearance, the `display` property can be changed, and some ARIA needs to be added (if you haven't done this yet, go back and read [Changing a table's visual layout](/examples/tables/layout-changes)). Take a look at the following example of a responsive table: when resizing the browser, you will see all elements stack on top of each other.
 
 [Example](_examples/table-with-block-elements-in-narrow-view)
 
@@ -54,7 +54,7 @@ Screen reader users are very happy with this result. But visually, our table is 
 
 #### Hiding table headers visually
 
-In a first attempt, we can hide them visually in narrow view (if you haven't done this yet, go back and read [Hiding elements visually by moving them off-screen](/pages/examples/hiding-elements/visually)). This way, they keep working for screen readers.
+In a first attempt, we can hide them visually in narrow view (if you haven't done this yet, go back and read [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually)). This way, they keep working for screen readers.
 
 [Example](_examples/table-with-visually-hidden-headers-in-narrow-view)
 

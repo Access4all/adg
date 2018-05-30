@@ -16,6 +16,6 @@ When this fraud was detected, search engines began to punish such strategies wit
 
 ## Today: serving everybody
 
-Nowadays, search engines have become much smarter: they rely heavily on valid semantics of information (if you haven't done this yet, go back and read [Semantics and their importance for accessibility](/pages/knowledge/semantics)). In this respect, search engines can be compared very closely to users with special needs.
+Nowadays, search engines have become much smarter: they rely heavily on valid semantics of information (if you haven't done this yet, go back and read [Semantics and their importance for accessibility](/knowledge/semantics)). In this respect, search engines can be compared very closely to users with special needs.
 
 As such, we claim: everything that is good for users with special needs can be treated as good practice for SEO.

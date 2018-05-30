@@ -10,7 +10,7 @@ changed: "2018-05-14"
 
 ## Background
 
-In addition to an element's label (see [Labelling elements using aria-label and aria-labelledby](/pages/examples/sensible-aria-usage/label-labelledby)), screen readers can announce a referenced element (or more than one) as its description.
+In addition to an element's label (see [Labelling elements using aria-label and aria-labelledby](/examples/sensible-aria-usage/label-labelledby)), screen readers can announce a referenced element (or more than one) as its description.
 
 ## Intended use
 
@@ -64,12 +64,12 @@ Text hidden with `display: none` but referenced using `aria-describedby` is not 
 
 The only case where we truly recommend the usage of `aria-describedby`, is to attach additional information to interactive elements.
 
-- Regarding form controls, see [Validation messages](/pages/examples/forms/validation-messages) and [Placing non-interactive content between form controls](/pages/examples/forms/non-interactive-content).
-- Regarding all sorts of widgets, see [Interactive widgets](/pages/examples/widgets).
+- Regarding form controls, see [Validation messages](/examples/forms/validation-messages) and [Placing non-interactive content between form controls](/examples/forms/non-interactive-content).
+- Regarding all sorts of widgets, see [Interactive widgets](/examples/widgets).
 
 For this, the information itself must be visible (and as such discoverable also in browse mode) and as close as possible to the element it describes.
 
-If instead you need to attach information that itself is invisible, you better use visually hidden text (see [Hiding elements visually by moving them off-screen](/pages/examples/hiding-elements/visually)). For an example, see [Indicating form controls as required using asterisks (*)](/pages/examples/forms/required-).
+If instead you need to attach information that itself is invisible, you better use visually hidden text (see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually)). For an example, see [Indicating form controls as required using asterisks (*)](/examples/forms/required-).
 
 ## Conclusion
 

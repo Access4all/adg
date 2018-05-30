@@ -8,7 +8,7 @@ changed: "2018-04-16"
 
 **Sometimes, table headers are not provided in the visual layout. This is feasible, as visual users often recognise the larger context of tables without the need for visual headers. For screen reader users though, table headers are always necessary.**
 
-Simply add the table headers, then hide them visually (if you haven't done this yet, go back and read [Hiding elements visually by moving them off-screen](/pages/examples/hiding-elements/visually)).
+Simply add the table headers, then hide them visually (if you haven't done this yet, go back and read [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually)).
 
 [Example](_examples/table-with-hidden-headers)
 

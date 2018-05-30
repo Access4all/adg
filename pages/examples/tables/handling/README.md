@@ -10,11 +10,11 @@ changed: "2018-04-18"
 
 ## Keyboard only handling
 
-For keyboard only users, tables don't offer any special functionality. So there's nothing to say here. Still, you may want to check out [How to browse websites using a keyboard only](/pages/knowledge/keyboard-only/browsing-websites).
+For keyboard only users, tables don't offer any special functionality. So there's nothing to say here. Still, you may want to check out [How to browse websites using a keyboard only](/knowledge/keyboard-only/browsing-websites).
 
 ## Screen reader handling
 
-For screen reader users, headings offer a lot of special functionalities. Here follows a quick nomination of the most important features. Besides this, check out [How to read websites using a desktop screen reader](/pages/knowledge/desktop-screen-readers/reading-websites).
+For screen reader users, headings offer a lot of special functionalities. Here follows a quick nomination of the most important features. Besides this, check out [How to read websites using a desktop screen reader](/knowledge/desktop-screen-readers/reading-websites).
 
 ### Quick navigation
 
@@ -48,4 +48,4 @@ In JAWS' braille viewer, next to the cell's content, the current row and column 
 
 This conveys the tag names of a lot of HTML elements, including tables. It allows fast visual examination of wrong (or missing) elements.
 
-For more details, see [Contents Structured](/pages/setup/browsers/bookmarklets/contents-structured).
+For more details, see [Contents Structured](/setup/browsers/bookmarklets/contents-structured).

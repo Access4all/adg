@@ -60,13 +60,13 @@ We do not recommend to use `aria-hasmenu` as it does not provide any additional 
 
 As shown above, if the button's `aria-expanded` value is changed using JavaScript while it is focused, screen readers announce the change. This is pretty exceptional, as most other changes to an element are not detected by screen readers (and as such not announced).
 
-In line with the requirement that every user interaction must result in an adequate feedback (see [How to implement websites that are ready for screen reader usage](/pages/knowledge/desktop-screen-readers/how-to-implement)), the `aria-expanded` attribute is really useful with describing elements like:
+In line with the requirement that every user interaction must result in an adequate feedback (see [How to implement websites that are ready for screen reader usage](/knowledge/desktop-screen-readers/how-to-implement)), the `aria-expanded` attribute is really useful with describing elements like:
 
-- Tooltips, see [Tooltip widgets (or: screen tip, balloon)](/pages/examples/widgets/tooltips)
-- Accordions, see [Accordions](/pages/examples/widgets/accordion)
-- Autocompletes, see [Autosuggest widget (or: autocomplete, lookahead, typeahead)](/pages/examples/widgets/autosuggest)
-- Dropdowns, see [Dropdown widget (or: menu, pulldown)](/pages/examples/widgets/dropdown)
-- Dialogs, see [Dialog widget (or: modal, popup, lightbox, alert)](/pages/examples/widgets/dialog)
+- Tooltips, see [Tooltip widgets (or: screen tip, balloon)](/examples/widgets/tooltips)
+- Accordions, see [Accordions](/examples/widgets/accordion)
+- Autocompletes, see [Autosuggest widget (or: autocomplete, lookahead, typeahead)](/examples/widgets/autosuggest)
+- Dropdowns, see [Dropdown widget (or: menu, pulldown)](/examples/widgets/dropdown)
+- Dialogs, see [Dialog widget (or: modal, popup, lightbox, alert)](/examples/widgets/dialog)
 
 As a general rule, the toggled element should be right below the toggle button, so screen readers will find it easily. If that is not the case, then the focus should be placed inside the element upon toggling it visible, and back to the initial element upon toggling it invisible.
 

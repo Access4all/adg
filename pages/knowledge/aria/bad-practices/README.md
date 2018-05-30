@@ -70,7 +70,7 @@ To make the image accessible, it could be tempting now to simply add an ARIA lab
 </a>
 ```
 
-If you are really curious and want to learn more about this, skip ahead and read [Labelling elements using aria-label and aria-labelledby](/pages/examples/sensible-aria-usage/label-labelledby).
+If you are really curious and want to learn more about this, skip ahead and read [Labelling elements using aria-label and aria-labelledby](/examples/sensible-aria-usage/label-labelledby).
 
 While this certainly is an improvement over offering no label at all, it isn't the technique of choice. This is du to several reasons, some very obvious ones outlined here:
 
@@ -92,7 +92,7 @@ Again, there are traditional techniques to achieve the wanted result that are mu
 </a>
 ```
 
-If you are really curious and want to learn more about this, skip ahead and read [Hiding elements visually by moving them off-screen](/pages/examples/hiding-elements/visually).
+If you are really curious and want to learn more about this, skip ahead and read [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually).
 
 ### Approach using a real image
 
@@ -149,7 +149,7 @@ So in most cases this holds true: if you face a situation where a screen reader 
 
 Sometimes, developers try to hide focusable elements (or elements that contain focusable children) from screen readers using `aria-hidden`. This leads to unpredictable behaviour in many screen readers, as the browser still allows to focus such elements using the `Tab` key, but because of `aria-hidden` screen readers will not announce it.
 
-If you are really curious and want to learn more about this, skip ahead and read [Hiding elements from screen readers using aria-hidden](/pages/examples/hiding-elements/from-screen-readers).
+If you are really curious and want to learn more about this, skip ahead and read [Hiding elements from screen readers using aria-hidden](/examples/hiding-elements/from-screen-readers).
 
 The purpose of hiding something from a specific user group leads us to the next misuse of ARIA. Read on.
 

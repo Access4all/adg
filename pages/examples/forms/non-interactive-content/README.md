@@ -8,7 +8,7 @@ changed: "2018-05-03"
 
 **Screen reader interaction with forms usually happens in focus mode. So if there are any non-interactive elements (like a paragraph) in the form, they are prone to be missed. To prevent this, they need to be attached specifically to the form controls. There are several ways to achieve this goal.**
 
-Screen reader users generally interact with form controls using focus mode, meaning they navigate back and forth only between interactive (which are focusable) elements using the `Tab` key (if you haven't done this yet, go back and read [Screen readers' browse and focus modes](/pages/knowledge/desktop-screen-readers/browse-focus-modes)).
+Screen reader users generally interact with form controls using focus mode, meaning they navigate back and forth only between interactive (which are focusable) elements using the `Tab` key (if you haven't done this yet, go back and read [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes)).
 
 Especially in complex forms, it can be necessary to have non-interactive content next to some control: for example paragraphs (or a list) presenting terms and conditions next to an "I agree" checkbox. As this content is not focusable, it is prone to be completely missed by screen reader users when tabbing through the form.
 
@@ -16,13 +16,13 @@ Alas, such content needs to be specifically attached to the form controls, so it
 
 ## Best approach: ARIA
 
-While we usually do not favour solutions using ARIA over traditional HTML, regarding forms, in our experience ARIA is the most robust way to associate content to controls (if you haven't done this yet, go back and read [ARIA - when HTML simply isn't enough](/pages/knowledge/aria)).
+While we usually do not favour solutions using ARIA over traditional HTML, regarding forms, in our experience ARIA is the most robust way to associate content to controls (if you haven't done this yet, go back and read [ARIA - when HTML simply isn't enough](/knowledge/aria)).
 
 It is easy to attach a little descriptive text to any form control using `aria-describedby`:
 
 [Example](_examples/associating-content-to-form-controls-using-aria)
 
-This works very well in all modern browsers and screen readers (if you haven't done this yet, go back and read [Labelling elements using aria-label and aria-labelledby](/pages/examples/sensible-aria-usage/label-labelledby)).
+This works very well in all modern browsers and screen readers (if you haven't done this yet, go back and read [Labelling elements using aria-label and aria-labelledby](/examples/sensible-aria-usage/label-labelledby)).
 
 ### Referencing structured text
 
@@ -47,9 +47,9 @@ Instead of referencing all the information, simply give the user a short clue th
 The example above shows three ways to give a user clue about additional information:
 
 1. For "Full name", a clue was appended to the `<label>` and hidden visually.
-    - For more information about this, read [Hiding elements visually by moving them off-screen](/pages/examples/hiding-elements/visually).
+    - For more information about this, read [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually).
 2. For "Biography", a clue was added anywhere on the page, then hidden completely and referenced to the input using `aria-describedby`.
-    - For more information about this, read [Hiding elements from all devices](/pages/examples/hiding-elements/from-all-devices).
+    - For more information about this, read [Hiding elements from all devices](/examples/hiding-elements/from-all-devices).
 3. For "Terms and conditions", the label text was changed so it gives a clue itself (making it "self speaking"). This does not only serve screen reader users, but also visual users who could miss the terms and conditions because of not scrolling enough vertically.
 
 In general, when doing something like that, be sure the referenced content is easily discoverable by the user.
@@ -70,7 +70,7 @@ Also, it is unfortunate that the descriptive text of a form control always is an
 
 ### Placing more content into labels
 
-HTML allows to put various content into a `<label>`. On one hand, it is possible this way to put a form control right into its label, which even removes the need for the `for` attribute (if you haven't done this yet, go back and read [General good form example](/pages/examples/forms/good-example)).
+HTML allows to put various content into a `<label>`. On one hand, it is possible this way to put a form control right into its label, which even removes the need for the `for` attribute (if you haven't done this yet, go back and read [General good form example](/examples/forms/good-example)).
 
 ```html
 <label>
@@ -102,7 +102,7 @@ Sadly, browser support is buggy:
 
 What a bummer. This is why we recommend to separate form controls and their `<label>` elements strictly and to use the `for` attribute to connect them.
 
-And for associating additional content to a control ("Please enter..."), we advise to stick to better solutions (if you are really curious and want to learn more about this, skip ahead and read [Placing non-interactive content between form controls](/pages/examples/forms/non-interactive-content)), at least if you are using `<fieldset>`/`<legend>` structures.
+And for associating additional content to a control ("Please enter..."), we advise to stick to better solutions (if you are really curious and want to learn more about this, skip ahead and read [Placing non-interactive content between form controls](/examples/forms/non-interactive-content)), at least if you are using `<fieldset>`/`<legend>` structures.
 
 ### More than one label per input
 

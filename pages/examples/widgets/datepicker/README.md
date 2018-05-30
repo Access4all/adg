@@ -22,9 +22,9 @@ Besides many other requirements, we want to stress out explicitly the following:
 
 ## Proof of concept
 
-Before you go on, please read [What is a "Proof of concept"?](/pages/examples/widgets/proof-of-concept).
+Before you go on, please read [What is a "Proof of concept"?](/examples/widgets/proof-of-concept).
 
-According to our credo [Widgets simply working for all](/pages/knowledge/semantics/widgets), we advise to create datepickers as combination of a text input, and a group of radio buttons (acting as the options). They can be styled visually as needed using CSS, and spiced up with (very little) JavaScript, so they behave like perfect datepickers.
+According to our credo [Widgets simply working for all](/knowledge/semantics/widgets), we advise to create datepickers as combination of a text input, and a group of radio buttons (acting as the options). They can be styled visually as needed using CSS, and spiced up with (very little) JavaScript, so they behave like perfect datepickers.
 
 Sensible naming of elements (and a few specifically added visually hidden texts) guarantees that screen reader users know how to handle the element - even if they have not seen any other datepicker before.
 
@@ -35,16 +35,16 @@ Sensible naming of elements (and a few specifically added visually hidden texts)
 Some interesting peculiarities:
 
 - The filter input has:
-    - A descriptive text attached to it using `aria-describedby` (see [Adding descriptions to elements using aria-describedby](/pages/examples/sensible-aria-usage/describedby)), giving a clue that the element provides a datepicker upon click and arrow key usage.
-    - An `aria-expanded` attribute (see [Marking elements expandable using aria-expanded](/pages/examples/sensible-aria-usage/expanded)), giving a clue that there is something to be expanded (the datepicker).
+    - A descriptive text attached to it using `aria-describedby` (see [Adding descriptions to elements using aria-describedby](/examples/sensible-aria-usage/describedby)), giving a clue that the element provides a datepicker upon click and arrow key usage.
+    - An `aria-expanded` attribute (see [Marking elements expandable using aria-expanded](/examples/sensible-aria-usage/expanded)), giving a clue that there is something to be expanded (the datepicker).
     - An `autocomplete="off"` attribute so it does not trigger the browser's autocomplete feature (which remembers previous user input and offers it again).
 - The datepicker appears upon clicking into the input, pressing `Up`/`Down` or `Arrow` keys.
     - As soon as the datepicker appears, its group of radio buttons gains focus: from now on, the user interacts only with the radio buttons.
 - Using `Left`/`Right` keys, the date changes by one day, and using `Up`/`Down` keys, the date changes by one week.
     - The default toggling behaviour of radio buttons is overridden using JavaScript.
-- The radio buttons are inside a `<fieldset>`/`<legend>` structure, giving context to them (see [Grouping form controls with fieldset and legend](/pages/examples/forms/grouping-with-fieldsetlegend)).
-    - For visual users, the legend is hidden (see [Hiding elements visually by moving them off-screen](/pages/examples/hiding-elements/visually).
-- The radio buttons are laid out inside a `<table>`, see [Forms within tables](/pages/examples/forms/in-tables).
+- The radio buttons are inside a `<fieldset>`/`<legend>` structure, giving context to them (see [Grouping form controls with fieldset and legend](/examples/forms/grouping-with-fieldsetlegend)).
+    - For visual users, the legend is hidden (see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually).
+- The radio buttons are laid out inside a `<table>`, see [Forms within tables](/examples/forms/in-tables).
     - This does not only serve visual purposes, but also allows screen reader users to manually browse the table.
 
 Adding more sophisticated features like controls for choosing a day, month, or year directly, or enhancing the datepicker with time options, would be easy. For simplicity though, we refrained from doing this.
@@ -55,7 +55,7 @@ Adding more sophisticated features like controls for choosing a day, month, or y
 
 Some datepickers allow manual input, others do not. The difficult thing with allowing manual input is parsing the input given: one user may provide an input like `2018/11/19`, another one may provide `19.11.2018`.
 
-If you allow manual input of a date, you need to provide its required format, for example right inside the input's label, like `Birthday (YYYY/MM/DD)`, or in a descriptive text next to the input (see [Placing non-interactive content between form controls](/pages/examples/forms/non-interactive-content)).
+If you allow manual input of a date, you need to provide its required format, for example right inside the input's label, like `Birthday (YYYY/MM/DD)`, or in a descriptive text next to the input (see [Placing non-interactive content between form controls](/examples/forms/non-interactive-content)).
 
 Besides simply allowing manual input of a full date, your datepicker can offer nice features depending on the user's input. For example, if the user inputs `2016`, the datepicker could offer the days of the current month of the year 2016; or if the user inputs `2016/10`, the datepicker could offer the days of October 2016. This way the user can narrow the desired date quickly and then can use the datepicker to choose a day.
 
@@ -63,7 +63,7 @@ Besides simply allowing manual input of a full date, your datepicker can offer n
 
 In our implementation, the datepicker is attached directly to the text input, and usage of the `Arrow` keys triggers date selection. This means that the `Arrow` keys are not available for text editing anymore, which can be confusing.
 
-To prevent this, you could attach the datepicker to a dedicated button next to the text input instead, similar to a complex tooltip, see [Tooltip widgets (or: screen tip, balloon)](/pages/examples/widgets/tooltips), or even to a dialog, see [Dialog widget (or: modal, popup, lightbox, alert)](/pages/examples/widgets/dialog). Be sure to give this button a proper name, like `Birthday datepicker`.
+To prevent this, you could attach the datepicker to a dedicated button next to the text input instead, similar to a complex tooltip, see [Tooltip widgets (or: screen tip, balloon)](/examples/widgets/tooltips), or even to a dialog, see [Dialog widget (or: modal, popup, lightbox, alert)](/examples/widgets/dialog). Be sure to give this button a proper name, like `Birthday datepicker`.
 
 ### HTML 5 date input
 

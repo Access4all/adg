@@ -56,7 +56,7 @@ If you like, you can manually set the attribute `invalid` to an invalid input:
 
 But please do so only after the user has already interacted with the input: it is annoying to visit a "fresh" form and have all required (but initially empty) fields announced as "invalid" by default.
 
-In general though it is better to attach a distinctive validation message to an invalid input, see [Validation messages](/pages/examples/forms/validation-messages).
+In general though it is better to attach a distinctive validation message to an invalid input, see [Validation messages](/examples/forms/validation-messages).
 
 ## Custom patterns need a title
 
@@ -92,4 +92,4 @@ So which one to use when? In general, we suggest using the HTML 5 validations; i
 
 Just a note for completeness: while HTML 5 client side validations are a cool feature, they certainly are no replacement for server side validations. Because you never trust user data - do you?!
 
-You will always need server side validations with custom messages when processing user data, see: [Validation messages](/pages/examples/forms/validation-messages).
+You will always need server side validations with custom messages when processing user data, see: [Validation messages](/examples/forms/validation-messages).

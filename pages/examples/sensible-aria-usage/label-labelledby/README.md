@@ -86,9 +86,9 @@ In general, HTML elements provide their own way of labelling:
 
 - Many elements like links or buttons are labelled through their content: `<button>This is the label</button>`
 - Images are labelled using the `alt` attribute: `<img src="..." alt="This is the label" />`.
-- Tables are labelled using the `caption` attribute, see [General good table example](/pages/examples/tables/good-example).
-- Form controls are labelled using `<label>` elements, see [General good form example](/pages/examples/forms/good-example).
-- Page regions are labelled best using headings, see [Alternative techniques for labelling page regions](/pages/examples/headings/alternative-techniques).
+- Tables are labelled using the `caption` attribute, see [General good table example](/examples/tables/good-example).
+- Form controls are labelled using `<label>` elements, see [General good form example](/examples/forms/good-example).
+- Page regions are labelled best using headings, see [Alternative techniques for labelling page regions](/examples/headings/alternative-techniques).
 - Etc.
 
 As such, there are very rare cases (if any) where `aria-label` and `aria-labelledby` are truly the only way to go. For example, a valid usage of `aria-label` could be to override an existing label with additional, more precise information specifically for screen reader users:
@@ -99,7 +99,7 @@ As such, there are very rare cases (if any) where `aria-label` and `aria-labelle
 </button>
 ```
 
-However, why not present this information to every user, for example using a tooltip (see [Tooltip widgets (or: screen tip, balloon)](/pages/examples/widgets/tooltips))?
+However, why not present this information to every user, for example using a tooltip (see [Tooltip widgets (or: screen tip, balloon)](/examples/widgets/tooltips))?
 
 ```html
 <button>
@@ -114,4 +114,4 @@ So if you are thinking about enhancing existing information, in most cases there
 
 If you aim at providing a user experience that is the same for all audiences, you will probably never need `aria-label` and `aria-labelledby`. And due to the described peculiarities and side effects, we do not recommend to use them anyway.
 
-Instead, aim to find labels that are working for all audiences. And if you really need to attach additional information for screen readers, better use visually hidden text (see [Hiding elements visually by moving them off-screen](/pages/examples/hiding-elements/visually)).
+Instead, aim to find labels that are working for all audiences. And if you really need to attach additional information for screen readers, better use visually hidden text (see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually)).
