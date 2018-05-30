@@ -1,7 +1,7 @@
 ---
 navigation_title: "Required (*)"
 position: 8
-changed: "2018-05-02"
+changed: "2018-05-29"
 ---
 
 # Indicating form controls as required using asterisks (*)
@@ -18,7 +18,7 @@ While visual users usually see both the asterisk and the explanation at a glance
 
 In the following example, the required input field is announced as "Full Name Asterisk" in most screen readers. An experienced user will probably know what this is intended for, but many users will have no clue.
 
-[Example](_examples/required-input-with-asterisk)
+[Example](_examples/required-inputs-with-html-5-and-aria)
 
 As the text explanation "required field" even is below the submit button of the form, a screen reader user probably will never read it, as activating the button usually is the last thing a user does when filling a form.
 
@@ -44,7 +44,7 @@ Instead of trying to hide the plain text asterisk `*` in the label, we replace i
 
 [Example](_examples/required-input-with-asterisks-as-icons)
 
-Instead of an SVG, you could also use a traditional image with empty alternative text (`<img src="..." alt="" />`).
+To prevent Internet Explorer from making the SVGs focusable, the `focusable="false"` attribute is used. Instead of an SVG, you could also use a traditional image with empty alternative text (`<img src="..." alt="" />`).
 
 And if you really want to make it fancy, you could combine this technique with a tooltip showing "Required" on hover: [Tooltip widgets (or: screen tip, balloon)](/pages/examples/widgets/tooltips).
 

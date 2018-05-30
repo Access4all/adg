@@ -1,7 +1,7 @@
 ---
 navigation_title: "How to implement"
 position: 4
-changed: "2018-04-30"
+changed: "2018-05-30"
 ---
 
 # How to implement websites that are ready for keyboard only usage
@@ -52,6 +52,8 @@ In our opinion, there are very few cases which really need optimisation for keyb
 ## Focus management
 
 Another facet of keyboard optimisation is setting the focus properly if needed.
+
+This can be explained especially well by looking at the dialog pattern. Indeed, our guide has such a dialog implementaion available as a fully working example, so if you are really curious and want to learn more about this, skip ahead and read [Dialog widget (or: modal, popup, lightbox, alert)](/pages/examples/widgets/dialog).
 
 ### Setting focus to an element
 

@@ -1,7 +1,7 @@
 ---
 navigation_title: "Tablists"
 position: 6
-changed: "2018-05-14"
+changed: "2018-05-29"
 ---
 
 # Tablist widgets (or: tab panels, tabs)
@@ -10,15 +10,13 @@ changed: "2018-05-14"
 
 Tablists are well known as native controls in many operating systems: a list of controls (usually on top of the element) allows to toggle the visibility of corresponding panels. Only a single control can be active at a time, so exactly one panel is visible and all others are hidden.
 
-![Tablist in Firefox](_media/tablist-in-firefox.png)
+![Tablist](_media/tablist.png)
 
-We do not call tablists simply "tabs" so the different to the `Tab` key is obvious.
+We do not call tablists simply "tabs" so the difference to the `Tab` key is obvious.
 
 ## General requirements
 
-The tablist is one of many interactive usage patterns that have made its way into the collective awareness of the web, but for which no native HTML standard element is available. Alas, there exist no strict requirements, and most implementations of the pattern vary greatly regarding their functionalities and target audiences.
-
-The following requirements are based on well established best practices and [WAI-ARIA Authoring Practices: Tab Panel Widget](https://www.w3.org/TR/wai-aria-practices/#tabpanel). As such, they offer very high accessibility.
+The following requirements are based on well established best practices and [WAI-ARIA Authoring Practices: Tab Panel Widget](https://www.w3.org/TR/wai-aria-practices/#tabpanel).
 
 Besides many other requirements, we want to stress out explicitly the following:
 

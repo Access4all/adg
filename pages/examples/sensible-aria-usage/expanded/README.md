@@ -1,7 +1,7 @@
 ---
 navigation_title: "Expanded"
 position: 3
-changed: "2018-05-14"
+changed: "2018-05-29"
 ---
 
 # Marking elements expandable using aria-expanded

@@ -1,3 +1,7 @@
+*:focus {
+  outline: 2px solid;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -16,13 +20,13 @@ label {
   vertical-align: top;
 }
 
-#definition {
+svg#definition {
   display: none;
 }
 
-.asterisk {
+.icon {
   width: 0.5em;
   height: 0.5em;
-  vertical-align: top;
   fill: red;
+  vertical-align: top;
 }

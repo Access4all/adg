@@ -1,7 +1,7 @@
 ---
 navigation_title: "NVDA"
 position: 1
-changed: "2018-04-06"
+changed: "2018-05-30"
 ---
 
 # NVDA installation and configuration
@@ -84,6 +84,8 @@ We highly recommend to have the speech viewer always open while using NVDA. Plac
 ![Perfect layout of browser and speech viewer](_media/perfect-layout-of-browser-and-speech-viewer.png)
 
 ## Configuration
+
+Screen readers in general offer tons of configuration options which can drastically influence their behaviour. In general, we advise to stick to the defaults. The following configuration suggestions are known to be useful and safe though.
 
 ### Disabling mouse focus
 

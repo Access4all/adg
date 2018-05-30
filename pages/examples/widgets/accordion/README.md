@@ -1,7 +1,7 @@
 ---
 navigation_title: "Accordion"
 position: 8
-changed: "2018-05-14"
+changed: "2018-05-29"
 ---
 
 # Accordions
@@ -10,17 +10,17 @@ changed: "2018-05-14"
 
 Accordions help to save vertical space and prevent from visual noise. Some accordions allow only a single panel to be expanded at a time, others allow multiple.
 
-![Typical accordion](_media/typical-accordion.png)
+![Accordion](_media/accordion.png)
 
 Before you continue, please read [Tablist widgets (or: tab panels, tabs)](/pages/examples/widgets/tablists) to understand why accordions simply are extended variants of tablists, providing a slightly different layout and (sometimes) expandability of multiple panels.
 
 ## General requirements
 
-In addition to the tablists' requirements:
+The following requirements are based on well established best practices and [WAI-WAI-ARIA Authoring Practices: Accordion (widget)](https://www.w3.org/TR/wai-aria-practices/#accordion).
+
+In addition to the tablists' requirements, and besides many other requirements, we want to stress out explicitly the following:
 
 - Multiple slides can be visible (optional).
-
-Find more detailed requirements here: [WAI-WAI-ARIA Authoring Practices: Accordion (widget)](https://www.w3.org/TR/wai-aria-practices/#accordion).
 
 ## Proofs of concept
 

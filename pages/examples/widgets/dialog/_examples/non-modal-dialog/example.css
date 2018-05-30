@@ -1,0 +1,40 @@
+*:focus {
+  outline: 2px dotted #000;
+}
+
+.adg-visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+[data-adg-dialog-container] {
+  background-color: lightyellow;
+  border: 1px solid;
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  padding: 10px;
+}
+
+.adg-dialog-icon {
+  float: right;
+  border: none;
+  background-color: transparent;
+}
+.adg-dialog-icon:hover {
+  cursor: pointer;
+}
+
+svg#definition {
+  display: none;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  fill: #000;
+}

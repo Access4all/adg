@@ -1,7 +1,7 @@
 ---
 navigation_title: "Browse & focus modes"
 position: 5
-changed: "2018-05-01"
+changed: "2018-05-30"
 ---
 
 # Screen readers' browse and focus modes
@@ -35,7 +35,8 @@ This mode - where keystrokes aren't intercepted but sent directly to the active 
 
 - When the screen reader's cursor is on an editable element, it allows to switch to focus mode using the `Enter` key.
     - When focus mode is active, a "beep" sound is played.
-    - By pressing `Esc`, focus mode can be left (announced by a different sound) and browse mode is active again.
+    - By pressing `Esc`, focus mode can be left (announced by a different "beep" sound) and browse mode is active again.
+    - Notice: JAWS behaves a little different in this respect because of its "Auto Forms Mode", see below for more details.
 - If you use the `Tab` key to jump from focusable element to focusable element, focus mode is activated automatically when appropriate:
     - For elements allowing only basic interaction (for example links, buttons, and checkboxes), focus mode isn't activated.
         - Basic interaction means that only the `Enter` or `Space` key triggers some interaction.
@@ -43,6 +44,20 @@ This mode - where keystrokes aren't intercepted but sent directly to the active 
         - Complex interaction means that there are additional ways to interact, for example by pressing an arrow key or by entering a value directly.
 
 Notice: in other resources, focus mode may sometimes also be called "forms" or "interaction" mode.
+
+### JAWS' auto forms mode
+
+When browsing line by line (using `Up` and `Down` keys), NVDA's default settings require the user to manually switch to focus mode (as explained above).
+
+JAWS by default has a special setting called "Auto Forms Mode": it tries to automatically switch between browse and focus mode whenever appropriate. For example:
+
+- When reaching a text input by pressing the `Down` key, JAWS automatically switches to focus mode (indicated by a "beep" sound).
+- Pressing the `Down` key once again will now move the text input's cursor to the end of the input's value (if there is a value).
+- If then the `Down` key is pressed again, this will lead JAWS to leave the text input and switch back to browse mode (indicated by a different "beep" sound).
+
+This seems like a minor detail, but this behaviour indicates clearly that even in focus mode screen readers may intercept some keys. This can be relevant if you bind custom JavaScript behaviour to such keys (if you are really curious and want to learn more about this, skip forward and read [Autosuggest widget (or: autocomplete, lookahead, typeahead)](/pages/examples/widgets/autosuggest)).
+
+If you want to disable "Auto Forms Mode", read [JAWS installation and configuration](/pages/setup/screen-readers/jaws).
 
 ### Associated information
 

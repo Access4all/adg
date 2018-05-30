@@ -1,7 +1,7 @@
 ---
 navigation_title: "How to implement"
 position: 10
-changed: "2018-04-13"
+changed: "2018-05-30"
 ---
 
 # How to implement websites that are ready for screen reader usage
@@ -35,6 +35,8 @@ One method is to use an ARIA live region. But this may interfere with the curren
 ### Moving focus
 
 If the focus is set to an element, the screen reader announces it. This can be an easy way to inform users about something on the page: simply set the focus on it. Be sure though that this doesn't result in disorientation for the screen reader user: it shouldn't happen "out of the blue", but only when the screen reader user has done some interaction that caused the page change.
+
+An example for moving the focus sensibly is a datepicker widget: when it opens, the focus is set into the available dates, so the user can pick one. If you are really curious and want to learn more about this, skip ahead and read [Datepicker widget](/pages/examples/widgets/datepicker).
 
 And by the way, you should not set the focus on a big container of information, as it would cause the screen reader announce all of its content in one go. This usually is way too much for the user to handle. Instead, set the focus on the first content element, for example the close button of a dialog: after its announcement, the screen reader stops, and the user can decide when to continue to read. And last but not least: be sure to give this focused element a proper, self-speaking label (for example "Close terms and conditions dialog").
 

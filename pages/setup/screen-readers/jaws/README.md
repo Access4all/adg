@@ -1,7 +1,7 @@
 ---
 navigation_title: "JAWS"
 position: 2
-changed: "2018-04-06"
+changed: "2018-05-30"
 ---
 
 # JAWS installation and configuration
@@ -81,3 +81,21 @@ To open the output history:
 - Press `JAWS + Space` (a *beep* will be played), then `H`.
 - The history shows that last 20 announcements.
 - Sadly, the history doesn't refresh automatically.
+
+## Configuration
+
+Screen readers in general offer tons of configuration options which can drastically influence their behaviour. In general, we advise to stick to the defaults. The following configuration suggestions are known to be useful and safe though.
+
+### Disable auto forms mode (optional)
+
+JAWS by default switches automatically between interaction modes (if you are really curious about this, skip forward and read [Screen readers' browse and focus modes](/pages/knowledge/desktop-screen-readers/browse-focus-modes)). While programming and testing (especially complex JavaScript widgets), this behaviour can be a bit nasty.
+
+This mode can be disabled, so it is similar to NVDA. **But we urge you to only do this if you really know what you are doing.**
+
+- Open Firefox.
+- Press `JAWS + V` (this opens the QuickSettings of the currently open application).
+- Enter "form" into the search field.
+- In `Virtual Cursor Options` look out for `Form Options`, then `Auto Forms Mode`.
+- Choose `SemiAuto` and confirm.
+
+Do the same in Internet Explorer.

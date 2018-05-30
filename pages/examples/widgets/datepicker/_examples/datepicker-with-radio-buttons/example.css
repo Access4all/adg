@@ -1,0 +1,73 @@
+@charset "UTF-8";
+.adg-visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+[data-adg-datepicker] {
+  position: relative;
+}
+
+[data-adg-datepicker-options] {
+  position: absolute;
+  float: left;
+  background-color: lightyellow;
+  border: 1px solid;
+  padding: 5px 0;
+}
+
+[data-adg-datepicker-option] {
+  display: block;
+}
+
+[data-adg-datepicker-option]:hover,
+[data-adg-datepicker-option-selected] {
+  cursor: pointer;
+  outline: 1px solid;
+}
+
+[data-adg-datepicker-alerts] p {
+  margin: 0;
+}
+[data-adg-datepicker-alerts] kbd::before {
+  content: "«";
+}
+[data-adg-datepicker-alerts] kbd::after {
+  content: "»";
+}
+
+.control {
+  margin: 6px 0;
+}
+
+input[type="text"] {
+  width: 140px;
+}
+
+label {
+  display: inline-block;
+  width: 120px;
+  vertical-align: top;
+}
+
+.description {
+  margin-left: 120px;
+}
+
+fieldset {
+  margin: -1px 0 0 120px;
+}
+fieldset .control {
+  margin: 0;
+}
+fieldset label {
+  width: 100%;
+}

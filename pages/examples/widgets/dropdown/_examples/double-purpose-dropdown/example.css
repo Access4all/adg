@@ -1,0 +1,63 @@
+*:focus {
+  outline: 2px dotted #000;
+}
+
+p {
+  clear: left;
+}
+p button {
+  margin-top: 20px;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+ol {
+  padding: 0;
+}
+ol > li {
+  float: left;
+  list-style: none;
+  position: relative;
+}
+ol a, ol button {
+  display: block;
+  border: 1px solid #000;
+  color: #000;
+  background-color: lightyellow;
+  padding: 10px;
+  width: 170px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+ol a:hover, ol button:hover {
+  text-decoration: underline;
+}
+ol button {
+  font-size: inherit;
+  font-family: inherit;
+  text-align: inherit;
+  width: 31px;
+  height: 40px;
+  border-left: none;
+  margin-left: -1px;
+}
+ol button:hover {
+  cursor: pointer;
+}
+ol button[aria-expanded="true"] + ol {
+  position: absolute;
+  right: 0;
+}
+ol button[aria-expanded="true"] + ol a {
+  width: 200px;
+}
+ol button[aria-expanded="false"] + ol {
+  display: none;
+}
