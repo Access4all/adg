@@ -39,7 +39,7 @@ sayHello = function() {
 return setTimeout(sayHello, 10000);
 ```
 
-[Single announcement of an element using alert role (example) ![Preview](_examples/single-announcement-of-an-element-using-alert-role/_example.png)](_examples/single-announcement-of-an-element-using-alert-role)
+[Example](_examples/single-announcement-of-an-element-using-alert-role)
 
 ## Peculiarities and side effects
 
@@ -60,7 +60,7 @@ setInterval(sayHello, 2000);
 
 This is extremely disturbing, as the user is interrupted again and again while browsing the page. Something like this can destroy the whole user experience for screen reader users.
 
-[Loop announcement of an element using alert role (example) ![Preview](_examples/loop-announcement-of-an-element-using-alert-role/_example.png)](_examples/loop-announcement-of-an-element-using-alert-role)
+[Example](_examples/loop-announcement-of-an-element-using-alert-role)
 
 ### Where does it come from?
 
@@ -80,7 +80,7 @@ It is important to note that the element with `role="alert"` must be visible on 
 
 In the following example, the element containing the alerts are hidden using `hidden` attribute (see [Hiding elements from all devices](/pages/examples/hiding-elements/from-all-devices)). As such, the alerts are not announced by screen readers.
 
-[Loop announcement of an element using hidden alert role (example) ![Preview](_examples/loop-announcement-of-an-element-using-hidden-alert-role/_example.png)](_examples/loop-announcement-of-an-element-using-hidden-alert-role)
+[Example](_examples/loop-announcement-of-an-element-using-hidden-alert-role)
 
 ## Live regions - an alternative?
 

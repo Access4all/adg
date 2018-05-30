@@ -20,7 +20,7 @@ While we usually do not favour solutions using ARIA over traditional HTML, regar
 
 It is easy to attach a little descriptive text to any form control using `aria-describedby`:
 
-[Associating content to form controls using ARIA (example) ![Preview](_examples/associating-content-to-form-controls-using-aria/_example.png)](_examples/associating-content-to-form-controls-using-aria)
+[Example](_examples/associating-content-to-form-controls-using-aria)
 
 This works very well in all modern browsers and screen readers (if you haven't done this yet, go back and read [Labelling elements using aria-label and aria-labelledby](/pages/examples/sensible-aria-usage/label-labelledby)).
 
@@ -32,7 +32,7 @@ You can use `aria-describedby` on structured text (as you see in the example abo
 
 Take a look at the following example which clearly overdoes the usage of `aria-describedby`:
 
-[Associating too much content to form controls using ARIA (example) ![Preview](_examples/associating-too-much-content-to-form-controls-using-aria/_example.png)](_examples/associating-too-much-content-to-form-controls-using-aria)
+[Example](_examples/associating-too-much-content-to-form-controls-using-aria)
 
 Admittedly, this example feels a bit artificial. But you get the point: listening to too much info at a time is making tired quickly. To fully understand, the user will have to manually trigger the whole announcement again and again - a very tedious task, especially for people with mental disabilities.
 
@@ -42,7 +42,7 @@ In addition, a lot of semantic information about the referenced elements (that w
 
 Instead of referencing all the information, simply give the user a short clue that there is more information somewhere (below a form control, at the end of the page, or wherever):
 
-[Giving clue about additional content in a form (example) ![Preview](_examples/giving-clue-about-additional-content-in-a-form/_example.png)](_examples/giving-clue-about-additional-content-in-a-form)
+[Example](_examples/giving-clue-about-additional-content-in-a-form)
 
 The example above shows three ways to give a user clue about additional information:
 
@@ -62,7 +62,7 @@ The following approaches show solutions that are problematic in some way or anot
 
 When navigating using the `Tab` key, the easiest way to prevent non-focusable content from being skipped may seem to simply make it focusable: add a `tabindex="0"` to a heading, paragraph, list, or whatever, and you should be fine.
 
-[Making content focusable (example) ![Preview](_examples/making-content-focusable/_example.png)](_examples/making-content-focusable)
+[Example](_examples/making-content-focusable)
 
 While this may be tempting, it is very bad style: only elements that provide some interaction (buttons, links, form controls, etc.) should be focusable. Otherwise keyboard only users may be confused, as they may think that (for example) a paragraph can be interacted with, although it can't.
 
@@ -91,7 +91,7 @@ On the other hand (which is more interesting to us), it is also possible to put 
 
 This solution looks very easy and as such is tempting: it doesn't only solve our requirement, but it also enlarges the clickable area of the label for mouse and touch screen users (clicking on the label places the focus into its control).
 
-[Additional content in form labels (example) ![Preview](_examples/additional-content-in-form-labels/_example.png)](_examples/additional-content-in-form-labels)
+[Example](_examples/additional-content-in-form-labels)
 
 Sadly, browser support is buggy:
 
@@ -110,4 +110,4 @@ It is perfectly valid HTML to associate more than a single `<label>` element to 
 
 So the following is not a recommended solution:
 
-[Associating Content to Form Inputs Using Multiple Labels (example) ![Preview](_examples/associating-content-to-form-inputs-using-multiple-labels/_example.png)](_examples/associating-content-to-form-inputs-using-multiple-labels)
+[Example](_examples/associating-content-to-form-inputs-using-multiple-labels)

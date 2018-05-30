@@ -44,7 +44,7 @@ According to our credo [Widgets simply working for all](/pages/knowledge/semanti
 
 Sensible naming of elements (and a few specifically added visually hidden texts) guarantees that screen reader users know how to handle the element - even if they have not seen any other tablist before.
 
-[Tablist with radio buttons (example) ![Preview](_examples/tablist-with-radio-buttons/_example.png)](_examples/tablist-with-radio-buttons)
+[Example](_examples/tablist-with-radio-buttons)
 
 ### Implementation details
 

@@ -14,7 +14,7 @@ Most accessibility problems regarding tables are caused due to bad semantics. So
 
 The table in the following example doesn't offer any real header cells (`<th>` elements); instead, only data cells are used (`<td>` elements). Those cells that are meant to be headers are only styled visually using CSS `font-weight: bold`, attached to a `.th` class.
 
-[Generally bad table, without headers (example) ![Preview](_examples/generally-bad-table-without-headers/_example.png)](_examples/generally-bad-table-without-headers)
+[Example](_examples/generally-bad-table-without-headers)
 
 This makes it very hard for screen reader users to keep orientation, as they don't know in which column (Name? Description? Additional Resources?) and row (Playing Soccer? Dancing? Gardening?) they are. It's especially hard in the column "Additional Resources", where the cell's content doesn't offer any hint on what the Wikipedia link is about.
 
@@ -26,6 +26,6 @@ And while this is a very small table, you may imagine how hard it will be to bro
 
 The table in the following example indeed has a header cell for each column (the top row), but the data rows don't have one.
 
-[Generally bad table, with only horizontal headers (example) ![Preview](_examples/generally-bad-table-with-only-horizontal-headers/_example.png)](_examples/generally-bad-table-with-only-horizontal-headers)
+[Example](_examples/generally-bad-table-with-only-horizontal-headers)
 
 This makes it hard to identify the current data row when navigating the table vertically.

@@ -10,6 +10,6 @@ changed: "2018-04-16"
 
 If tables are very long, it is useful to make the table header sticky on top so visual users always see it, even when scrolling vertically.
 
-[Table with fixed headers (example) ![Preview](_examples/table-with-fixed-headers/_example.png)](_examples/table-with-fixed-headers)
+[Example](_examples/table-with-fixed-headers)
 
 This is also possible for horizontally scrolling tables.

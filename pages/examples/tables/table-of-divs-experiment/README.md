@@ -16,7 +16,7 @@ We can try to follow this approach "ad absurdum" by trying to add all needed sem
 
 So the following example is an experiment with a purely demonstrative purpose. It contains an HTML structure that is made of pure `<div>` elements (so nothing like `<table>`, `<tr>`, `<td>`, or similar was used). Thanks to adding an appropriate `role` attribute to each element, it is conveyed to screen readers like a table.
 
-[Table of divs using ARIA (example) ![Preview](_examples/table-of-divs-using-aria/_example.png)](_examples/table-of-divs-using-aria)
+[Example](_examples/table-of-divs-using-aria)
 
 _Q.E.D._ (Quod erat demonstrandum.)
 
@@ -24,7 +24,7 @@ _Q.E.D._ (Quod erat demonstrandum.)
 
 As all roles can be set explicitly using ARIA, we are not restricted anymore styling the table in any traditional way. For example, instead of using `display: table`, `display: table-row`, and `display: table-cell`, etc., we can now style a table as flexbox:
 
-[Table of divs with flexbox (example) ![Preview](_examples/table-of-divs-with-flexbox/_example.png)](_examples/table-of-divs-with-flexbox)
+[Example](_examples/table-of-divs-with-flexbox)
 
 ## Necessity of a valid structure
 
@@ -34,7 +34,7 @@ When tinkering up a table using random HTML elements and ARIA roles, it is very 
 
 The following example adds another `<div class="favorites">` container around the second and third hobby's `<tr>` elements so we can style those individually. This breaks the table for some screen readers: for example, NVDA announces it as "table with 2 rows and 3 columns" (instead of 4 rows), and for the second and third hobby, table navigation does not work anymore.
 
-[Invalid table of divs (example) ![Preview](_examples/invalid-table-of-divs/_example.png)](_examples/invalid-table-of-divs)
+[Example](_examples/invalid-table-of-divs)
 
 This should not be too much surprising: in standard HTML, adding a container around `<tr>` elements is not valid, either. And although the above example is still working in some screen readers, the following always holds true: the messier the HTML code is, the more problems will occur.
 
@@ -42,7 +42,7 @@ This should not be too much surprising: in standard HTML, adding a container aro
 
 The good news: by adding `role="presentation"` to this additional container, we remove its semantical meaning, and the table is working again (also in NVDA).
 
-[Fixed table of divs (example) ![Preview](_examples/fixed-table-of-divs/_example.png)](_examples/fixed-table-of-divs)
+[Example](_examples/fixed-table-of-divs)
 
 ## Conclusion
 

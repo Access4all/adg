@@ -14,13 +14,13 @@ Sometimes a data table doesn't offer a column that identifies the current row (s
 
 For example, when having a huge database of addresses, chances are high that you have multiple records with very similar data, as demonstrated in the following example: here you have many John Does residing on similar addresses.
 
-[Table with ambiguous data (example) ![Preview](_examples/table-with-ambiguous-data/_example.png)](_examples/table-with-ambiguous-data)
+[Example](_examples/table-with-ambiguous-data)
 
 ## Adding a unique identifier
 
 In such a case, you could try to introduce an additional unique column, like a record ID.
 
-[Table with unique IDs (example) ![Preview](_examples/table-with-unique-ids/_example.png)](_examples/table-with-unique-ids)
+[Example](_examples/table-with-unique-ids)
 
 However, record IDs are often not very readable. And sometimes there isn't even a record ID available.
 
@@ -28,7 +28,7 @@ However, record IDs are often not very readable. And sometimes there isn't even 
 
 Thus, sometimes it is best to mark more than a single data cell as header cell. Then, the combination of the header cells is announced by the screen reader, identifying the current row as uniquely as possible.
 
-[Table with multiple header cells (example) ![Preview](_examples/table-with-multiple-header-cells/_example.png)](_examples/table-with-multiple-header-cells)
+[Example](_examples/table-with-multiple-header-cells)
 
 ## How many header cells are too many?
 

@@ -22,7 +22,7 @@ But when placing form controls into a table, one could argue that proper table h
 
 So take a look at the following example and try to navigate it using the `Tab` key:
 
-[Form controls without labels in a table (example) ![Preview](_examples/form-controls-without-labels-in-a-table/_example.png)](_examples/form-controls-without-labels-in-a-table)
+[Example](_examples/form-controls-without-labels-in-a-table)
 
 Firefox announces both the table's column and row headers like a charm in focus mode. For example, when focusing the "insurance" checkbox in the row "DHL":
 
@@ -38,7 +38,7 @@ What a bummer.
 
 We can fix this by simply adding real `<label>` elements for each form control, then hide them visually (see [Hiding elements visually by moving them off-screen](/pages/examples/hiding-elements/visually)).
 
-[Form controls with labels in a table (example) ![Preview](_examples/form-controls-with-labels-in-a-table/_example.png)](_examples/form-controls-with-labels-in-a-table)
+[Example](_examples/form-controls-with-labels-in-a-table)
 
 This makes the whole thing work in both Firefox and Internet Explorer, at least more or less: JAWS seems to have some troubles announcing the row headers in focus mode. But all in all, it is acceptable.
 
@@ -46,7 +46,7 @@ This makes the whole thing work in both Firefox and Internet Explorer, at least 
 
 As we know from [Placing non-interactive content between form controls](/pages/examples/forms/non-interactive-content), elements can be associated to a form control by using `aria-describedby`. So instead of using real `<label>` elements, we could try to associate the table headers with the form controls.
 
-[Form controls without labels in a table, fixed with ARIA (example) ![Preview](_examples/form-controls-without-labels-in-a-table-fixed-with-aria/_example.png)](_examples/form-controls-without-labels-in-a-table-fixed-with-aria)
+[Example](_examples/form-controls-without-labels-in-a-table-fixed-with-aria)
 
 But like in the very first example, JAWS seems to only announce the column headers. Also, this clearly violates our rule that each and every input needs its dedicated label.
 
