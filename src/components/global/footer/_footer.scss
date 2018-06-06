@@ -5,7 +5,7 @@
   margin-top: 2 * $gutter;
   &:before {
     @include navbar_white_line__pseudo;
-    left: 0; right: 0;
+    left: -50vw; right: -50vw;
     top: 0;
     height: 1px;
   }

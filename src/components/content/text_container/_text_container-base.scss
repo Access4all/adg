@@ -1,0 +1,34 @@
+@mixin text_container {
+	@include richtext(all);
+  h1 {
+    @include h1;
+    @include theme-color;
+    padding-top: 2em;
+    padding-bottom: 1.5em;
+
+    + p strong {
+      font-size: 1.5em;
+      font-weight: normal;
+    }
+  }
+  h2 {
+    @include theme-color;
+  }
+  p, li {
+    > code {
+      @include theme(background-color, main);
+      @include theme(color, bg);
+      padding: .1em .25em;
+      border-radius: 3px;
+    }
+  }
+  pre code {
+    border: 1px solid black;
+    @include theme(border-color, main);
+    @include font-xs;
+  }
+
+  a:focus {
+    outline: 2px dotted var(--theme-color-dark);
+  }
+}
