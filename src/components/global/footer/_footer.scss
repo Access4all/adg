@@ -5,14 +5,18 @@
   margin-top: 2 * $gutter;
 	margin-left: auto;
 	margin-right: auto;
+  //width: 100%;
   &:before {
     @include navbar_white_line__pseudo;
     left: -50vw; right: -50vw;
     top: 0;
     height: 1px;
   }
-
-  @include above-mobile-narrow {
+  .footer--left,
+  .footer--right {
+    margin-bottom: $gutter;
+  }
+  @include above-mobile {
     .footer--left {
       float: left;
     }
@@ -32,9 +36,6 @@
 
 .footer--inner {
   @include l-site_width;
-  @include clearfix;
-  margin-top: $gutter;
-  margin-bottom: $gutter;
 }
 
 @include above-tablet-portrait {
@@ -49,7 +50,8 @@
 .footer--agencies {
   display: flex;
   align-items: center;
-  margin-bottom: $gutter;
+  flex-wrap: wrap;
+  margin: -$gutter / 2;
 }
 
 .footer--label {
@@ -57,7 +59,7 @@
 }
 
 .footer--agency {
-  margin-right: $gutter;
+  margin: $gutter / 2;
 
   &:last-child {
     margin-right: 0;
