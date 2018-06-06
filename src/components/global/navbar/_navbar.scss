@@ -6,7 +6,7 @@
   	left: 0; top: 0;
   }
 	//background-color: $c-white;
-  //@include theme-background-color;
+  @include theme-background-color;
 	z-index: 1;
 	height: 100vh;
 	display: inline-block;
@@ -18,8 +18,6 @@
     left: auto;
     height: auto;
   }
-
-
 
   &:after {
     @include navbar_white_line__pseudo;
@@ -44,6 +42,24 @@
   @include above-mobile {
     z-index: 1;
   }
+}
+
+.navbar--container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .navbar--logo {
+    flex: 0 0 auto;
+    align-self: auto;
+  }
+
+  .navbar--inner {
+      flex: 1 1 auto;
+      align-self: auto;
+  }
+  @include theme-background-color;
+  
   @include above-mobile {
     margin-bottom: $gutter;
     position: relative;
@@ -54,7 +70,6 @@
       height: 1px;
     }
   }
-  @include theme-background-color;
 }
 
 
@@ -69,6 +84,7 @@
 .navbar--inner {
   overflow: auto;
   width: $navWidthMax;
+  padding-right: 60px;
   max-width: 100vw;
 }
 
@@ -104,10 +120,18 @@
   .footer,
   .site-content {
     padding-left: $navWidthMin;
+    width: $navWidthMin + $site-maxWidth;
+    @media (max-width: $navWidthMin + $site-maxWidth) {
+      width: 100%;
+    }
   }
   .navbar--toggle--input:checked ~ .footer,
   .navbar--toggle--input:checked ~ .site-content {
     padding-left: $navWidthMax;
+    width: $navWidthMax + $site-maxWidth;
+    @media (max-width: $navWidthMax + $site-maxWidth) {
+      width: 100%;
+    }
   }
 }
 

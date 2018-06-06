@@ -10,6 +10,8 @@ $theme-2-light: $c-red-light;
 $theme-3-dark: $c-blue;
 $theme-3-light: $c-blue-light;
 
+$theme-4-dark: $c-violet;
+$theme-4-light: $c-violet-light;
 
 
 @mixin theme($property, $color: main) {

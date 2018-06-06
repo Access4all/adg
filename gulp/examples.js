@@ -40,18 +40,6 @@ module.exports = (config, cb) => {
               path.dirname(articlePath)
             )
             const code = helpers.getCode(dir)
-            code.js = babel.transform(code.js, {
-              presets: [
-                [
-                  babelPreset,
-                  {
-                    targets: {
-                      browsers: ['last 2 versions', 'ie 11']
-                    }
-                  }
-                ]
-              ]
-            }).code
             const data = Object.assign(
               {
                 codePen: helpers.getCodePenForm(code),
@@ -61,7 +49,22 @@ module.exports = (config, cb) => {
                   title: articleMeta.navigation_title
                 }
               },
-              code
+              {
+                html: code.html,
+                css: code.css,
+                js: babel.transform(code.js, {
+                  presets: [
+                    [
+                      babelPreset,
+                      {
+                        targets: {
+                          browsers: ['last 2 versions', 'ie 11']
+                        }
+                      }
+                    ]
+                  ]
+                }).code
+              }
             )
 
             file.contents = layout

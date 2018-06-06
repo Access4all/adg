@@ -1,8 +1,10 @@
 .prev_next {
 
   @include l-site_width;
-  @include rem(margin-top, 4 * $gutter);
+  @include rem(margin-top, 3 * $gutter);
+  @include rem(margin-bottom, 3 * $gutter);
 
+  @include clearfix;
   li {
     float: left;
     width: 50%;
@@ -13,6 +15,7 @@
     }
 
     &:last-child {
+      float: right;
       padding-left: .25em;
     }
   }

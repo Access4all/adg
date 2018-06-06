@@ -1,46 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>{{title}}</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="/css/styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
-  {{#each metatags.og}}
-    <meta property="{{this.property}}" content="{{this.content}}">
-  {{/each}}
+  <head>
 
-  {{#each metatags.standard}}
-    <meta name="{{this.name}}" content="{{this.content}}">
-  {{/each}}
-  <link rel="alternate" type="application/rss+xml" href="/feed/rss.xml">
-</head>
-<body class="js-theme theme{{#if section }} theme-{{section}}{{/if}}">
-  <div id="body">
-    <div id="main">
-      <header class="header" id="header">
-        <div class="l-site_width">
-          <h1 class="visuallyhidden">Header</h1>
-        </div>
-      </header>
-      {{> "global/navbar/navbar"}}
-      <main id="main-content" class="site-content">
-        {{> "global/breadcrumbs/breadcrumbs"}}
-        <div class="l-site_width">
-          {{#if contents}}
-{{> "content/text_container/text_container" content=contents}} {{!-- needs to have zero space indenting for code examples --}}
-          {{/if}}
-          {{#if subPages}}
-            {{> "content/cardmenu/cardmenu" menuitem=subPages}}
-          {{/if}}
-        </div>
+    <title>{{title}}</title>
+    <!--
+            ___    ____  ______
+           /   |  / __ \/ ____/
+          / /| | / / / / / __
+         / ___ |/ /_/ / /_/ /
+        /_/  |_/_____/\____/
 
-        {{> "content/prev_next/prev_next" prev=previousPage next=nextPage}}
-      </main>
-      {{> "global/footer/footer"}}
+    ACCESSIBILITY DEVELOPER GUIDE - Access for all
+    in cooperation with the web agencies Hinderling Volkart, Unic, Liip and Zeix
+
+    -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    {{#each metatags.og}}
+      <meta property="{{this.property}}" content="{{this.content}}">
+    {{/each}}
+
+    {{#each metatags.standard}}
+      <meta name="{{this.name}}" content="{{this.content}}">
+    {{/each}}
+    <link rel="alternate" type="application/rss+xml" href="/feed/rss.xml">
+  </head>
+  <body class="js-theme theme{{#if section }} theme-{{section}}{{/if}}">
+    <div id="body">
+      <div id="main">
+        <header class="header" id="header">
+          <div class="l-site_width">
+            <h1 class="visuallyhidden">Header</h1>
+          </div>
+        </header>
+        {{> "global/navbar/navbar"}}
+        <main id="main-content" class="site-content">
+          {{> "global/breadcrumbs/breadcrumbs"}}
+          <div class="l-site_width">
+            {{#if contents}}
+  {{> "content/text_container/text_container" content=contents}} {{!-- needs to have zero space indenting for code examples --}}
+            {{/if}}
+            {{#if subPages}}
+              {{> "content/cardmenu/cardmenu" menuitem=subPages}}
+            {{/if}}
+          </div>
+
+          {{> "content/prev_next/prev_next" prev=previousPage next=nextPage}}
+        </main>
+        {{> "global/footer/footer"}}
+      </div>
     </div>
-  </div>
 
-  <script src="/js/scripts.js"></script>
-</body>
+    <script src="/js/scripts.js"></script>
+  </body>
 </html>
