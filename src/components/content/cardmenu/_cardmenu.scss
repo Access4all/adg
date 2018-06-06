@@ -64,7 +64,7 @@
 
   &:hover,
   &:focus {
-    &.cardmenu--card--link-intro {
+    &.cardmenu--card--link-introduction {
       @include theme(border-color, 0);
     }
     &.cardmenu--card--link-setup {
@@ -107,7 +107,7 @@
     margin: 0 auto;
     height: 35px;
 
-    .cardmenu--card--link-intro & {
+    .cardmenu--card--link-introduction & {
       &:after {
         @include sprite($shake);
       }

@@ -66,10 +66,10 @@
   }
 
   .navbar--inner {
-      flex: 1 1 auto;
-      align-self: auto;
+    flex: 1 1 auto;
+    align-self: auto;
   }
-  @include theme-background-color;
+  //@include theme-background-color;
 }
 
 
