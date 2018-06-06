@@ -7,9 +7,39 @@
   margin-top: $gutter;
   margin-bottom: $gutter;
 }
-.footer--left {
-  float: left;
+
+@include above-tablet-portrait {
+  .footer--left {
+    float: left;
+  }
+  .footer--right {
+    float: right;
+  }
 }
-.footer--right {
-  float: right;
+
+.footer--agencies {
+  display: flex;
+  align-items: center;
+  margin-bottom: $gutter;
+}
+
+.footer--agency {
+  margin-right: $gutter;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.footer--logolink {
+  height: 60px;
+  position: relative;
+
+  img {
+    border: 0;
+  }
+}
+
+.footer--copy {
+  clear: both;
 }
