@@ -51,3 +51,7 @@ As we know from [Placing non-interactive content between form controls](/example
 But like in the very first example, JAWS seems to only announce the column headers. Also, this clearly violates our rule that each and every input needs its dedicated label.
 
 So we can barely call this a real improvement, and we recommend to just use plain labels (without any ARIA).
+
+## Additional notes
+
+Instead of placing a form into a table, it could be an alternative solution to style `<fieldset>`/`<legend>` structures visually like tables?

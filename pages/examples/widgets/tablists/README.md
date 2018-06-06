@@ -59,3 +59,7 @@ Some interesting peculiarities:
     - Each panel's heading has "panel" appended.
 - The tablist/carousel/accordion controls are placed in the DOM before the panels:
     - As the whole element is properly marked up with headings, screen reader users can jump very quickly between controls and panels (see [How to handle headings](/examples/headings/handling)).
+
+## Additional notes
+
+Important: form element and label are only announced "in one go" (in browse mode) when the form element is displayed inline, which isn't possible with absolute positioning. The usual off-screen hack is out of question then. But simply resizing form elements to 1x1px doesn't work, so this could become a bit trickier than thought initially...

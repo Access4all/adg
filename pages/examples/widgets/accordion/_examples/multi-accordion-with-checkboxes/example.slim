@@ -1,0 +1,45 @@
+p: button Focusable element before
+
+- accordions = {flowers: [:rose, :tulip, :sunflower]}
+/- accordions[:animals] = [:dog, :cat, :tiger, :snake]
+
+- accordions.each do |name, panels|
+  - accordion_id = "accordion_#{name}"
+  
+  .accordion
+    h1.visually-hidden #{name} (accordion)
+
+    p.visually-hidden Tablist help: use the accordion controls to toggle the visibility of their respective panels (below the controls).
+
+    - panels.each_with_index do |panel_name, i|
+      - input_id = "#{accordion_id}_panel_#{panel_name}"
+
+      .control
+        input.visually-hidden id=input_id type="checkbox" checked="1"
+        h2
+          label for=input_id
+            span.visually-hidden Show panel 
+            = panel_name
+        
+      - panel_id      = "#{input_id}_panel"
+
+      .panel id=panel_id
+        h3 Some info about #{panel_name}
+        
+        p Bla bla bla... all about #{panel_name}...
+        
+        p
+          img src="..." alt="A beautiful #{panel_name}"
+        
+        p
+          | A link to a page with 
+          a href="#" more infos about #{panel_name}
+          | !
+        
+        h3 More elements can come here related to #{panel_name}
+          
+        p
+          | Maybe even some form element where you can enter a name for your #{panel_name}: 
+          input type="text"
+        
+p: button Focusable element after

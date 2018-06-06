@@ -1,0 +1,55 @@
+p: button Focusable element before
+
+- tablists = {flowers: [:rose, :tulip, :sunflower]}
+/- tablists[:animals] = [:dog, :cat, :tiger, :snake]
+
+- tablists.each do |name, panels|
+  - tablist_id = "tablist_#{name}"
+  
+  .tablist
+    h1.visually-hidden #{name} (tablist)
+
+    p.visually-hidden Tablist help: use the tablist controls to toggle the visibility of their respective panels (below the controls).
+
+    fieldset.controls
+      legend.visually-hidden Tablist controls
+
+      - panels.each_with_index do |panel_name, i|
+        - input_id      = "#{tablist_id}_panel_#{panel_name}"
+        - input_value   = input_id
+        - input_checked = (i == 0)
+
+        .control
+          input.visually-hidden id=input_id type="radio" name=tablist_id value=input_value checked=input_checked
+          label for=input_id
+            span.visually-hidden Show panel 
+            = panel_name
+
+    - panels.each_with_index do |panel_name, i|
+      - panel_id      = "#{tablist_id}_panel_#{panel_name}_panel"
+      - display_value = (i == 0 ? :block : :none)
+
+      .panel id=panel_id style="display: #{display_value}"
+        h2.visually-hidden #{panel_name} (panel)
+        
+        h3 Some info about #{panel_name}
+        
+        p Bla bla bla... all about #{panel_name}...
+        
+        p
+          img src="..." alt="A beautiful #{panel_name}"
+        
+        p
+          | A link to a page with 
+          a href="#" more infos about #{panel_name}
+          | !
+        
+        h3 More elements can come here related to #{panel_name}
+          
+        p
+          | Maybe even some form element where you can enter a name for your #{panel_name}: 
+          input type="text"
+          
+        
+        
+p: button Focusable element after

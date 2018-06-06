@@ -62,3 +62,12 @@ It is also important to provide users with meaningful messages that help them fi
 ### Combining with HTML 5 client side validations?
 
 You can easily combine (but not replace) these techniques with HTML 5 client side validations, see [HTML 5 client side validations](/examples/forms/html-5-validations).
+
+## Additional notes
+
+- Vielleicht kann man das auch ohne JavaScript machen in CodePen? Es wäre geil, auf die GET Parameter mittels inline Ruby zuzugreifen, etwa so:
+
+```rb
+- if GET['xy']
+  ...
+```

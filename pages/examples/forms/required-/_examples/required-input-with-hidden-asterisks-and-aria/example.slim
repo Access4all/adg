@@ -1,0 +1,18 @@
+form
+  .control
+    label for="name"
+      | Full name
+      span.required aria-hidden="true" *
+      
+    input#name aria-describedby="required-description" type="text"
+    
+  .control
+    label for="biography" Biography
+    textarea#biography type="text"
+
+  .control
+    input type="submit" value="Register"
+    
+  p#required-description aria-hidden="true"
+    span.required aria-hidden="true" *
+    | Required field

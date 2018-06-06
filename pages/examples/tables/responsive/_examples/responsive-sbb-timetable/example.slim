@@ -1,0 +1,97 @@
+- connections = [{connection_type: "Train", train_type: "Inter Regio", train_direction: "Brig", departure: "18:03", arrival: "19:24", duration_hours: 1, duration_mins: 29, change: 1, first_class_occupancy: "low", second_class_occupancy: "high", wheelchair: true, platform: 4, price: 25.70}, {connection_type: "Bus", train_type: "Overland", train_direction: "Bremgarten AG", departure: "18:33", arrival: "18:54", duration_hours: 0, duration_mins: 45, change: 2, first_class_occupancy: "low", second_class_occupancy: "low", wheelchair: false, platform: "B", price: 6.60}, {connection_type: "Train", train_type: "Regio Express", train_direction: "Basel", departure: "18:45", arrival: "20:03", duration_hours: 2, duration_mins: 4, change: 2, first_class_occupancy: "high", second_class_occupancy: "high", wheelchair: true, platform: "12", price: 16.45}]
+
+p Some info before the table.
+
+table role="grid"
+  caption
+    span.from-to Zurich to Bern 
+    span.name Monday, 31.07.2017. Departure 17:49.
+    
+  thead role="presentation"
+    tr role="row"
+      th role="columnheader" Details
+      th role="columnheader" Duration
+      th role="columnheader" Change
+      th role="columnheader" Capacity
+      th role="columnheader" Symbols
+      th role="columnheader" Platform
+      th role="columnheader" Options
+      
+  tbody role="presentation"
+    - connections.each_with_index do |connection, i|
+      - details_id          = "details_#{i}"
+      - extended_details_id = "extended_details_#{i}"
+      
+      tr role="row"
+        th.details role="rowheader" id=details_id
+          span.first-line
+            span.connection-type
+              span.visually-hidden => connection[:connection_type]
+
+            span.train-type
+              span.visually-hidden => connection[:train_type]
+
+            span.train-direction
+              | Direction
+              =< connection[:train_direction]
+
+          span.second-line
+            span.departure
+              span.visually-hidden Departure 
+              => connection[:departure]
+
+            span.pearl-chain
+              span.pearl-chain-start
+              span.pearl-chain-line
+              span.pearl-chain-stop
+
+            span.arrival
+              span.visually-hidden Arrival 
+              => connection[:arrival]
+
+        td.duration role="gridcell"
+          =< connection[:duration_hours]
+          | h
+          =< connection[:duration_mins]
+          | min
+
+        td.change role="gridcell"
+          = connection[:change]
+
+        td.occupancy role="gridcell"
+          span.first-class
+            | 1. 
+            
+            span class=connection[:first_class_occupancy]
+              span.visually-hidden = connection[:first_class_occupancy]
+
+          span.second-class
+            =< "2. "
+            
+            span class=connection[:second_class_occupancy]
+              span.visually-hidden = connection[:second_class_occupancy]
+
+        td.symbols role="gridcell"
+          - if connection[:wheelchair]
+            span.wheelchair: span.visually-hidden Wheelchair reservation
+
+        td.platform role="gridcell"
+          span.platform-header Platform 
+          = connection[:platform]
+
+        td.options role="gridcell"
+          button.ticketshop href="#"
+            span.label
+              | Buy from CHF
+              =< connection[:price]
+              
+            span.symbol □
+
+          button.expand aria-expanded="false" data-target=extended_details_id
+            span.label.visually-hidden Show connection details below
+            span.symbol aria-hidden="true" +
+
+      tr.extended_details role="row" id=extended_details_id style="display: none"
+        td role="gridcell" colspan="7" Infos about connection #{i + 1}
+              
+p Some info after the table.

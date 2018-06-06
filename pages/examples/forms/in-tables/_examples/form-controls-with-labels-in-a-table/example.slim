@@ -1,0 +1,47 @@
+form
+  table
+    thead
+      tr
+        th Delivery provider
+        th Insurance
+        th Comment
+
+    tbody
+      tr
+        th
+          input#dhl type="radio" name="provider"
+          label for="dhl" DHL
+
+        td
+          input#dhl_insurance type="checkbox"
+          label.visually-hidden for="dhl_insurance" Insurance
+
+        td
+          label.visually-hidden for="dhl_comment" Comment
+          textarea#dhl_comment
+
+      tr
+        th
+          input#ups type="radio" name="provider"
+          label for="ups" UPS
+            
+        td
+          input#ups_insurance type="checkbox"
+          label.visually-hidden for="ups_insurance" Insurance
+          
+        td
+          label.visually-hidden for="ups_comment" Comment
+          textarea#ups_comment
+
+      tr
+        th
+          input#post type="radio" name="provider"
+          label for="post" Post
+            
+        td
+          input#post_insurance type="checkbox"
+          label.visually-hidden for="post_insurance" Insurance
+          
+        td
+          label.visually-hidden for="post_comment" Comment
+          textarea#post_comment

@@ -69,3 +69,9 @@ And for the sake of completeness, here's the result in NVDA:
 ![Result in NVDA with ARIA](_media/result-in-nvda-with-aria.png)
 
 But remember: while this is generally working in most modern assistive software, missing backwards compatibility of ARIA can be a real problem for older software. You should only stick to this solution if you really don't have another choice. For more information, see [ARIA - when HTML simply isn't enough](/knowledge/aria).
+
+## Additional notes
+
+- TODO: Is `aria-level` really needed? Are these as bulletproof as normal headings (outline, jumping between them, etc.)?
+- Ein JavaScript, welches `role` etc. autom. setzt, wäre cool!
+- Während Sections beendet werden können, können Überschriften nur durch neue Überschriften beendet! Siehe Mail 81BAAC88-AB0E-406E-87F1-BDE148962082@access-for-all.ch!

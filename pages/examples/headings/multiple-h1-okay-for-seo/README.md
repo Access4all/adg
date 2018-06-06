@@ -63,3 +63,9 @@ This creates a heading outline which technically is a bit invalid, as it starts 
 Another thing may really feel a bit strange though, as using this technique, the header stands on its own, while the footer is part of the main content.
 
 This special case is accepted though by the accessibility community.
+
+## Additional notes
+
+- "Only 1 h1 per page" Thematik:
+    - Bing Guidelines: <https://www.bing.com/webmaster/help/webmaster-guidelines-30fba23a> => Zitat: "Only one H1 tag per page"
+    - YouTube: <https://www.youtube.com/watch?v=GIn5qJKU8VM> => Zitat: "Mehrere H1 sind in Ordnung" (Beitrag offiziell, aber alt)

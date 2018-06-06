@@ -1,0 +1,53 @@
+.visually-hidden
+  position: absolute
+  left:     -10000px
+  top:      auto
+  width:    1px
+  height:   1px
+  overflow: hidden
+
+body
+  padding: 20px
+
+.accordion
+  margin-bottom: 20px
+  
+.control
+  h2
+    margin-bottom: 0
+  
+  label
+    display: block
+    border: 1px solid black
+    margin: 0 0 -1px 0
+    padding: 4px 10px
+    background-color: lightyellow
+  
+    &::before
+      content: '+'
+      display: inline-block
+      width: .75em
+      font-weight: normal
+
+// Visual indicator of active panel control
+input[type="radio"]:checked + h2 label
+  border-bottom-color: lightyellow
+  position: relative
+  
+  &::before
+    content: '-'
+  
+a:focus,
+input:focus,
+input[type="radio"]:focus + h2 label
+  outline: 2px dotted red
+  outline-offset: 2px
+  
+input[type="radio"] + h2 label:hover
+  cursor: pointer
+  text-decoration: underline
+  
+.panel
+  border: 1px solid
+  background-color: lightyellow
+  padding: 0 0 0 10px

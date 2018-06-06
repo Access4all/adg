@@ -1,65 +1,54 @@
-;(function () {
-  $(document).ready(function () {
-    var interval
-    $('button[data-carousel-direction]').click(function () {
-      var $all_panels,
-        $button,
-        $upcoming_panel,
-        carousel_id,
-        current_index,
-        direction,
-        max_index,
-        upcoming_index
-      $button = $(this)
-      carousel_id = $button.attr('data-carousel-id')
-      direction = $button.attr('data-carousel-direction')
-      $all_panels = $(`input[name='${carousel_id}']`)
-      max_index = $all_panels.length - 1
-      current_index = $all_panels.index(
-        $($all_panels.parent()).find(':checked')
-      )
-      upcoming_index =
-        direction === 'previous'
-          ? current_index === 0 ? max_index : current_index - 1
-          : current_index === max_index ? 0 : current_index + 1
-      $upcoming_panel = $($all_panels[upcoming_index])
-      $upcoming_panel.prop('checked', true).trigger('change')
-      $('#alerts').append(
-        `<div role='alert'>Showing panel ${upcoming_index + 1} of ${max_index +
-          1}</div>`
-      )
-      return setTimeout(function () {
-        return $('#alerts').empty()
-      }, 2000)
-    })
-    $("input[type='radio']").change(function () {
-      var $current_radiobutton, current_panel_id, current_radiobutton_name
-      $current_radiobutton = $(this)
-      current_radiobutton_name = $current_radiobutton.attr('name')
-      current_panel_id = `#${$current_radiobutton.attr('value')}_panel`
+(function() {
+  $(document).ready(function() {
+    var interval;
+    $('button[data-carousel-direction]').click(function() {
+      var $all_panels, $button, $upcoming_panel, carousel_id, current_index, direction, max_index, upcoming_index;
+      $button = $(this);
+      carousel_id = $button.attr('data-carousel-id');
+      direction = $button.attr('data-carousel-direction');
+      $all_panels = $(`input[name='${carousel_id}']`);
+      max_index = $all_panels.length - 1;
+      current_index = $all_panels.index($($all_panels.parent()).find(':checked'));
+      upcoming_index = direction === 'previous' ? current_index === 0 ? max_index : current_index - 1 : current_index === max_index ? 0 : current_index + 1;
+      $upcoming_panel = $($all_panels[upcoming_index]);
+      $upcoming_panel.prop('checked', true).trigger('change');
+      $('#alerts').append(`<div role='alert'>Showing panel ${upcoming_index + 1} of ${max_index + 1}</div>`);
+      return setTimeout((function() {
+        return $('#alerts').empty();
+      }), 2000);
+    });
+    $("input[type='radio']").change(function() {
+      var $current_radiobutton, current_panel_id, current_radiobutton_name;
+      $current_radiobutton = $(this);
+      current_radiobutton_name = $current_radiobutton.attr('name');
+      current_panel_id = `#${$current_radiobutton.attr('value')}_panel`;
       return $(`[name='${current_radiobutton_name}']`).each((i, element) => {
-        var $panel, $radiobutton, panel_id
-        $radiobutton = $(element)
-        panel_id = `#${$radiobutton.attr('id')}_panel`
-        $panel = $(panel_id)
+        var $panel, $radiobutton, panel_id;
+        $radiobutton = $(element);
+        panel_id = `#${$radiobutton.attr('id')}_panel`;
+        $panel = $(panel_id);
         if (panel_id === current_panel_id) {
-          return $panel.show()
+          return $panel.show();
         } else {
-          return $panel.hide()
+          return $panel.hide();
         }
-      })
-    })
-    interval = setInterval(function () {
-      if ($('button[data-carousel-autoplay]').attr('aria-pressed') === 'true') {
-        return $("button[data-carousel-direction='next']").click()
+      });
+    });
+    interval = setInterval((function() {
+      if ($('button[data-carousel-autoplay]').attr('aria-pressed') === "true") {
+        return $("button[data-carousel-direction='next']").click();
       }
-    }, 2000)
-    return $('button[data-carousel-autoplay]').click(function () {
-      var $button, status
-      $button = $(this)
-      console.log($button.attr('aria-pressed'))
-      status = $button.attr('aria-pressed') === 'true' ? 'false' : 'true'
-      return $button.attr('aria-pressed', status)
-    })
-  })
-}.call(this))
+    }), 2000);
+    return $('button[data-carousel-autoplay]').click(function() {
+      var $button, status;
+      $button = $(this);
+      console.log($button.attr('aria-pressed'));
+      status = $button.attr('aria-pressed') === "true" ? "false" : "true";
+      return $button.attr('aria-pressed', status);
+    });
+  });
+
+}).call(this);
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiPGFub255bW91cz4iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFBQSxDQUFBLENBQUUsUUFBRixDQUFXLENBQUMsS0FBWixDQUFrQixRQUFBLENBQUEsQ0FBQTtBQUNoQixRQUFBO0lBQUEsQ0FBQSxDQUFFLGlDQUFGLENBQW9DLENBQUMsS0FBckMsQ0FBMkMsUUFBQSxDQUFBLENBQUE7QUFDekMsVUFBQSxXQUFBLEVBQUEsT0FBQSxFQUFBLGVBQUEsRUFBQSxXQUFBLEVBQUEsYUFBQSxFQUFBLFNBQUEsRUFBQSxTQUFBLEVBQUE7TUFBQSxPQUFBLEdBQVUsQ0FBQSxDQUFFLElBQUY7TUFDVixXQUFBLEdBQWMsT0FBTyxDQUFDLElBQVIsQ0FBYSxrQkFBYjtNQUNkLFNBQUEsR0FBWSxPQUFPLENBQUMsSUFBUixDQUFhLHlCQUFiO01BQ1osV0FBQSxHQUFjLENBQUEsQ0FBRSxDQUFBLFlBQUEsQ0FBQSxDQUFlLFdBQWYsQ0FBMkIsRUFBM0IsQ0FBRjtNQUVkLFNBQUEsR0FBWSxXQUFXLENBQUMsTUFBWixHQUFxQjtNQUNqQyxhQUFBLEdBQWdCLFdBQVcsQ0FBQyxLQUFaLENBQWtCLENBQUEsQ0FBRSxXQUFXLENBQUMsTUFBWixDQUFBLENBQUYsQ0FBdUIsQ0FBQyxJQUF4QixDQUE2QixVQUE3QixDQUFsQjtNQUVoQixjQUFBLEdBQW9CLFNBQUEsS0FBYSxVQUFoQixHQUNLLGFBQUEsS0FBaUIsQ0FBcEIsR0FDRSxTQURGLEdBR0UsYUFBQSxHQUFnQixDQUpwQixHQU1LLGFBQUEsS0FBaUIsU0FBcEIsR0FDRSxDQURGLEdBR0UsYUFBQSxHQUFnQjtNQUVyQyxlQUFBLEdBQWtCLENBQUEsQ0FBRSxXQUFZLENBQUEsY0FBQSxDQUFkO01BRWxCLGVBQWUsQ0FBQyxJQUFoQixDQUFxQixTQUFyQixFQUFnQyxJQUFoQyxDQUFxQyxDQUFDLE9BQXRDLENBQThDLFFBQTlDO01BQ0EsQ0FBQSxDQUFFLFNBQUYsQ0FBWSxDQUFDLE1BQWIsQ0FBb0IsQ0FBQSxnQ0FBQSxDQUFBLENBQW1DLGNBQUEsR0FBaUIsQ0FBcEQsQ0FBc0QsSUFBdEQsQ0FBQSxDQUE0RCxTQUFBLEdBQVksQ0FBeEUsQ0FBMEUsTUFBMUUsQ0FBcEI7YUFFQSxVQUFBLENBQVcsQ0FBQyxRQUFBLENBQUEsQ0FBQTtlQUNWLENBQUEsQ0FBRSxTQUFGLENBQVksQ0FBQyxLQUFiLENBQUE7TUFEVSxDQUFELENBQVgsRUFFRyxJQUZIO0lBekJ5QyxDQUEzQztJQTZCQSxDQUFBLENBQUUscUJBQUYsQ0FBd0IsQ0FBQyxNQUF6QixDQUFnQyxRQUFBLENBQUEsQ0FBQTtBQUM5QixVQUFBLG9CQUFBLEVBQUEsZ0JBQUEsRUFBQTtNQUFBLG9CQUFBLEdBQTJCLENBQUEsQ0FBRSxJQUFGO01BQzNCLHdCQUFBLEdBQTJCLG9CQUFvQixDQUFDLElBQXJCLENBQTBCLE1BQTFCO01BQzNCLGdCQUFBLEdBQTJCLENBQUEsQ0FBQSxDQUFBLENBQUksb0JBQW9CLENBQUMsSUFBckIsQ0FBMEIsT0FBMUIsQ0FBSixDQUF1QyxNQUF2QzthQUUzQixDQUFBLENBQUUsQ0FBQSxPQUFBLENBQUEsQ0FBVSx3QkFBVixDQUFtQyxFQUFuQyxDQUFGLENBQXlDLENBQUMsSUFBMUMsQ0FBK0MsQ0FBQyxDQUFELEVBQUksT0FBSixDQUFBLEdBQUE7QUFDN0MsWUFBQSxNQUFBLEVBQUEsWUFBQSxFQUFBO1FBQUEsWUFBQSxHQUFlLENBQUEsQ0FBRSxPQUFGO1FBQ2YsUUFBQSxHQUFlLENBQUEsQ0FBQSxDQUFBLENBQUksWUFBWSxDQUFDLElBQWIsQ0FBa0IsSUFBbEIsQ0FBSixDQUE0QixNQUE1QjtRQUNmLE1BQUEsR0FBZSxDQUFBLENBQUUsUUFBRjtRQUVmLElBQUcsUUFBQSxLQUFZLGdCQUFmO2lCQUNFLE1BQU0sQ0FBQyxJQUFQLENBQUEsRUFERjtTQUFBLE1BQUE7aUJBR0UsTUFBTSxDQUFDLElBQVAsQ0FBQSxFQUhGOztNQUw2QyxDQUEvQztJQUw4QixDQUFoQztJQWVBLFFBQUEsR0FBVyxXQUFBLENBQVksQ0FBQyxRQUFBLENBQUEsQ0FBQTtNQUN0QixJQUFHLENBQUEsQ0FBRSxnQ0FBRixDQUFtQyxDQUFDLElBQXBDLENBQXlDLGNBQXpDLENBQUEsS0FBNEQsTUFBL0Q7ZUFDRSxDQUFBLENBQUUsd0NBQUYsQ0FBMkMsQ0FBQyxLQUE1QyxDQUFBLEVBREY7O0lBRHNCLENBQUQsQ0FBWixFQUdSLElBSFE7V0FLWCxDQUFBLENBQUUsZ0NBQUYsQ0FBbUMsQ0FBQyxLQUFwQyxDQUEwQyxRQUFBLENBQUEsQ0FBQTtBQUN4QyxVQUFBLE9BQUEsRUFBQTtNQUFBLE9BQUEsR0FBVSxDQUFBLENBQUUsSUFBRjtNQUNWLE9BQU8sQ0FBQyxHQUFSLENBQVksT0FBTyxDQUFDLElBQVIsQ0FBYSxjQUFiLENBQVo7TUFDQSxNQUFBLEdBQVksT0FBTyxDQUFDLElBQVIsQ0FBYSxjQUFiLENBQUEsS0FBZ0MsTUFBbkMsR0FDRSxPQURGLEdBR0U7YUFDWCxPQUFPLENBQUMsSUFBUixDQUFhLGNBQWIsRUFBNkIsTUFBN0I7SUFQd0MsQ0FBMUM7RUFsRGdCLENBQWxCO0FBQUEiLCJzb3VyY2VzQ29udGVudCI6WyIkKGRvY3VtZW50KS5yZWFkeSAtPlxuICAkKCdidXR0b25bZGF0YS1jYXJvdXNlbC1kaXJlY3Rpb25dJykuY2xpY2sgLT5cbiAgICAkYnV0dG9uID0gJChAKVxuICAgIGNhcm91c2VsX2lkID0gJGJ1dHRvbi5hdHRyKCdkYXRhLWNhcm91c2VsLWlkJylcbiAgICBkaXJlY3Rpb24gPSAkYnV0dG9uLmF0dHIoJ2RhdGEtY2Fyb3VzZWwtZGlyZWN0aW9uJylcbiAgICAkYWxsX3BhbmVscyA9ICQoXCJpbnB1dFtuYW1lPScje2Nhcm91c2VsX2lkfSddXCIpXG4gICAgXG4gICAgbWF4X2luZGV4ID0gJGFsbF9wYW5lbHMubGVuZ3RoIC0gMVxuICAgIGN1cnJlbnRfaW5kZXggPSAkYWxsX3BhbmVscy5pbmRleCgkKCRhbGxfcGFuZWxzLnBhcmVudCgpKS5maW5kKCc6Y2hlY2tlZCcpKVxuICAgIFxuICAgIHVwY29taW5nX2luZGV4ID0gaWYgZGlyZWN0aW9uID09ICdwcmV2aW91cydcbiAgICAgICAgICAgICAgICAgICAgICAgaWYgY3VycmVudF9pbmRleCA9PSAwXG4gICAgICAgICAgICAgICAgICAgICAgICAgbWF4X2luZGV4XG4gICAgICAgICAgICAgICAgICAgICAgIGVsc2VcbiAgICAgICAgICAgICAgICAgICAgICAgICBjdXJyZW50X2luZGV4IC0gMVxuICAgICAgICAgICAgICAgICAgICAgZWxzZVxuICAgICAgICAgICAgICAgICAgICAgICBpZiBjdXJyZW50X2luZGV4ID09IG1heF9pbmRleFxuICAgICAgICAgICAgICAgICAgICAgICAgIDBcbiAgICAgICAgICAgICAgICAgICAgICAgZWxzZVxuICAgICAgICAgICAgICAgICAgICAgICAgIGN1cnJlbnRfaW5kZXggKyAxXG4gICAgICAgICAgICAgICAgICAgXG4gICAgJHVwY29taW5nX3BhbmVsID0gJCgkYWxsX3BhbmVsc1t1cGNvbWluZ19pbmRleF0pXG4gICAgXG4gICAgJHVwY29taW5nX3BhbmVsLnByb3AoJ2NoZWNrZWQnLCB0cnVlKS50cmlnZ2VyKCdjaGFuZ2UnKVxuICAgICQoJyNhbGVydHMnKS5hcHBlbmQoXCI8ZGl2IHJvbGU9J2FsZXJ0Jz5TaG93aW5nIHBhbmVsICN7dXBjb21pbmdfaW5kZXggKyAxfSBvZiAje21heF9pbmRleCArIDF9PC9kaXY+XCIpXG4gICAgXG4gICAgc2V0VGltZW91dCAoLT5cbiAgICAgICQoJyNhbGVydHMnKS5lbXB0eSgpXG4gICAgKSwgMjAwMFxuICBcbiAgJChcImlucHV0W3R5cGU9J3JhZGlvJ11cIikuY2hhbmdlIC0+XG4gICAgJGN1cnJlbnRfcmFkaW9idXR0b24gICAgID0gJChAKVxuICAgIGN1cnJlbnRfcmFkaW9idXR0b25fbmFtZSA9ICRjdXJyZW50X3JhZGlvYnV0dG9uLmF0dHIgJ25hbWUnXG4gICAgY3VycmVudF9wYW5lbF9pZCAgICAgICAgID0gXCIjI3skY3VycmVudF9yYWRpb2J1dHRvbi5hdHRyKCd2YWx1ZScpfV9wYW5lbFwiXG4gICAgXG4gICAgJChcIltuYW1lPScje2N1cnJlbnRfcmFkaW9idXR0b25fbmFtZX0nXVwiKS5lYWNoIChpLCBlbGVtZW50KSA9PlxuICAgICAgJHJhZGlvYnV0dG9uID0gJChlbGVtZW50KVxuICAgICAgcGFuZWxfaWQgICAgID0gXCIjI3skcmFkaW9idXR0b24uYXR0cignaWQnKX1fcGFuZWxcIlxuICAgICAgJHBhbmVsICAgICAgID0gJChwYW5lbF9pZClcbiAgICAgIFxuICAgICAgaWYgcGFuZWxfaWQgPT0gY3VycmVudF9wYW5lbF9pZFxuICAgICAgICAkcGFuZWwuc2hvdygpXG4gICAgICBlbHNlXG4gICAgICAgICRwYW5lbC5oaWRlKClcbiAgICAgICAgXG4gIGludGVydmFsID0gc2V0SW50ZXJ2YWwoKC0+XG4gICAgaWYgJCgnYnV0dG9uW2RhdGEtY2Fyb3VzZWwtYXV0b3BsYXldJykuYXR0cignYXJpYS1wcmVzc2VkJykgPT0gXCJ0cnVlXCJcbiAgICAgICQoXCJidXR0b25bZGF0YS1jYXJvdXNlbC1kaXJlY3Rpb249J25leHQnXVwiKS5jbGljaygpXG4gICksIDIwMDApXG5cbiAgJCgnYnV0dG9uW2RhdGEtY2Fyb3VzZWwtYXV0b3BsYXldJykuY2xpY2sgLT5cbiAgICAkYnV0dG9uID0gJChAKVxuICAgIGNvbnNvbGUubG9nICRidXR0b24uYXR0cignYXJpYS1wcmVzc2VkJylcbiAgICBzdGF0dXMgPSBpZiAkYnV0dG9uLmF0dHIoJ2FyaWEtcHJlc3NlZCcpID09IFwidHJ1ZVwiXG4gICAgICAgICAgICAgICBcImZhbHNlXCJcbiAgICAgICAgICAgICBlbHNlXG4gICAgICAgICAgICAgICBcInRydWVcIlxuICAgICRidXR0b24uYXR0cignYXJpYS1wcmVzc2VkJywgc3RhdHVzKSJdfQ==
+//# sourceURL=coffeescript

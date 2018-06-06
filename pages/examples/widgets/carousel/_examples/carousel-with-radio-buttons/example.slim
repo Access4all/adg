@@ -1,0 +1,63 @@
+p: button Focusable element before
+
+- carousels = {flowers: [:rose, :tulip, :sunflower]}
+/- carousels[:animals] = [:dog, :cat, :tiger, :snake]
+
+- carousels.each do |name, panels|
+  - carousel_id = "carousel_#{name}"
+  
+  .carousel
+    h1.visually-hidden #{name} (carousel)
+
+    p.visually-hidden Carousel help: use the carousel controls to toggle the visibility of their respective panels (below the controls).
+
+    fieldset.controls
+      legend.visually-hidden Carousel controls
+
+      .control
+        button data-carousel-id=carousel_id data-carousel-autoplay=true aria-pressed="true" Autoplay
+
+      .control
+        button data-carousel-id=carousel_id data-carousel-direction="previous" Previous
+
+      - panels.each_with_index do |panel_name, i|
+        - input_id      = "#{carousel_id}_panel_#{panel_name}"
+        - input_value   = input_id
+        - input_checked = (i == 0)
+
+        .control
+          input.visually-hidden id=input_id type="radio" name=carousel_id value=input_value checked=input_checked
+          label for=input_id
+            span.visually-hidden Show panel #{panel_name}
+            
+      .control
+        button data-carousel-id=carousel_id data-carousel-direction="next" Next
+
+    - panels.each_with_index do |panel_name, i|
+      - panel_id      = "#{carousel_id}_panel_#{panel_name}_panel"
+      - display_value = (i == 0 ? :block : :none)
+
+      .panel id=panel_id style="display: #{display_value}"
+        h2.visually-hidden #{panel_name} (panel)
+        
+        h3 Some info about #{panel_name}
+        
+        p Bla bla bla... all about #{panel_name}...
+        
+        p
+          img src="..." alt="A beautiful #{panel_name}"
+        
+        p
+          | A link to a page with 
+          a href="#" more infos about #{panel_name}
+          | !
+        
+        h3 More elements can come here related to #{panel_name}
+          
+        p
+          | Maybe even some form element where you can enter a name for your #{panel_name}: 
+          input type="text"
+    
+#alerts.visually-hidden
+
+p: button Focusable element after

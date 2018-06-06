@@ -1,3 +1,7 @@
+*:focus {
+  outline: 2px dotted;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -6,12 +10,12 @@
   left: -10000px;
 }
 .visually-hidden:focus {
+  left: 20px;
   width: auto;
   height: auto;
 }
 
 #jump {
-  left: 0;
   background-color: white;
-  border: 1px solid black;
+  padding: 10px;
 }

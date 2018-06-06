@@ -1,0 +1,52 @@
+form
+  .control
+    label for="full_name" Full name
+    input#full_name type="text"
+    
+    p.description tabindex="0" Please tell us your name.
+
+  .control
+    label for="biography" Biography
+    textarea#biography
+    
+    p.description tabindex="0" Please tell us something about your history.
+
+  fieldset
+    legend Gender
+
+    .control
+      input#gender_male type="radio" name="gender"
+      label for="gender_male" Male
+      
+      p.description tabindex="0" You may be this if you like beer, gadgets, and Playboy Magazine.
+
+    .control
+      input#gender_female type="radio" name="gender"
+      label for="gender_female" Female
+      
+      p.description tabindex="0" You may be this if you like prosecco, make up, and Playgirl Magazine.
+
+  .control
+    label for="age_group" Age Group
+    select#age_group
+      option 0 to 9 Years
+      option 10 to 19 Years
+      option 20 to 29 Years
+      option 30 to 39 Years
+      option 40 to 49 Years
+      option 50 to 59 Years
+      option 60 to 69 Years
+      option 70 to 79 Years
+      option 80 to 89 Years
+      option 90 to 99 Years
+      
+    p.description tabindex="0" Tell us how old you are.
+
+  .control
+    input#accept_agbs type="checkbox"
+    label for="accept_agbs" I accept the following terms and conditions:
+    
+    ul tabindex="0"
+      li I entered all data truthfully
+      li I'm a good person
+      li I won't vote for Donald Trump next time

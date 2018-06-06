@@ -70,3 +70,7 @@ To prevent this, you could attach the datepicker to a dedicated button next to t
 In HTML 5 exist date and time specific inputs, like `<input type="date">` or `<input type="time">`.
 
 While some browsers provide nice datepickers themselves for such inputs, this is not yet supported by some major browsers. So from an accessibility point of view: if you do not want to force some of your users to input dates manually, you are better off using an custom datepicker instead of these HTML 5 features (yet).
+
+## Additional notes
+
+- Schwerwiegendes Problem: während up/down den Screenreader triggert, den Inhalt des Eingabefelds anzukündigen, resultiert left/right in einem "blank". Siehe <https://github.com/nvaccess/nvda/issues/8325>.

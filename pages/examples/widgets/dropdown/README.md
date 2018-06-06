@@ -131,3 +131,10 @@ In our opinion, hovering events should only be used for purely visual purposes, 
 In our dropdown implementations, we use `<button>` elements to toggle dropdowns. In other implementations however, these are often implemented as `<a href="#"`>, `<a href="javascript:;">`, or similar, which is clearly less appropriate.
 
 While `<button>`s clearly indicate some interactivity, links suggest users to navigate somewhere. So changing an element's visibility is clearly a moment of interaction, not of navigation. And although in earlier days buttons could not be styled as well as links, this changed a lot recently, so there is no excuse anymore for mis-using links as buttons.
+
+## Additional notes
+
+Braucht man da noch eine eigene Seite "Menu widgets"?
+
+- Multi-purpose Link Problem (Nespresso): bei Hover soll Dropdown geöffnet werden, bei Click soll der Link geöffnet werden! Wie fixt man das am besten für Keyboard-only bzw. Screenreader?
+    - Screenreader senden bei Enter einen Click-Event! Gibt es weitere solche Oddities, die man wissen müsste?!

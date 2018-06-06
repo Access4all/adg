@@ -1,0 +1,17 @@
+.container
+  table
+    caption My Hobbies
+
+    thead
+      tr
+        th.name Name
+        th.description Description
+        th.resources Additional Resources
+
+    tbody
+      - (1..200).each do |i|
+        tr
+          th.name Hobby #{i}
+          td.description Description of hobby #{i}
+          td.resources
+            a href="https://en.wikipedia.org/wiki/hobby_#{i}" Wikipedia

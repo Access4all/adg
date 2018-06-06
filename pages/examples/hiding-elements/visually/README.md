@@ -47,3 +47,17 @@ The usage of this technique has some side effects for visual users:
 ## Further possibilities using ARIA
 
 Instead of moving elements out of the viewport, it is possible to replace or add text content specifically for screen readers using ARIA: [Labelling elements using aria-label and aria-labelledby](/examples/sensible-aria-usage/label-labelledby).
+
+## Additional notes
+
+### VoiceOver/iOS peculiarities
+
+TODO: Scheint unter VoiceOver/iOS "nicht in einem Zug" ausgegeben zu werden, so dass Texte auseinander geschnitten werden!
+
+[Example](_examples/hiding-elements-only-visually-ios-peculiarities)
+
+Im Zeilen-Lese-Modus wird es aber in einem Zug ausgegeben.
+
+Vielleicht besser, nicht zuviel zu trennen, und stattdessen zwei Info-Blöcke:
+
+[Example](_examples/hiding-elements-only-visually-ios-peculiarities-alternative)

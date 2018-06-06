@@ -1,0 +1,58 @@
+*:focus
+  outline: 2px dotted #000
+
+p
+  clear: left
+  
+  button
+    margin-top: 20px
+
+ol
+  padding: 0
+  
+  > li
+    float: left
+    list-style: none
+    position: relative
+    
+  a, button, span
+    display: block
+    border: 1px solid #000
+    color: #000
+    background-color: lightyellow
+    padding: 10px
+    width: 200px
+    box-sizing: border-box
+    text-decoration: none
+    
+  a, button
+    &:hover
+      text-decoration: underline
+    
+  span
+    font-style: italic
+    
+  button
+    font-size: inherit
+    font-family: inherit
+    text-align: inherit
+    height: 40px
+    
+    &:hover
+      cursor: pointer
+    
+    &[aria-expanded="true"]
+      + ol
+        position: absolute
+        
+        ol
+          a, span
+            padding-left: 40px
+        
+          ol
+            a, span
+              padding-left: 80px
+    
+    &[aria-expanded="false"]
+      + ol
+        display: none

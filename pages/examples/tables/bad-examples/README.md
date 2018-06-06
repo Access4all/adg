@@ -29,3 +29,7 @@ The table in the following example indeed has a header cell for each column (the
 [Example](_examples/generally-bad-table-with-only-horizontal-headers)
 
 This makes it hard to identify the current data row when navigating the table vertically.
+
+## Additional notes
+
+Empty cells are also a no-go!

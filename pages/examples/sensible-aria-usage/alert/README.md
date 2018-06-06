@@ -95,3 +95,16 @@ In our opinion, the only appropriate use for `role="alert"` is to announce a cha
 For example, when letting the user filter a list of elements using a text input. In this case, after the user typed a letter "T", the list is reduced to elements that contain a "T" in their name, and the screen reader would immediately alert "2 of 5 elements filtered".
 
 You can find an example for this here: [Autosuggest widget (or: autocomplete, lookahead, typeahead)](/examples/widgets/autosuggest).
+
+## Additional notes
+
+- Welche Technik funktioniert zuverlässig auf jeder wichtigen Combo? Ggf. auch Fallback auf `role="alert"` für ältere Systeme. Wer das nicht unterstützt muss als zu alt angesehen werden und wird bewusst nicht berücksichtigt.
+- JAWS scheint die System-Lang zu verwenden bei Live Regionen, egal in welcher Sprache die Seite ist! Das tönt ziemlich bescheuert...
+- Manchmal ist folgendes vielleicht eine Alternative: [Delivering Notifications to Screen Readers Through the Title](/examples/title/delivering-notifications-to-screen-readers-through-the-title)
+- Manchmal ist folgendes vielleicht eine Alternative: [Focus Handling](/examples/focus-handling)
+
+- Alerts vor Screenreadern im Browse-Mode zu verstecken ist schwierig, sie scheinen unterschiedlich auf `display:none` oder `hidden` Attribut zu reagieren.
+    - Am besten Alerts immer auch visuell anzeigen, z.B. bei Autocomplete oberhalb der Suggestions: "3 Vorschläge".
+        - Sie müssen auch immer entfernt werden, also am besten vor Anzeigen eines neuen Alerts die alten löschen (oder verstecken?)
+
+<https://medium.com/@matuzo/writing-javascript-with-accessibility-in-mind-a1f6a5f467b9> meint dass `role="status"` eine gute Sache ist. Aber wird das auch gut unterstützt von Screenreadern?! Besser als `role="alert"`? Der Artikel hat generell einige vielversprechende Links zu Alerts... Unbedingt durchschauen!

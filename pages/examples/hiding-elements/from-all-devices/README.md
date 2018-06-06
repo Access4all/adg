@@ -45,3 +45,23 @@ In addition, it makes obvious in the DOM already what elements are hidden, so it
 ## Note about ARIA references
 
 Elements hidden with the techniques shown on this page can still provide content when being referenced using `aria-labelledby` or `aria-describedby`. More info here: [Labelling elements using aria-label and aria-labelledby](/examples/sensible-aria-usage/label-labelledby).
+
+## Additional notes
+
+`display: none` wird ignoriert im Fokus Mode!
+
+```html
+<a href="...">
+  Google
+  <span style="display: none">sucks!</span>
+</a>
+```
+
+Im Browse Mode: "Google". Im Fokus Mode: "Google sucks!"
+
+Vielleicht sollte man noch etwas stärker darauf eingehen, dass es wenig "harte" Standards gibt bez. solcher Edge-Cases (allgemein: welche Infos mit welchen Sichtbarkeits-Stati werden im Focus-Mode wie berücksichtigt?), und dass Screenreader da ziemlich opinionated sind. Am besten all das einfach umgehen mit sauberem HTML, ohne ARIA, ohne zuviel Verstecken, etc.
+
+- Zeigen Element Liste auch Links an, die in `aria-hidden` sind?!
+    - Wie am besten vor Screenreadern Maps ausblenden bzw. warnen?! Skip Link darüber?
+
+Formular-Eingabefelder werden trotzdem geschickt, auch wenn sie per CSS versteckt sind! Und wie sieht es hier mit dem `hidden` Attribut aus?

@@ -75,3 +75,9 @@ There we are: here you have the perfectly accessible responsive table.
 Admittedly, this has become pretty complex now. But you can easily generate this automatically - even with some post-processing JavaScript.
 
 This solution will deliver a very good experience to all kinds of users. So in our opinion, it is totally worth the effort.
+
+## Additional notes
+
+Proof of Concept für SBB:
+
+[Example](_examples/responsive-sbb-timetable)

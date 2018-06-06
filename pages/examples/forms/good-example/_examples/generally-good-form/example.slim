@@ -1,0 +1,120 @@
+form
+  .control
+    label for="name" Full name 
+    input#name type="text" maxlength="20"
+    
+  .control
+    label for="biography" Biography 
+    textarea#biography
+    
+  .control
+    label for="planet" Planet 
+    input#planet readonly="" type="text" value="Earth"
+    
+  .control
+    label for="coupon" Coupon 
+    input#coupon disabled="" type="text" value="Not available"
+    
+  .control
+    label for="image" Image 
+    input#image type="file"
+    
+  fieldset
+    legend Gender
+    
+    .control
+      input#gender_male name="gender" type="radio"
+      label for="gender_male" Male
+      
+    .control
+      input#gender_female name="gender" type="radio"
+      label for="gender_female" Female
+      
+  fieldset
+    legend Hobbies
+    
+    .control
+      input#hobbies_hiking type="checkbox"
+      label for="hobbies_hiking" Hiking
+      
+    .control
+      input#hobbies_dancing type="checkbox"
+      label for="hobbies_dancing" Dancing
+      
+    .control
+      input#hobbies_gardening type="checkbox"
+      label for="hobbies_gardening" Gardening
+      
+  .control
+    label for="age_group" Age Group
+    select#age_group
+      option 0 to 9 Years
+      option 10 to 19 Years
+      option 20 to 29 Years
+      option 30 to 39 Years
+      option 40 to 49 Years
+      option 50 to 59 Years
+      option 60 to 69 Years
+      option 70 to 79 Years
+      option 80 to 89 Years
+      option 90 to 99 Years
+      
+  .control
+    label for="idol" Idol
+    select#idol size="2"
+      option Michael Jackson
+      option Jesus
+      option Mahatma Gandhi
+      option John Doe
+      
+  .control
+    label for="interests" Interests
+    select#interests multiple=""
+      option Readings
+      option Cinemas
+      option Theaters
+      option Operas
+      option Concerts
+      
+  .control
+    label for="favourite_car" Favourite Car
+    select#favourite_car
+      optgroup label="Swedish Cars"
+        option Volvo
+        option Saab
+      optgroup label="German Cars"
+        option Mercedes
+        option Audi
+        
+  .control
+    label for="my_bike" Favourite Dish
+    select#my_bike size="2"
+      optgroup label="Vegetarian"
+        option Green Salad
+        option French Fries
+      optgroup label="Carnivorous"
+        option Big Mac
+        option Roast Beef
+        
+  .control
+    label for="public_transports" Public transports
+    select#public_transports multiple=""
+      optgroup label="Ground"
+        option Train
+        option Bus
+      optgroup label="Water"
+        option Ship
+        option Submarine
+      optgroup label="Air"
+        option Plane
+        option Cable Car
+
+  .control
+    input#accept_agbs type="checkbox" 
+    label for="accept_agbs" I accept the terms and conditions
+
+  .control
+    button type="submit" Register
+
+  .control
+    button disabled="" Cancel

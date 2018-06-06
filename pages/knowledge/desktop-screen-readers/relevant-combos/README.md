@@ -84,3 +84,8 @@ As it is not feasible to test dozens of possible software versions, we follow a 
 In closed environments, where a web application is only exposed to a deterministic group of users, requirements different to the ones outlined above may be feasible.
 
 For example, in a bank, every user may have the same workstation available with default software and configuration; this could be NVDA screen reader and Firefox browser. Alas, for the intranet website of the bank (which is exclusively available from those workstations), only this specific combination needs to be supported.
+
+## Additional notes
+
+- Es ist mir unklar, inwiefern hier mit VoiceOver die macOS oder die iOS Version gemeint ist
+- Es ist mir unklar, ob unterschiedliche Software-Versionen auch irgendwo gelistet sind! JAWS 15 und 18 sind z.B. nicht gleich zu behandeln!

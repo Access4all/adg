@@ -106,3 +106,17 @@ When users reach a page, they typically start reading it from top to bottom usin
     - If entering data into a form, usually the user expects more form elements to come until a submit button is reached at the end of the process.
 - Or they switch back to browse mode by pressing `Esc` and read on using `Down` key.
     - This usually is only necessary if a form isn't structured well (if you are really curious and want to learn more about this, skip ahead and read [Forms](/examples/forms)).
+
+## Additional notes
+
+Browse vs. Focus/Forms vs. Application Mode
+
+*Radiobuttons and checkboxes - form controls that don't trigger forms mode!** - Beispielhaft aufzeigen, dass Radiobuttons sich unterschiedlich verhalten, je nachdem ob man im Focus Mode auf sie trifft oder nicht (up/down zum Wählen eines Werts klappt nur im Focus Mode, so herausgefunden bei Nespresso) => vor allem seltsam, dass z.B. ein Link vor einem Radiobutton den Focus Mode aufhebt, obwohl man sich eigentlich in einem Formular befindet!
+
+Ähnliches Thema: [Why do radio buttons trigger focus mode, but checkboxes don't?](https://github.com/nvaccess/nvda/issues/7578)
+
+Browse-Mode nur verfügbar in `role="document"`, aber nicht in `role="dialog"`!
+
+NVDA assoziiert `<th>` mit bspw. Formular-Elementen, JAWS nicht. Beispiel: einzelne Buttons oder Radio-Buttons in einer Tabelle. Könnte man mit zusätzlichem `aria-describedby` fixen?!
+
+Virtual Buffer Konzept soll ersetzt werden! <https://www.marcozehe.de/2017/09/29/rethinking-web-accessibility-on-windows/> Gutes Beispiel, wo das Problem liegt, ist das Suchen mit der Browser-Suche mit Screenreadern: der Lese-Fokus des Screenreaders wird nicht gesetzt (glaub ich auf jeden Fall)!

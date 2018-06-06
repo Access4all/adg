@@ -1,0 +1,170 @@
+*
+  font-family: arial
+
+@mixin visually-hidden
+  position: absolute
+  width: 1px
+  height: 1px
+  left: -1000px
+  overflow: hidden
+
+.visually-hidden
+  @include visually-hidden
+
+table
+  width: 100%
+  border-collapse: collapse
+  
+caption
+  .from-to,
+  .details
+    display: inline-block
+    width: 100%
+    
+tr
+  background-color: #F5F5F5
+  border-bottom: 2px solid white
+  
+th, td
+  text-align: left
+  padding: 4px 8px
+
+.first-line,
+.second-line
+  display: inline-block
+  width: 100%
+
+.connection-type
+  display: inline-block
+  background-color: blue
+  border-radius: 2px
+  width: 20px
+  height: 20px
+  margin-right: 3px
+
+.train-type
+  display: inline-block
+  background-color: red
+  border-radius: 2px
+  width: 50px
+  height: 20px
+  margin-right: 10px
+
+.train-direction
+  display: inline-block
+  font-size: 0.8em
+  font-weight: normal
+
+.pearl-chain-start,
+.pearl-chain-stop
+  display: inline-block
+  width: 10px
+  height: 10px
+  background-color: black
+  border-radius: 5px
+  margin-bottom: 1px
+
+.pearl-chain-start
+  margin-left: 10px
+
+.pearl-chain-stop
+  margin-right: 10px
+
+.pearl-chain-line
+  display: inline-block
+  background-color: #000
+  width: 40px
+  height: 2px
+  margin: 0 1px 5px 1px
+
+.high,
+.low
+  display: inline-block
+  width: 20px
+  height: 20px
+
+.high
+  background-color: red
+
+.low
+  background-color: gray
+
+.platform-header
+  display: none
+  
+.wheelchair
+  display: inline-block
+  width: 20px
+  height: 20px
+  background-color: lightgreen
+
+td.options
+  overflow: hidden
+  
+.ticketshop
+  float: left
+  padding: 10px 20px
+  background-color: red
+  color: white
+  border: 0
+
+.expand
+  float: right
+  padding: 10px 14px
+  background-color: gray
+  color: white
+  border: 0
+  margin-left: 20px
+
+@media (max-width: 1024px)
+  table, caption, thead, tbody, tr, th, td
+    display: block
+    
+  thead
+    @include visually-hidden
+    
+  tr
+    position: relative
+    
+    &:not(.extended_details)
+      height: 80px
+    
+  .pearl-chain-line
+    width: 300px
+    
+  .change
+    @include visually-hidden
+    
+  .platform
+    position: absolute
+    top: 57px
+    font-size: 0.8em
+    
+  .platform-header
+    display: initial
+    
+  .duration
+    position: absolute
+    left: 80px
+    top: 55px
+    
+  .occupancy
+    position: absolute
+    left: 298px
+    
+  .wheelchair
+    position: absolute
+    left: 406px
+    top: 4px
+    
+  .options
+    position: absolute
+    top: 0
+    right: 0
+    
+  .ticketshop
+    padding: 20px 24px
+    
+    .label
+      @include visually-hidden
+    

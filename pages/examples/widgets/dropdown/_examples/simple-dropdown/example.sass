@@ -1,0 +1,48 @@
+*:focus
+  outline: 2px dotted #000
+
+p
+  clear: left
+  
+  button
+    margin-top: 20px
+
+ol
+  padding: 1px
+  width: 100%
+  
+  > li
+    float: left
+    list-style: none
+    position: relative
+    
+  a, button
+    display: block
+    border: 1px solid #000
+    color: #000
+    background-color: lightyellow
+    padding: 10px
+    width: 200px
+    box-sizing: border-box
+    text-decoration: none
+    
+    &:hover
+      text-decoration: underline
+    
+  button
+    font-size: inherit
+    font-family: inherit
+    text-align: inherit
+    height: 40px
+    
+    &:hover
+      cursor: pointer
+    
+  button
+    &[aria-expanded="true"]
+      + ol
+        position: absolute
+    
+    &[aria-expanded="false"]
+      + ol
+        display: none
