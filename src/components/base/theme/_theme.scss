@@ -15,21 +15,28 @@
 }
 
 .theme-welcome {
+  --theme-color-dark: $theme-1-dark;
+  --theme-color-light: $theme-1-light;
+}
+
+.theme-introduction {
+//  --theme-color-dark: $theme-1-dark;
+//  --theme-color-light: $theme-1-light;
   --theme-color-dark: $theme-0-dark;
   --theme-color-light: $theme-0-light;
 }
 
 .theme-setup {
-  --theme-color-dark: $theme-1-dark;
-  --theme-color-light: $theme-1-light;
-}
-
-.theme-knowledge {
   --theme-color-dark: $theme-2-dark;
   --theme-color-light: $theme-2-light;
 }
 
-.theme-examples {
+.theme-knowledge {
   --theme-color-dark: $theme-3-dark;
   --theme-color-light: $theme-3-light;
+}
+
+.theme-examples {
+  --theme-color-dark: $theme-4-dark;
+  --theme-color-light: $theme-4-light;
 }
