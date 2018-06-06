@@ -1,10 +1,11 @@
 .footer {
-  padding: $gutter 60px;
 }
 
 .footer--inner {
   @include l-site_width;
   @include clearfix;
+  margin-top: $gutter;
+  margin-bottom: $gutter;
 }
 .footer--left {
   float: left;

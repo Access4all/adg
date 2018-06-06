@@ -1,4 +1,6 @@
 .prev_next {
+
+  @include l-site_width;
   @include rem(margin-top, 4 * $gutter);
 
   li {

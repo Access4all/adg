@@ -1,14 +1,8 @@
+
 .logo {
-  margin-left: 20px;
-	float: left;
+  margin-left: ($navWidthMin - $logo_width) / 2;
 	text-decoration: none;
   overflow: hidden;
-
-  img {
-    float: left;
-    padding: 10px;
-  }
-
   &:hover {
     color: var(--theme-color-dark);
   }
@@ -16,4 +10,20 @@
   &:focus {
     outline: 2px dotted var(--theme-color-dark);
   }
+  .logo-title,
+  .logo-img {
+    vertical-align: middle;
+  }
+  .logo-img {
+    display: inline-block;
+  }
+}
+
+.logo-title {
+  display: none; // bring back on menu open
+  @include font-xxs;
+  line-height: 1.05;
+  text-transform: uppercase;
+  width: 0;
+  padding-left: .5em;
 }
