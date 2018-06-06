@@ -2,20 +2,16 @@
 title: "Page with additional page regions, with headings"
 compatibility:
   Keyboard only:
-    status: ??
-    date: 2018-??-??
+    status: pass
+    date: 2018-04-09
   NVDA:
     2018.1 + FF Quantum 59.0.2:
-      status: ??
-      date: 2018-??-??
-  JAWS:
-    2019.1 + FF 63.7.3:
-      status: ??
-      date: 2019-??-??
+      status: pass
+      date: 2018-04-09
     2018.3 + IE 11:
-      status: ??
-      date: 2018-??-??
+      status: pass
+      date: 2018-04-05
     2018.3 + FF ESR 52.7.3:
-      status: ??
-      date: 2018-??-??
+      status: pass
+      date: 2018-04-09
 ---
