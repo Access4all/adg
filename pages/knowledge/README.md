@@ -28,7 +28,7 @@ Finally, in [Introduction to desktop screen reader usage](/knowledge/desktop-scr
 
 First of all, before you continue reading, be sure you have gone through the previous parts already:
 
-- [Welcome to this guide](/welcome)
+- [Introduction to this guide](/intro)
 - [Setup of the accessibility environment](/setup)
 
 We recommend reading all chapters of the current part thoroughly without exception, even when you may feel like you are knowing certain topics inside out. Accessibility is a topic full of misunderstandings, half-truths, and technical peculiarities. Our guide aims to provide fool-proof knowledge that should finally give answers to the most relevant questions.

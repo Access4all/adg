@@ -29,7 +29,7 @@ Finally, [Accessibility helper tools](/setup/helper-tools) presents a few more t
 
 ## How to go through this part
 
-First of all, before you continue reading, be sure you have gone through the previous part already: [Welcome to this guide](/welcome).
+First of all, before you continue reading, be sure you have gone through the previous part already: [Introduction to this guide](/intro).
 
 Not everyone reading this guide may be involved as deeply in accessibility as the typical frontend developer. And thus, not everyone may have the same setup requirements.
 
