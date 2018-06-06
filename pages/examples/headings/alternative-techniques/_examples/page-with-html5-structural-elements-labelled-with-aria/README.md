@@ -14,6 +14,6 @@ compatibility:
       date: 2018-04-05
     2018.3 + FF ESR 52.7.3:
       status: pass
-      date: 2018-04-05
-  Comments: ""
+      date: 2018-04-09
+Comments: "strictly passes WCAG, but don't do it!" 
 ---
