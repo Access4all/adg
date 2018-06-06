@@ -12,10 +12,7 @@ body {
 }
 
 .accordion {
-  border: 1px solid black;
-  padding: 10px;
   margin-bottom: 20px;
-  background-color: #cff7cf;
 }
 
 .control h2 {
@@ -26,12 +23,21 @@ body {
   border: 1px solid black;
   margin: 0 0 -1px 0;
   padding: 4px 10px;
-  background-color: lightgray;
+  background-color: lightyellow;
+}
+.control label::before {
+  content: "+";
+  display: inline-block;
+  width: 0.75em;
+  font-weight: normal;
 }
 
-input[type="checkbox"]:checked + label {
-  background-color: #fff;
-  border-bottom-color: #fff;
+input[type="checkbox"]:checked + h2 label {
+  border-bottom-color: lightyellow;
+  position: relative;
+}
+input[type="checkbox"]:checked + h2 label::before {
+  content: "-";
 }
 
 a:focus,
@@ -43,10 +49,11 @@ input[type="checkbox"]:focus + h2 label {
 
 input[type="checkbox"] + h2 label:hover {
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .panel {
   border: 1px solid;
-  background-color: white;
+  background-color: lightyellow;
   padding: 0 0 0 10px;
 }

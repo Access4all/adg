@@ -30,7 +30,7 @@ As the controls are surrounded with a `<form>` tag, the form can be submitted wi
 
 In the example, all attributes irrelevant for demonstration purposes (for example `name`) are omitted.
 
-[Generally good form (example) ![Preview](_examples/generally-good-form/_example.png)](_examples/generally-good-form)
+[Example](_examples/generally-good-form)
 
 Navigate the example using `Tab` and notice how the screen reader announces all relevant information about the current form control.
 
@@ -60,7 +60,7 @@ This may be counter-intuitive, because it doesn't have anything to do with an au
 
 ![Google autosuggest](_media/google-autosuggest.png)
 
-If you are really curious and want to learn more about this, skip ahead and read [Autosuggest widget (or: autocomplete, lookahead, typeahead)](/pages/examples/widgets/autosuggest).
+If you are really curious and want to learn more about this, skip ahead and read [Autosuggest widget (or: autocomplete, lookahead, typeahead)](/examples/widgets/autosuggest).
 
 #### Missing announcements
 
@@ -80,7 +80,7 @@ This seems to be a bug in Firefox, see: [Input type="file" is only read as "brow
 
 ### Checkboxes don't trigger focus mode
 
-You may have noticed that NVDA doesn't activate focus mode when focusing a checkbox using the `Tab` key. As each and every other form control activates focus mode upon focus, this may feel irritating (if you haven't done this yet, go back and read [Screen readers' browse and focus modes](/pages/knowledge/desktop-screen-readers/browse-focus-modes)).
+You may have noticed that NVDA doesn't activate focus mode when focusing a checkbox using the `Tab` key. As each and every other form control activates focus mode upon focus, this may feel irritating (if you haven't done this yet, go back and read [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes)).
 
 More info here: [Why do radio buttons trigger focus mode, but checkboxes don't? (GitHub.com)](https://github.com/nvaccess/nvda/issues/7578).
 
@@ -106,14 +106,14 @@ Generally speaking, disabling inputs is seldom what you want. You should use `re
 
 As already pointed out, in our example, we have one separated `<label>` for each form control and associate those pairs using the `for` attribute.
 
-But HTML also the `<label>` to surround the form control, removing the need for a `for` attribute. But this approach can lead to problems in some situations, so we don't recommend to do it (if you are really curious and want to learn more about this, skip ahead and read [Placing non-interactive content between form controls](/pages/examples/forms/non-interactive-content)).
+But HTML also the `<label>` to surround the form control, removing the need for a `for` attribute. But this approach can lead to problems in some situations, so we don't recommend to do it (if you are really curious and want to learn more about this, skip ahead and read [Placing non-interactive content between form controls](/examples/forms/non-interactive-content)).
 
 ## Conclusion
 
 All in all, basic forms are very accessible by themselves.
 
-However, although basic forms are a longstanding and fundamental part of the HTML standard, in some situations, screen readers (both NVDA and JAWS) behave a bit irritating, if not buggy (if you haven't done this yet, go back and read [How screen readers work - and why they seem so buggy](/pages/knowledge/desktop-screen-readers/so-buggy)).
+However, although basic forms are a longstanding and fundamental part of the HTML standard, in some situations, screen readers (both NVDA and JAWS) behave a bit irritating, if not buggy (if you haven't done this yet, go back and read [How screen readers work - and why they seem so buggy](/knowledge/desktop-screen-readers/so-buggy)).
 
 Here we presented some of the possible irritations we know and how to avoid them. But there may be more, especially in complex forms. This can make it hard for developers testing their solution for accessibility to decide whether their solution is "good enough", or whether they manually need to provide additional optimisations.
 
-Generally speaking: if your forms are coded according to long established HTML standards, you should be fine most of the time. Still, it can be meaningful (or even essential) in some situations to add a little more guidance, especially for screen reader users (if you are really curious and want to learn more about this, skip ahead and read [Placing non-interactive content between form controls](/pages/examples/forms/non-interactive-content)).
+Generally speaking: if your forms are coded according to long established HTML standards, you should be fine most of the time. Still, it can be meaningful (or even essential) in some situations to add a little more guidance, especially for screen reader users (if you are really curious and want to learn more about this, skip ahead and read [Placing non-interactive content between form controls](/examples/forms/non-interactive-content)).

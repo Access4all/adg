@@ -1,7 +1,7 @@
 ---
 navigation_title: "NVDA"
 position: 1
-changed: "2018-04-06"
+changed: "2018-05-30"
 ---
 
 # NVDA installation and configuration
@@ -46,7 +46,7 @@ By clicking on the icon, the NVDA menu is displayed.
 
 ![The NVDA menu](_media/the-nvda-menu.png)
 
-Alternatively, you can press `NVDA + N` to display it. By default, the `NVDA` key is the `Insert` key (if you are really curious and want to learn more about this, skip ahead and read [Screen readers are keyboard shortcut monsters](/pages/knowledge/desktop-screen-readers/shortcut-monsters)).
+Alternatively, you can press `NVDA + N` to display it. By default, the `NVDA` key is the `Insert` key (if you are really curious and want to learn more about this, skip ahead and read [Screen readers are keyboard shortcut monsters](/knowledge/desktop-screen-readers/shortcut-monsters)).
 
 The best way to use the NVDA menu is by keyboard:
 
@@ -84,6 +84,8 @@ We highly recommend to have the speech viewer always open while using NVDA. Plac
 ![Perfect layout of browser and speech viewer](_media/perfect-layout-of-browser-and-speech-viewer.png)
 
 ## Configuration
+
+Screen readers in general offer tons of configuration options which can drastically influence their behaviour. In general, we advise to stick to the defaults. The following configuration suggestions are known to be useful and safe though.
 
 ### Disabling mouse focus
 
@@ -154,7 +156,7 @@ There are several indications:
 - A red border is painted around the element where the focus cursor currently is.
     - The red border turns into blue when the element is being interacted with.
 
-If you are really curious and want to learn more about these different cursor types, skip ahead and read [Screen readers' browse and focus modes](/pages/knowledge/desktop-screen-readers/browse-focus-modes).
+If you are really curious and want to learn more about these different cursor types, skip ahead and read [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes).
 
 [Download FocusHighlight add-on](http://addons.nvda-project.org/addons/focusHighlight.en.html) (stable version) and install it!
 

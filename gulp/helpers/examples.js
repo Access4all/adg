@@ -6,10 +6,15 @@ const _ = require('lodash')
 
 const getFile = (files, type, dir) => {
   const match = files.find(file => path.extname(file) === `.${type}`)
+
+  if (type === 'png') {
+    return match ? path.join(dir, match) : ''
+  }
+
   const content = match ? fs.readFileSync(path.join(dir, match)).toString() : ''
 
-  if (type === 'details') {
-    return frontMatter(content).attributes
+  if (type === 'json') {
+    return JSON.parse(content)
   }
 
   return content
@@ -19,7 +24,8 @@ const getCode = dir => {
   const files = fs.readdirSync(dir)
 
   return {
-    details: {}, // TODO: Add reasonable details
+    details: getFile(files, 'json', dir),
+    preview: getFile(files, 'png', dir),
     html: getFile(files, 'html', dir),
     css: getFile(files, 'css', dir),
     js: getFile(files, 'js', dir)
@@ -41,7 +47,7 @@ const getTitle = href => {
 
 const getCodePenForm = (code, title) => {
   const config = {
-    title: title,
+    title: code.details.title,
 
     // description: code.details.description,
     html: code.html,
@@ -71,7 +77,7 @@ const getCodePenForm = (code, title) => {
   </form>`
 }
 
-const getExample = (title, examplePath, filePath) => {
+const getExample = (examplePath, filePath) => {
   const relExamplePath = path.relative(examplePath, filePath)
   const code = getCode(examplePath)
   const id = _.uniqueId('example-')
@@ -89,13 +95,16 @@ const getExample = (title, examplePath, filePath) => {
     }</code></pre></div>`
   })
 
-  const codePenForm = getCodePenForm(code, title)
+  const codePenForm = getCodePenForm(code)
 
-  return `
+  return {
+    form: `
   ${codePenForm}
   <div class="accordion"><div class="controls">${btns.join(
     ''
-  )}</div><div class="panels">${blocks.join('')}</div></div>`
+  )}</div><div class="panels">${blocks.join('')}</div></div>`,
+    code
+  }
 }
 
 const getLink = token => {

@@ -24,7 +24,7 @@ Screen reader tests are considered the "litmus tests" in the development of acce
 
 So to say, if a website can be read and operated by a screen reader, it can be considered pretty accessible. Screen reader compliant websites comply with a lot of requirements that are not only important to blind people, but also to many other groups of people with special needs.
 
-In addition, while modern web browsers are pretty forgiving with malformed website code, screen readers tend to expose such weaknesses like invalid syntax or missing/wrong semantics pitilessly (if you haven't done this yet, go back and read [Semantics provide meaning](/pages/knowledge/semantics/meaning)). So they are a good tool to test the overall quality and validity of the code.
+In addition, while modern web browsers are pretty forgiving with malformed website code, screen readers tend to expose such weaknesses like invalid syntax or missing/wrong semantics pitilessly (if you haven't done this yet, go back and read [Semantics provide meaning](/knowledge/semantics/meaning)). So they are a good tool to test the overall quality and validity of the code.
 
 Still, there are a few areas that can't be validated with screen readers and thus need some special attention on their own (use of colour, contrasts, some audio and video requirements, just to name a few).
 

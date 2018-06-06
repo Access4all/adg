@@ -12,7 +12,7 @@ Take a look at the following data table example showing a week schedule. It grou
 
 Navigate the table with a screen reader using table navigation. Do you notice any possible problems?
 
-[Table spanning multiple rows and columns (example) ![Preview](_examples/table-spanning-multiple-rows-and-columns/_example.png)](_examples/table-spanning-multiple-rows-and-columns)
+[Example](_examples/table-spanning-multiple-rows-and-columns)
 
 Well, most of the table is announced very well by the screen reader. But as soon as cells span multiple rows or columns, it is getting a bit tricky - if not to say: confusing.
 

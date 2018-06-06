@@ -34,7 +34,7 @@ In screen reader talk, these elements usually are called landmarks. Theoreticall
 
 For example, after loading a page, JAWS automatically announces how many regions there are available. And while browsing the page, entering and leaving a landmark is automatically announced, too.
 
-[Page with HTML5 structural elements (example) ![Preview](_examples/page-with-html5-structural-elements/_example.png)](_examples/page-with-html5-structural-elements)
+[Example](_examples/page-with-html5-structural-elements)
 
 In addition to this, many screen readers offer special features for displaying structural elements:
 
@@ -55,7 +55,7 @@ The more complex a website is, the more regions it probably has. So if you think
 
 For labelling such a region, you can use ARIA labels.
 
-[Page with HTML5 structural elements, labelled with ARIA (example) ![Preview](_examples/page-with-html5-structural-elements-labelled-with-aria/_example.png)](_examples/page-with-html5-structural-elements-labelled-with-aria)
+[Example](_examples/page-with-html5-structural-elements-labelled-with-aria)
 
 Screen readers now can display the given label in their landmarks outline.
 
@@ -73,15 +73,15 @@ Another annoyance is that not all screen readers announce these elements consist
 
 ### Verdict: use plain old heading outlines
 
-Using the document outline traditionally is the preferred navigation method by most screen reader users. So we highly suggest to always use traditional headings everywhere on your website, as seen here: [Adding visually hidden headings to complete a page's outline](/pages/examples/headings/visually-hidden-headings).
+Using the document outline traditionally is the preferred navigation method by most screen reader users. So we highly suggest to always use traditional headings everywhere on your website, as seen here: [Adding visually hidden headings to complete a page's outline](/examples/headings/visually-hidden-headings).
 
-Besides that, using ARIA to enhance semantics is bad practice anyway, see [Bad ARIA practices](/pages/knowledge/aria/bad-practices).
+Besides that, using ARIA to enhance semantics is bad practice anyway, see [Bad ARIA practices](/knowledge/aria/bad-practices).
 
 #### Even better with landmarks
 
 Having HTML5 structural elements on the page is always a good thing, too. So a combination of both headings and landmarks is perfect:
 
-[Page with HTML5 structural elements and visually hidden headings (example) ![Preview](_examples/page-with-html5-structural-elements-and-visually-hidden-headings/_example.png)](_examples/page-with-html5-structural-elements-and-visually-hidden-headings)
+[Example](_examples/page-with-html5-structural-elements-and-visually-hidden-headings)
 
 By following this approach, screen reader users can use both heading navigation and landmarks navigation according to their preferences.
 
@@ -95,7 +95,7 @@ Sadly though, this leads to another case of non-unique landmarks.
 
 To fix the problem, you could describe them with their respective headings using ARIA.
 
-[Page with HTML5 structural elements, labelled with ARIA, and visually hidden headings (example) ![Preview](_examples/page-with-html5-structural-elements-labelled-with-aria-and-visually-hidden-headings/_example.png)](_examples/page-with-html5-structural-elements-labelled-with-aria-and-visually-hidden-headings)
+[Example](_examples/page-with-html5-structural-elements-labelled-with-aria-and-visually-hidden-headings)
 
 This doesn't deliver a much better experience to screen reader users though. It may even feel a bit redundant when reading the page (as both the ARIA label and the referenced heading are announced individually, although they are the same thing).
 

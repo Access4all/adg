@@ -62,7 +62,7 @@ $(".tablist [data-target]").click(function() {
 </div>
 ```
 
-But simply presenting something visually is not enough for screen readers (if you are really curious and want to learn more about this, skip ahead and read [Screen readers don't convey visual attributes](/pages/knowledge/desktop-screen-readers/no-visual-attributes)). For example, although the currently active tabitem can be distinguished visually using `class="active"` and some CSS styling, screen readers will not know which tabitem in fact is the active one. Proper semantical information is missing.
+But simply presenting something visually is not enough for screen readers (if you are really curious and want to learn more about this, skip ahead and read [Screen readers don't convey visual attributes](/knowledge/desktop-screen-readers/no-visual-attributes)). For example, although the currently active tabitem can be distinguished visually using `class="active"` and some CSS styling, screen readers will not know which tabitem in fact is the active one. Proper semantical information is missing.
 
 ## ARIA to the rescue (?)
 
@@ -122,7 +122,7 @@ Admitted, a tablist is a rather easy user interface pattern, so it is not too ha
 
 #### Varying support
 
-To make things even trickier, ARIA support among browsers and screen readers varies a lot. While some may support an autocomplete or tablist pattern, others may not. And even those claiming to support a pattern are prone to being buggy. This is particularly true regarding ARIA roles: as soon as the `role` attribute is used, unexpected things may happen (if you are really curious and want to learn more about this, skip ahead and read [How screen readers work - and why they seem so buggy](/pages/knowledge/desktop-screen-readers/so-buggy)).
+To make things even trickier, ARIA support among browsers and screen readers varies a lot. While some may support an autocomplete or tablist pattern, others may not. And even those claiming to support a pattern are prone to being buggy. This is particularly true regarding ARIA roles: as soon as the `role` attribute is used, unexpected things may happen (if you are really curious and want to learn more about this, skip ahead and read [How screen readers work - and why they seem so buggy](/knowledge/desktop-screen-readers/so-buggy)).
 
 As such, there are extremely few truly working examples of ARIA widgets available on the web. And those few ones usually need a lot of complex code to work around known problems.
 
@@ -130,11 +130,11 @@ As such, there are extremely few truly working examples of ARIA widgets availabl
 
 Besides bugs and many unsupported features, the ARIA specification also often is not strictly black or white, leaving it up to the manufacturers of browsers and screen readers to decide how certain functionalities should behave.
 
-So screen reader behaviour varies a lot regarding ARIA, especially regarding differences between browse and focus modes (if you haven't done this yet, go back and read [Screen readers' browse and focus modes](/pages/knowledge/desktop-screen-readers/browse-focus-modes)).
+So screen reader behaviour varies a lot regarding ARIA, especially regarding differences between browse and focus modes (if you haven't done this yet, go back and read [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes)).
 
-For example, while all screen readers announce content associated using `aria-describedby` in focus mode, some ignore it in browse mode. And while some screen readers announce the associated content right away, others leave it up to the user whether they want to hear it (by pressing a keyboard shortcut). If you are really curious and want to learn more about this, skip forward and read [Adding descriptions to elements using aria-describedby](/pages/examples/sensible-aria-usage/describedby).
+For example, while all screen readers announce content associated using `aria-describedby` in focus mode, some ignore it in browse mode. And while some screen readers announce the associated content right away, others leave it up to the user whether they want to hear it (by pressing a keyboard shortcut). If you are really curious and want to learn more about this, skip forward and read [Adding descriptions to elements using aria-describedby](/examples/sensible-aria-usage/describedby).
 
-Another example is `aria-hidden`. Its specification promises to hide elements from screen readers. The first surprise is that `aria-hidden` simply does not work on focusable elements in most browsers. The next surprise is that `aria-hidden` does not have any effect on elements that are referenced using `aria-describedby`. If you are really curious and want to learn more about this, skip forward and read [Hiding elements from screen readers using aria-hidden](/pages/examples/sensible-aria-usage/hidden).
+Another example is `aria-hidden`. Its specification promises to hide elements from screen readers. The first surprise is that `aria-hidden` simply does not work on focusable elements in most browsers. The next surprise is that `aria-hidden` does not have any effect on elements that are referenced using `aria-describedby`. If you are really curious and want to learn more about this, skip forward and read [Hiding elements from screen readers using aria-hidden](/examples/sensible-aria-usage/hidden).
 
 All this is not because of varying support degrees among modern screen readers or browsers (all of them claim to fully support `aria-describedby` and `aria-hidden`), but because of non-homogenous behaviour caused by the manufacturers' different opinions.
 
@@ -148,4 +148,4 @@ Aside from the `role` attribute (which you should try to avoid in most cases), a
 
 In our guide, we stick to traditional HTML solutions wherever possible to avoid shaky ARIA ground. And if we do suggest ARIA once in a while, you can be confident that it is based on years of experience, so the proposed solution is known to work and has stood the test of time.
 
-And regarding widgets: instead of using complex ARIA semantics and developing all interactivity on one's own, once again, the usage of traditional HTML helps in creating even complex interactive usage patterns. So if you haven't done this yet, go back and read [Widgets simply working for all](/pages/knowledge/semantics/widgets).
+And regarding widgets: instead of using complex ARIA semantics and developing all interactivity on one's own, once again, the usage of traditional HTML helps in creating even complex interactive usage patterns. So if you haven't done this yet, go back and read [Widgets simply working for all](/knowledge/semantics/widgets).

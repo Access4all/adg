@@ -1,0 +1,70 @@
+@charset "UTF-8";
+.adg-visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+[data-adg-autosuggest-options] {
+  position: absolute;
+  z-index: 1;
+  background-color: lightyellow;
+  border: 1px solid;
+  padding: 5px 0;
+}
+
+[data-adg-autosuggest-option] {
+  display: block;
+}
+
+[data-adg-autosuggest-option]:hover,
+[data-adg-autosuggest-option-selected] {
+  cursor: pointer;
+  background-color: #000;
+  color: lightyellow;
+}
+
+[data-adg-autosuggest-alerts] p {
+  margin: 0;
+}
+[data-adg-autosuggest-alerts] kbd::before {
+  content: "«";
+}
+[data-adg-autosuggest-alerts] kbd::after {
+  content: "»";
+}
+
+.control {
+  margin: 6px 0;
+}
+
+input[type="text"] {
+  width: 140px;
+}
+
+label {
+  display: inline-block;
+  width: 120px;
+  vertical-align: top;
+}
+
+.description {
+  margin-left: 120px;
+}
+
+fieldset {
+  margin: -1px 0 0 120px;
+}
+fieldset .control {
+  margin: 0;
+}
+fieldset label {
+  min-width: 144px;
+}

@@ -1,7 +1,7 @@
 ---
 navigation_title: "Browse & focus modes"
 position: 5
-changed: "2018-05-01"
+changed: "2018-05-30"
 ---
 
 # Screen readers' browse and focus modes
@@ -35,7 +35,8 @@ This mode - where keystrokes aren't intercepted but sent directly to the active 
 
 - When the screen reader's cursor is on an editable element, it allows to switch to focus mode using the `Enter` key.
     - When focus mode is active, a "beep" sound is played.
-    - By pressing `Esc`, focus mode can be left (announced by a different sound) and browse mode is active again.
+    - By pressing `Esc`, focus mode can be left (announced by a different "beep" sound) and browse mode is active again.
+    - Notice: JAWS behaves a little different in this respect because of its "Auto Forms Mode", see below for more details.
 - If you use the `Tab` key to jump from focusable element to focusable element, focus mode is activated automatically when appropriate:
     - For elements allowing only basic interaction (for example links, buttons, and checkboxes), focus mode isn't activated.
         - Basic interaction means that only the `Enter` or `Space` key triggers some interaction.
@@ -44,15 +45,29 @@ This mode - where keystrokes aren't intercepted but sent directly to the active 
 
 Notice: in other resources, focus mode may sometimes also be called "forms" or "interaction" mode.
 
+### JAWS' auto forms mode
+
+When browsing line by line (using `Up` and `Down` keys), NVDA's default settings require the user to manually switch to focus mode (as explained above).
+
+JAWS by default has a special setting called "Auto Forms Mode": it tries to automatically switch between browse and focus mode whenever appropriate. For example:
+
+- When reaching a text input by pressing the `Down` key, JAWS automatically switches to focus mode (indicated by a "beep" sound).
+- Pressing the `Down` key once again will now move the text input's cursor to the end of the input's value (if there is a value).
+- If then the `Down` key is pressed again, this will lead JAWS to leave the text input and switch back to browse mode (indicated by a different "beep" sound).
+
+This seems like a minor detail, but this behaviour indicates clearly that even in focus mode screen readers may intercept some keys. This can be relevant if you bind custom JavaScript behaviour to such keys (if you are really curious and want to learn more about this, skip forward and read [Autosuggest widget (or: autocomplete, lookahead, typeahead)](/examples/widgets/autosuggest)).
+
+If you want to disable "Auto Forms Mode", read [JAWS installation and configuration](/setup/screen-readers/jaws).
+
 ### Associated information
 
 In contrast to browse mode, when in focus mode, screen readers do not only announce the element on which the cursor currently is placed. In addition, they also try to find any information that is in some form associated to it.
 
-For example, when focusing an `<input>` field, its `<label>` is announced, and (if available) also the surrounding `<fieldset>`'s `<legend>`. But also any other reasonable information that can be programmatically determined, like content associated using ARIA's `aria-describedby` (if you haven't done this yet, go back and read [ARIA - when HTML simply isn't enough](/pages/knowledge/aria)).
+For example, when focusing an `<input>` field, its `<label>` is announced, and (if available) also the surrounding `<fieldset>`'s `<legend>`. But also any other reasonable information that can be programmatically determined, like content associated using ARIA's `aria-describedby` (if you haven't done this yet, go back and read [ARIA - when HTML simply isn't enough](/knowledge/aria)).
 
 ### Focus mode vs. keyboard only
 
-Focus mode in screen readers is exactly the same like tabbing through a page with keyboard only (if you haven't done this yet, go back and read [Introduction to keyboard only usage](/pages/knowledge/keyboard-only)).
+Focus mode in screen readers is exactly the same like tabbing through a page with keyboard only (if you haven't done this yet, go back and read [Introduction to keyboard only usage](/knowledge/keyboard-only)).
 
 Looked at it this way, screen readers in fact simply introduce only one special interaction mode: the browse mode. So when using the `Tab` key, everything is just plain keyboard only navigation (handled by the underlying browser).
 
@@ -90,4 +105,4 @@ When users reach a page, they typically start reading it from top to bottom usin
 - Either they use the `Tab` key to move the focus to the next interactive element.
     - If entering data into a form, usually the user expects more form elements to come until a submit button is reached at the end of the process.
 - Or they switch back to browse mode by pressing `Esc` and read on using `Down` key.
-    - This usually is only necessary if a form isn't structured well (if you are really curious and want to learn more about this, skip ahead and read [Forms](/pages/examples/forms)).
+    - This usually is only necessary if a form isn't structured well (if you are really curious and want to learn more about this, skip ahead and read [Forms](/examples/forms)).

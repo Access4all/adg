@@ -11,13 +11,6 @@ body {
   padding: 20px;
 }
 
-.tablist {
-  border: 1px solid black;
-  padding: 10px;
-  margin-bottom: 20px;
-  background-color: #cff7cf;
-}
-
 .control {
   display: inline-block;
 }
@@ -25,27 +18,27 @@ body {
   border: 1px solid black;
   margin: 0 0 -1px 0;
   padding: 4px 10px;
-  background-color: lightgray;
 }
 
 input[type="radio"]:checked + label {
-  background-color: #fff;
-  border-bottom-color: #fff;
+  background-color: lightyellow;
+  border-bottom-color: lightyellow;
 }
 
 a:focus,
 input:focus,
 input[type="radio"]:focus + label {
-  outline: 2px dotted red;
+  outline: 2px dotted;
   outline-offset: 2px;
 }
 
 input[type="radio"] + label:hover {
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .panel {
   border: 1px solid;
-  background-color: white;
+  background-color: lightyellow;
   padding: 0 0 0 10px;
 }

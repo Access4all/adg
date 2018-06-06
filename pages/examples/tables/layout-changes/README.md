@@ -12,13 +12,13 @@ changed: "2018-04-16"
 
 First things first: we are not talking about layout tables here. We really do hope nobody is using tables for layout purposes anymore (although screen readers can handle them quite well).
 
-In this article, we are talking about changing the visual appearance of a table while retaining its semantics (if you haven't done this yet, go back and read [Semantics and their importance for accessibility](/pages/knowledge/semantics)).
+In this article, we are talking about changing the visual appearance of a table while retaining its semantics (if you haven't done this yet, go back and read [Semantics and their importance for accessibility](/knowledge/semantics)).
 
 ## Changing the display property
 
 To alter a table's visual appearance, the `display` property needs to be changed. Take a look at the following example, where the table's cells are stacked on top of each other.
 
-[Table with block elements (example) ![Preview](_examples/table-with-block-elements/_example.png)](_examples/table-with-block-elements)
+[Example](_examples/table-with-block-elements)
 
 This happens because all elements all are set to `display: block` now. So far, so good.
 
@@ -41,7 +41,7 @@ In our example, we changed these values from their defaults to `display: block`.
 
 ## Re-applying proper semantics using ARIA
 
-Fortunately, the lost semantics can be re-applied using ARIA (if you haven't done this yet, go back and read [ARIA - when HTML simply isn't enough](/pages/knowledge/aria)).
+Fortunately, the lost semantics can be re-applied using ARIA (if you haven't done this yet, go back and read [ARIA - when HTML simply isn't enough](/knowledge/aria)).
 
 This is done by adding a `role` attribute with the appropriate value to each element:
 
@@ -53,7 +53,7 @@ This is done by adding a `role` attribute with the appropriate value to each ele
 
 Now the table will be recognised properly again by screen readers.
 
-[Table with block elements, fixed with ARIA (example) ![Preview](_examples/table-with-block-elements-fixed-with-aria/_example.png)](_examples/table-with-block-elements-fixed-with-aria)
+[Example](_examples/table-with-block-elements-fixed-with-aria)
 
 **Notice:** for both `<thead>` and `<tbody>`, there doesn't seem to exist an equivalent ARIA role. We have to apply `role="presentation"` to these elements to remove any improper semantical information (left behind by `display: block`). Otherwise this would have an impact on the semantical structure of the table, potentially breaking it once again.
 

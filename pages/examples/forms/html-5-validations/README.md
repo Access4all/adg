@@ -32,7 +32,7 @@ The following example demonstrates a few of those validations:
     - This requires an input of at least six characters with at least one number, one lowercase and one uppercase letter.
     - To make the pattern available to the user in a human readable form, you can use the `title` attribute like this: ` title="Minimum 6 characters containing lowercase, uppercase, and at least one number"`.
 
-[HTML 5 client side validations (example) ![Preview](_examples/html-5-client-side-validations/_example.png)](_examples/html-5-client-side-validations)
+[Example](_examples/html-5-client-side-validations)
 
 You should only be capable of submitting the form when all input is valid.
 
@@ -56,7 +56,7 @@ If you like, you can manually set the attribute `invalid` to an invalid input:
 
 But please do so only after the user has already interacted with the input: it is annoying to visit a "fresh" form and have all required (but initially empty) fields announced as "invalid" by default.
 
-In general though it is better to attach a distinctive validation message to an invalid input, see [Validation messages](/pages/examples/forms/validation-messages).
+In general though it is better to attach a distinctive validation message to an invalid input, see [Validation messages](/examples/forms/validation-messages).
 
 ## Custom patterns need a title
 
@@ -70,7 +70,7 @@ From an accessibility point of view, for Internet Explorer it is not only good p
 
 The following example is especially problematic, as the field not only requires a specific pattern - it is also marked up as `required`: so users feel like they have done everything right after filling something into the input, but still they cannot submit the form.
 
-[HTML 5 client side validations with untitled pattern (example) ![Preview](_examples/html-5-client-side-validations-with-untitled-pattern/_example.png)](_examples/html-5-client-side-validations-with-untitled-pattern)
+[Example](_examples/html-5-client-side-validations-with-untitled-pattern)
 
 ## HTML 5 vs. ARIA
 
@@ -84,7 +84,7 @@ Both attribute types in general trigger the same screen reader announcements. Th
 
 In the following example, both HTML 5 (`required`) and ARIA (`aria-required`) validations are present. Do you spot the differences in screen reader and browser behaviour?
 
-[Required inputs with HTML 5 and ARIA (example) ![Preview](_examples/required-inputs-with-html-5-and-aria/_example.png)](_examples/required-inputs-with-html-5-and-aria)
+[Example](_examples/required-inputs-with-html-5-and-aria)
 
 So which one to use when? In general, we suggest using the HTML 5 validations; if you need to target legacy browsers and screen readers, you can have both types side by side. And if for some reason you do not want to have client side validations but still need to mark the fields for screen readers, you can rely on ARIA validations.
 
@@ -92,4 +92,4 @@ So which one to use when? In general, we suggest using the HTML 5 validations; i
 
 Just a note for completeness: while HTML 5 client side validations are a cool feature, they certainly are no replacement for server side validations. Because you never trust user data - do you?!
 
-You will always need server side validations with custom messages when processing user data, see: [Validation messages](/pages/examples/forms/validation-messages).
+You will always need server side validations with custom messages when processing user data, see: [Validation messages](/examples/forms/validation-messages).

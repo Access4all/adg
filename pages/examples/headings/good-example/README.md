@@ -12,7 +12,7 @@ Headings are marked up in HTML using `<h1>` to `<h6>`. You knew that, didn't you
 
 The following example contains a very basic headings outline. It may look familiar to you from "normal" print documents (like PDF) and books.
 
-[Generally good headings (example) ![Preview](_examples/generally-good-headings/_example.png)](_examples/generally-good-headings)
+[Example](_examples/generally-good-headings)
 
 On a visual level, the headings' prominent visual attributes (e.g. font size, weight, sometimes colours, etc.) allow visual users to know when a new chapter or sub chapter starts or ends, or to skim through the pages of a book looking for a specific chapter.
 
@@ -20,7 +20,7 @@ On a semantical level, headings also announce to screen reader users when a new 
 
 ![Document outline in NVDA](_media/document-outline-in-nvda.png)
 
-By the way, if you don't know about semantics, go back and read [Semantics and their importance for accessibility](/pages/knowledge/semantics).
+By the way, if you don't know about semantics, go back and read [Semantics and their importance for accessibility](/knowledge/semantics).
 
 ## Hey, this is like in Word!
 

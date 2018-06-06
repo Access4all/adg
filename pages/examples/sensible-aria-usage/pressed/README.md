@@ -32,13 +32,13 @@ If the button is activated (and the `aria-pressed` status is changed to `true` b
 
 > Pressed.
 
-[Marking an element togglable using aria-pressed (example) ![Preview](_examples/marking-an-element-togglable-using-aria-pressed/_example.png)](_examples/marking-an-element-togglable-using-aria-pressed)
+[Example](_examples/marking-an-element-togglable-using-aria-pressed)
 
 ## Real world use
 
 As shown above, if the button's `aria-pressed` value is changed using JavaScript while it is focused, screen readers announce the change. This is pretty exceptional, as most other changes to an element are not detected by screen readers (and as such not announced).
 
-In line with the requirement that every user interaction must result in an adequate feedback (see [How to implement websites that are ready for screen reader usage](/pages/knowledge/desktop-screen-readers/how-to-implement)), the `aria-pressed` attribute may seem really useful for elements like that toggle something, for example a "Play audio" button.
+In line with the requirement that every user interaction must result in an adequate feedback (see [How to implement websites that are ready for screen reader usage](/knowledge/desktop-screen-readers/how-to-implement)), the `aria-pressed` attribute may seem really useful for elements like that toggle something, for example a "Play audio" button.
 
 But in fact, there is an even simpler and more robust way to implement this using a checkbox.
 
@@ -46,7 +46,7 @@ But in fact, there is an even simpler and more robust way to implement this usin
 
 Instead of fiddling around with ARIA, you can achieve the same result using a traditional checkbox (styled to your likings).
 
-[Marking an element toggleable using a checkbox (example) ![Preview](_examples/marking-an-element-toggleable-using-a-checkbox/_example.png)](_examples/marking-an-element-toggleable-using-a-checkbox)
+[Example](_examples/marking-an-element-toggleable-using-a-checkbox)
 
 While this is even more robust than using `aria-pressed`, it may feel out of place within a "real" form.
 
@@ -56,7 +56,7 @@ There is another, similarly appealing ARIA attribute called `aria-selected`: it 
 
 ### Do not use for marking expandability
 
-If you need to mark that the visibility of an element can be toggled, instead of `aria-pressed`, you should use `aria-expanded`, see [Marking elements expandable using aria-expanded](/pages/examples/sensible-aria-usage/expanded).
+If you need to mark that the visibility of an element can be toggled, instead of `aria-pressed`, you should use `aria-expanded`, see [Marking elements expandable using aria-expanded](/examples/sensible-aria-usage/expanded).
 
 ## Conclusion
 

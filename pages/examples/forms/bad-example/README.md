@@ -8,17 +8,17 @@ changed: "2018-05-02"
 
 **Even in technically fully valid forms, there can be a lot messed up semantically, making it hardly accessible in many ways. Be it missing or improperly implemented elements - here we show the most common problems and explain them.**
 
-Most accessibility problems regarding form are caused due to bad semantics. So if you haven't done this yet, go back and read [Semantics and their importance for accessibility](/pages/knowledge/semantics).
+Most accessibility problems regarding form are caused due to bad semantics. So if you haven't done this yet, go back and read [Semantics and their importance for accessibility](/knowledge/semantics).
 
 The following example shows a basic form which is technically perfectly valid HTML code.
 
-[Generally bad form (example) ![Preview](_examples/generally-bad-form/_example.png)](_examples/generally-bad-form)
+[Example](_examples/generally-bad-form)
 
 But it lacks a lot of standard features needed for setting elements in relationship with each other properly and triggering browser standard functionality.
 
 ## Missing form container
 
-Although this visually clearly is a form, the controls aren't surrounded by a `<form>` tag. This results in a form not submittable by hitting the `Enter` key (while focusing a control). Not really an accessibility problem, but still very annoying to power users (if you haven't done this yet, go back and read [Controlling a computer with a keyboard only](/pages/knowledge/keyboard-only/controlling-a-computer)).
+Although this visually clearly is a form, the controls aren't surrounded by a `<form>` tag. This results in a form not submittable by hitting the `Enter` key (while focusing a control). Not really an accessibility problem, but still very annoying to power users (if you haven't done this yet, go back and read [Controlling a computer with a keyboard only](/knowledge/keyboard-only/controlling-a-computer)).
 
 Especially when doing fancy stuff with JavaScript, `<form>` tags often are forgotten, as developers are messing around with `onclick` events or similar. But please: whenever form controls need to be submittable, they should be placed in a `<form>` tag.
 

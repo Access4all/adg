@@ -10,7 +10,7 @@ changed: "2018-05-14"
 
 ## Background
 
-While it is only possible using a workaround to hide elements visually but leave it there for screen readers (see [Hiding elements visually by moving them off-screen](/pages/examples/hiding-elements/visually)), there exists a specific ARIA attribute `aria-hidden` to hide elements from screen readers (but leaving them there visually).
+While it is only possible using a workaround to hide elements visually but leave it there for screen readers (see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually)), there exists a specific ARIA attribute `aria-hidden` to hide elements from screen readers (but leaving them there visually).
 
 ## Intended use
 
@@ -22,7 +22,7 @@ The following paragraph is ignored by screen readers:
 </p>
 ```
 
-[Hiding an element using aria-hidden (example) ![Preview](_examples/hiding-an-element-using-aria-hidden/_example.png)](_examples/hiding-an-element-using-aria-hidden)
+[Example](_examples/hiding-an-element-using-aria-hidden)
 
 ## Peculiarities and side effects
 
@@ -30,7 +30,7 @@ The following paragraph is ignored by screen readers:
 
 When setting `aria-hidden="true"` to an element, all children will also be hidden. It is not possible to override this by setting `aria-hidden="false"` to a child element.
 
-[Trying to unhide an aria-hidden child (example) ![Preview](_examples/trying-to-unhide-an-aria-hidden-child/_example.png)](_examples/trying-to-unhide-an-aria-hidden-child)
+[Example](_examples/trying-to-unhide-an-aria-hidden-child)
 
 ### Does not work on focusable elements
 
@@ -38,13 +38,13 @@ You must never use `aria-hidden="true"` on any focusable element, or on any elem
 
 This is due to the fact that `aria-hidden` indeed is respected by screen readers even on focusable elements while reading them in browse mode - but during usage of focus mode, focusable elements are still reachable by the browser (with the `Tab` key), which leads to strange (or missing) announcements of hidden elements.
 
-[Hiding an element with a focusable child (example) ![Preview](_examples/hiding-an-element-with-a-focusable-child/_example.png)](_examples/hiding-an-element-with-a-focusable-child)
+[Example](_examples/hiding-an-element-with-a-focusable-child)
 
 ### Not hidden anymore as description
 
 Elements hidden using `aria-hidden` are not hidden anymore when referencing them using `aria-describedby`.
 
-[Elements hidden with aria-hidden are not hidden when referenced (example) ![Preview](_examples/elements-hidden-with-aria-hidden-are-not-hidden-when-referenced/_example.png)](_examples/elements-hidden-with-aria-hidden-are-not-hidden-when-referenced)
+[Example](_examples/elements-hidden-with-aria-hidden-are-not-hidden-when-referenced)
 
 In focus mode, a screen reader's announcement of the link will be:
 
@@ -60,4 +60,4 @@ Very confusing stuff.
 
 While you can use `aria-hidden="true"` on any element that is not focusable and does not contain any focusable element itself, you must never use it on focusable elements. Also be careful when referencing hidden elements using `aria-describedby`.
 
-In general: whenever you think about hiding something from any audience (see [Hiding elements from screen readers using aria-hidden](/pages/examples/hiding-elements/from-screen-readers)), ask yourself whether this is really a good solution. Most of the time it is better to create a solution that works the same way for everybody, and which does not need any shaky ARIA.
+In general: whenever you think about hiding something from any audience (see [Hiding elements from screen readers using aria-hidden](/examples/hiding-elements/from-screen-readers)), ask yourself whether this is really a good solution. Most of the time it is better to create a solution that works the same way for everybody, and which does not need any shaky ARIA.

@@ -1,7 +1,7 @@
 ---
 navigation_title: "Expanded"
 position: 3
-changed: "2018-05-14"
+changed: "2018-05-29"
 ---
 
 # Marking elements expandable using aria-expanded
@@ -32,7 +32,7 @@ If the button is activated (and the `aria-expanded` status is changed to `true` 
 
 > Expanded.
 
-[Marking an element expandable using aria-expanded (example) ![Preview](_examples/marking-an-element-expandable-using-aria-expanded/_example.png)](_examples/marking-an-element-expandable-using-aria-expanded)
+[Example](_examples/marking-an-element-expandable-using-aria-expanded)
 
 ### Adding hasmenu (optional)
 
@@ -48,7 +48,7 @@ A screen reader will announce:
 
 > Toggle. Button has menu.
 
-[Marking an element expandable using aria-hasmenu (example) ![Preview](_examples/marking-an-element-expandable-using-aria-hasmenu/_example.png)](_examples/marking-an-element-expandable-using-aria-hasmenu)
+[Example](_examples/marking-an-element-expandable-using-aria-hasmenu)
 
 In contrast to `aria-expanded`, `aria-hasmenu` does not offer anything better than `aria-expanded`: both tell the user that there is something to be toggled. But while `aria-expanded` can be used for whatever "something" needed (menus of all sorts, dialogs, tooltips, etc.), `aria-hasmenu` is constrained to menus.
 
@@ -60,13 +60,13 @@ We do not recommend to use `aria-hasmenu` as it does not provide any additional 
 
 As shown above, if the button's `aria-expanded` value is changed using JavaScript while it is focused, screen readers announce the change. This is pretty exceptional, as most other changes to an element are not detected by screen readers (and as such not announced).
 
-In line with the requirement that every user interaction must result in an adequate feedback (see [How to implement websites that are ready for screen reader usage](/pages/knowledge/desktop-screen-readers/how-to-implement)), the `aria-expanded` attribute is really useful with describing elements like:
+In line with the requirement that every user interaction must result in an adequate feedback (see [How to implement websites that are ready for screen reader usage](/knowledge/desktop-screen-readers/how-to-implement)), the `aria-expanded` attribute is really useful with describing elements like:
 
-- Tooltips, see [Tooltip widgets (or: screen tip, balloon)](/pages/examples/widgets/tooltips)
-- Accordions, see [Accordions](/pages/examples/widgets/accordion)
-- Autocompletes, see [Autosuggest widget (or: autocomplete, lookahead, typeahead)](/pages/examples/widgets/autosuggest)
-- Dropdowns, see [Dropdown widget (or: menu, pulldown)](/pages/examples/widgets/dropdown)
-- Dialogs, see [Dialog widget (or: modal, popup, lightbox, alert)](/pages/examples/widgets/dialog)
+- Tooltips, see [Tooltip widgets (or: screen tip, balloon)](/examples/widgets/tooltips)
+- Accordions, see [Accordions](/examples/widgets/accordion)
+- Autocompletes, see [Autosuggest widget (or: autocomplete, lookahead, typeahead)](/examples/widgets/autosuggest)
+- Dropdowns, see [Dropdown widget (or: menu, pulldown)](/examples/widgets/dropdown)
+- Dialogs, see [Dialog widget (or: modal, popup, lightbox, alert)](/examples/widgets/dialog)
 
 As a general rule, the toggled element should be right below the toggle button, so screen readers will find it easily. If that is not the case, then the focus should be placed inside the element upon toggling it visible, and back to the initial element upon toggling it invisible.
 
@@ -82,7 +82,7 @@ For example, if a navigation is made of nested lists of links, and clicking a li
 
 Instead of fiddling around with ARIA, you can achieve the same result using a traditional checkbox (styled to your likings).
 
-[Marking an element expandable using a checkbox (example) ![Preview](_examples/marking-an-element-expandable-using-a-checkbox/_example.png)](_examples/marking-an-element-expandable-using-a-checkbox)
+[Example](_examples/marking-an-element-expandable-using-a-checkbox)
 
 While this is even more robust than using `aria-expanded`, it may feel out of place within a "real" form.
 

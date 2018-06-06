@@ -29,7 +29,7 @@ If you definitely don't want to have more than a single heading on level 1, we c
 
 One approach is to add the single heading on level 1 at the very top of the page, then indenting all other headings below.
 
-[Page with only one h1 on top of page (example) ![Preview](_examples/page-with-only-one-h1-on-top-of-page/_example.png)](_examples/page-with-only-one-h1-on-top-of-page)
+[Example](_examples/page-with-only-one-h1-on-top-of-page)
 
 To screen readers, this looks like so:
 
@@ -37,7 +37,7 @@ To screen readers, this looks like so:
 
 This way it is a bit harder for screen reader users to find the "real" main content. But by using HTML 5 elements like `<header>`, `<footer>`, and especially `<main>`, you can work around this problem effectively.
 
-It might feel a bit awkward to have the main heading as both an `<h1>` and an `<h2>`. If you like, you can add a prefix to the heading in the `<main>` region and hide it visually (see [Hiding elements visually by moving them off-screen](/pages/examples/hiding-elements/visually)), for example "Main content: ":
+It might feel a bit awkward to have the main heading as both an `<h1>` and an `<h2>`. If you like, you can add a prefix to the heading in the `<main>` region and hide it visually (see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually)), for example "Main content: ":
 
 ```html
 <main>
@@ -52,7 +52,7 @@ It might feel a bit awkward to have the main heading as both an `<h1>` and an `<
 
 If you prefer to have the single heading on level 1 directly on top of the main content, it is also okay. If you still need headings for the elements above it (e.g. the header), you can start on level 2 for them.
 
-[Page with only one h1 on top of main content (example) ![Preview](_examples/page-with-only-one-h1-on-top-of-main-content/_example.png)](_examples/page-with-only-one-h1-on-top-of-main-content)
+[Example](_examples/page-with-only-one-h1-on-top-of-main-content)
 
 To screen readers, this looks like so:
 
