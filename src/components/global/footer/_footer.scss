@@ -1,14 +1,26 @@
 .footer {
-  padding: $gutter 60px;
+  position: relative;
+  @include font-xs;
+  padding: $gutter 0;
+  margin-top: 2 * $gutter;
+  &:before {
+    @include navbar_white_line__pseudo;
+    left: 0; right: 0;
+    top: 0;
+    height: 1px;
+  }
+
+  @include above-mobile-narrow {
+    .footer--left {
+      float: left;
+    }
+    .footer--right {
+      float: right;
+    }
+  }
 }
 
 .footer--inner {
   @include l-site_width;
   @include clearfix;
-}
-.footer--left {
-  float: left;
-}
-.footer--right {
-  float: right;
 }
