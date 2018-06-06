@@ -84,57 +84,65 @@ const getExample = (examplePath, filePath) => {
   const compatibilitySummaryBrowsers = ['FF', 'IE']
   const compatibilitySummary = []
 
-  const compatibility = code.details.compatibility ? _.map(code.details.compatibility, (results, category) => {
-    const isKeyboard = results.status
+  const compatibility = code.details.compatibility
+    ? _.map(code.details.compatibility, (results, category) => {
+      const isKeyboard = results.status
 
-    // Optimize structure for rendering
-    if (isKeyboard) {
-      results = [results]
-    } else {
-      results = _.map(results, (result, env) => {
-        result.env = env
+      // Optimize structure for rendering
+      if (isKeyboard) {
+        results = [results]
+      } else {
+        results = _.map(results, (result, env) => {
+          result.env = env
+
+          return result
+        })
+      }
+
+      results = results.map(result => {
+        // Create color code and visual indication based on status and whether comments are present
+        result.statusCode =
+            result.status === 'Pass'
+              ? result.comments ? 'yellow' : 'green'
+              : 'red'
+        result.statusIndication =
+            result.status === 'Pass' ? '✅' : result.comments ? '⚠️' : '❌'
+
+        // Format date
+        const date = new Date(result.date)
+
+        // eslint-disable-next-line eqeqeq
+        if (date != 'Invalid Date') {
+          result.date = `${date.getFullYear()}-${date.getMonth() +
+              1}-${date.getDate()}`
+        }
 
         return result
       })
-    }
 
-    results = results.map(result => {
-      // Create color code and visual indication based on status and whether comments are present
-      result.statusCode = result.status === 'Pass' ? (result.comments ? 'yellow' : 'green') : 'red'
-      result.statusIndication = result.status === 'Pass' ? '✅' : (result.comments ? '⚠️' : '❌')
+      // Create summary of screenreader+browser combinations
+      if (!isKeyboard) {
+        compatibilitySummaryBrowsers.forEach(browser => {
+          const result = results.find(result => {
+            return result.env && result.env.match(browser)
+          })
 
-      // Format date
-      const date = new Date(result.date)
-
-      if (date != 'Invalid Date') { // eslint-disable-line eqeqeq
-        result.date = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+          if (result) {
+            compatibilitySummary.push({
+              name: `${category} + ${browser}`,
+              statusCode: result.statusCode,
+              statusIndication: result.statusIndication
+            })
+          }
+        })
       }
 
-      return result
+      return {
+        category,
+        results
+      }
     })
-
-    // Create summary of screenreader+browser combinations
-    if (!isKeyboard) {
-      compatibilitySummaryBrowsers.forEach(browser => {
-        const result = results.find(result => {
-          return result.env && result.env.match(browser)
-        })
-
-        if (result) {
-          compatibilitySummary.push({
-            name: `${category} + ${browser}`,
-            statusCode: result.statusCode,
-            statusIndication: result.statusIndication
-          })
-        }
-      })
-    }
-
-    return {
-      category,
-      results
-    }
-  }) : null
+    : null
 
   const btns = ['html', 'css', 'js'].filter(type => code[type]).map(type => {
     return `<div class="control">
@@ -161,23 +169,35 @@ const getExample = (examplePath, filePath) => {
       <input type="checkbox" id="${id}-compatibility" name="${id}" value="compatibility" />
       <label class="button" for="${id}-compatibility">
         <span class="visuallyhidden">Show compatibility details</span>
-        ${compatibilitySummary.map(item => `<span class="status status--${item.statusCode}">
+        ${compatibilitySummary
+    .map(
+      item => `<span class="status status--${item.statusCode}">
           ${item.name}: ${item.statusIndication}
-        </span>`).join('')}
+        </span>`
+    )
+    .join('')}
       </label>
     </div>`)
 
     blocks.push(`<div class="panel" id="${id}-compatibility_panel" style="display: none">
       <ul class="compatibility">
-        ${compatibility.map(item => `<li>
+        ${compatibility
+    .map(
+      item => `<li>
           <h3>${item.category}</h3>
           <ul>
-            ${item.results.map(result => `<li class="result result--${result.statusCode}">
+            ${item.results
+    .map(
+      result => `<li class="result result--${result.statusCode}">
               ${result.env ? `<strong>${result.env}</strong>:` : ''}
               ${result.statusIndication} ${result.status} (${result.date})
-            </li>`).join('')}
+            </li>`
+    )
+    .join('')}
           </ul>
-        </li>`).join('')}
+        </li>`
+    )
+    .join('')}
       </ul>
     </div>`)
   }
