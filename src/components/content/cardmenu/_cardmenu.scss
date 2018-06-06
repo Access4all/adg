@@ -17,7 +17,7 @@
 .cardmenu--list--item {
     display: inline-block;
     margin: 10px;
-    width: calc(100% / 3 - 20px);
+    width: calc(100% / 4 - 20px);
 
     .text_container & {
       padding: 0;
@@ -64,7 +64,7 @@
 
   &:hover,
   &:focus {
-    &.cardmenu--card--link-welcome {
+    &.cardmenu--card--link-intro {
       @include theme(border-color, 0);
     }
     &.cardmenu--card--link-setup {
@@ -107,7 +107,7 @@
     margin: 0 auto;
     height: 35px;
 
-    .cardmenu--card--link-welcome & {
+    .cardmenu--card--link-intro & {
       &:after {
         @include sprite($shake);
       }
