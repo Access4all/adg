@@ -12,9 +12,8 @@ compatibility:
       comments: "middle name not read as required"
   JAWS:
     2018.3 + IE 11:
-      status: 
+      status: fail
       date: 2018-05-20
-      comments: "recheck"
     2018.3 + FF ESR 52.7.3:
       status: 
       date: 2018-05-07
