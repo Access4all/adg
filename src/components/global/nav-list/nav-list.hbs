@@ -3,10 +3,9 @@
     <a class="nav-list--link{{#if isActive}} nav-list--link-active{{/if}}{{#if isCurrent}} nav-list--link-current{{/if}}" href="/{{url}}"{{#if children}} id="nav{{@key}}" aria-haspopup="true" aria-expanded="false"{{/if}}>
       {{title}}
 
-      <span class="visuallyhidden">
-        {{#if isActive}}(active page){{/if}}
-        {{#if isCurrent}}(current page){{/if}}
-      </span>
+      {{#if isCurrent}}
+      <span class="visuallyhidden">current page</span>
+      {{/if}}
     </a>
 
     {{#if children}}
