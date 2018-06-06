@@ -50,9 +50,9 @@ module.exports = (config, cb) => {
                 }
               },
               {
-                'html': code.html,
-                'css': code.css,
-                'js': babel.transform(code.js, {
+                html: code.html,
+                css: code.css,
+                js: babel.transform(code.js, {
                   presets: [
                     [
                       babelPreset,
