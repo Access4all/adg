@@ -16,7 +16,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "browserslist": "last 2 versions, ie 11",
+  "browserslist": [
+    "defaults",
+    "> 1%",
+    "iOS >= 8.4"
+  ],
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.38",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0-beta.40",
@@ -68,10 +72,5 @@
   "dependencies": {
     "details-polyfill": "^1.1.0",
     "jquery": "^3.2.1"
-  },
-  "browserslist": [
-    "defaults",
-    "> 1%",
-    "iOS >= 8.4"
-  ]
+  }
 }

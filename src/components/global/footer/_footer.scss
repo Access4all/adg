@@ -3,6 +3,8 @@
   @include font-xs;
   padding: $gutter 0;
   margin-top: 2 * $gutter;
+	margin-left: auto;
+	margin-right: auto;
   &:before {
     @include navbar_white_line__pseudo;
     left: -50vw; right: -50vw;
