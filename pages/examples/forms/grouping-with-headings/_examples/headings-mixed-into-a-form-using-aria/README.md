@@ -10,8 +10,9 @@ compatibility:
       date: 2018-05-08
   JAWS:
     2018.3 + IE 11:
-      status: pass
+      status: fail
       date: 2018-05-13
+      comments: "recheck"
     2018.3 + FF ESR 52.7.3:
       status: pass
       date: 2018-05-07
