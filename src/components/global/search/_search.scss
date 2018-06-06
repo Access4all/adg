@@ -35,18 +35,41 @@
 
 // Overrides for the default SiteSearch 360 styles
 #unibox-suggest-box {
+  right: 88px;
+  left: auto !important;
+  width: 400px;
   padding: 5px;
   box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
 
-  [data-adg-autocomplete-option] {
-    display: block;
-    padding: 5px;
+  > * > div {
+    padding: 4px 8px !important;
   }
 
-  [data-adg-autocomplete-option]:hover,
-  [data-adg-autocomplete-option-selected] {
-    cursor: pointer;
-    background: $c-blue;
-    color: $c-background;
+  .unibox-selectable {
+    display: block;
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    &.active,
+    &:hover {
+      background: $c-blue;
+      color: $c-background;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+
+    a {
+      white-space: normal;
+      font-size: 110%;
+      font-weight: bold;
+      color: $c-black;
+    }
+
+    .unibox-result-content {
+      margin-bottom: 10px;
+    }
   }
 }
