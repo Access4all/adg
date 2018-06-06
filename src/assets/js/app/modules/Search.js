@@ -47,7 +47,8 @@ export default class Search extends BaseModule {
       $(this)
         .siblings('.search--input')
         .addClass('search--input-expanded')
-        .focus().focusout(function() {
+        .focus()
+        .focusout(function () {
           $(this).removeClass('search--input-expanded')
           breadcrumbs.css('visibility', 'visible')
         })
