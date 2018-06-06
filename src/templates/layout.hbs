@@ -17,6 +17,7 @@
 </head>
 <body class="js-theme theme{{#if section }} theme-{{section}}{{/if}}">
   <div id="body">
+    {{> "global/forkme/forkme"}}
     <div id="main">
       <header class="header" id="header">
         <div class="l-site_width">
@@ -25,8 +26,8 @@
       </header>
       {{> "global/navbar/navbar"}}
       <main id="main-content" class="site-content">
+        {{> "global/breadcrumbs/breadcrumbs"}}
         <div class="l-site_width">
-          {{> "global/breadcrumbs/breadcrumbs"}}
           {{#if contents}}
 {{> "content/text_container/text_container" content=contents}} {{!-- needs to have zero space indenting for code examples --}}
           {{/if}}
@@ -37,8 +38,8 @@
 
         {{> "content/prev_next/prev_next" prev=previousPage next=nextPage}}
       </main>
+      {{> "global/footer/footer"}}
     </div>
-    {{> "global/footer/footer"}}
   </div>
 
   <script src="/js/scripts.js"></script>

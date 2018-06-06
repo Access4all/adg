@@ -33,8 +33,7 @@ export default class Theme extends BaseModule {
   check () {
     var scrollPos = document.documentElement.scrollTop
     if (scrollPos > this.windowHeight) {
-      // Disabled this, see https://github.com/Access4all/adg/issues/61
-      // this.enable()
+      this.enable()
     } else {
       this.disable()
     }

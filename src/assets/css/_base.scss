@@ -17,6 +17,8 @@ html {
 	&.no-overflow {
 		overflow-y: hidden;
 	}
+
+  @include navbar_white_line__bg;
 }
 
 body {

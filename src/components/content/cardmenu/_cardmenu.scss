@@ -17,7 +17,7 @@
 .cardmenu--list--item {
     display: inline-block;
     margin: 10px;
-    width: calc(100% / 4 - 20px);
+    width: calc(100% / 3 - 20px);
 
     .text_container & {
       padding: 0;
@@ -27,13 +27,16 @@
       }
     }
 
-    @include mobile {
+    @include mobile-narrow {
       width: calc(100% / 2 - 20px);
+    }
+    @include mobile-portrait {
+      width: calc(100% / 1 - 20px);
     }
 
     .cardmenu-default & {
       width: calc(100% / 2 - 20px);
-      @include mobile {
+      @include mobile-portrait {
         width: calc(100% / 1 - 20px);
       }
     }
