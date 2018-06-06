@@ -1,16 +1,23 @@
 $navWidthMin: 80px;
-$navWidthMax: 300px;
+$navWidthMax: 260px;
 
 
 @mixin navbar_white_line__pseudo {
-    content: "";
-    position: absolute;
-    display: inline-block;
-    background-color: $c-white;
-    opacity: .5;
-    transition: all .5s ease .5s;
-    @include theme-isLight {
-      @include theme(background-color, var(--theme-color-light));
-      opacity: 1;
-    }
+  @include navbar_white_line__bg;
+  content: "";
+  position: absolute;
+  display: inline-block;
+  opacity: .5;
+  @include theme-isLight {
+    opacity: 1;
   }
+}
+
+
+@mixin navbar_white_line__bg {
+  background-color: $c-white;
+  transition: all .5s ease .5s;
+  @include theme-isLight {
+    @include theme(background-color, var(--theme-color-light));
+  }
+}

@@ -3,7 +3,7 @@
   display: block;
   background: $c-white;
   @include rem(border-radius, 10px);
-  @include rem(padding, 16px 16px);
+  @include rem(padding, 20px);
   border: 2px solid $c-white;
 
   &:hover,
