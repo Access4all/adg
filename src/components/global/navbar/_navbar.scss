@@ -42,6 +42,24 @@
   @include above-mobile {
     z-index: 1;
   }
+}
+
+.navbar--container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .navbar--logo {
+    flex: 0 0 auto;
+    align-self: auto;
+  }
+
+  .navbar--inner {
+      flex: 1 1 auto;
+      align-self: auto;
+  }
+  @include theme-background-color;
+  
   @include above-mobile {
     margin-bottom: $gutter;
     position: relative;
@@ -52,7 +70,6 @@
       height: 1px;
     }
   }
-  @include theme-background-color;
 }
 
 

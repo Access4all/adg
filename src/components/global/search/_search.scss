@@ -1,0 +1,79 @@
+.search {
+  position: absolute;
+  top: 25px;
+  right: 80px;
+  z-index: 1;
+
+  .search--toggle {
+    @include searchbtn;
+    float: right;
+    transform: translateX(-50%);
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .search--input {
+    width: 0;
+    height: 0;
+    margin: 8px $gutter 0 0;
+    padding: 0;
+    border: none;
+    border-radius: 34px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+
+  }
+
+  .search--input-expanded {
+    width: 300px;
+    height: 45px;
+    padding: 10px;
+    transition: width 0.25s, height 0.25s, padding 0.25s
+  }
+}
+
+// Overrides for the default SiteSearch 360 styles
+#unibox-suggest-box {
+  right: 88px;
+  left: auto !important;
+  width: 350px;
+  padding: 5px;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+
+  @media (min-width: $site-width) {
+    width: 450px;
+  }
+
+  > * > div {
+    padding: 4px 8px !important;
+  }
+
+  .unibox-selectable {
+    display: block;
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    &.active,
+    &:hover {
+      background: $c-blue;
+      color: $c-background;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+
+    a {
+      white-space: normal;
+      font-size: 110%;
+      font-weight: bold;
+      color: $c-black;
+    }
+
+    .unibox-result-content {
+      margin-bottom: 10px;
+    }
+  }
+}
