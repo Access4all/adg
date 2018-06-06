@@ -10,10 +10,10 @@ export default () => {
 
   var time = new Date()
 
-  contextTrigger.add('.js-search', function() {
+  contextTrigger.add('.js-search', function () {
     var elem = this
 
-    require(['./modules/Search'], function(Module) {
+    require(['./modules/Search'], function (Module) {
       if (Module.default) {
         ModuleManager.connect(Module.default, elem)
       } else {
@@ -22,10 +22,10 @@ export default () => {
     })
   })
 
-  contextTrigger.add('.js-theme', function() {
+  contextTrigger.add('.js-theme', function () {
     var elem = this
 
-    require(['./modules/content/Theme'], function(Module) {
+    require(['./modules/content/Theme'], function (Module) {
       if (Module.default) {
         ModuleManager.connect(Module.default, elem)
       } else {
@@ -33,7 +33,6 @@ export default () => {
       }
     })
   })
-
 
   contextTrigger.validate('body')
 
