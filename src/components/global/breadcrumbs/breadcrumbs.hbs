@@ -1,6 +1,7 @@
 {{#if breadcrumb}}
 <nav class="breadcrumbs">
-    <h2>You are here<span class="visuallyhidden">:</span></h2>
+  <div class="breadcrumbs--inner">
+    <h2>You are here:</h2>
     <ol class="breadcrumbs--list">
       {{#each breadcrumb}}
         <li class="breadcrumbs--list--item{{#if @last}} is-back-link{{/if}}">
@@ -8,5 +9,6 @@
         </li>
       {{/each}}
     </ol>
+  </div>
 </nav>
 {{/if}}

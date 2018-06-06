@@ -1,23 +1,36 @@
 .breadcrumbs {
-    margin-top: $gutter;
-    margin-bottom: $gutter;
-    @include mobile {
-        margin-top: $gutter / 4;
-        margin-bottom: $gutter / 4;
-    }
-    &:before {
-        content: "📍";
-        font-size: 1.5em;
-        vertical-align: middle;
-    }
+  position: relative;
+  padding-top: $gutter;
+  padding-bottom: $gutter;
 
-    h2 {
-      display: inline-block;
-      font-size: 0.8rem;
-      font-weight: bold;
+  @include mobile {
+    padding-top: $gutter / 4;
+    padding-bottom: $gutter / 4;
+  }
+
+  h2 {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: bold;
+  }
+  @include above-mobile {
+    &:after {
+      @include navbar_white_line__pseudo;
+      left: -50vw; right: -50vw;
+      bottom: 0;
+      height: 1px;
     }
+  }
 }
-
+.breadcrumbs--inner {
+  @include l-site_width;
+  min-height: $logo_height + 1px; // todo: find out why +1?
+  &:before {
+    content: "📍";
+    font-size: 1.5em;
+    vertical-align: middle;
+  }
+}
 
 .breadcrumbs--list {
     display: inline-block;

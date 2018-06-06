@@ -1,0 +1,16 @@
+$navWidthMin: 80px;
+$navWidthMax: 300px;
+
+
+@mixin navbar_white_line__pseudo {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background-color: $c-white;
+    opacity: .5;
+    transition: all .5s ease .5s;
+    @include theme-isLight {
+      @include theme(background-color, var(--theme-color-light));
+      opacity: 1;
+    }
+  }
