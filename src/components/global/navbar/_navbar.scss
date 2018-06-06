@@ -42,6 +42,17 @@
   @include above-mobile {
     z-index: 1;
   }
+
+  @include above-mobile {
+    margin-bottom: $gutter;
+    position: relative;
+    &:after {
+      @include navbar_white_line__pseudo;
+      right: 0; left: 0;
+      bottom: 0px;
+      height: 1px;
+    }
+  }
 }
 
 .navbar--container {
@@ -55,21 +66,10 @@
   }
 
   .navbar--inner {
-      flex: 1 1 auto;
-      align-self: auto;
+    flex: 1 1 auto;
+    align-self: auto;
   }
-  @include theme-background-color;
-  
-  @include above-mobile {
-    margin-bottom: $gutter;
-    position: relative;
-    &:after {
-      @include navbar_white_line__pseudo;
-      right: 0; left: 0;
-      bottom: 0px;
-      height: 1px;
-    }
-  }
+  //@include theme-background-color;
 }
 
 
