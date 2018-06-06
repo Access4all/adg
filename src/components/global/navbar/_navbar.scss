@@ -1,12 +1,11 @@
-$navWidthMin: 80px;
-$navWidthMax: 300px;
 
 .navbar {
+  position: relative;
   @include above-mobile {
   	position: fixed;
   	left: 0; top: 0;
   }
-	background-color: $c-white;
+	//background-color: $c-white;
   @include theme-background-color;
 	z-index: 1;
 	height: 100vh;
@@ -20,15 +19,39 @@ $navWidthMax: 300px;
     height: auto;
   }
 
+  &:after {
+    @include navbar_white_line__pseudo;
+    z-index: 1;
+    @include above-mobile {
+      top: 0; bottom: 0;
+      right: 0;
+      width: 1px;
+    }
+    @include mobile {
+      left: 0; right: 0;
+      bottom: 0;
+      height: 1px;
+    }
+  }
 }
 
 .navbar--logo {
-  margin-top: 30px;
-  margin-bottom: 60px;
-  width: $navWidthMin;
-  text-align: center;
+  padding: $gutter 0;
+  //width: $navWidthMin;
+  text-align: left;
   @include above-mobile {
     z-index: 1;
+  }
+
+  @include above-mobile {
+    margin-bottom: $gutter;
+    position: relative;
+    &:after {
+      @include navbar_white_line__pseudo;
+      right: 0; left: 0;
+      bottom: 0px;
+      height: 1px;
+    }
   }
 }
 
@@ -41,16 +64,14 @@ $navWidthMax: 300px;
     flex: 0 0 auto;
     align-self: auto;
   }
-  .navbar--search {
-    flex: 0 0 auto;
-    align-self: auto;
-  }
 
   .navbar--inner {
-      flex: 1 1 auto;
-      align-self: auto;
+    flex: 1 1 auto;
+    align-self: auto;
   }
+  //@include theme-background-color;
 }
+
 
 .navbar--container {
   @include font-xs;
@@ -63,26 +84,35 @@ $navWidthMax: 300px;
 .navbar--inner {
   overflow: auto;
   width: $navWidthMax;
+  padding-right: 60px;
   max-width: 100vw;
 }
 
 
 
+@include mobile {
+  .logo-title {
+   display: inline-block;
+  }
+}
 
-
+@include max-width($navWidthMax) {
+  .logo-title {
+   display: none;
+  }
+}
 @include tablet {
-  .navbar--search,
   .navbar--inner {
     display: none;
   }
   .navbar--toggle--input:checked ~ .navbar {
-    .navbar--inner,
-    .navbar--search {
+    .navbar--inner {
       display: block;
     }
-    .navbar--toggle-search {
-      display: none;
+    .logo-title {
+     display: inline-block;
     }
+
   }
 }
 
@@ -90,10 +120,18 @@ $navWidthMax: 300px;
   .footer,
   .site-content {
     padding-left: $navWidthMin;
+    width: $navWidthMin + $site-maxWidth;
+    @media (max-width: $navWidthMin + $site-maxWidth) {
+      width: 100%;
+    }
   }
   .navbar--toggle--input:checked ~ .footer,
   .navbar--toggle--input:checked ~ .site-content {
     padding-left: $navWidthMax;
+    width: $navWidthMax + $site-maxWidth;
+    @media (max-width: $navWidthMax + $site-maxWidth) {
+      width: 100%;
+    }
   }
 }
 
@@ -109,14 +147,16 @@ $navWidthMax: 300px;
   .navbar--toggle--input {
     display: none;
   }
+  .logo-title {
+   display: inline-block;
+  }
+
 }
 
 
 .navbar--toggle {
   cursor: pointer;
   padding: 0 ($navWidthMin - 40px) / 2;
-  background-color: $c-white;
-  @include theme-background-color;
   position: absolute;
   right: 0;
   top: 0; bottom: 0px;
@@ -127,16 +167,6 @@ $navWidthMax: 300px;
     bottom: auto;
     left: auto; right: 10px;
     top: 30px;
-  }
-  &.navbar--toggle-search {
-    @include searchbtn;
-    top: auto;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 20px;
-    @include mobile {
-      display: none;
-    }
   }
 }
 

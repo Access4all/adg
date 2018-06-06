@@ -10,10 +10,10 @@ export default () => {
 
   var time = new Date()
 
-  contextTrigger.add('.js-collapsible', function () {
+  contextTrigger.add('.js-search', function () {
     var elem = this
 
-    require(['./modules/content/Collapsible'], function (Module) {
+    require(['./modules/Search'], function (Module) {
       if (Module.default) {
         ModuleManager.connect(Module.default, elem)
       } else {
@@ -33,32 +33,6 @@ export default () => {
       }
     })
   })
-
-  /*
-
-            contextTrigger.add('.js-collapsible', function(){
-              var elem = this;
-              require(['app/modules/utils/Sticky'], function(Module){
-                if (Module.default) {
-                  ModuleManager.connect( Module.default, elem );
-                } else {
-                  ModuleManager.connect( Module, elem );
-                }
-              });
-            });
-
-            contextTrigger.add('.js-Tooltip', function(){
-              var elem = this;
-              require(['app/modules/utils/Tooltip'], function(Module){
-                if (Module.default) {
-                  ModuleManager.connect( Module.default, elem );
-                } else {
-                  ModuleManager.connect( Module, elem );
-                }
-              });
-            });
-
-*/
 
   contextTrigger.validate('body')
 

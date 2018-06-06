@@ -27,13 +27,16 @@
       }
     }
 
-    @include mobile {
+    @include mobile-narrow {
       width: calc(100% / 2 - 20px);
+    }
+    @include mobile-portrait {
+      width: calc(100% / 1 - 20px);
     }
 
     .cardmenu-default & {
       width: calc(100% / 2 - 20px);
-      @include mobile {
+      @include mobile-portrait {
         width: calc(100% / 1 - 20px);
       }
     }
@@ -61,7 +64,7 @@
 
   &:hover,
   &:focus {
-    &.cardmenu--card--link-welcome {
+    &.cardmenu--card--link-introduction {
       @include theme(border-color, 0);
     }
     &.cardmenu--card--link-setup {
@@ -104,7 +107,7 @@
     margin: 0 auto;
     height: 35px;
 
-    .cardmenu--card--link-welcome & {
+    .cardmenu--card--link-introduction & {
       &:after {
         @include sprite($shake);
       }

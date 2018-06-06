@@ -31,8 +31,13 @@
 }
 
 @mixin font-xs {
-	@include font-size(16px);
-	line-height: 1.5;
+  @include font-size(16px);
+  line-height: 1.5;
+}
+
+@mixin font-xxs {
+  @include font-size(14px);
+  line-height: 1.5;
 }
 
 
@@ -63,10 +68,11 @@
 }
 
 @mixin h4 {
-	@include font-s;
-	@include font-weight(bold);
-	font-family: $base-font;
+  @include font-s;
+  @include font-weight(bold);
+  font-family: $base-font;
 }
+
 
 @mixin paragraph {
 	margin-top: 1em;
@@ -194,18 +200,33 @@
 	@if $include == all {
 		h1 {
 			@include h1;
-			margin-bottom: 0.5ex;
+			margin-bottom: 0.75ex;
 		}
 		h2 {
 			@include h2;
 			margin-top: 1.5em;
-			margin-bottom: 0.5ex;
+			margin-bottom: 0.75ex;
 		}
-		h3 {
-			@include h3;
-			margin-top: 1.5em;
-			margin-bottom: 0.5ex;
-		}
+    h3 {
+      @include h3;
+      margin-top: 1.5em;
+      margin-bottom: 0.75ex;
+    }
+    h4 {
+      @include h4;
+      margin-top: 1.5em;
+      margin-bottom: 0.75ex;
+    }
+    h5 {
+      @include h4;
+      margin-top: 1.5em;
+      margin-bottom: 0.75ex;
+    }
+    h6 {
+      @include h4;
+      margin-top: 1.5em;
+      margin-bottom: 0.75ex;
+    }
 		pre {
 			margin: 1em 0;
 			@include pre;
