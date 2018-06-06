@@ -2,20 +2,22 @@
 title: "Required inputs with HTML 5 and ARIA"
 compatibility:
   Keyboard only:
-    status: ??
-    date: 2018-??-??
+    status: fail
+    date: 2018-06-06
+    comments: "visually not recognisable as required"
   NVDA:
     2018.1 + FF Quantum 59.0.2:
-      status: ??
-      date: 2018-??-??
+      status: fail
+      date: 2018-06-06
+      comments: "middle name not read as required"
   JAWS:
-    2019.1 + FF 63.7.3:
-      status: ??
-      date: 2019-??-??
     2018.3 + IE 11:
-      status: ??
-      date: 2018-??-??
+      status: 
+      date: 2018-05-20
+      comments: "recheck"
     2018.3 + FF ESR 52.7.3:
-      status: ??
-      date: 2018-??-??
+      status: 
+      date: 2018-05-07
+      comments: "recheck"
+  comments: "example seems not to fit text"
 ---
