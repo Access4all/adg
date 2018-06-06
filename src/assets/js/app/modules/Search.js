@@ -41,11 +41,16 @@ export default class Search extends BaseModule {
 
     initializeSs360()
 
-    this.$el.find('.search--toggle').one('click', function () {
+    this.$el.find('.search--toggle').on('click', function () {
+      var breadcrumbs = $('nav.breadcrumbs .breadcrumbs--inner')
+      breadcrumbs.css('visibility', 'hidden')
       $(this)
         .siblings('.search--input')
         .addClass('search--input-expanded')
-        .focus()
+        .focus().focusout(function() {
+          $(this).removeClass('search--input-expanded')
+          breadcrumbs.css('visibility', 'visible')
+        })
     })
   }
 }
