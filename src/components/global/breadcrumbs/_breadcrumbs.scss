@@ -29,6 +29,12 @@
     & + & {
         margin-left: $gutter / 4;
     }
+
+    &:last-child {
+        a:after {
+            display: none;
+        }
+    }
 }
 
 .breadcrumbs--list--item--link {
