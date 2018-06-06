@@ -3,6 +3,8 @@
   @include font-xs;
   padding: $gutter 0;
   margin-top: 2 * $gutter;
+	margin-left: auto;
+	margin-right: auto;
   &:before {
     @include navbar_white_line__pseudo;
     left: -50vw; right: -50vw;
@@ -18,9 +20,59 @@
       float: right;
     }
   }
+
+  a {
+    text-decoration: underline;
+
+    &:focus {
+      outline: 2px dotted var(--theme-color-dark);
+    }
+  }
 }
 
 .footer--inner {
   @include l-site_width;
   @include clearfix;
+  margin-top: $gutter;
+  margin-bottom: $gutter;
+}
+
+@include above-tablet-portrait {
+  .footer--left {
+    float: left;
+  }
+  .footer--right {
+    float: right;
+  }
+}
+
+.footer--agencies {
+  display: flex;
+  align-items: center;
+  margin-bottom: $gutter;
+}
+
+.footer--label {
+  clear: both;
+}
+
+.footer--agency {
+  margin-right: $gutter;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.footer--logolink {
+  height: 60px;
+  position: relative;
+
+  img {
+    border: 0;
+  }
+}
+
+.footer--copy {
+  clear: both;
 }
