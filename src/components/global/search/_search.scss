@@ -37,9 +37,13 @@
 #unibox-suggest-box {
   right: 88px;
   left: auto !important;
-  width: 400px;
+  width: 350px;
   padding: 5px;
   box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+
+  @media (min-width: $site-width) {
+    width: 450px;
+  }
 
   > * > div {
     padding: 4px 8px !important;
