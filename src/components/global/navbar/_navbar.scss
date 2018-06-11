@@ -44,7 +44,7 @@
   }
 
   @include above-mobile {
-    margin-bottom: $gutter;
+    margin-bottom: 40px;
     position: relative;
     &:after {
       @include navbar_white_line__pseudo;
