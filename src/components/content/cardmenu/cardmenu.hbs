@@ -17,7 +17,7 @@
 
     <ul class="cardmenu--list">
       {{#each menuitem}}
-        <li class="cardmenu--list--item cardmenu--list--item-level{{level}}" role="presentation">
+        <li class="cardmenu--list--item cardmenu--list--item-level{{level}}">
             <a class="cardmenu--card--link{{#if modifier}} cardmenu--card--link-{{modifier}}{{/if}}" href="/{{url}}">
               {{#eq level 1}}
                 {{> "content/cardmenu/cardmenu-card-part" }}
