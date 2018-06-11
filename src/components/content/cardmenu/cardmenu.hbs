@@ -1,3 +1,5 @@
+{{#eq menuitem.0.level 1}}
+{{else}}
 <nav class="cardmenu{{#eq menuitem.0.level 1}} cardmenu-parts{{else}} cardmenu-default{{/eq}}">
     <div class="text_container">
       <h2>
@@ -27,3 +29,4 @@
       {{/each}}
     </ul>
 </nav>
+{{/eq}}

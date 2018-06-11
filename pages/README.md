@@ -6,4 +6,4 @@ changed: "2018-05-06"
 
 # Welcome to the Accessibility Developer Guide!
 
-TODO
+**If you want to learn about accessible website development, you are at the right place.**

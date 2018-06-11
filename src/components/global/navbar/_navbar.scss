@@ -84,6 +84,9 @@
 .navbar--inner {
   overflow: auto;
   width: $navWidthMax;
+  @include above-desktop {
+    width: $navWidthMax + 100px;
+  }
   padding-right: 60px;
   max-width: 100vw;
 }
@@ -120,6 +123,8 @@
   .footer,
   .site-content {
     padding-left: $navWidthMin;
+  }
+  .site-content {
     width: $navWidthMin + $site-maxWidth;
     @media (max-width: $navWidthMin + $site-maxWidth) {
       width: 100%;
@@ -139,6 +144,9 @@
   .footer,
   .site-content {
     padding-left: $navWidthMax;
+    @include above-desktop {
+      padding-left: $navWidthMax + 100px;
+    }
   }
   .navbar--toggle {
     display: none;
