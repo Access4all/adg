@@ -50,4 +50,9 @@
   &:focus {
     outline: 2px dotted var(--theme-color-dark);
   }
+
+  .nav-list--item-level1 > & {
+    font-family: 'Eczar', serif;
+    letter-spacing: 0.1em;
+  }
 }

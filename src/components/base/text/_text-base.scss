@@ -21,22 +21,22 @@
 }
 
 @mixin font-m {
-	@include font-size(24px);
+	@include font-size(36px);
 	line-height: 1.37;
 }
 
 @mixin font-s {
-	@include font-size(20px);
+	@include font-size(28px);
 	line-height: 1.5;
 }
 
 @mixin font-xs {
-  @include font-size(16px);
+  @include font-size(20px);
   line-height: 1.5;
 }
 
 @mixin font-xxs {
-  @include font-size(14px);
+  @include font-size(16px);
   line-height: 1.5;
 }
 
@@ -73,10 +73,23 @@
   font-family: $base-font;
 }
 
+@mixin h5 {
+  @include font-xs;
+  @include font-weight(bold);
+  font-family: $base-font;
+}
+
+@mixin h6 {
+  @include font-xxs;
+  @include font-weight(bold);
+  font-family: $base-font;
+}
+
 
 @mixin paragraph {
 	margin-top: 1em;
 	margin-bottom: 1em;
+  font-weight: 400;
 }
 
 @mixin strong {
@@ -218,12 +231,12 @@
       margin-bottom: 0.75ex;
     }
     h5 {
-      @include h4;
+      @include h5;
       margin-top: 1.5em;
       margin-bottom: 0.75ex;
     }
     h6 {
-      @include h4;
+      @include h6;
       margin-top: 1.5em;
       margin-bottom: 0.75ex;
     }
