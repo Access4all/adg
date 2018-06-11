@@ -6,9 +6,13 @@
     padding-top: 2em;
     padding-bottom: 1.5em;
 
-    + p strong {
+    + p {
       font-size: 1.5em;
-      font-weight: normal;
+      margin-bottom: 100px;
+
+      strong {
+        font-weight: 300;
+      }
     }
   }
   h2 {
