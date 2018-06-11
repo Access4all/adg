@@ -10,10 +10,12 @@ compatibility:
       date: 2018-05-2
   JAWS:
     2018.3 + IE 11:
-      status: pass
+      status: fail
       date: 2018-05-23
+      comments: "Paragraphs can still be jumped at"
     2018.3 + FF ESR 52.7.3:
-      status: pass
+      status: fail
       date: 2018-05-22
+      comments: "Paragraphs can still be jumped at"
 
 ---
