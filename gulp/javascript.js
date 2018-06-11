@@ -1,6 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
-const util = require('gulp-util')
+const argv = require('minimist')
 
 module.exports = (config, cb) => {
   const compiler = webpack({
@@ -66,7 +66,7 @@ module.exports = (config, cb) => {
     return cb()
   }
 
-  if (util.env.watch) {
+  if (argv.watch) {
     compiler.watch({}, log)
   } else {
     compiler.run(log)
