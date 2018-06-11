@@ -69,7 +69,7 @@ const extendNavigationItem = (origItem, index, options) => {
 
     item.children.forEach(child => {
       options.subPages.push({
-        title: child.title,
+        title: child.titleDetailed,
         lead: child.lead,
         url: child.url,
         level: level + 1

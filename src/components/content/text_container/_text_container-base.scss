@@ -3,6 +3,7 @@
   h1 {
     @include h1;
     @include theme-color;
+    letter-spacing: 0.05em;
     padding-top: 2em;
     padding-bottom: 1.5em;
 
@@ -34,5 +35,7 @@
 
   a:focus {
     outline: 2px dotted var(--theme-color-dark);
+    outline-offset: 4px;
+    color: var(--theme-color-dark);
   }
 }
