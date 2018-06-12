@@ -102,11 +102,11 @@ const getExample = (examplePath, filePath) => {
       results = results.map(result => {
         // Create color code and visual indication based on status and whether comments are present
         result.statusCode =
-            result.status === 'Pass'
+            result.status === 'pass'
               ? result.comments ? 'yellow' : 'green'
               : 'red'
         result.statusIndication =
-            result.status === 'Pass' ? '✅' : result.comments ? '⚠️' : '❌'
+            result.status === 'pass' ? '✔' : result.comments ? '⚠' : '✘'
 
         // Format date
         const date = new Date(result.date)
@@ -180,25 +180,33 @@ const getExample = (examplePath, filePath) => {
     </div>`)
 
     blocks.push(`<div class="panel" id="${id}-compatibility_panel" style="display: none">
-      <ul class="compatibility">
-        ${compatibility
-    .map(
-      item => `<li>
-          <h3>${item.category}</h3>
-          <ul>
-            ${item.results
-    .map(
-      result => `<li class="result result--${result.statusCode}">
-              ${result.env ? `<strong>${result.env}</strong>:` : ''}
-              ${result.statusIndication} ${result.status} (${result.date})
-            </li>`
-    )
-    .join('')}
-          </ul>
-        </li>`
-    )
-    .join('')}
-      </ul>
+      <table class="compatibility">
+        <thead>
+          <th class="category">Category</th>
+          <th class="result">Result</th>
+          <th class="comments">Comments</th>
+          <th class="date">Date</th>
+        </thead>
+        <tbody>
+          ${compatibility
+          .map(
+            item => `<tr>
+                <th>${item.category}</th>
+                  ${item.results
+          .map(
+            result => `<td class="result result--${result.statusCode}">
+                    ${result.env ? `<strong>${result.env}</strong>:` : ''}
+                    ${result.statusIndication} ${result.status}
+                  </td>
+                  <td>TODO</td>
+                  <td>${result.date}</td>`
+          )
+          .join('')}
+              </tr>`
+          )
+          .join('')}
+        </tbody>
+      </table>
     </div>`)
   }
 
