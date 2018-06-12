@@ -1,7 +1,7 @@
 
 .logo {
-  margin-left: 40px;
-  width: 164px;
+  margin-left: ($navWidthMin - $logo_width) / 2;
+  margin-right: ($navWidthMin - $logo_width) / 2;
 	text-decoration: none;
   overflow: hidden;
   display: block;
