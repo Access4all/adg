@@ -14,16 +14,6 @@ You may find it surprising that the first thing we will be talking about is expl
 
 Then, while it may be the most natural thing in the world for you to read a website on a traditional screen and control it using a mouse and keyboard, you may not be familiar with alternative devices that surprisingly many users worldwide rely on. So, get the fundamentals of those: how they work, how they are commonly used, and what you have to pay attention to when providing support for them.
 
-## Chapters
-
-We begin with [Semantics and their importance for accessibility](/knowledge/semantics), where we explain what power truly lies in HTML, and why using it properly is so important.
-
-This is followed by [ARIA - when HTML simply isn't enough](/knowledge/aria), something many developers may not have heard about yet - and while it provides powerful techniques for optimising a website's accessibility, there are some huge pitfalls you need to know about first.
-
-In [Introduction to keyboard only usage](/knowledge/keyboard-only), we explain everything you need to know about browsing a website using a keyboard only, something that is very usual for many people with disabilities.
-
-Finally, in [Introduction to desktop screen reader usage](/knowledge/desktop-screen-readers), you finally get acquainted with the usage of screen readers.
-
 ## How to go through this part
 
 First of all, before you continue reading, be sure you have gone through the previous parts already:

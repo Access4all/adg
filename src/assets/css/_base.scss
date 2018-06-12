@@ -37,7 +37,6 @@ textarea {
 	@include textantialiasing;
 }
 
-
 // links
 a:active {
 	outline: none;
@@ -87,17 +86,23 @@ p img {
 }
 
 .example-link {
+  display: block;
 
   &-text {
     display: inline-block;
     width: 100%;
 		text-decoration: underline;
 		padding-bottom: 5px;
-		font-weight: bold;
+		font-weight: 500;
+
+    &::after {
+      content: ':';
+    }
   }
 }
 
 .accordion {
+  margin-top: 0.5em;
   font-weight: bold;
 
   .control {
@@ -117,7 +122,8 @@ p img {
       }
 
       &:focus + label {
-        outline: auto;
+      outline: 2px dotted var(--theme-color-dark);
+      outline-offset: 2px;
       }
     }
   }

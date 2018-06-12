@@ -14,11 +14,6 @@
   }
 }
 
-.theme-welcome {
-  --theme-color-dark: $theme-1-dark;
-  --theme-color-light: $theme-1-light;
-}
-
 .theme-introduction {
 //  --theme-color-dark: $theme-1-dark;
 //  --theme-color-light: $theme-1-light;
@@ -36,7 +31,18 @@
   --theme-color-light: $theme-3-light;
 }
 
+.theme-welcome,
 .theme-examples {
-  --theme-color-dark: $theme-4-dark;
-  --theme-color-light: $theme-4-light;
+  --theme-color-dark: $theme-1-dark;
+  --theme-color-light: $theme-1-light;
+}
+
+.theme-welcome {
+  .site-content {
+    h1 {
+      padding-bottom: 40px;
+    }
+
+    margin-bottom: 0;
+  }
 }

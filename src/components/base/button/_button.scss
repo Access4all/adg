@@ -1,9 +1,9 @@
 
 .button {
+  background-color: var(--theme-color-light);
   border: 1px solid var(--theme-color-dark);
+  color: var(--theme-color-dark);
 
-  @include theme(color, white);
-  @include theme(background-color, var(--theme-color-dark));
   padding: .25em .5em;
   border-radius: 3px;
   display: inline-block;
@@ -14,5 +14,10 @@
   }
   &:hover {
     @include theme(background-color, var(--theme-color-light));
+  }
+
+  &:focus {
+    outline: 2px dotted var(--theme-color-dark);
+    outline-offset: 2px;
   }
 }

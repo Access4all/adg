@@ -63,25 +63,25 @@
 
 @mixin h3 {
 	@include font-m;
-  @include font-weight(bold);
+  @include font-weight(500);
 	font-family: $base-font;
 }
 
 @mixin h4 {
   @include font-s;
-  @include font-weight(bold);
+  @include font-weight(500);
   font-family: $base-font;
 }
 
 @mixin h5 {
   @include font-xs;
-  @include font-weight(bold);
+  @include font-weight(500);
   font-family: $base-font;
 }
 
 @mixin h6 {
   @include font-xxs;
-  @include font-weight(bold);
+  @include font-weight(500);
   font-family: $base-font;
 }
 

@@ -19,12 +19,18 @@
   h2 {
     @include theme-color;
   }
+
+  a {
+    color: var(--theme-color-dark);
+  }
+
   p, li {
     > code {
-      @include theme(background-color, main);
-      @include theme(color, bg);
+      background-color: var(--theme-color-light);
+      color: var(--theme-color-dark);
       padding: .1em .25em;
       border-radius: 3px;
+      font-size: 0.9em;
     }
   }
   pre code {
