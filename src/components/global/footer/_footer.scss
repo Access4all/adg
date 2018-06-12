@@ -5,6 +5,7 @@
   margin-top: 2 * $gutter;
 	margin-left: auto;
 	margin-right: auto;
+  margin-bottom: 0;
   font-weight: 300;
 
   //width: 100%;
@@ -32,6 +33,11 @@
 
     &:focus {
       outline: 2px dotted var(--theme-color-dark);
+      outline-offset: 2px;
+    }
+
+    &:hover, &:focus {
+      color: var(--theme-color-dark);
     }
   }
 }
@@ -69,11 +75,11 @@
 }
 
 .footer--logolink {
-  height: 60px;
   position: relative;
 
   img {
     border: 0;
+    height: 40px;
   }
 }
 
