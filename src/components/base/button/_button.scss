@@ -1,6 +1,6 @@
 
 .button {
-  border: 1px solid var(--theme-color-dark);
+  border: 1px solid #000;
 
   @include theme(color, white);
   @include theme(background-color, var(--theme-color-dark));
@@ -14,5 +14,10 @@
   }
   &:hover {
     @include theme(background-color, var(--theme-color-light));
+  }
+
+  &:focus {
+    outline: 2px dotted var(--theme-color-dark);
+    outline-offset: 2px;
   }
 }

@@ -5,6 +5,8 @@
   margin-top: 2 * $gutter;
 	margin-left: auto;
 	margin-right: auto;
+  font-weight: 300;
+
   //width: 100%;
   &:before {
     @include navbar_white_line__pseudo;

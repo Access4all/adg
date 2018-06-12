@@ -87,6 +87,7 @@ p img {
 }
 
 .example-link {
+  display: block;
 
   &-text {
     display: inline-block;
@@ -98,6 +99,7 @@ p img {
 }
 
 .accordion {
+  margin-top: 0.5em;
   font-weight: bold;
 
   .control {
@@ -117,7 +119,8 @@ p img {
       }
 
       &:focus + label {
-        outline: auto;
+      outline: 2px dotted var(--theme-color-dark);
+      outline-offset: 2px;
       }
     }
   }

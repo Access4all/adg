@@ -21,8 +21,8 @@
   }
   p, li {
     > code {
-      @include theme(background-color, main);
-      @include theme(color, bg);
+      background-color: var(--theme-color-light);
+      border: 1px solid var(--theme-color-dark);
       padding: .1em .25em;
       border-radius: 3px;
     }
@@ -37,5 +37,19 @@
     outline: 2px dotted var(--theme-color-dark);
     outline-offset: 4px;
     color: var(--theme-color-dark);
+  }
+
+  table, th, td {
+    margin: 1em 0;
+    padding: 10px;
+    border: 1px solid var(--theme-color-dark);
+  }
+
+  th {
+    background-color: var(--theme-color-light);
+  }
+
+  td {
+    font-weight: 300;
   }
 }
