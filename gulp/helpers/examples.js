@@ -189,22 +189,24 @@ const getExample = (examplePath, filePath) => {
         </thead>
         <tbody>
           ${compatibility
-          .map(
-            item => `<tr>
+    .map(
+      item => `<tr>
                 <th>${item.category}</th>
                   ${item.results
-          .map(
-            result => `<td class="result result--${result.statusCode}">
+    .map(
+      result => `<td class="result result--${
+        result.statusCode
+      }">
                     ${result.env ? `<strong>${result.env}</strong>:` : ''}
                     ${result.statusIndication} ${result.status}
                   </td>
                   <td>TODO</td>
                   <td>${result.date}</td>`
-          )
-          .join('')}
+    )
+    .join('')}
               </tr>`
-          )
-          .join('')}
+    )
+    .join('')}
         </tbody>
       </table>
     </div>`)
