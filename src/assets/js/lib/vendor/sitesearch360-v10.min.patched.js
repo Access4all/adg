@@ -3333,6 +3333,11 @@ var UniBox = function () {
     }
   })()
 function initializeSs360 () {
+  // This prevents an error when the widget is manually initialised.
+  if (window.ss360Config === undefined) {
+    return
+  }
+
   ;(ss360Settings = sxQuery.extend(
     {
       suggestUrl: '',
