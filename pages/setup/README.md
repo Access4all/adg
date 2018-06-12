@@ -17,16 +17,6 @@ Luckily, you don't need to own and control each and every single one of them. In
 
 The good news with that is: most of the proposed software can be used free of charge.
 
-## Chapters
-
-We begin with [Windows operating system](/setup/windows). Here you will learn why Windows is a must-have for developing accessible websites, and optionally how you can run it inside a dedicated environment (a virtual machine).
-
-In [Web browsers](/setup/browsers), you will encounter the list of needed browsers. No surprise, you are certainly already familiar with them.
-
-In [Screen readers](/setup/screen-readers), there's the list of relevant screen readers. Used mainly by blind people, screen readers are probably the most important tools when it comes to accessibility.
-
-Finally, [Accessibility helper tools](/setup/helper-tools) presents a few more tools supporting your daily accessibility routine.
-
 ## How to go through this part
 
 First of all, before you continue reading, be sure you have gone through the previous part already: [Welcome to this guide](/welcome).
