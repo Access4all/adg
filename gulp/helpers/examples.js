@@ -84,65 +84,63 @@ const getExample = (examplePath, filePath) => {
   const compatibilitySummaryBrowsers = ['FF', 'IE']
   const compatibilitySummary = []
 
-  const compatibility = code.details.compatibility
-    ? _.map(code.details.compatibility, (results, category) => {
-      const isKeyboard = results.status
+  let compatibility = []
 
-      // Optimize structure for rendering
-      if (isKeyboard) {
-        results = [results]
-      } else {
-        results = _.map(results, (result, env) => {
-          result.env = env
-
-          return result
-        })
-      }
-
-      results = results.map(result => {
-        // Create color code and visual indication based on status and whether comments are present
-        result.statusCode =
-            result.status === 'pass'
-              ? result.comments ? 'yellow' : 'green'
-              : 'red'
-        result.statusIndication =
-            result.status === 'pass' ? '✔' : result.comments ? '⚠' : '✘'
-
-        // Format date
-        const date = new Date(result.date)
-
-        // eslint-disable-next-line eqeqeq
-        if (date != 'Invalid Date') {
-          result.date = `${date.getFullYear()}-${date.getMonth() +
-              1}-${date.getDate()}`
+  if (code.details.compatibility) {
+    for (const [category, value] of Object.entries(
+      code.details.compatibility
+    )) {
+      const results = value.status
+        ? {
+          [category]: value
         }
+        : value
 
-        return result
-      })
+      for (const [browser, result] of Object.entries(results)) {
+        const env = category === browser ? category : `${category} ${browser}`
 
-      // Create summary of screenreader+browser combinations
-      if (!isKeyboard) {
-        compatibilitySummaryBrowsers.forEach(browser => {
-          const result = results.find(result => {
-            return result.env && result.env.match(browser)
-          })
-
-          if (result) {
-            compatibilitySummary.push({
-              name: `${category} + ${browser}`,
-              statusCode: result.statusCode,
-              statusIndication: result.statusIndication
-            })
-          }
+        compatibility.push({
+          env,
+          status: result.status,
+          date: result.date,
+          comments: result.comments || null,
+          category
         })
       }
+    }
+  }
 
-      return {
-        category,
-        results
-      }
-    })
-    : null
+  compatibility = compatibility.map(result => {
+    // Create color code and visual indication based on status and whether comments are present
+    result.statusCode =
+      result.status === 'pass' ? (result.comments ? 'yellow' : 'green') : 'red'
+    result.statusIndication =
+      result.status === 'pass' ? '✔' : result.comments ? '⚠' : '✘'
+
+    // Format date
+    const date = new Date(result.date)
+
+    // eslint-disable-next-line eqeqeq
+    if (date != 'Invalid Date') {
+      result.date = `${date.getFullYear()}-${date.getMonth() +
+        1}-${date.getDate()}`
+    }
+
+    // Create summary of screenreader+browser combinations
+    const summaryBrowser = compatibilitySummaryBrowsers.find(browser =>
+      result.env.match(browser)
+    )
+
+    if (summaryBrowser) {
+      compatibilitySummary.push({
+        name: `${result.category} + ${summaryBrowser}`,
+        statusCode: result.statusCode,
+        statusIndication: result.statusIndication
+      })
+    }
+
+    return result
+  })
 
   const btns = ['html', 'css', 'js'].filter(type => code[type]).map(type => {
     return `<div class="control">
@@ -190,21 +188,14 @@ const getExample = (examplePath, filePath) => {
         <tbody>
           ${compatibility
     .map(
-      item => `<tr>
-                <th>${item.category}</th>
-                  ${item.results
-    .map(
-      result => `<td class="result result--${
-        result.statusCode
-      }">
-                    ${result.env ? `<strong>${result.env}</strong>:` : ''}
-                    ${result.statusIndication} ${result.status}
-                  </td>
-                  <td>TODO</td>
-                  <td>${result.date}</td>`
-    )
-    .join('')}
-              </tr>`
+      result => `<tr>
+  <th>${result.env}</th>
+    <td class="result result--${result.statusCode}">
+      ${result.statusIndication} ${result.status}
+    </td>
+    <td>${result.comments ? result.comments : '-'}</td>
+    <td>${result.date}</td>
+</tr>`
     )
     .join('')}
         </tbody>
