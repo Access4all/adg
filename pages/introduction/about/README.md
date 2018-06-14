@@ -12,9 +12,9 @@ changed: "2018-06-14"
 
 On one side, there is the Swiss foundation «Access for all», which is the initiator and leader of the whole initiative. It consists of a small team of accessibility experts and web developers, half of which having special needs themselves.
 
-The foundation is in business since the year 2000, and since then has accompanied hundreds of local and international websites in the process of becoming accessible. The foundation for this have always been the official guidelines (like the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) and [Accessible Rich Internet Applications](https://www.w3.org/TR/html-aria/)), combined with the real-life experiences of those employees that have special needs, and profound expertise of fullstack web developers.
+The foundation is in business since the year 2000, and since then has accompanied hundreds of local and international websites in the process of becoming accessible. The foundation for this have always been the official guidelines like the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG) and [Accessible Rich Internet Applications](https://www.w3.org/TR/html-aria/) (ARIA), combined with the real-life experiences of those employees with special needs, and profound expertise of fullstack web developers.
 
-So the contents of this guide are the result of nearly two decades of hands-on experience in all topics accessibility.
+In one sentence: the contents of this guide are the result of nearly two decades of hands-on experience in all topics accessibility.
 
 For more information, see [www.access-for-all.ch](http://access-for-all.ch/).
 
