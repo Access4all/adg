@@ -59,3 +59,5 @@ Some interesting peculiarities:
     - Each panel's heading has "panel" appended.
 - The tablist/carousel/accordion controls are placed in the DOM before the panels:
     - As the whole element is properly marked up with headings, screen reader users can jump very quickly between controls and panels (see [How to handle headings](/examples/headings/handling)).
+- Using `.tablist:focus-within .control label`, a style can be applied to all radio button labels upon interacting with the tablist.
+    - This gives users a clue that they are interacting with a single control now (indicating to use the `Arrow` keys instead of `Tab` to navigate through tab items).

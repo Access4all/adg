@@ -15,6 +15,10 @@ body {
   margin-bottom: 20px;
 }
 
+.accordion:focus-within .control label {
+  background-color: yellow;
+}
+
 .control h2 {
   margin-bottom: 0;
 }

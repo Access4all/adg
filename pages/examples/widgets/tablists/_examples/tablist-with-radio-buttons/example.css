@@ -11,6 +11,15 @@ body {
   padding: 20px;
 }
 
+fieldset {
+  border: 0;
+  padding: 4px;
+}
+
+.tablist:focus-within .control label {
+  background-color: yellow;
+}
+
 .control {
   display: inline-block;
 }
@@ -21,7 +30,7 @@ body {
 }
 
 input[type="radio"]:checked + label {
-  background-color: lightyellow;
+  background-color: lightyellow !important;
   border-bottom-color: lightyellow;
 }
 
