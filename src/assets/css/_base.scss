@@ -77,6 +77,7 @@ button {
 		background-size: 20px;
 		padding-left: 40px;
 		font-weight: bold;
+    text-align: left;
 	}
 }
 
@@ -87,13 +88,21 @@ p img {
 
 .example-link {
   display: block;
+  border: 1px solid var(--theme-color-dark);
+  background-color: var(--theme-color-light);
+  border-radius: 10px;
+  padding: 10px 12px 4px 12px;
+
+  &:hover {
+    border-width: 2px;
+  padding: 9px 11px 3px 11px;
+  }
 
   &-text {
     display: inline-block;
     width: 100%;
-		text-decoration: underline;
 		padding-bottom: 5px;
-		font-weight: 500;
+		font-weight: bold;
 
     &::after {
       content: ':';
