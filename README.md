@@ -6,7 +6,7 @@ TODO: Add Description
 
 ### Local setup
 
-### Prerequisites
+#### Prerequisites
 
 - Node 8
 
