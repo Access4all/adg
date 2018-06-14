@@ -6,6 +6,6 @@ changed: "2018-05-13"
 
 # Sensible usage of ARIA roles and attributes
 
-**There are some ARIA roles and attributes that we use and recommend in our daily business, especially regarding JavaScript widgets. Many times, there are alternative techniques stated: if feasible, we use them instead of ARIA.**
+**There are some ARIA roles and attributes that we use and recommend in our daily business, especially regarding JavaScript widgets. If you know their peculiarities, they sometimes can be pretty helpful (with predictable risk). But often we also offer alternative techniques: if feasible, we use (and recommend) them instead of ARIA.**
 
 Before you proceed, please thoroughly read [ARIA - when HTML simply isn't enough](/knowledge/aria) and [Introduction to desktop screen reader usage](/knowledge/desktop-screen-readers), especially [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes)!

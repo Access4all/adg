@@ -30,9 +30,9 @@ Seeing is believing: this part contains more than hundred code examples, all of 
 
 Examples can be sent directly to [CodePen.io](https://codepen.io/), where they can be manipulated and experimented with.
 
-### Compatibility log
+### Compatibility with assistive devices
 
-All our examples are heavily tested on accessibility. The compatibility results are displayed below example each example.
+All our examples are heavily tested on accessibility. The compatibility results are displayed below each example.
 
 There are some special types of examples though:
 
@@ -40,4 +40,7 @@ There are some special types of examples though:
      - As such, such examples are inaccessible by design, and do not offer any results.
 - A starting point (or interim step) within a sequence of examples that aim to demonstrate how to deal with and optimise a certain accessibility requirement.
     - Such sequences always result in a final (and fully accessible) example.
-- An example showing a (theoretically valid)
+- An example showing a (theoretically valid) technique that is not accessible and we advise not to use.
+    - Here the results fail, which is exactly what we want to show.
+
+In general, before simply copy&pasting anything into your own project (thinking "pass" always means pass - in each and every possible situation), be sure you truly grasp what is going on in the example and that you have read and understood the written content around it. Sometimes an example may be marked as accessible, but in the description its use indeed is discouraged.
