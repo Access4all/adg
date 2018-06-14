@@ -1,14 +1,22 @@
-# Prerequisites
+# Accessibility Developer Guide
+
+TODO: Add Description
+
+## Contribution
+
+### Local setup
+
+### Prerequisites
 
 - Node 8
 
-# Set up
+#### Setup
 
 ```
-npm i
+npm install
 ```
 
-# Run
+#### Start / build
 
 Dev:
 ```
