@@ -66,5 +66,6 @@ A link with an `aria-expanded="true"` attribute is placed around each panel's he
 While this may feel tempting in some circumstances, there are several drawbacks:
 
 - It needs more JavaScript (instead of relying on browser standard behaviour).
+    - The current implementation allows multiple elements to be open. If you wanted to restrict it to one element though, a lot of additional JavaScript would be needed to manage states - something that radio buttons would offer "for free".
 - This solution is less intuitive: a screen reader announcement "link X collapsed" is less expressive than "show panel X checkbox not checked" or "show panel X radio button not checked 2 of 3".
 - Missing backwards compatibility for older clients with incomplete/missing ARIA support.
