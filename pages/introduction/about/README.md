@@ -1,12 +1,14 @@
 ---
 navigation_title: "About"
-position: 9
-changed: "2018-06-06"
+position: 1
+changed: "2018-06-14"
 ---
 
-# About this initiative
+# About this guide
 
 **The «Accessibility Developer Guide» (ADG) is an initiative of «Access for all», Swiss foundation for technology use for people with special needs. It is developed and maintained in collaboration with a number of acclaimed web agencies. The intent behind the ADG is to bridge the gap between providers of websites and users with special needs.**
+
+The content in its entirety is the result of many years of hands-on practice in the field of testing websites for accessibility (and helping to optimise them), as well as developing accessible web applications. It emerges from the daily experience of user experts with special needs, blended together with the profound technical knowledge of fullstack web developers.
 
 ## «Access for all»
 

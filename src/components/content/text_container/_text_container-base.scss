@@ -62,4 +62,11 @@
   td {
     font-weight: 300;
   }
+
+  ol {
+    padding-left: 26px;
+    li {
+      list-style: inherit;
+    }
+  }
 }
