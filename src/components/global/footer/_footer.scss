@@ -22,9 +22,17 @@
   @include above-mobile {
     .footer--left {
       float: left;
+
+      img {
+        height: 80px;
+      }
     }
     .footer--right {
       float: right;
+
+      img {
+        height: 40px;
+      }
     }
   }
 
@@ -64,6 +72,7 @@
 
 .footer--label {
   clear: both;
+  margin-bottom: 10px;
 }
 
 .footer--agency {
@@ -79,7 +88,6 @@
 
   img {
     border: 0;
-    height: 40px;
   }
 }
 
