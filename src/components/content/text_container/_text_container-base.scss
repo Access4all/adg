@@ -24,19 +24,23 @@
     color: var(--theme-color-dark);
   }
 
-  p, li {
+  p, li, pre {
     > code {
       background-color: var(--theme-color-light);
       color: var(--theme-color-dark);
       padding: .1em .25em;
       border-radius: 3px;
-      font-size: 0.9em;
+      @include font-xs;
     }
   }
-  pre code {
-    border: 1px solid black;
-    @include theme(border-color, main);
-    @include font-xs;
+  pre {
+    background-color: transparent;
+
+    code {
+      border: none;
+      padding: 10px 16px;
+      border-radius: 10px;
+    }
   }
 
   a:focus {
