@@ -22,17 +22,20 @@
   @include above-mobile {
     .footer--left {
       float: left;
-
-      img {
-        height: 80px;
-      }
     }
     .footer--right {
       float: right;
+    }
+  }
 
-      img {
-        height: 40px;
-      }
+  .footer--left {
+    img {
+      height: 80px;
+    }
+  }
+  .footer--right {
+    img {
+      height: 40px;
     }
   }
 

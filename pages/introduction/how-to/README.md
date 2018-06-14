@@ -36,6 +36,15 @@ The contents of this guide consequentially build up on each other. So we highly 
 
 However, we have given our best to make the individual content elements als self-standing and self-explanatory as possible. This allows you to browse them on their own. Use the content navigation to quickly access different contents.
 
+## Staying up to date
+
+To be informed about new or updated contents, related activities (events) or similar, subscribe to our social media channels:
+
+- Facebook: [AccessibilityDeveloperGuide](https://www.facebook.com/AccessibilityDeveloperGuide)
+- Twitter: [A11yDevGuide](https://twitter.com/A11yDevGuide)
+
+We also provide a content feed: [RSS](http://localhost:3000/feed/rss.xml).
+
 ## Contributing to this guide
 
 This guide is the result of tight collaboration between accessibility experts and web developers. Its content by far is not exhaustive yet: there remain a lot of topics to talk about, and due to the fast evolution of web technologies, there certainly will always be.
@@ -45,3 +54,7 @@ We welcome everyone who wants to join our initiative, be it with adding new cont
 We are happy about issues and pull requests. Please refer to our contribution guidelines: [Access4all/adg/CONTRIBUTION.md (GitHub.com)](https://github.com/Access4all/adg/CONTRIBUTION.md).
 
 Let us make the Internet a more accessible place together!
+
+## Getting in touch with us
+
+Please use any of our social media channels to contact us.
