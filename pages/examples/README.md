@@ -1,7 +1,7 @@
 ---
 navigation_title: "Examples"
 position: 4
-changed: "2018-06-05"
+changed: "2018-04-02"
 ---
 
 # Examples of accessibility patterns
@@ -12,7 +12,7 @@ changed: "2018-06-05"
 
 First of all, before you continue reading, be sure you have gone through the previous parts already:
 
-- [Introduction to this guide](/intro)
+- [Welcome to this guide](/welcome)
 - [Setup of the accessibility environment](/setup)
 - [Knowledge about accessibility](/knowledge)
 
@@ -22,10 +22,22 @@ Still, we recommend you to get at least a broad overview of all available conten
 
 There's no specific sequence or internal dependency between the chapters. So every chapter can be read on its own. Whenever other chapters are related to the current one, we offer links pointing to them.
 
-## One solution working for all
+## Code examples
 
-All of our examples are based on the understanding that for the very most (if not all) accessibility requirements there is one single solution that works best for all possible user profiles. Usually this boils down to the usage of plain standard HTML (spiced up with CSS and JavaScript), as described here: [Semantics and their importance for accessibility](/knowledge/semantics).
+Seeing is believing: this part contains more than hundred code examples, all of which can be experienced live within our guide.
 
-If additional optimisations for assistive devices is needed, usually some ARIA techniques are added, see [ARIA - when HTML simply isn't enough](/knowledge/aria). But we do this only with techniques that have proven to be rock solid: this means that they work in the most used browser and screen reader combinations, see [Relevant combinations of screen readers and browsers](/knowledge/desktop-screen-readers/relevant-combos), and no disturbing side effects have to be expected with other devices (like exotic or legacy software).
+### Manipulation on CodePen.io
 
-In one sentence: we do not provide solutions that **should** work, but solutions that **do** work.
+Examples can be sent directly to [CodePen.io](https://codepen.io/), where they can be manipulated and experimented with.
+
+### Compatibility log
+
+All our examples are heavily tested on accessibility. The compatibility results are displayed below example each example.
+
+There are some special types of examples though:
+
+- "Bad" examples aim to demonstrate typical mis-uses or misconceptions of a concept, bad code, or similar.
+     - As such, such examples are inaccessible by design, and do not offer any results.
+- A starting point (or interim step) within a sequence of examples that aim to demonstrate how to deal with and optimise a certain accessibility requirement.
+    - Such sequences always result in a final (and fully accessible) example.
+- An example showing a (theoretically valid)

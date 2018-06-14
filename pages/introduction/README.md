@@ -6,8 +6,6 @@ changed: "2018-06-06"
 
 # Introduction to this guide
 
-**Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla.
+**The «Accessibility Developer Guide» (ADG) is an initiative of «Access for all», Swiss foundation for technology adapted to people with disabilities. It is developed and maintained in collaboration with a number of acclaimed web agencies. The vision behind the ADG is to bridge the gap between providers of websites and users with special needs.**
 
-Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla. Bla bla bla.**
-
-![](_media/1511822242367.png)
+Please take a moment to get a general picture about our guide. This will help you to get the most out of it while reading.

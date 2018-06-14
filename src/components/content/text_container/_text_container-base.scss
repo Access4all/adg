@@ -24,6 +24,12 @@
     color: var(--theme-color-dark);
   }
 
+  blockquote {
+    padding-left: 10px;
+    border-left: 10px solid var(--theme-color-light);
+    font-style: italic;
+  }
+
   p, li, pre {
     > code {
       background-color: var(--theme-color-light);
@@ -61,5 +67,12 @@
 
   td {
     font-weight: 300;
+  }
+
+  ol {
+    padding-left: 26px;
+    li {
+      list-style: inherit;
+    }
   }
 }
