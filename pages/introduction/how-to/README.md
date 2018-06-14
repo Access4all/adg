@@ -1,6 +1,6 @@
 ---
 navigation_title: "How to"
-position: 2
+position: 1
 changed: "2018-06-14"
 ---
 
@@ -11,6 +11,8 @@ changed: "2018-06-14"
 ## Reading and working through this guide
 
 This guide aims to provide a comprehensive resource for both beginners looking for a pragmatic way to dive into the world of accessibility, as well as seasoned experts wanting to extend their knowledge and embracing new inspirations.
+
+The main audience is web developers, but also testing staff, content editors, project managers, etc. may benefit from it.
 
 ### Language
 
