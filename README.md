@@ -1,6 +1,12 @@
-# Accessibility Developer Guide
+# Welcome to the Accessibility Developer Guide!
 
-TODO: Add Description
+https://accessibility-developer-guide.netlify.com
+
+If you want to learn about accessible website development, you are at the right place.
+
+TODO: Add proper description
+
+---
 
 ## Contribution
 
