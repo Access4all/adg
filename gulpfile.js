@@ -21,7 +21,10 @@ function errorHandler (err) {
 gulp.task('html', cb =>
   html(
     {
-      src: './pages/**/*.md',
+      src: [
+        './pages/**/*.md',
+        '!./pages/**/_examples/**/*.md'
+      ],
       base: './pages',
       host: 'https://accessibility-developer-guide.netlify.com',
       sitemap: './dist/sitemap.xml',

@@ -43,7 +43,7 @@ module.exports = (config, cb) => {
             const data = Object.assign(
               {
                 codePen: helpers.getCodePenForm(code),
-                title: `${articleMeta.navigation_title}: Code example`,
+                title: `${code.details.title}: Code example`,
                 article: {
                   url: `/${articleUrl}`,
                   title: articleMeta.navigation_title
