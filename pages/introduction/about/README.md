@@ -54,11 +54,11 @@ The ADG is a community driven resource: everybody is welcome to become a part in
 
 Clockwise from top right:
 
-- **Donato Rotunno**, web developer at Liip.
-- **Joshua Muheim**, web developer and accessibility expert at «Access for all».
-- **Jürgen Rudigier**, frontend developer at Hinderling-Volkart.
-- **Thomas Jaggi**, web developer at UNIC.
-- **Anton Bolfing**, accessibility expert at «Access for all».
-- **Bernhard Heinser**, managing director at «Access for all».
-- **Esther Brunner**, web developer at Zeix.
-- **Markus Graf**, webdesign freelancer.
+- Donato Rotunno, web developer at Liip.
+- Joshua Muheim, web developer / accessibility expert at «Access for all».
+- Jürgen Rudigier, frontend developer at Hinderling-Volkart.
+- Thomas Jaggi, web developer at UNIC.
+- Anton Bolfing, accessibility expert at «Access for all».
+- Bernhard Heinser, managing director at «Access for all».
+- Esther Brunner, web developer at Zeix.
+- Markus Graf, webdesign freelancer.
