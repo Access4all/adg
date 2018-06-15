@@ -28,7 +28,7 @@ The following content elements exist:
 
 1. The top level elements are called **parts**. You are currently in the part titled "Introduction to our guide". In navigations, short titles are used to save space and enhance skim reading; the current part's short title is "Introduction".
 2. Every part contains several **chapters**. You are currently in the chapter titled "How to use this guide"; its short title is "How to".
-3. Most chapters contain several **pages** (and sometimes even sub pages). The current chapter does not have any pages though (or sub pages).
+3. Most chapters contain several **pages** (and sometimes even sub pages). The current chapter does not have any of these though.
 
 A the bottom of each content element, links to its sub-elements are displayed (if there are any). They are similar to the links in the content navigation, but display both the title and lead text of an element, supporting skim reading and providing quick navigation to interesting elements.
 

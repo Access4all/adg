@@ -4,7 +4,7 @@ position: 3
 changed: "2018-06-15"
 ---
 
-# Contributing use this guide
+# Contributing to this guide
 
 **This guide is the result of tight collaboration between accessibility experts and web developers. Its content by far is not exhaustive yet: there remain a lot of topics to talk about, and due to the fast evolution of web technologies, there certainly will always be.**
 
