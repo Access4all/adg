@@ -20,7 +20,7 @@ By the way, the other way round (placing legends into headings) doesn't work, be
 
 ## Faking fieldset/legend using ARIA
 
-Just for the sake of completeness, here is another possible solution. As we know from [Grouping form controls with fieldset and legend](/examples/forms/grouping-with-fieldsetlegend), we can fake `<fieldset>`/`<legend>` structures using ARIA. Alas, we could simply use a heading for that.
+Just for the sake of completeness, here is another possible solution. As we know from [Grouping form controls with fieldset and legend](/examples/forms/grouping-with-fieldset-legend), we can fake `<fieldset>`/`<legend>` structures using ARIA. Alas, we could simply use a heading for that.
 
 Here is the same example as above, but with ARIA:
 
