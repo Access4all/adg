@@ -18,6 +18,8 @@ While visual users usually see both the asterisk and the explanation at a glance
 
 In the following example, the required input field is announced as "Full Name Asterisk" in most screen readers. An experienced user will probably know what this is intended for, but many users will have no clue.
 
+[Example](_examples/required-input-with-asterisk)
+
 As the text explanation "required field" even is below the submit button of the form, a screen reader user probably will never read it, as activating the button usually is the last thing a user does when filling a form.
 
 ## First approach: using ARIA
