@@ -1,6 +1,6 @@
 ---
 navigation_title: "HTML 5 outline"
-position: 8
+position: 7
 changed: "2018-05-01"
 ---
 
