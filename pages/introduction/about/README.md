@@ -6,7 +6,7 @@ changed: "2018-06-14"
 
 # About us
 
-**This project in its entirety is the result of many years of hands-on practice in the field of testing websites for accessibility (and helping to optimise them), as well as developing accessible web applications. It emerged from the daily experience of user experts with special needs, blended together with the profound technical knowledge of fullstack web developers. The «Accessibility Alliance» was born.**
+**The «Accessibility Developer Guide» (ADG) in its entirety is the result of many years of hands-on practice in the field of testing websites for accessibility (and helping to optimise them), as well as developing accessible web applications. It emerged from the daily experience of user experts with special needs, blended together with the profound technical knowledge of fullstack web developers. The «Accessibility Alliance» was born.**
 
 ## «Access for all»
 
@@ -67,6 +67,10 @@ Get in touch with us through:
 - Facebook: [AccessibilityDeveloperGuide](https://www.facebook.com/AccessibilityDeveloperGuide)
 - Twitter: [A11yDevGuide](https://twitter.com/A11yDevGuide)
 
+### The main team
+
+During the last months, a main group of people regularly gathered around developing the ADG.
+
 ![The main team behind the ADG (details read below)](_media/adg-team.jpg)
 
 Clockwise from top right:
@@ -78,4 +82,15 @@ Clockwise from top right:
 - **Anton Bolfing**, accessibility expert at «Access for all».
 - **Bernhard Heinser**, CEO at «Access for all».
 - **Esther Brunner**, web developer at Zeix.
-- **Markus Graf**, webdesign freelancer.
+- **Markus Graf**, web developer.
+
+### The testing staff
+
+Not to forget our highly respected testing staff who took care of validating all contents and code examples (all of them working for «Access for all»):
+
+- **Daniele Corciulo**, blind accessibility expert.
+- **Gianfranco Giudice**, blind accessibility expert.
+- **Petra Ritter**, multiple-handicapped accessibility expert.
+- **Mohamed Sherif**, blind accessibility trainee.
+- **Reto Inniger**, vision-impaired accessibility trainee.
+- **Romano Spescha**, vision-impaired accessibility trainee.

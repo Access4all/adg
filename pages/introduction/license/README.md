@@ -4,7 +4,7 @@ position: 4
 changed: "2018-06-15"
 ---
 
-# A license for a 100% true Open Source
+# A license for 100% true Open Source
 
 **The Accessibility Developer Guide (ADG) is published under the MIT License. Copyright © 2018, «Access for all», Swiss Foundation for technologies that fit the needs of persons with disabilities.**
 
