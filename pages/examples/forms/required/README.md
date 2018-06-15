@@ -18,13 +18,13 @@ While visual users usually see both the asterisk and the explanation at a glance
 
 In the following example, the required input field is announced as "Full Name Asterisk" in most screen readers. An experienced user will probably know what this is intended for, but many users will have no clue.
 
-[Example](_examples/required-inputs-with-html-5-and-aria)
+[Example](_examples/required-input-with-asterisk)
 
 As the text explanation "required field" even is below the submit button of the form, a screen reader user probably will never read it, as activating the button usually is the last thing a user does when filling a form.
 
 ## First approach: using ARIA
 
-As we know from [Placing non-interactive content between form controls](/examples/forms/non-interactive-content), the text "required field" can be associated to the form control by using `aria-describedby`. And as we now don't need the text by itself anymore for screen readers, we can also hide it from them using `aria-hidden` (see [Hiding elements from screen readers using aria-hidden](/examples/hiding-elements/from-screen-readers)).
+As we know from [Placing non-interactive content between form controls](/examples/forms/non-interactive-content), the text "required field" can be associated to the form control by using `aria-describedby`. And as we now do not need the text by itself anymore for screen readers, we can also hide it from them using `aria-hidden` (see [Hiding elements from screen readers using aria-hidden](/examples/hiding-elements/from-screen-readers)).
 
 [Example](_examples/required-input-with-asterisk-and-aria)
 
@@ -48,8 +48,10 @@ To prevent Internet Explorer from making the SVGs focusable, the `focusable="fal
 
 And if you really want to make it fancy, you could combine this technique with a tooltip showing "Required" on hover: [Tooltip widgets (or: screen tip, balloon)](/examples/widgets/tooltips).
 
-## Using HTML5 client side validations
+## Using HTML 5 client side validations
 
 Instead of a applying a visually hidden text "required", one can set a `required` attribute to the input: this makes screen readers announce an input as a required one.
 
-Technically this is much easier and cleaner (more info here: [HTML 5 client side validations](/examples/forms/html-5-validations)). Still, there may be cases where other texts than simply "required" are needed (and where there is no standard HTML attribute available), so it's good to have a flexible solution.
+[Example](_examples/required-inputs-with-html-5)
+
+Technically this is much easier and cleaner (more information here: [HTML 5 client side validations](/examples/forms/html-5-validations)). Still, there may be cases where other texts than simply "required" are needed (and where there is no standard HTML attribute available), so it's good to have a flexible solution.

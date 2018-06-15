@@ -14,13 +14,13 @@ The following example contains a very basic headings outline. It may look famili
 
 [Example](_examples/generally-good-headings)
 
-On a visual level, the headings' prominent visual attributes (e.g. font size, weight, sometimes colours, etc.) allow visual users to know when a new chapter or sub chapter starts or ends, or to skim through the pages of a book looking for a specific chapter.
+On a visual level, the headings' prominent visual attributes (for example font size, weight, sometimes colours, etc.) allow visual users to know when a new chapter or sub chapter starts or ends, or to skim through the pages of a book looking for a specific chapter.
 
 On a semantical level, headings also announce to screen reader users when a new chapter or sub chapter starts or ends. They also allow them to jump from one heading to another quickly. By displaying the full headings outline in the form of a table of contents, screen reader users can get an idea about the page's content very quickly.
 
 ![Document outline in NVDA](_media/document-outline-in-nvda.png)
 
-By the way, if you don't know about semantics, go back and read [Semantics and their importance for accessibility](/knowledge/semantics).
+By the way, if you do not know about semantics, go back and read [Semantics and their importance for accessibility](/knowledge/semantics).
 
 ## Hey, this is like in Word!
 

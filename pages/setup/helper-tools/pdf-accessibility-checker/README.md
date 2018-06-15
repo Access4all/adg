@@ -14,7 +14,7 @@ changed: "2018-04-06"
 
 [Download PDF Accessibility Checker](http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html).
 
-As it doesn't have an installer, you can simply extract it to a folder of your liking.
+As it does not have an installer, you can simply extract it to a folder of your liking.
 
 ## Usage
 

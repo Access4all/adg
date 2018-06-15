@@ -32,7 +32,7 @@ Both visual and aural presentation provide identical results to the user. Additi
 
 ## Custom functionality is bad
 
-Many web developers still aren't aware of the importance of semantics and don't use them for various reasons. For example, to prevent default link styles, instead of using the proper `<a>` tag, an inventive developer may have come up with something like that:
+Many web developers still aren't aware of the importance of semantics and do not use them for various reasons. For example, to prevent default link styles, instead of using the proper `<a>` tag, an inventive developer may have come up with something like that:
 
 ```css
 .link {
@@ -54,9 +54,9 @@ Many web developers still aren't aware of the importance of semantics and don't 
 
 ![Screenshot of a fake link](_media/screenshot-of-a-faked-link.png)
 
-In this case, while the visual presentation usually is adapted to pretend a link to the user, screen readers won't announce the element as a link. So the user probably will never try to click it. Admittedly, some screen readers may announce it as "clickable", but this still doesn't say much about the purpose of the element.
+In this case, while the visual presentation usually is adapted to pretend a link to the user, screen readers won't announce the element as a link. So the user probably will never try to click it. Admittedly, some screen readers may announce it as "clickable", but this still does not say much about the purpose of the element.
 
-In addition, the element won't be usable using a keyboard only: while a proper `<a>` tag can be focused, a `<span>` can't. Sure, you could also find a way around this, but chances are high you will always forget about manually addressing some lesser known features of the tags you try to reconstruct - for example, what about browser history support?
+In addition, the element won't be usable using a keyboard only: while a proper `<a>` tag can be focused, a `<span>` cannot. Sure, you could also find a way around this, but chances are high you will always forget about manually addressing some lesser known features of the tags you try to reconstruct - for example, what about browser history support?
 
 Gimmicks like this can destroy the experience for lots of users and often create limits beyond remedy for them. So please: simply use the proper tags in the first place!
 

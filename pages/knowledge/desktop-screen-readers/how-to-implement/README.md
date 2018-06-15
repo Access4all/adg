@@ -10,7 +10,7 @@ changed: "2018-05-30"
 
 ## Some words about ARIA
 
-While most requirements for screen readers can be fulfilled best with traditional HTML (and maybe some JavaScript), the usage of ARIA sometimes is necessary and a big help. So if you haven't done this yet, go back and read [ARIA - when HTML simply isn't enough](/knowledge/aria).
+While most requirements for screen readers can be fulfilled best with traditional HTML (and maybe some JavaScript), the usage of ARIA sometimes is necessary and a big help. So if you haven't done this yet, go back and read [ARIA - when HTML simply is not enough](/knowledge/aria).
 
 ## Keyboard optimisation is half the rent
 
@@ -34,7 +34,7 @@ One method is to use an ARIA live region. But this may interfere with the curren
 
 ### Moving focus
 
-If the focus is set to an element, the screen reader announces it. This can be an easy way to inform users about something on the page: simply set the focus on it. Be sure though that this doesn't result in disorientation for the screen reader user: it shouldn't happen "out of the blue", but only when the screen reader user has done some interaction that caused the page change.
+If the focus is set to an element, the screen reader announces it. This can be an easy way to inform users about something on the page: simply set the focus on it. Be sure though that this does not result in disorientation for the screen reader user: it shouldn't happen "out of the blue", but only when the screen reader user has done some interaction that caused the page change.
 
 An example for moving the focus sensibly is a datepicker widget: when it opens, the focus is set into the available dates, so the user can pick one. If you are really curious and want to learn more about this, skip ahead and read [Datepicker widget](/examples/widgets/datepicker).
 
@@ -46,7 +46,7 @@ When the screen reader's focus is placed on an element, and suddenly this elemen
 
 This works best for form controls, for example text inputs: if it is focused, and its value is changed using JavaScript, screen readers announce the new value. This can be very useful, for example when implementing an autocomplete: when users toggle through the suggestions with the arrow keys, the currently selected value is set to the input field and is directly announced. If you are really curious and want to learn more about this, skip ahead and read [Autosuggest widget (or: autocomplete, lookahead, typeahead)](/examples/widgets/autosuggest).
 
-Sadly, for non-interactive elements, this doesn't seem to work reliably. So for example, if a link is focused by the screen reader, it doesn't notice modifications to its attributes (like `aria-label` or `title`), and also replacing its content isn't noticed.
+Sadly, for non-interactive elements, this does not seem to work reliably. So for example, if a link is focused by the screen reader, it does not notice modifications to its attributes (like `aria-label` or `title`), and also replacing its content is not noticed.
 
 ## Adding descriptive text
 
@@ -60,7 +60,7 @@ While developing, you need to use your screen readers on a regular basis to ensu
 
 We advise you to use NVDA for this. So if you haven't done this yet, go back and read [NVDA installation and configuration](/setup/screen-readers/nvda).
 
-Every now and then, don't forget to counter-check using JAWS though. So if you haven't done this yet, go back and read [JAWS installation and configuration](/setup/screen-readers/jaws).
+Every now and then, do not forget to counter-check using JAWS though. So if you haven't done this yet, go back and read [JAWS installation and configuration](/setup/screen-readers/jaws).
 
 ## Conclusion
 

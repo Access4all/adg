@@ -24,7 +24,7 @@ Inspired by the layout of traditional books, we worked hard to give this guide a
 
 The following content elements exist:
 
-1. The top level elements are called **parts**. You are currently in the part titled "Introduction to this guide". In navigations, short titles are used to save space and enhance skim reading; the current part's short title is "Introduction".
+1. The top level elements are called **parts**. You are currently in the part titled "Introduction to our guide". In navigations, short titles are used to save space and enhance skim reading; the current part's short title is "Introduction".
 2. Every part contains several **chapters**. You are currently in the chapter titled "How to use this guide"; its short title is "How to".
 3. Most chapters contain several **pages** (and sometimes even sub pages). The current chapter does not have any pages though (or sub pages).
 

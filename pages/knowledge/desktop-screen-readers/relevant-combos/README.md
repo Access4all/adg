@@ -8,7 +8,7 @@ changed: "2018-05-01"
 
 **To reach as many users as possible, it's a pragmatic approach to support the most widely used combinations of browsers and screen readers. Here you learn, which those are. Other requirements may only apply in closed environments that are only open to a specific, deterministic group of users.**
 
-As web developers, we're aware of how hard it is to support all relevant devices, operating systems, and browsers. Adding screen readers to the mixture doesn't make things easier: a long list of screen readers can potentially be combined with another long list of browsers, each combination possibly having its own characteristics.
+As web developers, we're aware of how hard it is to support all relevant devices, operating systems, and browsers. Adding screen readers to the mixture does not make things easier: a long list of screen readers can potentially be combined with another long list of browsers, each combination possibly having its own characteristics.
 
 ## Short summary
 
@@ -26,7 +26,7 @@ If you are interested to find out more about the reasoning behind this, continue
 
 ### Determining screen reader market share
 
-Screen readers aren't an integral part of the browser: they simply "sit" on top of it, announcing the available contents to the user. As such, they don't send anything like user agent data or similar to the server, making it impossible to identify them programmatically.
+Screen readers aren't an integral part of the browser: they simply "sit" on top of it, announcing the available contents to the user. As such, they do not send anything like user agent data or similar to the server, making it impossible to identify them programmatically.
 
 As such it is very hard to examine:
 
@@ -42,9 +42,9 @@ The initiative [Web Accessibility In Mind (WebAIM.org)](https://webaim.org/) con
 
 Like every other survey, the WebAIM screen reader survey is expected to reach a rather deterministic sample only: exclusively screen reader users who somehow got to know about the survey and were eager to fill it out are included. As such, its results may be heavily biased and its representativeness may be limited.
 
-Also, we only gain an outline about rough proportions, but no detailed data about absolute statistics. For example, we can say that there are about twice as many JAWS users than NVDA users. But we can't say whether the overall number of JAWS users worldwide is rather some ten thousands, some hundred thousands, or some millions.
+Also, we only gain an outline about rough proportions, but no detailed data about absolute statistics. For example, we can say that there are about twice as many JAWS users than NVDA users. But we cannot say whether the overall number of JAWS users worldwide is rather some ten thousands, some hundred thousands, or some millions.
 
-Finally, we don't have detailed information about differences between countries and continents, nor any details about specific versions of software being used.
+Finally, we do not have detailed information about differences between countries and continents, nor any details about specific versions of software being used.
 
 #### Results
 
@@ -75,7 +75,7 @@ Even though having current versions of both screen readers and browsers availabl
 - When it comes to installing, configuring, and updating their software, many users with special needs are dependent on assistance.
     - Most users with special needs aren't "digital natives" and are thankful if something "just works".
         - This may change in the future, as people with special needs begin to realise the vast potential of modern technology and the impact it can have on their lives.
-    - Much software needed to run assistive devices isn't built accessibly itself, making it hard or even impossible to be self-managed by users with special needs.
+    - Much software needed to run assistive devices is not built accessibly itself, making it hard or even impossible to be self-managed by users with special needs.
 
 As it is not feasible to test dozens of possible software versions, we follow a pragmatic way which is to test always the newest stable versions of both browsers and screen readers.
 

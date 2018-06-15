@@ -56,7 +56,7 @@ This option tells the browser to remember data previously input by the user and 
 
 ![Browser standard autocomplete](_media/browser-standard-autocomplete.png)
 
-This may be counter-intuitive, because it doesn't have anything to do with an autosuggest feature like it is offered for example by [Google Search](https://www.google.com):
+This may be counter-intuitive, because it does not have anything to do with an autosuggest feature like it is offered for example by [Google Search](https://www.google.com):
 
 ![Google autosuggest](_media/google-autosuggest.png)
 
@@ -74,15 +74,15 @@ If you test your forms and stumble over such missing (or irritating) announcemen
 
 ### Missing labels of upload fields (FF)
 
-For `<input type="file">`, browsers draw their own "Choose file" (or similar) button. Although those controls can (and should) have their proper `<label>`, in Firefox, NVDA doesn't announce it.
+For `<input type="file">`, browsers draw their own "Choose file" (or similar) button. Although those controls can (and should) have their proper `<label>`, in Firefox, NVDA does not announce it.
 
 This seems to be a bug in Firefox, see: [Input type="file" is only read as "browse button" in firefox (GitHub.com)](https://github.com/nvaccess/nvda/issues/5326).
 
-### Checkboxes don't trigger focus mode
+### Checkboxes do not trigger focus mode
 
-You may have noticed that NVDA doesn't activate focus mode when focusing a checkbox using the `Tab` key. As each and every other form control activates focus mode upon focus, this may feel irritating (if you haven't done this yet, go back and read [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes)).
+You may have noticed that NVDA does not activate focus mode when focusing a checkbox using the `Tab` key. As each and every other form control activates focus mode upon focus, this may feel irritating (if you haven't done this yet, go back and read [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes)).
 
-More info here: [Why do radio buttons trigger focus mode, but checkboxes don't? (GitHub.com)](https://github.com/nvaccess/nvda/issues/7578).
+More information here: [Why do radio buttons trigger focus mode, but checkboxes do not? (GitHub.com)](https://github.com/nvaccess/nvda/issues/7578).
 
 ### Disabled controls are not focusable
 
@@ -106,7 +106,7 @@ Generally speaking, disabling inputs is seldom what you want. You should use `re
 
 As already pointed out, in our example, we have one separated `<label>` for each form control and associate those pairs using the `for` attribute.
 
-But HTML also the `<label>` to surround the form control, removing the need for a `for` attribute. But this approach can lead to problems in some situations, so we don't recommend to do it (if you are really curious and want to learn more about this, skip ahead and read [Placing non-interactive content between form controls](/examples/forms/non-interactive-content)).
+But HTML also the `<label>` to surround the form control, removing the need for a `for` attribute. But this approach can lead to problems in some situations, so we do not recommend to do it (if you are really curious and want to learn more about this, skip ahead and read [Placing non-interactive content between form controls](/examples/forms/non-interactive-content)).
 
 ## Conclusion
 

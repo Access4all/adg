@@ -18,7 +18,7 @@ Before you continue, please read [Tablist widgets (or: tab panels, tabs)](/examp
 
 ## General requirements
 
-The following requirements are based on well established best practices; unlike most other common widget patterns, the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/) don't offer a section about carousels.
+The following requirements are based on well established best practices; unlike most other common widget patterns, the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/) do not offer a section about carousels.
 
 In addition to the tablists' requirements, and besides many other requirements, we want to stress out explicitly the following:
 

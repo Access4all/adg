@@ -16,11 +16,11 @@ The good news: since HTML 5.2, headings are allowed within `<legend>` elements, 
 
 [Example](_examples/headings-mixed-into-a-form-as-children-of-legends)
 
-By the way, the other way round (placing legends into headings) doesn't work, because a `<legend>` always has to be the first child of its `<fieldset>`.
+By the way, the other way round (placing legends into headings) does not work, because a `<legend>` always has to be the first child of its `<fieldset>`.
 
 ## Faking fieldset/legend using ARIA
 
-Just for the sake of completeness, here is another possible solution. As we know from [Grouping form controls with fieldset and legend](/examples/forms/grouping-with-fieldsetlegend), we can fake `<fieldset>`/`<legend>` structures using ARIA. Alas, we could simply use a heading for that.
+Just for the sake of completeness, here is another possible solution. As we know from [Grouping form controls with fieldset and legend](/examples/forms/grouping-with-fieldset-legend), we can fake `<fieldset>`/`<legend>` structures using ARIA. Alas, we could simply use a heading for that.
 
 Here is the same example as above, but with ARIA:
 

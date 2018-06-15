@@ -16,7 +16,7 @@ Thus, if you haven't done this yet, go back and read [Semantics and their import
 
 ## Custom functionality
 
-If you need to provide custom functionality on your website (for example a fancy JavaScript widget that doesn't have an HTML equivalent), you may need to optimise it specifically for keyboard interaction.
+If you need to provide custom functionality on your website (for example a fancy JavaScript widget that does not have an HTML equivalent), you may need to optimise it specifically for keyboard interaction.
 
 ### Focusability
 
@@ -34,7 +34,7 @@ Then, implement any functionality as needed by adding appropriate events, for ex
 
 - Be sure to use browser-independent events.
     - An `onclick` event is triggered by all sorts of devices (regardless whether it's fired upon a mouse click or by pressing a keyboard's `Enter` key).
-    - On the other side, a `hover` event can only be triggered by some devices (e.g. mouse) and not by others (e.g. keyboard)
+    - On the other side, a `hover` event can only be triggered by some devices (for example mouse) and not by others (for example keyboard)
         - A well-known accessibility problem is dropdown menus opening on `hover` only, so no keyboard user will ever be able to open it.
 - Avoid listening to specific keyboard keys, unless you really want to provide device-specific functionality.
     - For example, listening to a `keypress` event and looking for a key code `13` (`Enter` key) will only catch a real keyboard's `Enter` key.
@@ -59,7 +59,7 @@ This can be explained especially well by looking at the dialog pattern. Indeed, 
 
 For example, when a user clicks on a button "Show terms and conditions (dialog)", then it is important that the keyboard focus is set into the dialog properly. Otherwise, the keyboard focus usually is hidden somewhere "behind" the dialog. If users then want to interact with the dialog (be it filling out some displayed form elements, clicking a link within its content, or simply pressing its close button), they are forced to press `Tab` again and again until (hopefully) the focus suddenly appears in the dialog.
 
-Specifically, the first content element of the dialog should be focused, due to the following reason: users usually make their way from top to bottom of a page, be it while reading content or moving the keyboard focus. Placing the focus on the first content element doesn't interrupt this workflow. It usually is a good practice to define the dialog's close button to be this first element:
+Specifically, the first content element of the dialog should be focused, due to the following reason: users usually make their way from top to bottom of a page, be it while reading content or moving the keyboard focus. Placing the focus on the first content element does not interrupt this workflow. It usually is a good practice to define the dialog's close button to be this first element:
 
 ```javascript
 $("button#show-dialog").click(function() {
@@ -81,11 +81,11 @@ $("button#show-dialog").click(function() {
 
 ### Avoiding focus on background elements
 
-Dialogs typically are placed on top of the page's other content, often darkening the background. As explained above, keeping the focus placed in the background after opening a dialog is nasty for keyboard users. So we should take care that this doesn't happen by accident again when the user is interacting with the dialog.
+Dialogs typically are placed on top of the page's other content, often darkening the background. As explained above, keeping the focus placed in the background after opening a dialog is nasty for keyboard users. So we should take care that this does not happen by accident again when the user is interacting with the dialog.
 
-One way is to trap the focus within the dialog: this means that after the last focusable element of the dialog loses focus, the first element is focused again. This way, if users have interacted with the form and then want to close it again using the close button on top of the dialog, they don't have to tab back to the top (using `Shift + Tab`), but intuitively reach the close button again automatically.
+One way is to trap the focus within the dialog: this means that after the last focusable element of the dialog loses focus, the first element is focused again. This way, if users have interacted with the form and then want to close it again using the close button on top of the dialog, they do not have to tab back to the top (using `Shift + Tab`), but intuitively reach the close button again automatically.
 
-But there is a big disadvantage with this technique: users will not be able at all to leave the page content using `Tab` key, for example if they want to reach the address bar. Sure, there are other ways to do this (for example pressing `F6` or `Ctrl + L`), but some users don't know about this.
+But there is a big disadvantage with this technique: users will not be able at all to leave the page content using `Tab` key, for example if they want to reach the address bar. Sure, there are other ways to do this (for example pressing `F6` or `Ctrl + L`), but some users do not know about this.
 
 A better solution is to not trap the focus, but to offer another close button at the bottom of the dialog. This way, the user won't have the need anymore to press `Tab` again, in hope to reach the close button at the top.
 
@@ -110,7 +110,7 @@ In some cases, the initial element may not be available anymore. For example, in
 
 Only set focus if it clearly is not feasible to leave it where it currently is. So you never want to bug your users by moving focus around nervously!
 
-An example for bad focus management is a tablist like the following: after activating a tab, the focus would be automatically set to the selected tab's content. This may seem useful at the first glance: users selecting a tab typically want to interact with its content directly, don't they? But at the second glance, if visual users simply want to toggle through the available tabs' contents quickly, they really need the focus to stay on the tabs.
+An example for bad focus management is a tablist like the following: after activating a tab, the focus would be automatically set to the selected tab's content. This may seem useful at the first glance: users selecting a tab typically want to interact with its content directly, do not they? But at the second glance, if visual users simply want to toggle through the available tabs' contents quickly, they really need the focus to stay on the tabs.
 
 However, in our dialog example above, leaving the focus in the darkened (or even invisible) background surely is no option. Thus, in this case, moving the focus into the dialog definitely is the right way to go.
 

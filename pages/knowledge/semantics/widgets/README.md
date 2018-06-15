@@ -6,11 +6,11 @@ changed: "2018-04-12"
 
 # Widgets simply working for all
 
-**HTML supports interactive controls for most requirements. But what about additional interaction patterns that don't offer an HTML equivalent? Surprisingly to many, standard browser behaviour is also a fool-proof way to provide even complex custom functionalities in the style of modern widgets. The trick is to simply use traditional form controls, change their visual design using CSS, and add the needed interactivity using JavaScript.**
+**HTML supports interactive controls for most requirements. But what about additional interaction patterns that do not offer an HTML equivalent? Surprisingly to many, standard browser behaviour is also a fool-proof way to provide even complex custom functionalities in the style of modern widgets. The trick is to simply use traditional form controls, change their visual design using CSS, and add the needed interactivity using JavaScript.**
 
 Let's think about the true spirit of a typical widget, for example a tablist: what is its purpose? It offers a list of items that are toggling the visibility of related containers. Only one item can be visible at a time, and if another one is activated, the previously active one gets deactivated automatically.
 
-This sounds a lot like a group of radio buttons, doesn't it?
+This sounds a lot like a group of radio buttons, does not it?
 
 ## Tablist using radio buttons
 
@@ -40,6 +40,6 @@ This is a huge improvement in every aspect, be it usability, accessibility, read
 
 ## Other patterns
 
-It isn't always as easy as with tablists. But the approach of using standard HTML form controls to mimic modern control patterns can be applied to most requirements. In fact, this approach is the basic of most complex interactive code examples in this guide.
+It is not always as easy as with tablists. But the approach of using standard HTML form controls to mimic modern control patterns can be applied to most requirements. In fact, this approach is the basic of most complex interactive code examples in this guide.
 
 If you are really curious and want to learn more about this, skip ahead and read [Interactive widgets](/examples/widgets).

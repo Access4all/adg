@@ -10,7 +10,7 @@ changed: "2018-04-13"
 
 ## Ambiguous data
 
-Sometimes a data table doesn't offer a column that identifies the current row (so it could be used as the `<th>` element).
+Sometimes a data table does not offer a column that identifies the current row (so it could be used as the `<th>` element).
 
 For example, when having a huge database of addresses, chances are high that you have multiple records with very similar data, as demonstrated in the following example: here you have many John Does residing on similar addresses.
 
@@ -22,7 +22,7 @@ In such a case, you could try to introduce an additional unique column, like a r
 
 [Example](_examples/table-with-unique-ids)
 
-However, record IDs are often not very readable. And sometimes there isn't even a record ID available.
+However, record IDs are often not very readable. And sometimes there is not even a record ID available.
 
 ## Marking multiple cells as headers
 
@@ -34,4 +34,4 @@ Thus, sometimes it is best to mark more than a single data cell as header cell. 
 
 As you see in the example above, the combinations of first and last names still aren't unique. So you could add even more cells as header cells...
 
-But please don't overdo this. You usually should never need more than two or maybe three header cells for a row, even if they are not fully identifying each and every record. This is better than having all of the cells marked up as header cells (which would be absurd).
+But please do not overdo this. You usually should never need more than two or maybe three header cells for a row, even if they are not fully identifying each and every record. This is better than having all of the cells marked up as header cells (which would be absurd).

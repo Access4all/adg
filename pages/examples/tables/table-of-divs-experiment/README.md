@@ -6,7 +6,7 @@ changed: "2018-04-16"
 
 # The "table of divs" experiment
 
-**Instead of using traditional HTML table elements, it is also possible to convert a structure of non-table elements into a table using ARIA. This is an experiment, and we explicitly do not recommend using this on productive websites. So please, kids, don't try this at home!**
+**Instead of using traditional HTML table elements, it is also possible to convert a structure of non-table elements into a table using ARIA. This is an experiment, and we explicitly do not recommend using this on productive websites. So please, kids, do not try this at home!**
 
 ## A table of divs
 

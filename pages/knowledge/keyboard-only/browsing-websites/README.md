@@ -15,14 +15,14 @@ changed: "2018-04-12"
 First, make sure your web browser is open. Then:
 
 - By pressing `Ctrl + L` (or `F6`), the focus is placed in the web browser's address bar.
-- Now enter the domain as usual (e.g. `www.google.com`) and submit using `Enter`.
+- Now enter the domain as usual (for example `www.google.com`) and submit using `Enter`.
 
 ## Reading a website
 
 After a while of reading, you usually have to adjust the scrolling of the page:
 
 - To scroll the viewport down, up, left, or right, use the respective arrow keys.
-- When tabbing through a page (see below), the viewport is scrolled automatically to the currently focused element, so using the arrow keys often isn't necessary.
+- When tabbing through a page (see below), the viewport is scrolled automatically to the currently focused element, so using the arrow keys often is not necessary.
 
 ## Interacting with a website
 

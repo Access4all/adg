@@ -18,9 +18,9 @@ Then, while it may be the most natural thing in the world for you to read a webs
 
 First of all, before you continue reading, be sure you have gone through the previous parts already:
 
-- [Introduction to this guide](/intro)
+- [Introduction to our guide](/introduction)
 - [Setup of the accessibility environment](/setup)
 
 We recommend reading all chapters of the current part thoroughly without exception, even when you may feel like you are knowing certain topics inside out. Accessibility is a topic full of misunderstandings, half-truths, and technical peculiarities. Our guide aims to provide fool-proof knowledge that should finally give answers to the most relevant questions.
 
-You should stick to the sequential order of the chapters, as they build up on each other. So we neither recommend jumping extensively between the parts of this guide, nor between each parts' chapters. To support the sequential reading flow, we generally don't offer links pointing "outside" the current chapter (except for some rare, well justified cases).
+You should stick to the sequential order of the chapters, as they build up on each other. So we neither recommend jumping extensively between the parts of this guide, nor between each parts' chapters. To support the sequential reading flow, we generally do not offer links pointing "outside" the current chapter (except for some rare, well justified cases).

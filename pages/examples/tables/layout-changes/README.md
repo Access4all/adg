@@ -41,7 +41,7 @@ In our example, we changed these values from their defaults to `display: block`.
 
 ## Re-applying proper semantics using ARIA
 
-Fortunately, the lost semantics can be re-applied using ARIA (if you haven't done this yet, go back and read [ARIA - when HTML simply isn't enough](/knowledge/aria)).
+Fortunately, the lost semantics can be re-applied using ARIA (if you haven't done this yet, go back and read [ARIA - when HTML simply is not enough](/knowledge/aria)).
 
 This is done by adding a `role` attribute with the appropriate value to each element:
 
@@ -55,7 +55,7 @@ Now the table will be recognised properly again by screen readers.
 
 [Example](_examples/table-with-block-elements-fixed-with-aria)
 
-**Notice:** for both `<thead>` and `<tbody>`, there doesn't seem to exist an equivalent ARIA role. We have to apply `role="presentation"` to these elements to remove any improper semantical information (left behind by `display: block`). Otherwise this would have an impact on the semantical structure of the table, potentially breaking it once again.
+**Notice:** for both `<thead>` and `<tbody>`, there does not seem to exist an equivalent ARIA role. We have to apply `role="presentation"` to these elements to remove any improper semantical information (left behind by `display: block`). Otherwise this would have an impact on the semantical structure of the table, potentially breaking it once again.
 
 ## Conclusion
 

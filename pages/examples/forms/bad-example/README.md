@@ -28,7 +28,7 @@ There are several problems with the control labels.
 
 ### Div instead of label
 
-On one side, some label texts are marked up as plain `<div>` elements, lacking any semantic information. So while a `<label>` tells the browser: "This is a label for a form element", a `<div>` doesn't tell anything at all - it's just a plain element with no specific meaning.
+On one side, some label texts are marked up as plain `<div>` elements, lacking any semantic information. So while a `<label>` tells the browser: "This is a label for a form element", a `<div>` does not tell anything at all - it's just a plain element with no specific meaning.
 
 ### Label without "for" attribute
 
@@ -36,7 +36,7 @@ On the other side, some label texts are marked up properly as `<label>` elements
 
 In both cases screen readers are not able to announce the form controls with their respective names when the user uses the `Tab` key to navigate between them. In such a situation, a screen reader user has to switch to browse mode and guess which label may correspond to which control (which sometimes is hard or even impossible, depending on the sequence of the elements in the DOM).
 
-Also mouse user have a disadvantage: they can't click on the label to set the focus into the corresponding control.
+Also mouse user have a disadvantage: they cannot click on the label to set the focus into the corresponding control.
 
 ### JAWS' mechanism for guessing labels
 
@@ -48,7 +48,7 @@ The radio buttons are grouped using a combination of plain `<div>` elements inst
 
 So a screen reader user has to guess what the provided plain text element may stand for - or will miss it completely (again, when navigating using `Tab` key only).
 
-(By the way: if for some technical reason you can't use `<fieldset>` and/or `<legend>`, skip ahead and read [](@page-106).)
+(By the way: if for some technical reason you cannot use `<fieldset>` and/or `<legend>`, skip ahead and read [](@page-106).)
 
 ## Bad submit button
 
@@ -75,7 +75,7 @@ As a fix, you could provide those functionalities with some more hacks, for exam
 
 ### Undiscoverability by screen readers
 
-Last but not least: a screen reader user won't find such a substitute when looking for buttons using `B` key. And if in fact users find the pseudo-button by browsing around manually, they can't be sure whether it really is the submit button (without clicking it and hoping for the best).
+Last but not least: a screen reader user won't find such a substitute when looking for buttons using `B` key. And if in fact users find the pseudo-button by browsing around manually, they cannot be sure whether it really is the submit button (without clicking it and hoping for the best).
 
 As a fix, you could provide this manually by overriding the element's role using ARIA: `role="button"`.
 
@@ -83,4 +83,4 @@ As a fix, you could provide this manually by overriding the element's role using
 
 Plain old HTML provides (nearly) everything you need to create basic accessible forms. You only need to be careful to use the elements properly.
 
-Admittedly, there are a few more complex requirements to forms: for example marking up elements as required, validating user input, or the need to associate additional text to a control (when it doesn't fit into the label). Rest assured, the upcoming pages explain a lot of these requirements in depth.
+Admittedly, there are a few more complex requirements to forms: for example marking up elements as required, validating user input, or the need to associate additional text to a control (when it does not fit into the label). Rest assured, the upcoming pages explain a lot of these requirements in depth.

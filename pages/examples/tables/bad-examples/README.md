@@ -12,11 +12,11 @@ Most accessibility problems regarding tables are caused due to bad semantics. So
 
 ## No header cells
 
-The table in the following example doesn't offer any real header cells (`<th>` elements); instead, only data cells are used (`<td>` elements). Those cells that are meant to be headers are only styled visually using CSS `font-weight: bold`, attached to a `.th` class.
+The table in the following example does not offer any real header cells (`<th>` elements); instead, only data cells are used (`<td>` elements). Those cells that are meant to be headers are only styled visually using CSS `font-weight: bold`, attached to a `.th` class.
 
 [Example](_examples/generally-bad-table-without-headers)
 
-This makes it very hard for screen reader users to keep orientation, as they don't know in which column (Name? Description? Additional Resources?) and row (Playing Soccer? Dancing? Gardening?) they are. It's especially hard in the column "Additional Resources", where the cell's content doesn't offer any hint on what the Wikipedia link is about.
+This makes it very hard for screen reader users to keep orientation, as they do not know in which column (Name? Description? Additional Resources?) and row (Playing Soccer? Dancing? Gardening?) they are. It's especially hard in the column "Additional Resources", where the cell's content does not offer any hint on what the Wikipedia link is about.
 
 And while this is a very small table, you may imagine how hard it will be to browse a complex table, for example with lots of columns and rows with numerical data in it.
 
@@ -24,7 +24,7 @@ And while this is a very small table, you may imagine how hard it will be to bro
 
 ## Header cells for columns, but not for rows
 
-The table in the following example indeed has a header cell for each column (the top row), but the data rows don't have one.
+The table in the following example indeed has a header cell for each column (the top row), but the data rows do not have one.
 
 [Example](_examples/generally-bad-table-with-only-horizontal-headers)
 

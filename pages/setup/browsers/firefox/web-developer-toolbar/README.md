@@ -36,7 +36,7 @@ There are some clear shortcomings to this approach though, for example:
     - You can use `Images` -> `Display Alt Attributes` to make up for this.
 - Elements that are hidden from all devices using `display: none` or `visibility: hidden`, are now unhidden.
     - To prevent this, instead use HTML's `hidden` attribute to hide elements (if you are really curious and want to learn more about this, skip forward and read [Hiding elements from all devices](/examples/hiding-elements/from-all-devices)).
-- ARIA attributes do not have any visual representation and are completely missed this way (if you are really curious and want to learn more about this, skip forward and read [ARIA - when HTML simply isn't enough](/knowledge/aria)).
+- ARIA attributes do not have any visual representation and are completely missed this way (if you are really curious and want to learn more about this, skip forward and read [ARIA - when HTML simply is not enough](/knowledge/aria)).
     - To prevent this, keep usage of ARIA to a minimum (if you are really curious and want to learn more about this, skip forward and read [Sensible usage of ARIA roles and attributes](/examples/sensible-aria-usage)).
 - Newly added CSS will not be prevented (for example when interacting with the page through some JavaScript).
 

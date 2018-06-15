@@ -54,7 +54,7 @@ Some interesting peculiarities:
 - Where functionality may not be obvious to screen reader users, descriptive text is given (only visible to screen readers):
     - The tablist/carousel/accordion's main heading has "tablist/carousel/accordion" appended.
     - A small help text explains how the tablist/carousel/accordion works.
-    - The controls are named "tablist/carousel/accordion controls" and are placed within a `fieldset`/`legend` structure (see [Grouping form controls with fieldset and legend](/examples/forms/grouping-with-fieldsetlegend)).
+    - The controls are named "tablist/carousel/accordion controls" and are placed within a `fieldset`/`legend` structure (see [Grouping form controls with fieldset and legend](/examples/forms/grouping-with-fieldset-legend)).
     - Each control is named "Show panel X".
     - Each panel's heading has "panel" appended.
 - The tablist/carousel/accordion controls are placed in the DOM before the panels:

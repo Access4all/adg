@@ -54,7 +54,7 @@ Notice: single checkboxes, like "Accept terms and conditions", do not need a `<f
 
 Nesting `<fieldset>`/`<legend>` structures is possible, especially when groups of radio buttons or checkboxes play a role.
 
-[Example](_examples/nested-fieldsetlegend-structures)
+[Example](_examples/nested-fieldset-legend-structures)
 
 But you should not overdo that: while screen readers uniformly announce when a grouping is entered, some do not announce when it is exited. As such, too much nesting can quickly become confusing.
 
@@ -113,11 +113,11 @@ As a result, some screen readers seem to have difficulties associating the `<leg
 
 Admittedly, browsers have a quite peculiar opinion on how to visually style `<fieldset>`/`<legend>` structures, and it is quite hard to override their preferences.
 
-So if for visual (or any other serious) reason you can't use standard `<fieldset>`/`<legend>`, you may take ARIA to the rescue:
+So if for visual (or any other serious) reason you cannot use standard `<fieldset>`/`<legend>`, you may take ARIA to the rescue:
 
 - Use `role="group"` to give a `<div>` container the semantics of a `<fieldset>`.
 - Associate any other text to the grouping container using `aria-describedby`.
 
-[Example](_examples/faked-fieldsetlegend-using-aria)
+[Example](_examples/faked-fieldset-legend-using-aria)
 
-As always, we highly recommend to use traditional solutions over ARIA, so if you haven't done this yet, go back and read [ARIA - when HTML simply isn't enough](/knowledge/aria).
+As always, we highly recommend to use traditional solutions over ARIA, so if you haven't done this yet, go back and read [ARIA - when HTML simply is not enough](/knowledge/aria).

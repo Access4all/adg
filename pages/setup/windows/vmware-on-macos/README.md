@@ -14,7 +14,7 @@ changed: "2018-04-06"
 
 Before you proceed, be sure you have downloaded a pre-configured virtual machine (VM) like described here: [Getting a free Windows virtual machine from Modern.IE](/setup/windows/modern-ie).
 
-Then extract the VM (using [The Unarchiver](http://wakaba.c3.cx/s/apps/unarchiver.html), as the built-in unzip version isn't capable of zip64 files) to a proper location, for example `~/Virtual Machines`.
+Then extract the VM (using [The Unarchiver](http://wakaba.c3.cx/s/apps/unarchiver.html), as the built-in unzip version is not capable of zip64 files) to a proper location, for example `~/Virtual Machines`.
 
 ## Installing VMware Fusion
 
@@ -59,7 +59,7 @@ Windows screen readers make use of the function keys (`F1` to `F12`) a lot.
 
 By default, in macOS, you have to press the `Fn` key in addition to the specific function key to trigger it.
 
-Keyboard shortcuts of screen readers are quite tricky (if you are really curious and want to learn more about this, skip ahead and read [Screen readers are keyboard shortcut monsters](/knowledge/desktop-screen-readers/shortcut-monsters)). As the function keys are often part of them, we suggest that you [change the behaviour of function keys (Apple Support)](https://support.apple.com/en-us/HT204436) so you don't have to use the `Fn` key for them, too.
+Keyboard shortcuts of screen readers are quite tricky (if you are really curious and want to learn more about this, skip ahead and read [Screen readers are keyboard shortcut monsters](/knowledge/desktop-screen-readers/shortcut-monsters)). As the function keys are often part of them, we suggest that you [change the behaviour of function keys (Apple Support)](https://support.apple.com/en-us/HT204436) so you do not have to use the `Fn` key for them, too.
 
 ### Emulating the Insert key
 
@@ -67,13 +67,13 @@ Windows screen readers rely heavily on the `Insert` key.
 
 ![Insert key on a keyboard](_media/insert-key-on-a-keyboard.png)
 
-This key isn't available on Macs (in earlier days of macOS, it was the "Help" key), so you will have to emulate it. The most robust way to do this is using the free software Karabiner-Elements which translates any given key to any other in macOS.
+This key is not available on Macs (in earlier days of macOS, it was the "Help" key), so you will have to emulate it. The most robust way to do this is using the free software Karabiner-Elements which translates any given key to any other in macOS.
 
 - Download [Karabiner-Elements](https://pqrs.org/osx/karabiner/) and install it.
     - Be sure to allow its execution in the `System Preferences`' `Security & Privacy` section.
 - After launching it, add a `Simple Modification`:
     - From `right_option` to `insert`.
-    - Instead of `right_option`, you can choose any key you like. Make sure it is one you don't really need in your daily workflow.
+    - Instead of `right_option`, you can choose any key you like. Make sure it is one you do not really need in your daily workflow.
 
 Alternatively, you can attach a physical [USB num lock keyboard](http://lmgtfy.com/?q=USB+num+lock+keyboard) (or any other keyboard offering an `Insert` key) to your Mac.
 

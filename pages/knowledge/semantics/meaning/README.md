@@ -12,7 +12,7 @@ changed: "2018-04-12"
 
 To understand the importance of proper semantics, let's first look at the exceptions: tags that indeed do not provide semantical information.
 
-There are only two tags in HTML that don't have any semantic meaning: `<div>` and `<span>`. Their purpose is to offer containers needed for visual styling. And their only difference is that `<div>` is a block element, while `<span>` is an inline element.
+There are only two tags in HTML that do not have any semantic meaning: `<div>` and `<span>`. Their purpose is to offer containers needed for visual styling. And their only difference is that `<div>` is a block element, while `<span>` is an inline element.
 
 Take a look at the following example:
 
@@ -66,7 +66,7 @@ Let's take a look at the same example, now marked up using heading tags (`<h1>`,
 </h2>
 ```
 
-Marking up text using an `<h#>` tag tells the user agent that this isn't just plain text, but - in fact - a heading of a certain level!
+Marking up text using an `<h#>` tag tells the user agent that this is not just plain text, but - in fact - a heading of a certain level!
 
 A web browser conveys this additional information visually by increasing the element's font size, line-height and boldness (depending on the heading's level).
 
@@ -84,7 +84,7 @@ In this case, while visual and aural presentation may feel quite different, the 
 
 ### Structural elements
 
-Structural elements are used to group elements on a webpage, separating them into different regions (like header, navigation, main, or footer). They have been introduced in HTML5.
+Structural elements are used to group elements on a webpage, separating them into different regions (like header, navigation, main, or footer). They have been introduced in HTML 5.
 
 For our example, we could enclose everything into a `<main>` container, separating it from other potential regions like `<header>` or `<footer>` on the page.
 
@@ -118,7 +118,7 @@ Screen readers recognise these containers, announce them to the user and offer a
 
 ### Missing semantics
 
-It is very important to acknowledge that while visual attributes are displayed in web browsers, screen readers don't care about them. Regardless whether text has `color: blue` or `color: red`, whether it is `font-size: 1px` or `font-size: 100px`, whether it has a `border` or a `text-shadow`, it's always announced as plain text. Only if it is semantically marked up, screen readers do care (if you are really curious and want to learn more about this, skip ahead and read [Screen readers don't convey visual attributes](/knowledge/desktop-screen-readers/no-visual-attributes)).
+It is very important to acknowledge that while visual attributes are displayed in web browsers, screen readers do not care about them. Regardless whether text has `color: blue` or `color: red`, whether it is `font-size: 1px` or `font-size: 100px`, whether it has a `border` or a `text-shadow`, it's always announced as plain text. Only if it is semantically marked up, screen readers do care (if you are really curious and want to learn more about this, skip ahead and read [Screen readers do not convey visual attributes](/knowledge/desktop-screen-readers/no-visual-attributes)).
 
 Let's now look at the following example, where the developers may not have felt like overriding default browser styles. So they decided to avoid real headings and just apply some visual attributes to meaningless containers:
 
@@ -174,7 +174,7 @@ Let's have a look at the following example, where the developers strived for hig
 </h1>
 ```
 
-In this case, while visual presentation may still look like proper headings, screen readers will only announce headings on level 1! Again, the provided information isn't identical: screen reader users will have trouble to relate the different headings to each other properly. More precisely: again, they won't know that dancing and playing soccer are meant to be hobbies.
+In this case, while visual presentation may still look like proper headings, screen readers will only announce headings on level 1! Again, the provided information is not identical: screen reader users will have trouble to relate the different headings to each other properly. More precisely: again, they won't know that dancing and playing soccer are meant to be hobbies.
 
 Needless to say that today's search engines know about such trickeries and penalise them.
 
@@ -211,7 +211,7 @@ Still, HTML is a very strict standard and must be coded correctly to be truly va
 
 ## Conclusion: semantics over presentation!
 
-The example above is artificial and doesn't have any real content, so it may not seem very drastic. But real websites often feel like an unmitigated mess (or a textual tapeworm) to screen reader users because of missing or wrong semantics and invalid syntax.
+The example above is artificial and does not have any real content, so it may not seem very drastic. But real websites often feel like an unmitigated mess (or a textual tapeworm) to screen reader users because of missing or wrong semantics and invalid syntax.
 
 In addition to this, proper semantics allow the user to navigate content quickly. For example by skipping the current list of links, or by jumping from heading to heading to get an overview of the webpage's contents. This provides the opportunity to choose which content should be digested, improving the general user experience a lot.
 

@@ -17,14 +17,14 @@ Reading through a website by moving the screen reader's cursor through a page's 
     - By pressing the `H` key, the cursor is moved to the next heading.
     - By pressing the `K` key, the cursor is moved to the next link.
 - This allows quick navigation through different elements of a website.
-- In browse mode, the screen reader cursor can be placed on every element on a website, even on those which aren't inherently focusable, e.g. headings (`<h1>`, `<h2>`, etc.) or paragraphs (`<p>`).
+- In browse mode, the screen reader cursor can be placed on every element on a website, even on those which aren't inherently focusable, for example headings (`<h1>`, `<h2>`, etc.) or paragraphs (`<p>`).
     - Just to make it clear: the web browser's focus is not the same thing as the screen reader cursor (although they often move synchronously).
 
 Notice: in other resources, browse mode may sometimes also be called "read" mode.
 
 ## Focus mode
 
-While browse mode allows reading elements, it doesn't allow interaction with them (for example entering text into a field or choosing a value from a combobox).
+While browse mode allows reading elements, it does not allow interaction with them (for example entering text into a field or choosing a value from a combobox).
 
 Suppose you are on a text field (`<input type="text">`) where you want to enter your first name "Herbert":
 
@@ -38,7 +38,7 @@ This mode - where keystrokes aren't intercepted but sent directly to the active 
     - By pressing `Esc`, focus mode can be left (announced by a different "beep" sound) and browse mode is active again.
     - Notice: JAWS behaves a little different in this respect because of its "Auto Forms Mode", see below for more details.
 - If you use the `Tab` key to jump from focusable element to focusable element, focus mode is activated automatically when appropriate:
-    - For elements allowing only basic interaction (for example links, buttons, and checkboxes), focus mode isn't activated.
+    - For elements allowing only basic interaction (for example links, buttons, and checkboxes), focus mode is not activated.
         - Basic interaction means that only the `Enter` or `Space` key triggers some interaction.
     - If the element allows complex interaction (for example textareas or comboboxes), focus mode is activated.
         - Complex interaction means that there are additional ways to interact, for example by pressing an arrow key or by entering a value directly.
@@ -63,7 +63,7 @@ If you want to disable "Auto Forms Mode", read [JAWS installation and configurat
 
 In contrast to browse mode, when in focus mode, screen readers do not only announce the element on which the cursor currently is placed. In addition, they also try to find any information that is in some form associated to it.
 
-For example, when focusing an `<input>` field, its `<label>` is announced, and (if available) also the surrounding `<fieldset>`'s `<legend>`. But also any other reasonable information that can be programmatically determined, like content associated using ARIA's `aria-describedby` (if you haven't done this yet, go back and read [ARIA - when HTML simply isn't enough](/knowledge/aria)).
+For example, when focusing an `<input>` field, its `<label>` is announced, and (if available) also the surrounding `<fieldset>`'s `<legend>`. But also any other reasonable information that can be programmatically determined, like content associated using ARIA's `aria-describedby` (if you haven't done this yet, go back and read [ARIA - when HTML simply is not enough](/knowledge/aria)).
 
 ### Focus mode vs. keyboard only
 
@@ -105,4 +105,4 @@ When users reach a page, they typically start reading it from top to bottom usin
 - Either they use the `Tab` key to move the focus to the next interactive element.
     - If entering data into a form, usually the user expects more form elements to come until a submit button is reached at the end of the process.
 - Or they switch back to browse mode by pressing `Esc` and read on using `Down` key.
-    - This usually is only necessary if a form isn't structured well (if you are really curious and want to learn more about this, skip ahead and read [Forms](/examples/forms)).
+    - This usually is only necessary if a form is not structured well (if you are really curious and want to learn more about this, skip ahead and read [Forms](/examples/forms)).

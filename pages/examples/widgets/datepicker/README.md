@@ -12,7 +12,7 @@ changed: "2018-05-31"
 
 ## General requirements
 
-The following requirements are based on well established best practices; unlike most other common widget patterns, the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/) don't offer a section about datepickers.
+The following requirements are based on well established best practices; unlike most other common widget patterns, the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/) do not offer a section about datepickers.
 
 Besides many other requirements, we want to stress out explicitly the following:
 
@@ -42,7 +42,7 @@ Some interesting peculiarities:
     - As soon as the datepicker appears, its group of radio buttons gains focus: from now on, the user interacts only with the radio buttons.
 - Using `Left`/`Right` keys, the date changes by one day, and using `Up`/`Down` keys, the date changes by one week.
     - The default toggling behaviour of radio buttons is overridden using JavaScript.
-- The radio buttons are inside a `<fieldset>`/`<legend>` structure, giving context to them (see [Grouping form controls with fieldset and legend](/examples/forms/grouping-with-fieldsetlegend)).
+- The radio buttons are inside a `<fieldset>`/`<legend>` structure, giving context to them (see [Grouping form controls with fieldset and legend](/examples/forms/grouping-with-fieldset-legend)).
     - For visual users, the legend is hidden (see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually).
 - The radio buttons are laid out inside a `<table>`, see [Forms within tables](/examples/forms/in-tables).
     - This does not only serve visual purposes, but also allows screen reader users to manually browse the table.

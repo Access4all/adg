@@ -36,7 +36,7 @@ In the following example, the bulky "Wikipedia" links are hidden, and only small
 
 [Example](_examples/table-with-smaller-elements-in-narrow-view)
 
-Please don't forget to set a proper alternative text to those icons.
+Please do not forget to set a proper alternative text to those icons.
 
 ## Changing the visual layout
 
