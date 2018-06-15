@@ -18,8 +18,6 @@ While visual users usually see both the asterisk and the explanation at a glance
 
 In the following example, the required input field is announced as "Full Name Asterisk" in most screen readers. An experienced user will probably know what this is intended for, but many users will have no clue.
 
-[Example](_examples/required-inputs-with-html-5-and-aria)
-
 As the text explanation "required field" even is below the submit button of the form, a screen reader user probably will never read it, as activating the button usually is the last thing a user does when filling a form.
 
 ## First approach: using ARIA
@@ -51,5 +49,7 @@ And if you really want to make it fancy, you could combine this technique with a
 ## Using HTML5 client side validations
 
 Instead of a applying a visually hidden text "required", one can set a `required` attribute to the input: this makes screen readers announce an input as a required one.
+
+[Example](_examples/required-inputs-with-html-5)
 
 Technically this is much easier and cleaner (more info here: [HTML 5 client side validations](/examples/forms/html-5-validations)). Still, there may be cases where other texts than simply "required" are needed (and where there is no standard HTML attribute available), so it's good to have a flexible solution.
