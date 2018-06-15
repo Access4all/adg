@@ -13,25 +13,25 @@ To guarantee accessibility of your websites, you must ensure that they are compa
 - Input tools: pointing devices (mouse), keyboards, touch screens, alternative controlling systems, etc.
 - Output tools: visual displays (monitors), audio (produced for example by screen readers), braille displays, etc.
 
-Luckily, you don't need to own and control each and every single one of them. In the following chapters, the presented list of software covers most, if not all requirements. Furthermore, we show how to configure everything properly so that you can use them effectively.
+Luckily, you do not need to own and control each and every single one of them. In the following chapters, the presented list of software covers most, if not all requirements. Furthermore, we show how to configure everything properly so that you can use them effectively.
 
 The good news with that is: most of the proposed software can be used free of charge.
 
 ## How to go through this part
 
-First of all, before you continue reading, be sure you have gone through the previous part already: [Welcome to this guide](/welcome).
+First of all, before you continue reading, be sure you have gone through the previous part already: [Introduction to our guide](/introduction).
 
 Not everyone reading this guide may be involved as deeply in accessibility as the typical frontend developer. And thus, not everyone may have the same setup requirements.
 
 ### Complete setup: all the power you need
 
-If you are a developer, you will have to perform the complete setup of most (if not all) proposed software. As it is quite a bunch (and a few of the tools will hook themselves deeply into the operating system), we show how to set up a self-contained environment that doesn't interfere with your main one. For this, please work through all chapters of the current part thoroughly.
+If you are a developer, you will have to perform the complete setup of most (if not all) proposed software. As it is quite a bunch (and a few of the tools will hook themselves deeply into the operating system), we show how to set up a self-contained environment that does not interfere with your main one. For this, please work through all chapters of the current part thoroughly.
 
-You should stick to the sequential order of the chapters, as they build up on each other. So we neither recommend jumping extensively between the parts of this guide, nor between each parts' chapters. To support the sequential reading flow, we generally don't offer links pointing "outside" the current chapter (except for some rare, well justified cases).
+You should stick to the sequential order of the chapters, as they build up on each other. So we neither recommend jumping extensively between the parts of this guide, nor between each parts' chapters. To support the sequential reading flow, we generally do not offer links pointing "outside" the current chapter (except for some rare, well justified cases).
 
 ### Minimal setup: a pragmatic quick solution
 
-Maybe you are not interested in having all the tools, or your company doesn't allow you to install new software at all. In this case, we propose you a minimal setup. Although it's definitely not on par with a complete setup, it still will serve you very well and quite far.
+Maybe you are not interested in having all the tools, or your company does not allow you to install new software at all. In this case, we propose you a minimal setup. Although it's definitely not on par with a complete setup, it still will serve you very well and quite far.
 
 In order to get there, please work through the following list of pages, as it will guide you to the software that's most important for having a well working, minimal environment available. If you're not running a Windows system yet, please work through the chapter [Windows operating system](/setup/windows) first.
 
@@ -41,4 +41,4 @@ In order to get there, please work through the following list of pages, as it wi
 - [PDF Accessibility Checker](/setup/helper-tools/pdf-accessibility-checker)
 - [Windows High Contrast Mode](/setup/helper-tools/high-contrast-mode)
 
-By the way: all of the minimal software is available in some portable version. Thus, it doesn't need any admin rights for installation. See [What is a portable app? (PortableApps.com)](https://portableapps.com/about/what_is_a_portable_app) for more information.
+By the way: all of the minimal software is available in some portable version. Thus, it does not need any admin rights for installation. See [What is a portable app? (PortableApps.com)](https://portableapps.com/about/what_is_a_portable_app) for more information.

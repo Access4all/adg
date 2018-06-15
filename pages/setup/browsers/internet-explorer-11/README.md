@@ -28,7 +28,7 @@ Make sure that in the menu, under `View` -> `Toolbars`, at least the following i
 - Status bar
 - Web accessibility toolbar
 
-If you don't see the menu, press the `Alt` key once.
+If you do not see the menu, press the `Alt` key once.
 
 ### Restoring tabs after restart
 

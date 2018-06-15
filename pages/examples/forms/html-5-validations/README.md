@@ -42,7 +42,7 @@ All browsers handle these validations to their likings. In general, they work qu
 
 A few notes though:
 
-- Some screen readers announce missing required values automatically as "invalid", others don't.
+- Some screen readers announce missing required values automatically as "invalid", others do not.
 - Some screen readers announce both an input's name and validation error, others only announce the validation error.
     - The latter case is a minor inconvenience, as the user may have to find out the input's name manually (which is easy, but still an annoyance).
 

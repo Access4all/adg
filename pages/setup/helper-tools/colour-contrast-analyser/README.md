@@ -14,7 +14,7 @@ changed: "2018-03-09"
 
 [Download Colour Contrast Analyser](https://www.paciellogroup.com/resources/contrastanalyser/).
 
-As it doesn't have an installer, you can simply extract it to a folder of your liking.
+As it does not have an installer, you can simply extract it to a folder of your liking.
 
 ## Usage
 

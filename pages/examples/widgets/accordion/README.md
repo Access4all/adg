@@ -50,7 +50,7 @@ Some interesting peculiarities:
 - Checkboxes replace the radio buttons to offer multiple selection.
     - We waived using a `<fieldset>`/`<legend>` structure, as this is no traditional group of checkboxes, and JAWS tends to be very wordy with focusable items nested within those, see [Grouping form controls with fieldset and legend](/examples/forms/grouping-with-fieldset-legend).
 - By default, only the `Space` key is used to toggle a checkbox (while pressing `Enter` submits a form).
-    - To make it more intuitive for visual users (who don't know about any checkbox behind the scenes, and thinking they are interacting with a link or button), the `Enter` key was re-wired to also toggle the checkboxes.
+    - To make it more intuitive for visual users (who do not know about any checkbox behind the scenes, and thinking they are interacting with a link or button), the `Enter` key was re-wired to also toggle the checkboxes.
 - In contrast to the radio button solution above, we omitted a visual `.accordion:focus-within .control label` state for the accordion items, as checkboxes are individual controls and (thereby accessed by the `Tab` key, as most users would expect).
 
 ### Simple ARIA implementation

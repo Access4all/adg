@@ -24,7 +24,7 @@ And even if Windows is your used operating system already, we still advise you t
 
 ## Other desktop operating systems
 
-While macOS is heavily gaining popularity within the community of the blind, it is still much less used than Windows. And to this day, Linux isn't a popular player at all in this respect.
+While macOS is heavily gaining popularity within the community of the blind, it is still much less used than Windows. And to this day, Linux is not a popular player at all in this respect.
 
 ## Mobile operating systems
 

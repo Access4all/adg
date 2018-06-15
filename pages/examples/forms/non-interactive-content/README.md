@@ -16,7 +16,7 @@ Alas, such content needs to be specifically attached to the form controls, so it
 
 ## Best approach: ARIA
 
-While we usually do not favour solutions using ARIA over traditional HTML, regarding forms, in our experience ARIA is the most robust way to associate content to controls (if you haven't done this yet, go back and read [ARIA - when HTML simply isn't enough](/knowledge/aria)).
+While we usually do not favour solutions using ARIA over traditional HTML, regarding forms, in our experience ARIA is the most robust way to associate content to controls (if you haven't done this yet, go back and read [ARIA - when HTML simply is not enough](/knowledge/aria)).
 
 It is easy to attach a little descriptive text to any form control using `aria-describedby`:
 
@@ -26,7 +26,7 @@ This works very well in all modern browsers and screen readers (if you haven't d
 
 ### Referencing structured text
 
-You can use `aria-describedby` on structured text (as you see in the example above, where a list is referenced to the terms and conditions checkbox). Please don't overdo this, because when focusing a form control, screen readers announce all referenced content in one go. And when long contents are referenced, this can quickly become overstraining.
+You can use `aria-describedby` on structured text (as you see in the example above, where a list is referenced to the terms and conditions checkbox). Please do not overdo this, because when focusing a form control, screen readers announce all referenced content in one go. And when long contents are referenced, this can quickly become overstraining.
 
 #### Too much referenced content
 
@@ -34,9 +34,9 @@ Take a look at the following example which clearly overdoes the usage of `aria-d
 
 [Example](_examples/associating-too-much-content-to-form-controls-using-aria)
 
-Admittedly, this example feels a bit artificial. But you get the point: listening to too much info at a time is making tired quickly. To fully understand, the user will have to manually trigger the whole announcement again and again - a very tedious task, especially for people with mental disabilities.
+Admittedly, this example feels a bit artificial. But you get the point: listening to too much information at a time is making tired quickly. To fully understand, the user will have to manually trigger the whole announcement again and again - a very tedious task, especially for people with mental disabilities.
 
-In addition, a lot of semantic information about the referenced elements (that would be announced in browse mode) isn't announced this way: while list items are still recognisable by the prefix "bullet", other semantic information isn't announced at all (for examples occurrences of headings and links).
+In addition, a lot of semantic information about the referenced elements (that would be announced in browse mode) is not announced this way: while list items are still recognisable by the prefix "bullet", other semantic information is not announced at all (for examples occurrences of headings and links).
 
 #### Giving a short clue instead
 
@@ -64,7 +64,7 @@ When navigating using the `Tab` key, the easiest way to prevent non-focusable co
 
 [Example](_examples/making-content-focusable)
 
-While this may be tempting, it is very bad style: only elements that provide some interaction (buttons, links, form controls, etc.) should be focusable. Otherwise keyboard only users may be confused, as they may think that (for example) a paragraph can be interacted with, although it can't.
+While this may be tempting, it is very bad style: only elements that provide some interaction (buttons, links, form controls, etc.) should be focusable. Otherwise keyboard only users may be confused, as they may think that (for example) a paragraph can be interacted with, although it cannot.
 
 Also, it is unfortunate that the descriptive text of a form control always is announced to screen readers **after** interacting with it (right after leaving it using `Tab`).
 
@@ -89,7 +89,7 @@ On the other hand (which is more interesting to us), it is also possible to put 
 </label>
 ```
 
-This solution looks very easy and as such is tempting: it doesn't only solve our requirement, but it also enlarges the clickable area of the label for mouse and touch screen users (clicking on the label places the focus into its control).
+This solution looks very easy and as such is tempting: it does not only solve our requirement, but it also enlarges the clickable area of the label for mouse and touch screen users (clicking on the label places the focus into its control).
 
 [Example](_examples/additional-content-in-form-labels)
 

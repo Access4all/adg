@@ -16,7 +16,7 @@ We do not call autosuggests "autocompletes" so the difference to HTML's `autocom
 
 ## General requirements
 
-The following requirements are based on well established best practices; unlike most other common widget patterns, the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/) don't offer a section about autosuggests.
+The following requirements are based on well established best practices; unlike most other common widget patterns, the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/) do not offer a section about autosuggests.
 
 Besides many other requirements, we want to stress out explicitly the following:
 

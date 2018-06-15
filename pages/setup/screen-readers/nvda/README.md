@@ -26,7 +26,7 @@ Simply run the installer, or see [Installing NVDA (NVAccess.org)](http://www.nva
 
 NVDA offers the option to be run as a portable app, so no installation is required (and thus no admin rights). While for our purposes it works fine, it has some restrictions, see [Portable and Temporary Copy Restrictions (NVAccess.org)](http://www.nvaccess.org/files/nvda/documentation/userGuide.html?#toc10).
 
-For detailed information, see [Creating a Portable Copy (NVAccess.org)](http://www.nvaccess.org/files/nvda/documentation/userGuide.html?#toc15) (be sure to manually create a new folder as installation location, e.g. `NVDA` on your Desktop).
+For detailed information, see [Creating a Portable Copy (NVAccess.org)](http://www.nvaccess.org/files/nvda/documentation/userGuide.html?#toc15) (be sure to manually create a new folder as installation location, for example `NVDA` on your Desktop).
 
 ## Running NVDA
 
@@ -79,7 +79,7 @@ There are some useful options:
 - You can zoom the font size using `Ctrl` + mouse wheel.
     - At the time being, font size is always set back to default on quit.
 
-We highly recommend to have the speech viewer always open while using NVDA. Place it on the top right of your screen and resize your browser window accordingly so they don't overlap each other. To allow system tray popups some headroom, don't give the speech viewer full height.
+We highly recommend to have the speech viewer always open while using NVDA. Place it on the top right of your screen and resize your browser window accordingly so they do not overlap each other. To allow system tray popups some headroom, do not give the speech viewer full height.
 
 ![Perfect layout of browser and speech viewer](_media/perfect-layout-of-browser-and-speech-viewer.png)
 

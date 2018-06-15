@@ -16,7 +16,7 @@ The good news: since HTML 5.2, headings are allowed within `<legend>` elements, 
 
 [Example](_examples/headings-mixed-into-a-form-as-children-of-legends)
 
-By the way, the other way round (placing legends into headings) doesn't work, because a `<legend>` always has to be the first child of its `<fieldset>`.
+By the way, the other way round (placing legends into headings) does not work, because a `<legend>` always has to be the first child of its `<fieldset>`.
 
 ## Faking fieldset/legend using ARIA
 

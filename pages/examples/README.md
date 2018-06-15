@@ -12,11 +12,11 @@ changed: "2018-04-02"
 
 First of all, before you continue reading, be sure you have gone through the previous parts already:
 
-- [Welcome to this guide](/welcome)
+- [Introduction to our guide](/introduction)
 - [Setup of the accessibility environment](/setup)
 - [Knowledge about accessibility](/knowledge)
 
-The current part is the one you will probably head to most during your accessibility ambitions. There are a lot of topics that are relevant to pretty much every kind of website, while others maybe are not very relevant to some specific ones. For example, if the website in question doesn't offer any tabular data, then the chapter about tables probably will not be of interest at the time being.
+The current part is the one you will probably head to most during your accessibility ambitions. There are a lot of topics that are relevant to pretty much every kind of website, while others maybe are not very relevant to some specific ones. For example, if the website in question does not offer any tabular data, then the chapter about tables probably will not be of interest at the time being.
 
 Still, we recommend you to get at least a broad overview of all available content: you can do that by reading through the overview page of each chapter, and maybe also by skimming over the contained pages. Then, whenever during your daily workflow you stumble over a topic that you remember you spotted in our guide, we advise you to check back here and read through the respective chapter(s) thoroughly.
 

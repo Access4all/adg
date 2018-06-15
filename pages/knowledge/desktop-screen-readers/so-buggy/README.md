@@ -12,7 +12,7 @@ changed: "2018-05-01"
 
 Screen readers "sit" on top of another application, conveying its contents to the user through audio or braille.
 
-As many of those applications don't care too much about accessibility and present their content in non-semantical or other inadequate ways, screen readers try to compensate for this. In addition to this, many websites are coded poorly, and some screen readers even try to compensate for this.
+As many of those applications do not care too much about accessibility and present their content in non-semantical or other inadequate ways, screen readers try to compensate for this. In addition to this, many websites are coded poorly, and some screen readers even try to compensate for this.
 
 While this works sometimes, it often results in strange behaviours. Thus, screen readers often are perceived as being buggy.
 
@@ -44,20 +44,20 @@ Aware of such problems (and because they want to be duteous and faithful messeng
 
 Still, a broken message is highly prone to remain broken. And this makes clear why the same website with the same screen reader may work well in one browser (maybe Firefox), while failing completely in another one (maybe Edge): the messenger is the same, but the message quality may vary a lot.
 
-So please, don't kill the messenger - instead, follow this guide and provide high quality messages!
+So please, do not kill the messenger - instead, follow this guide and provide high quality messages!
 
 ### Reasons for bugs
 
-Screen readers sadly seem to be very prone to regressions, meaning that a feature which worked well in an earlier combination of browser and screen reader versions, doesn't work anymore in subsequent versions. For example, the fact that a specific accessibility feature worked well in the combination of NVDA 2018.1 and Firefox 58 is no guarantee that it will still work in NVDA 2018.2 with Firefox 58 (or NVDA 2018.1 and Firefox 59).
+Screen readers sadly seem to be very prone to regressions, meaning that a feature which worked well in an earlier combination of browser and screen reader versions, does not work anymore in subsequent versions. For example, the fact that a specific accessibility feature worked well in the combination of NVDA 2018.1 and Firefox 58 is no guarantee that it will still work in NVDA 2018.2 with Firefox 58 (or NVDA 2018.1 and Firefox 59).
 
-Let's look at a hypothetical example. Let's say that for an ARIA tablist implementation, the browser doesn't provide the necessary information about which tab currently is active to the accessibility API:
+Let's look at a hypothetical example. Let's say that for an ARIA tablist implementation, the browser does not provide the necessary information about which tab currently is active to the accessibility API:
 
-- To work around this problem, the screen reader may implement a workaround and gathers the missing data through some other, "unofficial" channel. This could be through some internal information structure of the browser which isn't meant to be "leaked" by any other application.
+- To work around this problem, the screen reader may implement a workaround and gathers the missing data through some other, "unofficial" channel. This could be through some internal information structure of the browser which is not meant to be "leaked" by any other application.
     - So through some tweaks and hacks, the screen reader is able to announce the currently active tab.
-- If the browser now changes some of this internal information structure in a subsequent version, the screen reader can't find the needed data anymore.
+- If the browser now changes some of this internal information structure in a subsequent version, the screen reader cannot find the needed data anymore.
     - So the screen reader is not able anymore to announce the currently active tab. What a disappointment!
 
-So the formerly working accessibility feature doesn't work anymore - a regression! But who is to blame?
+So the formerly working accessibility feature does not work anymore - a regression! But who is to blame?
 
 This is a devastating situation:
 
@@ -78,7 +78,7 @@ If you find bugs in either screen readers or browsers, we highly urge you to get
 - For filing JAWS issues, please use the [issue tracker for VFO-standards-support (GitHub.com)] by FreedomScientific.
     - For more details, please read [JAWS wide open (PacielloGroup.com)](https://developer.paciellogroup.com/blog/2017/10/jaws-wide-open/).
 - For filing Firefox issues, please use the [issue tracker for Firefox (Mozilla.org)](https://bugzilla.mozilla.org).
-- Regarding Internet Explorer, there doesn't seem to be a way for filing issues.
+- Regarding Internet Explorer, there does not seem to be a way for filing issues.
     - Maybe this will be of some further help though: [How to log a bug on Internet Explorer? (StackOverflow.com)](https://stackoverflow.com/questions/258168/how-to-log-a-bug-on-internet-explorer).
 
 ### What will the future bring?

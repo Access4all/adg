@@ -12,11 +12,11 @@ changed: "2018-03-12"
 
 ## Installation
 
-The Quantum release of FF isn't compatible with screen readers yet: [Can I use my screen reader with the new Firefox? (Mozilla.org)](https://support.mozilla.org/en-US/kb/can-i-use-my-screen-reader-new-firefox).
+The Quantum release of FF is not compatible with screen readers yet: [Can I use my screen reader with the new Firefox? (Mozilla.org)](https://support.mozilla.org/en-US/kb/can-i-use-my-screen-reader-new-firefox).
 
 At the time being, you should [download the Extended Support Release (ESR) of Firefox](https://www.mozilla.org/en-US/firefox/organizations/all/) and install it.
 
-Note: there's also a [portable version](https://portableapps.com/de/apps/internet/firefox_portable) of FF that doesn't require admin rights.
+Note: there's also a [portable version](https://portableapps.com/de/apps/internet/firefox_portable) of FF that does not require admin rights.
 
 ## Configuration
 
@@ -26,7 +26,7 @@ Note: there's also a [portable version](https://portableapps.com/de/apps/interne
 
 Make sure that in the menu, under `View > Toolbars`, all items are selected.
 
-If you don't see the menu, press the `Alt` key once.
+If you do not see the menu, press the `Alt` key once.
 
 ### Restoring tabs after restart
 

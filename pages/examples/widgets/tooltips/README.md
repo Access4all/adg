@@ -33,7 +33,7 @@ Before you go on, please read [What is a "Proof of concept"?](/examples/widgets/
 
 ### Automatically displayed tooltip
 
-Some tooltips appear automatically on hovering and/or focusing the described element. Their contents are announced immediately by screen readers; as such, screen reader users usually don't even have to know about the existence of such a tooltip.
+Some tooltips appear automatically on hovering and/or focusing the described element. Their contents are announced immediately by screen readers; as such, screen reader users usually do not even have to know about the existence of such a tooltip.
 
 ![Displaying a tooltip on hover](_media/displaying-a-tooltip-on-hover.png)
 

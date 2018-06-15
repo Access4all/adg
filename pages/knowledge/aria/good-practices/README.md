@@ -6,7 +6,7 @@ changed: "2018-05-30"
 
 # Good ARIA practices
 
-**There are a few ARIA features that truly fill some gaps HTML doesn't provide a solution for. Working pretty reliably in modern browsers and screen readers, some techniques can be recommended as safe to use.**
+**There are a few ARIA features that truly fill some gaps HTML does not provide a solution for. Working pretty reliably in modern browsers and screen readers, some techniques can be recommended as safe to use.**
 
 While ARIA is not needed most of the time when developing accessible websites, it can help in certain situations to make the user experience better for screen readers.
 

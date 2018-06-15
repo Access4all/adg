@@ -31,9 +31,9 @@ Some websites automatically set the initial focus to a specific element of the p
 
 ### Screen reader autofocus
 
-When leaving a page, some screen readers try to remember the current reading position. When re-visiting the same page, they try to set the focus to the remembered position (but this only happens when the website itself doesn't have any autofocus functionality):
+When leaving a page, some screen readers try to remember the current reading position. When re-visiting the same page, they try to set the focus to the remembered position (but this only happens when the website itself does not have any autofocus functionality):
 
-- This can be useful, for example when re-visiting a text that wasn't read completely before.
+- This can be useful, for example when re-visiting a text that was not read completely before.
 - But it can also be confusing sometimes, for example in a shopping cart when removing an item:
     - After re-display, the removed element is missing, but the screen reader still tries to set the focus where the element had been before, leading to unforeseeable and often confusing behaviour.
 
@@ -56,7 +56,7 @@ Depending on the screen reader, a "line" is around 80 characters and can be comp
 
 Instead of browsing line by line, the NVDA screen reader allows to read full blocks (for example, paragraph by paragraph, or any other kind of container). For this, simply use `Ctrl + Down` (or `Ctrl + Up`).
 
-**Important:** as opposed to keyboard-only users, screen reader users usually don't use the `Tab` key to read a page! If you haven't done this yet, go back and read [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes) to know the difference between navigation using `Arrow` keys and `Tab` key.
+**Important:** as opposed to keyboard only users, screen reader users usually do not use the `Tab` key to read a page! If you haven't done this yet, go back and read [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes) to know the difference between navigation using `Arrow` keys and `Tab` key.
 
 ### Reading headings
 
