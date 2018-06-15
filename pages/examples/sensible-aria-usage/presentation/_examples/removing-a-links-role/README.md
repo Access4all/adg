@@ -1,5 +1,5 @@
 ---
-title: "Removing a link&#39;s role"
+title: "Removing a link's role"
 compatibility:
   Keyboard only:
     status: pass

@@ -2,9 +2,8 @@
 title: "HTML 5 client side validations"
 compatibility:
   Keyboard only:
-    status: fail
+    status: pass
     date: 2018-05-14
-    comments: "no visual cue for required"
   NVDA:
     2018.1 + FF Quantum 59.0.2:
       status: fail
