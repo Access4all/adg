@@ -1,6 +1,6 @@
 .search {
   position: absolute;
-  top: 25px;
+  top: 20px;
   right: 80px;
   z-index: 1;
 
@@ -8,9 +8,6 @@
     @include searchbtn;
     float: right;
     transform: translateX(-50%);
-    @include mobile {
-      display: none;
-    }
 
     &:focus {
       outline: 2px dotted var(--theme-color-dark);
@@ -47,13 +44,14 @@
 
 // Overrides for the default SiteSearch 360 styles
 #unibox-suggest-box {
+  margin-top: 1px;
   right: 88px;
   left: auto !important;
   width: 350px;
-  padding: 1px;
   box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
   font-family: inherit;
   font-weight: 300;
+  border: none;
 
   @media (min-width: $site-width) {
     width: 450px;
@@ -65,7 +63,6 @@
 
   .unibox-selectable {
     display: block;
-    margin-bottom: 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
     &.active,
@@ -86,6 +83,7 @@
     }
 
     .unibox-result-content {
+      margin-top: 0;
       margin-bottom: 10px;
     }
   }

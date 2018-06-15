@@ -42,8 +42,9 @@ export default class Search extends BaseModule {
     initializeSs360()
 
     this.$el.find('.search--toggle').on('click', function () {
-      var breadcrumbs = $('nav.breadcrumbs .breadcrumbs--inner')
-      breadcrumbs.css('visibility', 'hidden')
+      // Hiding breadcrumbs does not make any sense in mobile view. We just let the search input overlap.
+      // var breadcrumbs = $('nav.breadcrumbs .breadcrumbs--inner')
+      // breadcrumbs.css('visibility', 'hidden')
       $(this)
         .siblings('.search--input')
         .addClass('search--input-expanded')
