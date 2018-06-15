@@ -10,8 +10,10 @@ compatibility:
       date: 2018-05-08
   JAWS:
     2018.3 + IE 11:
-      status: fail
-      date: 2018-05-23
+      status: pass
+      date: 2018-06-15
+      comments:
+        - The row headers are not announced in focus mode.
     2018.3 + FF ESR 52.7.3:
       status: pass
       date: 2018-05-07

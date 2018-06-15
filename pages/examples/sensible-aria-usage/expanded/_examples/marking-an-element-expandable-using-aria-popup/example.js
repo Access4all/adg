@@ -5,9 +5,11 @@
     $tooltip = $('#tooltip')
     return $button.click(() => {
       if ($tooltip.attr('hidden') === 'hidden') {
-        return $tooltip.removeAttr('hidden')
+        $tooltip.removeAttr('hidden')
+        return $button.attr('aria-expanded', true)
       } else {
-        return $tooltip.attr('hidden', true)
+        $tooltip.attr('hidden', true)
+        return $button.attr('aria-expanded', false)
       }
     })
   })
