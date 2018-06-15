@@ -6,16 +6,13 @@ compatibility:
     date: 2018-04-17
   NVDA:
     2018.1 + FF Quantum 59.0.2:
-      status: fail
-      date: 2018-04-17
-      comments: "column headers not read"
-  JAWS:
-    2018.3 + IE 11:
-      status: fail
-      date: 2018-04-23
-      comments: "recheck"
-    2018.3 + FF ESR 52.7.3:
       status: pass
       date: 2018-04-17
-      comments: "better recheck too"
+  JAWS:
+    18.0.5038 + IE 11:
+      status: pass
+      date: 2018-06-15
+    18.0.5038 + FF ESR 52.8.1:
+      status: pass
+      date: 2018-06-15
 ---
