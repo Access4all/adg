@@ -1,5 +1,5 @@
 ---
-navigation_title: "How to"
+navigation_title: "How to use"
 position: 1
 changed: "2018-06-14"
 ---
