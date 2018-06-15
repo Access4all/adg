@@ -6,7 +6,7 @@ changed: "2018-06-14"
 
 # How to use this guide
 
-**This guide aims to provide a comprehensive resource for both beginners looking for a pragmatic way to dive into the world of accessibility, as well as seasoned experts wanting to extend their knowledge and embracing new inspirations.**
+**This guide aims to provide a comprehensive resource for both beginners looking for a pragmatic way to dive into the world of accessibility, as well as seasoned experts wanting to extend their knowledge and embracing new inspirations. Here you will find out how to read through our guide, and how to stay up to date.**
 
 ## Reading through this guide
 
@@ -46,17 +46,3 @@ To be informed about new or updated contents, related activities (events) or sim
 - Twitter: [A11yDevGuide](https://twitter.com/A11yDevGuide)
 
 We also provide a content feed: [RSS](http://localhost:3000/feed/rss.xml).
-
-## Contributing to this guide
-
-This guide is the result of tight collaboration between accessibility experts and web developers. Its content by far is not exhaustive yet: there remain a lot of topics to talk about, and due to the fast evolution of web technologies, there certainly will always be.
-
-We welcome everyone who wants to join our initiative, be it with adding new contents, fixing typos or bugs, etc. This guide is 100% Open Source (MIT License). As such, everybody can contribute to it on our GitHub repository: [Access4all/adg (GitHub.com)](https://github.com/Access4all/adg).
-
-We are happy about issues and pull requests. Please refer to our contribution guidelines: [Access4all/adg/CONTRIBUTION.md (GitHub.com)](https://github.com/Access4all/adg/CONTRIBUTION.md).
-
-Let us make the Internet a more accessible place together!
-
-## Getting in touch with us
-
-Please use any of our social media channels to contact us.

@@ -4,13 +4,13 @@ position: 2
 changed: "2018-06-14"
 ---
 
-# About this guide
+# About us
 
-**The content in its entirety is the result of many years of hands-on practice in the field of testing websites for accessibility (and helping to optimise them), as well as developing accessible web applications. It emerged from the daily experience of user experts with special needs, blended together with the profound technical knowledge of fullstack web developers.**
+**This project in its entirety is the result of many years of hands-on practice in the field of testing websites for accessibility (and helping to optimise them), as well as developing accessible web applications. It emerged from the daily experience of user experts with special needs, blended together with the profound technical knowledge of fullstack web developers. The «Accessibility Alliance» was born.**
 
 ## «Access for all»
 
-On one side, there is the Swiss Foundation «Access for all», which is the initiator and leader of the whole initiative. It consists of a small team of accessibility experts and web developers, half of which having special needs themselves.
+On one side of the «Accessibility Alliance», there is the Swiss Foundation «Access for all», which is the initiator and leader of the whole initiative. It consists of a small team of accessibility experts and web developers, half of which having special needs themselves.
 
 ![«Access for all» Logo](_media/zfa.png){.zfa-logo}
 
@@ -26,7 +26,7 @@ For more information, see [www.access-for-all.ch](http://access-for-all.ch/).
 
 ## Web agencies
 
-On the other side, there are several acclaimed web agencies. They provided the technical solution and visual design for the guide, gave support in marketing it, etc.
+On the other side of the «Accessibility Alliance», there are several acclaimed web agencies. They provided the technical solution and visual design for the guide, gave support in marketing it, etc.
 
 ### Hinderling-Volkart
 
@@ -60,9 +60,9 @@ On the other side, there are several acclaimed web agencies. They provided the t
 
 **Esther Brunner**, user interface developer, [Zeix AG](https://zeix.com/).
 
-## Join us!
+## Join the «Accessibility Alliance»!
 
-The ADG is a community driven resource: everybody is welcome to become a part in the movement of making the internet a more accessible place.
+Our guide is a community driven resource: everybody is welcome to become a part in the movement of making the internet a more accessible place.
 
 Get in touch with us through:
 

@@ -1,6 +1,6 @@
 ---
 navigation_title: "License"
-position: 3
+position: 4
 changed: "2018-06-15"
 ---
 
