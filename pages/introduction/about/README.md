@@ -10,13 +10,15 @@ changed: "2018-06-14"
 
 ## «Access for all»
 
-On one side, there is the Swiss foundation «Access for all», which is the initiator and leader of the whole initiative. It consists of a small team of accessibility experts and web developers, half of which having special needs themselves.
+On one side, there is the Swiss Foundation «Access for all», which is the initiator and leader of the whole initiative. It consists of a small team of accessibility experts and web developers, half of which having special needs themselves.
 
-The foundation is in business since the year 2000, and since then has accompanied hundreds of local and international websites in the process of becoming accessible. The foundation for this have always been the official guidelines like the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG) and [Accessible Rich Internet Applications](https://www.w3.org/TR/html-aria/) (ARIA), combined with the real-life experiences of those employees with special needs, and profound expertise of fullstack web developers.
+![«Access for all» Logo](_media/zfa.png)
+
+The foundation is in business since the year 2000, and since then has accompanied hundreds of local and international websites in the process of becoming accessible. The basis for this have always been the official guidelines like the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG) and [Accessible Rich Internet Applications](https://www.w3.org/TR/html-aria/) (ARIA), combined with the real-life experiences of those employees with special needs, and profound expertise of fullstack web developers.
 
 In one sentence: the contents of this guide are the result of nearly two decades of hands-on experience in all topics accessibility.
 
-> With the ADG, the «Access for all» foundation provides developers with an instrument that provides practical and concrete support in the implementation of accessible web offerings. As an open source project, ADG focuses on sharing and passing on knowledge. All agencies, every woman and every man are invited to join the Accessibility Alliance. Join in a few developer days a year - and you'll be there. **Bernhard Heinser**, CEO, «Access for all»
+> With the ADG, the «Access for all» foundation provides developers with an instrument that offers practical and concrete support in the implementation of accessible web offerings. As an open source project, ADG focuses on sharing and passing on knowledge. All agencies, every woman and every man are invited to join the Accessibility Alliance. Join in a few developer days a year - and you'll be there. **Bernhard Heinser**, CEO, «Access for all»
 
 For more information, see [www.access-for-all.ch](http://access-for-all.ch/).
 
@@ -24,7 +26,7 @@ For more information, see [www.access-for-all.ch](http://access-for-all.ch/).
 
 On the other side, there are several acclaimed web agencies. They provided the technical solution and visual design for the guide, gave support in marketing it, etc.
 
-### Hinderling-Volkart
+### Hinderling-Volkart ![Logo](_media/hv.png)
 
 > Until now, web developers have lacked a good, practical reference on accessibility. It doesn't need more rules, but more guidance to make the web usable for everyone. The ADG will provide access where hardly anyone has been before, with practical examples, tested by experts and supported by developers. From the very beginning we were convinced of the purpose of this commitment and are proud to be able to contribute a small part to it.
 >
@@ -74,6 +76,6 @@ Clockwise from top right:
 - **Jürgen Rudigier**, frontend developer at Hinderling-Volkart.
 - **Thomas Jaggi**, web developer at UNIC.
 - **Anton Bolfing**, accessibility expert at «Access for all».
-- **Bernhard Heinser**, managing director at «Access for all».
+- **Bernhard Heinser**, CEO at «Access for all».
 - **Esther Brunner**, web developer at Zeix.
 - **Markus Graf**, webdesign freelancer.

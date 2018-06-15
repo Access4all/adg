@@ -6,7 +6,7 @@
 - Facebook: [AccessibilityDeveloperGuide](https://www.facebook.com/AccessibilityDeveloperGuide)
 - Twitter: [A11yDevGuide](https://twitter.com/A11yDevGuide)
 
-The «Accessibility Developer Guide» (ADG) is an initiative of [«Access for all»](http://access-for-all.ch/), Swiss foundation for technology adapted to people with disabilities.
+The «Accessibility Developer Guide» (ADG) is an initiative of [«Access for all»](http://access-for-all.ch/), Swiss Foundation for technology adapted to people with disabilities.
 
 It is developed and maintained in collaboration with a number of acclaimed web agencies (currently [Hinderling-Volkart](https://www.hinderlingvolkart.com/), [UNIC](https://www.unic.com/), [Liip](https://www.liip.ch/) and [Zeix](https://www.zeix.com/)).
 
