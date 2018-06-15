@@ -1,6 +1,6 @@
 ---
 navigation_title: "Hidden headers"
-position: 8
+position: 9
 changed: "2018-04-16"
 ---
 
