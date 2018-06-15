@@ -75,4 +75,19 @@
       list-style: inherit;
     }
   }
+
+  img.agency-logo {
+    float: right;
+    width: 25%;
+    border: none;
+    margin-left: 2em;
+    margin-bottom: 2em;
+  }
+
+  img.zfa-logo {
+    border-radius: 10px;
+    background-color: #fff;
+    border: none;
+    padding: 1.5em 2em;
+  }
 }
