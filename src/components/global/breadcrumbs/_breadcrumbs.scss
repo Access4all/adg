@@ -4,7 +4,7 @@
   padding-bottom: $gutter;
 
   @include mobile {
-    padding-top: $gutter / 4;
+    padding-top: $gutter;
     padding-bottom: $gutter / 4;
   }
 

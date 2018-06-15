@@ -88,3 +88,14 @@
     }
   }
 }
+
+@include mobile-narrow {
+  #search--input {
+    margin: 60px -60px 0 0;
+  }
+
+  #unibox-suggest-box {
+    right: 0;
+    left: 0 !important;
+  }
+}
