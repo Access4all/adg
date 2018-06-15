@@ -4,7 +4,7 @@ position: 8
 changed: "2018-06-15"
 ---
 
-# External Content in iFrames
+# External content in iframes
 
 **Iframes allow to include any external content into a page. As such, precaution must be taken that external content does not mess up the semantics of the surrounding content with improper heading levels and hierarchies.**
 
