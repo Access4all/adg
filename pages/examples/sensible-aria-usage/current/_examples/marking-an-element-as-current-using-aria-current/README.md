@@ -10,7 +10,7 @@ compatibility:
       date: 2018-06-11
   JAWS:
     2018.3 + IE 11:
-      status: passaccess
+      status: true
       date: 2018-06-11
     2018.3 + FF ESR 52.7.3:
       status: pass

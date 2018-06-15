@@ -36,10 +36,10 @@ If the button is activated (and the `aria-expanded` status is changed to `true` 
 
 ### Adding haspopup (optional)
 
-There is a similar ARIA attribute, `aria-popup`, which leads screen readers to announce an element as having a menu.
+There is a similar ARIA attribute, `aria-haspopup`, which leads screen readers to announce an element as having a menu.
 
 ```html
-<button aria-popup="true">
+<button aria-haspopup="true">
   Toggle
 </button>
 ```
@@ -48,9 +48,9 @@ A screen reader will announce:
 
 > Toggle. Button has menu.
 
-[Example](_examples/marking-an-element-expandable-using-aria-popup)
+[Example](_examples/marking-an-element-expandable-using-aria-haspopup)
 
-In contrast to `aria-expanded`, `aria-popup` does not offer anything better than `aria-expanded`: both tell the user that there is something to be toggled. But while `aria-expanded` offers a way to provide feedback to the user upon activation, `aria-haspopup` has not (setting it to `aria-popup="false"` using JavaScript does not make any sense). So it should always be used in combination with `aria-expanded` (which renders it obsolete again).
+In contrast to `aria-expanded`, `aria-haspopup` does not offer anything better: both tell the user that there is something to be toggled. But while `aria-expanded` offers a way to provide feedback to the user upon activation, `aria-haspopup` has not (setting it to `aria-haspopup="false"` using JavaScript does not make any sense). So it should always be used in combination with `aria-expanded` (which renders it obsolete again).
 
 We do not recommend to use `aria-haspopup` as it does not provide any additional value.
 
