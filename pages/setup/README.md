@@ -25,7 +25,7 @@ Not everyone reading this guide may be involved as deeply in accessibility as th
 
 ### Complete setup: all the power you need
 
-If you are a developer, you will have to perform the complete setup of most (if not all) proposed software. As it is quite a bunch (and a few of the tools will hook themselves deeply into the operating system), we show how to set up a self-contained environment that does not interfere with your main one. For this, please work through all chapters of the current part thoroughly.
+If you are a developer, you will have to perform the complete setup of most (if not all) proposed software. As it is quite a bunch (and a few of the tools will hook themselves deeply into the operating system), we show how to set up a self-contained environment (a virtual machine) that does not interfere with your main one. For this, please work through all chapters of the current part thoroughly.
 
 You should stick to the sequential order of the chapters, as they build up on each other. So we neither recommend jumping extensively between the parts of this guide, nor between each parts' chapters. To support the sequential reading flow, we generally do not offer links pointing "outside" the current chapter (except for some rare, well justified cases).
 

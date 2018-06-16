@@ -16,7 +16,7 @@ The vision behind the ADG is to bridge the gap between providers of websites and
 
 The main audience is web developers, but also testing staff, content editors, project managers, etc. may benefit from it.
 
-The ADG is a community driven resource and 100% Open Source: everybody is welcome to become a part in the movement of making the internet a more accessible place.
+The ADG is a community driven resource and Open Source: everybody is welcome to become a part in the movement of making the internet a more accessible place.
 
 ## License
 

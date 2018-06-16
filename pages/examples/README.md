@@ -18,13 +18,19 @@ First of all, before you continue reading, be sure you have gone through the pre
 
 The current part is the one you will probably head to most during your accessibility ambitions. There are a lot of topics that are relevant to pretty much every kind of website, while others maybe are not very relevant to some specific ones. For example, if the website in question does not offer any tabular data, then the chapter about tables probably will not be of interest at the time being.
 
-Still, we recommend you to get at least a broad overview of all available content: you can do that by reading through the overview page of each chapter, and maybe also by skimming over the contained pages. Then, whenever during your daily workflow you stumble over a topic that you remember you spotted in our guide, we advise you to check back here and read through the respective chapter(s) thoroughly.
+Still, we recommend you to get at least a broad overview of all available content. Then, whenever during your daily workflow you stumble over a topic that you remember you spotted in our guide, we advise you to check back here and read through the respective chapter(s) thoroughly.
 
 There's no specific sequence or internal dependency between the chapters. So every chapter can be read on its own. Whenever other chapters are related to the current one, we offer links pointing to them.
 
 ## Code examples
 
 Seeing is believing: this part contains more than hundred code examples, all of which can be experienced live within our guide.
+
+### Play with them!
+
+Our examples are made to play with them using all the assistive devices described throughout this guide (mainly keyboard only usage and screen readers).
+
+You will learn by far the most if you thorougly dive into each example and try to map your own experiences to the text content surrounding each example.
 
 ### Manipulation on CodePen.io
 
