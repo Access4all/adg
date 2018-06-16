@@ -9,6 +9,11 @@
 
     + p {
       font-size: 1.5em;
+
+      @include mobile {
+        font-size: 1.25em;
+      }
+
       margin-bottom: 100px;
 
       strong {

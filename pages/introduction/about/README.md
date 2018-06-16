@@ -70,7 +70,7 @@ Please read on.
 
 ## Join the «Accessibility Alliance»!
 
-We are a bunch of open hearted and highly motivated nerds believing in the potential of technical advancements for humanity.
+We are a bunch of open hearted and highly motivated nerds believing in the potential that technical advancements can have for humanity.
 
 If you feel like you have anything to give into our movement (be it active collaboration, sharing your knowledge, providing financial support, or simply giving some feedback), please get in touch with us through:
 
