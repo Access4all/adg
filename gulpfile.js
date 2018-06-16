@@ -115,7 +115,7 @@ gulp.task(
     },
     function content () {
       return gulp
-        .src(['./pages/{,**/}_media/**/*', './pages/**/*.png'], {
+        .src(['./pages/{,**/}_media/**/*', './pages/**/*.{png,jpg,mp3}'], {
           base: './pages'
         })
         .pipe(gulp.dest('./dist'))
