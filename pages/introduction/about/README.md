@@ -66,10 +66,14 @@ Please read on.
 
 ## Join the «Accessibility Alliance»!
 
-Get in touch with us through:
+We are a bunch of open hearted and highly motivated nerds believing in the potential of technical advancements for humanity.
+
+If you feel like you have anything to give into our movement (be it active collaboration, sharing your knowledge, providing financial support, or simply giving some feedback), please get in touch with us through:
 
 - Facebook: [AccessibilityDeveloperGuide](https://www.facebook.com/AccessibilityDeveloperGuide)
 - Twitter: [A11yDevGuide](https://twitter.com/A11yDevGuide)
+
+Or drop us a line using the [«Access for all» contact form](http://access-for-all.ch/en/contact.html).
 
 ### The main team
 
