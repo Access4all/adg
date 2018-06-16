@@ -60,4 +60,4 @@ Very confusing stuff.
 
 While you can use `aria-hidden="true"` on any element that is not focusable and does not contain any focusable element itself, you must never use it on focusable elements. Also be careful when referencing hidden elements using `aria-describedby`.
 
-In general: whenever you think about hiding something from any audience (see [Hiding elements from screen readers using aria-hidden](/examples/hiding-elements/from-screen-readers)), ask yourself whether this is really a good solution. Most of the time it is better to create a solution that works the same way for everybody, and which does not need any shaky ARIA.
+In general: whenever you think about hiding something from any audience, better ask yourself whether this is really a good solution. Most of the time it is better to create a solution that works the same way for everybody, and which does not need any shaky ARIA.

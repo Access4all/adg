@@ -46,9 +46,11 @@ As we already know: to alter a table's visual appearance, the `display` property
 
 [Example](_examples/table-with-block-elements-in-narrow-view)
 
+As the table is enhanced using ARIA, screen reader users are very happy with this result.
+
 ### Optimisation for visual users
 
-Screen reader users are very happy with this result. But visually, our table is not fully appealing yet, because in narrow view, the table headers' position on top of the table feels wrong.
+Visually though, our table is not fully appealing yet, because in narrow view, the table headers' position on top of the table feels wrong.
 
 ![Strange position of table headers](_media/strange-position-of-table-headers.png)
 

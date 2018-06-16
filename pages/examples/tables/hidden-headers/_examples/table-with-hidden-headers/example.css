@@ -1,8 +1,4 @@
-table {
-  border-collapse: collapse;
-}
-
-thead {
+.visually-hidden {
   position: absolute;
   left: -10000px;
   top: auto;
@@ -11,10 +7,29 @@ thead {
   overflow: hidden;
 }
 
-tbody th {
-  background-color: lightgreen;
+.table {
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  display: table;
 }
 
-th, td {
-  border: 1px solid;
+.tr {
+  display: table-row;
+}
+
+.th, .td {
+  border-top: 1px solid;
+  border-right: 1px solid;
+  padding: 4px 8px;
+  display: table-cell;
+}
+
+.th {
+  font-weight: bold;
+}
+.th[role="rowheader"] {
+  background-color: lightgreen;
+}
+.th[role="columnheader"] {
+  background-color: lightpink;
 }

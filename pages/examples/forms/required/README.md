@@ -54,4 +54,6 @@ Instead of a applying a visually hidden text "required", one can set a `required
 
 [Example](_examples/required-inputs-with-html-5)
 
-Technically this is much easier and cleaner (more information here: [HTML 5 client side validations](/examples/forms/html-5-validations)). Still, there may be cases where other texts than simply "required" are needed (and where there is no standard HTML attribute available), so it's good to have a flexible solution.
+Technically this is much easier and cleaner (more information here: [HTML 5 client side validations](/examples/forms/html-5-validations)). But browser support is still rather shaky and the user experience with screen readers is shaky.
+
+And often there may be cases where other texts than simply "required" are needed (and where there is no standard HTML attribute available), so it's good to have a more flexible solution: namely hidden texts.

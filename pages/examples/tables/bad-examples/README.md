@@ -1,7 +1,7 @@
 ---
 navigation_title: "Bad examples"
 position: 3
-changed: "2018-04-30"
+changed: "2018-??-??"
 ---
 
 # General bad table examples

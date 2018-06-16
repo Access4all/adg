@@ -1,6 +1,6 @@
 ---
 navigation_title: "\"Table of divs\" experiment"
-position: 10
+position: 8
 changed: "2018-04-16"
 ---
 
