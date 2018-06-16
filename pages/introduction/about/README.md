@@ -76,11 +76,11 @@ During the last months, a main group of people regularly gathered around develop
 Clockwise from top right:
 
 - **Donato Rotunno**, web developer at Liip.
-- **Joshua Muheim**, web developer and accessibility expert at «Access for all».
+- **Joshua Muheim**, web developer and accessibility expert at «Access for all», initiator of and main contributor to the ADG.
 - **Jürgen Rudigier**, frontend developer at Hinderling-Volkart.
 - **Thomas Jaggi**, web developer at UNIC.
 - **Anton Bolfing**, accessibility expert at «Access for all».
-- **Bernhard Heinser**, CEO at «Access for all».
+- **Bernhard Heinser**, CEO at «Access for all», project leader of the ADG.
 - **Esther Brunner**, web developer at Zeix.
 - **Markus Graf**, web developer.
 
