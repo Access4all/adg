@@ -83,7 +83,7 @@ Clockwise from top right:
 - **Joshua Muheim**, web developer and accessibility expert at «Access for all», initiator of and main contributor to the ADG.
 - **Jürgen Rudigier**, frontend developer at Hinderling-Volkart.
 - **Thomas Jaggi**, web developer at UNIC.
-- **Anton Bolfing**, accessibility expert at «Access for all».
+- **Anton Bolfing**, accessibility expert at «Access for all», responsible for final editing and testing of the ADG.
 - **Bernhard Heinser**, CEO at «Access for all», project leader of the ADG.
 - **Esther Brunner**, web developer at Zeix.
 - **Markus Graf**, web developer.
