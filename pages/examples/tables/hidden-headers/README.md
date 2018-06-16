@@ -10,7 +10,7 @@ changed: "2018-04-16"
 
 There were times when hiding table headers visually by hiding the off-screen (see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually)) used to work perfectly in both JAWS and NVDA. In recent times though (and especially since introducing Firefox Quantum) regressions were reported again and again regarding this topic.
 
-Thankfully though we can fall back on ARIA in this case: simply take our "table of divs" experiment (see [The "table of divs" experiment](/examples/tables/table-of-divs-experiment)) and move its header off-screen.
+Fortunately though we can fall back on ARIA in this case: simply take our "table of divs" experiment (see [The "table of divs" experiment](/examples/tables/table-of-divs-experiment)) and move its header off-screen.
 
 [Example](_examples/table-with-hidden-headers)
 

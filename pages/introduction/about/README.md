@@ -16,9 +16,13 @@ On one side of the «Accessibility Alliance», there is the Swiss Foundation «A
 
 The foundation is in business since the year 2000, and since then has accompanied hundreds of local and international websites in the process of becoming accessible. The basis for this have always been the official guidelines like the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG) and [Accessible Rich Internet Applications](https://www.w3.org/TR/html-aria/) (ARIA), combined with the real-life experiences of those employees with special needs, and profound expertise of fullstack web developers. In one sentence: the contents of this guide are the result of nearly two decades of hands-on experience in all topics accessibility.
 
-> With the ADG, the «Access for all» foundation provides developers with an instrument that offers practical and concrete support in the implementation of accessible web offerings. As an open source project, ADG focuses on sharing and passing on knowledge. All agencies, every woman and every man are invited to join the Accessibility Alliance. Join in a few developer days a year - and you'll be there.
+> With the ADG, the «Access for all» foundation provides developers with an instrument that offers practical and concrete support in the implementation of accessible web offerings. As an open source project, the ADG focuses on sharing and passing on knowledge. All agencies, every woman and every man are invited to join the Accessibility Alliance. Join in a few developer days a year - and you'll be there.
 
 **Bernhard Heinser**, CEO, «Access for all».
+
+> Years ago when I joined «Access for all», I soon realised how hard it is to get into accessibility. Fortunately I learned a lot from my co-workers with special needs. And with the ADG, we now provide a "map" that shows the quickest way for web developers to get from a requirement to an accessible implementation - on the basis of well-proven best practices, using rock-solid standard techniques and wisely avoiding typical traps and pitfalls.
+
+**Joshua Muheim**, web developer & accessibility expert, «Access for all».
 
 For more information, see [www.access-for-all.ch](http://access-for-all.ch/).
 
@@ -84,7 +88,7 @@ During the last months, a main group of people regularly gathered around develop
 Clockwise from top right:
 
 - **Donato Rotunno**, web developer at Liip.
-- **Joshua Muheim**, web developer and accessibility expert at «Access for all», initiator of and main contributor to the ADG.
+- **Joshua Muheim**, web developer & accessibility expert at «Access for all», initiator of and main contributor to the ADG.
 - **Jürgen Rudigier**, frontend developer at Hinderling-Volkart.
 - **Thomas Jaggi**, web developer at UNIC.
 - **Anton Bolfing**, accessibility expert at «Access for all», responsible for final editing and testing of the ADG.
