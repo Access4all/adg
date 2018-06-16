@@ -115,7 +115,7 @@ const getExample = (examplePath, filePath) => {
     result.statusCode =
       result.status === 'pass' ? (result.comments ? 'yellow' : 'green') : 'red'
     result.statusIndication =
-      result.status === 'pass' ? '✔' : result.comments ? '⚠' : '✘'
+      result.status === 'pass' ? (result.comments ? '⚠' : '✔') : '✘'
 
     // Format date
     const date = new Date(result.date)
