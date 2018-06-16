@@ -12,7 +12,7 @@ changed: "2018-06-14"
 
 On one side of the «Accessibility Alliance», there is the Swiss Foundation «Access for all», which is the initiator and leader of the whole initiative. It consists of a small team of accessibility experts and web developers, half of which having special needs themselves.
 
-![«Access for all» Logo](_media/zfa.png){.zfa-logo}
+![«Access for all» logo](_media/zfa.png){.zfa-logo}
 
 The foundation is in business since the year 2000, and since then has accompanied hundreds of local and international websites in the process of becoming accessible. The basis for this have always been the official guidelines like the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG) and [Accessible Rich Internet Applications](https://www.w3.org/TR/html-aria/) (ARIA), combined with the real-life experiences of those employees with special needs, and profound expertise of fullstack web developers. In one sentence: the contents of this guide are the result of nearly two decades of hands-on experience in all topics accessibility.
 
@@ -30,13 +30,13 @@ For more information, see [www.access-for-all.ch](http://access-for-all.ch/).
 
 On the other side of the «Accessibility Alliance», there are several acclaimed web agencies. They provided the technical solution and visual design for the guide, gave support in marketing it, etc.
 
-### Hinderling-Volkart
+### Hinderling Volkart
 
-![Hinderling-Volkart logo](_media/hv.png){.agency-logo}
+![Hinderling Volkart logo](_media/hv.png){.agency-logo}
 
 > Until now, web developers have lacked a good, practical reference on accessibility. It doesn't need more rules, but more guidance to make the web usable for everyone. The ADG will provide access where hardly anyone has been before, with practical examples, tested by experts and supported by developers. From the very beginning we were convinced of the purpose of this commitment and are proud to be able to contribute a small part to it.
 
-**Severin Klaus**, frontend leader, [Hinderling-Volkart](https://www.hinderlingvolkart.com/).
+**Severin Klaus**, frontend leader, [Hinderling Volkart](https://www.hinderlingvolkart.com/).
 
 ### UNIC
 
@@ -56,7 +56,7 @@ On the other side of the «Accessibility Alliance», there are several acclaimed
 
 ### Zeix
 
-![Hinderling-Volkart logo](_media/zeix.png){.agency-logo}
+![Hinderling Volkart logo](_media/zeix.png){.agency-logo}
 
 > The ADG allows us to easily share knowledge within the team and build on reliable best practices. This enables us to design, create and program websites that all people like to use.
 
@@ -89,7 +89,7 @@ Clockwise from top right:
 
 - **Donato Rotunno**, web developer at Liip.
 - **Joshua Muheim**, web developer & accessibility expert at «Access for all», initiator of and main contributor to the ADG.
-- **Jürgen Rudigier**, frontend developer at Hinderling-Volkart.
+- **Jürgen Rudigier**, frontend developer at Hinderling Volkart.
 - **Thomas Jaggi**, web developer at UNIC.
 - **Anton Bolfing**, accessibility expert at «Access for all», responsible for final editing and testing of the ADG.
 - **Bernhard Heinser**, CEO at «Access for all», project leader of the ADG.
