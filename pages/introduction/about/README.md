@@ -20,7 +20,7 @@ The foundation is in business since the year 2000, and since then has accompanie
 
 **Bernhard Heinser**, CEO, «Access for all».
 
-> Years ago when I joined «Access for all», I quickly realised how hard it is to get into accessibility as an "outsider". Through the wonderful support of my co-workers with special needs I was finally able to merge my technical knowledge with their profound user expertise. With the ADG, a "roadmap" is now provided that shows the quickest ways to get from general requirements to accessible implementations. All of them are well-proven best practices, built on rock-solid standard techniques and cleverly avoiding typical traps and pitfalls.
+> Years ago when I joined «Access for all», I quickly realised how hard it is to get into accessibility as an "outsider". Through the wonderful support of my co-workers with special needs, I was finally able to merge my technical knowledge with their profound user expertise. With the ADG, together we provide a "roadmap" that shows the quickest ways to get from general requirements to accessible implementations. All of them are well-proven best practices, built on rock-solid standard techniques and cleverly avoiding typical traps and pitfalls.
 
 **Joshua Muheim**, web developer & accessibility expert, «Access for all».
 
