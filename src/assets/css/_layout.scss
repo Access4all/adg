@@ -74,3 +74,18 @@ html {
 		}
 	}
 }
+
+#jump {
+  position: absolute;
+  z-index: 1;
+  font-weight: 500;
+  border: 1px solid var(--theme-color-dark);
+  background-color: var(--theme-color-light);
+  color: var(--theme-color-ark);
+  padding: 10px;
+
+  &:focus {
+    z-index: 2;
+    outline: none;
+  }
+}
