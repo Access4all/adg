@@ -5,7 +5,13 @@ const hljs = require('highlight.js')
 const _ = require('lodash')
 
 const getFile = (files, type, dir) => {
-  const match = files.find(file => path.extname(file) === `.${type}`)
+  const match = files.find(file => {
+    if (type === 'html') {
+      return path.basename(file) === 'index.html'
+    }
+
+    return path.extname(file) === `.${type}`
+  })
 
   if (type === 'png') {
     return match ? path.join(dir, match) : ''
