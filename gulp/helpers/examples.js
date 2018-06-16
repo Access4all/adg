@@ -162,7 +162,7 @@ const getExample = (examplePath, filePath) => {
 
   const codePenForm = getCodePenForm(code)
 
-  if (compatibility) {
+  if (compatibility.length) {
     btns.push(`<div class="control">
       <input type="checkbox" id="${id}-compatibility" name="${id}" value="compatibility" />
       <label class="button" for="${id}-compatibility">
