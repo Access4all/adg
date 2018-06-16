@@ -58,9 +58,13 @@ On the other side of the «Accessibility Alliance», there are several acclaimed
 
 **Esther Brunner**, user interface developer, [Zeix AG](https://zeix.com/).
 
-## Join the «Accessibility Alliance»!
+### Your company here?
 
-Our guide is a community driven resource: everybody is welcome to become a part in the movement of making the internet a more accessible place.
+Our guide is a community driven resource: everybody is welcome to become a part in the movement of making the Internet a more accessible place.
+
+Please read on.
+
+## Join the «Accessibility Alliance»!
 
 Get in touch with us through:
 
