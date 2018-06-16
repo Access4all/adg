@@ -101,6 +101,21 @@ module.exports = rootDir => filePath => {
 
         tokens[idx].attrSet('title', metaTitle)
       })
+      .use(() => {
+        // Add the #main-h1 ID to each page's main heading.
+        markdown.core.ruler.push('manipulate_main_heading', state => {
+          var isMainHeading = true
+
+          state.tokens.forEach(token => {
+            if (['heading_open'].includes(token.type)) {
+              if (token.tag == 'h1' && isMainHeading) {
+                token.attrSet('id', 'main-h1')
+                isMainHeading = false
+              }
+            }
+          })
+        })
+      })
       // .use(() => {
       //   // Currently unused: Increase heading levels by 1
       //   markdown.core.ruler.push('increase_heading_level', state => {
