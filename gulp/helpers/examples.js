@@ -143,7 +143,9 @@ const getExample = (examplePath, filePath) => {
 
     if (summaryBrowser) {
       compatibilitySummary.push({
-        name: `${result.category}<sup><span class="visuallyhidden">+</span>${summaryBrowser}</sup>`,
+        name: `${
+          result.category
+        }<sup><span class="visuallyhidden">+</span>${summaryBrowser}</sup>`,
         statusCode: result.statusCode,
         statusIndication: result.statusIndication
       })
