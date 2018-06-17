@@ -12,7 +12,7 @@ changed: "2018-06-14"
 
 On one side of the «Accessibility Alliance», there is the Swiss Foundation «Access for all», which is the initiator and leader of the whole initiative. It consists of a small team of accessibility experts and web developers, half of which having special needs themselves.
 
-![«Access for all» logo](/img/logo/zfa.png){.zfa-logo}
+![«Access for all» logo](_media/zfa.png){.zfa-logo}
 
 The foundation is in business since the year 2000, and since then has accompanied hundreds of local and international websites in the process of becoming accessible. The basis for this have always been the official guidelines like the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG) and [Accessible Rich Internet Applications](https://www.w3.org/TR/html-aria/) (ARIA), combined with the real-life experiences of those employees with special needs, and profound expertise of fullstack web developers. In one sentence: the contents of this guide are the result of nearly two decades of hands-on experience in all topics accessibility.
 
