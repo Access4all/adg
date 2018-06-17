@@ -143,9 +143,7 @@ const getExample = (examplePath, filePath) => {
 
     if (summaryBrowser) {
       compatibilitySummary.push({
-        name: `${
-          result.category
-        }<sup><span class="visuallyhidden">+</span>${summaryBrowser}</sup>`,
+        name: `<img src="/img/compatibility/${result.category.toLowerCase()}.png" alt="${result.category}" /><span class="visuallyhidden">+</span><img src="/img/compatibility/${summaryBrowser.toLowerCase()}.png" class="browser" alt="${summaryBrowser}" />`,
         statusCode: result.statusCode,
         statusIndication: result.statusIndication
       })
@@ -178,14 +176,16 @@ const getExample = (examplePath, filePath) => {
     btns.push(`<div class="control">
       <input type="checkbox" id="${id}-compatibility" name="${id}" value="compatibility" />
       <label class="button" for="${id}-compatibility">
-        <span class="visuallyhidden">Show compatibility details</span>
-        ${compatibilitySummary
-    .map(
-      item => `<span class="status status--${item.statusCode}">
-          ${item.name} ${item.statusIndication}
+        <span class="title">Compatibility</span>
+        <span class="summary">
+          ${compatibilitySummary
+      .map(
+        item => `<span class="status status--${item.statusCode}">
+            ${item.name} ${item.statusIndication}
         </span>`
     )
     .join('<span class="visuallyhidden">, </span>')}
+        </span>
       </label>
     </div>`)
 
@@ -218,7 +218,7 @@ const getExample = (examplePath, filePath) => {
   return {
     form: `
   ${codePenForm}
-  <div class="accordion"><div class="controls">${btns.join(
+  <div class="tablist"><div class="controls">${btns.join(
     ''
   )}</div><div class="panels">${blocks.join('')}</div></div>`,
     code
