@@ -143,7 +143,9 @@ const getExample = (examplePath, filePath) => {
 
     if (summaryBrowser) {
       compatibilitySummary.push({
-        name: `<img src="/img/compatibility/${result.category.toLowerCase()}.png" alt="${result.category}" /><span class="visuallyhidden">+</span><img src="/img/compatibility/${summaryBrowser.toLowerCase()}.png" class="browser" alt="${summaryBrowser}" />`,
+        name: `<img src="/img/compatibility/${result.category.toLowerCase()}.png" alt="${
+          result.category
+        }" /><span class="visuallyhidden">+</span><img src="/img/compatibility/${summaryBrowser.toLowerCase()}.png" class="browser" alt="${summaryBrowser}" />`,
         statusCode: result.statusCode,
         statusIndication: result.statusIndication
       })
@@ -179,8 +181,8 @@ const getExample = (examplePath, filePath) => {
         <span class="title">Compatibility</span>
         <span class="summary">
           ${compatibilitySummary
-      .map(
-        item => `<span class="status status--${item.statusCode}">
+    .map(
+      item => `<span class="status status--${item.statusCode}">
             ${item.name} ${item.statusIndication}
         </span>`
     )
