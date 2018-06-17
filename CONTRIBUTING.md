@@ -8,7 +8,7 @@ We welcome everyone who wants to join our initiative, be it with adding new cont
 
 We use a bunch of nice Open Source tools to make collaboration of both developers and content editors as easy as possible:
 
-- We use [Node.js] as our JavaScript run-time environment to build the final page.
+- We use [Node.js](https://github.com/nodejs/node) as JavaScript run-time environment to build the page.
 - All contents are written in clean and sexy Markdown, see [Markdown (Wikipedia.org)](https://en.wikipedia.org/wiki/Markdown).
     - We use the [markdown-it](https://github.com/markdown-it/markdown-it) parser to have some additional parsing features available.
 - Thanks to [Netlify](https://www.netlify.com/), the final page is deployed automatically.
