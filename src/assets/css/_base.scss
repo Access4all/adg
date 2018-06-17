@@ -120,6 +120,25 @@ p img {
     label {
       margin-bottom: 0;
 
+      @include above-mobile-narrow {
+        .title {
+          @include visuallyhidden;
+        }
+      }
+
+      @include mobile-narrow {
+        & {
+          margin-right: 0;
+          letter-spacing: -0.04em;
+          padding-left: 0.2em;
+          padding-right: 0.2em;
+        }
+
+        .summary {
+          @include visuallyhidden;
+        }
+      }
+
       &.is-active {
         background-color: var(--theme-color-light);
         border-bottom: 1px solid var(--theme-color-light);
@@ -133,17 +152,32 @@ p img {
       &:hover {
         cursor: pointer;
       }
+
+      img {
+        height: 32px;
+        vertical-align: top;
+        margin-right: -0.25em;
+
+        &.browser {
+          height: 24px;
+          margin-left: -14px;
+          vertical-align: bottom;
+        }
+      }
     }
 
     input {
       @include visuallyhidden;
 
       + label::before {
-        content: '▾';
+        content: '▽';
+        font-size: 0.75em;
+        line-height: 2em;
       }
 
       &:checked + label::before {
-        content: '▴';
+        content: '△';
+        font-size: 0.75em;
       }
 
       &:focus + label {
