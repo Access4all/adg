@@ -218,7 +218,7 @@ const getExample = (examplePath, filePath) => {
   return {
     form: `
   ${codePenForm}
-  <div class="accordion"><div class="controls">${btns.join(
+  <div class="tablist"><div class="controls">${btns.join(
     ''
   )}</div><div class="panels">${blocks.join('')}</div></div>`,
     code
