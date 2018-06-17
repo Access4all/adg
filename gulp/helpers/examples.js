@@ -121,7 +121,11 @@ const getExample = (examplePath, filePath) => {
     result.statusCode =
       result.status === 'pass' ? (result.comments ? 'yellow' : 'green') : 'red'
     result.statusIndication =
-      result.status === 'pass' ? (result.comments ? '⚠' : '✔') : '✘'
+      result.status === 'pass'
+        ? result.comments
+          ? '⚠ <span class="visuallyhidden">(pass with comments)</span>'
+          : '✔ <span class="visuallyhidden">(pass)</span>'
+        : '✘ <span class="visuallyhidden">(fail)</span>'
 
     // Format date
     const date = new Date(result.date)
@@ -139,7 +143,7 @@ const getExample = (examplePath, filePath) => {
 
     if (summaryBrowser) {
       compatibilitySummary.push({
-        name: `${result.category} + ${summaryBrowser}`,
+        name: `${result.category}<sup><span class="visuallyhidden">+</span>${summaryBrowser}</sup>`,
         statusCode: result.statusCode,
         statusIndication: result.statusIndication
       })
@@ -176,10 +180,10 @@ const getExample = (examplePath, filePath) => {
         ${compatibilitySummary
     .map(
       item => `<span class="status status--${item.statusCode}">
-          ${item.name}: ${item.statusIndication}
+          ${item.name} ${item.statusIndication}
         </span>`
     )
-    .join('')}
+    .join('<span class="visuallyhidden">, </span>')}
       </label>
     </div>`)
 
