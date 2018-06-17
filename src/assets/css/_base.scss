@@ -110,29 +110,103 @@ p img {
   }
 }
 
-.accordion {
+.tablist {
   margin-top: 0.5em;
   font-weight: bold;
 
   .control {
     display: inline-block;
-    label:hover {
-      cursor: pointer;
+
+    label {
+      margin-bottom: 0;
+
+      @include above-mobile-narrow {
+        .title {
+          @include visuallyhidden;
+        }
+      }
+
+      @include mobile-narrow {
+        & {
+          margin-right: 0;
+          letter-spacing: -0.04em;
+          padding-left: 0.2em;
+          padding-right: 0.2em;
+        }
+
+        .summary {
+          @include visuallyhidden;
+        }
+      }
+
+      &.is-active {
+        background-color: var(--theme-color-light);
+        border-bottom: 1px solid var(--theme-color-light);
+        position: relative;
+        z-index: 1;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        padding-bottom: 2px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      img {
+        height: 32px;
+        vertical-align: top;
+        margin-right: -0.25em;
+
+        &.browser {
+          height: 24px;
+          margin-left: -14px;
+          vertical-align: bottom;
+        }
+      }
     }
+
     input {
       @include visuallyhidden;
 
       + label::before {
-        content: '▾';
+        content: '▽';
+        font-size: 0.75em;
+        line-height: 2em;
       }
 
       &:checked + label::before {
-        content: '▴';
+        content: '△';
+        font-size: 0.75em;
       }
 
       &:focus + label {
-      outline: 2px dotted var(--theme-color-dark);
-      outline-offset: 2px;
+        outline: 2px dotted var(--theme-color-dark);
+        outline-offset: 2px;
+      }
+    }
+  }
+
+  .panel {
+    margin-top: -4px;
+    position: relative;
+
+    table {
+      margin: 0;
+      border: none;
+      border-radius: 10px;
+    }
+
+    pre {
+      margin: 0;
+      border-radius: 10px;
+      border-top-left-radius: 0;
+      background-color: var(--theme-color-light);
+      border: 1px solid var(--theme-color-dark);
+
+      code {
+        font-size: 0.9em;
+        font-weight: 500;
       }
     }
   }
