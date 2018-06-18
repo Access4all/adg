@@ -8,7 +8,7 @@
 
 The «Accessibility Developer Guide» (ADG) is an initiative of [«Access for all»](http://access-for-all.ch/), Swiss Foundation for technology adapted to people with disabilities.
 
-<img src="/src/assets/img/logo/zfa.png" alt="«Access for all» logo" width="25%" />
+<img src="/src/assets/img/logo/zfa.png" alt="«Access for all» logo" width="50%" style="float: right; margin-left: 1em; margin-bottom: 0.5em;" />
 
 It is developed and maintained in collaboration with a number of acclaimed web agencies, currently:
 
