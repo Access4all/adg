@@ -16,26 +16,16 @@ We use a bunch of nice Open Source tools to make collaboration of both developer
 
 ## Local setup
 
-### Prerequisites
+Prerequisites: Node 8 (you may want to use [Node Version Manager](https://github.com/creationix/nvm)).
 
-- Node 8
+- Setup: `npm install`
+- Develop: `npm start`
 
-### Setup
+Happy coding!
 
-```
-npm install
-```
+## Netlify
 
-### Start / build
+We use [Netlify](https://www.netlify.com/) in the background to build our page:
 
-Dev:
-
-```
-npm start
-```
-
-Build:
-
-```
-npm run build
-```
+- Commits to master trigger a build of the live page.
+- Pull requests trigger a build of the related branch.
