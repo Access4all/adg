@@ -79,24 +79,24 @@ If you feel like you have anything to give into our movement (be it active colla
 
 Or drop us a line using the [«Access for all» contact form](http://access-for-all.ch/en/contact.html).
 
-### The main team
+### Core team
 
-During the last months, a main group of people regularly gathered around developing the ADG.
+During the last months, a group of people regularly gathered around developing the ADG.
 
 ![The main team behind the ADG (details read below)](_media/adg-team.jpg)
 
 Clockwise from top right:
 
-- **Donato Rotunno**, web developer at Liip.
-- **Joshua Muheim**, web developer & accessibility expert at «Access for all», initiator of and main contributor to the ADG.
-- **Jürgen Rudigier**, frontend developer at Hinderling Volkart.
-- **Thomas Jaggi**, web developer at UNIC.
+- **Donato Rotunno**, web developer, Liip AG.
+- **Joshua Muheim**, web developer & accessibility expert, «Access for all», initiator of and main contributor to the ADG.
+- **Jürgen Rudigier**, frontend developer, Hinderling Volkart.
+- **Thomas Jaggi**, web developer, UNIC AG.
 - **Anton Bolfing**, accessibility expert at «Access for all», responsible for final editing and testing of the ADG.
 - **Bernhard Heinser**, CEO at «Access for all», project leader of the ADG.
-- **Esther Brunner**, web developer at Zeix.
+- **Esther Brunner**, web developer, Zeix AG.
 - **Markus Graf**, web developer.
 
-### The testing staff
+### Testing staff
 
 Not to forget our highly respected testing staff who took care of validating all contents and code examples (all of them working for «Access for all»):
 
