@@ -65,11 +65,11 @@ We have conducted additional compatibility tests, all with assistive devices tha
 - Desktop screen readers:
     - JAWS with Edge
     - VoiceOver/macOS with Safari
-    - Narrator with Firefox
+    - Narrator with Edge
 - Mobile screen readers:
     - VoiceOver/iOS with Safari
     - Talkback with Chrome
 
-While these devices still show some problems, the general outlook confirms that our examples are as future-proof as possible.
+While some of these devices still show problems, the general outlook confirms that our examples are as future-proof as possible.
 
 To avoid cluttering the ADG, these results are not displayed at the time being.
