@@ -324,12 +324,12 @@ module.exports = (config, cb) => {
     // )
 
     // Format
-    .pipe(
-      prettify({
-        indent_with_tabs: false,
-        max_preserve_newlines: 1
-      })
-    )
+    // .pipe(
+    //   prettify({
+    //     indent_with_tabs: false,
+    //     max_preserve_newlines: 1
+    //   })
+    // )
 
     // Rename to `index.html`
     .pipe(
