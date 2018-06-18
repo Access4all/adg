@@ -12,6 +12,7 @@ compatibility:
     2018.3 + IE 11:
       status: pass
       date: 2018-04-23
+      comments: "recheck"
     2018.3 + FF ESR 52.7.3:
       status: pass
       date: 2018-04-17

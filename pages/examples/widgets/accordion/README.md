@@ -36,8 +36,6 @@ Some interesting peculiarities:
 
 - Using `.accordion:focus-within .control label`, a style can be applied to all radio button labels upon interacting with the accordion.
     - This gives users a clue that they are interacting with a single control now (indicating to use the `Arrow` keys instead of `Tab` to navigate through accordion items).
-    - If you would rather like to make each control focusable on its own, you could use a group of checkboxes instead of radio buttons.
-          - Do not forget to make sure only one of them is checked at a time though (using some JavaScript).
 
 ### Checkboxes implementation
 
