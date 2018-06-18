@@ -1,22 +1,24 @@
-<div class="prev_next">
-  <h2 class="visuallyhidden">Previous/next navigation</h2>
+{{#if (or prev next)}}
+  <div class="prev_next">
+    <h2 class="visuallyhidden">Previous/next navigation</h2>
 
-  <ul>
-  {{#if prev}}
-    <li>
-      <a href="/{{prev.url}}" class="prev_next__link prev_next__link--previous">
-        <span class="visuallyhidden">Previous:</span>
-        <span class="text">{{prev.title}}</span>
-      </a>
-    </li>
-  {{/if}}
+    <ul>
+    {{#if prev}}
+      <li>
+        <a href="/{{prev.url}}" class="prev_next__link prev_next__link--previous">
+          <span class="visuallyhidden">Previous:</span>
+          <span class="text">{{prev.title}}</span>
+        </a>
+      </li>
+    {{/if}}
 
-  {{#if next}}
-    <li>
-      <a href="/{{next.url}}" class="prev_next__link prev_next__link--next">
-        <span class="visuallyhidden">Next:</span>
-        <span class="text">{{next.title}}</span>
-      </a>
-    </li>
-  {{/if}}
-</div>
+    {{#if next}}
+      <li>
+        <a href="/{{next.url}}" class="prev_next__link prev_next__link--next">
+          <span class="visuallyhidden">Next:</span>
+          <span class="text">{{next.title}}</span>
+        </a>
+      </li>
+    {{/if}}
+  </div>
+{{/if}}
