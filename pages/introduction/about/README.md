@@ -79,9 +79,9 @@ If you feel like you have anything to give into our movement (be it active colla
 
 Or drop us a line using the [«Access for all» contact form](http://access-for-all.ch/en/contact.html).
 
-### Main team
+### Core team
 
-During the last months, a main group of people regularly gathered around developing the ADG.
+During the last months, a group of people regularly gathered around developing the ADG.
 
 ![The main team behind the ADG (details read below)](_media/adg-team.jpg)
 
