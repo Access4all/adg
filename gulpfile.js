@@ -1,8 +1,6 @@
 const gulp = require('gulp')
 const browserSync = require('browser-sync').create()
-const argv = require('minimist')(process.argv.slice(2))
-const log = require('fancy-log')
-const colors = require('ansi-colors')
+const util = require('gulp-util')
 const del = require('del')
 const _ = require('lodash')
 
@@ -13,7 +11,11 @@ const examples = require('./gulp/examples')
 const concat = require('gulp-concat')
 
 function errorHandler (err) {
-  log(err.plugin || '', colors.cyan(err.fileName), colors.red(err.message))
+  util.log(
+    err.plugin || '',
+    util.colors.cyan(err.fileName),
+    util.colors.red(err.message)
+  )
 }
 
 gulp.task('html', cb =>
@@ -21,7 +23,7 @@ gulp.task('html', cb =>
     {
       src: ['./pages/**/*.md', '!./pages/**/_examples/**/*.md'],
       base: './pages',
-      host: 'https://www.accessibility-developer-guide.com',
+      host: 'https://accessibility-developer-guide.netlify.com',
       sitemap: './dist/sitemap.xml',
       feed: {
         json: './dist/feed/feed.json',
@@ -211,7 +213,7 @@ gulp.task(
   'default',
   gulp.series(
     function setWatchEnv (cb) {
-      argv.watch = true
+      util.env.watch = true
 
       return cb()
     },

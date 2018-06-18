@@ -121,11 +121,7 @@ const getExample = (examplePath, filePath) => {
     result.statusCode =
       result.status === 'pass' ? (result.comments ? 'yellow' : 'green') : 'red'
     result.statusIndication =
-      result.status === 'pass'
-        ? result.comments
-          ? '⚠ <span class="visuallyhidden">(pass with comments)</span>'
-          : '✔ <span class="visuallyhidden">(pass)</span>'
-        : '✘ <span class="visuallyhidden">(fail)</span>'
+      result.status === 'pass' ? (result.comments ? '⚠' : '✔') : '✘'
 
     // Format date
     const date = new Date(result.date)
@@ -143,9 +139,7 @@ const getExample = (examplePath, filePath) => {
 
     if (summaryBrowser) {
       compatibilitySummary.push({
-        name: `<img src="/img/compatibility/${result.category.toLowerCase()}.png" alt="${
-          result.category
-        }" /><span class="visuallyhidden">+</span><img src="/img/compatibility/${summaryBrowser.toLowerCase()}.png" class="browser" alt="${summaryBrowser}" />`,
+        name: `${result.category} + ${summaryBrowser}`,
         statusCode: result.statusCode,
         statusIndication: result.statusIndication
       })
@@ -178,15 +172,14 @@ const getExample = (examplePath, filePath) => {
     btns.push(`<div class="control">
       <input type="checkbox" id="${id}-compatibility" name="${id}" value="compatibility" />
       <label class="button" for="${id}-compatibility">
-        <span class="summary">
-          ${compatibilitySummary
+        <span class="visuallyhidden">Show compatibility details</span>
+        ${compatibilitySummary
     .map(
       item => `<span class="status status--${item.statusCode}">
-            ${item.name} ${item.statusIndication}
+          ${item.name}: ${item.statusIndication}
         </span>`
     )
-    .join('<span class="visuallyhidden">, </span>')}
-        </span>
+    .join('')}
       </label>
     </div>`)
 
@@ -219,7 +212,7 @@ const getExample = (examplePath, filePath) => {
   return {
     form: `
   ${codePenForm}
-  <div class="tablist"><div class="controls">${btns.join(
+  <div class="accordion"><div class="controls">${btns.join(
     ''
   )}</div><div class="panels">${blocks.join('')}</div></div>`,
     code

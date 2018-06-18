@@ -61,5 +61,3 @@ Some interesting peculiarities:
     - As the whole element is properly marked up with headings, screen reader users can jump very quickly between controls and panels (see [How to handle headings](/examples/headings/handling)).
 - Using `.tablist:focus-within .control label`, a style can be applied to all radio button labels upon interacting with the tablist.
     - This gives users a clue that they are interacting with a single control now (indicating to use the `Arrow` keys instead of `Tab` to navigate through tab items).
-    - If you would rather like to make each control focusable on its own, you could use a group of checkboxes instead of radio buttons.
-          - Do not forget to make sure only one of them is checked at a time though (using some JavaScript).
