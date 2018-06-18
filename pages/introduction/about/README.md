@@ -83,7 +83,7 @@ Or drop us a line using the [«Access for all» contact form](http://access-for-
 
 During the last months, a group of people regularly gathered around developing the ADG.
 
-![The main team behind the ADG (details read below)](_media/adg-team.jpg)
+![The core team working on the ADG (details read below)](_media/core-team.jpg)
 
 Clockwise from top right:
 
@@ -100,9 +100,15 @@ Clockwise from top right:
 
 Not to forget our highly respected testing staff who took care of validating all contents and code examples (all of them working for «Access for all»):
 
+![The testing staff working on the ADG (details read below)](_media/testing-team.jpg)
+
+Clockwise from top right:
+
+- (Anton Bolfing, again.)
 - **Daniele Corciulo**, blind accessibility expert.
-- **Gianfranco Giudice**, blind accessibility expert.
-- **Petra Ritter**, multiple-handicapped accessibility expert.
-- **Mohamed Sherif**, blind accessibility trainee.
-- **Reto Inniger**, vision-impaired accessibility trainee.
 - **Romano Spescha**, vision-impaired accessibility trainee.
+- **Reto Inniger**, vision-impaired accessibility trainee.
+- **Mohamed Sherif**, blind accessibility trainee.
+- **Gianfranco Giudice**, blind accessibility expert.
+
+Sadly not on the picture (beause working remotely) is **Petra Ritter**, multiply-handicapped accessibility expert.
