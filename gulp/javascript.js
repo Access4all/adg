@@ -1,6 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
-const argv = require('minimist')
+const argv = require('minimist')(process.argv.slice(2))
 
 module.exports = (config, cb) => {
   const compiler = webpack({
