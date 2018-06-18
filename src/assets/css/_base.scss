@@ -78,6 +78,7 @@ button {
 		padding-left: 40px;
 		font-weight: bold;
     text-align: left;
+    line-height: inherit;
 	}
 }
 
@@ -118,43 +119,12 @@ p img {
     display: inline-block;
 
     label {
-      margin-bottom: 0;
-
-      @include above-mobile-narrow {
-        .title {
-          @include visuallyhidden;
-        }
-      }
-
-      @include mobile-narrow {
-        & {
-          margin-right: 0;
-          letter-spacing: -0.04em;
-          padding-left: 0.2em;
-          padding-right: 0.2em;
-        }
-
-        .summary {
-          @include visuallyhidden;
-        }
-      }
-
-      &.is-active {
-        background-color: var(--theme-color-light);
-        border-bottom: 1px solid var(--theme-color-light);
-        position: relative;
-        z-index: 1;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        padding-bottom: 2px;
-      }
-
       &:hover {
         cursor: pointer;
       }
 
       img {
-        height: 32px;
+        height: 29px;
         vertical-align: top;
         margin-right: -0.25em;
 
@@ -188,9 +158,6 @@ p img {
   }
 
   .panel {
-    margin-top: -4px;
-    position: relative;
-
     table {
       margin: 0;
       border: none;

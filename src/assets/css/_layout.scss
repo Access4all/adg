@@ -34,7 +34,7 @@
 	@include mobile-portrait {
 		box-sizing: border-box;
 		width: auto;
-		padding: 0 0.25 * $gutter;
+		padding: 0 $gutter;
 	}
 }
 .l-site_width {
