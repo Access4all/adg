@@ -33,6 +33,6 @@ If you are really curious and want to learn more about this, skip ahead and read
 
 ## Interacting with widgets
 
-Interacting with widgets can be tricky, especially when ARIA roles are used (if you haven't done this yet, go back and read [ARIA - when HTML simply isn't enough](/knowledge/aria)).
+Interacting with widgets can be tricky, especially when ARIA roles are used (if you haven't done this yet, go back and read [ARIA - when HTML simply is not enough](/knowledge/aria)).
 
 In general, widgets should be controllable similarly to other interactive elements.

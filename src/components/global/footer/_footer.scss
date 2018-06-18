@@ -5,6 +5,9 @@
   margin-top: 2 * $gutter;
 	margin-left: auto;
 	margin-right: auto;
+  margin-bottom: 0;
+  font-weight: 300;
+
   //width: 100%;
   &:before {
     @include navbar_white_line__pseudo;
@@ -25,11 +28,27 @@
     }
   }
 
+  .footer--left {
+    img {
+      height: 80px;
+    }
+  }
+  .footer--right {
+    img {
+      height: 40px;
+    }
+  }
+
   a {
     text-decoration: underline;
 
     &:focus {
       outline: 2px dotted var(--theme-color-dark);
+      outline-offset: 2px;
+    }
+
+    &:hover, &:focus {
+      color: var(--theme-color-dark);
     }
   }
 }
@@ -56,6 +75,7 @@
 
 .footer--label {
   clear: both;
+  margin-bottom: 10px;
 }
 
 .footer--agency {
@@ -67,7 +87,6 @@
 }
 
 .footer--logolink {
-  height: 60px;
   position: relative;
 
   img {

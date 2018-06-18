@@ -19,7 +19,7 @@ function errorHandler (err) {
 gulp.task('html', cb =>
   html(
     {
-      src: './pages/**/*.md',
+      src: ['./pages/**/*.md', '!./pages/**/_examples/**/*.md'],
       base: './pages',
       host: 'https://accessibility-developer-guide.netlify.com',
       sitemap: './dist/sitemap.xml',
@@ -42,7 +42,7 @@ gulp.task('html', cb =>
 gulp.task('html:examples', cb =>
   examples(
     {
-      src: './pages/**/_examples/**/*.html',
+      src: './pages/**/_examples/**/index.html',
       base: './pages',
       errorHandler
     },
@@ -98,9 +98,22 @@ gulp.task('js', cb => {
 gulp.task(
   'media:copy',
   gulp.parallel(
+    function demo () {
+      return gulp
+        .src(
+          [
+            './pages/**/_examples/**/*.html',
+            '!./pages/**/_examples/**/index.html'
+          ],
+          {
+            base: './pages'
+          }
+        )
+        .pipe(gulp.dest('./dist'))
+    },
     function content () {
       return gulp
-        .src(['./pages/{,**/}_media/**/*', './pages/**/*.png'], {
+        .src(['./pages/{,**/}_media/**/*', './pages/**/*.{png,jpg,mp3}'], {
           base: './pages'
         })
         .pipe(gulp.dest('./dist'))

@@ -6,16 +6,16 @@ changed: "2018-04-12"
 
 # Controlling a computer with a keyboard only
 
-**Many users control a computer using keyboard only, so no mouse or similar pointing device is available. Thus, it's crucial that any software (including websites) is operable by keyboard only. This doesn't only benefit disabled users, but also power users.**
+**Many users control a computer using keyboard only, so no mouse or similar pointing device is available. Thus, it's crucial that any software (including websites) is operable by keyboard only. This does not only benefit disabled users, but also power users.**
 
 **Notice:** we are talking specifically about Windows operating systems here. For macOS, Linux, and others, there exist similar keyboard shortcuts.
 
 ## Why no mouse?
 
-Many users don't use a mouse (or similar pointing device):
+Many users do not use a mouse (or similar pointing device):
 
-- Either they can't control one due to a motor impairment.
-- Or they simply don't want to control one as they are power users (see below).
+- Either they cannot control one due to a motor impairment.
+- Or they simply do not want to control one as they are power users (see below).
 
 ## Keyboard only navigation
 
@@ -44,7 +44,7 @@ In some menus, a specific character of an item name is __underlined__: if the me
 
 ## Becoming a power user (optional)
 
-Power users know and use their often used applications' keyboard shortcuts: it makes them much faster than average users, as they don't need to switch between keyboard and mouse all the time.
+Power users know and use their often used applications' keyboard shortcuts: it makes them much faster than average users, as they do not need to switch between keyboard and mouse all the time.
 
 This is a good example for the fact that optimising a website for one particular group (for example motor impaired users), you often also optimise it for other groups (for example power users). A win-win situation.
 
@@ -62,9 +62,9 @@ The following is a collection of some well known shortcuts (in no specific order
 - Press `Alt + Tab` to switch between open windows
 - Press `Alt` to focus current windows' application menu
 - Press `Tab` to jump between focusable controls
-- Press `Enter` to confirm something (e.g. closing a dialog and applying changes)
+- Press `Enter` to confirm something (for example closing a dialog and applying changes)
 - Press `Space` to also confirm or interact with stuff (often used interchangeably with `Enter`)
-- Press `Esc` to cancel something (e.g. closing a dialog without applying changes)
+- Press `Esc` to cancel something (for example closing a dialog without applying changes)
 
 Notice: by pressing `Alt`, the focus is placed in the current application's menu (if available). Using the arrow keys, you can then browse it. The focused item can be activated by pressing `Enter`.
 
@@ -81,4 +81,4 @@ Most of the following shortcuts are pretty common to a wide set of similar appli
 - `Ctrl + V`: Paste
 - `Ctrl + F`: Find
 
-This list by far isn't complete, and each application may offer very distinct additional shortcuts.
+This list by far is not complete, and each application may offer very distinct additional shortcuts.

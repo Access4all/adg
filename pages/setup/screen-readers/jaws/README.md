@@ -64,7 +64,7 @@ While JAWS is running, it's announcing whatever your screen is currently showing
 
 ### Braille viewer
 
-JAWS doesn't offer a `Speech Viewer` like NVDA (see [NVDA installation and configuration](/setup/screen-readers/nvda)), but at least its `Braille Viewer` gives some basic info about where the JAWS focus currently is.
+JAWS does not offer a `Speech Viewer` like NVDA (see [NVDA installation and configuration](/setup/screen-readers/nvda)), but at least its `Braille Viewer` gives some basic information about where the JAWS focus currently is.
 
 ![JAWS braille viewer](_media/jaws-braille-viewer.png)
 
@@ -80,7 +80,7 @@ To open the output history:
 
 - Press `JAWS + Space` (a *beep* will be played), then `H`.
 - The history shows that last 20 announcements.
-- Sadly, the history doesn't refresh automatically.
+- Sadly, the history does not refresh automatically.
 
 ## Configuration
 

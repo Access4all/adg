@@ -29,11 +29,11 @@ Some examples:
 
 If you're on a Mac running NVDA or JAWS in a virtual machine, there are several ways you can work around the missing `Insert` key; if you haven't done this yet, go back and read [Configuring VMware Fusion on macOS](/setup/windows/vmware-on-macos).
 
-Both NVDA and JAWS offer the option to use `Caps Lock` instead of `Insert` as a modifier key. For some reason though, this doesn't seem to work in VMware Fusion.
+Both NVDA and JAWS offer the option to use `Caps Lock` instead of `Insert` as a modifier key. For some reason though, this does not seem to work in VMware Fusion.
 
 ## Naming convention
 
-In this guide, we don't talk about the `Insert` key. Instead, when running NVDA, we talk about the `NVDA` key. And when running JAWS, we talk about the `JAWS` key.
+In this guide, we do not talk about the `Insert` key. Instead, when running NVDA, we talk about the `NVDA` key. And when running JAWS, we talk about the `JAWS` key.
 
 So the examples above look like this:
 

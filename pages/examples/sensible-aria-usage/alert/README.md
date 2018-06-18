@@ -45,7 +45,7 @@ return setTimeout(sayHello, 10000);
 
 ### Interruption of current announcement
 
-You may have noticed that the screen reader's current announcement was brutally aborted by the "Hello!" alert. This can be distracting and confusing.
+You may have noticed that the screen reader's current announcement was brutally aborted by the "Hello!" alert. This can be distracting and confusing (maybe comparable to an annoyngly popping up JavaScript `alert()`, but even much more rigid).
 
 But look at the following, more extreme example, where the user is greeted very 2 seconds:
 

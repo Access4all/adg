@@ -69,7 +69,7 @@ const extendNavigationItem = (origItem, index, options) => {
 
     item.children.forEach(child => {
       options.subPages.push({
-        title: child.title,
+        title: child.titleDetailed,
         lead: child.lead,
         url: child.url,
         level: level + 1
@@ -294,6 +294,9 @@ module.exports = (config, cb) => {
             }
 
             return options.inverse(this)
+          },
+          or: function () {
+            return Array.prototype.slice.call(arguments, 0, -1).some(Boolean)
           }
         }
       }).on('error', config.errorHandler)

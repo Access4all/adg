@@ -31,7 +31,7 @@ It would be great to have something like this natively in HTML, where the browse
 
 ### Mimicking a tablist visually
 
-Visually, it isn't a problem to mimic a tablist. Just use some appropriate standard HTML, then apply some visual attributes and custom JavaScript behaviour to resemble a tablist's look and feel:
+Visually, it is not a problem to mimic a tablist. Just use some appropriate standard HTML, then apply some visual attributes and custom JavaScript behaviour to resemble a tablist's look and feel:
 
 ```css
 .tablist {
@@ -62,7 +62,7 @@ $(".tablist [data-target]").click(function() {
 </div>
 ```
 
-But simply presenting something visually is not enough for screen readers (if you are really curious and want to learn more about this, skip ahead and read [Screen readers don't convey visual attributes](/knowledge/desktop-screen-readers/no-visual-attributes)). For example, although the currently active tabitem can be distinguished visually using `class="active"` and some CSS styling, screen readers will not know which tabitem in fact is the active one. Proper semantical information is missing.
+But simply presenting something visually is not enough for screen readers (if you are really curious and want to learn more about this, skip ahead and read [Screen readers do not convey visual attributes](/knowledge/desktop-screen-readers/no-visual-attributes)). For example, although the currently active tabitem can be distinguished visually using `class="active"` and some CSS styling, screen readers will not know which tabitem in fact is the active one. Proper semantical information is missing.
 
 ## ARIA to the rescue (?)
 
@@ -99,20 +99,20 @@ We will take a closer look at what these attributes do (or better: what they sho
 
 First, `role="tablist"` was added to the list container (containing the tabs). The `<ul>` element won't be announced as list now anymore by screen readers, but as something like "tablist" (depending on the screen reader).
 
-Then, `role="presentation"` was added to the list elements of the former list. As the list isn't a list anymore, the specific `<li>` elements must not have specific list semantics anymore. The `presentation` role removes any semantical information: the `<li>` elements are now treated similar to plain `<div>` elements. It may seem silly to use a semantic container and then remove its semantics. But this is generally a good practice for providing backwards compatibility with legacy screen readers that may not support ARIA.
+Then, `role="presentation"` was added to the list elements of the former list. As the list is not a list anymore, the specific `<li>` elements must not have specific list semantics anymore. The `presentation` role removes any semantical information: the `<li>` elements are now treated similar to plain `<div>` elements. It may seem silly to use a semantic container and then remove its semantics. But this is generally a good practice for providing backwards compatibility with legacy screen readers that may not support ARIA.
 
 Finally, `role="tab"` was added to each tab element. The `<button>` element won't be announced as button now anymore by screen readers, but as something like "tab" (depending on the screen reader). In addition, some special `aria-*` attributes were added:
 
 - `aria-controls` lets screen readers know, which tabpanel's visibility is toggled upon activation or deactivation of the tab. This allows to quickly jump from tabitem to tabpanel forth and back (depending on the screen reader).
 - `aria-selected` lets screen readers know, which tab is currently the active one, and announces this to the user with something like "active" (depending on the screen reader).
 
-Nice and clean. This looks pretty promising, doesn't it?
+Nice and clean. This looks pretty promising, does not it?
 
 ### A magic all-in-one solution? No.
 
 Are you in hope of ARIA "magically" solving all the problems with missing semantics?
 
-Do not be too optimistic: ARIA is a bare set of attributes and their specific values. So in contrast to traditional HTML, the browser doesn't take care of anything itself. You still have to provide all the interactivity yourself using JavaScript! In the current example, you need to:
+Do not be too optimistic: ARIA is a bare set of attributes and their specific values. So in contrast to traditional HTML, the browser does not take care of anything itself. You still have to provide all the interactivity yourself using JavaScript! In the current example, you need to:
 
 - Implement an intuitive keyboard control pattern (or provide clear instruction of how to control the widget with keyboard only and screen readers).
 - Take care of toggling the visibility of the tabpanels.
@@ -142,7 +142,7 @@ And as long as no quasi-standard, no ubiquitous convention has been established,
 
 ## Conclusion
 
-The intention behind ARIA is intriguing: it could be a big help in making the web a more accessible place. And knowing that ARIA was released in 2014, it is a real shame that browsers and screen readers still by far aren't capable of truly handling it in a homogenous and robust way. Alas, even if developers use ARIA in perfect accordance to its technical specification, this often will not be of much use for the targeted users. So at the time being, in most cases we don't recommend the use of ARIA. Let us hope that the situation will change for the better some time in the future.
+The intention behind ARIA is intriguing: it could be a big help in making the web a more accessible place. And knowing that ARIA was released in 2014, it is a real shame that browsers and screen readers still by far aren't capable of truly handling it in a homogenous and robust way. Alas, even if developers use ARIA in perfect accordance to its technical specification, this often will not be of much use for the targeted users. So at the time being, in most cases we do not recommend the use of ARIA. Let us hope that the situation will change for the better some time in the future.
 
 Aside from the `role` attribute (which you should try to avoid in most cases), after all there exist some `aria-*` attributes that can be used standalone and are supported by all modern browsers and screen readers - more or less both homogeneously and robustly. So in some specific situations, these attributes can be of real help, but you need to know exactly in which cases. You will learn more about these in this chapter.
 

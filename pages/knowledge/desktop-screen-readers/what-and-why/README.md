@@ -26,7 +26,7 @@ So to say, if a website can be read and operated by a screen reader, it can be c
 
 In addition, while modern web browsers are pretty forgiving with malformed website code, screen readers tend to expose such weaknesses like invalid syntax or missing/wrong semantics pitilessly (if you haven't done this yet, go back and read [Semantics provide meaning](/knowledge/semantics/meaning)). So they are a good tool to test the overall quality and validity of the code.
 
-Still, there are a few areas that can't be validated with screen readers and thus need some special attention on their own (use of colour, contrasts, some audio and video requirements, just to name a few).
+Still, there are a few areas that cannot be validated with screen readers and thus need some special attention on their own (use of colour, contrasts, some audio and video requirements, just to name a few).
 
 ## Conclusion
 

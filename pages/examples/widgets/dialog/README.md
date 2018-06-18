@@ -69,6 +69,7 @@ Some interesting peculiarities:
     - The `role="dialog"` container traps the focus, and forces some screen readers to remain in focus mode (so browsable content is not readable).
     - The `role="document"` container re-enables switching to browse mode.
 - The curtain is implemented with an independent container and a semi-transparent background colour.
+    - Some implementations allow clicking the curtain to dismiss a dialog. While this would be easy to implement, we omitted it for simplicity reasons.
 
 ## Further discussions
 

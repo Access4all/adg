@@ -11,6 +11,15 @@ body {
   padding: 20px;
 }
 
+fieldset {
+  border: 0;
+  padding: 4px;
+}
+
+.carousel:focus-within .control label {
+  background-color: yellow;
+}
+
 .carousel {
   padding-bottom: 50px;
   margin-bottom: 20px;
@@ -39,10 +48,11 @@ body {
 .control label {
   width: 25px;
   margin: 0 5px;
+  display: inline-block;
 }
 
 input[type="radio"]:checked + label {
-  background-color: black;
+  background-color: black !important;
 }
 
 button:focus,
@@ -61,4 +71,8 @@ input[type="radio"] + label:hover {
   border: 1px solid;
   background-color: lightyellow;
   padding: 0 0 0 10px;
+}
+
+button[aria-pressed="true"] {
+  font-weight: bold;
 }

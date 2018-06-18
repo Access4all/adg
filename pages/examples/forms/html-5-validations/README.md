@@ -42,7 +42,7 @@ All browsers handle these validations to their likings. In general, they work qu
 
 A few notes though:
 
-- Some screen readers announce missing required values automatically as "invalid", others don't.
+- Some screen readers announce missing required values automatically as "invalid", others do not.
 - Some screen readers announce both an input's name and validation error, others only announce the validation error.
     - The latter case is a minor inconvenience, as the user may have to find out the input's name manually (which is easy, but still an annoyance).
 
@@ -93,3 +93,7 @@ So which one to use when? In general, we suggest using the HTML 5 validations; i
 Just a note for completeness: while HTML 5 client side validations are a cool feature, they certainly are no replacement for server side validations. Because you never trust user data - do you?!
 
 You will always need server side validations with custom messages when processing user data, see: [Validation messages](/examples/forms/validation-messages).
+
+## Conclusion
+
+While HTML 5 validations can be used in an accessible way, they often remain an inconvenient technique for screen reader users. We do not recommend to use them intensely.

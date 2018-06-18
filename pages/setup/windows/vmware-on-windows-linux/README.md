@@ -48,11 +48,11 @@ Windows screen readers rely heavily on the `Insert` key.
 
 ![Insert key on a keyboard](_media/insert-key-on-a-keyboard.png)
 
-This key isn't easily available on some keyboards, so you may have to emulate it. The easiest way to do this is using the SharpKeys software.
+This key is not easily available on some keyboards, so you may have to emulate it. The easiest way to do this is using the SharpKeys software.
 
 - SharpKeys translates any given key to any other (in the VM itself).
 - In the VM, download [SharpKeys](http://sharpkeys.codeplex.com/), install and launch it.
-- Click `Add`, then map any key you like (e.g. the right `Alt` key `E0_38`) to `Insert` key `E0_52`.
+- Click `Add`, then map any key you like (for example the right `Alt` key `E0_38`) to `Insert` key `E0_52`.
 - Click `OK` and `Write to Registry`.
 - Restart the VM.
 

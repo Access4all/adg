@@ -34,12 +34,12 @@ If the button is activated (and the `aria-expanded` status is changed to `true` 
 
 [Example](_examples/marking-an-element-expandable-using-aria-expanded)
 
-### Adding hasmenu (optional)
+### Adding haspopup (optional)
 
-There is a similar ARIA attribute, `aria-hasmenu`, which leads screen readers to announce an element as having a menu.
+There is a similar ARIA attribute, `aria-haspopup`, which leads screen readers to announce an element as having a menu.
 
 ```html
-<button aria-hasmenu="true">
+<button aria-haspopup="true">
   Toggle
 </button>
 ```
@@ -48,13 +48,11 @@ A screen reader will announce:
 
 > Toggle. Button has menu.
 
-[Example](_examples/marking-an-element-expandable-using-aria-hasmenu)
+[Example](_examples/marking-an-element-expandable-using-aria-haspopup)
 
-In contrast to `aria-expanded`, `aria-hasmenu` does not offer anything better than `aria-expanded`: both tell the user that there is something to be toggled. But while `aria-expanded` can be used for whatever "something" needed (menus of all sorts, dialogs, tooltips, etc.), `aria-hasmenu` is constrained to menus.
+In contrast to `aria-expanded`, `aria-haspopup` does not offer anything better: both tell the user that there is something to be toggled. But while `aria-expanded` offers a way to provide feedback to the user upon activation, `aria-haspopup` has not (setting it to `aria-haspopup="false"` using JavaScript does not make any sense). So it should always be used in combination with `aria-expanded` (which renders it obsolete again).
 
-Furthermore, while `aria-hasmenu` gives a good clue that there is a menu, it does not offer any way to provide feedback to the user upon activation (setting it to `aria-hasmenu="false"` using JavaScript does not make any sense). So it should always be used in combination with `aria-expanded` (which renders it obsolete again).
-
-We do not recommend to use `aria-hasmenu` as it does not provide any additional value.
+We do not recommend to use `aria-haspopup` as it does not provide any additional value.
 
 ## Real world use
 

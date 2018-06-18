@@ -1,7 +1,7 @@
 ---
 navigation_title: "Good example"
 position: 2
-changed: "2018-04-30"
+changed: "2018-??-??"
 ---
 
 # General good table example
@@ -21,4 +21,4 @@ This provides all information needed to browse a table efficiently using a scree
 
 ## Thead, tbody, tfoot?
 
-It is recommended to use `<thead>` for the table's header, `<tbody>` for its data, and `<tfoot>` for its footer (if applicable, for example when having a final row summing up the presented data). If you don't provide those, the browser will add at least a `<tbody>` itself.
+It is recommended to use `<thead>` for the table's header, `<tbody>` for its data, and `<tfoot>` for its footer (if applicable, for example when having a final row summing up the presented data). If you do not provide those, the browser will add at least a `<tbody>` itself.

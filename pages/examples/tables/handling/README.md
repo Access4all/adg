@@ -10,7 +10,7 @@ changed: "2018-04-18"
 
 ## Keyboard only handling
 
-For keyboard only users, tables don't offer any special functionality. So there's nothing to say here. Still, you may want to check out [How to browse websites using a keyboard only](/knowledge/keyboard-only/browsing-websites).
+For keyboard only users, tables do not offer any special functionality. So there's nothing to say here. Still, you may want to check out [How to browse websites using a keyboard only](/knowledge/keyboard-only/browsing-websites).
 
 ## Screen reader handling
 

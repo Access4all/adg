@@ -4,14 +4,15 @@
   padding-bottom: $gutter;
 
   @include mobile {
-    padding-top: $gutter / 4;
+    padding-top: $gutter;
     padding-bottom: $gutter / 4;
   }
 
   h2 {
   display: inline-block;
-  font-size: 0.8rem;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-right: 0.25em;
   }
   @include above-mobile {
     &:after {
@@ -51,6 +52,7 @@
 }
 
 .breadcrumbs--list--item--link {
+    font-weight: 300;
     display: block;
     @include font-xs;
     &:after {
@@ -59,12 +61,9 @@
         display: inline-block;
     }
     //.is-back-link &,
-    &:hover {
+    &:hover, &:focus {
       @include theme(color, var(--theme-color-dark));
       text-decoration: underline;
-    }
-
-    &:focus {
-      outline: 2px dotted var(--theme-color-dark);
+      outline: none;
     }
 }

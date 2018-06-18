@@ -3,32 +3,96 @@
   h1 {
     @include h1;
     @include theme-color;
+    letter-spacing: 0.05em;
     padding-top: 2em;
     padding-bottom: 1.5em;
 
-    + p strong {
+    + p {
       font-size: 1.5em;
-      font-weight: normal;
+
+      @include mobile {
+        font-size: 1.25em;
+      }
+
+      margin-bottom: 100px;
+
+      strong {
+        font-weight: 300;
+      }
     }
   }
   h2 {
     @include theme-color;
   }
-  p, li {
+
+  a {
+    color: var(--theme-color-dark);
+  }
+
+  blockquote {
+    padding-left: 10px;
+    border-left: 10px solid var(--theme-color-light);
+    font-style: italic;
+  }
+
+  p, li, pre {
     > code {
-      @include theme(background-color, main);
-      @include theme(color, bg);
+      background-color: var(--theme-color-light);
+      color: var(--theme-color-dark);
       padding: .1em .25em;
       border-radius: 3px;
+      @include font-xs;
     }
   }
-  pre code {
-    border: 1px solid black;
-    @include theme(border-color, main);
-    @include font-xs;
+  pre {
+    background-color: transparent;
+
+    code {
+      border: none;
+      padding: 10px 16px;
+      border-radius: 10px;
+    }
   }
 
   a:focus {
     outline: 2px dotted var(--theme-color-dark);
+    outline-offset: 4px;
+    color: var(--theme-color-dark);
+  }
+
+  table, th, td {
+    margin: 1em 0;
+    padding: 10px;
+    border: 1px solid var(--theme-color-dark);
+  }
+
+  th {
+    background-color: var(--theme-color-light);
+  }
+
+  td {
+    font-weight: 300;
+  }
+
+  ol {
+    padding-left: 26px;
+    li {
+      list-style: inherit;
+    }
+  }
+
+  img.agency-logo {
+    float: right;
+    width: 25%;
+    border: none;
+    margin-left: 2em;
+    margin-bottom: 2em;
+  }
+
+  img.zfa-logo {
+    border-radius: 10px;
+    background-color: #fff;
+    border-color: var(--theme-color-light);
+    padding: 1.5em 2em;
   }
 }

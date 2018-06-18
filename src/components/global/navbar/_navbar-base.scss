@@ -7,7 +7,7 @@ $navWidthMax: 260px;
   content: "";
   position: absolute;
   display: inline-block;
-  opacity: .5;
+  opacity: 1;
   @include theme-isLight {
     opacity: 1;
   }

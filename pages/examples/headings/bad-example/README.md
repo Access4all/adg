@@ -19,12 +19,12 @@ On the visual level, the problems are hard to spot. So let's take a closer look 
 The problems are:
 
 1. A heading level is skipped: "Playing Soccer" is on level 4, but should be on level 3.
-2. A heading belongs to the wrong parent: "Gardening" doesn't belong to "Dancing", it should be on level 3 instead of level 4.
-3. A heading isn't marked up properly: "Meditate" is marked up as a `<strong>` paragraph instead of an `<h#>`.
+2. A heading belongs to the wrong parent: "Gardening" does not belong to "Dancing", it should be on level 3 instead of level 4.
+3. A heading is not marked up properly: "Meditate" is marked up as a `<strong>` paragraph instead of an `<h#>`.
 
 The first problem is clearly a syntactical ones, the second and third problems are semantical ones.
 
-By the way, while NVDA doesn't propagate the first problem to the user, the bookmarklet [h123](/setup/browsers/bookmarklets/h123) does so by marking it visually:
+By the way, while NVDA does not propagate the first problem to the user, the bookmarklet [h123](/setup/browsers/bookmarklets/h123) does so by marking it visually:
 
 ![Document outline of h123](_media/document-outline-of-h123.png)
 
@@ -36,11 +36,11 @@ Most syntactical problems can be evaluated automatically: it's no problem for a 
 
 Semantical problems, however, usually must be examined manually by a human who has certain knowledge about the presented content.
 
-Regarding our example, to examine the second problem in our list above, one has to know what "Gardening" means. And based on this knowledge, one can conclude that this isn't a dancing style (so it shouldn't belong to "Dancing"). Furthermore, to place it correctly, one needs to decide:
+Regarding our example, to examine the second problem in our list above, one has to know what "Gardening" means. And based on this knowledge, one can conclude that this is not a dancing style (so it shouldn't belong to "Dancing"). Furthermore, to place it correctly, one needs to decide:
 
 - Whether it belongs to "Physical Activities" as a heading level 3.
 - Or whether it makes more sense to put it directly under "My Hobbies" as a heading level 2.
-- Or whether it doesn't belong to the listed hobbies at all, and as such would be a heading level 1.
+- Or whether it does not belong to the listed hobbies at all, and as such would be a heading level 1.
 
 A computer probably will never be able to do that.
 

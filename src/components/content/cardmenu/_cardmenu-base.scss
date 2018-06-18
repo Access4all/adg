@@ -4,10 +4,11 @@
   background: $c-white;
   @include rem(border-radius, 10px);
   @include rem(padding, 20px);
-  border: 2px solid $c-white;
+  border: 1px solid var(--theme-color-dark);
 
   &:hover,
   &:focus {
-    border-color: var(--theme-color-dark);
+    border-width: 2px;
+    @include rem(padding, 19px);
   }
 }

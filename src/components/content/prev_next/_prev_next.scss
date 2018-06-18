@@ -29,7 +29,6 @@
       text-overflow: ellipsis;
       display: block;
       width: 100%;
-      line-height: 2em;
     }
 
     &--previous {
@@ -37,6 +36,7 @@
         content: '👈';
         font-size: 1.5em;
         position: absolute;
+        top: -6px;
       }
 
       .text {
@@ -50,7 +50,7 @@
       &::after {
         position: absolute;
         right: 0;
-        top: 0;
+        top: -6px;
         font-size: 1.5em;
         content: '👉';
       }
@@ -62,10 +62,12 @@
 
     &:hover {
       text-decoration: underline;
+      color: var(--theme-color-dark);
     }
 
     &:focus {
       outline: 2px dotted var(--theme-color-dark);
+      outline-offset: 2px;
     }
   }
 }

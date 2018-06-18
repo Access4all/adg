@@ -1,14 +1,17 @@
 
 .logo {
   margin-left: ($navWidthMin - $logo_width) / 2;
+  margin-right: ($navWidthMin - $logo_width) / 2;
 	text-decoration: none;
   overflow: hidden;
+  display: block;
   &:hover {
     color: var(--theme-color-dark);
   }
 
   &:focus {
     outline: 2px dotted var(--theme-color-dark);
+    outline-offset: 2px;
   }
   .logo-title,
   .logo-img {
@@ -26,4 +29,5 @@
   text-transform: uppercase;
   width: 0;
   padding-left: .5em;
+  margin: -2px 0;
 }

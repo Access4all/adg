@@ -2,37 +2,51 @@ body {
   margin-top: 0;
 }
 
-table {
-  border-collapse: collapse;
-  margin-top: 51px;
-}
-
-caption {
+#caption {
   width: 810px;
-  padding-top: 10px;
+  padding-top: 2px;
   padding-bottom: 2px;
   margin-top: -51px;
   position: fixed;
   background-color: #fff;
+  text-align: center;
 }
 
-thead {
+.table {
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  display: table;
+  margin-top: 57px;
+}
+
+.thead {
   position: fixed;
   top: 30px;
 }
-thead th {
-  background-color: lightpink;
+
+.tbody {
+  padding-top: 6px;
 }
 
-tbody {
-  padding-top: 51px;
+.tr {
+  display: table-row;
 }
-tbody th {
+
+.th, .td {
+  border-top: 1px solid;
+  border-right: 1px solid;
+  padding: 4px 8px;
+  display: table-cell;
+}
+
+.th {
+  font-weight: bold;
+}
+.th[role="rowheader"] {
   background-color: lightgreen;
 }
-
-th, td {
-  border: 1px solid;
+.th[role="columnheader"] {
+  background-color: lightpink;
 }
 
 .name {

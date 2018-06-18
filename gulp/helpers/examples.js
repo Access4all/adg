@@ -5,7 +5,13 @@ const hljs = require('highlight.js')
 const _ = require('lodash')
 
 const getFile = (files, type, dir) => {
-  const match = files.find(file => path.extname(file) === `.${type}`)
+  const match = files.find(file => {
+    if (type === 'html') {
+      return path.basename(file) === 'index.html'
+    }
+
+    return path.extname(file) === `.${type}`
+  })
 
   if (type === 'png') {
     return match ? path.join(dir, match) : ''
@@ -13,8 +19,8 @@ const getFile = (files, type, dir) => {
 
   const content = match ? fs.readFileSync(path.join(dir, match)).toString() : ''
 
-  if (type === 'json') {
-    return JSON.parse(content)
+  if (type === 'md') {
+    return frontMatter(content).attributes
   }
 
   return content
@@ -24,7 +30,7 @@ const getCode = dir => {
   const files = fs.readdirSync(dir)
 
   return {
-    details: getFile(files, 'json', dir),
+    details: getFile(files, 'md', dir),
     preview: getFile(files, 'png', dir),
     html: getFile(files, 'html', dir),
     css: getFile(files, 'css', dir),
@@ -78,14 +84,85 @@ const getCodePenForm = (code, title) => {
 }
 
 const getExample = (examplePath, filePath) => {
-  const relExamplePath = path.relative(examplePath, filePath)
   const code = getCode(examplePath)
   const id = _.uniqueId('example-')
 
-  const btns = ['html', 'css', 'js'].filter(type => code[type]).map(type => {
-    const markup = hljs.highlightAuto(code[type], [type])
+  const compatibilitySummaryBrowsers = ['FF', 'IE']
+  const compatibilitySummary = []
 
-    return `<div class="control"><input type="checkbox" id="${id}-${type}" name="${id}" value="${type}" /><label class="button" for="${id}-${type}"><span class="visuallyhidden">Show </span>${type.toUpperCase()}<span class="visuallyhidden"> code</span></label></div>`
+  let compatibility = []
+
+  if (code.details.compatibility) {
+    for (const [category, value] of Object.entries(
+      code.details.compatibility
+    )) {
+      const results = value.status
+        ? {
+          [category]: value
+        }
+        : value
+
+      for (const [browser, result] of Object.entries(results)) {
+        const env = category === browser ? category : `${category} ${browser}`
+
+        compatibility.push({
+          env,
+          status: result.status,
+          date: result.date,
+          comments: result.comments || null,
+          category
+        })
+      }
+    }
+  }
+
+  compatibility = compatibility.map(result => {
+    // Create color code and visual indication based on status and whether comments are present
+    result.statusCode =
+      result.status === 'pass' ? (result.comments ? 'yellow' : 'green') : 'red'
+    result.statusIndication =
+      result.status === 'pass'
+        ? result.comments
+          ? '⚠ <span class="visuallyhidden">(pass with comments)</span>'
+          : '✔ <span class="visuallyhidden">(pass)</span>'
+        : '✘ <span class="visuallyhidden">(fail)</span>'
+
+    // Format date
+    const date = new Date(result.date)
+
+    // eslint-disable-next-line eqeqeq
+    if (date != 'Invalid Date') {
+      result.date = `${date.getFullYear()}-${date.getMonth() +
+        1}-${date.getDate()}`
+    }
+
+    // Create summary of screenreader+browser combinations
+    const summaryBrowser = compatibilitySummaryBrowsers.find(browser =>
+      result.env.match(browser)
+    )
+
+    if (summaryBrowser) {
+      compatibilitySummary.push({
+        name: `<img src="/img/compatibility/${result.category.toLowerCase()}.png" alt="${
+          result.category
+        }" /><span class="visuallyhidden">+</span><img src="/img/compatibility/${summaryBrowser.toLowerCase()}.png" class="browser" alt="${summaryBrowser}" />`,
+        statusCode: result.statusCode,
+        statusIndication: result.statusIndication
+      })
+    }
+
+    return result
+  })
+
+  const btns = ['html', 'css', 'js'].filter(type => code[type]).map(type => {
+    return `<div class="control">
+      <input type="checkbox" id="${id}-${type}" name="${id}" value="${type}" />
+      <label class="button" for="${id}-${type}">
+        <span class="visuallyhidden">Show </span>
+        ${type.toUpperCase()}
+        <span class="visuallyhidden"> code</span>
+      </label>
+    </div>`
   })
   const blocks = ['html', 'css', 'js'].filter(type => code[type]).map(type => {
     const markup = hljs.highlightAuto(code[type], [type])
@@ -97,10 +174,52 @@ const getExample = (examplePath, filePath) => {
 
   const codePenForm = getCodePenForm(code)
 
+  if (compatibility.length) {
+    btns.push(`<div class="control">
+      <input type="checkbox" id="${id}-compatibility" name="${id}" value="compatibility" />
+      <label class="button" for="${id}-compatibility">
+        <span class="summary">
+          ${compatibilitySummary
+    .map(
+      item => `<span class="status status--${item.statusCode}">
+            ${item.name} ${item.statusIndication}
+        </span>`
+    )
+    .join('<span class="visuallyhidden">, </span>')}
+        </span>
+      </label>
+    </div>`)
+
+    blocks.push(`<div class="panel" id="${id}-compatibility_panel" style="display: none">
+      <table class="compatibility">
+        <thead>
+          <th class="category">Category</th>
+          <th class="result">Result</th>
+          <th class="comments">Comments</th>
+          <th class="date">Date</th>
+        </thead>
+        <tbody>
+          ${compatibility
+    .map(
+      result => `<tr>
+  <th>${result.env}</th>
+    <td class="result result--${result.statusCode}">
+      ${result.statusIndication} ${result.status}
+    </td>
+    <td>${result.comments ? result.comments : '-'}</td>
+    <td>${result.date}</td>
+</tr>`
+    )
+    .join('')}
+        </tbody>
+      </table>
+    </div>`)
+  }
+
   return {
     form: `
   ${codePenForm}
-  <div class="accordion"><div class="controls">${btns.join(
+  <div class="tablist"><div class="controls">${btns.join(
     ''
   )}</div><div class="panels">${blocks.join('')}</div></div>`,
     code
@@ -109,7 +228,6 @@ const getExample = (examplePath, filePath) => {
 
 const getLink = token => {
   const href = token.attrGet('href') || ''
-  const match = href.match(/_examples/)
 
   return href.match(/_examples/) ? href : null
 }

@@ -14,7 +14,7 @@ And sure, this may have been true some time in the past.
 
 ## We say: yes, it absolutely is!
 
-But since the introduction of HTML5's structural elements (like `<header>`, `<nav>`, `<main>`, etc.), these elements can provide distinguished context to regions of the page. Alas, from a semantical point of view, search engines today are 100% capable of distinguishing "main headings" (that reside in the `<main>` element) from other headings, regardless of their level.
+But since the introduction of HTML 5's structural elements (like `<header>`, `<nav>`, `<main>`, etc.), these elements can provide distinguished context to regions of the page. Alas, from a semantical point of view, search engines today are 100% capable of distinguishing "main headings" (that reside in the `<main>` element) from other headings, regardless of their level.
 
 In our opinion then, having more than one heading on level 1 is absolutely reasonable:
 
@@ -23,7 +23,7 @@ In our opinion then, having more than one heading on level 1 is absolutely reaso
 
 ## Alternative solutions
 
-If you definitely don't want to have more than a single heading on level 1, we can propose you a few alternative solutions that are still pretty accessible.
+If you definitely do not want to have more than a single heading on level 1, we can propose you a few alternative solutions that are still pretty accessible.
 
 ### Approach #1: h1 on top of the page
 
@@ -50,7 +50,7 @@ It might feel a bit awkward to have the main heading as both an `<h1>` and an `<
 
 ### Approach #2: h1 on top of the main content
 
-If you prefer to have the single heading on level 1 directly on top of the main content, it is also okay. If you still need headings for the elements above it (e.g. the header), you can start on level 2 for them.
+If you prefer to have the single heading on level 1 directly on top of the main content, it is also okay. If you still need headings for the elements above it (for example the header), you can start on level 2 for them.
 
 [Example](_examples/page-with-only-one-h1-on-top-of-main-content)
 

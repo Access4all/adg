@@ -18,7 +18,7 @@ Before you continue, please read [Tablist widgets (or: tab panels, tabs)](/examp
 
 ## General requirements
 
-The following requirements are based on well established best practices; unlike most other common widget patterns, the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/) don't offer a section about carousels.
+The following requirements are based on well established best practices; unlike most other common widget patterns, the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/) do not offer a section about carousels.
 
 In addition to the tablists' requirements, and besides many other requirements, we want to stress out explicitly the following:
 
@@ -41,3 +41,7 @@ Some interesting peculiarities:
 - Autoplay functionality is implemented using a simple timer that clicks the "Next" button every 2 seconds, as long as the "Autoplay" button has `aria-pressed="true"`, see [Marking elements activatable using aria-pressed](/examples/sensible-aria-usage/pressed).
     - The autoplay functionality can be toggled: it simply changes the value of `aria-pressed="true"`.
     - It is important that the autoplay button is before the radio buttons in the DOM, so screen reader users can disable it before interacting with them.
+- Using `.carousel:focus-within .control label`, a style can be applied to all radio button labels upon interacting with the carousel.
+    - This gives users a clue that they are interacting with a single control now (indicating to use the `Arrow` keys instead of `Tab` to navigate through carousel items).
+    - It also separates those controls clearly from other controls like Autoplay, and previous/next, which are accessed using `Tab` key.
+- By giving the "Autoplay" a dedicated style (bold) upon `[aria-pressed="true"]`, its status is also perceivable to visual users.

@@ -24,6 +24,6 @@ The popover has some very useful options and features:
 - Activate "Show hidden" to also display headings that are completely hidden.
     - This is useful to debug headings that maybe have been completely hidden unintentionally.
 - Activate "Hover-Highlight" to visually display the heading that corresponds to the element pointed on with the mouse cursor.
-    - This is useful to debug whether the current heading hierarchy is sensible: each and every element on the page must belong to a proper heading.
+    - This is useful to debug whether the current heading outline is sensible: each and every element on the page must belong to a proper heading.
 
 The bookmarklet supports both native `<h#>` tags and `role="heading" aria-level="..."` elements.

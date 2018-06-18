@@ -2,11 +2,10 @@
 	&-main {
 		margin-top: - $gutter / 2;
 		& > .nav-list--item {
-			padding-left: 20px;
+			padding-left: 40px;
 			& > .nav-list--link {
 				display: block;
-				@include font-weight(bold);
-				padding: $gutter / 2 0;
+				padding: $gutter / 3 0;
 			}
 		}
 	}
@@ -27,27 +26,23 @@
 	display: block;
 	padding: $gutter / 4 0;
   position: relative;
+  font-weight: 300;
+  line-height: 1.25;
 	&-current {
     @include theme(color, var(--theme-color-dark));
-    &:before {
-      content: "•";
-      position: absolute;
-      transform: translate(-.25em, -50%);
-      right: 100%;
-      top: 50%;
-      font-size: 22px;
-    }
+    font-weight: 500;
 	}
 	&-active {
-		@include font-weight(bold);
 	}
-  &:hover {
+  &:hover, &:focus {
     @include theme(color, var(--theme-color-dark));
     text-decoration: underline;
     outline: none;
   }
 
-  &:focus {
-    outline: 2px dotted var(--theme-color-dark);
+  .nav-list--item-level1 > & {
+    font-family: $brand-font;
+    letter-spacing: 0.1em;
+    font-size: 24px;
   }
 }

@@ -1,7 +1,7 @@
 ---
 navigation_title: "Handling"
 position: 1
-changed: "2018-04-30"
+changed: "2018-??-??"
 ---
 
 # How to handle forms
@@ -57,7 +57,7 @@ In addition to this, grouped elements are indicated with their legend like `Hobb
 
 As an alternative to navigating through the form elements directly on the page, screen readers offer a form outline view.
 
-In the upcoming text, we are referring to the keys `NVDA` and `JAWS`. If you don't know about them, see [Screen readers are keyboard shortcut monsters](/knowledge/desktop-screen-readers/shortcut-monsters).
+In the upcoming text, we are referring to the keys `NVDA` and `JAWS`. If you do not know about them, see [Screen readers are keyboard shortcut monsters](/knowledge/desktop-screen-readers/shortcut-monsters).
 
 #### Elements List (NVDA)
 

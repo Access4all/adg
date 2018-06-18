@@ -44,7 +44,7 @@
   }
 
   @include above-mobile {
-    margin-bottom: $gutter;
+    margin-bottom: 40px;
     position: relative;
     &:after {
       @include navbar_white_line__pseudo;
@@ -87,8 +87,14 @@
   @include above-desktop {
     width: $navWidthMax + 100px;
   }
-  padding-right: 60px;
+
+  @include mobile {
+    width: auto;
+  }
+
+  padding-right: 30px;
   max-width: 100vw;
+  margin-bottom: 40px;
 }
 
 
@@ -164,7 +170,6 @@
 
 .navbar--toggle {
   cursor: pointer;
-  padding: 0 ($navWidthMin - 40px) / 2;
   position: absolute;
   right: 0;
   top: 0; bottom: 0px;
@@ -179,10 +184,18 @@
 }
 
 .navbar--toggle--inner {
+  z-index: 1;
+  padding: 10px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+
+  &:hover {
+    .navbar--toggle--line {
+      background-color: var(--theme-color-dark);
+    }
+  }
 }
 
 
@@ -192,7 +205,6 @@
   // Outline the hamburger navigation to toggle the navigation when using the keyboard only
   &:focus + .navbar .navbar--toggle .navbar--toggle--inner {
     outline: 2px dotted var(--theme-color-dark);
-    outline-offset: 6px;
   }
 }
 .navbar--toggle--line {

@@ -6,7 +6,7 @@ changed: "2018-03-24"
 
 # Hiding elements visually by moving them off-screen
 
-**To hide an element visually means: visually (on a computer screen) it isn't perceivable anymore, but non-visual clients (for example screen readers) still perceive it. There is no official technique for doing this, but there's a well proven workaround.**
+**To hide an element visually means: visually (on a computer screen) it is not perceivable anymore, but non-visual clients (for example screen readers) still perceive it. There is no official technique for doing this, but there's a well proven workaround.**
 
 It may be surprising, but the only way to hide an element visually while retaining its perceptibility for screen readers is moving them out of the viewport using absolute positioning:
 
@@ -29,7 +29,7 @@ For example, this technique is useful to visually hide headings, as described he
 
 ## Toggling visibility on focus
 
-If you are hiding focusable elements using the technique above, make sure that they will appear on screen when getting focus. This way keyboard only users don't "lose" focus when tabbing through a website.
+If you are hiding focusable elements using the technique above, make sure that they will appear on screen when getting focus. This way keyboard only users do not "lose" focus when tabbing through a website.
 
 In the following example, press the `Tab` key to focus and show the (previously invisible) "Jump to content" link.
 

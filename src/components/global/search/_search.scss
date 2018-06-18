@@ -1,6 +1,6 @@
 .search {
   position: absolute;
-  top: 25px;
+  top: 20px;
   right: 80px;
   z-index: 1;
 
@@ -8,8 +8,9 @@
     @include searchbtn;
     float: right;
     transform: translateX(-50%);
-    @include mobile {
-      display: none;
+
+    &:focus {
+      outline: 2px dotted var(--theme-color-dark);
     }
   }
 
@@ -22,10 +23,18 @@
     border-radius: 34px;
     background-color: #ffffff;
     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    display: none;
+    font-family: inherit;
+    font-weight: 300;
 
+    &:focus {
+      outline: 2px dotted var(--theme-color-dark);
+      outline-offset: 2px;
+    }
   }
 
   .search--input-expanded {
+    display: inline;
     width: 300px;
     height: 45px;
     padding: 10px;
@@ -35,11 +44,14 @@
 
 // Overrides for the default SiteSearch 360 styles
 #unibox-suggest-box {
+  margin-top: 1px;
   right: 88px;
   left: auto !important;
   width: 350px;
-  padding: 5px;
   box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+  font-family: inherit;
+  font-weight: 300;
+  border: none;
 
   @media (min-width: $site-width) {
     width: 450px;
@@ -51,13 +63,11 @@
 
   .unibox-selectable {
     display: block;
-    margin-bottom: 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
     &.active,
     &:hover {
-      background: $c-blue;
-      color: $c-background;
+      background: var(--theme-color-dark);
     }
 
     &:last-child {
@@ -73,7 +83,27 @@
     }
 
     .unibox-result-content {
+      margin-top: 0;
       margin-bottom: 10px;
     }
   }
+}
+
+@include mobile-narrow {
+  #search--input {
+    margin: 60px -60px 0 0;
+  }
+
+  #unibox-suggest-box {
+    right: 0;
+    left: 0 !important;
+  }
+}
+
+#unibox-controls-description {
+  display: none;
+}
+
+label[for="search--input"] {
+  display: none;
 }

@@ -53,12 +53,17 @@
     min-height: 0;
   }
 }
+.cardmenu--card--lead {
+  display: inline-block;
+}
+
 .cardmenu--card--link {
   @include card;
   box-shadow: 0 22px 30px -27px rgba(0, 0, 0, 0.3);
   @include theme-isLight {
     box-shadow: 0 10px 34px 0 rgba(0, 0, 0, 0.2);
   }
+  font-weight: 300;
   width: 100%;
   height: 100%;
 
@@ -76,6 +81,9 @@
     &.cardmenu--card--link-examples {
       @include theme(border-color, 3);
     }
+
+    outline: none;
+
   }
 
   .text_container & {
@@ -132,9 +140,10 @@
 
 .cardmenu--card-default {
   .cardmenu--card--label {
-    display: block;
+    display: inline-block;
     margin-bottom: .5em;
-    @include font-weight(bold);
+    font-weight: 500;
+    color: var(--theme-color-dark);
   }
 
   .cardmenu--card--linklabel {

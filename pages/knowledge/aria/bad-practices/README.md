@@ -6,15 +6,15 @@ changed: "2018-04-12"
 
 # Bad ARIA practices
 
-**There are certain situations where ARIA is a good (and maybe the only) way to go. But if done wrong, usage of ARIA often leads to even worse accessibility. Especially accessibility novices tend to misuse ARIA to optimise smelly code. Here we explain some of the typical dos and don'ts.**
+**There are certain situations where ARIA is a good (and maybe the only) way to go. But if done wrong, usage of ARIA often leads to even worse accessibility. Especially accessibility novices tend to misuse ARIA to optimise smelly code. Here we explain some of the typical dos and do nots.**
 
-ARIA is often misunderstood as "general repair kit" for accessibility problems. Developers new to accessibility usually think that ARIA that can be used to fix accessibility problems for all sorts of bad HTML code. In general though, throwing some ARIA attributes into the mix of bad semantics doesn't leverage any problem. Most of the time, the exact opposite is the case.
+ARIA is often misunderstood as "general repair kit" for accessibility problems. Developers new to accessibility usually think that ARIA that can be used to fix accessibility problems for all sorts of bad HTML code. In general though, throwing some ARIA attributes into the mix of bad semantics does not leverage any problem. Most of the time, the exact opposite is the case.
 
 ## Fixing broken semantics
 
-ARIA isn't meant to be used to "fix" standard elements that lack semantical meaning.
+ARIA is not meant to be used to "fix" standard elements that lack semantical meaning.
 
-Let's look again at an example of a link that isn't properly marked up as such. But this time, it is spiced up with `role="link"`:
+Let's look again at an example of a link that is not properly marked up as such. But this time, it is spiced up with `role="link"`:
 
 ```html
 <span class="link" onclick="..." role="link">
@@ -22,7 +22,7 @@ Let's look again at an example of a link that isn't properly marked up as such. 
 </span>
 ```
 
-Admittedly, this makes screen readers announce the element as link. But still, this approach is missing a lot of standard functionality: it isn't focusable, it needs custom JavaScript, browser history may be broken, just to name a few. And legacy screen readers may have no support for `role="link"` anyway.
+Admittedly, this makes screen readers announce the element as link. But still, this approach is missing a lot of standard functionality: it is not focusable, it needs custom JavaScript, browser history may be broken, just to name a few. And legacy screen readers may have no support for `role="link"` anyway.
 
 So remember: using ARIA to add missing semantical information is never a good solution. Always use the proper HTML tag itself!
 
@@ -40,7 +40,7 @@ We also sometimes see overzealous developers adding redundant ARIA roles to elem
 </a>
 ```
 
-It doesn't - quite the contrary is often the case, as screen readers seem to behave buggy from stuff like this.
+It does not - quite the contrary is often the case, as screen readers seem to behave buggy from stuff like this.
 
 ## Adding missing labels
 
@@ -72,15 +72,15 @@ To make the image accessible, it could be tempting now to simply add an ARIA lab
 
 If you are really curious and want to learn more about this, skip ahead and read [Labelling elements using aria-label and aria-labelledby](/examples/sensible-aria-usage/label-labelledby).
 
-While this certainly is an improvement over offering no label at all, it isn't the technique of choice. This is du to several reasons, some very obvious ones outlined here:
+While this certainly is an improvement over offering no label at all, it is not the technique of choice. This is du to several reasons, some very obvious ones outlined here:
 
 - First of all, ARIA labels are only visible to screen readers.
     - But a text browser (unable to display background images) would still not be able to convey a link label to the user.
     - And legacy screen readers may even lack backwards compatibility for ARIA.
 - What about users with bad internet connection?
-    - If for some reason the CSS or images can't be loaded, they are also unable to understand the link's purpose.
+    - If for some reason the CSS or images cannot be loaded, they are also unable to understand the link's purpose.
 - Furthermore, commonly used browser tools may not work with ARIA.
-    - For example, people using the search of their browser wouldn't be able to look for a link with the name "shopping cart", as the browser doesn't search within ARIA labels.
+    - For example, people using the search of their browser wouldn't be able to look for a link with the name "shopping cart", as the browser does not search within ARIA labels.
 
 ### Approach using visually hidden text
 
@@ -104,7 +104,7 @@ An even more robust way in case of bad internet connection is to not use a CSS b
 </a>
 ```
 
-The downside to this is that it isn't searchable with the browser.
+The downside to this is that it is not searchable with the browser.
 
 ### Approach using a combination
 
@@ -129,19 +129,19 @@ Generally speaking, adding labels using ARIA is a case of treating disabled user
 
 It sometimes may seem tempting to give a different user experience to some user group - or to hide some functionality completely using ARIA.
 
-In the following artificial example, lazy developers don't feel like developing an accessible zoom function. Feeling clever, they think that a zoom functionality isn't of relevance to blind users anyway. Using `aria-label`, they simply override the zoom button's content:
+In the following artificial example, lazy developers do not feel like developing an accessible zoom function. Feeling clever, they think that a zoom functionality is not of relevance to blind users anyway. Using `aria-label`, they simply override the zoom button's content:
 
 ```html
-<button aria-label="Dear screen reader user, please don't use this functionality, it isn't meant for you">
+<button aria-label="Dear screen reader user, please do not use this functionality, it is not meant for you">
   Zoom image
 </button>
 ```
 
-The first problem with this is the fact that screen readers will not have an idea about what "this functionality" might be. You could easily fix that by naming the functionality in the text though: "Please don't use this zoom functionality".
+The first problem with this is the fact that screen readers will not have an idea about what "this functionality" might be. You could easily fix that by naming the functionality in the text though: "Please do not use this zoom functionality".
 
 But surprisingly, a zoom function indeed is used among blind users! They like to download images like many other users do (even in high resolution), for sending them to somebody else or for using them in some other context.
 
-Generally speaking: it is very questionable to treat different users differently regarding accessibility. In the very most cases, you should treat every user the same, even if you feel like it doesn't make much sense for some of them. In line with [Universal Design (Wikipedia.org)](https://en.wikipedia.org/wiki/Universal_design), "one solution working for all" is what we are propagating throughout this guide, with as few special treatments as possible.
+Generally speaking: it is very questionable to treat different users differently regarding accessibility. In the very most cases, you should treat every user the same, even if you feel like it does not make much sense for some of them. In line with [Universal Design (Wikipedia.org)](https://en.wikipedia.org/wiki/Universal_design), "one solution working for all" is what we are propagating throughout this guide, with as few special treatments as possible.
 
 So in most cases this holds true: if you face a situation where a screen reader user will be presented with different information or functionality than other users, you are most probably on the wrong track.
 
