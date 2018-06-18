@@ -15,5 +15,4 @@ compatibility:
     2018.3 + FF ESR 52.7.3:
       status: pass
       date: 2018-06-06
-      comments: "recheck"
 ---
