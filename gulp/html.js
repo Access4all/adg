@@ -135,7 +135,7 @@ module.exports = (config, cb) => {
   // const config = {
   //   src: './pages/**/*.md',
   //   base: './pages',
-  //   host: 'https://accessibility-developer-guide.netlify.com',
+  //   host: 'https://www.accessibility-developer-guide.com',
   //   sitemap: './dist/sitemap.xml'
   // }
 

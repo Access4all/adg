@@ -23,7 +23,7 @@ gulp.task('html', cb =>
     {
       src: ['./pages/**/*.md', '!./pages/**/_examples/**/*.md'],
       base: './pages',
-      host: 'https://accessibility-developer-guide.netlify.com',
+      host: 'https://www.accessibility-developer-guide.com',
       sitemap: './dist/sitemap.xml',
       feed: {
         json: './dist/feed/feed.json',
