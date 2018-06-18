@@ -1,6 +1,8 @@
 const gulp = require('gulp')
 const browserSync = require('browser-sync').create()
-const util = require('gulp-util')
+const argv = require('minimist')(process.argv.slice(2))
+const log = require('fancy-log')
+const colors = require('ansi-colors')
 const del = require('del')
 const _ = require('lodash')
 
@@ -11,11 +13,7 @@ const examples = require('./gulp/examples')
 const concat = require('gulp-concat')
 
 function errorHandler (err) {
-  util.log(
-    err.plugin || '',
-    util.colors.cyan(err.fileName),
-    util.colors.red(err.message)
-  )
+  log(err.plugin || '', colors.cyan(err.fileName), colors.red(err.message))
 }
 
 gulp.task('html', cb =>
@@ -213,7 +211,7 @@ gulp.task(
   'default',
   gulp.series(
     function setWatchEnv (cb) {
-      util.env.watch = true
+      argv.watch = true
 
       return cb()
     },
