@@ -8,14 +8,14 @@
 
 The «Accessibility Developer Guide» (ADG) is an initiative of [«Access for all»](http://access-for-all.ch/), Swiss Foundation for technology adapted to people with disabilities.
 
-![«Access for all» logo](/src/assets/img/logo/zfa.png)
+<img src="/src/assets/img/logo/zfa.png" alt="«Access for all» logo" width="25%" />
 
 It is developed and maintained in collaboration with a number of acclaimed web agencies, currently:
 
 - [Hinderling Volkart](https://www.hinderlingvolkart.com/)
 - [UNIC AG](https://www.unic.com/)
 - [Liip AG](https://www.liip.ch/)
-- [Zeix](https://www.zeix.com/))
+- [Zeix AG](https://www.zeix.com/))
 
 ## Vision
 
