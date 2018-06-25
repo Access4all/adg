@@ -111,4 +111,4 @@ Clockwise from top right:
 - **Mohamed Sherif**, blind accessibility trainee.
 - **Gianfranco Giudice**, blind accessibility expert.
 
-Sadly not on the picture (beause working remotely) is **Petra Ritter**, multiply-handicapped accessibility expert.
+Sadly (unfortunately) not on the picture (beause working remotely) is **Petra Ritter**, multiply-handicapped accessibility expert.
