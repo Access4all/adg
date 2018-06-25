@@ -15,7 +15,7 @@ It is developed and maintained in collaboration with a number of acclaimed web a
 - [Hinderling Volkart](https://www.hinderlingvolkart.com/)
 - [UNIC AG](https://www.unic.com/)
 - [Liip AG](https://www.liip.ch/)
-- [Zeix AG](https://www.zeix.com/))
+- [Zeix AG](https://www.zeix.com/)
 
 ## Vision
 
