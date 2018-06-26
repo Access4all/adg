@@ -135,7 +135,7 @@ module.exports = (config, cb) => {
   // const config = {
   //   src: './pages/**/*.md',
   //   base: './pages',
-  //   host: 'https://accessibility-developer-guide.netlify.com',
+  //   host: 'https://www.accessibility-developer-guide.com',
   //   sitemap: './dist/sitemap.xml'
   // }
 
@@ -294,6 +294,9 @@ module.exports = (config, cb) => {
             }
 
             return options.inverse(this)
+          },
+          or: function () {
+            return Array.prototype.slice.call(arguments, 0, -1).some(Boolean)
           }
         }
       }).on('error', config.errorHandler)
@@ -321,12 +324,12 @@ module.exports = (config, cb) => {
     // )
 
     // Format
-    .pipe(
-      prettify({
-        indent_with_tabs: false,
-        max_preserve_newlines: 1
-      })
-    )
+    // .pipe(
+    //   prettify({
+    //     indent_with_tabs: false,
+    //     max_preserve_newlines: 1
+    //   })
+    // )
 
     // Rename to `index.html`
     .pipe(

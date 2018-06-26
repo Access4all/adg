@@ -20,9 +20,9 @@ The foundation is in business since the year 2000, and since then has accompanie
 
 **Bernhard Heinser**, CEO, «Access for all».
 
-> Years ago when I joined «Access for all», I quickly realised how hard it is to get into accessibility as an "outsider". Through the wonderful support of my co-workers with special needs I was finally able to merge my technical knowledge with their profound user expertise. With the ADG, a "roadmap" is now provided that shows the quickest ways to get from general requirements to accessible implementations. All of them are well-proven best practices, built on rock-solid standard techniques and cleverly avoiding typical traps and pitfalls.
+> Years ago when I joined «Access for all», I quickly realised how hard it is to get into accessibility as an "outsider". Through the wonderful support of my co-workers with special needs, I was finally able to merge my technical knowledge with their profound user expertise. With the ADG, together we provide a "roadmap" that shows the most pragmatic ways to get from general requirements to accessible implementations. All of them are well-proven best practices, built on rock-solid standard techniques and cleverly avoid typical traps and pitfalls.
 
-**Joshua Muheim**, web developer & accessibility expert, «Access for all».
+**Joshua Muheim**, Web Developer & Accessibility Expert, «Access for all».
 
 For more information, see [www.access-for-all.ch](http://access-for-all.ch/).
 
@@ -36,15 +36,15 @@ On the other side of the «Accessibility Alliance», there are several acclaimed
 
 > Until now, web developers have lacked a good, practical reference on accessibility. It doesn't need more rules, but more guidance to make the web usable for everyone. The ADG will provide access where hardly anyone has been before, with practical examples, tested by experts and supported by developers. From the very beginning we were convinced of the purpose of this commitment and are proud to be able to contribute a small part to it.
 
-**Severin Klaus**, frontend leader, [Hinderling Volkart](https://www.hinderlingvolkart.com/).
+**Severin Klaus**, Frontend Leader, [Hinderling Volkart](https://www.hinderlingvolkart.com/).
 
 ### UNIC
 
 ![UNIC logo](_media/unic.png){.agency-logo}
 
-> Accessibility is complex. The development of the necessary know-how is correspondingly complex. That is why we have helped to develop the ADG. In the future, it will be a central tool for creating accessible websites for everyone. We are very much looking forward to a lively exchange with the front-end community in order to further develop the ADG together.
+> Accessibility is a complex issue and so equally large effort is required to develop the necessary know-how. That is why we have participated in the establishment of the ADG, which will be a key tool in the process of creating accessible websites for everyone in the future. We are looking forward to collaborating with the frontend community so that the development of the ADG will be continued.
 
-**Thomas Jaggi**, expert frontend engineer, [UNIC AG](https://www.unic.com/).
+**Thomas Jaggi**, Expert Frontend Engineer, [UNIC AG](https://www.unic.com/).
 
 ### Liip
 
@@ -52,7 +52,7 @@ On the other side of the «Accessibility Alliance», there are several acclaimed
 
 > As a web agency committed to provide continuous improvements to the way the internet is built and used, Liip is excited to join and contribute to the ADG initiative. In our inclusive vision, this will bring benefits to everyone, first to the developers but finally to the end-users. The Open Source nature of the project, furthermore, fully embraces our principles and opens the doors to worldwide contributions.
 
-**Donato Rotunno**, senior frontend developer, [Liip AG](https://www.liip.ch/en).
+**Donato Rotunno**, Senior Frontend Developer, [Liip AG](https://www.liip.ch/en).
 
 ### Zeix
 
@@ -60,7 +60,7 @@ On the other side of the «Accessibility Alliance», there are several acclaimed
 
 > The ADG allows us to easily share knowledge within the team and build on reliable best practices. This enables us to design, create and program websites that all people like to use.
 
-**Esther Brunner**, user interface developer, [Zeix AG](https://zeix.com/).
+**Esther Brunner**, User Interface Developer, [Zeix AG](https://zeix.com/).
 
 ### Your company here?
 
@@ -111,4 +111,5 @@ Clockwise from top right:
 - **Mohamed Sherif**, blind accessibility trainee.
 - **Gianfranco Giudice**, blind accessibility expert.
 
-Sadly not on the picture (beause working remotely) is **Petra Ritter**, multiply-handicapped accessibility expert.
+Unfortunately not on the picture (beause working remotely) is **Petra Ritter**, multiply-handicapped accessibility expert.
+
