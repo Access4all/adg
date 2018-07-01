@@ -44,11 +44,21 @@ Like every other survey, the WebAIM screen reader survey is expected to reach a 
 
 Also, we only gain an outline about rough proportions, but no detailed data about absolute statistics. For example, we can say that there are about twice as many JAWS users than NVDA users. But we cannot say whether the overall number of JAWS users worldwide is rather some ten thousands, some hundred thousands, or some millions.
 
+Also, the difference between desktop and mobile often is not obvious: especially regarding VoiceOver, it often is unclear whether VoiceOver/macOS or VoiceOver/iOS is meant.
+
 Finally, we do not have detailed information about differences between countries and continents, nor any details about specific versions of software being used.
+
+However: even if there are general limitations to the representativeness of the survey, it provides the best currently available data regarding the preferences of screen reader users, particularly in North America and Europe, including the UK.
 
 #### Results
 
-Here's the available data regarding combinations of browsers and screen readers used according to [WebAIM's Screen Reader User Survey #7](https://webaim.org/projects/screenreadersurvey7/), conducted in October 2017:
+The most recent survey was conducted in October 2017 ([WebAIM's Screen Reader User Survey #7](https://webaim.org/projects/screenreadersurvey7/)). Around 60% of the roughly speaking 1800 responses came from North America and 23% from Europe.
+
+The reponses to the question "Which of the following desktop/laptop screen readers do you commonly use?" clearly tell us that JAWS (66%) and NVDA (64.9%) are the most popular screen readers, followed by VoiceOver (39.6%). Very interestingly, those figures underline many users do use more than one screen reader.
+
+Regarding the question, which browser is used with the user’s primary screen reader, the survey results show that FF (41%) and IE 11 (23.3%) are the prevailing browsers, followed by Chrome (15.5%) and Safari (10.5%).
+
+Finally, when ist comes to the mostly used browser-screen reader combinations, the survey provides the following data:
 
 - JAWS with IE: 24.7%
 - NVDA with FF: 23.6%
