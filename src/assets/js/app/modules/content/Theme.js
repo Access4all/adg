@@ -20,8 +20,8 @@ export default class Theme extends BaseModule {
     }
     this.$el = $(element)
     this.config = $.extend(true, {}, DEFAULTS)
-    var self = this
 
+    var self = this
     $(window).on('scroll', function () {
       self.check()
     })
@@ -30,7 +30,7 @@ export default class Theme extends BaseModule {
   }
 
   check () {
-    var scrollPos = document.documentElement.scrollTop
+    var scrollPos = $(window).scrollTop()
     if (scrollPos > 0) {
       this.enable()
     } else {
