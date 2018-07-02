@@ -22,7 +22,6 @@ export default class Theme extends BaseModule {
     this.config = $.extend(true, {}, DEFAULTS)
     var self = this
 
-    this.windowHeight = $(window).height()
     $(window).on('scroll', function () {
       self.check()
     })
@@ -32,7 +31,7 @@ export default class Theme extends BaseModule {
 
   check () {
     var scrollPos = document.documentElement.scrollTop
-    if (scrollPos > this.windowHeight) {
+    if (scrollPos > 0) {
       this.enable()
     } else {
       this.disable()
