@@ -25,6 +25,7 @@ export default class Theme extends BaseModule {
     $(window).on('scroll', function () {
       self.check()
     })
+    this.check()
 
     return this
   }
