@@ -12,6 +12,6 @@ We welcome everyone who wants to join our initiative, be it with adding new cont
 
 Everybody can contribute to it on our GitHub repository: [Access4all/adg (GitHub.com)](https://github.com/Access4all/adg).
 
-We are happy about issues and pull requests. Please refer to our contribution guidelines: [Access4all/adg/CONTRIBUTING.md (GitHub.com)](https://github.com/Access4all/adg/CONTRIBUTING.md).
+We are happy about issues and pull requests. Please refer to our contribution guidelines: [Access4all/adg/CONTRIBUTING.md (GitHub.com)](https://github.com/Access4all/adg/blob/master/CONTRIBUTING.md).
 
 Let us make the Internet a more accessible place together!
