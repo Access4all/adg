@@ -1,12 +1,12 @@
 ---
 navigation_title: "High Contrast Mode"
 position: 3
-changed: "2018-04-06"
+changed: "2018-07-20"
 ---
 
 # Windows High Contrast Mode
 
-**Windows high contrast mode (Win HCM) changes the colours on the screen to a specific high contrast scheme. It is used by visually impaired people. It is a useful tool to ensure that visual information is not conveyed with purely decorative styles.**
+**Windows high contrast mode (Win HCM) changes the colours on the screen to a specific high-contrast scheme. It is used by visually impaired people. It is a useful tool to ensure that visual information is not conveyed with purely decorative styles.**
 
 ## Installation
 
