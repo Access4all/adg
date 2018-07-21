@@ -1,7 +1,7 @@
 ---
 navigation_title: "Bookmarklets"
 position: 4
-changed: "2018-03-09"
+changed: "2018-07-20"
 ---
 
 # Bookmarklets

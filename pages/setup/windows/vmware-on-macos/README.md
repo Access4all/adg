@@ -1,7 +1,7 @@
 ---
 navigation_title: "VMware on macOS"
 position: 3
-changed: "2018-04-06"
+changed: "2018-07-20"
 ---
 
 # Configuring VMware Fusion on macOS

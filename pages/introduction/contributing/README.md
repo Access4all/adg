@@ -1,7 +1,7 @@
 ---
 navigation_title: "Contributing"
 position: 3
-changed: "2018-06-15"
+changed: "2018-07-20"
 ---
 
 # Contributing to this guide
