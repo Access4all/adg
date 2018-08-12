@@ -22,4 +22,4 @@ As it does not have an installer, you can simply extract it to a folder of your 
 
 Enter foreground and background colours into the respective fields, then check the displayed results.
 
-Note: if you choose to use the colour pickers instead, be sure to avoid anti-aliased colours, as this would have an impact on the result.
+If you are really curious and want to learn more about this, skip ahead and read [Colors and contrast](/knowledge/colors-and-contrast/).
