@@ -16,7 +16,7 @@ changed: "2018-04-09"
 
 ## Configuration
 
-We recommend to disable "Check for broken links", as it slows the tool down.
+Under `Validations`, we recommend to disable `Check for broken links`, as it slows the tool down.
 
 ## Usage
 
