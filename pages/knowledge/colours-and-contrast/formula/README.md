@@ -10,9 +10,11 @@ changed: "2018-08-11"
 
 Please note that we are keeping technical explanations simple here. So if you want to read a detailed definition of the color contrast formula, please go to [contrast ratio (W3.org)](https://www.w3.org/TR/WCAG20/#contrast-ratiodef).
 
-Every color has a "relative luminance", defined as:
+First things first: contrast is calculated in such a way that color is not a key factor; this way people who have a color vision deficit will also have adequate contrast.
 
-> The relative brightness of any point in a colorspace, normalized to 0 for darkest black and 1 for lightest white.
+Instead, contrast is calculated using "relative luminance", which is defined as:
+
+> The relative brightness of any point in a colorspace, normalized to `0` for darkest black and `1` for lightest white.
 >
 > Quote: [relative luminance (W3.org)](https://www.w3.org/TR/WCAG20/#relativeluminancedef)
 

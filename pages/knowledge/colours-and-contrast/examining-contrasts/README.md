@@ -46,4 +46,4 @@ So if you are using colour pickers, the picked colour may differ from its true d
 
 Working with colour pickers can save a lot of time.
 
-In general though: if a result is very close to the required contrast limit, we recommend to re-check by examining the real colour definitions from the DOM inspector.
+In general though: if a result is very close to the required contrast limit, we recommend to re-check it by examining the real colour definitions from the DOM inspector.
