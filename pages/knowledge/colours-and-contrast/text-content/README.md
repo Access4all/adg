@@ -6,19 +6,19 @@ changed: "2018-08-12"
 
 # Contrast requirements of text content
 
-**There is a distinction between large text and default text.**
+**There is a general minimal colour contrast level for all kinds of text, and a slightly lower one for large text. The requirement applies to both "real" text and rasterised text on images.**
 
 ## Real text
 
 With "real" text, we mean text that is truly available as an arrangement of character codes (like this text here). Some of its inherent characteristics is that you can select it, and copy&paste it between applications. It is machine-readable.
 
-In general, text needs a contrast ratio of at least `4.5:1`.
+In general, text needs a contrast ratio of at least `4.5:1` against adjacent color(s).
 
 There is a single exception to this rule: "large" text.
 
 ### Large text
 
-Large text is considered easier to read. It needs a lower contrast ratio of at least `3:1`.
+Large text is considered easier to read. It needs a lower contrast ratio of at least `3:1` against adjacent color(s).
 
 Large text is defined as:
 
