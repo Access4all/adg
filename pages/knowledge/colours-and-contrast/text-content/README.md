@@ -14,11 +14,15 @@ With "real" text, we mean text that is truly available as an arrangement of char
 
 In general, text needs a contrast ratio of at least `4.5:1` against adjacent color(s).
 
-There is a single exception to this rule: "large" text.
+For example, the following image has a white background and shows a text with a colour gradient overlay from white to black.
+
+![Text with colour gradient overlay](_media/lazy-dog.png)
+
+The white on the left has a contrast ratio of `1:1`. The black to the right has a contrast ratio of `21:1`. Somewhere around the `m`, the required contrast of `4.5:1` is reached.
 
 ### Large text
 
-Large text is considered easier to read. It needs a lower contrast ratio of at least `3:1` against adjacent color(s).
+There is a single exception to the general rule: "large" text. It is considered easier to read; as such it needs a lower contrast ratio of at least `3:1` against adjacent color(s).
 
 Large text is defined as:
 
@@ -28,6 +32,12 @@ Large text is defined as:
     - For example `font-size: 18pt` (or `font-size: 24px`).
 
 Note: the ratio between sizes in points and CSS pixels approximately is `1pt = 1.333px`.
+
+For example, let us look again at the previous image's text with gradient overlay.
+
+![Text with colour gradient overlay](_media/lazy-dog.png)
+
+Somewhere around the `x`, the required contrast of `3:1` is reached.
 
 ## Text on images
 

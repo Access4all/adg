@@ -14,7 +14,13 @@ Non-text content needs a contrast ratio of at least `3:1` against adjacent color
 
 There is not much value to interactive elements on a page, if a user can not perceive them.
 
-For example, if the fields of a contact form have borders with low contrast, a user with low vision may not be able to fill them.
+For example, if the fields of a contact form have borders with low contrast, a user with low vision may not be able to fill (or even find) them.
+
+In the following screenshot, the fields' borders have a contrast ratio of `1.5:1`.
+
+![Low contrast form](_media/low-contrast-form.png)
+
+Strictly speaking, also the submit button is hardly perceivable as a form control: although its label "Send message" is clearly visible, the background color (that should indicate the user that the element is a button) also has a contrast ratio of only `1.5:1`.
 
 ## Graphical objects
 
@@ -36,13 +42,13 @@ To a visually non-impaired user, this pie chart should not pose any problem. But
 
 This is due to the fact that colours are no key factor for calculating contrast. So even with only a few sections you will run out quickly of high contrast combinations.
 
-### Enhancing contrasts
+### Working arround low contrasts
 
 First of all you should add a clearly visible stroke around the sections. This way the sections' colours do not need to have high contrast against each other anymore.
 
 ![Pie chart with stroke](_media/pie-chart-with-stroke.png)
 
-Still, the colours cannot be assigned successfully by people with low contrast vision. To make up for this, you should place the descriptions right inside the sections...
+Still, the colours cannot be assigned successfully by people with low contrast vision. To make up for this, you can either place the descriptions right inside the sections...
 
 ![Pie chart labels inside](_media/pie-chart-with-labels-inside.png)
 
