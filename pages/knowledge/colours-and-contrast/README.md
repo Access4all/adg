@@ -4,7 +4,7 @@ position: 1
 changed: "2018-08-11"
 ---
 
-# Colors and contrast
+# Colours and contrast
 
 **In a typical project's life cycle, accessibility is crucial long before the first line of code is written: namely when the visual design is created. During this process, a number of visual aspects are to be defined: the palette of available colours, their combinations and resulting contrasts, and their possible meanings.**
 
@@ -29,4 +29,4 @@ changed: "2018-08-11"
 - Text that is decorative and conveys no information is excluded, e.g. random words for background
     - What about disabled text in an edit field??
     - What about placeholders??
--
+- erster buchstabe (drop cap) speziell schön als image??? => bild als dekorativ (`alt=""`) und ersten buchstaben visually hidden!

@@ -6,43 +6,49 @@ changed: "2018-08-12"
 
 # Contrast requirements of text content
 
-**TODO**
+**There is a distinction between large text and default text.**
 
-There is a distinction between large text and default text.
+## Real text
 
-## Large text
+With "real" text, we mean text that is truly available as an arrangement of character codes (like this text here). Some of its inherent characteristics is that you can select it, and copy&paste it between applications. It is machine-readable.
+
+In general, text needs a contrast ratio of at least `4.5:1`.
+
+There is a single exception to this rule: "large" text.
+
+### Large text
+
+Large text is considered easier to read. It needs a lower contrast ratio of at least `3:1`.
 
 Large text is defined as:
 
 - Either **bold** text of at least 14 points (or 18.5 pixels).
-    - For example `font-size: 14pt; font-weight: bold` or `font-size: 18.5px; font-weight: bold`.
+    - For example `font-size: 14pt; font-weight: bold` (or `font-size: 18.5px; font-weight: bold`).
 - Or regular text of at least 18 points (or 24 pixels).
-    - For example `font-size: 18pt` or `font-size: 24px`.
-
-To offer enough contrast, large text needs a ratio of at least `3:1`.
+    - For example `font-size: 18pt` (or `font-size: 24px`).
 
 Note: the ratio between sizes in points and CSS pixels approximately is `1pt = 1.333px`.
 
-## Default text
-
-All other text simply is default text. As per definition it is smaller than large text, it is considered harder to read, needing a higher contrast ratio of at least `4.5:1`.
-
 ## Text on images
 
-For text on images, the same rules apply. Keep in mind that an image's points per inch (PPI) value may vary, and scaling images up or down in a browser will also influence its display size.
+With text on images, we mean text that is printed on a rasterised image (like JPG or PNG). During rasterisation, text loses all its inherent characteristics, so neither you can select it (and copy&paste it), nor is it machine-readable. Admitted, computers may apply optical character recognition (OCR) to it, and some screen readers indeed try to do that; but it remains a rather wobbly process and is not done by default.
 
-Text on images in most cases is a relict of older days where custom fonts could not easily be included on a website. They have clear downsides:
+In general, for text on images, the same rules apply like for "real" text. Keep in mind though that an image's points per inch (PPI) value may vary, and scaling images up or down in a browser will also influence its display size. Furthermore, do not forget to set the displayed text as the image's alternative text (`alt` attribute).
 
-- Images of text do not scale as well as text because they tend to pixelate.
-- Some users need to to change foreground and background contrast and color combinations for text, which is hardly possible for images of text.
+Compared to "real" text, placing text on images has additional downsides:
 
-Alas, we recommend not to use text on images; instead use custom fonts if possible.
+- It does not scale as well because it tends to pixelate.
+    - To address this issue, consider supplying an image of higher resolution (so it can be scaled up without quality loss to some degree).
+- Changing foreground and background contrast and color combinations is hardly possible, but needed by some users (like visually impaired ones).
+- It cannot be replaced by the user with a custom font (for example a dyslexia-friendly one).
+- It does not reflow and can lead to horizontal scrolling, especially when zoom is applied to the website.
+- It is much heavier in file size and triggers an additional server request; as such it slows down rendering.
 
-If for some reaons you still need text on an image, be sure to also add it as the image's alternative text. In addition, consider supplying an image of higher resolution (so it can be scaled to some degree by the browser).
+Alas, we recommend not to use text on images. The usage of pure text images can be seen as a relict of older days where custom fonts could not easily be included and styled as needed. Nowadays, please use custom fonts and CSS styles if possible.
 
 ## Exceptions
 
-There are some exceptions to the contrast requirements.
+There are some exceptions to the contrast requirements of text content.
 
 - **Logos** usually must adhere strictly to a corporate's design guidelines and thus may be displayed in its original colours (needless to say that it still is unpleasant if your clients cannot perceive your logo).
 - **Decorative** text: this could be the background pattern of an image that is created from random words.
