@@ -66,9 +66,9 @@ If you are really curious and want to learn more about this, skip ahead and read
 
 Yet other attributes surprisingly seem not to be announced at all.
 
-For example, the `<input type="text">`'s `maxlength` option is not announced by both NVDA and JAWS. Even if users reach this limit while inputting, they are given no clue. For more info, see: [No announcement of maxlength (GitHub.com)](https://github.com/nvaccess/nvda/issues/7579).
+For example, the `<input type="text">`'s `maxlength` option is not announced by both NVDA and JAWS. Even if users reach this limit while inputting, they are given no clue. For more info, see: [No announcement of maxlength (GitHub.com)](https://github.com/nvaccess/nvda/issues/7910).
 
-Also, `<select>`'s `multiple` option currently is not announced by NVDA, making it really hard for its users to deal with this special control. JAWS announces this as "multi select". For more info, see: [For select lists, why is the "multiple" option not announced? (GitHub.com)](https://github.com/nvaccess/nvda/issues/7910).
+Also, `<select>`'s `multiple` option currently is not announced by NVDA, making it really hard for its users to deal with this special control. JAWS announces this as "multi select". For more info, see: [For select lists, why is the "multiple" option not announced? (GitHub.com)](https://github.com/nvaccess/nvda/issues/7579).
 
 If you test your forms and stumble over such missing (or irritating) announcements, you should add information about it in plain text to your form controls. For example, when using `maxlength="20"`, you can add this information to the control's label, like "Full name (max. 20 characters)".
 
