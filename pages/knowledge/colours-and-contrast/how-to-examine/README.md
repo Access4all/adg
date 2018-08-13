@@ -1,10 +1,10 @@
 ---
-navigation_title: "Examining contrasts"
+navigation_title: "How to examine"
 position: 2
 changed: "2018-08-12"
 ---
 
-# How to precisely examine contrasts
+# How to precisely examine colour contrasts
 
 **While calculating contrast ratios is a somewhat complex thing, fortunately there are tools that accomplish this automatically. We only need to feed such a tool with correct colour codes - which has a few potential pitfalls that you need to avoid.**
 
