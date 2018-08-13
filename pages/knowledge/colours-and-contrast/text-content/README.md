@@ -41,11 +41,15 @@ Somewhere around the `x`, the required contrast of `3:1` is reached.
 
 ## Text on images
 
-With text on images, we mean text that is printed on a rasterised image (like JPG or PNG). During rasterisation, text loses all its inherent characteristics, so neither you can select it (and copy&paste it), nor is it machine-readable. Admitted, computers may apply optical character recognition (OCR) to it, and some screen readers indeed try to do that; but it remains a rather wobbly process and is not done by default.
+With text on images, we mean text that is printed on a rasterised image like JPG or PNG (like the example images in the text above). During rasterisation, text loses all its inherent characteristics, so neither you can select it (and copy&paste it), nor is it machine-readable by default.
 
-In general, for text on images, the same rules apply like for "real" text. Keep in mind though that an image's points per inch (PPI) value may vary, and scaling images up or down in a browser will also influence its display size. Furthermore, do not forget to set the displayed text as the image's alternative text (`alt` attribute).
+In general, for text on images, the same rules apply like for "real" text.
 
-Compared to "real" text, placing text on images has additional downsides:
+### Downsides to real text
+
+Keep in mind that an image's points per inch (PPI) value may vary, and scaling images up or down in a browser will also influence its display size. Furthermore, do not forget to set the displayed text as the image's alternative text (`alt` attribute).
+
+In addition to this, compared to "real" text, placing text on images has some more downsides:
 
 - It does not scale as well because it tends to pixelate.
     - To address this issue, consider supplying an image of higher resolution (so it can be scaled up without quality loss to some degree).

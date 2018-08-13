@@ -61,3 +61,5 @@ Still, the colours cannot be assigned successfully by people with low contrast v
 In other cases, adding a unique background pattern to both each section and the respective labels in the legend can be very useful. Needless to say that such patterns also need to be contrasty enough.
 
 ![Pie chart with patterns](_media/pie-chart-with-patterns.png)
+
+TODO: "current" icon und tabliste!!!

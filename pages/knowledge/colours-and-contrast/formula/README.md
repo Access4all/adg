@@ -15,8 +15,10 @@ Please note that we are keeping technical explanations simple here. So if you wa
 Contrast is calculated using "relative luminance", which is defined as:
 
 > The relative brightness of any point in a colorspace, normalized to `0` for darkest black and `1` for lightest white.
->
-> Quote: [relative luminance (W3.org)](https://www.w3.org/TR/WCAG20/#relativeluminancedef)
+
+Quote: [relative luminance (W3.org)](https://www.w3.org/TR/WCAG20/#relativeluminancedef)
+
+![Relative luminance gradient](_media/relative-luminance-gradient.png)
 
 The relative luminance can be calculated from any colour code (like HEX or RGB).
 
@@ -47,4 +49,12 @@ Contrast results:
 - Blue / green = `1.0:1`.
 - Green / red = `1.2:1`.
 
-So do not rely on your eyes only - always examine contrasts thoroughly with an appropriate tool!
+So although visually non-impaired users should be able to easily (?) perceive the green and red words on the blue background of the following image...
+
+![Green and red words on blue background](_media/hello-goodbye.png)
+
+...others will have a very tough time with it, for example those perceiving only grayscale:
+
+![Words and background in grayscale](_media/hello-goodbye-grayscale.png)
+
+Conclusion: do not rely on your eyes only! Always examine contrasts thoroughly with an appropriate tool.

@@ -12,11 +12,13 @@ Fortunately, no manual calculation of contrast ratios between two colours is nee
 
 By entering a foreground and a background colour into the respective fields, the CCA immediately states whether those have a sufficient contrast ratio (depending on the kind of visual content and its size).
 
-When calculating a contrast ratio, it is very important that the "right" colour codes are used (which means the colour definitions that are effectively defined in the CSS). But what is the best way to do this?
+![Colour Contrast Analyser window](_media/colour-contrast-analyser-window.png)
+
+When calculating a contrast ratio, it is very important that the "right" colour codes are used, which means the colour definitions that are effectively defined in the CSS. But what is the best way to examine these reliably?
 
 ## DOM inspector
 
-The most trustworthy source for this is the browser's DOM inspector.
+The most trustworthy source is the browser's DOM inspector.
 
 To do this, right-click on an element and choose `Inspect`. Now you can find the element's colour value in the `Styles` tab, like `color: #00FF00`.
 
