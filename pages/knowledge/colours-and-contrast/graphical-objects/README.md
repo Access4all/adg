@@ -1,32 +1,18 @@
 ---
-navigation_title: "Non-text content"
-position: 4
+navigation_title: "Graphical objects"
+position: 5
 changed: "2018-08-12"
 ---
 
-# Contrast requirements of non-text content
+# Contrast requirements of graphical objects
 
-**The Web Content Accessibility Guidelines (WCAG) 2.0 only required a certain colour contrast level for text. Finally, the recently published version 2.1 has added colour contrast requirements for both user interface components and graphical objects.**
+**Like for user interface components, the recently published version 2.1 of Web Content Accessibility Guidelies (WCAG) has added colour contrast requirements for graphical objects.**
 
-Non-text content needs a contrast ratio of at least `3:1` against adjacent color(s).
+There is not much value to graphical objects on a page, if a user can not perceive them. Alas, graphical objects need a contrast ratio of at least `3:1` against adjacent color(s).
 
-## User interface components
+## Colours as references
 
-There is not much value to interactive elements on a page, if a user can not perceive them.
-
-For example, if the fields of a contact form have borders with low contrast, a user with low vision may not be able to fill (or even find) them.
-
-In the following screenshot, the fields' borders have a contrast ratio of `1.5:1`.
-
-![Low contrast form](_media/low-contrast-form.png)
-
-Strictly speaking, also the submit button is hardly perceivable as a form control: although its label "Send message" is clearly visible, the background color (that should indicate the user that the element is a button) also has a contrast ratio of only `1.5:1`.
-
-## Graphical objects
-
-Graphical objects often rely on colour codes to convey meaning.
-
-For example, a pie chart has three sections, described using a legend like this:
+For example, a pie chart has three sections, described using a legend and referenced using colours like this:
 
 - Male (red)
 - Female (blue)
@@ -42,7 +28,7 @@ To a visually non-impaired user, this pie chart should not pose any problem. But
 
 This is due to the fact that colours are no key factor for calculating contrast. So even with only a few sections you will run out quickly of high contrast combinations.
 
-### Working arround low contrasts
+## Working arround low contrasts
 
 First of all you should add a clearly visible stroke around the sections. This way the sections' colours do not need to have high contrast against each other anymore.
 
@@ -56,10 +42,8 @@ Still, the colours cannot be assigned successfully by people with low contrast v
 
 ![Pie chart with connected labels](_media/pie-chart-with-connected-labels.png)
 
-### Adding background patterns
+## Adding background patterns
 
 In other cases, adding a unique background pattern to both each section and the respective labels in the legend can be very useful. Needless to say that such patterns also need to be contrasty enough.
 
 ![Pie chart with patterns](_media/pie-chart-with-patterns.png)
-
-TODO: "current" icon und tabliste!!!

@@ -28,7 +28,9 @@ Now simply copy the colour code and paste it into CCA.
 
 ## Colour picker
 
-A lot of contrast checkers offer colour pickers. While they are very handy, they open up some potential pitfalls.
+In some situations, there is no hard-coded colour available in the DOM inspector.
+
+To account for this, a lot of contrast checkers offer colour pickers. While they are very handy, they open up some potential pitfalls.
 
 ### Anti-aliasing
 
@@ -48,4 +50,4 @@ So if you are using colour pickers, the picked colour may differ from its true d
 
 Working with colour pickers can save a lot of time.
 
-In general though: if a result is very close to the required contrast limit, we recommend to re-check it by examining the real colour definitions from the DOM inspector.
+In general though: if a result is very close to the required contrast limit, we recommend to re-check it by examining the real colour definitions (if available) from the DOM inspector.
