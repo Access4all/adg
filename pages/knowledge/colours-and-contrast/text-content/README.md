@@ -55,7 +55,7 @@ There are some exceptions to the contrast requirements of text content.
 - **Placeholder** text: this could be a placeholder value in a form control - as long as it is used as intended (namely to give an example for a valid input), and not misused as the replacement for a proper label.
 - **Disabled** text: this could be a disabled button's value.
 
-## Enhancing contrasts
+## Enhancing contrasts of text
 
 To improve contrast, instead of completely changing a text's colour (or its background), there exist some less obtrusive solutions.
 

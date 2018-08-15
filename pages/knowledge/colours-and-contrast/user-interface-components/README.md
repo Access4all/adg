@@ -6,9 +6,9 @@ changed: "2018-08-12"
 
 # Contrast requirements of user interface components
 
-**The Web Content Accessibility Guidelines (WCAG) 2.0 only required a certain colour contrast level for text. Finally, the recently published version 2.1 has added colour contrast requirements for user interface components.**
+**The Web Content Accessibility Guidelines (WCAG) 2.0 only required a certain colour contrast level for text. Finally, the recently published version 2.1 has added colour contrast requirements for user interface (UI) components.**
 
-There is not much value to interactive elements on a page, if a user can not perceive them. Alas, user interface components need a contrast ratio of at least `3:1` against adjacent color(s).
+There is not much value to interactive elements on a page, if a user can not perceive them. Alas, UI components need a contrast ratio of at least `3:1` against adjacent color(s).
 
 ## Form controls
 
@@ -20,7 +20,7 @@ In the following screenshot, the fields' borders have a contrast ratio of `1.5:1
 
 Strictly speaking, also the submit button is hardly perceivable as a form control: although its label "Send message" is clearly visible, the background color (that should indicate the user that the element is a button) also has a contrast ratio of only `1.5:1`.
 
-## Enhancing contrasts
+## Enhancing contrasts of UI components
 
 In the following example, the availability status of elements in a shop list is indicated using a red or green dot; green standing for "ok", red standing for "not ok".
 
