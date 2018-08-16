@@ -2,7 +2,7 @@
 
 **If you want to learn about accessible website development, you are at the right place.**
 
-- Live site: [www.accessibility-developer-guide.com](http://www.accessibility-developer-guide.com) / [RSS](http://localhost:3000/feed/rss.xml)
+- Live site: [www.accessibility-developer-guide.com](http://www.accessibility-developer-guide.com) / [RSS](/feed/rss.xml)
 - Facebook: [AccessibilityDeveloperGuide](https://www.facebook.com/AccessibilityDeveloperGuide)
 - Twitter: [A11yDevGuide](https://twitter.com/A11yDevGuide)
 
