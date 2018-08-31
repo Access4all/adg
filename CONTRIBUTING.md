@@ -1,4 +1,4 @@
-# Contributing to the «Accessibility Developer Guide» (ADG)
+# Contributing to the «Accessibility Developer Guide»
 
 This guide is the result of tight collaboration between accessibility experts and web developers. Its content by far is not exhaustive yet: there remain a lot of topics to talk about, and due to the fast evolution of web technologies, there certainly will always be.
 
