@@ -1,7 +1,7 @@
 ---
 navigation_title: "NVDA"
 position: 1
-changed: "2018-07-20"
+changed: "2018-05-30"
 ---
 
 # NVDA installation and configuration
