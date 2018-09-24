@@ -1,7 +1,7 @@
 ---
 navigation_title: "Internet Explorer 11"
 position: 1
-changed: "2018-07-20"
+changed: "2018-03-12"
 ---
 
 # Internet Explorer 11 installation and configuration

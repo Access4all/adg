@@ -1,7 +1,7 @@
 ---
 navigation_title: "Modern.IE"
 position: 2
-changed: "2018-07-20"
+changed: "2018-04-03"
 ---
 
 # Getting a free Windows virtual machine from Modern.IE

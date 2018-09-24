@@ -1,7 +1,7 @@
 ---
 navigation_title: "About"
 position: 2
-changed: "2018-07-20"
+changed: "2018-06-14"
 ---
 
 # About this initiative
