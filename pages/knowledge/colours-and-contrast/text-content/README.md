@@ -52,8 +52,7 @@ There are some exceptions to the contrast requirements of text content.
 - **Logos** usually must adhere strictly to a corporate's design guidelines and thus may be displayed in its original colours (needless to say that it still is unpleasant if your clients cannot perceive your logo).
 - **Decorative** text: this could be the background pattern of an image that is created from random words.
 - **Incidental** text: this could be a random street sign somewhere in the background of a photograph.
-- **Placeholder** text: this could be a placeholder value in a form control - as long as it is used as intended (namely to give an example for a valid input), and not misused as the replacement for a proper label.
-- **Disabled** text: this could be a disabled button's value.
+- **Disabled** text: this could be a disabled from control's label.
 
 ## Enhancing contrasts of text
 
@@ -63,7 +62,7 @@ To improve contrast, instead of completely changing a text's colour (or its back
 
 By adding a shadow to text, its own colour may not be of relevance anymore.
 
-For example, look at the following image. It shows two words, both with a red background that has an insufficient contrast of `2.1:1` to the white background.
+For example, look at the following image. It shows two words, both with a red fill that has an insufficient contrast of `2.1:1` to the white background.
 
 ![A word without and a word with shadow](_media/words-without-and-with-shadow.png)
 
@@ -83,6 +82,8 @@ You could increase its contrast using text shadow as described above. But in thi
 
 ![White text with semi-transparent darkening background](_media/beach-with-background.png)
 
+Of course you can also combine different solutions to add up their effects.
+
 ### Adding graphical information
 
 Sometimes, pure colour is used to convey meaning. For example, the following image shows a gray text, and some of the words are highlighted red to mark spelling mistakes.
@@ -99,21 +100,23 @@ Or add an icon to it, in the following case an exclamation mark.
 
 ![Spelling mistakes with signals](_media/spelling-mistakes-with-signals.png)
 
+By the way, make sure that such graphical information always offers adequate semantical meaning (if you are really curious and want to learn more about this, skip ahead and read [Semantics and their importance for accessibility](/knowledge/semantics/)).
+
 ## Text on images
 
-With text on images, we mean text that is printed on a rasterised image like JPG or PNG (like the example images in the text above). During rasterisation, text loses all its inherent characteristics, so neither you can select it (and copy&paste it), nor is it machine-readable by default.
+With text on images, we mean text that is printed on a rasterised image like JPG or PNG (like the example images in the text above). During rasterisation, text loses most of its inherent characteristics, so neither you can select it (and copy&paste it), nor is it machine-readable by default.
 
 In general, for text on images, the same rules apply like for "real" text.
 
 ### Downsides to real text
 
-Keep in mind that an image's points per inch (PPI) value may vary, and scaling images up or down in a browser will also influence its display size. Furthermore, do not forget to set the displayed text as the image's alternative text (`alt` attribute).
+Keep in mind that an image's points per inch (PPI) value may vary, and scaling images up or down in a browser will also influence its display size. Furthermore, do not forget to set the displayed text as the image's alternative text (`alt` attribute), so blind people can perceive it.
 
 In addition to this, compared to "real" text, placing text on images has some more downsides:
 
 - It does not scale as well because it tends to pixelate.
     - To address this issue, consider supplying an image of higher resolution (so it can be scaled up without quality loss to some degree).
-- Changing foreground and background contrast and color combinations is hardly possible, but needed by some users (like visually impaired ones).
+- Changing foreground and background contrast and color combinations is hardly possible, but desired by some users (like visually impaired ones).
 - It cannot be replaced by the user with a custom font (for example a dyslexia-friendly one).
 - It does not reflow and can lead to horizontal scrolling, especially when zoom is applied to the website.
 - It is much heavier in file size and triggers an additional server request; as such it slows down rendering.

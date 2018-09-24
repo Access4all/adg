@@ -18,46 +18,51 @@ In the following screenshot, the fields' borders have a contrast ratio of `1.5:1
 
 ![Low contrast form](_media/low-contrast-form.png)
 
-Strictly speaking, also the submit button is hardly perceivable as a form control: although its label "Send message" is clearly visible, the background color (that should indicate the user that the element is a button) also has a contrast ratio of only `1.5:1`.
+Strictly speaking, also the submit button is hardly perceivable as a form control: although its label "Send message" is clearly visible, the background color (that should indicate the user that the element is a button) also has a contrast ratio of only `1.5:1`. This can be seen as negligible though, as the label offers a clear invitation to interact with it by using a verb (which is better than a generic label like "OK"), and the label's text is distinct to surrounding text.
 
-## Enhancing contrasts of UI components
+## Custom controls
 
-In the following example, the availability status of elements in a shop list is indicated using a red or green dot; green standing for "ok", red standing for "not ok".
+Websites usually contain a lot of visual elements that convey meaning. We talk about "custom controls" when such elements can be interacted with, resulting in some status change that again is reflected in the visual design (either immediately with a JavaScript widget, or after a traditional page reload).
 
-![Shop list with colour coded elements](_media/shop-list.png)
+### Tablist
 
-The red and green colours have a contrast ratio of `2.0:1`, which is not sufficient. Alas, a user with a severe colour deficiancy would not be able to recognise whether an element is available or not.
+A well known example for this is a tablist: it conveys visually that there is a list of items, and the currently active item's content is displayed below. The button-like style of the items indicates that a user can click on them, making the clicked item the active one and displaying its content.
 
-You could try to fix the problem by experimenting with the colours until you find a combination with enough contrast. But this would probably suffer the visual design - and as additional statuses occur, this quickly becomes a dead-end.
+As the following tablist's borders have low contrast (`1.5:1`), a visually impaired user may miss completely how to interactwith it (or that it should be interacted with it at all).
 
-By the way: always be careful with meaning conveyed solely through colour! In other cultures, colours may be used differently to yours. Alas, always offer a legend with descriptive texts so the meaning is independent from cultural backgrounds.
+![Low contrast tablist](_media/low-contrast-tablist.png)
 
-### Adding text information
+Sometimes, tablist's rely on background colors instead of borders. Although this may look much more obvious, the contrast is still the same, and the same problem happens:
 
-You could simply add text information to each dot, conveying its status. This would even render the legend obsolete.
+![Low contrast tablist](_media/low-contrast-tablist-with-background.png)
 
-![Shop list with text status](_media/shop-list-with-text.png)
+By providing borders with high contrast, the tablist can be recognised easily by all users:
 
-In general though, this somehow feels like redundant information.
+![Low contrast tablist](_media/tablist-with-borders.png)
 
-### Adding shape information
+And while we are at it: providing clear indicators for where an element starts and where it ends is always good style, so please also expand borders around the content area.
 
-Instead of simply using a coloured dots, we could use a different shape for each status.
+![Low contrast tablist](_media/tablist-with-more-borders.png)
 
-In the following example, a tick sign is used for "ok", and a dot for "not ok".
+### Active indicator
 
-![Shop list with shapes](_media/shop-list-with-shapes.png)
+A much simpler example is a symbol that simply conveys whether an element is active or not.
 
-### Adding pattern information
+A typical website's navigation consists of a list of links (sometimes even a nested hierarchy). The currently displayed page is usually conveyed using a symbol.
 
-Another possible solution is to use a different pattern for each status.
+In the following screen shot, the indicator is hardly visible (`1.9:1`):
 
-In the following example, a vertical pattern is used for "ok", and a horizontal one for "not ok".
+![Low contrast active indicator](_media/low-contrast-active-indicator.png)
 
-![Shop list with patterns](_media/shop-list-with-patterns.png)
+Now it is better:
 
+![High contrast active indicator](_media/high-contrast-active-indicator.png)
 
+## Exceptions
 
-TODO: "current" icon!!!
+UI components usually consist of text and shape(s). As such, for UI components containing text, the exceptions for contrast requirements of text apply. For shape(s), there are some more exceptions:
 
-TODO: tabliste!!!
+- **Placeholder** text: this could be a placeholder value in a form control - as long as it is used as intended (namely to give an example for a valid input), and not misused as the replacement for a proper label.
+- **Disabled** components: this could be a disabled edit field or button, but also a custom control.
+    - Be careful with components that have low contrast due to having "disabled" status: often, the mere existence of an element conveys something to a user. For example, if a form's submit button is disabled while the user's input is missing (or invalid), and the disabled input (both text and shape) has low contrast, some users may not see the button at all. This could lead them to skip the form, as they may think that it is not to be submitted at all.
+    - Also be sure to not mix up `disabled` with `readonly` states.
