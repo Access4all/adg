@@ -29,3 +29,15 @@ We use [Netlify](https://www.netlify.com/) in the background to build our page:
 
 - Commits to master trigger a build of the live page.
 - Pull requests trigger a build of the related branch.
+
+## Editor workflow
+
+- New contents are bundled into a new version (like `1.1`)
+    - Use branch `releases/1.1`
+- Deploy to `master` is done by A4a
+    - Who tells them?
+    - Who is responsible on their side - Reto Inniger?
+
+Open questions:
+
+- Should we manage something like an `.htaccess` file to redirect changed URLs?
