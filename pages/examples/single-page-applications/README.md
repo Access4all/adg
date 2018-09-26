@@ -28,13 +28,13 @@ To have more control about how the user is notified on page changes, take a look
 
 ### Solution 2: ARIA Live Region
 
-Another solution is to create an ARIA live region and notify the user with a message when the navigation happens. This might be less confusing than solution 1 as the developer can set a text that explains that a page change has happened.
+Another solution is to create an ARIA live region and notify the user with a message when the navigation happens. This might be less confusing than solution 1 as you are able to provide the text that explains that a page change has happened.
 
 - [Explanation on how to ARIA Live Regions work on MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
 
 ## Don't forget to change the page `title`
 
-Screen reader users depend on the page title to reflect the actual content. Many SPA frameworks do not even include this functionality by default in their routing libraries and it's not ideal. So you are responsible to keep the `title` tag of website or web app in sync with your page content.
+Screen reader users depend on the page title to reflect the actual content. Many SPA frameworks do not even include this functionality by default in their routing libraries and it's not ideal. So you are responsible to keep the `title` tag of the website or web app in sync with your page content.
 
 - [Document.title documentation on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document/title)
 
