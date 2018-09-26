@@ -45,4 +45,4 @@ To be informed about new or updated contents, related activities (events) or sim
 - Facebook: [AccessibilityDeveloperGuide](https://www.facebook.com/AccessibilityDeveloperGuide)
 - Twitter: [A11yDevGuide](https://twitter.com/A11yDevGuide)
 
-We also provide a content feed: [RSS](http://localhost:3000/feed/rss.xml).
+We also provide a content feed: [RSS](/feed/rss.xml).

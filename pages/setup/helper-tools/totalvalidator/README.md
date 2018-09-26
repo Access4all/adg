@@ -16,6 +16,8 @@ changed: "2018-04-09"
 
 ## Configuration
 
+Under `Validations`, we recommend to disable `Check for broken links`, as it slows the tool down.
+
 ## Usage
 
 ![TotalValidator window](_media/totalvalidator-window.png)
