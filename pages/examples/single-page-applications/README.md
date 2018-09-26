@@ -6,11 +6,11 @@ changed: "2018-09-26"
 
 # Optimizing Single-page Applications for accessibility
 
-**Single Page Applications, short SPA, are applications that consist of one HTML page that loads it's contents dynamically JavaScript. As this differs from the navigation of a usual website, you need to make additional enhancements to make the navigation accessible for screen reader users.**
+**Single Page Applications, short SPA, are applications that consist of one HTML page that loads its contents dynamically via JavaScript. As this differs from the navigation of a traditional website, you need to make additional enhancements to make the navigation accessible for screen reader users.**
 
 ## The problem
 
-When a screen reader user navigates between multiple HTML document, the screen reader is aware of the page changes and notifies the users about the page change. In single page applications, there is no real page change happening. Instead, content is added to the DOM and possibly, the URL is changed dynamically.
+When a screen reader user navigates between multiple HTML documents, it is aware of the page changes and notifies the user. In single page applications however, there is no real page change happening. Instead, content is added to the DOM and possibly, the URL is changed dynamically.
 
 Without further optimizations of those applications, the screen reader will just stay silent. There are different approaches to fix this issue in a SPA.
 
