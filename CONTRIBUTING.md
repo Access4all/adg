@@ -38,6 +38,8 @@ We use [Netlify](https://www.netlify.com/) in the background to build our page:
     - Who tells them?
     - Who is responsible on their side - Reto Inniger?
 
-Open questions:
+Notes, questions:
 
 - Should we manage something like an `.htaccess` file to redirect changed URLs?
+- Don't forget to set proper `changed:` attribute on new/edited pages!
+    - On edited page, only update it when relevant content was added (or changed)! Not for typos and other fixes!
