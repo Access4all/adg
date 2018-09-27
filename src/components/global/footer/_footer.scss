@@ -1,6 +1,6 @@
 .footer {
   position: relative;
-  @include font-xs;
+  @include font-xxs;
   padding: $gutter 0;
   margin-top: 2 * $gutter;
 	margin-left: auto;
@@ -30,7 +30,7 @@
 
   .footer--left {
     img {
-      height: 80px;
+      height: 60px;
     }
   }
   .footer--right {

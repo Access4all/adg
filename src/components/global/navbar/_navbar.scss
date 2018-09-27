@@ -39,12 +39,12 @@
   padding: $gutter 0;
   //width: $navWidthMin;
   text-align: left;
+
   @include above-mobile {
     z-index: 1;
   }
 
   @include above-mobile {
-    margin-bottom: 40px;
     position: relative;
     &:after {
       @include navbar_white_line__pseudo;
@@ -94,7 +94,8 @@
 
   padding-right: 30px;
   max-width: 100vw;
-  margin-bottom: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 
