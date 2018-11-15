@@ -33,15 +33,17 @@ By adding the language attribute `lang` to any HTML tag we can define the langua
 The `title` element in the header section phrase the purpose of the document in the browser toolbar, provides a name when a page is added to favorites and displays the title for the page in search engine results. In addition it plays an important role in accessibility.
 
 ```html
-<title>Add a meaningul title here</title>
+<title>Add a meaningul title here - ACME Inc.</title>
 ```
 
-When using a screen reader the title element will be announced after the page is loaded. This enables users to identify a website  without scanning the whole content. A meaningful title could be «Contact form».
+When using a screen reader the title element will be announced after the page is loaded. This enables users to identify a website without scanning the whole content. A meaningful title could be «Contact form - ACME Inc.». Also don't forget to append your websites name in the title so the user always knows which website the current page belongs.
 
-In addition the title element can be used to gain users attention, for example when a validation failed after submiting a form, i.e «Contact form could not be sent. Please provide a valid email address.» or «You have successfully logged in.».
+In addition to the <a href="/examples/sensible-aria-usage/alert/">alert role</a> the title element can be used to gain users attention, for example when a validation failed after submiting a form, i.e «Contact form could not be sent. Please provide a valid email address.» or «You have successfully logged in. - ACME Inc.». 
 
 ## Set the viewport to the width of the device
 Good websites are responsive so that content is rendered well on every device. For example mobile devices are rendering pages at typical desktop screen size and then scales to fit the mobile screen. In this case the content appears very small. Users are forced to pinch-to-zoom and scroll around to scan the content. This is a challenge not only for users with special needs.
+
+![Layout of a website when a viewport is present versus no viewport.](_media/viewport.png)
 
 Responsivness can be achieved by set the viewport with to the width of the device and an initial zoom scale of 1.
 
