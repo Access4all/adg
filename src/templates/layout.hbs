@@ -53,7 +53,9 @@
         </div>
         {{> "content/prev_next/prev_next" prev=previousPage next=nextPage}}
         {{#if changed}}
-          {{> "content/meta-info/meta-info"}}
+          <aside class="l-site_width">
+            {{> "content/meta-info/meta-info"}}
+          </aside>
         {{/if}}
       </main>
       {{> "global/footer/footer"}}
