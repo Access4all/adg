@@ -11,10 +11,8 @@
     color: var(--theme-color-dark);
   }
 
-  &:focus {
-    outline: 2px dotted var(--theme-color-dark);
-    outline-offset: 2px;
-  }
+  @include btn-focus;
+
   .logo-title,
   .logo-img {
     vertical-align: middle;

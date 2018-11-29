@@ -9,9 +9,7 @@
     float: right;
     transform: translateX(-50%);
 
-    &:focus {
-      outline: 2px dotted var(--theme-color-dark);
-    }
+    @include btn-focus;
   }
 
   .search--input {
@@ -27,10 +25,7 @@
     font-family: inherit;
     font-weight: 300;
 
-    &:focus {
-      outline: 2px dotted var(--theme-color-dark);
-      outline-offset: 2px;
-    }
+    @include btn-focus;
   }
 
   .search--input-expanded {

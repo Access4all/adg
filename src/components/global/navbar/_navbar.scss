@@ -115,7 +115,7 @@
   .navbar--inner {
     display: none;
   }
-  .navbar--toggle--input:checked ~ .navbar {
+  .navbar.is-active {
     .navbar--inner {
       display: block;
     }
@@ -137,8 +137,8 @@
       width: 100%;
     }
   }
-  .navbar--toggle--input:checked ~ .footer,
-  .navbar--toggle--input:checked ~ .site-content {
+  .navbar.is-active ~ .footer,
+  .navbar.is-active ~ .site-content {
     padding-left: $navWidthMax;
     width: $navWidthMax + $site-maxWidth;
     @media (max-width: $navWidthMax + $site-maxWidth) {
@@ -159,11 +159,9 @@
     display: none;
   }
   // Avoid focus for checkbox when toggeling of the menu is not needed
-  .navbar--toggle--input {
-    display: none;
-  }
+
   .logo-title {
-   display: inline-block;
+    display: inline-block;
   }
 
 }
@@ -173,7 +171,7 @@
   cursor: pointer;
   position: absolute;
   right: 0;
-  top: 0; bottom: 0px;
+  top: $logo_height + 2 * $gutter; bottom: 0px;
   width: $navWidthMin;
 
   @include mobile {
@@ -181,6 +179,12 @@
     bottom: auto;
     left: auto; right: 10px;
     top: 30px;
+  }
+  &:focus {
+    outline: none;
+    .navbar--toggle--inner {
+      @include btn-focus-style;
+    }
   }
 }
 
@@ -200,19 +204,12 @@
 }
 
 
-.navbar--toggle--input {
-  @include visuallyhidden;
 
-  // Outline the hamburger navigation to toggle the navigation when using the keyboard only
-  &:focus + .navbar .navbar--toggle .navbar--toggle--inner {
-    outline: 2px dotted var(--theme-color-dark);
-  }
-}
 .navbar--toggle--line {
   display: block;
   width: 30px;
   height: 4px;
-  margin-bottom: 6px;
+
   position: relative;
 
   background: $c-black;
@@ -222,11 +219,14 @@
 
   transform-origin: 50% 50%;
 
-  transition: transform 0.4s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.4s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.45s ease;
+  transition: transform 0.3s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.3s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.35s ease;
 
-	.navbar--toggle--input:checked ~ .navbar .navbar--toggle & {
+    &:nth-last-child(2) {
+      margin: 6px 0;
+    }
+	.navbar.is-active .navbar--toggle & {
 	  opacity: 1;
 	  transform: translateY(10px) rotate(45deg) ;
 
