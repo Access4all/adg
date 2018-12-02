@@ -1,6 +1,6 @@
 ---
 navigation_title: "No visual attributes"
-position: 4
+position: 5
 changed: "2018-04-13"
 ---
 
