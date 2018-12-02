@@ -6,7 +6,7 @@ changed: "2018-12-30"
 
 # Screen reader keyboard shortcuts
 
-**This is a cheat-sheet of the keyboards shortcuts for screen readers**
+**This is a keyboard shortcut cheat-sheet for screen readers**
 
 
 - `Ctrl + Home` announces the current page title and returns to the top of the page
