@@ -52,11 +52,13 @@
           {{/if}}
         </div>
         {{> "content/prev_next/prev_next" prev=previousPage next=nextPage}}
-        {{#if changed}}
+        {{#notEq section 'welcome'}}
+          {{#if changed}}
           <aside class="l-site_width">
             {{> "content/meta-info/meta-info"}}
           </aside>
-        {{/if}}
+          {{/if}}
+        {{/notEq}}
       </main>
       {{> "global/footer/footer"}}
     </div>

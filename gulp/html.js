@@ -299,6 +299,13 @@ module.exports = (config, cb) => {
 
             return options.inverse(this)
           },
+          notEq: function (v1, v2, options) {
+            if (v1 !== v2) {
+              return options.fn(this)
+            }
+
+            return options.inverse(this)
+          },
           or: function () {
             return Array.prototype.slice.call(arguments, 0, -1).some(Boolean)
           }
