@@ -1,6 +1,6 @@
 .footer {
   position: relative;
-  @include font-xs;
+  @include font-xxs;
   padding: $gutter 0;
   margin-top: 2 * $gutter;
 	margin-left: auto;
@@ -26,20 +26,8 @@
     .footer--right {
       float: right;
     }
-  }
-
-  .footer--left {
-    img {
-      height: 80px;
-    }
-  }
-  .footer--right {
-    img {
-      height: 40px;
-    }
-  }
-
-  a {
+ }
+ a {
     text-decoration: underline;
 
     &:focus {
@@ -66,34 +54,39 @@
   }
 }
 
-.footer--agencies {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: -$gutter / 2;
-}
-
 .footer--label {
   clear: both;
   margin-bottom: 10px;
 }
 
-.footer--agency {
-  margin: $gutter / 2;
+.footer--copy {
+  clear: both;
+}
+.footer--agencies {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: -$gutter / 2;
+}
 
-  &:last-child {
-    margin-right: 0;
-  }
+.footer--agency {
+  flex: 0 1 auto;
+  margin: $gutter / 2;
 }
 
 .footer--logolink {
-  position: relative;
-
+  display: flex;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
   img {
-    border: 0;
+    opacity: 0;
+    max-width: 100px;
+    max-height: 60px;
+    .footer--left & {
+      max-width: 200px;
+      max-height: 60px;
+    }
   }
-}
-
-.footer--copy {
-  clear: both;
 }

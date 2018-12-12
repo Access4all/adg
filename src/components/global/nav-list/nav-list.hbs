@@ -1,6 +1,6 @@
 {{#each this}}
   <li class="nav-list--item nav-list--item-level{{level}}{{#if isInactive}} nav-list--item-inactive{{/if}}">
-    <a class="nav-list--link{{#if isActive}} nav-list--link-active{{/if}}{{#if isCurrent}} nav-list--link-current{{/if}}" href="/{{url}}/"{{#if children}} id="nav{{@key}}"{{/if}}>
+    <a class="nav-list--link{{#if isActive}} nav-list--link-active{{/if}}{{#if isCurrent}} nav-list--link-current{{/if}}" href="/{{url}}/"{{#if children}} id="{{domid}}-{{@key}}"{{/if}}>
       {{title}}
 
       {{#if isCurrent}}
@@ -9,7 +9,7 @@
     </a>
 
     {{#if children}}
-      <ul class="nav-list nav-list-subnav" aria-labelledby="nav{{@key}}">
+      <ul class="nav-list nav-list-subnav" aria-labelledby="{{domid}}-{{@key}}">
         {{> "global/nav-list/nav-list" children}}
       </ul>
     {{/if}}

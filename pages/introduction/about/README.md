@@ -20,10 +20,6 @@ The foundation is in business since the year 2000, and since then has accompanie
 
 **Bernhard Heinser**, CEO, «Access for all».
 
-> Years ago when I joined «Access for all», I quickly realised how hard it is to get into accessibility as an "outsider". Through the wonderful support of my co-workers with special needs, I was finally able to merge my technical knowledge with their profound user expertise. With the Accessibility Developer Guide, together we provide a "roadmap" that shows the most pragmatic ways to get from general requirements to accessible implementations. All of them are well-proven best practices, built on rock-solid standard techniques and cleverly avoid typical traps and pitfalls.
-
-**Joshua Muheim**, Web Developer & Accessibility Expert, «Access for all».
-
 For more information, see [www.access-for-all.ch](http://access-for-all.ch/).
 
 ## Web agencies
