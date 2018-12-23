@@ -6,7 +6,7 @@ changed: "2018-08-11"
 
 # How to calculate colour contrast
 
-**Visual content (like text, icons, form controls, charts, etc.) needs to be easily perceivable. As such, it must clearly stand out visually from its background. There is a dedicated formula to examine the contrast ratio between two colours: it can be used to reveal whether an element's colour offers enough contrast to its background.**
+**Visual content (like text, icons, form controls, charts, etc.) needs to be easily perceivable. As such, it must clearly stand out visually from its background. There is a dedicated formula to examine the contrast ratio between two colours: it can be used to reveal whether an element’s colour offers enough contrast to its background.**
 
 Please note that we are keeping technical explanations simple here. If you want to read a detailed definition of the colour contrast formula, please go to [contrast ratio (W3.org)](https://www.w3.org/TR/WCAG20/#contrast-ratiodef).
 

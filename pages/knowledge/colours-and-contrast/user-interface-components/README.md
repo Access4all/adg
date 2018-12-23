@@ -12,7 +12,7 @@ changed: "2018-08-12"
 
 For example, if the fields of a contact form have borders with low contrast, a user with low vision may not be able to fill (or even find) them.
 
-In the following screenshot, the fields' borders have a contrast ratio of `1.5:1`.
+In the following screenshot, the fields’ borders have a contrast ratio of `1.5:1`.
 
 ![Low contrast form](_media/low-contrast-form.png)
 
@@ -24,7 +24,7 @@ A well-known example for this is a tablist: It conveys visually that there is a 
 
 ### Tablist
 
-A well known example for this is a tablist: it conveys visually that there is a list of items, and the currently active item's content is displayed below. The button-like style of the items indicates that a user can click on them, making the clicked item the active one and displaying its content.
+A well known example for this is a tablist: it conveys visually that there is a list of items, and the currently active item’s content is displayed below. The button-like style of the items indicates that a user can click on them, making the clicked item the active one and displaying its content.
 
 The borders of the following tablist have insufficient contrast (`1.5:1`). Users who can’t see them (because they have a visual impairment, because their screen is exposed to direct sunlight, because the beamer has bad contrast settings, …) might not realise how the different pieces relate to each other and that they can interact with them.
 

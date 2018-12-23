@@ -18,11 +18,11 @@ When calculating a contrast ratio, it is very important to use the “right” c
 
 ## DOM inspector
 
-The most trustworthy source is the browser's DOM inspector.
+The most trustworthy source is the browser’s DOM inspector.
 
 Right-click on an element and choose `Inspect` (depending on your browser the term might vary) to show that element in the DOM inspector. Now you can find the element’s colour values in the `Styles` tab.
 
-![Displaying an element's colour definition in the DOM inspector](_media/dom-inspector.png)
+![Displaying an element’s colour definition in the DOM inspector](_media/dom-inspector.png)
 
 Now simply copy the colour code and paste it into CCA.
 

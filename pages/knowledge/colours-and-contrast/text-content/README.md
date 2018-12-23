@@ -33,7 +33,7 @@ Large text is defined as:
 
 Note: the ratio between sizes in points and CSS pixels approximately is `1pt = 1.333px`.
 
-Let us look again at the previous image's text with gradient overlay.
+Let us look again at the previous image’s text with gradient overlay.
 
 ![Text with colour gradient overlay](_media/lazy-dog.png)
 

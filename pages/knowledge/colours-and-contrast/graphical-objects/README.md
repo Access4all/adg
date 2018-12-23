@@ -25,7 +25,7 @@ An easy way to improve this is to add borders around the elements:
 
 ![Elements with darker borders](_media/shop-list-borders.png)
 
-Let's stick with the black borders for the time being.
+Let’s stick with the black borders for the time being.
 
 ![Shop list with colour coded elements](_media/shop-list.png)
 
