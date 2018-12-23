@@ -1,26 +1,26 @@
 ---
-navigation_title: "How to examine"
+navigation_title: "Examine contrast"
 position: 2
 changed: "2018-08-12"
 ---
 
 # How to precisely examine colour contrasts
 
-**While calculating contrast ratios is a somewhat complex thing, fortunately there are tools that accomplish this automatically. We only need to feed such a tool with correct colour codes - which has a few potential pitfalls that you need to avoid.**
+**Calculating contrast ratios is complex. Fortunately there are contrast calculators which take care of the math. We only need to provide the correct colour codes – which has a few potential pitfalls.**
 
-Fortunately, no manual calculation of contrast ratios between two colours is needed today, as there are a lot of automatic tools for this purpose. We recommend using the Colour Contrast Analyser (CCA), so if you haven't done this yet, go back and read [Colour Contrast Analyser](/setup/helper-tools/colour-contrast-analyser/)).
+There are a lot of tools available to calculate the contrast between two colours. For Windows and macOS users we recommend the [Colour Contrast Analyser (CCA)](/setup/helper-tools/colour-contrast-analyser/).
 
-By entering a foreground and a background colour into the respective fields, the CCA immediately states whether those have a sufficient contrast ratio (depending on the kind of visual content and its size).
+Simply enter a foreground and a background colour into the respective fields and the CCA immediately returns whether or not the contrast ratio is sufficient, depending on the kind of visual content and size. The evaluation uses the recommendations from the WCAG 2.1 guidelines for [colour contrast level AA](https://www.w3.org/TR/WCAG21/#contrast-minimum) and [colour contrast level AAA](https://www.w3.org/TR/WCAG21/#contrast-enhanced).
 
 ![Colour Contrast Analyser window](_media/colour-contrast-analyser-window.png)
 
-When calculating a contrast ratio, it is very important that the "right" colour codes are used, which means the colour definitions that are effectively defined in the CSS. But what is the best way to examine these reliably?
+When calculating a contrast ratio, it is very important to use the “right” colour codes. In the context of web applications these are the values defined in CSS. But what is the best way to get to these values?
 
 ## DOM inspector
 
 The most trustworthy source is the browser's DOM inspector.
 
-To do this, right-click on an element and choose `Inspect`. Now you can find the element's colour value in the `Styles` tab, like `color: #00FF00`.
+Right-click on an element and choose `Inspect` (depending on your browser the term might vary) to show that element in the DOM inspector. Now you can find the element’s colour values in the `Styles` tab.
 
 ![Displaying an element's colour definition in the DOM inspector](_media/dom-inspector.png)
 
@@ -28,13 +28,13 @@ Now simply copy the colour code and paste it into CCA.
 
 ## Colour picker
 
-In some situations, there is no hard-coded colour available in the DOM inspector.
+In some situations there is no hard-coded colour value available (e.g. when working with pixel images) or the values in the DOM inspector don’t tell the whole story (e.g. when working with transparency).
 
 To account for this, a lot of contrast checkers offer colour pickers. While they are very handy, they open up some potential pitfalls.
 
 ### Anti-aliasing
 
-Most modern browsers try to offer a smoother visual experience by applying anti-aliasing to rendered elements (see [Anti-aliasing (Wikipedia.org)](https://en.wikipedia.org/wiki/Anti-aliasing)).
+Most modern browsers apply anti-aliasing to make the edges of rendered elements smoother (see [Anti-aliasing (Wikipedia.org)](https://en.wikipedia.org/wiki/Spatial_anti-aliasing))
 
 ![An anti-aliased text](_media/anti-alias.png)
 
@@ -42,7 +42,7 @@ When you are picking a colour from such an element, be sure to avoid anti-aliase
 
 ### Colour profiles
 
-Also be aware that sometimes a colour that is displayed on screen may slightly differ from its definition in the code. This is due to the various colour profiles that are used by monitors, operating systems and browsers.
+Colour that is displayed on screen may slightly differ from its definition in the code. This is due to the various colour profiles that are used by monitors, operating systems and browsers.
 
 So if you are using colour pickers, the picked colour may differ from its true definition.
 
