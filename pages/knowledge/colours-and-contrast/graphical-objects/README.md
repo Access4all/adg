@@ -1,20 +1,23 @@
 ---
-navigation_title: "Requirements for graphics"
+navigation_title: "Requirements for graphical objects"
 position: 5
-changed: "2018-08-12"
+changed: "2018-12-26"
 ---
 
 # Contrast requirements of graphical objects
 
-**The term “graphical object” typically applies to stand-alone icons and to information graphics. In more complex graphical objects the focus lies on the elements which are essential for a user to understand what the graphic is conveying. The [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21) specify a [minimal contrast ratio of 3:1](https://www.w3.org/TR/WCAG21/#non-text-contrast) against adjacent colour(s) for all user interface (UI) components.**
+**The term “graphical object” typically applies to stand-alone icons and to information graphics. One of the particular challenges here comes from the fact that visual differentiation has to be possible between many more elements than just foreground and background.**
 
-## Status through colour
+## Minimal contrast ratio
+The [Web Content Accessibility Guidelines (WCAG) specify a minimal contrast ratio](https://www.w3.org/TR/WCAG21/#non-text-contrast) of `3:1` against adjacent colour(s) for graphical objects.
 
-In the following example, the availability status of elements in a shop list is indicated using a red or green dot; green standing for "ok", red standing for "not ok".
+## Example: Status indicator
+
+In the following example, the availability status of elements in a shop list is indicated using a red or green dot; green standing for “ok”, red standing for “not ok”.
 
 ![Shop list with colour coded elements](_media/low-contrast-shop-list.png)
 
-### Enhancing perceivability
+### Improving perceivability
 
 First of all: while the red colour has a contrast of `4:1` (which is good), the green colour has only a contrast of `2.1:1` (which is not enough).
 
@@ -31,7 +34,7 @@ Let’s stick with the black borders for the time being.
 
 Now the elements are clearly perceivable - but can they be distinguished from each other?
 
-### Enhancing distinctiveness
+### Improving distinctiveness
 
 The red and green colours have a contrast ratio of `2:1`, which is not sufficient. A user with a severe colour deficiancy would not be able to recognise whether an element is available or not.
 
@@ -51,7 +54,7 @@ This works but to some this might feel like a lot of redundant information.
 
 Instead of simply using coloured dots, we could use a different shape for each status.
 
-In the following example, a tick sign is used for "ok", and a dot for "not ok".
+In the following example, a tick sign is used for “ok”, and a dot for “not ok”.
 
 ![Shop list with shapes](_media/shop-list-with-shapes.png)
 
@@ -59,17 +62,15 @@ In the following example, a tick sign is used for "ok", and a dot for "not ok".
 
 Another possible solution is to use a different pattern for each status.
 
-In the following example, a vertical pattern is used for "ok", and a horizontal one for "not ok".
+In the following example, a vertical pattern is used for “ok”, and a horizontal one for “not ok”.
 
 ![Shop list with patterns](_media/shop-list-with-patterns.png)
 
 Needless to say that such patterns also need to have enough contrast.
 
-## More colors!
+## Example: Charts
 
-Another frequent example of colours conveying meaning is visual charts.
-
-For example a pie chart: It has three differently coloured sections which are labelled in a separate legend.
+Visual charts are another frequent example where colours are used to convey meaning. For example this simple pie chart: It has three differently coloured sections which are labelled in a separate legend.
 
 - Male (red)
 - Female (blue)
@@ -101,6 +102,8 @@ And again, adding background patterns can be very useful.
 
 ![Pie chart with patterns](_media/pie-chart-with-patterns.png)
 
-# Conclusion
+Obviously not all charts are as simple as this example. For more complex information graphics it’s fine (or even necessary) to focus on the elements which are essential to understand the message of the visualisation. 
+
+## Don’t rely solely on colours
 
 Graphical objects can have a comparatively high number of distinct elements. While it is possible to create colour combinations with enough contrast, it’s often easier and more robust to use shapes, patterns or other additional visual indicators for differentiation. Relying on colour alone to convey meaning is generally a weak strategy; for graphical elements specifically it is often simply not practical.

@@ -1,9 +1,9 @@
 ---
 navigation_title: "Colours & contrast"
 position: 1
-changed: "2018-08-11"
+changed: "2018-12-26"
 ---
 
 # Colours and contrast
 
-**Accessibility goes far beyond functionality and code. When it comes to purely visual appearances, colours require special consideration. This concerns individual colours and their possible meaning as well as colour combinations and resulting contrasts. As the used colour palette directly affects how well people can perceive and understand what is on screen, it needs to be composed wisely and according to some basic rules.**
+**Accessibility goes far beyond functionality and code. When it comes to visual appearances, colours require special consideration. The meaning of a certain colour as well as the contrast between multiple colours directly affect how well a person can perceive and understand what is on screen. Colour pallettes should therefore be composed carefully and according to some basic rules.**

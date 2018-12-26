@@ -1,18 +1,18 @@
 ---
 navigation_title: "Calculate Contrast"
 position: 1
-changed: "2018-08-11"
+changed: "2018-12-26"
 ---
 
 # How to calculate colour contrast
 
-**Visual content (like text, icons, form controls, charts, etc.) needs to be easily perceivable. As such, it must clearly stand out visually from its background. There is a dedicated formula to examine the contrast ratio between two colours: it can be used to reveal whether an element’s colour offers enough contrast to its background.**
+**There is a mathematical formula to calculate the contrast ratio between two colours. Using this formula for contrast evaluation is always better than relying only on your eyes.**
 
 Please note that we are keeping technical explanations simple here. If you want to read a detailed definition of the colour contrast formula, please go to [contrast ratio (W3.org)](https://www.w3.org/TR/WCAG20/#contrast-ratiodef).
 
 ## Relative luminance
 
-Contrast is calculated using "relative luminance", which is defined as:
+Contrast is calculated using “relative luminance”, which is defined as:
 
 > The relative brightness of any point in a colorspace, normalized to `0` for darkest black and `1` for lightest white.
 
@@ -22,7 +22,7 @@ Quote: [relative luminance (W3.org)](https://www.w3.org/TR/WCAG20/#relativelumin
 
 The relative luminance can be calculated from any colour code (like HEX or RGB).
 
-## The formula (and its results)
+## The formula
 
 To calculate the contrast ratio, the relative luminance of the lighter colour (`L1`) is divided through the relative luminance of the darker colour (`L2`), like so:
 

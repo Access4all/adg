@@ -1,64 +1,41 @@
 ---
 navigation_title: "Requirements for text"
 position: 3
-changed: "2018-08-12"
+changed: "2018-12-26"
 ---
 
 # Contrast requirements of text content
 
 **There is a general minimal colour contrast level for all kinds of text. As an exception, large text can have slightly lower contrast. This requirement applies to both “real” text and rasterised text on images.**
 
-## Real text
+## Minimal contrast ratio
 
-With "real" text, we mean text that is truly available as an arrangement of character codes (like this text here). Some of its inherent characteristics is that you can select it, and copy&paste it between applications. It is machine-readable.
+The [Web Content Accessibility Guidelines (WCAG) specify a minimal contrast ratio](https://www.w3.org/TR/WCAG21/#contrast-minimum) of `4.5:1` against adjacent colour(s) for text in general. An exception is made for large-scale text: It is considered easier to read and can therefore be set in a lower contrast ratio of at least `3:1`.
 
-In general, text needs a contrast ratio of at least `4.5:1` against adjacent color(s) (source: [WCAG 2.1 guidelines for text contrast, level AA](https://www.w3.org/TR/WCAG21/#contrast-minimum)).
+Large-scale text is defined as:
 
-For example, the following image has a white background and shows a text with a colour gradient overlay from white to black.
+- Either **bold** text of at least 14 points (or 18.5 pixels).
+- Or regular text of at least 18 points (or 24 pixels).
 
-![Text with colour gradient overlay](_media/lazy-dog.png)
+(see [WCAG definition of “large scale (text)”](https://www.w3.org/TR/WCAG21/#dfn-large-scale))
 
-The white on the left has a contrast ratio of `1:1`. The black to the right has a contrast ratio of `21:1`. Somewhere around the `m`, the required contrast of `4.5:1` is reached.
-
-### Large text
-
-There is a single exception to the general rule: "large" text. It is considered easier to read and can therefore be set in a lower contrast ratio of at least `3:1` against adjacent colour(s) (source: [WCAG 2.1 guidelines for text contrast, level AA](https://www.w3.org/TR/WCAG21/#contrast-minimum))
-
-Large text is defined as:
-
-- Either **bold** text of at least 14 points (or 18.5 pixels). For example `font-size: 14pt; font-weight: bold` (or `font-size: 18.5px; font-weight: bold`).
-- Or regular text of at least 18 points (or 24 pixels). For example `font-size: 18pt` (or `font-size: 24px`).
-
-(source: [WCAG 2.1 definition of “large scale(text)”](https://www.w3.org/TR/WCAG21/#dfn-large-scale))
-
-Note: the ratio between sizes in points and CSS pixels approximately is `1pt = 1.333px`.
-
-Let us look again at the previous image’s text with gradient overlay.
+To illustrate this: the following image shows the full spectrum of possible contrast ratios from `1:1` on the left to `21:1` on the right.
 
 ![Text with colour gradient overlay](_media/lazy-dog.png)
 
-Somewhere around the `x`, the required contrast of `3:1` is reached (compared to the `m` with a ratio of `4.5:1`).
+Somewhere around the “x” the contrast ratio reaches `3:1`. Somewhere around the “m” we arrive at `4.5:1`. 
 
-Look at the following image that displays both large and default text with contrasts of exactly `3:1` and `4.5:1`.
+For a more direct comparison: the following image shows both large and default text with contrast ratios of exactly `3:1` and `4.5:1`.
 
 ![Small and large text](_media/small-and-large-text.png)
 
 It may not seem like much of a difference, but in fact it heavily enlargens the number of possible colour combinations.
 
-## Exceptions
-
-There are some exceptions to the contrast requirements of text content.
-
-- **Logos** usually must adhere strictly to corporate design guidelines and thus may be displayed in those colours regardless of contrast ratios (needless to say that it still is unpleasant if your clients cannot perceive your logo).
-- **Decorative** text: this could be the background pattern of an image that is created from random words.
-- **Incidental** text: this could be a random street sign somewhere in the background of a photograph.
-- **Disabled** text: this could be the label of a disabled element in an online form.
-
 ## Enhancing text contrast
 
-Besides directly changing the colour of the text or the background there are some additional options to improve contrast.
+Besides changing the colour of the text or the background there are many other ways do enhance contrast. For example:
 
-### Increasing contrast using shadow
+### Adding shadow
 
 Drop shadow around text can make up for insufficient contrast between text colour and background.
 
@@ -68,13 +45,11 @@ For example, look at the following image. It shows two words, both with a red fi
 
 The shadow of the second word results in a contrast of appropriately `4.5:1`.
 
-In CSS, the appropriate property would be something like `text-shadow: 0 0 2px #000`.
-
-### Enhancing non-homogeneous backgrounds
+### Adding a contrast layer
 
 In some cases, text is displayed on non-homogeneous backgrounds. Depending on the heterogeneity of the background, the text may be very hard to read.
 
-For example, look at the following image. It shows a white text "Welcome to the beach!" on blue sky with some white clouds. While there is decent contrast between white text and blue sky there is almost no contrast between white text and white clouds. Overall it’s very hard to read.
+For example, look at the following image. It shows a white text “Welcome to the beach!” on blue sky with some white clouds. While there is decent contrast between white text and blue sky there is almost no contrast between white text and white clouds. Overall it’s very hard to read.
 
 ![White text on blue sky and white clouds](_media/beach.png)
 
@@ -102,8 +77,19 @@ Or add an icon to it, in the following case an exclamation mark.
 
 By the way, make sure to not just focus on the visual appearance but also on the underlying markup. It should provide adequate semantic information to clearly differentiate elements also on a non-visual level. (For more information take a look at [Semantics and their importance for accessibility](/knowledge/semantics/))
 
-## Text images
+## Exceptions
 
-With “text images”, we mean rasterised text that is part of an pixel-based image like a JPG or PNG. In general, the contrast requirements for “real” text also apply for text on images. Excluded is incidental typography on pictures which isn’t meant to convey important information (e.g. as decoration or as part of a scene).
+There are some exceptions to the contrast requirements of text content.
+
+- **Logos** usually must adhere strictly to corporate design guidelines and thus may be displayed in those colours regardless of contrast ratios (needless to say that it still is unpleasant if your clients cannot perceive your logo).
+- **Decorative text:** this could be the background pattern of an image that is created from random words.
+- **Incidental text:** this could be a random street sign somewhere in the background of a photograph.
+- **Disabled text:** this could be the label of a disabled element in an online form.
+
+## “Real” text vs. text images
+
+With “real” text, we mean text that is available as an arrangement of character codes (like this text here). It is inherently machine-readable and can be selected and copy-pasted. “Text images” on the other hand are rasterised pictures typography, e.g. stored as JPG or PNG files. 
+
+In general, the same contrast requirements and exceptions apply for “real” text and for text images. 
 
 As an aside: Due to the many limitations of text images in terms of flexibility, usability and file size we generally recommend against using it. However, if you *have* to use text images make sure that the displayed text is set as the image’s alternative text (`alt` attribute) so that it is accessible for screen reader users.
