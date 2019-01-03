@@ -72,7 +72,7 @@ To make the image accessible, it could be tempting now to simply add an ARIA lab
 
 If you are really curious and want to learn more about this, skip ahead and read [Labelling elements using aria-label and aria-labelledby](/examples/sensible-aria-usage/label-labelledby).
 
-While this certainly is an improvement over offering no label at all, it is not the technique of choice. This is du to several reasons, some very obvious ones outlined here:
+While this certainly is an improvement over offering no label at all, it is not the technique of choice. This is due to several reasons, some very obvious ones outlined here:
 
 - First of all, ARIA labels are only visible to screen readers.
     - But a text browser (unable to display background images) would still not be able to convey a link label to the user.
