@@ -1,6 +1,6 @@
 ---
 navigation_title: "Shortcut monsters"
-position: 2
+position: 6
 changed: "2018-04-13"
 ---
 
