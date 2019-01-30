@@ -1,9 +1,9 @@
 ---
 navigation_title: "Talkback"
 position: 4
-changed: "2019-01-19"
+changed: "2019-01-30"
 ---
-
+@AUe Text betreffend Android Versionen
 # TalkBack/Android configuration
 
 ![Talkback icon](_media/talkback-icon.png)
