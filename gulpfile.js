@@ -208,30 +208,27 @@ gulp.task(
 
 gulp.task(
   'default',
-  gulp.series(
-    'build',
-    function serveAndWatch () {
-      browserSync.init({
-        server: {
-          baseDir: './dist'
-        }
-      })
+  gulp.series('build', function serveAndWatch () {
+    browserSync.init({
+      server: {
+        baseDir: './dist'
+      }
+    })
 
-      gulp.watch(
-        ['./src/assets/css/**/*.scss', './src/components/**/*.scss'],
-        gulp.series('css')
-      )
-      gulp.watch(
-        [
-          './pages/**/*.md',
-          './src/templates/**/*.hbs',
-          './src/components/**/*.hbs',
-          './gulp/helpers/*'
-        ],
-        gulp.series('html')
-      )
-      gulp.watch(['./pages/**/example.*'], gulp.series('html:examples'))
-      gulp.watch(['./pages/{,**/}_media/**/*'], gulp.series('media'))
-    }
-  )
+    gulp.watch(
+      ['./src/assets/css/**/*.scss', './src/components/**/*.scss'],
+      gulp.series('css')
+    )
+    gulp.watch(
+      [
+        './pages/**/*.md',
+        './src/templates/**/*.hbs',
+        './src/components/**/*.hbs',
+        './gulp/helpers/*'
+      ],
+      gulp.series('html')
+    )
+    gulp.watch(['./pages/**/example.*'], gulp.series('html:examples'))
+    gulp.watch(['./pages/{,**/}_media/**/*'], gulp.series('media'))
+  })
 )
