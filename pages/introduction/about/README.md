@@ -46,7 +46,7 @@ On the other side of the «Accessibility Alliance», there are several acclaimed
 
 ![Nothing AG logo](_media/nothing.png){.agency-logo}
 
-> Tim Berners-Lee, the inventor of the World Wide Web once said “The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.”. This aspect which can only be fulfilled by the web is ignored by a wide range of people. We feel responsible for what we develop and for who we develop for. With the Accessibility Developer Guide we finally have a practical guide to accessible web development and can contribute our knowledge at the same time.
+> Tim Berners-Lee, the inventor of the World Wide Web once said “The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.”. This aspect which can only be fulfilled by the web is ignored by a wide range of people. We feel responsible for what we develop and for who we develop for. With the Accessibility Developer Guide we finally have a practical guide to accessible web development and can contribute our knowledge.
 
 **René Stalder**, Senior Frontend Developer, [Nothing](https://www.nothing.ch/).
 
