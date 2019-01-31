@@ -51,7 +51,6 @@
 // Overrides for the default SiteSearch 360 styles
 #unibox-suggest-box {
   margin-top: 1px;
-  width: 100%;
   box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
   font-family: inherit;
   font-weight: 300;
@@ -95,7 +94,7 @@
 
 @include mobile-narrow {
   #unibox-suggest-box {
-    right: 0;
+    right: -60px;
   }
 }
 
