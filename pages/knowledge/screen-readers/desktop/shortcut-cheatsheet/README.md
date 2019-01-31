@@ -1,6 +1,6 @@
 ---
 navigation_title: "Shortcut cheat-sheet"
-position: 7
+position: 3
 changed: "2018-12-30"
 ---
 
