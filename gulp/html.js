@@ -336,8 +336,14 @@ module.exports = (config, cb) => {
     // Rename to `index.html`
     .pipe(
       through.obj((file, enc, cb) => {
-        file.path = file.path.replace(path.basename(file.path), 'index.html')
+        let filename = 'index.html';
 
+        // #175 - to create other html pages like __404.md => 404.html
+        if(path.basename(file.path).startsWith("__")) {
+          filename = path.basename(file.path, path.extname(file.path)).substring(2) + '.html';
+        }
+
+        file.path = file.path.replace(path.basename(file.path), filename)
         return cb(null, file)
       })
     )
