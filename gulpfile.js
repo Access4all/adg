@@ -1,6 +1,5 @@
 const gulp = require('gulp')
 const browserSync = require('browser-sync').create()
-const argv = require('minimist')(process.argv.slice(2))
 const log = require('fancy-log')
 const colors = require('ansi-colors')
 const del = require('del')
@@ -210,11 +209,6 @@ gulp.task(
 gulp.task(
   'default',
   gulp.series(
-    function setWatchEnv (cb) {
-      argv.watch = true
-
-      return cb()
-    },
     'build',
     function serveAndWatch () {
       browserSync.init({

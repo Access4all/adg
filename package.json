@@ -5,7 +5,7 @@
   "repository": "github:Access4all/adg",
   "main": "index.js",
   "scripts": {
-    "start": "gulp",
+    "start": "gulp --watch",
     "build": "gulp build",
     "gulp": "gulp",
     "prettier": "prettier-standard '**/*.js'",
