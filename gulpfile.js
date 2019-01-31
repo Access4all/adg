@@ -120,7 +120,7 @@ gulp.task(
     },
     function assets () {
       return gulp
-        .src(['./src/assets/img/**/*'], {
+        .src(['./src/assets/img/**/*', './src/assets/js/snippets/**/*'], {
           base: './src/assets'
         })
         .pipe(gulp.dest('./dist'))
