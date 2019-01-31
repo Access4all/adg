@@ -1,6 +1,5 @@
 const gulp = require('gulp')
 const browserSync = require('browser-sync').create()
-const argv = require('minimist')(process.argv.slice(2))
 const log = require('fancy-log')
 const colors = require('ansi-colors')
 const del = require('del')
@@ -209,35 +208,27 @@ gulp.task(
 
 gulp.task(
   'default',
-  gulp.series(
-    function setWatchEnv (cb) {
-      argv.watch = true
+  gulp.series('build', function serveAndWatch () {
+    browserSync.init({
+      server: {
+        baseDir: './dist'
+      }
+    })
 
-      return cb()
-    },
-    'build',
-    function serveAndWatch () {
-      browserSync.init({
-        server: {
-          baseDir: './dist'
-        }
-      })
-
-      gulp.watch(
-        ['./src/assets/css/**/*.scss', './src/components/**/*.scss'],
-        gulp.series('css')
-      )
-      gulp.watch(
-        [
-          './pages/**/*.md',
-          './src/templates/**/*.hbs',
-          './src/components/**/*.hbs',
-          './gulp/helpers/*'
-        ],
-        gulp.series('html')
-      )
-      gulp.watch(['./pages/**/example.*'], gulp.series('html:examples'))
-      gulp.watch(['./pages/{,**/}_media/**/*'], gulp.series('media'))
-    }
-  )
+    gulp.watch(
+      ['./src/assets/css/**/*.scss', './src/components/**/*.scss'],
+      gulp.series('css')
+    )
+    gulp.watch(
+      [
+        './pages/**/*.md',
+        './src/templates/**/*.hbs',
+        './src/components/**/*.hbs',
+        './gulp/helpers/*'
+      ],
+      gulp.series('html')
+    )
+    gulp.watch(['./pages/**/example.*'], gulp.series('html:examples'))
+    gulp.watch(['./pages/{,**/}_media/**/*'], gulp.series('media'))
+  })
 )
