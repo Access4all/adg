@@ -1,4 +1,4 @@
-;(function () {
+var CSBookmarklet = (function () {
   var to = [
     { n: 'H1', c: '#ff0000', p: 0 },
     { n: 'H2', c: '#713939', p: 0 },
@@ -72,7 +72,7 @@
     { n: 'BUTTON', c: '#34495E', p: 1 }
   ]
 
-  function hT (w, to) {
+  var hT = function (w, to) {
     var t = w.document.getElementsByTagName(to.n)
     for (var i = 0; i < t.length; i++) {
       if (to.p == 0) {
@@ -85,7 +85,7 @@
     }
   }
 
-  function cT (w, to, slash) {
+  var cT = function (w, to, slash) {
     var s = w.document.createElement('span')
     var z = s.style
     z.color = to.c
@@ -99,10 +99,14 @@
     return s
   }
 
-  function traverse (w) {
+  var traverse = function (w) {
     try {
       for (var i = 0; i < to.length; i++) hT(w, to[i])
       for (var i = 0; i < w.frames.length; i++) traverse(w.frames[i])
     } catch (e) {}
+  }
+
+  return {
+    highlight: traverse
   }
 })()

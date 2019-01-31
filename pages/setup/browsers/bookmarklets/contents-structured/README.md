@@ -12,7 +12,7 @@ changed: "2019-01-31"
 
 Import the ["Contents structured" bookmarklet](/js/snippets/content-structured-bookmarklet.js) into you web page and add a click event handler on any element, like a link
 
-&#x3C;a href=&#x22;javascript:traverse(window);&#x22;&#x3E;Highlight structure&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;javascript:CSBookmarklet.highlight(window);&#x22;&#x3E;Highlight structure&#x3C;/a&#x3E;
 
 ## Usage
 
