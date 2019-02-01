@@ -15,18 +15,14 @@ export default class Anchor extends BaseModule {
   }
 
   init (element) {
-    var DEFAULTS = {
-    }
+    var DEFAULTS = {}
     this.$el = $(element)
     this.config = $.extend(true, {}, DEFAULTS)
-    this.id = this.$el.attr("id")
+    this.id = this.$el.attr('id')
 
     var self = this
 
-
-    this.on('click', function (e) {
-
-    });
+    this.on('click', function (e) {})
 
     this.initLink()
 
@@ -35,9 +31,7 @@ export default class Anchor extends BaseModule {
 
   initLink () {
     let $link = $('<a class="anchor-link"></a>')
-    $link.attr("href", "#" + this.id)
-    this.$el.append($link);
+    $link.attr('href', '#' + this.id)
+    this.$el.append($link)
   }
-
-
 }
