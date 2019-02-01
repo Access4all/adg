@@ -1,0 +1,22 @@
+.anchor-element {
+  &:hover {
+    .anchor-link {
+      visibility: visible;
+    }
+  }
+}
+
+a.anchor-link {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  margin: .25em;
+  opacity: 0.5;
+  text-decoration: none;
+  &::after {
+    content: "#";
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
