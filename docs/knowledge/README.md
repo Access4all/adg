@@ -1,5 +1,5 @@
 ---
-navigation_title: "Knowledge"
+navigation_title: "Knowledgee"
 position: 3
 changed: "2018-04-12"
 ---
