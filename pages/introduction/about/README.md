@@ -1,7 +1,7 @@
 ---
 navigation_title: "About"
 position: 2
-changed: "2018-06-14"
+changed: "2019-01-31"
 ---
 
 # About this initiative
@@ -41,6 +41,14 @@ On the other side of the «Accessibility Alliance», there are several acclaimed
 > Accessibility is a complex issue and so equally large effort is required to develop the necessary know-how. That is why we have participated in the establishment of the Accessibility Developer Guide, which will be a key tool in the process of creating accessible websites for everyone in the future. We are looking forward to collaborating with the frontend community so that the development of the Accessibility Developer Guide will be continued.
 
 **Thomas Jaggi**, Expert Frontend Engineer, [UNIC AG](https://www.unic.com/).
+
+### Nothing
+
+![Nothing AG logo](_media/nothing.png){.agency-logo}
+
+> Tim Berners-Lee, the inventor of the World Wide Web once said “The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.”. This aspect which can only be fulfilled by the web is ignored by a wide range of people. We feel responsible for what we develop and for who we develop for. With the Accessibility Developer Guide we finally have a practical guide to accessible web development and can contribute our knowledge.
+
+**René Stalder**, Senior Frontend Developer, [Nothing](https://www.nothing.ch/).
 
 ### Liip
 
