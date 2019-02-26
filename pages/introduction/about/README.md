@@ -18,7 +18,7 @@ The foundation is in business since the year 2000, and since then has accompanie
 
 > With the Accessibility Developer Guide, the «Access for all» foundation provides developers with an instrument that offers practical and concrete support in the implementation of accessible web offerings. As an open source project, the Accessibility Developer Guide focuses on sharing and passing on knowledge. All agencies, every woman and every man are invited to join the Accessibility Alliance. Join in a few developer days a year - and you'll be there.
 
-**Bernhard Heinser**, CEO, «Access for all».
+**Bernhard Heinser**, former CEO, «Access for all».
 
 For more information, see [www.access-for-all.ch](http://access-for-all.ch/).
 
