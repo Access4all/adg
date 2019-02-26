@@ -96,7 +96,7 @@ Clockwise from top right:
 - **Jürgen Rudigier**, frontend developer, Hinderling Volkart.
 - **Thomas Jaggi**, web developer, UNIC AG.
 - **Anton Bolfing**, accessibility expert at «Access for all», responsible for final editing and testing of the Accessibility Developer Guide.
-- **Bernhard Heinser**, CEO at «Access for all», project leader of the Accessibility Developer Guide.
+- **Bernhard Heinser**, former CEO at «Access for all», project leader of the Accessibility Developer Guide.
 - **Esther Brunner**, web developer, Zeix AG.
 - **Markus Graf**, web developer.
 
