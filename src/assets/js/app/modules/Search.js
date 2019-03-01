@@ -29,12 +29,14 @@ export default class Search extends BaseModule {
   enable () {
     window.ss360Config = {
       siteId: 'accessibility-developer-guide.netlify.com',
-      searchBoxSelector: '#' + this.$el.find('input').attr('id'),
-      showImagesSuggestions: false,
-      specialMobileSuggest: {
-        enabled: false
+      searchBox: {
+        selector: '#' + this.$el.find('input').attr('id')
       },
-      suggestionsEqualSearch: true
+      suggestions: {
+        showImages: false,
+        showOnMobile: true,
+        mobileScrollOnFocus: true
+      }
     }
 
     initializeSs360()
