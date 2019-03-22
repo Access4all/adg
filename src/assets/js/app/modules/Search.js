@@ -35,7 +35,7 @@ export default class Search extends BaseModule {
       suggestions: {
         showImages: false,
         showOnMobile: true,
-        mobileScrollOnFocus: true
+        mobileScrollOnFocus: false
       }
     }
 
