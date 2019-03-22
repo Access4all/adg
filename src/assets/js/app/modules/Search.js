@@ -35,7 +35,8 @@ export default class Search extends BaseModule {
       suggestions: {
         showImages: false,
         showOnMobile: true,
-        mobileScrollOnFocus: false
+        mobileScrollOnFocus: true,
+        extraHtml: '#Snippet#' // this refers to the "Snippet" Global Data Point
       }
     }
 
