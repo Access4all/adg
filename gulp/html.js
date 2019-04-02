@@ -123,6 +123,7 @@ const flattenNavigation = items =>
   }, [])
 
 module.exports = (config, cb) => {
+  const datetime = requireNew('./helpers/datetime')
   const markdown = requireNew('./helpers/markdown')(config.rootDir)
   const metatags = requireNew('./helpers/metatags')
   const Feed = requireNew('./helpers/rss')
@@ -290,8 +291,16 @@ module.exports = (config, cb) => {
             .replace(path.extname(file.path), '')
         },
         helpers: {
+          formatDate: datetime.formatDate,
           eq: function (v1, v2, options) {
             if (v1 === v2) {
+              return options.fn(this)
+            }
+
+            return options.inverse(this)
+          },
+          notEq: function (v1, v2, options) {
+            if (v1 !== v2) {
               return options.fn(this)
             }
 
