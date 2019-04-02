@@ -30,7 +30,7 @@ The following content elements exist:
 2. Every part contains several **chapters**. You are currently in the chapter titled "How to use this guide"; its short title is "How to".
 3. Most chapters contain several **pages** (and sometimes even sub pages). The current chapter does not have any of these though.
 
-A the bottom of each content element, links to its sub-elements are displayed (if there are any). They are similar to the links in the content navigation, but display both the title and lead text of an element, supporting skim reading and providing quick navigation to interesting elements.
+At the bottom of each content element, links to its sub-elements are displayed (if there are any). They are similar to the links in the content navigation, but display both the title and lead text of an element, supporting skim reading and providing quick navigation to interesting elements.
 
 ### Browsing vs. full read
 
