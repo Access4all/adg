@@ -30,7 +30,7 @@ export default class Anchor extends BaseModule {
   }
 
   initLink () {
-    let $link = $('<a class="anchor-link"></a>')
+    let $link = $('<a class="anchor-link"><span class="visuallyhidden">Link to ' + this.$el.text() + '</span></a>')
     $link.attr('href', '#' + this.id)
     this.$el.append($link)
   }
