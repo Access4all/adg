@@ -31,6 +31,8 @@ For a more direct comparison: the following image shows both large and default t
 
 It may not seem like much of a difference, but in fact it heavily enlargens the number of possible colour combinations.
 
+It is important to mention that the values `3:1` and `4.5:1` represent a *minimal* standard for *acceptable* contrast, they don’t represent an ideal. They should be treated as threshold and not as target; aiming higher is recommended. 
+
 ## Enhancing text contrast
 
 Besides changing the colour of the text or the background there are many other ways do enhance contrast. For example:
@@ -88,7 +90,7 @@ There are some exceptions to the contrast requirements of text content.
 
 ## “Real” text vs. text images
 
-With “real” text, we mean text that is available as an arrangement of character codes (like this text here). It is inherently machine-readable and can be selected and copy-pasted. “Text images” on the other hand are rasterised pictures typography, e.g. stored as JPG or PNG files. 
+With “real” text, we mean text that is available as an arrangement of character codes (like this text here). It is inherently machine-readable and can be selected and copy-pasted. “Text images” on the other hand are rasterised pictures of typography, e.g. stored as JPG or PNG files. 
 
 In general, the same contrast requirements and exceptions apply for “real” text and for text images. 
 
