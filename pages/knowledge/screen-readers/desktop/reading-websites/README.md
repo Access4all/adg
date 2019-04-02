@@ -18,7 +18,7 @@ This is done the same way like using a keyboard only. So if you haven't done thi
 
 ## Autofocus workaround
 
-After the page has loaded (indicated by screen readers by announcing the current page's `<title>` attribute), most blind users always intuitively press `Ctrl + Home` first.
+After the page has loaded (indicated by screen readers by announcing the current page's `<title>` element), most blind users always intuitively press `Ctrl + Home` first.
 
 This is to work around various kinds of autofocus functionality, so the user can be sure that the screen reader starts reading from the very beginning of the document.
 
