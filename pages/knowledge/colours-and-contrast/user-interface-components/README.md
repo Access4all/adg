@@ -10,7 +10,7 @@ changed: "2018-12-26"
 
 ## Minimal contrast ratio
 
-The [Web Content Accessibility Guidelines (WCAG) specify a minimal contrast ratio](https://www.w3.org/TR/WCAG21/#non-text-contrast) of `3:1` against adjacent colour(s) for all user interface (UI) components.
+Version 2.1 of the [Web Content Accessibility Guidelines (WCAG) specify a minimal contrast ratio](https://www.w3.org/TR/WCAG21/#non-text-contrast) of `3:1` against adjacent colour(s) for all user interface (UI) components.
 
 ## Form controls
 

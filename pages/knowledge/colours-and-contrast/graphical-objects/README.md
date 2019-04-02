@@ -9,7 +9,8 @@ changed: "2018-12-26"
 **The term “graphical object” typically applies to stand-alone icons and to information graphics. One of the particular challenges here comes from the fact that visual differentiation has to be possible between many more elements than just foreground and background.**
 
 ## Minimal contrast ratio
-The [Web Content Accessibility Guidelines (WCAG) specify a minimal contrast ratio](https://www.w3.org/TR/WCAG21/#non-text-contrast) of `3:1` against adjacent colour(s) for graphical objects.
+
+Version 2.1 of the [Web Content Accessibility Guidelines (WCAG) specify a minimal contrast ratio](https://www.w3.org/TR/WCAG21/#non-text-contrast) of `3:1` against adjacent colour(s) for graphical objects.
 
 ## Example: Status indicator
 
