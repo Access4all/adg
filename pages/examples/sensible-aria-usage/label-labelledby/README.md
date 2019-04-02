@@ -59,7 +59,7 @@ Using `aria-labelledby`, an element's label can be set by referencing the ID of 
 By the way, elements hidden using CSS can still be referenced:
 
 ```css
-##bing {
+#bing {
   display: none;
 }
 ```
