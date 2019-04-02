@@ -1,7 +1,7 @@
 ---
 navigation_title: "Examine contrast"
 position: 2
-changed: "2018-12-26"
+changed: "2019-04-02"
 ---
 
 # How to examine colour contrasts
@@ -11,10 +11,6 @@ changed: "2018-12-26"
 ## Colour Contrast Analyser
 
 There are a lot of tools available to calculate the contrast between two colours. For Windows and macOS users we recommend the [Colour Contrast Analyser (CCA)](/setup/helper-tools/colour-contrast-analyser/).
-
-Simply enter a foreground and a background colour into the respective fields and the CCA returns whether or not the contrast ratio is sufficient, depending on the kind of visual content and size. The evaluation uses the recommendations from the Web Content Accessibility Guidelines for [colour contrast level AA](https://www.w3.org/TR/WCAG21/#contrast-minimum) and [colour contrast level AAA](https://www.w3.org/TR/WCAG21/#contrast-enhanced).
-
-![Colour Contrast Analyser window](_media/colour-contrast-analyser-window.png)
 
 When calculating a contrast ratio, it is very important to use the “right” colour codes. In the context of web applications these are the values defined in CSS. But what is the best way to get to these values?
 
