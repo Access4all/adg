@@ -1,10 +1,10 @@
 ---
-navigation_title: "Contributing"
-position: 3
+navigation_title: "Contribute"
+position: 5
 changed: "2018-06-15"
 ---
 
-# Contributing to this guide
+# Contribute to this guide
 
 **This guide is the result of tight collaboration between accessibility experts and web developers. Its content by far is not exhaustive yet: there remain a lot of topics to talk about, and due to the fast evolution of web technologies, there certainly will always be.**
 
