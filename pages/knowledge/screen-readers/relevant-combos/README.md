@@ -6,17 +6,21 @@ changed: "2018-05-01"
 
 # Relevant combinations of screen readers and browsers
 
-**To reach as many users as possible, it's a pragmatic approach to support the most widely used combinations of browsers and screen readers. Here you learn, which those are. Other requirements may only apply in closed environments that are only open to a specific, deterministic group of users.**
+**To reach as many users as possible, it is a pragmatic approach to support the most widely used combinations of browsers and screen readers. Here you learn, which those are. Other requirements may only apply in closed environments that are only open to a specific, deterministic group of users.**
 
-As web developers, we're aware of how hard it is to support all relevant devices, operating systems, and browsers. Adding screen readers to the mixture does not make things easier: a long list of screen readers can potentially be combined with another long list of browsers, each combination possibly having its own characteristics.
+As web developers, we are aware of how hard it is to support all relevant devices, operating systems, and browsers. Adding screen readers to the mixture does not make things easier: a long list of screen readers can potentially be combined with another long list of browsers, each combination possibly having its own characteristics.
 
 ## Short summary
 
 It is impossible to develop and test for dozens of possible combinations of browsers and screen readers. We have had good experiences with taking the following pragmatic approach, namely aiming at the most widely used combinations (newest stable versions):
 
-- JAWS with Internet Explorer (IE)
-- JAWS with Firefox (FF)
-- NVDA with FF
+- Mobile
+    - VoiceOver/iOS (Safari)
+    - Talkback (Chrome)
+- Desktop
+    - JAWS with Internet Explorer (IE)
+    - JAWS with Firefox (FF)
+    - NVDA with FF
 
 **Notice:** an exception from this rule is valid in closed environments, where only specific browsers or screen readers are available.
 

@@ -1,6 +1,6 @@
 ---
 navigation_title: "How to implement"
-position: 10
+position: 7
 changed: "2018-05-30"
 ---
 

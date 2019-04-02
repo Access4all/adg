@@ -7,6 +7,7 @@ const fs = require('fs')
 const path = require('path')
 const requireNew = require('require-new')
 const plumber = require('gulp-plumber')
+const normalize = require('normalize-strings')
 const sm = require('sitemap')
 const _ = require('lodash')
 const { JSDOM } = require('jsdom')
@@ -185,6 +186,7 @@ module.exports = (config, cb) => {
             url,
             parent: parent !== url ? parent : null,
             title: file.frontMatter.navigation_title,
+            domid: 'nav-' + normalize(file.frontMatter.navigation_title),
             titleDetailed: file.data.title,
             lead: file.data.lead,
             position: file.frontMatter.position
