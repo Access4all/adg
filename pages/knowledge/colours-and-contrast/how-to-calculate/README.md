@@ -40,9 +40,9 @@ This means that visually distinct colours don’t automatically have a high cont
 
 Contrast results:
 
-- Red / blue = `1.1:1`.
-- Blue / green = `1.0:1`.
-- Green / red = `1.2:1`.
+- Red/blue = `1.1:1`
+- Blue/green = `1.0:1`
+- Green/red = `1.2:1`
 
 While visually non-impaired users might be able to easily perceive the green and red words on the blue background of the following image…
 

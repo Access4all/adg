@@ -10,7 +10,7 @@ changed: "2019-04-21"
 
 ## Limitations of colour contrast
 
-Colour is a great tool for separating foreground from background. However, there are many cases where being visible against a background is not enough. Different elements of a user interface or a component also have to be distinguishable *from each other.* And while finding a combination of two colours with sufficient contrast is easy, finding three, four or even more colours with sufficient contrast from each other quickly becomes impracticle if not impossible. 
+Colour is a great tool for separating foreground from background. However, there are many cases where being visible against a background is not enough. Different elements of a user interface or a component also have to be distinguishable *from each other.* And while finding a combination of two colours with sufficient contrast is easy, finding three, four or even more colours with sufficient contrast from each other quickly becomes impractical if not impossible. 
 
 The [Web Content Accessibility Guidelines’s rule on the use of colour](https://www.w3.org/TR/WCAG21/#use-of-color) therefore states that colour should “not [be] used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.”
 
@@ -20,9 +20,9 @@ The following picture shows a navigation bar that could be placed at the top of 
 
 ![navigation bar with one active item, visually differentiated by its blue text colour](_media/navigation-currentItem-1.png)
 
-While all the labels have sufficient contrast against the white background, the colour of the active “Shop” label and the colour of the inactive labels around it only have a contrast ratio of `1.73:1`. Someone who can’t perceive colour differences very well – because of their eye sight, their screen or the surrounding light – might struggle to spot which item is the current page.
+While all the labels have sufficient contrast against the white background, the colour of the active “Shop” label and the colour of the inactive labels around it only have a contrast ratio of `1.7:1`. Someone who can’t perceive colour differences very well – because of their eye sight, their screen or the surrounding light – might struggle to spot which item is currently selected.
 
-This problem can be soulved by adding one or more visual indicators for differentiation beyond just colour. E.g. one could change the font weight or underline the active label.
+This problem can be solved by adding one or more visual alterations to the active element that have nothing to do with changing its colour. E.g. one could change the font weight or underline the active label.
 
 ![navigation bar with one active item, visually differentiated by its blue text colour, bold font and underline](_media/navigation-currentItem-2.1.png)
 
@@ -44,9 +44,9 @@ Visual charts are a frequent example where colours are used to convey meaning. F
 
 The three colours of the pie chart don’t have enough contrast against the white background. And just as important in this case is the fact that they also don’t have enough contrast *against each other*.
 
-- Red/orange: `1.5:1`
-- Orange/yellow: `1.4:1`
-- Yellow/red: `2.4:1`
+- Red/orange = `1.5:1`
+- Orange/yellow = `1.4:1`
+- Yellow/red = `2.4:1`
 
 This is due to the fact that contrast is primarily about difference in luminance and not about difference in tone (for more information see [Calculate colour contrast](/knowledge/colours-and-contrast/how-to-calculate/)).
 
@@ -54,7 +54,7 @@ First, let’s add a clearly visible outline around the coloured areas.
 
 ![The same pie chart with a dark outline around the coloured areas](_media/pieChart-1.png)
 
-Now, the pie chart stands out against the white background and it’s clear that it has in fact three sections. But due to the low contrast between the three colours it can still be very challenging to assign the labels to their sections in the pie chart.
+Now, the pie chart stands out against the white background and it’s clear that it has in fact three sections. But due to the low contrast between the three colours it can still be very challenging for certain people to assign the labels to the sections in the pie chart.
 
 Adding distinct visual patterns can make the visual link accessible.
 
