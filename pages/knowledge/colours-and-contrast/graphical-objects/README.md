@@ -18,7 +18,7 @@ The following picture shows a simple line chart with overall insufficient contra
 
 ![Line chart with one blue trend line and overall low contrast](_media/line-chart-1-low-contrast.png)
 
-The contrast ratio of the main X and Y axis is `2.8:1`, the one of blue trend line is `2.3:1`. The text labels along the X and Y axis have a contrast ratio of `3.9:1` which can also be considered too low because [text has to meet a higher contrast requirement](/knowledge/colours-and-contrast/text-content) of at least `4.5:1`.  
+The contrast ratio of the main X and Y axis is `2.8:1`, the one of blue trend line is `2.3:1`. The text labels along the X and Y axis have a contrast ratio of `3.9:1` which can also be considered too low because [text has to meet a higher contrast requirement](/knowledge/colours-and-contrast/text) of at least `4.5:1`.  
 All of these values are somewhat close to their formal requirements but it’s important to keep in mind that those requirements only set *minimal* standards. 
 
 Let’s increase the contrast ratio of the aforementioned elements.

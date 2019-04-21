@@ -48,7 +48,7 @@ The three colours of the pie chart don’t have enough contrast against the whit
 - Orange/yellow: `1.4:1`
 - Yellow/red: `2.4:1`
 
-This is due to the fact that contrast is primarily about difference in luminance and not about difference in tone (for more information see [Calculate colour contrast](/knowledge/colours-and-contrast/formula/)).
+This is due to the fact that contrast is primarily about difference in luminance and not about difference in tone (for more information see [Calculate colour contrast](/knowledge/colours-and-contrast/how-to-calculate/)).
 
 First, let’s add a clearly visible outline around the coloured areas.
 

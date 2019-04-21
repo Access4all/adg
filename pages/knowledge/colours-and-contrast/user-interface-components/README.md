@@ -46,7 +46,7 @@ And while we are at it: providing clear indicators for where an element starts a
 
 ## Exceptions
 
-- **Text:** For text in UI components (for example labels) the same requirements apply as for text in content *unless* the whole component is disabled. (see [chapter about colour contrast for text](/knowledge/colours-and-contrast/text-content/))
+- **Text:** For text in UI components (for example labels) the same requirements apply as for text in content *unless* the whole component is disabled. (see [chapter about colour contrast for text](/knowledge/colours-and-contrast/text/))
 - **Disabled components:** this could be a disabled text field or button, but also a custom control.
   - Be careful with this one: often, the mere existence of an element conveys something to a user. For example, a form’s submit button can be disabled while the user’s input is missing (or invalid). Someone who cannot perceive the button in such a moment might draw the wrong conclusions about the form, for example assuming that it can’t be submitted at all.
   - Also, make sure to not mix up `disabled` with `readonly` states.
