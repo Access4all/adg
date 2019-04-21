@@ -44,12 +44,14 @@ Contrast results:
 - Blue / green = `1.0:1`.
 - Green / red = `1.2:1`.
 
-So, while visually non-impaired users might be able to easily perceive the green and red words on the blue background of the following image…
+While visually non-impaired users might be able to easily perceive the green and red words on the blue background of the following image…
 
 ![Green and red words on blue background](_media/hello-goodbye.png)
 
-… others ill have a very hard time differentiating between text and background. This is how it would look for someone who sees in grayscale:
+… others will have a very hard time differentiating between text and background. This is how it might look for someone who sees in grayscale:
 
 ![Words and background in grayscale](_media/hello-goodbye-grayscale.png)
 
-Conclusion: Do not rely on your eyes only! Always examine contrast ratios as calculated values. Fortunately, we don’t need to do the calculations ourselves. There is a range of available colour evaluation tools for us to use.
+It’s therefore impotant to remember:
+- Always examine contrast ratios as calculated values, don’t just rely on your eyes. More on that in the next [chapter “How to exampine colour contrast”](/knowledge/colours-and-contrast/how-to-examine/).
+- Colour contrast has its limits, especially when multiple objects have to be clearly distinguishable not just from the background but also from each other. More on that in the [chapter “Colour is not enough”](/knowledge/colours-and-contrast/colour-is-not-enough/).
