@@ -36,7 +36,7 @@ For relative luminance, the tone of a colour (whether it is red, green, blue, ye
 
 This means that visually distinct colours don’t automatically have a high contrast ratio. The following example demonstrates this.
 
-![Three low contrast colours](_media/three-low-contrast-colours.png)
+![Colour tiles in the colours blue, red and green](_media/three-colours-tiles.png)
 
 Contrast results:
 
@@ -46,11 +46,11 @@ Contrast results:
 
 While visually non-impaired users might be able to easily perceive the green and red words on the blue background of the following image…
 
-![Green and red words on blue background](_media/hello-goodbye.png)
+![The words “Hello” in green and “Goodbye” in red written on a blue background](_media/three-colours-words.png)
 
 … others will have a very hard time differentiating between text and background. This is how it might look for someone who sees in grayscale:
 
-![Words and background in grayscale](_media/hello-goodbye-grayscale.png)
+![The same picture with the words “Hello” and “Goodbye” but in grayscale](_media/three-colours-words-grayscale.png)
 
 It’s therefore impotant to remember:
 - Always examine contrast ratios as calculated values, don’t just rely on your eyes. More on that in the next [chapter “How to exampine colour contrast”](/knowledge/colours-and-contrast/how-to-examine/).
