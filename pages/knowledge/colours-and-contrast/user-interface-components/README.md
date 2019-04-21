@@ -1,36 +1,34 @@
 ---
-navigation_title: "Requirements for UI components"
+navigation_title: "Colour contrast for UI components"
 position: 4
-changed: "2018-12-26"
+changed: "2019-04-21"
 ---
 
-# Contrast requirements of user interface components
+# Colour contrast for User Interface components
 
-**“Interface components” are interactive elements on page. Just as for text there is a general minimal contrast level for such elements. However, the visual complexity of interface components requires some additional considerations.**
+**“User Interface (UI) components” are interactive elements, ranging from simple buttons and input fields to complex UI widgets. Just as for text there is a general minimal contrast level that needs to be reached to make their functionality and content accessible.**
 
 ## Minimal contrast ratio
 
-Version 2.1 of the [Web Content Accessibility Guidelines (WCAG) specify a minimal contrast ratio](https://www.w3.org/TR/WCAG21/#non-text-contrast) of `3:1` against adjacent colour(s) for all user interface (UI) components.
+Version 2.1 of the [Web Content Accessibility Guidelines (WCAG) specify a minimal contrast ratio](https://www.w3.org/TR/WCAG21/#non-text-contrast) of `3:1` against adjacent colour(s) for all User Interface (UI) components.
 
-## Form controls
+## Example: form controls
 
-For example, if the fields of a contact form have borders with low contrast, a user with low vision may not be able to fill (or even find) them.
-
-In the following screenshot, the fields’ borders have a contrast ratio of `1.5:1`.
+The following screenshot shows a very simple contact form
 
 ![Low contrast form](_media/low-contrast-form.png)
 
-Besides the borders of the text input fields there is also the button which has insufficient contrast and is therefore hardly perceivable as form control: The background colour (which should indicate to the user that the element is a button) has a contrast ratio of only `1.5:1`. However, the button label adds a lot of valuable information, making this case less urgent or even negligible: it has sufficient contrast, it offers a clear invitation to interact by using a verb (which is better than a generic “OK”) and its visual appearance (font, size) is different from the other text elements surrounding it.
+The borders of the input fields and the background colour of the “Send message” button have an insufficient contrast ratio of `1.5:1`. 
 
-## Custom controls
+Because of that, certain users may have a hard time finding the input fields and enter information. 
 
-Websites usually contain a lot of visual elements that convey meaning. We talk about “custom controls” when such elements can be interacted with, resulting in some status change that again is made visible to the user (either immediately with a JavaScript widget, or after a traditional page reload).
+They might also struggle to identify the button by its typical shape. However, the button label adds a lot of valuable information, making this case less urgent or even negligible: it has sufficient contrast, it offers a clear invitation to interact by using a verb (which is better than a generic “OK”) and its visual appearance (font, size) is different from the other text elements surrounding it.
 
-### Example: tablists
+## Example: tablists
 
-A well-known example for this is a tablist: It conveys visually that there is a list of items, and that the content for the currently active item is displayed below. The button-like appearance of the items indicates that a user can select them to display their associated content.
+Tablists convey visually that there is a list of items, and that the content for the currently active item is displayed below. The button-like appearance of the tabs indicates that a user can select them to display their associated content.
 
-The borders of the following tablist have insufficient contrast (`1.5:1`). Users who can’t see them (because they have a visual impairment, because their screen is exposed to direct sunlight, because the beamer has bad contrast settings, …) might not realise how the different pieces relate to each other and that they can interact with them.
+The borders of the following tablist have insufficient contrast (`1.5:1`). Users who cannot see them (because they have a visual impairment, because their screen is exposed to direct sunlight, because the beamer has bad contrast settings, etc.) might not realise how the different pieces relate to each other and that they can interact with them.
 
 ![Low contrast tablist](_media/low-contrast-tablist.png)
 
@@ -45,18 +43,6 @@ On the other hand, borders with high contrast make the tablist recognisable for 
 And while we are at it: providing clear indicators for where an element starts and where it ends is always good style, so please also expand borders around the content area.
 
 ![Low contrast tablist](_media/tablist-with-more-borders.png)
-
-### Example: current page indicator
-
-A much simpler example is a symbol that indicates whether an element is active or not. A common use case for that is the website navigation. Typically, it consists of a list of links, sometimes even a nested hierarchy. The currently displayed page is usually marked in some way.
-
-In the following screenshot, the indicator is hardly visible (contrast ratio `1.9:1`):
-
-![Low contrast active indicator](_media/low-contrast-active-indicator.png)
-
-Now it is better:
-
-![High contrast active indicator](_media/high-contrast-active-indicator.png)
 
 ## Exceptions
 

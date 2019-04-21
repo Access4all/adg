@@ -1,10 +1,10 @@
 ---
-navigation_title: "Examine contrast"
+navigation_title: "How to examine"
 position: 2
-changed: "2019-04-02"
+changed: "2019-04-21"
 ---
 
-# How to examine colour contrasts
+# How to examine colour contrast
 
 **Calculating contrast ratios is complex. Fortunately there are contrast calculators which take care of the math. We only need to provide the correct colour codes – which has a few potential pitfalls.**
 

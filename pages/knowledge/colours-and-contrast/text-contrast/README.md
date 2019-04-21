@@ -1,10 +1,10 @@
 ---
-navigation_title: "Requirements for text"
+navigation_title: "Colour contrast for text"
 position: 3
-changed: "2018-12-26"
+changed: "2010-04-21"
 ---
 
-# Contrast requirements of text content
+# Colour contrast for text
 
 **There is a general minimal colour contrast level for all kinds of text. As an exception, large text can have slightly lower contrast. This requirement applies to both “real” text and rasterised text on images.**
 
@@ -60,24 +60,6 @@ You could increase contrast by adding a text shadow as described above. Or you c
 ![White text with semi-transparent darkening background](_media/beach-with-background.png)
 
 Of course you can also combine different solutions to add up their effects.
-
-### Adding graphical information
-
-Sometimes, colour gets used as the only differentiating factor. For example, the following image shows a gray text, and some of the words are highlighted red to mark spelling mistakes.
-
-![Spelling mistakes marked with colour](_media/spelling-mistakes.png)
-
-The colour contrast ratio between the gray and the red is `1:1`! A colour-blind person will not be able to spot any difference.
-
-In such situations, it is useful to add some additional graphical information. For example, simple underlining of the mistakes solves the problem.
-
-![Spelling mistakes underlined](_media/spelling-mistakes-underlined.png)
-
-Or add an icon to it, in the following case an exclamation mark.
-
-![Spelling mistakes with signals](_media/spelling-mistakes-with-signals.png)
-
-By the way, make sure to not just focus on the visual appearance but also on the underlying markup. It should provide adequate semantic information to clearly differentiate elements also on a non-visual level. (For more information take a look at [Semantics and their importance for accessibility](/knowledge/semantics/))
 
 ## Exceptions
 
