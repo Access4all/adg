@@ -27,7 +27,7 @@ export default class Search extends BaseModule {
   }
 
   enable () {
-    window.ss360Config = {
+    let ss360Config = {
       siteId: 'accessibility-developer-guide.netlify.com',
       searchBox: {
         selector: '#' + this.$el.find('input').attr('id')
@@ -35,27 +35,11 @@ export default class Search extends BaseModule {
       suggestions: {
         showImages: false,
         showOnMobile: true,
-        mobileScrollOnFocus: true,
+        mobileScrollOnFocus: false,
         extraHtml: '#Snippet#' // this refers to the "Snippet" Global Data Point
       }
     }
 
-    initializeSs360()
-
-    var $toggle = this.$el.find('.search--toggle')
-    var $input = this.$el.find('.search--input')
-
-    $toggle.on('click', function () {
-      $input
-        .toggleClass('search--input-expanded')
-        .focus()
-        .focusout(function () {
-          // Make sure the `toggleClass` above is fired before this one
-          // Otherwise we cannot close the field by clicking on the button
-          setTimeout(function () {
-            $input.removeClass('search--input-expanded')
-          }, 100)
-        })
-    })
+    initializeSs360(ss360Config)
   }
 }
