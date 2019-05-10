@@ -57,7 +57,7 @@ Some interesting peculiarities:
 
 ### Simple ARIA implementation
 
-Instead of using radio buttons or checkboxes, it is relatively simple to create a custom carousel implementation with ARIA:
+Instead of using radio buttons or checkboxes, it is relatively simple to create a custom accordion implementation with ARIA:
 
 [Example](_examples/accordion-with-aria)
 
