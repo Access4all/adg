@@ -37,6 +37,11 @@ export default class Search extends BaseModule {
         showOnMobile: true,
         mobileScrollOnFocus: false,
         extraHtml: '#Snippet#' // this refers to the "Snippet" Global Data Point
+      },
+      callbacks: {
+        enter: function () {
+
+        }
       }
     }
 
