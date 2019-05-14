@@ -38,10 +38,12 @@ export default class Search extends BaseModule {
         mobileScrollOnFocus: false,
         extraHtml: '#Snippet#' // this refers to the "Snippet" Global Data Point
       },
+      tracking: {
+        enhanced: false,
+        logQueries: false
+      },
       callbacks: {
-        enter: function () {
-
-        }
+        enter: function () {}
       }
     }
 
