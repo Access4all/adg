@@ -36,7 +36,7 @@ At the bottom of each content element, links to its sub-elements are displayed (
 
 Being a comprehensive tutorial, the contents of this guide sequentially build up on each other. So we highly recommend you to start reading from the very beginning, then make your way continuously through the guide (use the **Previous** and **Next** links at the bottom to do so). Alas, internal links between different contents are provided sparingly.
 
-However, we have given our best to make the individual content elements all self-standing and self-explanatory as possible. This allows you to browse them on their own as a quick reference. Use the content navigation to quickly access different contents.
+However, we have given our best to make the individual content elements as self-standing and self-explanatory as possible. This allows you to browse them on their own as a quick reference. Use the content navigation to quickly access different contents.
 
 ## Staying up to date
 
