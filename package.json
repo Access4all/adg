@@ -54,7 +54,7 @@
     "highlight.js": "^9.12.0",
     "husky": "^0.14.3",
     "jsdom": "^11.10.0",
-    "lodash": "^4.17.5",
+    "lodash": "^4.17.13",
     "markdown-it": "^8.4.1",
     "markdown-it-abbr": "^1.0.4",
     "markdown-it-attrs": "^1.2.1",
