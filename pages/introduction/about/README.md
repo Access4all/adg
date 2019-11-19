@@ -83,37 +83,40 @@ If you feel like you have anything to give into our movement (be it active colla
 
 Or drop us a line using the [«Access for all» contact form](http://access-for-all.ch/en/contact.html).
 
-### Core team
+### Contributors
 
-During the last months, a group of people regularly gathered around developing the Accessibility Developer Guide.
+Besides the diligent online community, a group of people regularly physically gathers around developing the Accessibility Developer Guide.
 
-![The core team working on the Accessibility Developer Guide (details read below)](_media/core-team.jpg)
+<!-- ![The core team working on the Accessibility Developer Guide (details read below)](_media/core-team.jpg) -->
 
-Clockwise from top right:
-
-- **Donato Rotunno**, web developer, Liip AG.
-- **Joshua Muheim**, web developer & accessibility expert, «Access for all», initiator of and main contributor to the Accessibility Developer Guide.
-- **Jürgen Rudigier**, frontend developer, Hinderling Volkart.
-- **Thomas Jaggi**, web developer, UNIC AG.
-- **Anton Bolfing**, accessibility expert at «Access for all», responsible for final editing and testing of the Accessibility Developer Guide.
-- **Bernhard Heinser**, CEO at «Access for all», project leader of the Accessibility Developer Guide.
 - **Esther Brunner**, web developer, Zeix AG.
+- **Donato Rotunno**, web developer, Liip AG.
+- **Joshua Muheim**, web developer & accessibility expert, «Access for all».
+- **Jürgen Rudigier**, frontend developer, Hinderling Volkart.
+- **Thomas Jaggi**, web developer, former UNIC AG.
+- **René Stalder**, web developer, Nothing AG.
+- **Andreas Moesch**, web developer, Nothing AG.
+
+Former contributors:
+
+- **Anton Bolfing**, former accessibility expert at «Access for all».
+- **Bernhard Heinser**, former CEO at «Access for all».
 - **Markus Graf**, web developer.
+- **Severin Hug**, web developer, Hinderling Volkart.
 
 ### Testing staff
 
-Not to forget our highly respected testing staff who took care of validating all contents and code examples (all of them working for «Access for all»):
+Not to forget our highly respected testing staff who took care of validating all contents and code examples (all of them working for «Access for all»).
 
-![The testing staff working on the Accessibility Developer Guide (details read below)](_media/testing-team.jpg)
-
-Clockwise from top right:
-
-- (Anton Bolfing, again.)
-- **Daniele Corciulo**, blind accessibility expert.
-- **Romano Spescha**, vision-impaired accessibility trainee.
-- **Reto Inniger**, vision-impaired accessibility trainee.
-- **Mohamed Sherif**, blind accessibility trainee.
 - **Gianfranco Giudice**, blind accessibility expert.
+- **Mohamed Sherif**, blind accessibility expert.
 
 Unfortunately not on the picture (beause working remotely) is **Petra Ritter**, multiply-handicapped accessibility expert.
 
+![Testing session (details read below)](_media/testing-team.jpg)
+
+Former testers:
+
+- **Daniele Corciulo**, blind accessibility expert.
+- **Romano Spescha**, vision-impaired accessibility trainee.
+- **Reto Inniger**, vision-impaired accessibility trainee.
