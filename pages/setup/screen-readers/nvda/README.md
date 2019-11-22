@@ -6,7 +6,7 @@ changed: "2018-05-30"
 
 # NVDA installation and configuration
 
-**NVDA (Non Visual Desktop Access) is a lightweight and reliable open source screen reader. It is very compliant to standards and is the best choice to be used as a reference for accessibility. NVDA is the perfect companion to be fired up frequently while developing. After using it for a while, you will respect it as a firm but fair teacher.**
+**NVDA (Non Visual Desktop Access) is a lightweight and reliable open source screen reader. It is very standards-compliant and is the best choice to be used as a reference for accessibility. NVDA is the perfect companion to be fired up frequently while developing. After using it for a while, you will respect it as a firm but fair teacher.**
 
 ![NVDA icon](_media/nvda-icon.png)
 
@@ -18,7 +18,7 @@ changed: "2018-05-30"
 
 Normal installation offers automatic startup on boot (optional), a keyboard shortcut to start/restart it, association with proprietary files, etc.
 
-We recommend normal over portable installation (see below).
+We recommend the normal over portable installation (see below).
 
 Simply run the installer, or see [Installing NVDA (NVAccess.org)](http://www.nvaccess.org/files/nvda/documentation/userGuide.html?#toc11) for detailed information.
 
@@ -53,7 +53,7 @@ The best way to use the NVDA menu is by keyboard:
 - Use the arrow keys to navigate it and press `Enter` to select an item.
 - For even quicker navigation, press the letter on you keyboard that is underlined in the intended menu item.
     - For example, press `E` for `Exit`.
-    - In this guide, we indicate those letters by putting braces around them, for instance like so: `(E)xit` or `(H)elp`.
+    - In this guide, we indicate those letters by putting parentheses around them, for instance like so: `(E)xit` or `(H)elp`.
 - You can close the menu items by pressing `Esc`.
 
 ### Silencing NVDA on demand
@@ -85,7 +85,7 @@ We highly recommend to have the speech viewer always open while using NVDA. Plac
 
 ## Configuration
 
-Screen readers in general offer tons of configuration options which can drastically influence their behaviour. In general, we advise to stick to the defaults. The following configuration suggestions are known to be useful and safe though.
+Screen readers in general offer tons of configuration options which can drastically influence their behaviour. We advise to stick to the defaults. The following configuration suggestions are known to be useful and safe though.
 
 ### Disabling mouse focus
 
@@ -146,7 +146,7 @@ There is lots of add-ons for NVDA in the [NVDA Community Add-ons website (NVDA-P
 
 ### FocusHighlight
 
-This add-on visually indicates where NVDA's internal cursor currently is on the screen - an invaluable help for sighted users.
+This add-on visually indicates where NVDA's internal cursor currently is on the screen — an invaluable help for sighted users.
 
 ![The FocusHighlight add-on in action](_media/the-focushighlight-add-on-in-action.png)
 

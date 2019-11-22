@@ -1,0 +1,12 @@
+.meta-info {
+  @include rem(padding-top, $gutter);
+
+  display: flex;
+  font-size: 0.8rem;
+  border-top: 1px solid var(--theme-color-light, grey);
+}
+
+.meta-info__title {
+  font-weight: bold;
+  margin-right: 0.5em;
+}

@@ -11,7 +11,7 @@
       /_/  |_/_____/\____/
 
   ACCESSIBILITY DEVELOPER GUIDE - «Access for all»
-  in cooperation with the web agencies Hinderling Volkart, Unic, Liip and Zeix
+  in cooperation with the web agencies Hinderling Volkart, Unic, Liip, Zeix and Nothing.
 
   -->
   <meta charset="utf-8">
@@ -40,7 +40,6 @@
       <a id="jump" href="#main-h1">Jump to content</a>
       </header>
       {{> "global/navbar/navbar"}}
-      {{> "global/search/search"}}
       <main id="main-content" class="site-content">
         {{> "global/breadcrumbs/breadcrumbs"}}
         <div class="l-site_width">
@@ -51,8 +50,14 @@
             {{> "content/cardmenu/cardmenu" menuitem=subPages}}
           {{/if}}
         </div>
-
         {{> "content/prev_next/prev_next" prev=previousPage next=nextPage}}
+        {{#notEq section 'welcome'}}
+          {{#if changed}}
+          <aside class="l-site_width">
+            {{> "content/meta-info/meta-info"}}
+          </aside>
+          {{/if}}
+        {{/notEq}}
       </main>
       {{> "global/footer/footer"}}
     </div>

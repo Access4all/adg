@@ -6,7 +6,7 @@ changed: "2018-05-30"
 
 # JAWS installation and configuration
 
-**JAWS (Job Access With Speech) is one of the most used screen readers. Therefore it's very important to ensure its compatibility with your websites. Due to its heavy weight, JAWS is a rather clumsy companion while developing, but it's absolutely crucial to fire it up every now and then to ensure accessibility.**
+**JAWS (Job Access With Speech) is one of the most-used screen readers. Therefore it's very important to ensure its compatibility with your websites. Due to its heavy weight, JAWS is a rather clumsy companion while developing, but it's absolutely crucial to fire it up every now and then to ensure accessibility.**
 
 ![JAWS icon](_media/jaws-icon.png)
 
@@ -51,7 +51,7 @@ The best way to use the JAWS menu is by keyboard:
 - Use the arrow keys to navigate it and press `Enter` to select an item.
 - For even quicker navigation, press the letter on your keyboard that is underlined in the intended menu item.
     - For example, press `X` for `Exit`.
-    - In this guide, we indicate those letters by putting braces around them, for instance like so: `E(x)it` or `(H)elp`.
+    - In this guide, we indicate those letters by putting parentheses around them, for instance like so: `E(x)it` or `(H)elp`.
 - You can close the menu items by pressing `Esc`.
 
 ### Silencing JAWS on demand
@@ -84,7 +84,7 @@ To open the output history:
 
 ## Configuration
 
-Screen readers in general offer tons of configuration options which can drastically influence their behaviour. In general, we advise to stick to the defaults. The following configuration suggestions are known to be useful and safe though.
+Screen readers in general offer tons of configuration options which can drastically influence their behaviour. We advise to stick to the defaults. The following configuration suggestions are known to be useful and safe though.
 
 ### Disable auto forms mode (optional)
 
