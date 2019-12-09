@@ -1,12 +1,12 @@
 ---
 navigation_title: "About"
 position: 2
-changed: "2019-01-31"
+changed: "2019-11-12"
 ---
 
 # About this initiative
 
-**The «Accessibility Developer Guide» in its entirety is the result of many years of hands-on practice in the field of testing websites for accessibility, as well as developing accessible web applications. The daily experience of user experts with special needs, blended together with the profound technical knowledge of fullstack web developers, resulted in forming the «Accessibility Alliance».**
+**The «Accessibility Developer Guide», in its entirety, is the result of many years of hands-on practice in the field of testing websites for accessibility, as well as developing accessible web applications. The daily experience of user experts with special needs, blended together with the profound technical knowledge of fullstack web developers, resulted in forming the «Accessibility Alliance».**
 
 ## «Access for all»
 
@@ -74,7 +74,7 @@ Please read on.
 
 ## Join the «Accessibility Alliance»!
 
-We are a bunch of open-hearted and highly motivated nerds who believe in the potential that technical advancements can have for humanity.
+We are a bunch of open-hearted and highly motivated nerds who believe in the potential that technological advancements can have for humanity.
 
 If you feel like you have anything to give to our movement (be it active collaboration, sharing your knowledge, providing financial support, or simply giving some feedback), please get in touch with us through:
 
@@ -85,7 +85,7 @@ Or drop us a line using the [«Access for all» contact form](http://access-for-
 
 ### Core team
 
-During the last months, a group of people regularly gathered around developing the Accessibility Developer Guide.
+During the last months, a group of people regularly gathered in order to develop the Accessibility Developer Guide.
 
 ![The core team working on the Accessibility Developer Guide (details read below)](_media/core-team.jpg)
 
@@ -115,5 +115,5 @@ Clockwise from top right:
 - **Mohamed Sherif**, blind accessibility trainee.
 - **Gianfranco Giudice**, blind accessibility expert.
 
-Unfortunately, not in the picture (due to working remotely) is **Petra Ritter**, multiply-handicapped accessibility expert.
+Unfortunately, not in the picture (due to working remotely) is **Petra Ritter**, multiple-handicapped accessibility expert.
 
