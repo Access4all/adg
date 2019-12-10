@@ -39,5 +39,3 @@ Soll hier erklärt werden, wie der Rotor funktioniert?? Bei NVDA/JAWS wird hier 
 ## Configuration
 
 ### Speech rate?
-
-TODO: Aufsplitten in desktop & mobile? Mobile zuerst? Leute darauf hinweisen, dass Desktop eher kompliziert ist, und Mobile alleine schon mal ein recht guter Einstieg ist?

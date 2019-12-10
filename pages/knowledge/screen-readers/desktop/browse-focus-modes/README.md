@@ -1,6 +1,6 @@
 ---
 navigation_title: "Browse & focus modes"
-position: 1
+position: 5
 changed: "2018-05-30"
 ---
 
