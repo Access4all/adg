@@ -4,6 +4,4 @@ position: 4
 changed: "2019-01-19"
 ---
 
-# TalkBack/Android configuration
-
-![Talkback icon](_media/talkback-icon.png)
+# Talkback installation and configuration
