@@ -16,7 +16,7 @@ We use a bunch of nice Open Source tools to make collaboration of both developer
 
 ## Local setup
 
-Prerequisites: Node 8 (you may want to use [Node Version Manager](https://github.com/creationix/nvm)).
+Prerequisites: Node >=10 (you may want to use [Node Version Manager](https://github.com/creationix/nvm)).
 
 - Setup: `npm install`
 - Develop: `npm start`
