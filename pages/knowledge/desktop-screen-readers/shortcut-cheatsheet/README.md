@@ -1,6 +1,6 @@
 ---
 navigation_title: "Shortcut cheat-sheet"
-position: 3
+position: 7
 changed: "2018-12-30"
 ---
 
@@ -28,14 +28,14 @@ changed: "2018-12-30"
 
 ## NVDA
 
-- `Insert` is the `NVDA` key (see also the section "Alternatives to the Insert key" in [Screen readers are keyboard shortcut monsters](/knowledge/screen-readers/desktop/shortcut-monsters)
+- `Insert` is the `NVDA` key (see also the section "Alternatives to the Insert key" in [Screen readers are keyboard shortcut monsters](/knowledge/desktop-screen-readers/shortcut-monsters)
 - `Insert + N` shows the NVDA menu
 - `Insert + F7` shows the elements list (with links, headings, landmarks, etc.)
 - `Insert + Space` toggles between browse mode and focus mode
 
 ## JAWS
 
-- `Insert` is the `JAWS` key (see also the section "Alternatives to the Insert key" in [Screen readers are keyboard shortcut monsters](/knowledge/screen-readers/desktop/shortcut-monsters)
+- `Insert` is the `JAWS` key (see also the section "Alternatives to the Insert key" in [Screen readers are keyboard shortcut monsters](/knowledge/desktop-screen-readers/shortcut-monsters)
 - `Insert + J` shows the JAWS menu
 - `Insert + F6` displays the heading list
 - `Insert + F3` shows the elements list (with links, headings, landmarks, etc.)
