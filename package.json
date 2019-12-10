@@ -21,6 +21,9 @@
     "> 1%",
     "iOS >= 8.4"
   ],
+  "engines": {
+    "node": ">=10.16.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@babel/plugin-syntax-dynamic-import": "^7.7.4",
