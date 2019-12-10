@@ -29,3 +29,15 @@ Now simply triple tap (press three times in rapid succession) the Home button to
 ### Manual start/stop
 
 You can also start and stop VoiceOver/iOS manually. Go to `Settings` -> `General` -> `Accessibility`, then toggle `VoiceOver`.
+
+### General usage
+
+Soll hier erklärt werden, wie der Rotor funktioniert?? Bei NVDA/JAWS wird hier nichts weiter zur Bedienung
+
+### Using the Rotor
+
+## Configuration
+
+### Speech rate?
+
+TODO: Aufsplitten in desktop & mobile? Mobile zuerst? Leute darauf hinweisen, dass Desktop eher kompliziert ist, und Mobile alleine schon mal ein recht guter Einstieg ist?
