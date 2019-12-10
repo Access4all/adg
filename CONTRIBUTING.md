@@ -16,7 +16,7 @@ We use a bunch of nice Open Source tools to make collaboration of both developer
 
 ## Local setup
 
-Prerequisites: Node 8 (you may want to use [Node Version Manager](https://github.com/creationix/nvm)).
+Prerequisites: Node (see required Node version in package.json, you may want to use [Node Version Manager](https://github.com/creationix/nvm)).
 
 - Setup: `npm install`
 - Develop: `npm start`
@@ -25,7 +25,20 @@ Happy coding!
 
 ## Netlify
 
-We use [Netlify](https://www.netlify.com/) in the background to build our page:
+We use [Netlify](https://www.netlify.com/) in the background to build and deploy our pages.
 
-- Commits to master trigger a build of the live page.
-- Pull requests trigger a build of the related branch.
+### Branching
+Our branching strategy is the following:
+- `master` is the Production branch
+- `develop` is the branch for current development. Any feature starts from it and is merged back to it once approved.
+- a `feature/[issue_id]-[short_description]` branch is created whenever a new feature is started
+- a `bugfix/[issue_id]-[short_description]` branch is created whenever a new bugfix is started
+- hotfixes could processed like normal features or directly merged into `master` and deployed right away
+
+### Production deployment
+- a Production deployment is triggered by merging `develop` into `master`
+- before merging, make sure to properly add a tag based on the [semantic versioning](https://semver.org/).
+This allows to quickly revert a broken deployment.
+
+### Feature/bugfix testing deployment
+- a new pull request automatically trigger a build of the related branch
