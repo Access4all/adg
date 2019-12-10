@@ -56,5 +56,3 @@ If you move your finger over the touch screen, any element below your finger wil
 ## On-screen keyboard (iOS)
 
 ## Rotor (iOS)
-
-(Test Josh)
