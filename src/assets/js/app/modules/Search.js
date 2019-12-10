@@ -1,3 +1,4 @@
+/* globals initializeSs360 */
 import $ from 'jquery'
 
 import BaseModule from './BaseModule'
@@ -18,9 +19,6 @@ export default class Search extends BaseModule {
   }
 
   init (element) {
-    var DEFAULTS = {}
-    var self = this
-
     this.$el = $(element)
 
     this.enable()
@@ -41,17 +39,19 @@ export default class Search extends BaseModule {
 
     initializeSs360()
 
-    this.$el.find('.search--toggle').on('click', function () {
-      // Hiding breadcrumbs does not make any sense in mobile view. We just let the search input overlap.
-      // var breadcrumbs = $('nav.breadcrumbs .breadcrumbs--inner')
-      // breadcrumbs.css('visibility', 'hidden')
-      $(this)
-        .siblings('.search--input')
-        .addClass('search--input-expanded')
+    var $toggle = this.$el.find('.search--toggle')
+    var $input = this.$el.find('.search--input')
+
+    $toggle.on('click', function () {
+      $input
+        .toggleClass('search--input-expanded')
         .focus()
         .focusout(function () {
-          $(this).removeClass('search--input-expanded')
-          breadcrumbs.css('visibility', 'visible')
+          // Make sure the `toggleClass` above is fired before this one
+          // Otherwise we cannot close the field by clicking on the button
+          setTimeout(function () {
+            $input.removeClass('search--input-expanded')
+          }, 100)
         })
     })
   }
