@@ -4,13 +4,13 @@ position: 4
 changed: "2019-04-21"
 ---
 
-# Colour contrast for User Interface components
+# Colour contrast for user interface components
 
 **“User Interface (UI) components” are interactive elements, ranging from simple buttons and input fields to complex UI widgets. Just as for text there is a general minimal contrast level that needs to be reached to make their functionality and content accessible.**
 
 ## Minimal contrast ratio
 
-Version 2.1 of the [Web Content Accessibility Guidelines (WCAG) specify a minimal contrast ratio](https://www.w3.org/TR/WCAG21/#non-text-contrast) of `3:1` against adjacent colour(s) for all User Interface (UI) components.
+Version 2.1 of the Web Content Accessibility Guidelines (WCAG) specify a [minimal contrast ratio of `3:1` against adjacent colour(s) for all UI components](https://www.w3.org/TR/WCAG21/#non-text-contrast).
 
 ## Example: form controls
 
@@ -28,7 +28,7 @@ They might also struggle to identify the button by its typical shape. However, t
 
 Tablists convey visually that there is a list of items, and that the content for the currently active item is displayed below. The button-like appearance of the tabs indicates that a user can select them to display their associated content.
 
-The borders of the following tablist have insufficient contrast (`1.5:1`). Users who cannot see them (because they have a visual impairment, because their screen is exposed to direct sunlight, because the beamer has bad contrast settings, etc.) might not realise how the different pieces relate to each other and that they can interact with them.
+The borders of the following tablist have insufficient contrast (`1.5:1`). Users who cannot see them (because they have a visual impairment or because their screen is exposed to direct sunlight or because the beamer has bad contrast settings, just to name a few scenarios) might not realise how the different pieces relate to each other and that they can interact with them.
 
 ![Low contrast tablist](_media/low-contrast-tablist.png)
 
@@ -46,7 +46,7 @@ And while we are at it: providing clear indicators for where an element starts a
 
 ## Exceptions
 
-- **Text:** For text in UI components (for example labels) the same requirements apply as for text in content *unless* the whole component is disabled. (see [chapter about colour contrast for text](/knowledge/colours-and-contrast/text/))
+- **Text:** For text in UI components (like labels) the same requirements apply as for text in content *unless* the whole component is disabled. (see [chapter about colour contrast for text](/knowledge/colours-and-contrast/text/))
 - **Disabled components:** this could be a disabled text field or button, but also a custom control.
-  - Be careful with this one: often, the mere existence of an element conveys something to a user. For example, a form’s submit button can be disabled while the user’s input is missing (or invalid). Someone who cannot perceive the button in such a moment might draw the wrong conclusions about the form, for example assuming that it can’t be submitted at all.
-  - Also, make sure to not mix up `disabled` with `readonly` states.
+    - Be careful with this one: often, the mere existence of an element conveys something to a user. For example, a form’s submit button can be disabled while the user’s input is missing (or invalid). Someone who cannot perceive the button in such a moment might draw the wrong conclusions about the form, for example assuming that it can’t be submitted at all.
+    - Also, make sure to not mix up `disabled` with `readonly` states.

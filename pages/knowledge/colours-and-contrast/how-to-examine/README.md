@@ -18,7 +18,7 @@ When calculating a contrast ratio, it is very important to use the “right” c
 
 The most trustworthy source is the browser’s DOM inspector which gives direct access to the values defined in the source code.
 
-Right-click on an element and choose `Inspect` (depending on your browser the term might vary) to show that element in the DOM inspector. Now you can find the element’s colour values in the `Styles` tab.
+Right-click on an element and choose `Inspect` (the term might vary depending on your browser) to show that element in the DOM inspector. Now you can find the element’s colour values in the `Styles` tab.
 
 ![Displaying an element’s colour definition in the DOM inspector](_media/dom-inspector.png)
 
@@ -30,7 +30,7 @@ To account for this, a lot of contrast checkers offer colour pickers. While they
 
 ### Anti-aliasing
 
-Most modern browsers apply anti-aliasing to make the edges of rendered elements smoother (see [Anti-aliasing (Wikipedia.org)](https://en.wikipedia.org/wiki/Spatial_anti-aliasing))
+Most modern browsers apply anti-aliasing to make the edges of rendered elements smoother (see [spacial anti-aliasing (Wikipedia.org)](https://en.wikipedia.org/wiki/Spatial_anti-aliasing))
 
 ![An anti-aliased text](_media/anti-alias.png)
 

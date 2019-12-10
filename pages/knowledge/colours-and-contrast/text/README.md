@@ -31,7 +31,7 @@ For a more direct comparison: the following image shows both large and default t
 
 It may not seem like much of a difference, but in fact it heavily enlargens the number of possible colour combinations.
 
-It is important to mention that the values `3:1` and `4.5:1` represent a *minimal* standard for *acceptable* contrast, they don’t represent an ideal. They should be treated as threshold and not as target; aiming higher is recommended. 
+It is important to mention that the values `3:1` and `4.5:1` represent a **minimal** standard for **acceptable** contrast, they don’t represent an ideal. They should be treated as threshold and not as target; aiming higher is recommended. 
 
 ## Enhancing text contrast
 
@@ -55,7 +55,7 @@ For example, look at the following image. It shows a white text “Welcome to th
 
 ![White text on blue sky and white clouds](_media/beach.png)
 
-You could increase contrast by adding a text shadow as described above. Or you could add a semi-transparent darkening layer between text and background
+You could increase contrast by adding a text shadow as described above. Or you could add a semi-transparent darkening layer between text and background.
 
 ![White text with semi-transparent darkening background](_media/beach-with-background.png)
 
@@ -72,7 +72,7 @@ There are some exceptions to the contrast requirements of text content.
 
 ## “Real” text vs. text images
 
-With “real” text, we mean text that is available as an arrangement of character codes (like this text here). It is inherently machine-readable and can be selected and copy-pasted. “Text images” on the other hand are rasterised pictures of typography, e.g. stored as JPG or PNG files. 
+With “real” text, we mean text that is available as an arrangement of character codes (like this text here). It is inherently machine-readable and can be selected and copy-pasted. “Text images” on the other hand are rasterised pictures of typography (like the example images in the text above), e.g. stored as JPG or PNG files. 
 
 In general, the same contrast requirements and exceptions apply for “real” text and for text images. 
 

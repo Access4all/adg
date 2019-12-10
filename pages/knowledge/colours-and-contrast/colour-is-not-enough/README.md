@@ -12,7 +12,9 @@ changed: "2019-04-21"
 
 Colour is a great tool for separating foreground from background. However, there are many cases where being visible against a background is not enough. Different elements of a user interface or a component also have to be distinguishable *from each other.* And while finding a combination of two colours with sufficient contrast is easy, finding three, four or even more colours with sufficient contrast from each other quickly becomes impractical if not impossible. 
 
-The [Web Content Accessibility Guidelines’s rule on the use of colour](https://www.w3.org/TR/WCAG21/#use-of-color) therefore states that colour should “not [be] used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.”
+The [Web Content Accessibility Guidelines’s rule on the use of colour](https://www.w3.org/TR/WCAG21/#use-of-color) therefore states:
+
+> Colour is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element. 
 
 ## Example: current page indicator
 
