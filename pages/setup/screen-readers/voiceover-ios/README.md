@@ -1,6 +1,6 @@
 ---
 navigation_title: "VoiceOver/iOS"
-position: 3
+position: 1
 changed: "2018-09-26"
 ---
 
