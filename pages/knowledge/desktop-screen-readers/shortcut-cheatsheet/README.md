@@ -39,8 +39,3 @@ changed: "2018-12-30"
 - `Insert + J` shows the JAWS menu
 - `Insert + F6` displays the heading list
 - `Insert + F3` shows the elements list (with links, headings, landmarks, etc.)
-
-## MAC USERS
-
-For Mac users see <a href="https://support.apple.com/en-us/HT204434" target="_blank">Mac accessibility shortcuts</a>
-
