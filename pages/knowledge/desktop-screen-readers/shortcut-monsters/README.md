@@ -43,3 +43,5 @@ So the examples above look like this:
 - When running JAWS:
     - `JAWS + J` shows the JAWS menu.
     - `JAWS + F6` displays the heading list.
+
+For a complete guide of shortcuts see [Screen reader keyboard shortcuts](/knowledge/desktop-screen-readers/shortcut-cheatsheet)

@@ -1,7 +1,7 @@
 ---
 navigation_title: "Handling"
 position: 1
-changed: "2018-??-??"
+changed: "2018-06-15"
 ---
 
 # How to handle forms
