@@ -6,7 +6,7 @@ We welcome everyone who wants to join our initiative, be it with adding new cont
 
 ## Communication
 
-In addition to using issues and PRs to dicuss topics, we use a Slack team anyone can join: https://join.slack.com/t/a11y-dev-guide/shared_invite/enQtMzMwOTkxNTI3NDYwLWI3MjRmZDQwOGMxOGVhNTI2NDg0ODhiMDUyZTQ4MDE4MzU1NmZiMTY2YmNjNjliYWEzODhjZDYwYjA1MDU4NmU 
+In addition to using issues and PRs to dicuss topics, we use Slack for general communication: [Join ADG Slack team](https://join.slack.com/t/a11y-dev-guide/shared_invite/enQtMzMwOTkxNTI3NDYwLWI3MjRmZDQwOGMxOGVhNTI2NDg0ODhiMDUyZTQ4MDE4MzU1NmZiMTY2YmNjNjliYWEzODhjZDYwYjA1MDU4NmU)!
 
 ## Technical details
 
