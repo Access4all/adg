@@ -39,6 +39,7 @@ NVDA's "Elements List" displays a page's heading outline in a tree view. To open
 
 - First make sure you are in browse mode.
     - If unclear to you, see [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes).
+- To open it, press `NVDA + F7`.
 - Press `Alt + H` to select the "Headings" area.
 
 ![NVDA's "Elements List" dialog](_media/nvdas-elements-list-dialog.png)
