@@ -120,5 +120,3 @@ Former testers:
 - **Daniele Corciulo**, blind accessibility expert.
 - **Romano Spescha**, vision-impaired accessibility trainee.
 - **Reto Inniger**, vision-impaired accessibility trainee.
-
-Unfortunately, not in the picture (due to working remotely) is **Petra Ritter**, multiple-handicapped accessibility expert.
