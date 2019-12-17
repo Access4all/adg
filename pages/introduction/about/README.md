@@ -103,7 +103,7 @@ Former contributors:
 - **Anton Bolfing**, former accessibility expert at «Access for all».
 - **Bernhard Heinser**, former CEO at «Access for all».
 - **Markus Graf**, web developer.
-- **Severin Hug**, web developer, Hinderling Volkart.
+- **Severin Klaus**, web developer, Hinderling Volkart.
 
 ### Testing staff
 
