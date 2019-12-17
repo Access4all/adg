@@ -30,7 +30,7 @@ To calculate the contrast ratio, the relative luminance of the lighter colour (`
 
 This results in a value ranging from `1:1` (no contrast at all) to `21:1` (the highest possible contrast). While high contrast is generally good, higher is not always better. Research indicates that a moderate contrast somewhere between the extremes may be best.
 
-As an aside: In everyday practice we don't have to do this calculation manually, there are many helper tools available. More on that in the next chapter.
+As an aside: In everyday practice we don't have to do this calculation manually, there are many helper tools available. More on that on the next page.
 
 ## Tone is not a key factor
 
