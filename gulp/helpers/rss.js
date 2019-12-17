@@ -1,4 +1,4 @@
-const Feed = require('feed')
+const { Feed } = require('feed')
 
 module.exports = (origPages = []) => {
   const appConfig = require('../../config')

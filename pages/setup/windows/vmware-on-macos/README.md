@@ -12,7 +12,7 @@ changed: "2018-04-06"
 
 ## Preparing the virtual machine
 
-Before you proceed, be sure you have downloaded a pre-configured virtual machine (VM) like described here: [Getting a free Windows virtual machine from Modern.IE](/setup/windows/modern-ie).
+Before you proceed, be sure you have downloaded a pre-configured virtual machine (VM) as described here: [Getting a free Windows virtual machine from Modern.IE](/setup/windows/modern-ie).
 
 Then extract the VM (using [The Unarchiver](http://wakaba.c3.cx/s/apps/unarchiver.html), as the built-in unzip version is not capable of zip64 files) to a proper location, for example `~/Virtual Machines`.
 
@@ -22,7 +22,7 @@ After downloading [VMware Fusion](http://www.vmware.com/ch/products/fusion), ins
 
 - Choose `File` -> `Import`, select the `*.ovf` file in the extracted folder and confirm.
 - Take a snapshot (`Command + Shift + S`).
-    - This allows to easily go back to that state later, meaning you can re-activate the VM's Windows 90 days license again and again.
+    - This allows to easily go back to that state later, meaning you can re-activate the VM's Windows 90-day license again and again.
     - For more info, see [Understanding snapshots (VMware)](https://kb.vmware.com/s/article/1014509).
 - Under `Virtual Machine` -> `Settings`:
     - If you have a retina display, go to `Display` and deselect `Use full resolution for Retina display` (otherwise your eyes will begin to hurt).
