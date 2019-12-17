@@ -31,6 +31,14 @@
 	&-current {
     @include theme(color, var(--theme-color-dark));
     font-weight: 500;
+
+    &::before {
+      content: '•';
+      display: inline-block;
+      position: absolute;
+      left: -0.75em;
+      font-weight: bold;
+    }
 	}
 	&-active {
 	}
