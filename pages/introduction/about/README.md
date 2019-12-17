@@ -92,6 +92,7 @@ Besides the diligent online community, a group of people regularly physically ga
 - **Andreas Moesch**, web developer, Nothing AG.
 - **Donato Rotunno**, web developer, Liip AG.
 - **Esther Brunner**, web developer, Zeix AG.
+- **Graciela Schütz**, senior UX architect, UNIC AG.
 - **Joshua Muheim**, web developer & accessibility expert, «Access for all».
 - **Jürgen Rudigier**, frontend developer, Hinderling Volkart.
 - **René Stalder**, web developer, Nothing AG.
