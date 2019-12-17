@@ -32,7 +32,7 @@ On the other side of the «Accessibility Alliance», there are several acclaimed
 
 > Until now, web developers have lacked a good, practical reference on accessibility. It doesn't need more rules, but more guidance to make the web usable for everyone. The Accessibility Developer Guide will provide access where hardly anyone has been before, with practical examples, tested by experts and supported by developers. From the very beginning we were convinced of the purpose of this commitment and are proud to be able to contribute a small part to it.
 
-**Severin Klaus**, Frontend Leader, [Hinderling Volkart](https://www.hinderlingvolkart.com/).
+**Severin Hug**, Frontend Leader, [Hinderling Volkart](https://www.hinderlingvolkart.com/).
 
 ### UNIC
 
