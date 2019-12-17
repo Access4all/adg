@@ -34,7 +34,7 @@ This problem can be solved by adding one or more visual alterations to the activ
 
 Now, even with no colour perception at all, the item is still clearly distinguishable.
 
-![the same navigation bar with one bold and underlined active item but monochrome](_media/nav-with-active-colour-bold-underline-bw.png)
+![The same navigation bar with one bold and underlined active item but monochrome](_media/nav-with-active-colour-bold-underline-bw.png)
 
 Finally, let's keep in mind that beyond visual appearance the differentiation also has to be encoded in the underlying markup. It should provide adequate semantic information to clearly differentiate elements also on a non-visual level. One way to do this is to add a visually hidden text snipped that indicates the active status of the label.
 
