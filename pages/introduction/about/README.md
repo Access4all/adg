@@ -16,9 +16,9 @@ On one side of the «Accessibility Alliance», there is the Swiss Foundation «A
 
 The foundation has been in business since the year 2000, and since then has guided hundreds of local and international websites in the process of becoming accessible. The basis for this has always been the official guidelines like the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG) and [Accessible Rich Internet Applications](https://www.w3.org/TR/html-aria/) (ARIA), combined with the real-life experiences of the foundation's employees who have special needs, and the profound expertise of fullstack web developers. In one sentence: the contents of this guide are the result of nearly two decades of hands-on experience in all topics accessibility.
 
-> With the Accessibility Developer Guide, the «Access for all» foundation provides developers with an instrument that offers practical and concrete support in the implementation of accessible web offerings. As an open source project, the Accessibility Developer Guide focuses on sharing and passing on knowledge. All agencies, every woman and every man are invited to join the Accessibility Alliance. Join in a few developer days a year — and you'll be there.
+> The Accessibility Developer Guide offers easy and free access to a comprehensive and application-oriented knowledge database on the subject of how to build a barrier-free website. The platform aims to share and pass on accessibility know-how to everyone. It is a tangible open source project on ethics in the digital economy. Join in and be part of an exciting community realizing a web for all.
 
-**Bernhard Heinser**, former CEO, «Access for all».
+**Sylvia Winkelmann-Ackermann**, CEO, «Access for all».
 
 For more information, see [www.access-for-all.ch](http://access-for-all.ch/).
 
