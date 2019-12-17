@@ -89,13 +89,13 @@ Besides the diligent online community, a group of people regularly physically ga
 
 <!-- ![The core team working on the Accessibility Developer Guide (details read below)](_media/core-team.jpg) -->
 
-- **Esther Brunner**, web developer, Zeix AG.
+- **Andreas Moesch**, web developer, Nothing AG.
 - **Donato Rotunno**, web developer, Liip AG.
+- **Esther Brunner**, web developer, Zeix AG.
 - **Joshua Muheim**, web developer & accessibility expert, «Access for all».
 - **Jürgen Rudigier**, frontend developer, Hinderling Volkart.
-- **Thomas Jaggi**, web developer, former UNIC AG.
 - **René Stalder**, web developer, Nothing AG.
-- **Andreas Moesch**, web developer, Nothing AG.
+- **Thomas Jaggi**, web developer, former UNIC AG.
 
 Former contributors:
 
