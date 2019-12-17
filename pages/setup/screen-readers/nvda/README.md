@@ -46,7 +46,7 @@ By clicking on the icon, the NVDA menu is displayed.
 
 ![The NVDA menu](_media/the-nvda-menu.png)
 
-Alternatively, you can press `NVDA + N` to display it. By default, the `NVDA` key is the `Insert` key (if you are really curious and want to learn more about this, skip ahead and read [Screen readers are keyboard shortcut monsters](/knowledge/desktop-screen-readers/shortcut-monsters)).
+Alternatively, you can press `NVDA + N` to display it. By default, the `NVDA` key is the `Insert` key (if you are really curious and want to learn more about this, skip ahead and read [The Insert Modifier Key](/knowledge/desktop-screen-readers/insert-modifier-key).
 
 The best way to use the NVDA menu is by keyboard:
 
