@@ -1,10 +1,10 @@
 ---
-navigation_title: "Shortcut monsters"
+navigation_title: "The Insert Modifier Key"
 position: 6
 changed: "2018-04-13"
 ---
 
-# Screen readers are keyboard shortcut monsters
+# Screen readers have lots of keyboard shortcuts
 
 **Desktop screen readers are usually controlled with the keyboard only. Offering tons of functionalities, all of them ought to be triggered by keyboard shortcuts. But what to do if none of the standard keyboard combinations are available anymore?**
 
@@ -44,4 +44,4 @@ So the examples above look like this:
     - `JAWS + J` shows the JAWS menu.
     - `JAWS + F6` displays the heading list.
 
-For a complete guide of shortcuts see [Screen reader keyboard shortcuts](/knowledge/desktop-screen-readers/shortcut-cheatsheet)
+For a complete guide of shortcuts see [Screen reader keyboard shortcuts](/knowledge/desktop-screen-readers/screenreader-shortcuts)
