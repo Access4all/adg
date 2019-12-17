@@ -20,7 +20,7 @@ The following screenshot shows a very simple contact form.
 
 The borders of the input fields have an insufficient contrast ratio of `1.5:1`. Because of that, certain users may have a hard time finding the input fields and enter information. 
 
-The background colour of the "Send message" button has the same contrast ratio as the input fields: `1.5:1`. This will make it harder to identify the button by its typical shape. However, the button label adds a lot of valuable information, making this case less urgent or even negligible: it has sufficient contrast, it offers a clear invitation to interact by using a verb (which is better than a generic "OK") and its visual appearance (font, size) is different from the other text elements surrounding it.
+The background colour of the "Send message" button also has a low contrast ratio (again, it is `1.5:1`). This will make it harder to identify the button by its typical shape. However, the button label adds a lot of valuable information, making this case less urgent or even negligible: it has sufficient contrast, it offers a clear invitation to interact by using a verb (which is better than a generic "OK") and its visual appearance (font, size) is different from the other text elements surrounding it.
 
 ## Example: tablists
 
