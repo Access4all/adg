@@ -1,6 +1,6 @@
 ---
 navigation_title: "Desktop screen readers"
-position: 5
+position: 1
 changed: "2018-05-02"
 ---
 

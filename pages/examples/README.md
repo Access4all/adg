@@ -72,4 +72,4 @@ We have conducted additional compatibility tests, all with assistive devices tha
 
 While some of these devices still show problems, the general outlook confirms that our examples are as future-proof as possible.
 
-To avoid cluttering the ADG, these results are not displayed at the time being.
+To avoid cluttering the Accessibility Developer Guide, these results are not displayed at the time being.

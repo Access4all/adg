@@ -1,8 +1,12 @@
-# Contributing to the «Accessibility Developer Guide» (ADG)
+# Contributing to the «Accessibility Developer Guide»
 
 This guide is the result of tight collaboration between accessibility experts and web developers. Its content by far is not exhaustive yet: there remain a lot of topics to talk about, and due to the fast evolution of web technologies, there certainly will always be.
 
 We welcome everyone who wants to join our initiative, be it with adding new contents, fixing typos or bugs, etc. This guide is Open Source (MIT License). As such, everybody can contribute to it: we are happy about issues and pull requests.
+
+## Communication
+
+In addition to using issues and PRs to dicuss topics, we use Slack for general communication: [Join ADG Slack team](https://join.slack.com/t/a11y-dev-guide/shared_invite/enQtMzMwOTkxNTI3NDYwLTFkOTA5YmEwYjc5ZWU4OTJmZmZmYTJlNzFlNWQ0ZGU3MzQ0ZjQ1ODc3ZGFiY2MzYThkOTVkM2ZhNGQ0ZTZhZDE)!
 
 ## Technical details
 
@@ -16,7 +20,7 @@ We use a bunch of nice Open Source tools to make collaboration of both developer
 
 ## Local setup
 
-Prerequisites: Node 8 (you may want to use [Node Version Manager](https://github.com/creationix/nvm)).
+Prerequisites: Node >=10 (you may want to use [Node Version Manager](https://github.com/creationix/nvm)).
 
 - Setup: `npm install`
 - Develop: `npm start`

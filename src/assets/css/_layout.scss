@@ -8,9 +8,16 @@
 	position: relative;
 	overflow-x: hidden;
 	@media screen and (min-height: 600px) {
-		> .site-content {
-			min-height: 100vh;
+    #main {
+      display: flex;
+      flex-direction: column;
+    }
+		#main-content{
+      flex: 1 0 auto;
 		}
+    .footer {
+      flex: 0 1 auto;
+    }
 	}
 }
 @mixin l-site_width {

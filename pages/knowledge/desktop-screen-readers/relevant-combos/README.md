@@ -58,7 +58,7 @@ The reponses to the question "Which of the following desktop/laptop screen reade
 
 Regarding the question, which browser is used with the user’s primary screen reader, the survey results show that FF (41%) and IE 11 (23.3%) are the prevailing browsers, followed by Chrome (15.5%) and Safari (10.5%).
 
-Finally, when ist comes to the mostly used browser-screen reader combinations, the survey provides the following data:
+Finally, when it comes to the mostly used browser-screen reader combinations, the survey provides the following data:
 
 - JAWS with IE: 24.7%
 - NVDA with FF: 23.6%

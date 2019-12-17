@@ -2,7 +2,7 @@
 	&-main {
 		margin-top: - $gutter / 2;
 		& > .nav-list--item {
-			padding-left: 40px;
+			padding-left: $gutter;
 			& > .nav-list--link {
 				display: block;
 				padding: $gutter / 3 0;
