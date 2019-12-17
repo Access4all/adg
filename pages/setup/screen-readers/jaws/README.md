@@ -44,7 +44,7 @@ By clicking on the icon, the JAWS menu is displayed.
 
 ![The JAWS menu](_media/the-jaws-menu.png)
 
-Alternatively, you can press `JAWS + J` to display it. By default, the `JAWS` key is the `Insert` key (if you are really curious and want to learn more about this, skip ahead and read [Screen readers are keyboard shortcut monsters](/knowledge/desktop-screen-readers/shortcut-monsters)).
+Alternatively, you can press `JAWS + J` to display it. By default, the `JAWS` key is the `Insert` key (if you are really curious and want to learn more about this, skip ahead and read [The Insert Modifier Key](/knowledge/desktop-screen-readers/insert-modifier-key)).
 
 The best way to use the JAWS menu is by keyboard:
 

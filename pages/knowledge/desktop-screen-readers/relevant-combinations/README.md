@@ -1,5 +1,5 @@
 ---
-navigation_title: "Relevant combos"
+navigation_title: "Relevant combinations"
 position: 2
 changed: "2018-05-01"
 ---
