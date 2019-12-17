@@ -1,5 +1,5 @@
 ---
-navigation_title: "The Insert Modifier Key"
+navigation_title: "The Insert modifier key"
 position: 6
 changed: "2018-04-13"
 ---
