@@ -29,15 +29,14 @@ We use [Netlify](https://www.netlify.com/) in the background to build and deploy
 
 ### Branching
 Our branching strategy is the following:
-- `master` is the Production branch
-- `develop` is the branch for current development. Any feature starts from it and is merged back to it once approved.
-- a `feature/[issue_id]-[short_description]` branch is created whenever a new feature is started
-- a `bugfix/[issue_id]-[short_description]` branch is created whenever a new bugfix is started
-- hotfixes could processed like normal features or directly merged into `master` and deployed right away
+- `production` is the Production branch and reflects the state of the Live website
+- `master` is the default branch and the one used for current development. Any feature/bugfix starts from it and is merged back to it once approved. Single commits can still be cherry-picked into `production` if needed
+- a `feature/meaningful-short-description` branch is created whenever a new feature is started
+- a `bugfix/meaningful-short-description` branch is created whenever a new bugfix is started
 
 ### Production deployment
-- a Production deployment is triggered by merging `develop` into `master`
-- before merging, make sure to properly add a tag based on the [semantic versioning](https://semver.org/).
+- a Production deployment is triggered by merging `master` into `production`
+- before merging, a proper tag properly, based on the [semantic versioning](https://semver.org/), is created
 This allows to quickly revert a broken deployment.
 
 ### Feature/bugfix testing deployment
