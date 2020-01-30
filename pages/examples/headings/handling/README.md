@@ -31,7 +31,7 @@ You can add `Shift` to most shortcuts to reverse direction. For example press `S
 
 As an alternative to navigating through the headings directly on the page, screen readers offer a heading outline view. It resembles the table of contents of a traditional book.
 
-In the upcoming text, we are referring to the keys `NVDA` and `JAWS`. If you do not know about them, see [Screen readers are keyboard shortcut monsters](/knowledge/desktop-screen-readers/shortcut-monsters).
+In the upcoming text, we are referring to the keys `NVDA` and `JAWS`. If you do not know about them, see [The Insert Modifier Key](/knowledge/desktop-screen-readers/insert-modifier-key).
 
 #### Elements List (NVDA)
 
@@ -39,6 +39,7 @@ NVDA's "Elements List" displays a page's heading outline in a tree view. To open
 
 - First make sure you are in browse mode.
     - If unclear to you, see [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes).
+- To open it, press `NVDA + F7`.
 - Press `Alt + H` to select the "Headings" area.
 
 ![NVDA's "Elements List" dialog](_media/nvdas-elements-list-dialog.png)
