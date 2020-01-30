@@ -18,14 +18,14 @@
 
   .search--field {
     flex: 1;
+    position: static !important;
 
     &:after {
       content: "";
       display: inline-block;
       @include searchbtn;
       position: absolute;
-      right: 4px;
-      top: 2px;
+      right: 35px;
       opacity: 0.6;
     }
   }
@@ -57,11 +57,14 @@
 
 // Overrides for the default SiteSearch 360 styles
 #unibox-suggest-box {
-  margin-top: 1px;
+  margin-top: 46px;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
   font-family: inherit;
   font-weight: 300;
   border: none;
+  left: auto !important;
+  top: auto !important;
+  right: auto !important;
 
   @media (min-width: $site-width) {
     width: 450px;
