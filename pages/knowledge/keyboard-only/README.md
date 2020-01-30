@@ -1,6 +1,6 @@
 ---
 navigation_title: "Keyboard only"
-position: 4
+position: 3
 changed: "2018-05-02"
 ---
 
