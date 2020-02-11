@@ -76,9 +76,9 @@ const getCodePenForm = (code, title) => {
 
   return `<form action="https://codepen.io/pen/define" method="POST">
     <input type="hidden" name="data" value="${JSON.stringify(config).replace(
-    /"/g,
-    '&quot;'
-  )}">
+      /"/g,
+      '&quot;'
+    )}">
     <button type="submit" class="button codepen">Play around with the example on CodePen</button>
   </form>`
 }
@@ -98,8 +98,8 @@ const getExample = (examplePath, filePath) => {
     )) {
       const results = value.status
         ? {
-          [category]: value
-        }
+            [category]: value
+          }
         : value
 
       for (const [browser, result] of Object.entries(results)) {
@@ -154,8 +154,10 @@ const getExample = (examplePath, filePath) => {
     return result
   })
 
-  const btns = ['html', 'css', 'js'].filter(type => code[type]).map(type => {
-    return `<div class="control">
+  const btns = ['html', 'css', 'js']
+    .filter(type => code[type])
+    .map(type => {
+      return `<div class="control">
       <input type="checkbox" id="${id}-${type}" name="${id}" value="${type}" />
       <label class="button" for="${id}-${type}">
         <span class="visuallyhidden">Show </span>
@@ -163,14 +165,14 @@ const getExample = (examplePath, filePath) => {
         <span class="visuallyhidden"> code</span>
       </label>
     </div>`
-  })
-  const blocks = ['html', 'css', 'js'].filter(type => code[type]).map(type => {
-    const markup = hljs.highlightAuto(code[type], [type])
+    })
+  const blocks = ['html', 'css', 'js']
+    .filter(type => code[type])
+    .map(type => {
+      const markup = hljs.highlightAuto(code[type], [type])
 
-    return `<div class="panel" id="${id}-${type}_panel" style="display: none"><pre><code>${
-      markup.value
-    }</code></pre></div>`
-  })
+      return `<div class="panel" id="${id}-${type}_panel" style="display: none"><pre><code>${markup.value}</code></pre></div>`
+    })
 
   const codePenForm = getCodePenForm(code)
 
@@ -180,12 +182,12 @@ const getExample = (examplePath, filePath) => {
       <label class="button" for="${id}-compatibility">
         <span class="summary">
           ${compatibilitySummary
-    .map(
-      item => `<span class="status status--${item.statusCode}">
+            .map(
+              item => `<span class="status status--${item.statusCode}">
             ${item.name} ${item.statusIndication}
         </span>`
-    )
-    .join('<span class="visuallyhidden">, </span>')}
+            )
+            .join('<span class="visuallyhidden">, </span>')}
         </span>
       </label>
     </div>`)
@@ -200,8 +202,8 @@ const getExample = (examplePath, filePath) => {
         </thead>
         <tbody>
           ${compatibility
-    .map(
-      result => `<tr>
+            .map(
+              result => `<tr>
   <th>${result.env}</th>
     <td class="result result--${result.statusCode}">
       ${result.statusIndication} ${result.status}
@@ -209,8 +211,8 @@ const getExample = (examplePath, filePath) => {
     <td>${result.comments ? result.comments : '-'}</td>
     <td>${result.date}</td>
 </tr>`
-    )
-    .join('')}
+            )
+            .join('')}
         </tbody>
       </table>
     </div>`)
