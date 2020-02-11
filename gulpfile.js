@@ -224,6 +224,7 @@ gulp.task(
         './pages/**/*.md',
         './pages/**/*.html',
         './pages/**/*.js',
+        './pages/**/*.css',
         './src/templates/**/*.hbs',
         './src/components/**/*.hbs',
         './gulp/helpers/*'
