@@ -200,9 +200,16 @@ gulp.task('clean', () => del('./dist'))
 gulp.task(
   'build',
   gulp.series(
-    'clean',
     'sprite',
     gulp.parallel('css', 'js', 'media', 'html', 'html:examples')
+  )
+)
+
+gulp.task(
+  'rebuild',
+  gulp.series(
+    'clean',
+    'build'
   )
 )
 
