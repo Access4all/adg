@@ -222,6 +222,8 @@ gulp.task(
     gulp.watch(
       [
         './pages/**/*.md',
+        './pages/**/*.html',
+        './pages/**/*.js',
         './src/templates/**/*.hbs',
         './src/components/**/*.hbs',
         './gulp/helpers/*'
