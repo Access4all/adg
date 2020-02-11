@@ -6,7 +6,7 @@ changed: "2018-04-06"
 
 # WAVE toolbar
 
-**WAVE toolbar gives you a very quick first impression about the quality of the currently browsed webpage's accessibility. At the press of a button, it provides visual cues by injecting icons and detailed information right into the page.**
+**WAVE toolbar gives you a very quick first impression about the quality of the current webpage's accessibility. At the press of a button, it provides visual cues by injecting icons and detailed information right into the page.**
 
 ![WAVE toolbar](_media/wave-toolbar.png)
 
@@ -16,7 +16,7 @@ changed: "2018-04-06"
 
 ### Online service
 
-Instead of installing it, you can use WAVE's online service on [wave.webaim.org](http://wave.webaim.org/).
+Alternatively, instead of installing it, you can use WAVE's online service at [wave.webaim.org](http://wave.webaim.org/).
 
 ## Usage
 
@@ -28,7 +28,7 @@ You will then see icons appear directly on the page. Click on them to get more d
 
 ![An error icon](_media/an-error-icon.png)
 
-The most interesting items are the red (errors) and yellow (alerts) ones.
+The most interesting items are the red (error) and yellow (alert) ones.
 
 ### Discretion advised
 

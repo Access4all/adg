@@ -12,7 +12,7 @@ changed: "2018-04-06"
 
 ## Preparing the virtual machine
 
-Before you proceed, be sure you have downloaded a pre-configured virtual machine (VM) like described here: [Getting a free Windows virtual machine from Modern.IE](/setup/windows/modern-ie).
+Before you proceed, be sure you have downloaded a pre-configured virtual machine (VM) as described here: [Getting a free Windows virtual machine from Modern.IE](/setup/windows/modern-ie).
 
 Then extract the VM (using [The Unarchiver](http://wakaba.c3.cx/s/apps/unarchiver.html), as the built-in unzip version is not capable of zip64 files) to a proper location, for example `~/Virtual Machines`.
 
@@ -22,7 +22,7 @@ After downloading [VMware Fusion](http://www.vmware.com/ch/products/fusion), ins
 
 - Choose `File` -> `Import`, select the `*.ovf` file in the extracted folder and confirm.
 - Take a snapshot (`Command + Shift + S`).
-    - This allows to easily go back to that state later, meaning you can re-activate the VM's Windows 90 days license again and again.
+    - This allows to easily go back to that state later, meaning you can re-activate the VM's Windows 90-day license again and again.
     - For more info, see [Understanding snapshots (VMware)](https://kb.vmware.com/s/article/1014509).
 - Under `Virtual Machine` -> `Settings`:
     - If you have a retina display, go to `Display` and deselect `Use full resolution for Retina display` (otherwise your eyes will begin to hurt).
@@ -59,7 +59,7 @@ Windows screen readers make use of the function keys (`F1` to `F12`) a lot.
 
 By default, in macOS, you have to press the `Fn` key in addition to the specific function key to trigger it.
 
-Keyboard shortcuts of screen readers are quite tricky (if you are really curious and want to learn more about this, skip ahead and read [Screen readers are keyboard shortcut monsters](/knowledge/desktop-screen-readers/shortcut-monsters)). As the function keys are often part of them, we suggest that you [change the behaviour of function keys (Apple Support)](https://support.apple.com/en-us/HT204436) so you do not have to use the `Fn` key for them, too.
+Keyboard shortcuts of screen readers are quite tricky (if you are really curious and want to learn more about this, skip ahead and read [The Insert Modifier Key](/knowledge/desktop-screen-readers/insert-modifier-key) and also [Screen Reader Shortcuts](/knowledge/desktop-screen-readers/screenreader-shortcuts)). As the function keys are often part of them, we suggest that you [change the behaviour of function keys (Apple Support)](https://support.apple.com/en-us/HT204436) so you do not have to use the `Fn` key for them, too.
 
 ### Emulating the Insert key
 

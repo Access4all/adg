@@ -1,7 +1,7 @@
 ---
 navigation_title: "Good example"
 position: 2
-changed: "2018-??-??"
+changed: "2018-06-15"
 ---
 
 # General good table example

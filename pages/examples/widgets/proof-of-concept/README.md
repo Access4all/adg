@@ -12,7 +12,7 @@ changed: "2018-05-31"
 
 There are many patterns of interactive controls that have made its way into the collective awareness of the web, but for which no native HTML standard element is available (they are generally referred to as "widgets"). Alas, there exist no strict requirements, and most implementations of the pattern vary greatly regarding their functionalities and target audiences.
 
-With our POCs we aim to deliver a proof of a given concept for these patterns. The main focus is on accessibility, optimised for the most widely used combinations of browsers and screen readers, see [Relevant combinations of screen readers and browsers](/knowledge/desktop-screen-readers/relevant-combos).
+With our POCs we aim to deliver a proof of a given concept for these patterns. The main focus is on accessibility, optimised for the most widely used combinations of browsers and screen readers, see [Relevant combinations of screen readers and browsers](/knowledge/desktop-screen-readers/relevant-combinations).
 
 For each POC, we base our requirements on well established best practices, and on its respective section of the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/) (if available).
 
