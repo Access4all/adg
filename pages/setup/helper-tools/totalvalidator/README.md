@@ -26,6 +26,14 @@ After launching it, open your website in either Firefox or Chrome, and activate 
 
 ![TotalValidator browser icon](_media/totalvalidator-browser-icon.png)
 
-Inspect the displayed results.
+Inspect the displayed results (which vary from parsing errors to very specific accessibility warnings).
 
 ![TotalValidator results](_media/totalvalidator-results.png)
+
+## Which ones are relevant for accessibility?
+
+The bookmarklet [Filter relevant TotalValidator results](https://codepen.io/jmuheim/pen/yLNqERL) is an attempt to give a pragmatic answer to this question. It scans the summary of a results page, looking out for the following 5 types of error codes (incomplete start / end tags, invalid nesting, duplicate attributes, duplicate IDs, and invalid ARIA), highlighting them visually and displaying a summary:
+
+![Filtered TotalValidator results](_media/filtered-totalvalidator-results.png)
+
+Check out the bookmarklet's description text for more details.
