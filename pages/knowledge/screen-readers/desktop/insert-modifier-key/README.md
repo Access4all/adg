@@ -1,6 +1,6 @@
 ---
 navigation_title: "The Insert modifier key"
-position: 6
+position: 2
 changed: "2018-04-13"
 ---
 

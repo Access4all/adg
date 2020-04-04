@@ -1,6 +1,6 @@
 ---
 navigation_title: "Screen reader shortcuts"
-position: 7
+position: 3
 changed: "2018-12-30"
 ---
 

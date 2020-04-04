@@ -1,5 +1,5 @@
 ---
-navigation_title: "Desktop screen readers"
+navigation_title: "Screen readers"
 position: 5
 changed: "2018-05-02"
 ---
