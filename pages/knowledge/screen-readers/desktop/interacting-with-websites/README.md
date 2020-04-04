@@ -12,9 +12,9 @@ Beneath simple reading of information, most modern websites offer a lot of inter
 
 **Important:** For this article you need to know how to read websites using a desktop screen reader. If you haven't done so yet, go back and read [How to read websites using a desktop screen reader](/knowledge/desktop-screen-readers/reading-websites) thoroughly before you continue here.
 
-## Activating links
+## Activating elements
 
-Press `Enter` to activate links.
+Press `Enter` to activate elements (like links or buttons).
 
 ## Interacting with forms
 
@@ -24,7 +24,7 @@ Use cases:
 
 - When reaching a textarea in browse mode, to enter text into it, press `Enter` to activate focus mode, then enter text.
     - To jump to the next input (or any other focusable element), press `Tab`.
-    - To look around for non-focusable content instead, leave focus mode by pressing `Esc`, then browse around with the arrow keys.
+    - To look around for non-focusable content instead, leave focus mode by pressing `Esc`, then browse around with the `Up`/`Down` keys.
 - When reaching a text input in focus mode, you can immediately enter text.
 - To toggle through the values of a combobox, make sure you are in focus mode, then use `Up` or `Down`.
 - To toggle the value of a checkbox, simply hit `Space` (regardless of whether you're in browse or focus mode).

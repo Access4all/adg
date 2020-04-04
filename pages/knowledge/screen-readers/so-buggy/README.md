@@ -6,7 +6,7 @@ changed: "2018-05-01"
 
 # How screen readers work - and why they seem so buggy
 
-**Sitting on top of another application, screen readers announce the underlying content - often trying to compensate for inadequate presentation by both the underlying application and its content. This is a very hard task and prone to regressions, as we are trying to explain here.**
+**Sitting on top of another application, screen readers announce the underlying content - often trying to compensate for inadequate presentation by both the underlying application and its content. This is a very hard task and prone to regressions, as we try to explain here.**
 
 ## Short summary
 
@@ -20,7 +20,7 @@ To prevent bugs, it is best to follow established standards and best practices.
 
 ## Exhaustive explanation
 
-In the following article, we are trying to explain the problem buggy screen readers a little deeper. Keep in mind that we are whether browser developers nor screen reader developers, so the following information may be incomplete, biased, or even wrong in some parts. But it is the best we can currently provide from our years long experience with the topic.
+In the following article, we are trying to explain the problem of buggy screen readers a little deeper. Keep in mind that we are neither browser developers nor screen reader developers, so the following information may be incomplete, biased, or even wrong in some parts. But it is the best we can currently provide from our years long experience with the topic.
 
 ### Don't kill the messenger!
 
@@ -36,19 +36,19 @@ Many applications neglect treating the accessibility API responsibly. "Responsib
 In addition to this, the code quality of website content often is bad:
 
 - Sometimes, required content is partially missing: for example an image with no alternative text.
-- Or semantical information is missing: for example a button is only marked up as plain text (instead of as a proper `<button>` element).
+- Or semantical information is missing: for example a button is only marked up as `<span>` element (instead of as a proper `<button>`).
 
 This breaks the message even more.
 
-Aware of such problems (and because they want to be duteous and faithful messengers), some screen readers try to "fix" broken messages by collecting additional information through precarious ways, for example by looking for information directly in the browser's DOM. JAWS, as a rather extreme example, even installs its own graphic driver into the system, intercepting graphical information and applying optical character recognition (OCR) to it.
+Aware of such problems (and because they want to be duteous and faithful messengers), some screen readers try to "fix" broken messages by collecting additional information through precarious ways, for example by looking for information directly in the browser's DOM. JAWS, as a rather extreme example, even used to install its own graphic driver into the system, intercepting graphical information and applying optical character recognition (OCR) to it.
 
-Still, a broken message is highly prone to remain broken. And this makes clear why the same website with the same screen reader may work well in one browser (maybe Firefox), while failing completely in another one (maybe Edge): the messenger is the same, but the message quality may vary a lot.
+Still, a broken message is highly prone to remain being broken. And this makes clear why the same website with the same screen reader may work well in one browser (maybe Firefox), while failing completely in another one (maybe Edge): the messenger is the same, but the message quality may vary a lot.
 
 So please, do not kill the messenger - instead, follow this guide and provide high quality messages!
 
 ### Reasons for bugs
 
-Screen readers sadly seem to be very prone to regressions, meaning that a feature which worked well in an earlier combination of browser and screen reader versions, does not work anymore in subsequent versions. For example, the fact that a specific accessibility feature worked well in the combination of NVDA 2018.1 and Firefox 58 is no guarantee that it will still work in NVDA 2018.2 with Firefox 58 (or NVDA 2018.1 and Firefox 59).
+Screen readers sadly seem to be very prone to regressions, meaning that a feature which worked well in an earlier combination of browser and screen reader versions does not work anymore in subsequent versions. For example, the fact that a specific accessibility feature worked well in the combination of NVDA 2018.1 and Firefox 58 is no guarantee that it will still work in NVDA 2018.2 with Firefox 58 (or NVDA 2018.1 and Firefox 59).
 
 Let's look at a hypothetical example. Let's say that for an ARIA tablist implementation, the browser does not provide the necessary information about which tab currently is active to the accessibility API:
 
@@ -75,11 +75,10 @@ If you find bugs in either screen readers or browsers, we highly urge you to get
 
 - For filing NVDA issues, please use the [issue tracker for NVDA (GitHub.com)](https://github.com/nvaccess/nvda/issues).
     - The folks there are helpful and responsive.
-- For filing JAWS issues, please use the [issue tracker for VFO-standards-support (GitHub.com)] by FreedomScientific.
+- For filing JAWS issues, please use the [issue tracker for VFO-standards-support (GitHub.com)](https://github.com/FreedomScientific/VFO-standards-support/issues) by FreedomScientific.
     - For more details, please read [JAWS wide open (PacielloGroup.com)](https://developer.paciellogroup.com/blog/2017/10/jaws-wide-open/).
 - For filing Firefox issues, please use the [issue tracker for Firefox (Mozilla.org)](https://bugzilla.mozilla.org).
-- Regarding Internet Explorer, there does not seem to be a way for filing issues.
-    - Maybe this will be of some further help though: [How to log a bug on Internet Explorer? (StackOverflow.com)](https://stackoverflow.com/questions/258168/how-to-log-a-bug-on-internet-explorer).
+- TODO: Chrome!
 
 ### What will the future bring?
 

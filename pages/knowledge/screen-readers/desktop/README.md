@@ -1,5 +1,5 @@
 ---
-navigation_title: "Desktop"
+navigation_title: "Desktop screen readers"
 position: 5
 changed: "2018-05-02"
 ---
@@ -8,4 +8,6 @@ changed: "2018-05-02"
 
 **TODO**
 
-TODO
+NVDA and JAWS.
+
+Not VoiceOver/macOS.

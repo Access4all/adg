@@ -1,41 +1,55 @@
 ---
-navigation_title: "Screen reader shortcuts"
+navigation_title: "Keyboard shortcuts"
 position: 3
 changed: "2018-12-30"
 ---
 
-# Screen reader keyboard shortcuts
+# Desktop screen reader keyboard shortcuts
 
-**This is a shortcut cheat-sheet for navigating web content on screen readers**
+**While desktop screen readers literally have dozens (if not hundreds) or keyboard shortcuts, only a fraction of them is needed for everyday usage. The following cheat-sheet lists the most important ones.**
 
+We keep this page short and sweet. Throughout this guide, there is much more information available about the tackled subjects.
 
-- `Ctrl + Home` announces the current page title and returns to the top of the page
-- `Ctrl + Down` NVDA reads the next block (e.g. a paragraph or a any other kind of container)
-- `Up` reads the previous line
-- `Ctrl + Up` NVDA reads the previous block (e.g. a paragraph or a any other kind of container)
-- `H` cursor moves to the next heading
-- `Shift + H` cursor moves to the previous heading
-- `1` .. `6` skips to the next heading of that level (e.g. `1` for `<H1>`, `2` for `H2`, and so on)
-- `Tab` skips to the next focusable element (e.g. link or button)
-- `T` go to next table
-- `Control + Alt + Arrow keys` move around the table cells
-- `Control` stops reading
-- `L` skips to next list
-- `I` skips to next list item within a list
-- `F` skips to the next form control
-- `Enter` activate link or button; when on form field, forms mode is activated
+And remember: when talking about the `NVDA` or `JAWS` keys, we mean the `Insert` key.
 
+## Navigation
+
+- `Ctrl + Home` announces the current page title and moves the cursor to the top of the page.
+- `Down`/`Up` announces the next/previous line of text in the current element.
+    - If the end (or start) of the element is reached, the cursor is moved to the next (or previous) one.
+- In NVDA, pressing `Ctrl + Down` (or `Ctrl + Up`) moves to the next (or previous) element, announcing it fully in one go (regardless of its length).
+- `Tab` moves to the next focusable element (e.g. link or button), triggering focus mode if appropriate.
+- `H`/`Shift + H` moves to the next/previous heading.
+- `1`/`Shift + 1` to `6`/`Shift + 6` moves to the next/previous heading of that level.
+- `K`/`Shift + K` moves to the next/previous link.
+- `T`/`Shift + T` moves to the next/previous table.
+- `Control + Alt + Arrow keys` moves the cursor around a table's cells.
+- `L`/`Shift + L` moves to the next/previous list.
+- `I`/`Shift + I` moves to the next/previous list item.
+- `F`/`Shift + F` moves to the next/previous form control.
+- `B`/`Shift + B` moves to the next/previous button.
+
+## Interaction
+
+- `Enter` activates an element (e.g. link or button).
+     - When on a form field, focus mode is activated.
+     - When on an ARIA widget, application mode is activated.
+- `Esc` exits focus mode (if active).
+
+## Audio output
+
+- `Control` interrupts the screen reader output.
+- `Shift` skips the current line of the screen reader output.
 
 ## NVDA
 
-- `Insert` is the `NVDA` key (see also the section "Alternatives to the Insert key" in [The Insert Modifier Key](/knowledge/desktop-screen-readers/insert-modifier-key)
-- `Insert + N` shows the NVDA menu
-- `Insert + F7` shows the elements list (with links, headings, landmarks, etc.)
-- `Insert + Space` toggles between browse mode and focus mode
+- `NVDA + N` shows the NVDA menu.
+- `NVDA + F7` shows the elements list (with links, headings, landmarks, etc.).
+- `NVDA + Space` toggles between browse mode and focus mode.
+- `NVDA + S` toggles between speech modes (talk/beep/off).
 
 ## JAWS
 
-- `Insert` is the `JAWS` key (see also the section "Alternatives to the Insert key" in [The Insert Modifier Key](/knowledge/desktop-screen-readers/insert-modifier-key)
-- `Insert + J` shows the JAWS menu
-- `Insert + F6` displays the heading list
-- `Insert + F3` shows the elements list (with links, headings, landmarks, etc.)
+- `JAWS + J` shows the JAWS menu.
+- `JAWS + F6` displays the heading list.
+- `JAWS + F3` shows the elements list (with links, headings, landmarks, etc.).

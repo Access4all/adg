@@ -8,9 +8,9 @@ changed: "2018-04-13"
 
 **For a sighted person, it's hard to imagine how a screen reader user surfs the internet. For a web developer with accessibility in mind, it's crucial to have a basic knowledge about this topic. So be ready to get a concrete idea of the main strategies available to read a website using a screen reader!**
 
-Screen readers have a linear, one-dimensional scope on webpages (if you haven't done this yet, go back and read [Screen readers process contents in a linear way](/knowledge/desktop-screen-readers/linear-processing)). So when browsing a website for the first time, blind users first have to manually get a general idea of its layout. They usually achieve that by combing through the content from top to bottom, trying to identify meaningful blocks of information.
+Screen readers have a linear, one-dimensional scope on webpages (if you haven't done this yet, go back and read [Screen readers process contents in a linear way](/knowledge/desktop-screen-readers/linear-processing)). So when browsing a website for the first time, blind users have to manually get a general idea of its layout and contents. They usually achieve that by combing through the page from top to bottom, trying to identify meaningful blocks of information.
 
-The more users have accustomed to a website, over time, they will work out quicker ways of navigating between blocks of information, or of using its interactive features.
+The more a user has accustomed to a website, over time, they will work out quicker ways of navigating between blocks of information, or of using its interactive features.
 
 ## Opening a website
 
@@ -35,13 +35,11 @@ When leaving a page, some screen readers try to remember the current reading pos
 
 - This can be useful, for example when re-visiting a text that was not read completely before.
 - But it can also be confusing sometimes, for example in a shopping cart when removing an item:
-    - After re-display, the removed element is missing, but the screen reader still tries to set the focus where the element had been before, leading to unforeseeable and often confusing behaviour.
+    - After re-display, the removed element is missing, but the screen reader still tries to set the focus where the element had been before, resulting in focusing a seemingly random element.
 
 This functionality dates from a passed internet era. Back then, the internet was mainly a bunch of static websites. Thus, no changes to a page would normally be expected after re-visiting it.
 
-Today, in the so called Web 2.0, websites often are very dynamic. Thus, pages often change during each re-visit. Sadly, screen readers didn't adapt to this situation yet.
-
-### Conclusion
+### Autofocus conclusion
 
 Don't be worried too much if after a page load the screen reader focus is somewhere you didn't expect it to be. Simply press `Ctrl + Home` and make your way through the page from the top.
 
@@ -49,22 +47,22 @@ Don't be worried too much if after a page load the screen reader focus is somewh
 
 The easiest way to read through a document is line by line:
 
-- To navigate from one line to the next, the `Down` key is used.
-- To navigate from one line to the previous, the `Up` key is used.
+- To navigate from one line of text to the next one, the `Down` key is used.
+- To navigate to the previous one, the `Up` key is used.
 
-Depending on the screen reader, a "line" is around 80 characters and can be compared to a line of text in the multi-column layout of a newspaper. This is to make also very long sentences easily digestible for the user: they're simply split into parts, and the user has controls when to move to the next part (or previous).
+Depending on the screen reader, a "line" is around 80 characters and can be compared to a line of text in the multi-column layout of a newspaper. This is to make very long sentences easily digestible for the user: they're simply split into small parts, and the user controls when to move to the next (or previous) part.
 
-Instead of browsing line by line, the NVDA screen reader allows to read full blocks (for example, paragraph by paragraph, or any other kind of container). For this, simply use `Ctrl + Down` (or `Ctrl + Up`).
+Instead of browsing line by line, the NVDA screen reader allows to read elements fully in one go (e.g. a complete paragraph regardless of its length). For this, simply use `Ctrl + Down` (or `Ctrl + Up`).
 
 **Important:** as opposed to keyboard only users, screen reader users usually do not use the `Tab` key to read a page! If you haven't done this yet, go back and read [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes) to know the difference between navigation using `Arrow` keys and `Tab` key.
 
 ### Reading headings
 
-Press `H` to jump to headings, or press `1` to `6` to jump to headings on specific levels. Add `Shift` to reverse direction.
+Press `H` to move to headings, or press `1` to `6` to target their specific levels. Add `Shift` to reverse direction.
 
 Use cases:
 
-- To get a broad picture of a page's areas and contents within seconds, just navigate through all headings.
+- To get a broad picture of a page's areas and contents, just navigate through all headings.
 - If you know that the login form on a specific page is introduced by the 2nd heading on level 3, simply press 2 times the `3` key.
 - If you open a page on Wikipedia and want to read its main content, simply press the `1` key once (because the first `<h1>` is the main content's heading).
 
@@ -72,25 +70,25 @@ If you are really curious and want to learn more about this, skip ahead and read
 
 ### Reading links
 
-Press `K` to jump to links, or press `V` / `U` to jump to visited / unvisited links. Add `Shift` to reverse direction.
+Press `K` to move to links, or press `V` / `U` to move to visited / unvisited links. Add `Shift` to reverse direction.
 
 Use case: to quickly find links that you haven't visited yet, simply toggle through them by pressing `U`.
 
 ### Reading lists
 
-Press `L` key to jump to lists, or press `I` to jump to list items. Add `Shift` to reverse direction.
+Press `L` key to move to lists, or press `I` to move to list items. Add `Shift` to reverse direction.
 
 Use case: to quickly find the list with the social media "share" links, simply toggle through lists by pressing `L`.
 
 ### Reading images
 
-Press `G` key to jump to images. Add `Shift` to reverse direction.
+Press `G` key to move to images. Add `Shift` to reverse direction.
 
 Use case: to quickly find the "avatar" image on your StackOverflow's profile page, simply toggle through images by pressing `G` (and hope that the avatar's alternative text is set to something that you recognise as such).
 
 ### Reading tables
 
-Press `T` to jump to tables, then press `Ctrl + Alt + Left/Right/Up/Down` to navigate a its cells.
+Press `T` to move to tables, then press `Ctrl + Alt + Left/Right/Up/Down` to navigate their cells (announcing the appropriate column and row headers).
 
 Use case: to compare the price of several products in a table, simply navigate the column "price" by pressing `Ctrl + Alt + Down`.
 
@@ -98,7 +96,7 @@ If you are really curious and want to learn more about this, skip ahead and read
 
 ### Reading forms
 
-Press `F` to jump to form elements, or press `B` to jump to buttons. Add `Shift` to reverse direction.
+Press `F` to move to form elements, or press `B` to move to buttons. Add `Shift` to reverse direction.
 
 Use case: to quickly find the login form, simply search for the respective input field by pressing `F`.
 
