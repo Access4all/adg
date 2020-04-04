@@ -6,11 +6,11 @@ changed: "2018-04-13"
 
 # Screen readers process contents in a linear way
 
-**Sighted users perceive a webpage as a two-dimensional, graphical area. Meanwhile, screen reader users perceive a page in a one-dimensional (linear) way: one element after the other, from top to bottom. Similar to reading a book, browsing websites in this way is usually considerably slow, as a lot of time is needed to get a proper overview of a full page.**
+**Sighted users perceive a webpage as a two-dimensional, graphical area. Meanwhile, screen reader users perceive a page in a one-dimensional (linear), textual way: one element after the other, from top to bottom. Similar to reading a book, browsing websites in this way is usually considerably slow, as a lot of time is needed to get a proper overview of a full page.**
 
-## Visual perception: two dimensions
+## Visual perception: graphical area (two-dimensional)
 
-A sighted user using a traditional display perceives the full two-dimensional layout of a page. Within fractions of a second, the user perceives the different areas of a page, for example:
+Sighted users using a traditional display perceive a page in its full two-dimensional layout. Within fractions of a second, the users perceive the different areas of a page and interprete them intuitively, for example:
 
 - Header (typically on top with a logo)
 - Navigation (typically part of the header or on the left side)
@@ -18,15 +18,15 @@ A sighted user using a traditional display perceives the full two-dimensional la
 - Footer (typically at the bottom)
 - Etc.
 
-## Auditive perception: one dimension
+## Auditive perception: linear text (one-dimensional)
 
 Blind users using a screen reader perceive a page in a linear, one-dimensional way. Like a traditional book (or better, an audiobook), a page is read aloud by the screen reader sequentially from top left to bottom right: character by character, word by word, sentence by sentence; or content element by content element.
 
 - This is due to the nature of spoken information: it is presented in a purely linear, sequential fashion, one word after the other.
 - A screen reader can focus on one single position in the whole page at a time, similar to the cursor of a text editor.
 - The screen reader reads aloud the information fragment on which its cursor currently is placed.
-    - Depending on how the user navigates, typically either a full line, a word, or a single character is announced.
-    - The position of the cursor can then be moved (typically with the arrow keys) by the user to another information fragment (for example from one line to the next line, or from one word to the next word), each of which then is announced by the screen reader.
+    - Depending on how the user navigates, typically either a full line of text, a word, or a single character is announced.
+    - The position of the cursor can then be moved by the user to another information fragment (for example from one line of text to the next one, or from one word to the next one), each of which then is announced by the screen reader.
 
 This way, users typically make their way through the whole document from the very top to the very bottom - or until they find the information they are looking for. In many cases, this means that screen reader users need a lot more time to browse a webpage than visual users do.
 
