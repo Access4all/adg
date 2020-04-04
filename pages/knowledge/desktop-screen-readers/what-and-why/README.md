@@ -22,11 +22,11 @@ Screen reader tests are considered the "litmus tests" in the development of acce
 >
 > <cite>[Litmus test definition and meaning (CollinsDictionary.com)](https://www.collinsdictionary.com/dictionary/english/litmus-test)</cite>
 
-So to say, if a website can be read and operated by a screen reader, it can be considered pretty accessible. Screen reader compliant websites comply with a lot of requirements that are not only important to blind people, but also to many other groups of people with special needs.
+So to say, if a website can be read and operated by a screen reader, it can be considered pretty accessible (regarding non-visual aspects). Screen reader compliant websites comply with a lot of requirements that are not only important to visually impaired people, but also to many other groups of people with special needs.
 
 In addition, while modern web browsers are pretty forgiving with malformed website code, screen readers tend to expose such weaknesses like invalid syntax or missing/wrong semantics pitilessly (if you haven't done this yet, go back and read [Semantics provide meaning](/knowledge/semantics/meaning)). So they are a good tool to test the overall quality and validity of the code.
 
-Still, there are a few areas that cannot be validated with screen readers and thus need some special attention on their own (use of colour, contrasts, some audio and video requirements, just to name a few).
+Still, there are a few areas that cannot be validated with screen readers and thus need some special attention on their own (mainly visual aspects, such as the usage of colour, contrasts, and some audio and video requirements, just to name a few).
 
 ## Conclusion
 
