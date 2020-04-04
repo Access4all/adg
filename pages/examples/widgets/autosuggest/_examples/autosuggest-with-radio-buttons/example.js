@@ -12,7 +12,7 @@
   // In general: alerts seem to be most robust in all relevant browsers, but aren't polite. Maybe we'll find a better mechanism to serve browsers individually?
   var AdgAutocomplete
 
-  AdgAutocomplete = (function () {
+  AdgAutocomplete = function () {
     var config, uniqueIdCount
 
     class AdgAutocomplete {
@@ -286,8 +286,12 @@
         ) // TODO: is parent() good here?!
         upcomingIndex =
           direction === 'up'
-            ? currentIndex <= 0 ? maxIndex : currentIndex - 1
-            : currentIndex === maxIndex ? 0 : currentIndex + 1
+            ? currentIndex <= 0
+              ? maxIndex
+              : currentIndex - 1
+            : currentIndex === maxIndex
+            ? 0
+            : currentIndex + 1
         $upcomingOption = $($visibleOptions[upcomingIndex])
         return $upcomingOption.prop('checked', true).trigger('change')
       }
@@ -374,13 +378,13 @@
         message =
           filter === ''
             ? this.text('numberInTotal', {
-              number: number
-            })
+                number: number
+              })
             : this.text('numberFiltered', {
-              number: number,
-              total: this.$options.length,
-              filter: `<kbd>${filter}</kbd>`
-            })
+                number: number,
+                total: this.$options.length,
+                filter: `<kbd>${filter}</kbd>`
+              })
         return this.$alertsContainer.append(`<p role='alert'>${message}</p>`)
       }
 
@@ -412,7 +416,7 @@
     }
 
     return AdgAutocomplete
-  }.call(this))
+  }.call(this)
 
   $(document).ready(function () {
     return $('[data-adg-autosuggest]').each(function () {
