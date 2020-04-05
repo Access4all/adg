@@ -8,7 +8,9 @@ changed: "2018-04-13"
 
 **Similar to the reading of a traditional book, screen readers only announce plain content, enriched with semantical information. Visual attributes are totally ignored. Interestingly, some CSS still does have influence on screen readers.**
 
-Screen readers do not announce visual attributes of elements (for example a text's `font-size`, `text-decoration`, or `color`). Only plain text and semantical information (for example "heading level 3" or "link") is announced by them.
+Screen readers do not announce visual attributes of elements (for example a text's `font-size`, `text-decoration`, or `color`). Only plain text enriched with semantical information (for example "heading level 3" or "link") is announced by them.
+
+![Purely textual representation of a typical website](_media/purely-textual-representation-of-a-typical-website.png)
 
 So if you haven't done this yet, go back and read [Semantics and their importance for accessibility](/knowledge/semantics).
 

@@ -26,7 +26,7 @@ Within fractions of a second, the users perceive the different areas of a page a
 
 Blind users using a screen reader perceive a page in a linear, one-dimensional way. Like a traditional book (or better, an audiobook), a page is scanned by the screen reader sequentially from top left to bottom right, line by line.
 
-This is due to the nature of written (and spoken) information: it is presented in a purely linear, sequential fashion, one word after the other, approximately like this:
+This is due to the nature of written (and spoken) information: it is presented in a purely linear, sequential fashion, one line after the other, approximately like this:
 
 ![Auditive perception of a typical website (approximative)](_media/auditive-perception-of-a-typical-website.png)
 
