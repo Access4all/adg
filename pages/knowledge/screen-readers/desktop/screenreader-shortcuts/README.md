@@ -1,6 +1,6 @@
 ---
 navigation_title: "Keyboard shortcuts"
-position: 3
+position: 5
 changed: "2018-12-30"
 ---
 

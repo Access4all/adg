@@ -28,6 +28,14 @@ In addition, while modern web browsers are pretty forgiving with malformed websi
 
 Still, there are a few areas that cannot be validated with screen readers and thus need some special attention on their own (mainly visual aspects, such as the usage of colour, contrasts, and some audio and video requirements, just to name a few).
 
+## Mobile vs. desktop screen readers
+
+There is various screen reader software available, which can roughly be divided into mobile and desktop applications. Some of them are preinstalled and deeply integrated into the operating system, while others are 3rd party software. Both mobile and desktop screen readers share a lot of their behaviour. Still, they have some fundamental differences.
+
+Mobile screen readers are relatively easy to use. As such, they are predestined for accessibility beginners, and they reveal already a lot of potential accessibility issues.
+
+Desktop screen readers are rather complex to use. As such, they require quite some effort to be handled properly. In the end, they reveal the most potential accessibility issues.
+
 ## Conclusion
 
-If you want to design modern accessible websites, you won't get around learning how to use screen readers. Our guide will be a huge help for this.
+If you want to design modern accessible websites, you won't get around learning how to use screen readers, both mobile and desktop ones. Our guide will be a huge help for this.
