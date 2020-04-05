@@ -1,10 +1,10 @@
 ---
-navigation_title: "The cursor (and browse/focus modes)"
+navigation_title: "Browse and focus modes"
 position: 1
 changed: "2018-05-30"
 ---
 
-# The cursor (and browse/focus modes)
+# Browse and focus modes
 
 **The relevant desktop screen readers on Windows offer different ways of interacting with the underlying application. The most common ones are browse mode and focus mode. We cannot overestimate the importance of thoroughly knowing their differences.**
 
