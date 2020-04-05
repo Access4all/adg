@@ -10,7 +10,11 @@ changed: "2018-04-13"
 
 ## Visual perception: graphical area (two-dimensional)
 
-Sighted users using a traditional display perceive a page in its full two-dimensional layout. Within fractions of a second, the users perceive the different areas of a page and interprete them intuitively, for example:
+Sighted users using a traditional display perceive a page in its full two-dimensional layout.
+
+![Visual perception of a typical website](_media/visual-perception-of-a-typical-website.png)
+
+Within fractions of a second, the users perceive the different areas of a page and interprete them intuitively, for example:
 
 - Header (typically on top with a logo)
 - Navigation (typically part of the header or on the left side)
@@ -20,23 +24,27 @@ Sighted users using a traditional display perceive a page in its full two-dimens
 
 ## Auditive perception: linear text (one-dimensional)
 
-Blind users using a screen reader perceive a page in a linear, one-dimensional way. Like a traditional book (or better, an audiobook), a page is read aloud by the screen reader sequentially from top left to bottom right: character by character, word by word, sentence by sentence; or content element by content element.
+Blind users using a screen reader perceive a page in a linear, one-dimensional way. Like a traditional book (or better, an audiobook), a page is scanned by the screen reader sequentially from top left to bottom right: character by character, word by word, sentence by sentence; or content element by content element.
 
-This is due to the nature of spoken information: it is presented in a purely linear, sequential fashion, one word after the other. As such, a screen reader can place its cursor (i.e. it can "look") on only one single position in the whole page at a time.
+![Auditive perception of a typical website (approximative)](_media/auditive-perception-of-a-typical-website.png)
 
-For example, in VoiceOver/iOS, the cursor looks like this:
+This is due to the nature of written (and spoken) information: it is presented in a purely linear, sequential fashion, one word after the other. As such, a screen reader can place its cursor (i.e. it can "look") on only one single element of the whole screen at a time.
+
+## Screen reader cursor vs. browser focus
+
+The screen reader's cursor is somewhat similar to the browser's focus. But while the browser's focus can only be set to focusable elements (like the address bar, or links and form elements in the document), the screen reader's cursor reaches all elements (even headings, paragraphs, etc.).
+
+For example, in VoiceOver/iOS the cursor looks like this:
 
 ![VoiceOver/iOS cursor](_media/voiceover-ios-cursor.png)
 
-While in NVDA, the cursor looks like this:
+## Auditive announcement of elements
 
-This is somewhat similar to the focus of traditional browsers; in fact, when the screen reader cursor reaches a focusable element, the element's focus state usually is triggered, too.
-      - But while the browser focus can only be set to focusable elements (like links or form elements), the screen reader's cursor reaches all elements on the website.
-- The screen reader reads aloud the information fragment on which its cursor currently is placed.
-    - Depending on how the user navigates, typically either a full line of text, a word, or a single character is announced.
-    - The position of the cursor can then be moved by the user to another information fragment (for example from one line of text to the next one, or from one word to the next one), each of which then is announced by the screen reader.
+The screen reader always reads aloud the information fragment on which its cursor currently is placed. The cursor can be moved by the user to the next (or previous) element, which then again is announced by the screen reader.
 
-This way, users typically move their cursor through the whole document, from the very top to the very bottom - or until they find the information they are looking for. In many cases, this means that screen reader users need a lot more time to browse a webpage than visual users do.
+This way, users move their cursor through the whole document, from the very top to the very bottom - or until they find the information they are looking for. In many cases, this means that screen reader users need a lot more time to browse a webpage than visual users do.
+
+![Cursor sequence on a typical website](_media/cursor-sequence-on-a-typical-website.png)
 
 ## Observation of content changes
 
