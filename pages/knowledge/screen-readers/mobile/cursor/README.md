@@ -4,9 +4,9 @@ position: 1
 changed: "2018-05-30"
 ---
 
-# The cursor
+# The cursor (or: where am I?)
 
-**TODO**
+**When browsing websites using a screen reader**
 
 When a mobile screen reader is running, a cursor (distinctive border) is painted around the current element.
 
