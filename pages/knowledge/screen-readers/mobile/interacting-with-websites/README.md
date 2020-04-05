@@ -1,6 +1,6 @@
 ---
 navigation_title: "Interacting with websites"
-position: 3
+position: 2
 changed: "2018-04-13"
 ---
 
