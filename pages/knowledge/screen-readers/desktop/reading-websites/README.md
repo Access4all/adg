@@ -75,7 +75,7 @@ If you are really curious and want to learn more about this, skip ahead and read
 
 ## Autofocus addendum
 
-In short: don't be worried too much if after a page load the screen reader focus is somewhere you didn't expect it to be. Simply press `Ctrl + Home` and make your way through the page from the top.
+In short: don't be worried too much if after a page load the screen reader cursor is somewhere you didn't expect it to be. Simply press `Ctrl + Home` and make your way through the page from the top.
 
 There are two kinds of autofocus, which may prevent that a screen reader starts to read a document from the very beginning.
 

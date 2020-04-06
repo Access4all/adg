@@ -10,7 +10,7 @@ changed: "2018-04-13"
 
 ## Opening a website
 
-We advise you to activate your mobile screen reader only when reading and interacting with a web page. For anything else (like entering an URL into the browser's address bar) we advise you to deactivate it temporarily. As soon as the web page has loaded, start your screen reader again.
+We advise you to activate your mobile screen reader only when reading and interacting with a web page. For anything else like entering an URL into the browser's address bar we advise you to deactivate it temporarily; as soon as the web page has loaded, start it again.
 
 - For VoiceOver/iOS, use the accessibility shortcut by tripple clicking the Home button (if you haven't done this yet, go back and read [VoiceOver/iOS configuration](/setup/screen-readers/voiceover-ios/)).
 - For Talkback, (???is there a shortcut meanwhile???).
@@ -34,16 +34,21 @@ This behaviour usually is confusing to new users, as they expect that pointing o
 
 If you move your finger over the touch screen, any element below your finger will receive the cursor. This is a good way to scan the screen and browse for elements.
 
-## Rotor (iOS)
+## Change settings using Rotor (VoiceOver/iOS)
 
 The rotor is a quickly accessible menu which offers more ways to interact with VoiceOver/iOS. To use it, rotate two fingers on your screen as if you're turning a dial. VoiceOver/iOS will announce the current setting; if you want to hear more settings, keep rotating your fingers until you found the one you need. To interacht with the current setting, swipe up or down with one finger.
 
 Some of the settings that prove to be useful in daily accessibility testing are:
 
 - Speech rate: increase or decrease.
-- Container/headings/characters/words: move the cursor to the next or previous corresponding element.
+- Container/Headings/Characters/Words: move the cursor to the next or previous corresponding element.
+    - Especially the "Headings" setting is useful, as it allows to scan a website quickly for expected content.
 - Language: toggle through available languages (for example, if a website has a wrong or missing `lang` attribute).
 
 ## ??? (Talkback)
 
 TODO: Is there anything similar for Talkback?
+
+## Screen dim (VoiceOver/iOS)
+
+If you want to have the "real deal" (i.e. have truly the same experience like a blind person), you can dim your iPhone's screen by triple clicking on it using three fingers. Do the same again to un-dim.

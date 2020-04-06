@@ -10,4 +10,6 @@ changed: "2018-09-26"
 
 ![Talkback icon](_media/talkback-icon.png)
 
-TODO: Display Speech Output
+## Display Speech Output
+
+Displays the current announcement as text on screen. Very useful while developing! Sadly there's nothing like that in VoiceOver/iOS.

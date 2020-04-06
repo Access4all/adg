@@ -6,19 +6,19 @@ changed: "2018-04-13"
 
 # How to interact with websites using a desktop screen reader
 
-**Modern websites offer a lot of interactivity - long gone are the times of static pages. Complex interactions can become quite a challenge using a screen reader, but if done properly, there are no limits.**
+**Due to the differences between browse and focus modes in desktop screen readers, interacting with form controls or widgets can be a bit of a challenge at first. In the end, well-built components can always be understood and controlled by screen reader users, regardless of the given complexities.**
 
-Beneath simple reading of information, most modern websites offer a lot of interactivity.
-
-**Important:** For this article you need to know how to read websites using a desktop screen reader. If you haven't done so yet, go back and read [How to read websites using a desktop screen reader](/knowledge/desktop-screen-readers/reading-websites) thoroughly before you continue here.
+**Important:** For this article you need to know how to read websites using a desktop screen reader. If you haven't done so yet, go back and read [How to read websites using a desktop screen reader](/knowledge/screen-readers/desktop/reading-websites/) thoroughly before you continue here.
 
 ## Activating elements
 
-Press `Enter` to activate elements (like links or buttons).
+When the screen reader cursor is on an element, press `Enter` to activate it if possible (like links or buttons).
 
-## Interacting with forms
+## Interacting with elements
 
-Press `Enter` to interact with editable form elements, or to submit a form. Use `Space` to expand/collapse comboboxes or to toggle checkboxes. Use `Left/Right/Up/Down` keys to toggle values. Press `Enter` to activate buttons.
+### Forms
+
+Press `Enter` to interact with editable form elements. Use `Space` to expand/collapse comboboxes or to toggle checkboxes. Use `Left/Right/Up/Down` keys to toggle values.
 
 Use cases:
 
@@ -31,7 +31,7 @@ Use cases:
 
 If you are really curious and want to learn more about this, skip ahead and read [How to handle forms](/examples/forms/handling).
 
-## Interacting with widgets
+### Widgets
 
 Interacting with widgets can be tricky, especially when ARIA roles are used (if you haven't done this yet, go back and read [ARIA - when HTML simply is not enough](/knowledge/aria)).
 
