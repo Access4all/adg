@@ -24,12 +24,9 @@ But even if this may give a rudimentary feeling of what the website "looks" to s
 
 Most of all, special attention needs to be paid to the different values of the `display` attribute:
 
-- Some can hide elements from screen readers.
-    - If you are really curious and want to learn more about this, skip ahead and read [Hiding elements correctly](/examples/hiding-elements).
-- Some can change the way how screen readers split blocks of information.
-    - If you are really curious and want to learn more about this, skip ahead and read [Block vs. Inline Elements](/examples/block-vs-inline-elements).
-- Some can change the role of an element.
-    - If you are really curious and want to learn more about this, skip ahead and read [Responsive tables](/examples/tables/responsive).
+- Some can hide elements from screen readers (if you are really curious and want to learn more about this, skip ahead and read [Hiding elements correctly](/examples/hiding-elements)).
+- Some can change the way how screen readers split blocks of information (if you are really curious and want to learn more about this, skip ahead and read [Block vs. Inline Elements](/examples/block-vs-inline-elements)).
+- Some can change the role of an element (if you are really curious and want to learn more about this, skip ahead and read [Responsive tables](/examples/tables/responsive)).
 - Fiddling around with the `content` attribute and pseudo elements (like `::after`) sometimes may have unexpected side effects.
 
 So if you know its shortcomings, disabling CSS sometimes can be a useful "poor man's screen reader substitute". But it will never be a real replacement for a real screen reader - not at least because of still delivering a two-dimensional output (instead of a one-dimensional one).

@@ -6,53 +6,24 @@ changed: "2018-04-13"
 
 # How to read websites using a desktop screen reader
 
-**For a sighted person, it's hard to imagine how a screen reader user surfs the internet. For a web developer with accessibility in mind, it's crucial to have a basic knowledge about this topic. So be ready to get a concrete idea of the main strategies available to read a website using a screen reader!**
-
-Screen readers have a linear, one-dimensional scope on webpages (if you haven't done this yet, go back and read [Screen readers process contents in a linear way](/knowledge/desktop-screen-readers/linear-processing)). So when browsing a website for the first time, blind users have to manually get a general idea of its layout and contents. They usually achieve that by combing through the page from top to bottom, trying to identify meaningful blocks of information.
-
-The more a user has accustomed to a website, over time, they will work out quicker ways of navigating between blocks of information, or of using its interactive features.
+**While mobile screen readers already offer a pretty good idea of how it is to surf the internet as a blind person, they offer way less features (and thus complexity) than desktop ones. So be ready to get a concrete idea of the main strategies available to read a website using a desktop screen reader!**
 
 ## Opening a website
 
 This is done the same way like using a keyboard only. So if you haven't done this yet, go back and read [How to browse websites using a keyboard only](/knowledge/keyboard-only/browsing-websites).
 
-## Autofocus workaround
-
-After the page has loaded (indicated by screen readers by announcing the current page's `<title>` element), most blind users always intuitively press `Ctrl + Home` first.
-
-This is to work around various kinds of autofocus functionality, so the user can be sure that the screen reader starts reading from the very beginning of the document.
-
-### Website autofocus
-
-Some websites automatically set the initial focus to a specific element of the page (using `autofocus` attribute or by running some JavaScript):
-
-- This can be helpful, for example on sites like [Google.com](http://www.google.com) where most of the time users want to enter a search term right into the search field.
-- But when opening a site for the first time, blind users usually want to read through the whole content (top to bottom) to get a general, exhaustive overview.
-
-### Screen reader autofocus
-
-When leaving a page, some screen readers try to remember the current reading position. When re-visiting the same page, they try to set the focus to the remembered position (but this only happens when the website itself does not have any autofocus functionality):
-
-- This can be useful, for example when re-visiting a text that was not read completely before.
-- But it can also be confusing sometimes, for example in a shopping cart when removing an item:
-    - After re-display, the removed element is missing, but the screen reader still tries to set the focus where the element had been before, resulting in focusing a seemingly random element.
-
-This functionality dates from a passed internet era. Back then, the internet was mainly a bunch of static websites. Thus, no changes to a page would normally be expected after re-visiting it.
-
-### Autofocus conclusion
-
-Don't be worried too much if after a page load the screen reader focus is somewhere you didn't expect it to be. Simply press `Ctrl + Home` and make your way through the page from the top.
+After the page has loaded (indicated by screen readers by announcing the current page's `<title>` element), most blind users always intuitively press `Ctrl + Home` first. This is to work around any autofocus functionality, so the user can be sure that the screen reader starts reading from the very beginning of the document.
 
 ## Reading through a document
 
-The easiest way to read through a document is line by line:
+The standard way to read through a document is to move the screen reader cursor from line to line:
 
-- To navigate from one line of text to the next one, the `Down` key is used.
-- To navigate to the previous one, the `Up` key is used.
+- To navigate from one line of text to the next one, press the `Down` key.
+- To navigate to the previous one, press the `Up` key.
 
 Depending on the screen reader, a "line" is around 80 characters and can be compared to a line of text in the multi-column layout of a newspaper. This is to make very long sentences easily digestible for the user: they're simply split into small parts, and the user controls when to move to the next (or previous) part.
 
-Instead of browsing line by line, the NVDA screen reader allows to read elements fully in one go (e.g. a complete paragraph regardless of its length). For this, simply use `Ctrl + Down` (or `Ctrl + Up`).
+In addition to this, the NVDA screen reader allows to read elements fully in one go (e.g. a complete paragraph regardless of its length). For this, simply use `Ctrl + Down` (or `Ctrl + Up`).
 
 **Important:** as opposed to keyboard only users, screen reader users usually do not use the `Tab` key to read a page! If you haven't done this yet, go back and read [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes) to know the difference between navigation using `Arrow` keys and `Tab` key.
 
@@ -101,3 +72,26 @@ Press `F` to move to form elements, or press `B` to move to buttons. Add `Shift`
 Use case: to quickly find the login form, simply search for the respective input field by pressing `F`.
 
 If you are really curious and want to learn more about this, skip ahead and read [How to handle forms](/examples/forms/handling).
+
+## Autofocus addendum
+
+In short: don't be worried too much if after a page load the screen reader focus is somewhere you didn't expect it to be. Simply press `Ctrl + Home` and make your way through the page from the top.
+
+There are two kinds of autofocus, which may prevent that a screen reader starts to read a document from the very beginning.
+
+### Website autofocus
+
+Some websites automatically set the initial focus to a specific element of the page (using `autofocus` attribute or by running some JavaScript):
+
+- This can be helpful, for example on sites like [Google.com](http://www.google.com) where most of the time users want to enter a search term right into the search field.
+- But when opening a site for the first time, blind users usually want to read through the whole content (top to bottom) to get a general, exhaustive overview.
+
+### Screen reader autofocus
+
+When leaving a page, some screen readers try to remember the current reading position. When re-visiting the same page, they try to set the focus to the remembered position (but this only happens when the website itself does not have any autofocus functionality):
+
+- This can be useful, for example when re-visiting a text that was not read completely before.
+- But it can also be confusing sometimes, for example in a shopping cart when removing an item:
+    - After re-display, the removed element is missing, but the screen reader still tries to set the focus where the element had been before, resulting in focusing a seemingly random element.
+
+This functionality dates from a passed internet era. Back then, the internet was mainly a bunch of static websites. Thus, no changes to a page would normally be expected after re-visiting it.

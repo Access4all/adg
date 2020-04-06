@@ -8,8 +8,6 @@ changed: "2018-05-30"
 
 **NVDA (Non Visual Desktop Access) is a lightweight and reliable open source screen reader. It is very standards-compliant and is the best choice to be used as a reference for accessibility. NVDA is the perfect companion to be fired up frequently while developing. After using it for a while, you will respect it as a firm but fair teacher.**
 
-![NVDA icon](_media/nvda-icon.png)
-
 ## Installation
 
 [Download NVDA](http://www.nvaccess.org/download/).
@@ -33,6 +31,8 @@ For detailed information, see [Creating a Portable Copy (NVAccess.org)](http://w
 ### Starting
 
 If you chose normal installation, you can start (and restart) NVDA any time by pressing the `Ctrl + Alt + N`, or using its icon on the desktop.
+
+![NVDA icon](_media/nvda-icon.png)
 
 If you chose portable installation, simply start NVDA using the `NVDA.exe` in its installation folder.
 
@@ -60,7 +60,7 @@ The best way to use the NVDA menu is by keyboard:
 
 While NVDA is running, it's announcing whatever your screen is currently showing.
 
-- To make NVDA abort the current stream of words, press `Ctrl`.
+- To make NVDA abort the current output, press `Ctrl` (or `Shift` to skip the current line).
 - To make NVDA shut up completely, you can toggle speech mode by pressing `NVDA + S`.
     - Be aware though that NVDA is still running in the background, so your computer may behave differently in some situations!
 

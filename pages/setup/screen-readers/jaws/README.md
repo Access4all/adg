@@ -8,8 +8,6 @@ changed: "2018-05-30"
 
 **JAWS (Job Access With Speech) is one of the most-used screen readers. Therefore it's very important to ensure its compatibility with your websites. Due to its heavy weight, JAWS is a rather clumsy companion while developing, but it's absolutely crucial to fire it up every now and then to ensure accessibility.**
 
-![JAWS icon](_media/jaws-icon.png)
-
 ## Installation
 
 JAWS is a quite heavy piece of software that installs itself deeply into the Windows operating system. To keep your existing Windows clean, it is a good idea to install JAWS inside a virtual machine (VM), see [Windows operating system](/setup/windows).
@@ -22,7 +20,11 @@ The demo version of JAWS forces you to restart your computer after 40 minutes (w
 
 ### Starting
 
-Start JAWS using its icon on the desktop. After it has launched, you have to restart your web browser(s) to make JAWS interact with them correctly.
+Start JAWS using its icon on the desktop.
+
+![JAWS icon](_media/jaws-icon.png)
+
+After it has launched, you have to restart your web browser(s) to make JAWS interact with them correctly.
 
 ### Using the menu
 

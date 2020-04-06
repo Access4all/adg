@@ -1,10 +1,10 @@
 ---
-navigation_title: "Linear processing"
+navigation_title: "Linear processing using cursor"
 position: 3
 changed: "2018-04-13"
 ---
 
-# Screen readers process contents in a linear way
+# Screen readers process contents in a linear way using a cursor
 
 **Sighted users perceive a webpage as a two-dimensional, graphical area. Meanwhile, screen reader users perceive a page in a one-dimensional (linear), textual way: one element after the other, from top to bottom. Similar to reading a book, browsing websites in this way is usually considerably slow, as a lot of time is needed to get a proper overview of a full page.**
 
@@ -36,17 +36,21 @@ As such, a screen reader can place its cursor (i.e. it can "look") on only one s
 
 The screen reader's cursor is somewhat similar to the browser's focus. But while the browser's focus can only be set to focusable elements (like links and form elements), the screen reader's cursor reaches all elements (even headings, paragraphs, etc.).
 
-For example, in VoiceOver/iOS the cursor looks like this:
+For example, in VoiceOver/iOS the cursor paints a black border around the current object; it looks like this:
 
 ![VoiceOver/iOS cursor](_media/voiceover-ios-cursor.png)
 
 ### Auditive announcement of elements
 
-The screen reader always reads aloud the information fragment on which its cursor currently is placed. The cursor can be moved by the user to the next (or previous) element, which then again is announced by the screen reader.
+The screen reader always reads aloud the information fragment on which its cursor currently is placed. The cursor can be moved by the user to the next (or previous) element, which then again is announced by the screen reader. The [DOM](https://en.wikipedia.org/wiki/Document_Object_Model) is used to determine the sequence of the elements.
 
-This way, users move their cursor through the whole document, from the very top to the very bottom - or until they find the information they are looking for. In many cases, this means that screen reader users need a lot more time to browse a webpage than visual users do.
+This way, users move their cursor through the whole document, from the very top to the very bottom - or until they find the information they are looking for.
 
 ![Cursor sequence on a typical website](_media/cursor-sequence-on-a-typical-website.png)
+
+In many cases, this means that screen reader users need a lot more time to browse a webpage than visual users do. Especially when browsing a website for the first time, screen reader users have to manually get a general idea of its layout and contents.
+
+The more a user has accustomed to a website though, over time, they will work out quicker ways of navigating between blocks of information.
 
 ### Observation of content changes
 
