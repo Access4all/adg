@@ -13,7 +13,7 @@ changed: "2018-05-14"
 How an element is announced by a screen reader is usually determined by its content. For example, the following link's label is "Google":
 
 ```html
-<a href="...">
+<a href="">
   Google
 </a>
 ```
@@ -31,7 +31,7 @@ ARIA provides two attributes that allow to override these labels.
 Using `aria-label`, an element's label can be set directly. For example, the following link's label is "No, Bing!":
 
 ```html
-<a href="..." aria-label="No, Bing!">
+<a href="" aria-label="No, Bing!">
   Google
 </a>
 ```
@@ -47,7 +47,7 @@ So a screen reader will announce:
 Using `aria-labelledby`, an element's label can be set by referencing the ID of another element. For example, the following link's label is "No, Bing!":
 
 ```html
-<a href="..." aria-labelledby="bing">
+<a href="" aria-labelledby="bing">
   Google
 </a>
 

@@ -35,7 +35,7 @@ We also sometimes see overzealous developers adding redundant ARIA roles to elem
   ...
 </form>
 
-<a href="..." role="link">
+<a href="" role="link">
   Google
 </a>
 ```

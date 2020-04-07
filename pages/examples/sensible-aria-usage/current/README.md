@@ -20,10 +20,10 @@ On a semantical level, the `aria-current` attribute is a good choice to convey t
 
 ```html
 <ul>
-  <li><a href="...">Home</a></li>
-  <li><a href="..." aria-current="true">Blog</a></li>
-  <li><a href="...">Shop</a></li>
-  <li><a href="...">Contact</a></li>
+  <li><a href="">Home</a></li>
+  <li><a href="" aria-current="true">Blog</a></li>
+  <li><a href="">Shop</a></li>
+  <li><a href="">Contact</a></li>
 </ul>
 ```
 
