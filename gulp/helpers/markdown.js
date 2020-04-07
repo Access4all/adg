@@ -130,7 +130,7 @@ module.exports = rootDir => filePath => {
       .use(() => {
         // Add unique IDs to each heading.
         let uniqueIds = {}
-        markdown.core.ruler.push('manipulate_heading_ancor', state => {
+        markdown.core.ruler.push('manipulate_heading_anchor', state => {
           for (let i = 0; i < state.tokens.length; i++) {
             let token = state.tokens[i]
             if (['heading_open'].includes(token.type)) {
