@@ -44,6 +44,7 @@ Our branching strategy is the following:
 
 - a Production deployment is triggered by merging `master` into `production`
 - before merging, a proper tag, based on the [semantic versioning](https://semver.org/), is created
+
 This allows to quickly revert a broken deployment.
 
 ### Feature/bugfix testing deployment
