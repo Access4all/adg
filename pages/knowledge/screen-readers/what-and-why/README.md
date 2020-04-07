@@ -1,7 +1,7 @@
 ---
 navigation_title: "What and why"
 position: 1
-changed: "2018-04-12"
+changed: "2020-04-07"
 ---
 
 # What screen readers are - and why they are so important to accessibility testing

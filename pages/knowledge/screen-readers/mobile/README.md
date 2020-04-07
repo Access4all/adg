@@ -1,7 +1,7 @@
 ---
 navigation_title: "Mobile: VoiceOver/iOS & Talkback"
 position: 5
-changed: "2018-09-26"
+changed: "2020-04-07"
 ---
 
 # Mobile screen readers

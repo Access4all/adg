@@ -1,7 +1,7 @@
 ---
 navigation_title: "Reading websites"
 position: 3
-changed: "2018-04-13"
+changed: "2020-04-07"
 ---
 
 # How to read websites using a desktop screen reader

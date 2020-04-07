@@ -1,7 +1,7 @@
 ---
 navigation_title: "VoiceOver/iOS"
 position: 1
-changed: "2018-09-26"
+changed: "2020-04-07"
 ---
 
 # VoiceOver/iOS configuration

@@ -1,7 +1,7 @@
 ---
 navigation_title: "Interacting with websites"
 position: 2
-changed: "2018-04-13"
+changed: "2020-04-07"
 ---
 
 # How to interact with websites using a mobile screen reader

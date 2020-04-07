@@ -1,7 +1,7 @@
 ---
 navigation_title: "So buggy!"
 position: 8
-changed: "2018-05-01"
+changed: "2020-04-07"
 ---
 
 # How screen readers work - and why they seem so buggy

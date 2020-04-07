@@ -1,7 +1,7 @@
 ---
 navigation_title: "Screen readers"
 position: 5
-changed: "2018-05-02"
+changed: "2020-04-07"
 ---
 
 # Introduction to screen reader usage
