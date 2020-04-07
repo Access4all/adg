@@ -10,7 +10,7 @@ changed: "2018-05-03"
 
 Screen reader users generally interact with form controls using focus mode, meaning they navigate back and forth only between interactive (which are focusable) elements using the `Tab` key (if you haven't done this yet, go back and read [Screen readers' browse and focus modes](/knowledge/screen-readers/desktop/browse-focus-modes)).
 
-Especially in complex forms, it can be necessary to have non-interactive content next to some control: for example paragraphs (or a list) presenting terms and conditions next to an "I agree" checkbox. As this content is not focusable, it is prone to be completely missed by screen reader users when tabbing through the form.
+Especially in complex forms, it can be necessary to have non-interactive content next to some control: for example paragraphs (or a list) presenting terms and conditions next to an "I agree" checkbox. As this content is not focusable, it is prone to be completely missed by screen reader users when tapping or tabbing through the form.
 
 Alas, such content needs to be specifically attached to the form controls, so it is recognisable also in focus mode. There are various approaches to achieve this goal.
 
@@ -66,7 +66,7 @@ When navigating using the `Tab` key, the easiest way to prevent non-focusable co
 
 While this may be tempting, it is very bad style: only elements that provide some interaction (buttons, links, form controls, etc.) should be focusable. Otherwise keyboard only users may be confused, as they may think that (for example) a paragraph can be interacted with, although it cannot.
 
-Also, it is unfortunate that the descriptive text of a form control always is announced to screen readers **after** interacting with it (right after leaving it using `Tab`).
+Also, it is unfortunate that the descriptive text of a form control always is announced to screen readers **after** interacting with it (right after leaving it using tap or `Tab`).
 
 ### Placing more content into labels
 
@@ -106,7 +106,7 @@ And for associating additional content to a control ("Please enter..."), we advi
 
 ### More than one label per input
 
-It is perfectly valid HTML to associate more than a single `<label>` element to an input. But Internet Explorer sadly connects only one of them, resulting in incomplete screen reader announcements.
+It is perfectly valid HTML to associate more than a single `<label>` element to an input. But Internet Explorer sadly connects only one of them, resulting in incomplete desktop screen reader announcements.
 
 So the following is not a recommended solution:
 

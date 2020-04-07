@@ -8,7 +8,7 @@ changed: "2018-05-02"
 
 **Data submitted in a form is usually validated in some way. And if there is any unacceptable data, the form is traditionally re-displayed, together with validation messages. In such a case, it is important to immediately inform screen reader users, so they know that they have to look at their data and submit again.**
 
-As with any other non-interactive content, validation messages need to be associated to the form controls so screen readers do not miss them when using the `Tab` key to navigate the form. This is done best using ARIA (for more info, see [Placing non-interactive content between form controls](/examples/forms/non-interactive-content)).
+As with any other non-interactive content, validation messages need to be associated to the form controls so screen readers do not miss them when using the tap or the `Tab` key to navigate the form. This is done best using ARIA (for more info, see [Placing non-interactive content between form controls](/examples/forms/non-interactive-content)).
 
 We will now show the two typical use cases of displaying validation messages. Both approaches work for full page reloads and AJAX validations.
 
@@ -29,7 +29,7 @@ After fixing the invalid input, the user can search for other invalid ones or si
 
 The following example is very similar to the one above, except in this use case, all messages are displayed inside a `<fieldset>`/`<legend>` structure on top of the form. Each message is an in-page link, targeting the respective invalid input.
 
-In addition to this, each invalid input is associated to its message using `aria-describedby`. This is important, as it makes sure that screen readers also announce the messages when navigating through the inputs using the `Tab` key.
+In addition to this, each invalid input is associated to its message using `aria-describedby`. This is important, as it makes sure that screen readers also announce the messages when navigating through the inputs using the tap or `Tab` key.
 
 [Example](_examples/form-validation-with-messages-on-top)
 
