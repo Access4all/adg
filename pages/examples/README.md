@@ -43,7 +43,7 @@ All our examples are heavily tested on accessibility. The compatibility results 
 There are results of the currently relevant assistive devices:
 
 - Keyboard only (see [Introduction to keyboard only usage](/knowledge/keyboard-only/)).
-- [Relevant combinations of screen readers and browsers](/knowledge/desktop-screen-readers/relevant-combinations/).
+- [Relevant combinations of screen readers and browsers](/knowledge/screen-readers/relevant-combinations/).
 
 #### Special results
 

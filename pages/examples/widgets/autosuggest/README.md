@@ -54,7 +54,7 @@ Some interesting peculiarities:
 
 ### JAWS' auto forms mode
 
-As we know from [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes), JAWS' "Auto Forms Mode" can lead to leaving a text input upon pressing `Up` and `Down`.
+As we know from [Screen readers' browse and focus modes](/knowledge/screen-readers/desktop/browse-focus-modes), JAWS' "Auto Forms Mode" can lead to leaving a text input upon pressing `Up` and `Down`.
 
 In our autosuggest widget we have bound these keys to toggle through the displayed results. And although preventing the default action upon pressing those keys (using JavaScript's `event.preventDefault()`), JAWS (sometimes) does not respect this and leaves the text input.
 

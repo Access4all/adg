@@ -62,4 +62,4 @@ To screen readers users, such a change to the page can potentially only be obser
 
 ![Blind user does not perceive content changes](_media/blind-user-does-not-perceive-content-changes.png)
 
-To handle situations like this, there are ways to tell screen readers to observe specific elements for changes; so if you are really curious and want to learn more about this, skip ahead and read [How to implement websites that are ready for screen reader usage](/knowledge/desktop-screen-readers/how-to-implement).
+To handle situations like this, there are ways to tell screen readers to observe specific elements for changes; so if you are really curious and want to learn more about this, skip ahead and read [How to implement websites that are ready for screen reader usage](/knowledge/screen-readers/how-to-implement).

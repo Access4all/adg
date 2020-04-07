@@ -80,7 +80,7 @@ This seems to be a bug in Firefox, see: [Input type="file" is only read as "brow
 
 ### Checkboxes do not trigger focus mode
 
-You may have noticed that NVDA does not activate focus mode when focusing a checkbox using the `Tab` key. As each and every other form control activates focus mode upon focus, this may feel irritating (if you haven't done this yet, go back and read [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes)).
+You may have noticed that NVDA does not activate focus mode when focusing a checkbox using the `Tab` key. As each and every other form control activates focus mode upon focus, this may feel irritating (if you haven't done this yet, go back and read [Screen readers' browse and focus modes](/knowledge/screen-readers/desktop/browse-focus-modes)).
 
 More information here: [Why do radio buttons trigger focus mode, but checkboxes do not? (GitHub.com)](https://github.com/nvaccess/nvda/issues/7578).
 
@@ -112,7 +112,7 @@ But HTML also the `<label>` to surround the form control, removing the need for 
 
 All in all, basic forms are very accessible by themselves.
 
-However, although basic forms are a longstanding and fundamental part of the HTML standard, in some situations, screen readers (both NVDA and JAWS) behave a bit irritating, if not buggy (if you haven't done this yet, go back and read [How screen readers work - and why they seem so buggy](/knowledge/desktop-screen-readers/so-buggy)).
+However, although basic forms are a longstanding and fundamental part of the HTML standard, in some situations, screen readers (both NVDA and JAWS) behave a bit irritating, if not buggy (if you haven't done this yet, go back and read [How screen readers work - and why they seem so buggy](/knowledge/screen-readers/so-buggy)).
 
 Here we presented some of the possible irritations we know and how to avoid them. But there may be more, especially in complex forms. This can make it hard for developers testing their solution for accessibility to decide whether their solution is "good enough", or whether they manually need to provide additional optimisations.
 

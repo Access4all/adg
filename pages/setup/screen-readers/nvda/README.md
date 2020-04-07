@@ -46,7 +46,7 @@ By clicking on the icon, the NVDA menu is displayed.
 
 ![The NVDA menu](_media/the-nvda-menu.png)
 
-Alternatively, you can press `NVDA + N` to display it. By default, the `NVDA` key is the `Insert` key (if you are really curious and want to learn more about this, skip ahead and read [The Insert Modifier Key](/knowledge/desktop-screen-readers/insert-modifier-key).
+Alternatively, you can press `NVDA + N` to display it. By default, the `NVDA` key is the `Insert` key (if you are really curious and want to learn more about this, skip ahead and read [The Insert Modifier Key](/knowledge/screen-readers/desktop/insert-modifier-key).
 
 The best way to use the NVDA menu is by keyboard:
 
@@ -156,7 +156,7 @@ There are several indications:
 - A red border is painted around the element where the focus cursor currently is.
     - The red border turns into blue when the element is being interacted with.
 
-If you are really curious and want to learn more about these different cursor types, skip ahead and read [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes).
+If you are really curious and want to learn more about these different cursor types, skip ahead and read [Screen readers' browse and focus modes](/knowledge/screen-readers/desktop/browse-focus-modes).
 
 [Download FocusHighlight add-on](http://addons.nvda-project.org/addons/focusHighlight.en.html) (stable version) and install it!
 

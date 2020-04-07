@@ -8,7 +8,7 @@ changed: "2018-05-03"
 
 **It sometimes feels necessary to group complex forms visually using headings. As traditionally used headings are non-focusable elements, you have to make sure that they are not missed by screen reader users in focus mode.**
 
-Although it is the traditional way to group form controls using `<fieldset>`/`<legend>` structures (and they are even capable of being nested), sometimes there is the need to use headings within forms. But those headings are not announced in focus mode by default (if you haven't done this yet, go back and read [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes)).
+Although it is the traditional way to group form controls using `<fieldset>`/`<legend>` structures (and they are even capable of being nested), sometimes there is the need to use headings within forms. But those headings are not announced in focus mode by default (if you haven't done this yet, go back and read [Screen readers' browse and focus modes](/knowledge/screen-readers/desktop/browse-focus-modes)).
 
 The good news: since HTML 5.2, headings are allowed within `<legend>` elements, see [The legend element (W3.org)](https://www.w3.org/TR/html52/sec-forms.html#the-legend-element).
 
