@@ -203,9 +203,9 @@ module.exports = rootDir => filePath => {
                       }</span>${
                         example.code.preview
                           ? `<img src="/${path.relative(
-                            path.join(rootDir, 'pages'),
-                            example.code.preview
-                          )}" alt="Preview">`
+                              path.join(rootDir, 'pages'),
+                              example.code.preview
+                            )}" alt="Preview">`
                           : ''
                       }`
                     }
