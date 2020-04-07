@@ -25,7 +25,7 @@ Depending on the screen reader, a "line" is around 80 characters and can be comp
 
 In addition to this, the NVDA screen reader allows to read elements fully in one go (e.g. a complete paragraph regardless of its length). For this, simply use `Ctrl + Down` (or `Ctrl + Up`).
 
-**Important:** as opposed to keyboard only users, screen reader users usually do not use the `Tab` key to read a page! If you haven't done this yet, go back and read [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes) to know the difference between navigation using `Arrow` keys and `Tab` key.
+**Important:** as opposed to keyboard only users, screen reader users usually do not use the `Tab` key to read a page! If you haven't done this yet, go back and read [Screen readers' browse and focus modes](/knowledge/screen-readers/desktop/browse-focus-modes) to know the difference between navigation using `Arrow` keys and `Tab` key.
 
 ### Reading headings
 

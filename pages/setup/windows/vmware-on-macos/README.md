@@ -59,7 +59,7 @@ Windows screen readers make use of the function keys (`F1` to `F12`) a lot.
 
 By default, in macOS, you have to press the `Fn` key in addition to the specific function key to trigger it.
 
-Keyboard shortcuts of screen readers are quite tricky (if you are really curious and want to learn more about this, skip ahead and read [The Insert Modifier Key](/knowledge/desktop-screen-readers/insert-modifier-key) and also [Screen Reader Shortcuts](/knowledge/desktop-screen-readers/screenreader-shortcuts)). As the function keys are often part of them, we suggest that you [change the behaviour of function keys (Apple Support)](https://support.apple.com/en-us/HT204436) so you do not have to use the `Fn` key for them, too.
+Keyboard shortcuts of screen readers are quite tricky (if you are really curious and want to learn more about this, skip ahead and read [The Insert Modifier Key](/knowledge/screen-readers/desktop/insert-modifier-key) and also [Screen Reader Shortcuts](/knowledge/screen-readers/desktop/screenreader-shortcuts)). As the function keys are often part of them, we suggest that you [change the behaviour of function keys (Apple Support)](https://support.apple.com/en-us/HT204436) so you do not have to use the `Fn` key for them, too.
 
 ### Emulating the Insert key
 

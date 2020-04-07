@@ -46,7 +46,7 @@ By clicking on the icon, the JAWS menu is displayed.
 
 ![The JAWS menu](_media/the-jaws-menu.png)
 
-Alternatively, you can press `JAWS + J` to display it. By default, the `JAWS` key is the `Insert` key (if you are really curious and want to learn more about this, skip ahead and read [The Insert Modifier Key](/knowledge/desktop-screen-readers/insert-modifier-key)).
+Alternatively, you can press `JAWS + J` to display it. By default, the `JAWS` key is the `Insert` key (if you are really curious and want to learn more about this, skip ahead and read [The Insert Modifier Key](/knowledge/screen-readers/desktop/insert-modifier-key)).
 
 The best way to use the JAWS menu is by keyboard:
 
@@ -90,7 +90,7 @@ Screen readers in general offer tons of configuration options which can drastica
 
 ### Disable auto forms mode (optional)
 
-JAWS by default switches automatically between interaction modes (if you are really curious about this, skip forward and read [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes)). While programming and testing (especially complex JavaScript widgets), this behaviour can be a bit nasty.
+JAWS by default switches automatically between interaction modes (if you are really curious about this, skip forward and read [Screen readers' browse and focus modes](/knowledge/screen-readers/desktop/browse-focus-modes)). While programming and testing (especially complex JavaScript widgets), this behaviour can be a bit nasty.
 
 This mode can be disabled, so it is similar to NVDA. **But we urge you to only do this if you really know what you are doing.**
 
