@@ -1,7 +1,7 @@
 ---
 navigation_title: "Interacting with websites"
 position: 2
-changed: "2020-04-07"
+changed: "2020-04-23"
 ---
 
 # How to interact with websites using a mobile screen reader
@@ -21,6 +21,6 @@ On more complex elements, double tapping enters their interaction mode:
 - For text fields and text areas, the on-screen keyboard is displayed.
 - For comboboxes, their options are displayed.
 
-To make life easier: while interacting with any standard HTML control, we advise you to stop the screen reader (TODO: is there a shortcut for Talkback??), and after you have completed your interaction, simply restart it. You do not miss any important screen reader interaction here (as you are solely interacting with the system's standard controls).
+To make life easier: while interacting with any standard HTML control, we advise you to stop the screen reader, and after you have completed your interaction, simply restart it. You do not miss any important screen reader interaction here (as you are solely interacting with the system's standard controls).
 
 For example, when entering a text into a textarea, simply move the screen reader cursor to the textarea, then double click to activate it. Navigating the now displayed on-screen keyboard is pretty long-winded using the screen reader, so simply disable the it. Now enter some text as usual, then restart the screen reader and continue with your testing.

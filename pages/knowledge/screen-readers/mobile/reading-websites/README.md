@@ -1,7 +1,7 @@
 ---
 navigation_title: "Reading websites"
 position: 1
-changed: "2020-04-07"
+changed: "2020-04-23"
 ---
 
 # How to read websites using a mobile screen reader
@@ -13,7 +13,7 @@ changed: "2020-04-07"
 We advise you to activate your mobile screen reader only when reading and interacting with a web page. For anything else like entering an URL into the browser's address bar we advise you to deactivate it temporarily; as soon as the web page has loaded, start it again.
 
 - For VoiceOver/iOS, use the accessibility shortcut by tripple clicking the Home button (if you haven't done this yet, go back and read [VoiceOver/iOS configuration](/setup/screen-readers/voiceover-ios/)).
-- For Talkback, (???is there a shortcut meanwhile???).
+- For TalkBack, on recent Android versions, the shortcut is operated by pressing both volume keys for 3 seconds. Additional information about this feature can be found at the [TalkBack configuration page](/setup/screen-readers/talkback/))
 
 ## Reading through a document
 
@@ -45,10 +45,18 @@ Some of the settings that prove to be useful in daily accessibility testing are:
     - Especially the "Headings" setting is useful, as it allows to scan a website quickly for expected content.
 - Language: toggle through available languages (for example, if a website has a wrong or missing `lang` attribute).
 
-## ??? (Talkback)
+## TalkBack's global and local context menus
+TalkBack provides two menus to help the user to quickly find common settings and controls.
+The activation gestures can be changed in the Settings.
 
-TODO: Is there anything similar for Talkback?
+### The global context menu
+By default, this is activated by smoothly swiping down then right, somehow smoothly drawing an "L" sign and can display a list or a circle,
+depending on the setup.  
+It presents the user with a number of options, including "TalkBack Settings" and "Text to speech settings". 
+  
+### The local context menu
+By default, this is activated by smoothly swiping up then right and can display a list or a circle, depending on the setup.  
+It contains controls that relate to the currently focused item, like "Navigation options" and "Links menu"
 
 ## Screen dim (VoiceOver/iOS)
-
 If you want to have the "real deal" (i.e. have truly the same experience like a blind person), you can dim your iPhone's screen by triple clicking on it using three fingers. Do the same again to un-dim.
