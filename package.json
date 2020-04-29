@@ -78,7 +78,7 @@
   "dependencies": {
     "ajv": "^6.10.2",
     "details-polyfill": "^1.1.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "normalize-strings": "^1.1.0"
   }
 }
