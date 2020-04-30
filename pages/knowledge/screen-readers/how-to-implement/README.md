@@ -58,12 +58,12 @@ In general though, this often is a sign for bad interaction design: if it needs 
 
 While developing, you need to use your screen readers on a regular basis to ensure your product is accessible.
 
-We advise you to use NVDA for this. Every now and then, do not forget to counter-check using VoiceOver/iOS, JAWS, and Talkback though. So if you haven't done this yet, go back and read:
+We advise you to use NVDA for this. Every now and then, do not forget to counter-check using VoiceOver/iOS, JAWS, and TalkBack though. So if you haven't done this yet, go back and read:
 
 - [NVDA installation and configuration](/setup/screen-readers/nvda)
 - [VoiceOver/iOS installation and configuration](/setup/screen-readers/voiceover-ios)
 - [JAWS installation and configuration](/setup/screen-readers/jaws)
-- [Talkback installation and configuration](/setup/screen-readers/talkback)
+- [TalkBack installation and configuration](/setup/screen-readers/talkback)
 
 ## Conclusion
 

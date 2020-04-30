@@ -68,7 +68,7 @@ We have conducted additional compatibility tests, all with assistive devices tha
     - Narrator with Edge
 - Mobile screen readers:
     - VoiceOver/iOS with Safari
-    - Talkback with Chrome
+    - TalkBack with Chrome
 
 While some of these devices still show problems, the general outlook confirms that our examples are as future-proof as possible.
 
