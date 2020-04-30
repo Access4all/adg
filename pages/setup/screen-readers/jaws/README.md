@@ -6,7 +6,7 @@ changed: "2020-04-07"
 
 # JAWS installation and configuration
 
-**JAWS (Job Access With Speech) is one of the most-used screen readers. Therefore it's very important to ensure its compatibility with your websites. Due to its heavy weight, JAWS is a rather clumsy companion while developing, but it's absolutely crucial to fire it up every now and then for counterchecking accessibility on desktop.**
+**JAWS (Job Access With Speech) is one of the most-used desktop screen readers. Therefore it's very important to ensure its compatibility with your websites. Due to its heavy weight, JAWS is a rather clumsy companion while developing, but it's absolutely crucial to fire it up every now and then for counterchecking accessibility on desktop.**
 
 ## Installation
 

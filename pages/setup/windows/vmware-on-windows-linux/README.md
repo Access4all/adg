@@ -44,7 +44,7 @@ Start the VM. User and password can be found here: [Getting a free Windows virtu
 
 ### Emulating the Insert key
 
-Windows screen readers rely heavily on the `Insert` key.
+Windows desktop screen readers rely heavily on the `Insert` key.
 
 ![Insert key on a keyboard](_media/insert-key-on-a-keyboard.png)
 

@@ -23,7 +23,7 @@ Besides many other requirements, we want to stress out explicitly the following:
 - The meaning and usage of the autosuggest must be clear.
 - If possible, the total number of suggestions should be perceivable ("3 suggestions in total" or similar).
 - Proper feedback must be given upon entering a filter ("2 suggestions available for X" or similar).
-- The autosuggest must be operable using both keyboard only and screen reader (with a reasonable interplay of default keys like `Tab`, `Enter`/`Space`, `Esc`, `Arrow` keys).
+- The autosuggest must be operable using both keyboard only and desktop screen readers (with a reasonable interplay of default keys like `Tab`, `Enter`/`Space`, `Esc`, `Arrow` keys), as well as mobile screen readers.
 
 ## Proof of concept
 

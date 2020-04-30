@@ -32,7 +32,7 @@ In the example, all attributes irrelevant for demonstration purposes (for exampl
 
 [Example](_examples/generally-good-form)
 
-Navigate the example using `Tab` and notice how the screen reader announces all relevant information about the current form control.
+Navigate the example using tap or `Tab` and notice how the screen reader announces all relevant information about the current form control.
 
 ## Irritating screen reader behaviours
 
@@ -88,7 +88,7 @@ More information here: [Why do radio buttons trigger focus mode, but checkboxes 
 
 There are two `disabled` form controls in our example: the coupon input and the cancel button. You may have noticed that both of them are not focusable. This in fact is not a screen reader peculiarity, but how browsers handle focusability.
 
-Technically speaking, disabling controls is a fully valid standard technique. But for screen reader users, this can lead to problems, as they will miss these controls completely when navigating the form using the `Tab` key.
+Technically speaking, disabling controls is a fully valid standard technique. But for desktop screen reader users, this can lead to confusion, as they will miss these controls completely when navigating the form using the `Tab` key.
 
 #### Disabling buttons
 
@@ -112,7 +112,7 @@ But HTML also the `<label>` to surround the form control, removing the need for 
 
 All in all, basic forms are very accessible by themselves.
 
-However, although basic forms are a longstanding and fundamental part of the HTML standard, in some situations, screen readers (both NVDA and JAWS) behave a bit irritating, if not buggy (if you haven't done this yet, go back and read [How screen readers work - and why they seem so buggy](/knowledge/screen-readers/so-buggy)).
+However, although basic forms are a longstanding and fundamental part of the HTML standard, in some situations, screen readers (both mobile and desktop) behave a bit irritating, if not buggy (if you haven't done this yet, go back and read [How screen readers work - and why they seem so buggy](/knowledge/screen-readers/so-buggy)).
 
 Here we presented some of the possible irritations we know and how to avoid them. But there may be more, especially in complex forms. This can make it hard for developers testing their solution for accessibility to decide whether their solution is "good enough", or whether they manually need to provide additional optimisations.
 
