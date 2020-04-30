@@ -6,7 +6,7 @@ changed: "2020-04-07"
 
 # NVDA installation and configuration
 
-**NVDA (Non Visual Desktop Access) is the most-used desktop screen reader. As it is Open Source, reliable and very standards-compliant it is the best choice to be used as a reference for accessibility. NVDA is the perfect companion to be fired up frequently while developing. After using it for a while, you will respect it as a firm but fair teacher.**
+**NVDA (Non Visual Desktop Access) is a lightweight and reliable open source desktop screen reader. Because of its firm compliance to standards, it is the desktop screen reader of choice when developing accessible websites. After using it for a while, you will respect it as a firm but fair teacher.**
 
 ## Installation
 

@@ -6,7 +6,7 @@ changed: "2020-04-07"
 
 # VoiceOver/iOS configuration
 
-**VoiceOver/iOS is the most advanced mobile screen reader. It is pre-installed on iOS devices, easy to understand, and the most used mobile screen reader in Western countries.**
+**VoiceOver/iOS is the most advanced mobile screen reader. It is pre-installed on iOS devices, easy to understand, and the most used mobile screen reader in Western countries. Because of its reliable and easy activation shortcut, it is the mobile screen reader of choice when developing accessible websites.**
 
 ## iOS vs. macOS
 

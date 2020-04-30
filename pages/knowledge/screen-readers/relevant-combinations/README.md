@@ -1,7 +1,7 @@
 ---
 navigation_title: "Relevant combinations"
 position: 2
-changed: "2018-05-01"
+changed: "2020-04-07"
 ---
 
 # Relevant combinations of screen readers and browsers
@@ -14,9 +14,15 @@ As web developers, we're aware of how hard it is to support all relevant devices
 
 It is impossible to develop and test for dozens of possible combinations of browsers and screen readers. We have had good experiences with taking the following pragmatic approach, namely aiming at the most widely used combinations (newest stable versions):
 
-- JAWS with Internet Explorer (IE)
-- JAWS with Firefox (FF)
-- NVDA with FF
+### Mobile screen readers
+
+- VoiceOver/iOS with Safari
+- TalkBack with Chrome
+
+### Desktop/Laptop screen readers
+
+- JAWS with Chrome
+- NVDA with Firefox (FF)
 
 **Notice:** an exception from this rule is valid in closed environments, where only specific browsers or screen readers are available.
 
@@ -38,6 +44,8 @@ As such it is very hard to examine:
 
 The initiative [Web Accessibility In Mind (WebAIM.org)](https://webaim.org/) conducts regular surveys among users of assistive software, which gives us at least some insight into the topic.
 
+The most recent survey was conducted in August - September 2019 ([WebAIM's Screen Reader User Survey #8](https://webaim.org/projects/screenreadersurvey8/)). Around 58% of the roughly speaking 1200 responses came from North America and 27% from Europe.
+
 #### Limitations
 
 Like every other survey, the WebAIM screen reader survey is expected to reach a rather deterministic sample only: exclusively screen reader users who somehow got to know about the survey and were eager to fill it out are included. As such, its results may be heavily biased and its representativeness may be limited.
@@ -50,29 +58,43 @@ Finally, we do not have detailed information about differences between countries
 
 However: even if there are general limitations to the representativeness of the survey, it provides the best currently available data regarding the preferences of screen reader users, particularly in North America and Europe, including the UK.
 
-#### Results
+#### Results for mobile devices
 
-The most recent survey was conducted in October 2017 ([WebAIM's Screen Reader User Survey #7](https://webaim.org/projects/screenreadersurvey7/)). Around 60% of the roughly speaking 1800 responses came from North America and 23% from Europe.
+Almost all (86.3%) of the respondents use a screen reader on a mobile device or tablet. That's a greater usage than on laptop (83.9%) or desktop (67.5%).
 
-The reponses to the question "Which of the following desktop/laptop screen readers do you commonly use?" clearly tell us that JAWS (66%) and NVDA (64.9%) are the most popular screen readers, followed by VoiceOver (39.6%). Very interestingly, those figures underline many users do use more than one screen reader.
+The reponses to the question "Which of the following mobile screen readers do you commonly use?" show us that VoiceOver/iOS (71.2%) and TalkBack (33.0%) are by far the most popular mobile screen readers.
 
-Regarding the question, which browser is used with the user’s primary screen reader, the survey results show that FF (41%) and IE 11 (23.3%) are the prevailing browsers, followed by Chrome (15.5%) and Safari (10.5%).
+Regarding the question, which browser is used with the user's primary mobile screen reader, the survey results show that Safari (62.7%) and Chrome (25.2%) are the prevailing mobile browsers.
 
-Finally, when it comes to the mostly used browser-screen reader combinations, the survey provides the following data:
+Respondents with disabilities used iOS devices at a higher rate than those without disabilities. For 69% of them iOS is the primary mobile platform, followed by Android (27.5%).
 
-- JAWS with IE: 24.7%
-- NVDA with FF: 23.6%
-- JAWS with FF: 15.1%
-- VoiceOver/macOS with Safari: 10.0%
-- JAWS with Chrome: 6.5%
-- NVDA with Chrome: 5.9%
-- NVDA with IE: 2.3%
-- VoiceOver with Chrome: 1.4%
-- Other combinations: 10.5%
+#### Results for desktop/laptop computers
+
+While most screen reader users now use mobile devices, still almost half of the respondents (41.3%) say that they are using a screen reader on a desktop/laptop computer most often.
+
+The responses to the question "Which of the following desktop/laptop screen readers do you commonly use?" clearly tell us that  NVDA (72.4%) and JAWS (61.7%) are the most popular desktop/laptop screen readers, followed by VoiceOver/macOS (47.1%). Very interestingly, those figures underline many users do use more than one screen reader.
+
+Regarding the question, which browser is used with the user's desktop/laptop primary screen reader, the survey results show that Chrome (44.4%), FF (27.4%) are the prevailing browsers, followed by IE 11 (10.9%) and Safari (9.8%).
+
+Finally, when it comes to the mostly used desktop/laptop browser / screen reader combinations, the survey provides the following data:
+
+- JAWS with Chrome: 21.4%
+- NVDA with Firefox: 19.6%
+- NVDA with Chrome: 18.0%
+- JAWS with IE: 11.5%
+- VoiceOver/macOS with Safari: 9.1%
+- JAWS with Firefox: 5.9%
+- VoiceOver with Chrome: 3.0%
+- NVDA with IE: 1.2%
+- Other combinations: 10.4%
+
+#### What about IE?
+
+Usage of Internet Explorer has dropped significantly since the last survey (then 23.3%) as primary desktop/laptop browser. As Microsoft ceased to support IE any longer, combinations with IE are no requirement anymore. We leave the references in this guide for documentation purposes. At the time being, all of our examples are tested and are backwards compatible with JAWS with IE.
 
 #### What about Edge?
 
-Accessibility support in Microsoft's current browser Edge was very low upon release. Meanwhile, Edge was improved in some respects. But most screen reader users didn't switch from Internet Explorer yet, and it may still take quite some time until this will have happened.
+Accessibility support in Microsoft's current browser Edge was very low upon release. Meanwhile, Edge was improved in some respects. But most screen reader users didn't switch from Internet Explorer yet or switched to other browsers. Edge did not gain sufficient traction to be considered here.
 
 ### Software versions
 

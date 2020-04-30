@@ -24,7 +24,7 @@ Regarding screen readers, semantics are particularly important for providing mea
 
 ## Giving proper feedback
 
-A screen reader's cursor is always placed on one single element of a page. In contrast to visual perception (that makes it possible to register changes on a two-dimensional computer monitor), the screen reader only ever registers changes regarding this single element it is placed on. If you haven't done so yet, go back and read [Screen readers process contents in a linear way](/knowledge/screen-readers/linear-processing).
+A screen reader's cursor is always placed on one single element of a page. In contrast to visual perception (that makes it possible to register changes on a two-dimensional computer monitor), the screen reader only ever registers changes regarding this single element it is placed on. If you haven't done so yet, go back and read [Screen readers process contents in a linear way using a cursor](/knowledge/screen-readers/linear-processing-using-cursor).
 
 So if you change some content on your website, you have to take care that the screen reader will to take notice of it.
 
@@ -58,12 +58,12 @@ In general though, this often is a sign for bad interaction design: if it needs 
 
 While developing, you need to use your screen readers on a regular basis to ensure your product is accessible.
 
-We advise you to use NVDA for this. Every now and then, do not forget to counter-check using VoiceOver/iOS, JAWS, and Talkback though. So if you haven't done this yet, go back and read:
+We advise you to use NVDA for this. Every now and then, do not forget to counter-check using VoiceOver/iOS, JAWS, and TalkBack though. So if you haven't done this yet, go back and read:
 
 - [NVDA installation and configuration](/setup/screen-readers/nvda)
 - [VoiceOver/iOS installation and configuration](/setup/screen-readers/voiceover-ios)
 - [JAWS installation and configuration](/setup/screen-readers/jaws)
-- [Talkback installation and configuration](/setup/screen-readers/talkback)
+- [TalkBack installation and configuration](/setup/screen-readers/talkback)
 
 ## Conclusion
 

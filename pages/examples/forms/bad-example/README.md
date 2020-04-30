@@ -48,7 +48,7 @@ The radio buttons are grouped using a combination of plain `<div>` elements inst
 
 So a screen reader user has to guess what the provided plain text element may stand for - or will miss it completely, e.g. when not arriving at the form controls sequentially from the top (and thus passing the text "by accident").
 
-(By the way: if for some technical reason you cannot use `<fieldset>` and/or `<legend>`, skip ahead and read [](@page-106).)
+(By the way: if for some technical reason you cannot use `<fieldset>` and/or `<legend>`, skip ahead and read [Grouping form controls with headings](/examples/forms/grouping-with-headings/).)
 
 ## Bad submit button
 
