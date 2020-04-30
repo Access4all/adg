@@ -24,4 +24,4 @@ Simply enter a foreground and a background colour into the respective fields and
 
 Note: if you choose to use the colour picker instead, be sure to avoid anti-aliased colours, as this would have an impact on the result.
 
-For more information about colour contrast in general, there is a [dedicated chapter: Colors and contrast](/knowledge/colors-and-contrast/).
+For more information about colour contrast in general, there is a [dedicated chapter: Colors and contrast](/knowledge/colours-and-contrast/).

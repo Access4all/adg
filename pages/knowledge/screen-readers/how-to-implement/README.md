@@ -24,7 +24,7 @@ Regarding screen readers, semantics are particularly important for providing mea
 
 ## Giving proper feedback
 
-A screen reader's cursor is always placed on one single element of a page. In contrast to visual perception (that makes it possible to register changes on a two-dimensional computer monitor), the screen reader only ever registers changes regarding this single element it is placed on. If you haven't done so yet, go back and read [Screen readers process contents in a linear way](/knowledge/screen-readers/linear-processing).
+A screen reader's cursor is always placed on one single element of a page. In contrast to visual perception (that makes it possible to register changes on a two-dimensional computer monitor), the screen reader only ever registers changes regarding this single element it is placed on. If you haven't done so yet, go back and read [Screen readers process contents in a linear way using a cursor](/knowledge/screen-readers/linear-processing-using-cursor).
 
 So if you change some content on your website, you have to take care that the screen reader will to take notice of it.
 

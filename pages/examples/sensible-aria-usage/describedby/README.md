@@ -69,7 +69,7 @@ The only case where we truly recommend the usage of `aria-describedby`, is to at
 
 For this, the information itself must be visible (and as such discoverable also in browse mode) and as close as possible to the element it describes.
 
-If instead you need to attach information that itself is invisible, you better use visually hidden text (see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually)). For an example, see [Indicating form controls as required using asterisks (*)](/examples/forms/required-).
+If instead you need to attach information that itself is invisible, you better use visually hidden text (see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually)). For an example, see [Indicating form controls as required using asterisks (*)](/examples/forms/required).
 
 ## Conclusion
 
