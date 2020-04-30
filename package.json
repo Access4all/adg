@@ -68,7 +68,7 @@
     "markdown-it-replacements": "^1.0.1",
     "markdown-it-samp": "0.0.4",
     "merge-stream": "^2.0.0",
-    "minimist": "^1.2.2",
+    "minimist": "^1.2.3",
     "node-sass-globbing": "0.0.23",
     "prettier-standard": "^16.1.0",
     "require-new": "^1.1.1",
@@ -78,7 +78,7 @@
   "dependencies": {
     "ajv": "^6.10.2",
     "details-polyfill": "^1.1.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "normalize-strings": "^1.1.0"
   }
 }
