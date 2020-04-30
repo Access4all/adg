@@ -23,7 +23,7 @@ Besides many other requirements, we want to stress out explicitly the following:
 - The meaning and usage of the tablist must be clear.
 - The state of each tab control must be perceivable ("active/inactive" or similar).
 - Proper feedback must be given upon activating a tab control ("active" or similar).
-- The tablist must be operable using both keyboard only and screen reader (with a reasonable interplay of default keys like `Tab`, `Enter`/`Space`, `Esc`, `Arrow` keys).
+- The tablist must be operable using both keyboard only and screen readers (with a reasonable interplay of default keys like `Tab`, `Enter`/`Space`, `Esc`, `Arrow` keys), as well as mobile screen readers.
 - The panel contents must be easily accessible using both keyboard only and screen reader.
 
 ### Similarities with accordions and carousels

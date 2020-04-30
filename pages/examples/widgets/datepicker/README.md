@@ -18,7 +18,7 @@ Besides many other requirements, we want to stress out explicitly the following:
 
 - The meaning and usage of the datepicker must be clear.
 - Proper feedback must be given upon selecting a date.
-- The datepicker must be operable using both keyboard only and desktop screen reader (with a reasonable interplay of default keys like `Tab`, `Enter`/`Space`, `Esc`, `Arrow` keys).
+- The datepicker must be operable using both keyboard only and desktop screen readers (with a reasonable interplay of default keys like `Tab`, `Enter`/`Space`, `Esc`, `Arrow` keys), as well as mobile screen readers.
 
 ## Proof of concept
 

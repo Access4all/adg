@@ -34,7 +34,7 @@ On one side, some label texts are marked up as plain `<div>` elements, lacking a
 
 On the other side, some label texts are marked up properly as `<label>` elements, but are missing the `for` attribute needed to associate the label with its form control. The `for` attribute's value must be the ID of the respective control.
 
-In both cases screen readers are not able to announce the form controls with their respective names when the user uses the tap or the `Tab` key to navigate between them. In such a situation, a screen reader user has to switch to browse mode and guess which label may correspond to which control (which sometimes is hard or even impossible, depending on the sequence of the elements in the DOM).
+In both cases screen readers are not able to associate the form controls with their respective labels. As such they, they might announce the controls without their names. In such a situation, a screen reader user has to manually guess which label may correspond to which control (which sometimes is hard, confusing or even impossible, depending on the sequence of the elements in the DOM).
 
 Also mouse user have a disadvantage: they cannot click on the label to set the focus into the corresponding control.
 
@@ -46,7 +46,7 @@ You may have noticed that for the first input "Full name", JAWS surprisingly ann
 
 The radio buttons are grouped using a combination of plain `<div>` elements instead of proper `<fieldset>` and `<legend>`. Visually it is pretty evident that those `<div>` elements have the function of grouping and naming the contained form controls. But the browser does not recognise this structure and won't associate it to the controls.
 
-So a screen reader user has to guess what the provided plain text element may stand for - or will miss it completely (again, when navigating using the tap or the `Tab` key only).
+So a screen reader user has to guess what the provided plain text element may stand for - or will miss it completely, e.g. when not arriving at the form controls sequentially from the top (and thus passing the text "by accident").
 
 (By the way: if for some technical reason you cannot use `<fieldset>` and/or `<legend>`, skip ahead and read [](@page-106).)
 
@@ -75,7 +75,7 @@ As a fix, you could provide those functionalities with some more hacks, for exam
 
 ### Undiscoverability by screen readers
 
-Last but not least: a desktop screen reader user won't find such a substitute when looking for buttons using `B` key. And if in fact users find the pseudo-button by browsing around manually, they cannot be sure whether it really is the submit button (without clicking it and hoping for the best).
+Last but not least: a screen reader user won't find such a substitute when looking for buttons (e.g. using B key on desktop). And if in fact users find the pseudo-button by browsing around manually, they cannot be sure whether it really is the submit button (without clicking it and hoping for the best).
 
 As a fix, you could provide this manually by overriding the element's role using ARIA: `role="button"`.
 
