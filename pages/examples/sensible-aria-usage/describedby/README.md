@@ -17,7 +17,7 @@ In addition to an element's label (see [Labelling elements using aria-label and 
 Using `aria-describedby`, any number of elements can be set as description(s) of another element (by referencing their IDs). For example, the following link's description is "The world's best known search engine":
 
 ```html
-<a href="" aria-describedby="description">
+<a href="..." aria-describedby="description">
   Google
 </a>
 
