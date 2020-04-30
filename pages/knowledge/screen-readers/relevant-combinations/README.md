@@ -23,7 +23,6 @@ It is impossible to develop and test for dozens of possible combinations of brow
 
 - JAWS with Chrome
 - NVDA with Firefox (FF)
-- NVDA with Chrome
 
 **Notice:** an exception from this rule is valid in closed environments, where only specific browsers or screen readers are available.
 
@@ -61,21 +60,21 @@ However: even if there are general limitations to the representativeness of the 
 
 #### Results for mobile devices
 
-Allmost all (86.3%) of the respondents use a screen reader on a mobile device or tablet. That's a greater usage than on laptop (83.9%) or desktop (67.5%).
+Almost all (86.3%) of the respondents use a screen reader on a mobile device or tablet. That's a greater usage than on laptop (83.9%) or desktop (67.5%).
 
 The reponses to the question "Which of the following mobile screen readers do you commonly use?" show us that VoiceOver/iOS (71.2%) and TalkBack (33.0%) are by far the most popular mobile screen readers.
 
-Regarding the question, which browser is used with the user’s primary mobile screen reader, the survey results show that Safari (62.7%), Chrome (25.2%) are the prevailing mobile browsers.
+Regarding the question, which browser is used with the user's primary mobile screen reader, the survey results show that Safari (62.7%) and Chrome (25.2%) are the prevailing mobile browsers.
 
-Respondents with disabilities used iOS devices at a higher rate than those without disabilities. For 69% of them iOS is the primary mobile/tablet platform, followed by Android (27.5%).
+Respondents with disabilities used iOS devices at a higher rate than those without disabilities. For 69% of them iOS is the primary mobile platform, followed by Android (27.5%).
 
 #### Results for desktop/laptop computers
 
 While most screen reader users now use mobile devices, still almost half of the respondents (41.3%) say that they are using a screen reader on a desktop/laptop computer most often.
 
-The reponses to the question "Which of the following desktop/laptop screen readers do you commonly use?" clearly tell us that  NVDA (72.4%) and JAWS (61.7%) are the most popular desktop/laptop screen readers, followed by VoiceOver/macOS (47.1%). Very interestingly, those figures underline many users do use more than one screen reader.
+The responses to the question "Which of the following desktop/laptop screen readers do you commonly use?" clearly tell us that  NVDA (72.4%) and JAWS (61.7%) are the most popular desktop/laptop screen readers, followed by VoiceOver/macOS (47.1%). Very interestingly, those figures underline many users do use more than one screen reader.
 
-Regarding the question, which browser is used with the user’s desktop/laptop primary screen reader, the survey results show that Chrome (44.4%), FF (27.4%) are the prevailing browsers, followed by IE 11 (10.9%) and Safari (9.8%).
+Regarding the question, which browser is used with the user's desktop/laptop primary screen reader, the survey results show that Chrome (44.4%), FF (27.4%) are the prevailing browsers, followed by IE 11 (10.9%) and Safari (9.8%).
 
 Finally, when it comes to the mostly used desktop/laptop browser / screen reader combinations, the survey provides the following data:
 
@@ -91,7 +90,7 @@ Finally, when it comes to the mostly used desktop/laptop browser / screen reader
 
 #### What about IE?
 
-Usage of Internet Explorer has dropped significantly since the last survey (then 23.3%) as primary desktop/laptop browser. As Microsoft creased to support IE any longer, combinations with IE are no requirement anymore. We leave the references in this guide for documentation purposes. All of our examples are tested and are backward compatible with JAWS with IE.x
+Usage of Internet Explorer has dropped significantly since the last survey (then 23.3%) as primary desktop/laptop browser. As Microsoft ceased to support IE any longer, combinations with IE are no requirement anymore. We leave the references in this guide for documentation purposes. At the time being, all of our examples are tested and are backwards compatible with JAWS with IE.
 
 #### What about Edge?
 
