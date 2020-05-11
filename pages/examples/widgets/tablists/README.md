@@ -1,7 +1,7 @@
 ---
 navigation_title: "Tablists"
 position: 6
-changed: "2018-05-29"
+changed: "2020-04-30"
 ---
 
 # Tablist widgets (or: tab panels, tabs)

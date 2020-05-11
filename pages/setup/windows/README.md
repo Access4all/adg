@@ -1,7 +1,7 @@
 ---
 navigation_title: "Windows"
 position: 1
-changed: "2018-05-02"
+changed: "2020-04-30"
 ---
 
 # Windows operating system

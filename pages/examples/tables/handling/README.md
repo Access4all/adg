@@ -1,7 +1,7 @@
 ---
 navigation_title: "Handling"
 position: 1
-changed: "2018-04-18"
+changed: "2020-04-30"
 ---
 
 # How to handle tables

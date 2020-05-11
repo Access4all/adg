@@ -1,7 +1,7 @@
 ---
 navigation_title: "Tooltips"
 position: 5
-changed: "2018-05-29"
+changed: "2020-04-30"
 ---
 
 # Tooltip widgets (or: screen tip, balloon)
