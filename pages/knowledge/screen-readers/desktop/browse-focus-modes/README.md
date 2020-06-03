@@ -87,7 +87,7 @@ In the following example, being in focus mode, the screen reader user will be ab
 
 To make listening to the `Tab` key work again, a corresponding functionality needs to be implemented manually using JavaScript.
 
-Also, while leaving focus mode is always possible using the `Esc` key, this is not available in application mode as well. In the worst case, screen readers get trapped within such an element and will not be able to get out of it anymore. So again, this needs to be implemented using JavaScript - together with each and every other needed interactivity.
+Also, while leaving focus mode is always possible using the `Esc` key, this option (like many others) is not available in application mode. In the worst case, screen readers get trapped within such an element and will not be able to get out of it anymore. So again, this needs to be implemented using JavaScript - together with each and every other needed interactivity.
 
 All in all, this does not sound promising at all, does it? So why should anyone ever want to use application mode? Well, it is intended to be used for rather complex interactive widgets where browser standard functionality needs to be avoided. And honestly, we did not see a single case yet where a traditional JavaScript widget (run using focus mode) would not have done the job at least equally well.
 
