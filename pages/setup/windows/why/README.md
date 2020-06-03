@@ -1,7 +1,7 @@
 ---
 navigation_title: "Why?"
 position: 1
-changed: "2018-04-03"
+changed: "2020-04-30"
 ---
 
 # Why Windows is a must-have for accessible website development
@@ -14,7 +14,7 @@ changed: "2018-04-03"
 
 From this day on, you will be developing websites with accessibility in mind. Congratulations! Luckily, you can keep using all the software you already know and love.
 
-But to ensure your websites' accessibility, you need some Windows-specific software, especially regarding screen readers (if you are really curious and want to learn more about them, skip ahead and read [Relevant combinations of screen readers and browsers](/knowledge/desktop-screen-readers/relevant-combinations)).
+But to ensure your websites' accessibility, you need some Windows-specific software, especially regarding desktop screen readers (if you are really curious and want to learn more about them, skip ahead and read [Relevant combinations of screen readers and browsers](/knowledge/screen-readers/relevant-combinations)).
 
 ## Virtual machine: necessary or not?
 

@@ -1,7 +1,7 @@
 ---
 navigation_title: "Tooltips"
 position: 5
-changed: "2018-05-29"
+changed: "2020-04-30"
 ---
 
 # Tooltip widgets (or: screen tip, balloon)
@@ -19,7 +19,7 @@ The following requirements are based on well established best practices and [WAI
 Besides many other requirements, we want to stress out explicitly the following:
 
 - The meaning and usage of the tooltip must be clear.
-- The tooltip must be operable using both keyboard only and screen reader (with a reasonable interplay of default keys like `Tab`, `Enter`/`Space`, `Esc`, `Arrow` keys):
+- The tooltip must be operable using both keyboard only and screen readers (with a reasonable interplay of default keys like `Tab`, `Enter`/`Space`, `Esc`, `Arrow` keys), as well as mobile screen readers:
     - Simple tooltips should be displayed automatically.
     - Simple tooltips should be displayed manually.
 - The tooltip content must be accessible:

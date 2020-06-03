@@ -1,7 +1,7 @@
 ---
 navigation_title: "Dialog"
 position: 12
-changed: "2018-05-31"
+changed: "2020-04-30"
 ---
 
 # Dialog widget (or: modal, popup, lightbox, alert)
@@ -17,7 +17,7 @@ The following requirements are based on well established best practices and [WAI
 Besides many other requirements, we want to stress out explicitly the following:
 
 - The meaning and usage of the dialog must be clear.
-- The dialog must be operable using both keyboard only and screen reader (with a reasonable interplay of default keys like Tab, Enter/Space, Esc, Arrow keys).
+- The dialog must be operable using both keyboard only and screen readers (with a reasonable interplay of default keys like Tab, Enter/Space, Esc, Arrow keys), as well as mobile screen readers.
 - Focus must be placed inside the dialog upon opening, and placed back upon closing.
 - Modal dialogs must track focus.
 - It must be evident where a dialog's content begins and where it ends.
