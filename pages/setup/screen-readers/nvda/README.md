@@ -142,7 +142,7 @@ You can disable that:
 
 ## Add-ons
 
-There is lots of add-ons for NVDA in the [NVDA Community Add-ons website (NVDA-Project.org)](https://addons.nvda-project.org/index.en.html).
+There are lots of add-ons for NVDA in the [NVDA Community Add-ons website (NVDA-Project.org)](https://addons.nvda-project.org/index.en.html).
 
 ### FocusHighlight
 
