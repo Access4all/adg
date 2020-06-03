@@ -36,7 +36,7 @@ If you move your finger over the touch screen, any element below your finger wil
 
 ## Change settings in VoiceOver/iOS (using Rotor)
 
-The rotor is a quickly accessible menu which offers more ways to interact with VoiceOver/iOS. To use it, rotate two fingers on your screen as if you're turning a dial. VoiceOver/iOS will announce the current setting; if you want to hear more settings, keep rotating your fingers until you found the one you need. To interacht with the current setting, swipe up or down with one finger.
+The rotor is a quickly accessible menu which offers more ways to interact with VoiceOver/iOS. To use it, rotate two fingers on your screen as if you're turning a dial. VoiceOver/iOS will announce the current setting; if you want to hear more settings, keep rotating your fingers until you found the one you need. To interact with the current setting, swipe up or down with one finger.
 
 Some of the settings that prove to be useful in daily accessibility testing are:
 
