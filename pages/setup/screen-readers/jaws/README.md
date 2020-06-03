@@ -12,7 +12,7 @@ changed: "2020-04-30"
 
 JAWS is a quite heavy piece of software that installs itself deeply into the Windows operating system. To keep your existing Windows clean, it is a good idea to install JAWS inside a virtual machine (VM), see [Windows operating system](/setup/windows).
 
-The demo version of JAWS forces you to restart your computer after 40 minutes (which is another good reason to have it run inside a VM).
+As JAWS is commercial software with its price, it can be checked out using its free demo version, allowing you to run it for 40 minutes.
 
 [Download JAWS](http://www.freedomscientific.com/Downloads/JAWS) and simply run the installer, or see [JAWS Quick Start (PDF, FreedomScientific.com)](http://www.freedomscientific.com/Content/Documents/Manuals/JAWS/JAWS-Quick-Start-Guide.pdf) for detailed information.
 
