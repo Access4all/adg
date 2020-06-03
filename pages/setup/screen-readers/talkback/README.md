@@ -10,7 +10,7 @@ changed: "2020-04-23"
 
 On some older Android versions, the TalkBack service is not enabled by default. In this case, just install or update the [Android Accessibility Suite](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback&hl=en_US) from the Google Play Store.
 
-Android comes equipped with a number of accessibility features which can be usually configured under `Settings` -> `Accessibility`.
+Android comes equipped with a number of accessibility features which can usually be configured under `Settings` -> `Accessibility`.
 
 We find the default settings to be sensible and a good starting point. But if you want to explore further, extensive information about the TalkBack setup options can be found at the [official TalkBack setup page](https://support.google.com/accessibility/android/answer/6283655).
 
