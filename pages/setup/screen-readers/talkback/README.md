@@ -39,6 +39,6 @@ You can also start and stop TalkBack manually. Go to `Settings` -> `Accessibilit
 
 ### Display Speech Output
 
-This displays the current TalkBack announcement as text on screen. Very useful while developing!
+This setting displays the current announcement as visual text on screen.
 
-(Sadly there's nothing like that in VoiceOver/iOS.)
+![TalkBack Speech Output](_media/talkback-speech-output.png)
