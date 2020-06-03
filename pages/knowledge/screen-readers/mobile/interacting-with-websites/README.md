@@ -23,4 +23,4 @@ On more complex elements, double tapping enters their interaction mode:
 
 To make life easier: while interacting with any standard HTML control, we advise you to stop the screen reader, and after you have completed your interaction, simply restart it. You do not miss any important screen reader interaction here (as you are solely interacting with the system's standard controls).
 
-For example, when entering a text into a textarea, simply move the screen reader cursor to the textarea, then double click to activate it. Navigating the now displayed on-screen keyboard is pretty long-winded using the screen reader, so simply disable the it. Now enter some text as usual, then restart the screen reader and continue with your testing.
+For example, when entering a text into a textarea, simply move the screen reader cursor to the textarea, then double click to activate it. Navigating the now displayed on-screen keyboard is pretty long-winded using the screen reader, so simply disable it. Now enter some text as usual, then restart the screen reader and continue with your testing.
