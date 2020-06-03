@@ -31,3 +31,9 @@ Now simply triple tap (press three times in rapid succession) the Home button to
 ### Manual start/stop
 
 You can also start and stop VoiceOver/iOS manually. Go to `Settings` -> `General` -> `Accessibility`, then toggle `VoiceOver`.
+
+### Display Caption Panel
+
+This setting displays the current announcement as visual text on screen.
+
+![VoiceOver/iOS Caption Panel](_media/voiceover-ios-caption-panel.png)
