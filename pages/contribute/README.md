@@ -39,8 +39,6 @@ You can also contribute by spreading awareness about the topic to your fellow de
 * **Share the guide on Twitter** and other channels if you find it useful and want to give something back. We're also available on Twitter under [@A11yDevGuide (Twitter.com)] and on [Facebook].
 * **Talk about accessibility at your local meetup**. Feel free to use the guide as resource. We appreciate every developer who is concerned about accessibility. Let us know so we can share your event.
 
-## Important links
-
 [Join our Slack team]: https://join.slack.com/t/a11y-dev-guide/shared_invite/enQtMzMwOTkxNTI3NDYwLWI3MjRmZDQwOGMxOGVhNTI2NDg0ODhiMDUyZTQ4MDE4MzU1NmZiMTY2YmNjNjliYWEzODhjZDYwYjA1MDU4NmU
 [create an issue on GitHub]: https://github.com/Access4all/adg/issues
 [Access4all/adg (GitHub.com)]: https://github.com/Access4all/adg
