@@ -22,7 +22,7 @@ We process this usage data in [Matomo Analytics](https://matomo.org/) for statis
 
 ## Cookies
 
-We use cookies (small data files transferred onto computers or devices by sites) for record-keeping purposes and to enhance functionality on our site. You may deactiva
+We use cookies (small data files transferred onto computers or devices by sites) for record-keeping purposes and to enhance functionality on our site. You may deactivate this tracking by deselecting the checkbox below.
 
 ## Opt-out of website tracking
 
