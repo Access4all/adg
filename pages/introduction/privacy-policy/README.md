@@ -12,11 +12,11 @@ In order for us to provide you the best possible experience on our guide, we nee
 
 When you visit our site, we will store amongst other things:
 
-- The website from which you visited us from
+- Your referral website (where you came from)
 - The parts of our site you visit
 - The date and duration of your visit
 - Your anonymised IP address
-- Information from the device (device type, operating system, screen resolution, language, country you are located in, and web browser type) you used during your visit
+- Information about your device (device type, operating system, screen resolution, language, country you are located in, and web browser type)
 
 We process this usage data in [Matomo Analytics](https://matomo.org/) for statistical purposes, to improve our site.
 
