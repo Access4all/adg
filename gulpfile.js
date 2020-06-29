@@ -10,6 +10,7 @@ const css = require('./gulp/css')
 const js = require('./gulp/javascript')
 const examples = require('./gulp/examples')
 const concat = require('gulp-concat')
+const changed = require('gulp-changed')
 
 function errorHandler (err) {
   log(err.plugin || '', colors.cyan(err.fileName), colors.red(err.message))
@@ -108,6 +109,7 @@ gulp.task(
             base: './pages'
           }
         )
+        .pipe(changed('./dist'))
         .pipe(gulp.dest('./dist'))
     },
     function content () {
@@ -115,6 +117,7 @@ gulp.task(
         .src(['./pages/{,**/}_media/**/*', './pages/**/*.{png,jpg,mp3}'], {
           base: './pages'
         })
+        .pipe(changed('./dist'))
         .pipe(gulp.dest('./dist'))
     },
     function assets () {
@@ -122,6 +125,7 @@ gulp.task(
         .src(['./src/assets/img/**/*'], {
           base: './src/assets'
         })
+        .pipe(changed('./dist'))
         .pipe(gulp.dest('./dist'))
     }
   )
@@ -136,6 +140,9 @@ gulp.task('media:resize', () => {
     .src(['./pages/{,**/}_media/**/*', './pages/**/_examples/**/*.png'], {
       base: './pages'
     })
+    .pipe(changed('./dist', {
+      transformPath: newPath => path.join(path.dirname(newPath), path.basename(newPath, path.extname(newPath)) + '-large' + path.extname(newPath))
+    }))
     .pipe(
       resize({
         sizes: [
@@ -187,8 +194,12 @@ gulp.task('sprite', () => {
         }
       })
     )
-  const imgStream = data.img.pipe(gulp.dest('./src/assets/img/icons'))
-  const cssStream = data.css.pipe(gulp.dest('./tmp'))
+
+  const imgStream = data.img
+    .pipe(changed('./src/assets/img/icons'))
+    .pipe(gulp.dest('./src/assets/img/icons'))
+
+  const cssStream = data.css.pipe(changed('./tmp')).pipe(gulp.dest('./tmp'))
 
   return merge(imgStream, cssStream)
 })
@@ -200,11 +211,12 @@ gulp.task('clean', () => del('./dist'))
 gulp.task(
   'build',
   gulp.series(
-    'clean',
     'sprite',
     gulp.parallel('css', 'js', 'media', 'html', 'html:examples')
   )
 )
+
+gulp.task('rebuild', gulp.series('clean', 'build'))
 
 gulp.task(
   'default',

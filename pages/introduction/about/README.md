@@ -1,24 +1,24 @@
 ---
 navigation_title: "About"
 position: 2
-changed: "2019-01-31"
+changed: "2019-11-12"
 ---
 
 # About this initiative
 
-**The «Accessibility Developer Guide» in its entirety is the result of many years of hands-on practice in the field of testing websites for accessibility, as well as developing accessible web applications. The daily experience of user experts with special needs, blended together with the profound technical knowledge of fullstack web developers, resulted in forming the «Accessibility Alliance».**
+**The «Accessibility Developer Guide», in its entirety, is the result of many years of hands-on practice in the field of testing websites for accessibility, as well as developing accessible web applications. The daily experience of user experts with special needs, blended together with the profound technical knowledge of fullstack web developers, resulted in forming the «Accessibility Alliance».**
 
 ## «Access for all»
 
-On one side of the «Accessibility Alliance», there is the Swiss Foundation «Access for all», which is the initiator and leader of the whole initiative. It consists of a small team of accessibility experts and web developers, half of which having special needs themselves.
+On one side of the «Accessibility Alliance», there is the Swiss Foundation «Access for all», which is the initiator and leader of the whole initiative. It consists of a small team of accessibility experts and web developers, half of which have special needs themselves.
 
 ![«Access for all» logo](_media/zfa.png){.zfa-logo}
 
-The foundation is in business since the year 2000, and since then has accompanied hundreds of local and international websites in the process of becoming accessible. The basis for this have always been the official guidelines like the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG) and [Accessible Rich Internet Applications](https://www.w3.org/TR/html-aria/) (ARIA), combined with the real-life experiences of those employees with special needs, and profound expertise of fullstack web developers. In one sentence: the contents of this guide are the result of nearly two decades of hands-on experience in all topics accessibility.
+The foundation has been in business since the year 2000, and since then has guided hundreds of local and international websites in the process of becoming accessible. The basis for this has always been the official guidelines like the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG) and [Accessible Rich Internet Applications](https://www.w3.org/TR/html-aria/) (ARIA), combined with the real-life experiences of the foundation's employees who have special needs, and the profound expertise of fullstack web developers. In one sentence: the contents of this guide are the result of nearly two decades of hands-on experience in all topics accessibility.
 
-> With the Accessibility Developer Guide, the «Access for all» foundation provides developers with an instrument that offers practical and concrete support in the implementation of accessible web offerings. As an open source project, the Accessibility Developer Guide focuses on sharing and passing on knowledge. All agencies, every woman and every man are invited to join the Accessibility Alliance. Join in a few developer days a year - and you'll be there.
+> The Accessibility Developer Guide offers easy and free access to a comprehensive and application-oriented knowledge database on the subject of how to build a barrier-free website. The platform aims to share and pass on accessibility know-how to everyone. It is a tangible open source project on ethics in the digital economy. Join in and be part of an exciting community realizing a web for all.
 
-**Bernhard Heinser**, former CEO, «Access for all».
+**Sylvia Winkelmann-Ackermann**, CEO, «Access for all».
 
 For more information, see [www.access-for-all.ch](http://access-for-all.ch/).
 
@@ -74,46 +74,50 @@ Please read on.
 
 ## Join the «Accessibility Alliance»!
 
-We are a bunch of open hearted and highly motivated nerds believing in the potential that technical advancements can have for humanity.
+We are a bunch of open-hearted and highly motivated nerds who believe in the potential that technological advancements can have for humanity.
 
-If you feel like you have anything to give into our movement (be it active collaboration, sharing your knowledge, providing financial support, or simply giving some feedback), please get in touch with us through:
+If you feel like you have anything to give to our movement (be it active collaboration, sharing your knowledge, providing financial support, or simply giving some feedback), please get in touch with us through:
 
 - Facebook: [AccessibilityDeveloperGuide](https://www.facebook.com/AccessibilityDeveloperGuide)
 - Twitter: [A11yDevGuide](https://twitter.com/A11yDevGuide)
 
 Or drop us a line using the [«Access for all» contact form](http://access-for-all.ch/en/contact.html).
 
-### Core team
+### Contributors
 
-During the last months, a group of people regularly gathered around developing the Accessibility Developer Guide.
+Besides the diligent online community, a group of people regularly physically gathers around developing the Accessibility Developer Guide.
 
-![The core team working on the Accessibility Developer Guide (details read below)](_media/core-team.jpg)
+<!-- ![The core team working on the Accessibility Developer Guide (details read below)](_media/core-team.jpg) -->
 
-Clockwise from top right:
-
+- **Andreas Moesch**, web developer, Nothing AG.
 - **Donato Rotunno**, web developer, Liip AG.
-- **Joshua Muheim**, web developer & accessibility expert, «Access for all», initiator of and main contributor to the Accessibility Developer Guide.
-- **Jürgen Rudigier**, frontend developer, Hinderling Volkart.
-- **Thomas Jaggi**, web developer, UNIC AG.
-- **Anton Bolfing**, accessibility expert at «Access for all», responsible for final editing and testing of the Accessibility Developer Guide.
-- **Bernhard Heinser**, former CEO at «Access for all», project leader of the Accessibility Developer Guide.
 - **Esther Brunner**, web developer, Zeix AG.
+- **Graciela Schütz**, senior UX architect, UNIC AG.
+- **Joshua Muheim**, web developer & accessibility expert, «Access for all».
+- **Jürgen Rudigier**, frontend developer, Hinderling Volkart.
+- **René Stalder**, web developer, Nothing AG.
+- **Thomas Jaggi**, web developer, former UNIC AG.
+
+Former contributors:
+
+- **Anton Bolfing**, former accessibility expert at «Access for all».
+- **Bernhard Heinser**, former CEO at «Access for all».
 - **Markus Graf**, web developer.
+- **Severin Klaus**, web developer, Hinderling Volkart.
 
 ### Testing staff
 
-Not to forget our highly respected testing staff who took care of validating all contents and code examples (all of them working for «Access for all»):
+Not to forget our highly respected testing staff who took care of validating all contents and code examples (all of them working for «Access for all»).
 
-![The testing staff working on the Accessibility Developer Guide (details read below)](_media/testing-team.jpg)
-
-Clockwise from top right:
-
-- (Anton Bolfing, again.)
-- **Daniele Corciulo**, blind accessibility expert.
-- **Romano Spescha**, vision-impaired accessibility trainee.
-- **Reto Inniger**, vision-impaired accessibility trainee.
-- **Mohamed Sherif**, blind accessibility trainee.
 - **Gianfranco Giudice**, blind accessibility expert.
+- **Mohamed Sherif**, blind accessibility expert.
 
 Unfortunately not on the picture (beause working remotely) is **Petra Ritter**, multiply-handicapped accessibility expert.
 
+![Testing session (details read below)](_media/testing-team.jpg)
+
+Former testers:
+
+- **Daniele Corciulo**, blind accessibility expert.
+- **Romano Spescha**, vision-impaired accessibility trainee.
+- **Reto Inniger**, vision-impaired accessibility trainee.

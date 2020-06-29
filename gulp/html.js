@@ -8,7 +8,7 @@ const path = require('path')
 const requireNew = require('require-new')
 const plumber = require('gulp-plumber')
 const normalize = require('normalize-strings')
-const sm = require('sitemap')
+const { Sitemap } = require('sitemap')
 const _ = require('lodash')
 const { JSDOM } = require('jsdom')
 
@@ -123,6 +123,7 @@ const flattenNavigation = items =>
   }, [])
 
 module.exports = (config, cb) => {
+  const datetime = requireNew('./helpers/datetime')
   const markdown = requireNew('./helpers/markdown')(config.rootDir)
   const metatags = requireNew('./helpers/metatags')
   const Feed = requireNew('./helpers/rss')
@@ -251,11 +252,11 @@ module.exports = (config, cb) => {
               nextPage: prevNext.next,
               subPages: file.data.isRoot
                 ? navigation.map(item => ({
-                  title: item.title,
-                  url: item.url,
-                  modifier: item.url,
-                  level: 1
-                }))
+                    title: item.title,
+                    url: item.url,
+                    modifier: item.url,
+                    level: 1
+                  }))
                 : subPages,
               metatags: metatags.generateTags(metatagsData),
               breadcrumb: breadcrumb.sort((a, b) => {
@@ -290,8 +291,16 @@ module.exports = (config, cb) => {
             .replace(path.extname(file.path), '')
         },
         helpers: {
+          formatDate: datetime.formatDate,
           eq: function (v1, v2, options) {
             if (v1 === v2) {
+              return options.fn(this)
+            }
+
+            return options.inverse(this)
+          },
+          notEq: function (v1, v2, options) {
+            if (v1 !== v2) {
               return options.fn(this)
             }
 
@@ -336,8 +345,16 @@ module.exports = (config, cb) => {
     // Rename to `index.html`
     .pipe(
       through.obj((file, enc, cb) => {
-        file.path = file.path.replace(path.basename(file.path), 'index.html')
+        let filename = 'index.html'
 
+        // #175 - to create other html pages like __404.md => 404.html
+        if (path.basename(file.path).startsWith('__')) {
+          filename =
+            path.basename(file.path, path.extname(file.path)).substring(2) +
+            '.html'
+        }
+
+        file.path = file.path.replace(path.basename(file.path), filename)
         return cb(null, file)
       })
     )
@@ -355,19 +372,15 @@ module.exports = (config, cb) => {
       fs.writeFileSync(config.feed.rss, feed.rss2())
 
       // Generate sitemap
-      const generatedSitemap = sm.createSitemap({
+      const sm = new Sitemap({
         hostname: config.host,
         urls: sitemap
       })
 
-      generatedSitemap.toXML((err, xml) => {
-        if (err) {
-          console.log(err)
-        }
+      const xml = sm.toString()
 
-        fs.writeFileSync(config.sitemap, xml)
+      fs.writeFileSync(config.sitemap, xml)
 
-        cb()
-      })
+      cb()
     })
 }
