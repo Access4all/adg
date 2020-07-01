@@ -15,7 +15,7 @@ As you learned for sure each HTML file consists on the same structure that inclu
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Add a meaningul title here</title>
+    <title>Add a meaningful title here</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
@@ -33,7 +33,7 @@ By adding the language attribute `lang` to any HTML tag we can define the langua
 The `title` element in the header section phrase the purpose of the document in the browser toolbar, provides a name when a page is added to favorites and displays the title for the page in search engine results. In addition it plays an important role in accessibility.
 
 ```html
-<title>Add a meaningul title here - ACME Inc.</title>
+<title>Add a meaningful title here - ACME Inc.</title>
 ```
 
 When using a screen reader the title element will be announced after the page is loaded. This enables users to identify a website without scanning the whole content. A meaningful title could be «Contact form - ACME Inc.». Also don't forget to append your websites name in the title so the user always knows which website the current page belongs to.
