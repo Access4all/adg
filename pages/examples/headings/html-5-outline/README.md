@@ -10,9 +10,9 @@ changed: "2018-05-01"
 
 ## Short summary
 
-No single relevant assistive software supports the HTML 5 outline algorithm, and as such the current [HTML 5.2 draft: Creating an outline](https://www.w3.org/TR/html52/sections.html#creating-an-outline)) advises to not use it and to rely upon traditional headings (`<h1>` to `<h6>`) instead.
+No single relevant assistive software supports the HTML 5 outline algorithm, and as such the current [HTML 5.2 draft: Creating an outline](https://www.w3.org/TR/html52/sections.html#creating-an-outline)) advises not to use it and to rely upon traditional headings (`<h1>` to `<h6>`) instead.
 
-If you happen to have already implemented such an HTML 5 outline though, there are ways to optimise it using ARIA, so assistive technologies can use them.
+If you happen to have implemented such an HTML 5 outline already, there are ways to optimise it using ARIA, so assistive technologies can use them.
 
 ## Exhaustive explanation
 
