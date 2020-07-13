@@ -6,13 +6,13 @@ changed: "2018-05-01"
 
 # HTML 5's headings outline algorithm
 
-**The idea behind HTML 5's heading algorithm is great: it allows to create valid and highly accessible heading outlines that can be much easier to implement than traditional ones. Sadly, it was never really picked up by any browser or screen reader, and the HTML 5.2 draft advises against using it any further.**
+**The idea behind HTML 5's heading algorithm is great: it promises valid and highly accessible heading outlines that can be much easier to implement than traditional ones. Sadly, it was never really picked up by any browser or screen reader, and the HTML 5.2 draft advises against using it any further.**
 
 ## Short summary
 
-No single relevant assistive software supports the HTML 5 outline algorithm (and as such it is advised against in the current HTML 5.2 draft). So you cannot use it for your websites.
+No single relevant assistive software supports the HTML 5 outline algorithm, and as such the current [HTML 5.2 draft: Creating an outline](https://www.w3.org/TR/html52/sections.html#creating-an-outline)) advises to not use it and to rely upon traditional headings (`<h1>` to `<h6>`) instead.
 
-If it already happened though, there are ways to fix it using ARIA.
+If you happen to have already implemented such an HTML 5 outline though, there are ways to optimise it using ARIA, so assistive technologies can use them.
 
 ## Exhaustive explanation
 
