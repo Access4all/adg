@@ -56,4 +56,4 @@ To find out more about this, see [Semantics and their importance for accessibili
 
 While creating a heading outline using HTML is pretty straightforward, a lot can go wrong when HTML coders are not careful about using the correct tags. But also content authors need to be aware of selecting the right styles in the [WYSIWYG](https://en.wikipedia.org/wiki/WYSIWYG) editor of their [CMS](https://en.wikipedia.org/wiki/Content_management_system).
 
-Some of the risks can be limited by automated mechanisms, e.g. by a validation that checks upon the syntactically correct nesting of heading tags. But besides that, thorough manual counter-checking and proof-reading of contents needs to be a high priority item on any redactors' guidelines.
+Some of the risks can be limited by automated mechanisms, e.g. by a validation that is triggered upon save and enforces the syntactically correct nesting of heading tags. But besides that, thorough manual counter-checking and proof-reading of contents needs to be a high priority item on any redactors' guidelines.
