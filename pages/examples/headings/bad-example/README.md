@@ -16,27 +16,27 @@ On the visual level, the problems are hard to spot. So let's take a closer look 
 
 ![Document outline of NVDA](_media/document-outline-of-nvda.png)
 
-The problems are:
+## Syntactical vs. semantical problems
 
-1. A heading level is skipped: "Playing Soccer" is on level 4, but should be on level 3.
-2. A heading belongs to the wrong parent: "Gardening" does not belong to "Dancing", it should be on level 3 instead of level 4.
-3. A heading is not marked up properly: "Meditate" is marked up as a `<strong>` paragraph instead of an `<h#>`.
+Most syntactical problems can be evaluated automatically: it's no problem for a computer to make sure that HTML code is nested properly.
 
-The first problem is clearly a syntactical ones, the second and third problems are semantical ones.
+Semantical problems, however, are determined by the contents of a page (text, images, etc.), and as such must be examined manually by a human who has certain knowledge about the presented content.
 
-By the way, while NVDA does not propagate the first problem to the user, the bookmarklet [h123](/setup/browsers/bookmarklets/h123) does so by marking it visually:
+## Skipped heading level
+
+The first problem we want to point out is that the heading "Playing Soccer" is on level 4, although its predecedent heading is on level 2. Alas, one heading level is skipped, which is obviously wrong, and will lead to confusion in many screen readers.
+
+This problem is a syntactical one, and as such is easy to spot using automated test tools.
+
+By the way, while NVDA does not propagate this problem to the user, the bookmarklet [h123](/setup/browsers/bookmarklets/h123) does so by marking it visually:
 
 ![Document outline of h123](_media/document-outline-of-h123.png)
 
-## Syntactical problems
+## Wrong nesting
 
-Most syntactical problems can be evaluated automatically: it's no problem for a computer to make sure that there's no heading level skipped. So the first problem in our list above is an easy one to examine.
+The second problem is that "Gardening" is not a "Dancing" style, although the heading outline proposes this.
 
-## Semantical problems
-
-Semantical problems, however, usually must be examined manually by a human who has certain knowledge about the presented content.
-
-Regarding our example, to examine the second problem in our list above, one has to know what "Gardening" means. And based on this knowledge, one can conclude that this is not a dancing style (so it shouldn't belong to "Dancing"). Furthermore, to place it correctly, one needs to decide:
+This problem is a semantical one, and as such can only be detected by a human examining the contents. First of all, one has to know what "Gardening" means, and based on this knowledge, one can conclude that this is not a dancing style (so it shouldn't be nested below "Dancing"). Furthermore, to nest it correctly, one needs to decide:
 
 - Whether it belongs to "Physical Activities" as a heading level 3.
 - Or whether it makes more sense to put it directly under "My Hobbies" as a heading level 2.
@@ -44,6 +44,16 @@ Regarding our example, to examine the second problem in our list above, one has 
 
 A computer probably will never be able to do that.
 
-Finally, to examine the third problem in our list above, one has to conclude that a very short paragraph that is displayed in **bold** (and is placed above at least one following paragraph) might be meant as a heading, but has been marked up improperly. A computer can make an assumption about this alike, but it will never be a 100% certain.
+## Improper markup
+
+The third problem is that "Meditate" is not marked up as a heading, although it visually clearly resembles one. Instead, it is styled only to resemble a heading using as a `<strong>` tag (instead of an `<h#>`).
+
+Again, this problem is a semantical one, and needs manual inspection. To examine it, one has to conclude that a very short paragraph that is displayed in **bold** (and is placed above a following paragraph) might be meant as a heading, but has been marked up improperly. Although a computer can make an assumption about this, it will never be a 100% certain.
 
 To find out more about this, see [Semantics and their importance for accessibility](/knowledge/semantics).
+
+## Conclusion
+
+While creating a heading outline using HTML is pretty straightforward, a lot can go wrong when HTML coders are not careful about using the correct tags. But also content authors need to be aware of selecting the right styles in the [WYSIWYG](https://en.wikipedia.org/wiki/WYSIWYG) editor of their [CMS](https://en.wikipedia.org/wiki/Content_management_system).
+
+Some of the risks can be limited by automated mechanisms, e.g. by a validation that is triggered upon save and enforces the syntactically correct nesting of heading tags. But besides that, thorough manual counter-checking and proof-reading of contents needs to be a high priority item on any redactors' guidelines.
