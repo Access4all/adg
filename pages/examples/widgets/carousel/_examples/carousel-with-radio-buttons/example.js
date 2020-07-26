@@ -20,8 +20,12 @@
       )
       upcoming_index =
         direction === 'previous'
-          ? current_index === 0 ? max_index : current_index - 1
-          : current_index === max_index ? 0 : current_index + 1
+          ? current_index === 0
+            ? max_index
+            : current_index - 1
+          : current_index === max_index
+          ? 0
+          : current_index + 1
       $upcoming_panel = $($all_panels[upcoming_index])
       $upcoming_panel.prop('checked', true).trigger('change')
       $('#alerts').append(

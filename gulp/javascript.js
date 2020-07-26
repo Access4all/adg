@@ -10,6 +10,7 @@ module.exports = (config, cb) => {
       rules: [
         {
           test: /\.js$/,
+          include: path.resolve(__dirname, 'src'),
           exclude: /node_modules/,
           loader: 'babel-loader',
           options: {

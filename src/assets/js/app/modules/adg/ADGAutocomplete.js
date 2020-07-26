@@ -184,8 +184,12 @@ export default class ADGAutocomplete extends ADGBase {
     ) // TODO: is parent() good here?!
     upcomingIndex =
       direction === 'up'
-        ? currentIndex <= 0 ? maxIndex : currentIndex - 1
-        : currentIndex === maxIndex ? 0 : currentIndex + 1
+        ? currentIndex <= 0
+          ? maxIndex
+          : currentIndex - 1
+        : currentIndex === maxIndex
+        ? 0
+        : currentIndex + 1
     $upcomingOption = $($visibleOptions[upcomingIndex])
     return $upcomingOption.prop('checked', true).trigger('change')
   }
@@ -269,13 +273,13 @@ export default class ADGAutocomplete extends ADGBase {
     message =
       filter === ''
         ? this.text('numberInTotal', {
-          number: number
-        })
+            number: number
+          })
         : this.text('numberFiltered', {
-          number: number,
-          total: this.$options.length,
-          filter: `<kbd>${filter}</kbd>`
-        })
+            number: number,
+            total: this.$options.length,
+            filter: `<kbd>${filter}</kbd>`
+          })
     return this.$alertsContainer.append(`<p role='alert'>${message}</p>`)
   }
 

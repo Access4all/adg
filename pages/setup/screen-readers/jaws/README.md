@@ -1,20 +1,18 @@
 ---
 navigation_title: "JAWS"
-position: 2
-changed: "2018-05-30"
+position: 4
+changed: "2020-04-30"
 ---
 
 # JAWS installation and configuration
 
-**JAWS (Job Access With Speech) is one of the most-used screen readers. Therefore it's very important to ensure its compatibility with your websites. Due to its heavy weight, JAWS is a rather clumsy companion while developing, but it's absolutely crucial to fire it up every now and then to ensure accessibility.**
-
-![JAWS icon](_media/jaws-icon.png)
+**JAWS (Job Access With Speech) is one of the most-used desktop screen readers. Therefore it's very important to ensure its compatibility with your websites. Due to its heavy weight, JAWS is a rather clumsy companion while developing, but it's absolutely crucial to fire it up every now and then for counterchecking accessibility on desktop.**
 
 ## Installation
 
 JAWS is a quite heavy piece of software that installs itself deeply into the Windows operating system. To keep your existing Windows clean, it is a good idea to install JAWS inside a virtual machine (VM), see [Windows operating system](/setup/windows).
 
-The demo version of JAWS forces you to restart your computer after 40 minutes (which is another good reason to have it run inside a VM).
+As JAWS is commercial software with its price, it can be checked out using its free demo version, allowing you to run it for 40 minutes.
 
 [Download JAWS](http://www.freedomscientific.com/Downloads/JAWS) and simply run the installer, or see [JAWS Quick Start (PDF, FreedomScientific.com)](http://www.freedomscientific.com/Content/Documents/Manuals/JAWS/JAWS-Quick-Start-Guide.pdf) for detailed information.
 
@@ -22,7 +20,11 @@ The demo version of JAWS forces you to restart your computer after 40 minutes (w
 
 ### Starting
 
-Start JAWS using its icon on the desktop. After it has launched, you have to restart your web browser(s) to make JAWS interact with them correctly.
+Start JAWS using its icon on the desktop.
+
+![JAWS icon](_media/jaws-icon.png)
+
+After it has launched, you have to restart your web browser(s) to make JAWS interact with them correctly.
 
 ### Using the menu
 
@@ -44,7 +46,7 @@ By clicking on the icon, the JAWS menu is displayed.
 
 ![The JAWS menu](_media/the-jaws-menu.png)
 
-Alternatively, you can press `JAWS + J` to display it. By default, the `JAWS` key is the `Insert` key (if you are really curious and want to learn more about this, skip ahead and read [The Insert Modifier Key](/knowledge/desktop-screen-readers/insert-modifier-key)).
+Alternatively, you can press `JAWS + J` to display it. By default, the `JAWS` key is the `Insert` key (if you are really curious and want to learn more about this, skip ahead and read [The Insert Modifier Key](/knowledge/screen-readers/desktop/insert-modifier-key)).
 
 The best way to use the JAWS menu is by keyboard:
 
@@ -88,7 +90,7 @@ Screen readers in general offer tons of configuration options which can drastica
 
 ### Disable auto forms mode (optional)
 
-JAWS by default switches automatically between interaction modes (if you are really curious about this, skip forward and read [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes)). While programming and testing (especially complex JavaScript widgets), this behaviour can be a bit nasty.
+JAWS by default switches automatically between interaction modes (if you are really curious about this, skip forward and read [Screen readers' browse and focus modes](/knowledge/screen-readers/desktop/browse-focus-modes)). While programming and testing (especially complex JavaScript widgets), this behaviour can be a bit nasty.
 
 This mode can be disabled, so it is similar to NVDA. **But we urge you to only do this if you really know what you are doing.**
 
