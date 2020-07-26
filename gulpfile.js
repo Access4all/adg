@@ -102,6 +102,7 @@ gulp.task(
       return gulp
         .src(
           [
+            // Static html files, e.g. `bad-iframe-with-interferring-headings/iframe.html`
             './pages/**/_examples/**/*.html',
             '!./pages/**/_examples/**/index.html'
           ],
@@ -195,10 +196,7 @@ gulp.task('sprite', () => {
       })
     )
 
-  const imgStream = data.img
-    .pipe(changed('./src/assets/img/icons'))
-    .pipe(gulp.dest('./src/assets/img/icons'))
-
+  const imgStream = data.img.pipe(gulp.dest('./src/assets/img/icons'))
   const cssStream = data.css.pipe(changed('./tmp')).pipe(gulp.dest('./tmp'))
 
   return merge(imgStream, cssStream)
@@ -234,16 +232,25 @@ gulp.task(
     gulp.watch(
       [
         './pages/**/*.md',
-        './pages/**/*.html',
-        './pages/**/*.js',
-        './pages/**/*.css',
         './src/templates/**/*.hbs',
         './src/components/**/*.hbs',
-        './gulp/helpers/*'
+        './gulp/helpers/*',
+        // Example content which is embedded in HTML pages
+        './pages/**/_examples/**/*.html',
+        './pages/**/_examples/**/*.js',
+        './pages/**/_examples/**/*.css'
       ],
       gulp.series('html')
     )
-    gulp.watch(['./pages/**/example.*'], gulp.series('html:examples'))
-    gulp.watch(['./pages/{,**/}_media/**/*'], gulp.series('media'))
+    gulp.watch(['./pages/**/_examples/**/*'], gulp.series('html:examples'))
+    gulp.watch([
+      './pages/**/_examples/**/*.html',
+      '!./pages/**/_examples/**/index.html',
+      './pages/{,**/}_media/**/*',
+      './pages/**/*.{png,jpg,mp3}',
+      './src/assets/img/**/*'
+    ], gulp.series('media:copy'))
+    gulp.watch(['./pages/{,**/}_media/**/*', './pages/**/_examples/**/*.png'], gulp.series('media:resize'))
+    gulp.watch(['./src/assets/img/icons/**/*.png', '!./src/assets/img/icons/*.png'], gulp.series('sprite'))
   })
 )
