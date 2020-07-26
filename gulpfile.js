@@ -141,9 +141,17 @@ gulp.task('media:resize', () => {
     .src(['./pages/{,**/}_media/**/*', './pages/**/_examples/**/*.png'], {
       base: './pages'
     })
-    .pipe(changed('./dist', {
-      transformPath: newPath => path.join(path.dirname(newPath), path.basename(newPath, path.extname(newPath)) + '-large' + path.extname(newPath))
-    }))
+    .pipe(
+      changed('./dist', {
+        transformPath: newPath =>
+          path.join(
+            path.dirname(newPath),
+            path.basename(newPath, path.extname(newPath)) +
+              '-large' +
+              path.extname(newPath)
+          )
+      })
+    )
     .pipe(
       resize({
         sizes: [
@@ -243,14 +251,23 @@ gulp.task(
       gulp.series('html')
     )
     gulp.watch(['./pages/**/_examples/**/*'], gulp.series('html:examples'))
-    gulp.watch([
-      './pages/**/_examples/**/*.html',
-      '!./pages/**/_examples/**/index.html',
-      './pages/{,**/}_media/**/*',
-      './pages/**/*.{png,jpg,mp3}',
-      './src/assets/img/**/*'
-    ], gulp.series('media:copy'))
-    gulp.watch(['./pages/{,**/}_media/**/*', './pages/**/_examples/**/*.png'], gulp.series('media:resize'))
-    gulp.watch(['./src/assets/img/icons/**/*.png', '!./src/assets/img/icons/*.png'], gulp.series('sprite'))
+    gulp.watch(
+      [
+        './pages/**/_examples/**/*.html',
+        '!./pages/**/_examples/**/index.html',
+        './pages/{,**/}_media/**/*',
+        './pages/**/*.{png,jpg,mp3}',
+        './src/assets/img/**/*'
+      ],
+      gulp.series('media:copy')
+    )
+    gulp.watch(
+      ['./pages/{,**/}_media/**/*', './pages/**/_examples/**/*.png'],
+      gulp.series('media:resize')
+    )
+    gulp.watch(
+      ['./src/assets/img/icons/**/*.png', '!./src/assets/img/icons/*.png'],
+      gulp.series('sprite')
+    )
   })
 )
