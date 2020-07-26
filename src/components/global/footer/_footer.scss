@@ -82,11 +82,11 @@
   background-size: contain;
   img {
     opacity: 0;
-    max-width: 100px;
-    max-height: 60px;
+    max-width: 70px;
+    max-height: 50px;
     .footer--left & {
       max-width: 200px;
-      max-height: 60px;
+      max-height: 50px;
     }
   }
 }

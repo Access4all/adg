@@ -14,6 +14,17 @@ const plugins = {
   replacements: require('markdown-it-replacements')
 }
 
+const slugify = text => {
+  return text
+    .toString()
+    .toLowerCase()
+    .replace(/\s+/g, '-') // Replace spaces with -
+    .replace(/[^\w\-]+/g, '') // Remove all non-word chars
+    .replace(/\-\-+/g, '-') // Replace multiple - with single -
+    .replace(/^-+/, '') // Trim - from start of text
+    .replace(/-+$/, '') // Trim - from end of text
+}
+
 module.exports = rootDir => filePath => {
   const markdown = markdownIt({
     html: true,
@@ -116,6 +127,30 @@ module.exports = rootDir => filePath => {
           })
         })
       })
+      .use(() => {
+        // Add unique IDs to each heading.
+        let uniqueIds = {}
+        markdown.core.ruler.push('manipulate_heading_anchor', state => {
+          for (let i = 0; i < state.tokens.length; i++) {
+            let token = state.tokens[i]
+            if (['heading_open'].includes(token.type)) {
+              if (token.tag !== 'h1') {
+                let heading_anchor = slugify(state.tokens[i + 1].content)
+                if (!uniqueIds[heading_anchor]) {
+                  uniqueIds[heading_anchor] = 0
+                }
+                uniqueIds[heading_anchor]++
+                if (uniqueIds[heading_anchor] > 1) {
+                  heading_anchor =
+                    heading_anchor + '-' + uniqueIds[heading_anchor]
+                }
+                token.attrSet('id', heading_anchor)
+                token.attrSet('class', 'js-anchor anchor-element')
+              }
+            }
+          }
+        })
+      })
       // .use(() => {
       //   // Currently unused: Increase heading levels by 1
       //   markdown.core.ruler.push('increase_heading_level', state => {
@@ -168,9 +203,9 @@ module.exports = rootDir => filePath => {
                       }</span>${
                         example.code.preview
                           ? `<img src="/${path.relative(
-                            path.join(rootDir, 'pages'),
-                            example.code.preview
-                          )}" alt="Preview">`
+                              path.join(rootDir, 'pages'),
+                              example.code.preview
+                            )}" alt="Preview">`
                           : ''
                       }`
                     }

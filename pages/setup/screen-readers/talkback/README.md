@@ -1,33 +1,44 @@
 ---
-navigation_title: "Talkback"
-position: 4
-changed: "2019-01-19"
+navigation_title: "TalkBack"
+position: 2
+changed: "2020-04-23"
 ---
 
-# TalkBack/Android configuration
+# TalkBack configuration
 
-![Talkback icon](_media/talkback-icon.png)
+**TalkBack is the mobile screen reader of Android. It is pre-installed on Android devices, easy to understand, and the most used mobile screen reader in non-Western countries. Because of its rather unreliable activation shortcut, TalkBack is a bit less convenient than VoiceOver/iOS, but still needs to be used for frequent counterchecking accessibility on mobile platforms.**
 
-TalkBack is the most used screen reader for Android. Unlike device running iOS where are Apple the manufacture of all device is, Android device gets manufactured by different companies. This has the disadvantage that TalkBack is not on all device pre-Installed. Some manufacturers do not care about accessibility at all and don’t install TalkBack on their device other have there one version of Talkback e.g. Samsung called its screen reader Voice Assistant.  As TalkBack is available from the Play Store it should be easy to install it from there (see below).  For those how have a device without the Google apps on it, on the Internet are APKs for TalkBack available to download. However, we advise to use a device for testing purposes that has ether Talkback pre-Installed (e.g. Google Nexus or Pixel) or has the Play Store on it (could be les nerve-racking).
+On some older Android versions, the TalkBack service is not enabled by default. In this case, just install or update the [Android Accessibility Suite](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback&hl=en_US) from the Google Play Store.
 
-## Running TalkBack 
+Android comes equipped with a number of accessibility features which can usually be configured under `Settings` -> `Accessibility`.
+
+We find the default settings to be sensible and a good starting point. But if you want to explore further, extensive information about the TalkBack setup options can be found at the [official TalkBack setup page](https://support.google.com/accessibility/android/answer/6283655).
+
+![TalkBack icon](_media/talkback-icon.png)
+
+## Running TalkBack
 
 ### A little warning first
 
 When TalkBack is running, interaction with the touch screen of your device is very different to default behaviour. If you do not know how to handle it, you may have a hard time using your phone - in the worst case you may not know how to stop TalkBack anymore and be left with a "weird" and seemingly uncontrollable device!
 
-Don’t worry. If you start TalkBack the first time a tutorial come up. It strongly advised that your work through this tutorial first. Your find the tutorial in the Setting for TalkBack, so if you need help you can work through it any time.
+To be safe, please make sure you have configured the start/stop shortcut (see below) before playing around with TalkBack.
 
-### Finding and starting TalkBack
+### Shortcut
 
-On most devices your will find TalkBack in Settings > Accessibility (either it is there pre-Installed, or it will be installed from the Play Store) On device from Samsung the pre-Installed screen reader Voice Assistant and TalkBack can co-exist without any problems.
+This setting allows the user to quickly activate the Android accessibility features, including TalkBack.
 
-To start TalkBack just turn the switch “Use service” on and press the OK button to give TalkBack the right that it needs.
+- On newer Android versions, the shortcut is operated by pressing both volume keys for 3 seconds.
+- On older Android versions this was a 2-step procedure, requiring you to first press the power button and then press both volume keys for 5 seconds.
 
-### Installing TalkBack from Play Store
+We've found that, in practice, no matter the Android version, the shortcut may or may not work, depending on the device brand and further user interface customisations done by the vendor.
 
-Since the version 7 of TalkBack all accessibility services are bundled in an app called “Android Accessibility Suite” in the Play Store, so if you search for TalkBack your will get as one of the first results the “Android Accessibility Suite”. Install this app, please. The app is free, and you can it install as you would install any other app.
+### Manual start/stop
 
-### Shortcut to turn Talkback on/off
+You can also start and stop TalkBack manually. Go to `Settings` -> `Accessibility`, then toggle `TalkBack`.
 
-At least since version 8.1 of Android a handy shortcut called Volume key shortcut or called Accessibility Shortcuts exists (at least on devices from Google and Samsung). It can be found in Settings-> Accessibility.  If you activate this option and select under the menu shortcuts service TalkBack you will be able to turn TalkBack on and off by pressing both volume keys at the same time for about 3 seconds (on Android 9 for about 1 second). 
+### Display Speech Output
+
+This setting displays the current announcement as visual text on screen.
+
+![TalkBack Speech Output](_media/talkback-speech-output.png)

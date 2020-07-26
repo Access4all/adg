@@ -1,7 +1,7 @@
 ---
 navigation_title: "How to implement"
 position: 7
-changed: "2018-05-30"
+changed: "2020-04-07"
 ---
 
 # How to implement websites that are ready for screen reader usage
@@ -24,7 +24,7 @@ Regarding screen readers, semantics are particularly important for providing mea
 
 ## Giving proper feedback
 
-A screen reader's cursor is always placed on one single element of a page. In contrast to visual perception (that makes it possible to register changes on a two-dimensional computer monitor), the screen reader only ever registers changes regarding this single element it is placed on. If you haven't done so yet, go back and read [Screen readers process contents in a linear way](/knowledge/desktop-screen-readers/linear-processing).
+A screen reader's cursor is always placed on one single element of a page. In contrast to visual perception (that makes it possible to register changes on a two-dimensional computer monitor), the screen reader only ever registers changes regarding this single element it is placed on. If you haven't done so yet, go back and read [Screen readers process contents in a linear way using a cursor](/knowledge/screen-readers/linear-processing-using-cursor).
 
 So if you change some content on your website, you have to take care that the screen reader will to take notice of it.
 
@@ -38,7 +38,7 @@ If the focus is set to an element, the screen reader announces it. This can be a
 
 An example for moving the focus sensibly is a datepicker widget: when it opens, the focus is set into the available dates, so the user can pick one. If you are really curious and want to learn more about this, skip ahead and read [Datepicker widget](/examples/widgets/datepicker).
 
-And by the way, you should not set the focus on a big container of information, as it would cause the screen reader announce all of its content in one go. This usually is way too much for the user to handle. Instead, set the focus on the first content element, for example the close button of a dialog: after its announcement, the screen reader stops, and the user can decide when to continue to read. And last but not least: be sure to give this focused element a proper, self-speaking label (for example "Close terms and conditions dialog").
+And by the way, you should not set the focus on a big container of information, as it would cause the screen reader announce all of its content in one go. This usually is way too much for the user to handle. Instead, set the focus on the first content element, for example the close button of a dialog (instead of the dialog itself): after its announcement, the screen reader stops, and the user can decide when to continue to read. And last but not least: be sure to give this focused element a proper, self-speaking label (for example "Close terms and conditions dialog").
 
 ### Modifying currently focused element
 
@@ -54,13 +54,16 @@ If a page's content structure is unintuitive, or its interactive elements (widge
 
 In general though, this often is a sign for bad interaction design: if it needs to be doubted that some users will understand what is going on on your page, you should think about optimising your page in general. We have seen very complex functionality that is very easy to control for all users. If you are really curious and want to learn more about this, skip ahead and read [Widgets simply working for all](/knowledge/semantics/widgets).
 
-## Using screen reader as reference
+## Using screen readers as reference
 
 While developing, you need to use your screen readers on a regular basis to ensure your product is accessible.
 
-We advise you to use NVDA for this. So if you haven't done this yet, go back and read [NVDA installation and configuration](/setup/screen-readers/nvda).
+We advise you to use NVDA for this. Every now and then, do not forget to counter-check using VoiceOver/iOS, JAWS, and TalkBack though. So if you haven't done this yet, go back and read:
 
-Every now and then, do not forget to counter-check using JAWS though. So if you haven't done this yet, go back and read [JAWS installation and configuration](/setup/screen-readers/jaws).
+- [NVDA installation and configuration](/setup/screen-readers/nvda)
+- [VoiceOver/iOS installation and configuration](/setup/screen-readers/voiceover-ios)
+- [JAWS installation and configuration](/setup/screen-readers/jaws)
+- [TalkBack installation and configuration](/setup/screen-readers/talkback)
 
 ## Conclusion
 

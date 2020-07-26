@@ -1,7 +1,7 @@
 ;(function () {
   var AdgDatepicker
 
-  AdgDatepicker = (function () {
+  AdgDatepicker = function () {
     var config
 
     class AdgDatepicker {
@@ -324,24 +324,24 @@
                 -1)
               : currentIndex - 1
             : direction === 'up'
-              ? currentIndex - 7 < 0
-                ? ((this.currentDate = this.previousMonth(this.currentDate)),
-                  this.initDate(),
-                  -1)
-                : currentIndex - 7
-              : direction === 'right'
-                ? currentIndex === maxIndex
-                  ? ((this.currentDate = this.nextMonth(this.currentDate)),
-                    this.initDate(),
-                    0)
-                  : currentIndex + 1
-                : direction === 'down'
-                  ? currentIndex + 7 > maxIndex
-                    ? ((this.currentDate = this.nextMonth(this.currentDate)),
-                      this.initDate(),
-                      0)
-                    : currentIndex + 7
-                  : void 0 // TODO: Calculate index for the current week day // TODO: Calculate index for the current week day
+            ? currentIndex - 7 < 0
+              ? ((this.currentDate = this.previousMonth(this.currentDate)),
+                this.initDate(),
+                -1)
+              : currentIndex - 7
+            : direction === 'right'
+            ? currentIndex === maxIndex
+              ? ((this.currentDate = this.nextMonth(this.currentDate)),
+                this.initDate(),
+                0)
+              : currentIndex + 1
+            : direction === 'down'
+            ? currentIndex + 7 > maxIndex
+              ? ((this.currentDate = this.nextMonth(this.currentDate)),
+                this.initDate(),
+                0)
+              : currentIndex + 7
+            : void 0 // TODO: Calculate index for the current week day // TODO: Calculate index for the current week day
         return this.setSelection(upcomingIndex)
       }
 
@@ -484,7 +484,7 @@
     }
 
     return AdgDatepicker
-  }.call(this))
+  }.call(this)
 
   $(document).ready(function () {
     return $('[data-adg-datepicker]').each(function () {

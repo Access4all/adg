@@ -1,12 +1,12 @@
 ---
 navigation_title: "VMware on Windows & Linux"
 position: 4
-changed: "2018-04-06"
+changed: "2020-04-30"
 ---
 
 # Configuring VMware Workstation Pro on Windows (and Linux)
 
-**Even if you are already running Windows as your operating system, it is highly recommended to make the initial effort needed to set up another Windows within a virtual machine, configured specifically for accessibility testing. This keeps your own system clean and makes accessibility testing much more comfortable.**
+**Even if you are already running Windows as your operating system, it is highly recommended making the initial effort needed to set up another Windows within a virtual machine, configured specifically for accessibility testing. This keeps your own system clean and makes accessibility testing much more comfortable.**
 
 ![VMware Workstation Pro logo](_media/vmware-workstation-pro-logo.png)
 
@@ -16,9 +16,9 @@ While the following instructions are written specifically for the Windows versio
 
 ## Preparing the virtual machine
 
-Before you proceed, be sure you have downloaded a pre-configured VM like described here: [Getting a free Windows virtual machine from Modern.IE](/setup/windows/modern-ie).
+Before you proceed, be sure you have downloaded a pre-configured VM as described here: [Getting a free Windows virtual machine from Modern.IE](/setup/windows/modern-ie).
 
-Then extract the VM to a proper location, for example `C:\Virtual Machines\Accessibility Testing`.
+Extract the VM to a proper location, for example `C:\Virtual Machines\Accessibility Testing`.
 
 ## Installing VMware Workstation Pro
 
@@ -28,7 +28,7 @@ After downloading VMware Workstation Pro, installing and launching it:
 
 - Click `Open a virtual machine`, select the `*.ovf` file in the extracted folder, and confirm.
 - Take a snapshot (`Ctrl + Shift + S`).
-    - This allows to easily go back to that state later, meaning you can re-activate the VM's Windows 90 days license again and again.
+    - This allows to easily go back to that state later, meaning you can re-activate the VM's Windows 90-day license again and again.
     - For more info, see [Understanding snapshots (VMware)](https://www.vmware.com/support/ws5/doc/ws_preserve_sshot_understanding.html).
 - Click `Edit virtual machine settings`.
     - Go to `Processors & Memory`, then select at least 2000MB of memory.
@@ -44,7 +44,7 @@ Start the VM. User and password can be found here: [Getting a free Windows virtu
 
 ### Emulating the Insert key
 
-Windows screen readers rely heavily on the `Insert` key.
+Windows desktop screen readers rely heavily on the `Insert` key.
 
 ![Insert key on a keyboard](_media/insert-key-on-a-keyboard.png)
 
@@ -58,4 +58,4 @@ This key is not easily available on some keyboards, so you may have to emulate i
 
 ## Working seamlessly with the VM
 
-We recommend you to play around with "Single Window" and "Unity" modes to find out what fits you best.
+We recommend you play around with "Single Window" and "Unity" modes to find out what fits you best.

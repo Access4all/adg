@@ -33,6 +33,17 @@ export default () => {
       }
     })
   })
+  contextTrigger.add('.js-anchor', function () {
+    var elem = this
+
+    require(['./modules/content/Anchor'], function (Module) {
+      if (Module.default) {
+        ModuleManager.connect(Module.default, elem)
+      } else {
+        ModuleManager.connect(Module, elem)
+      }
+    })
+  })
 
   contextTrigger.validate('body')
 
