@@ -1,7 +1,7 @@
 ---
 navigation_title: "Handling"
 position: 1
-changed: "2018-04-18"
+changed: "2020-04-30"
 ---
 
 # How to handle tables
@@ -14,7 +14,7 @@ For keyboard only users, tables do not offer any special functionality. So there
 
 ## Screen reader handling
 
-For screen reader users, headings offer a lot of special functionalities. Here follows a quick nomination of the most important features. Besides this, check out [How to read websites using a desktop screen reader](/knowledge/desktop-screen-readers/reading-websites).
+For desktop screen reader users, tables offer a lot of special functionalities. Here follows a quick nomination of the most important features. Besides this, check out [How to read websites using a desktop screen reader](/knowledge/screen-readers/desktop/reading-websites).
 
 ### Quick navigation
 

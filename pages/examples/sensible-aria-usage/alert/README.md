@@ -10,7 +10,7 @@ changed: "2018-05-15"
 
 ## Background
 
-As we know from [Screen readers process contents in a linear way](/knowledge/desktop-screen-readers/linear-processing), screen readers are always on one single point of a page, so they are not aware of changes to the document that happen somewhere else. Using `role="alert"` though, you can force a newly added element's content to be announced anyway.
+As we know from [Screen readers process contents in a linear way using a cursor](/knowledge/screen-readers/linear-processing-using-cursor), screen readers are always on one single point of a page, so they are not aware of changes to the document that happen somewhere else. Using `role="alert"` though, you can force a newly added element's content to be announced anyway.
 
 ## Intended use
 

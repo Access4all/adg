@@ -68,7 +68,7 @@ Adding distinct visual patterns can make the visual link accessible.
 
 ![The same pie chart, now with dots filling one section and lines filling another](_media/pie-chart-colour-outline-pattern.png)
 
-Or in charts as simple as this one it's also possible to forego a separate legend and place the labels directly inside the sections. As long as the contrast between the label and the background colour of the section satisfies the [contrast requirements for text](/knowledge/colours-and-contrast/text-contrast) this might be the most straight-forward solution.
+Or in charts as simple as this one it's also possible to forego a separate legend and place the labels directly inside the sections. As long as the contrast between the label and the background colour of the section satisfies the [contrast requirements for text](/knowledge/colours-and-contrast/text/) this might be the most straight-forward solution.
 
 ![The same pie chart, without patterns but with the labels placed inside the three sections](_media/pie-chart-colour-outline-labels-inline.png)
 
