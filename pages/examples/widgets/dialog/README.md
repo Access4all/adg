@@ -4,7 +4,7 @@ position: 12
 changed: "2020-04-30"
 ---
 
-# Dialog widget (or: modal, popup, lightbox, alert)
+# Dialog widget (or: modal, popup, lightbox, overlay, alert)
 
 **Dialogs display some information on top of a page. They are typically used to react upon a user action, for example to display a notice or to ask for some input like confirming something. There are dialogs that disable the rest of the page in the background (modal), while others do not (non-modal).**
 
