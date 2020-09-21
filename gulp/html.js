@@ -89,7 +89,9 @@ const extendNavigationItem = (origItem, index, options) => {
       // Not a grand parent of the current item
       item.parent !== getParentUrl(getParentUrl(options.currentUrl)) &&
       // Not a first level item
-      item.parent
+      item.parent &&
+      // Not an uncle/aunt of the current item
+      getParentUrl(item.url) !== getParentUrl(getParentUrl(getParentUrl(options.currentUrl)))
 
     if (isInactive) {
       item.isInactive = true
