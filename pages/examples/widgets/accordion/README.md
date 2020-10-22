@@ -24,6 +24,8 @@ In addition to the tablists' requirements, and besides many other requirements, 
 
 ## Proofs of concept
 
+**Update 2020:** Due to the fact that Internet Explorer doesn't need to be supported anymore (see [Relevant combinations of screen readers and browsers](/knowledge/screen-readers/relevant-combinations)), we now favor the [Simple ARIA implementation](#simple-aria-implementation) (the one at the end of this page) over the preceding ones.
+
 ### Radio buttons implementation
 
 Based on the tablists' proof of concept, simply the layout is different.
