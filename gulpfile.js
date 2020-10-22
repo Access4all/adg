@@ -77,7 +77,8 @@ gulp.task('js', cb => {
   js(
     {
       entry: {
-        scripts: './src/assets/js/ui.js'
+        scripts: './src/assets/js/ui.js',
+        cms: './src/assets/js/netlifycms.js'
       },
       dist: './dist/js/',
       publicPath: '/js/'
@@ -212,6 +213,25 @@ gulp.task('sprite', () => {
   return merge(imgStream, cssStream)
 })
 
+gulp.task(
+  'editor:copy',
+  gulp.parallel(
+    function editor () {
+      return gulp
+        .src(
+          [
+            './src/editor/*'
+          ],
+          {
+            base: './src/editor'
+          }
+        )
+        .pipe(changed('./dist/editor'))
+        .pipe(gulp.dest('./dist/editor'))
+    }
+  )
+)
+
 gulp.task('media', gulp.parallel('media:copy', 'media:resize'))
 
 gulp.task('clean', () => del('./dist'))
@@ -220,7 +240,7 @@ gulp.task(
   'build',
   gulp.series(
     'sprite',
-    gulp.parallel('css', 'js', 'media', 'html', 'html:examples')
+    gulp.parallel('css', 'js', 'media', 'html', 'html:examples', 'editor:copy')
   )
 )
 

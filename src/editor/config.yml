@@ -1,0 +1,61 @@
+# Netlify CMS Configuration
+
+backend:
+  name: git-gateway
+
+# Production
+# backend:
+#   name: github
+#   repo: owner-name/repo-name # Path to your GitHub repository
+#   open_authoring: true
+
+# when using the default proxy server port
+local_backend: true
+
+media_folder: "media"
+public_folder: "/media"
+
+site_url: https://accessibility-developer-guide.com
+logo_url: https://accessibility-developer-guide.com/img/logo/adg.svg
+
+publish_mode: editorial_workflow
+editor:
+  preview: false
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
+
+collections:
+  - label: "Pages"
+    name: "pages"
+    folder: "pages"
+    media_folder: '{{dirname}}/_media'
+    public_folder: ''
+    identifier_field: navigation_title
+    slug: "{{slug}}/README"
+    create: true
+    nested:
+      depth: 100 # max depth to show in the collection tree
+    meta:
+      path:
+        widget: "string"
+        label: "Path"
+        index_file: "README"
+    fields:
+      - label: "Navigation Title"
+        name: "navigation_title"
+        widget: "string"
+      - label: "Position in navigation"
+        name: "position"
+        widget: "number"
+      - label: "Last update"
+        name: "changed"
+        widget: "hidden"
+        default: "{{year}}-{{month}}-{{day}}"
+        format: "YYYY-MM-DD"
+      - label: "Content"
+        name: "body"
+        widget: "markdown"
