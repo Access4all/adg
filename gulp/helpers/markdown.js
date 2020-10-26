@@ -11,7 +11,8 @@ const plugins = {
   kbd: require('markdown-it-kbd'),
   samp: require('markdown-it-samp'),
   responsive: require('@gerhobbelt/markdown-it-responsive'),
-  replacements: require('markdown-it-replacements')
+  replacements: require('markdown-it-replacements'),
+  toc: require('markdown-it-table-of-contents')
 }
 
 const slugify = text => {
@@ -284,6 +285,11 @@ module.exports = rootDir => filePath => {
             }
           })
         })
+      })
+      .use(plugins.toc, {
+        includeLevel: [2, 3],
+        containerHeaderHtml: 'Contents:',
+        containerClass: 'toc'
       })
   )
 }
