@@ -65,6 +65,8 @@
   left: auto !important;
   top: auto !important;
   right: auto !important;
+  overflow: auto !important;
+  max-height: calc(100vh - 210px);
 
   @media (min-width: $site-width) {
     width: 450px;
