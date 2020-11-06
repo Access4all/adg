@@ -140,9 +140,17 @@ gulp.task('media:resize', () => {
     .src(['./pages/{,**/}_media/**/*', './pages/**/_examples/**/*.png'], {
       base: './pages'
     })
-    .pipe(changed('./dist', {
-      transformPath: newPath => path.join(path.dirname(newPath), path.basename(newPath, path.extname(newPath)) + '-large' + path.extname(newPath))
-    }))
+    .pipe(
+      changed('./dist', {
+        transformPath: newPath =>
+          path.join(
+            path.dirname(newPath),
+            path.basename(newPath, path.extname(newPath)) +
+              '-large' +
+              path.extname(newPath)
+          )
+      })
+    )
     .pipe(
       resize({
         sizes: [
