@@ -45,17 +45,16 @@ Fortunately, the lost semantics can be re-applied using ARIA (if you haven't don
 
 This is done by adding a `role` attribute with the appropriate value to each element:
 
-- `role="grid"` corresponds to `<table>`
+- `role="table"` corresponds to `<table>`
 - `role="row"` corresponds to `<tr>`
+- `role="rowgroup"` corresponds to `<thead>`, `<tbody>` & `<tfoot>`
 - `role="columnheader"` corresponds to `<th>` (horizontal)
 - `role="rowheader"` corresponds to `<th>` (vertical)
-- `role="gridcell"` corresponds to `<td>`
+- `role="cell"` corresponds to `<td>`
 
 Now the table will be recognised properly again by screen readers.
 
 [Example](_examples/table-with-block-elements-fixed-with-aria)
-
-**Notice:** for both `<thead>` and `<tbody>`, there does not seem to exist an equivalent ARIA role. We have to apply `role="presentation"` to these elements to remove any improper semantical information (left behind by `display: block`). Otherwise this would have an impact on the semantical structure of the table, potentially breaking it once again.
 
 ## Conclusion
 
