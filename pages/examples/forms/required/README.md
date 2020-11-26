@@ -57,3 +57,12 @@ Instead of a applying a visually hidden text "required", one can set a `required
 Technically this is much easier and cleaner (more information here: [HTML 5 client side validations](/examples/forms/html-5-validations)). But browser support is still rather shaky and the user experience with screen readers is shaky.
 
 And often there may be cases where other texts than simply "required" are needed (and where there is no standard HTML attribute available), so it's good to have a more flexible solution: namely hidden texts.
+
+## You could also be interested in
+
+Knowledge is power! Our guide has more to offer about:
+
+- [Placing non-interactive content between form controls](/examples/forms/non-interactive-content)
+- [Hiding elements from screen readers using aria-hidden](/examples/sensible-aria-usage/hidden/)
+- [Validation messages](/examples/forms/validation-messages)
+- [HTML 5 client side validations](/examples/forms/html-5-validations)
