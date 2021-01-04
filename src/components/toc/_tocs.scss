@@ -2,7 +2,7 @@
   margin-bottom: 100px;
   margin-top: -100px;
 
-  + p + p {
+  + p {
     @include text_lead;
   }
 

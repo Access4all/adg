@@ -153,20 +153,24 @@ module.exports = (config, cb) => {
     // Extract YAML front matter
     .pipe(frontMatter().on('error', config.errorHandler))
 
-    // Add ToC placeholder to markdown (right after main title)
+    // Add [[toc]] placeholder to markdown
     .pipe(
       through
         .obj((file, enc, cb) => {
           const url = getUrl(file.path, config.base)
           const level = url.split('/').length
 
-          if (level > 2) {
-            let contents = file.contents.toString()
-
-            contents = contents.replace(/\n# (.*?)\n/, '\n# $1\n[[toc]]\n')
-
-            file.contents = Buffer.from(contents)
+          // Skip first level pages
+          if (level < 2) {
+            return cb(null, file)
           }
+
+          // Insert placeholder right after main title
+          const contents = file.contents
+            .toString()
+            .replace(/\n# (.*?)\n/, '\n# $1\n[[toc]]\n')
+
+          file.contents = Buffer.from(contents)
 
           return cb(null, file)
         })

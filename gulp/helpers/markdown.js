@@ -12,7 +12,7 @@ const plugins = {
   samp: require('markdown-it-samp'),
   responsive: require('@gerhobbelt/markdown-it-responsive'),
   replacements: require('markdown-it-replacements'),
-  toc: require('markdown-it-table-of-contents')
+  toc: require('markdown-it-toc-done-right')
 }
 
 const slugify = text => {
@@ -287,9 +287,15 @@ module.exports = rootDir => filePath => {
         })
       })
       .use(plugins.toc, {
-        includeLevel: [2, 3],
-        containerHeaderHtml: 'Contents:',
-        containerClass: 'toc'
+        level: 2,
+        containerClass: 'toc',
+        listType: 'ul',
+        callback: (html, ast) => {
+          // Skip single-item ToCs
+          if (ast.c[0].c.length < 2) {
+            ast.c[0].c = []
+          }
+        }
       })
   )
 }
