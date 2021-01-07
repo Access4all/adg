@@ -55,3 +55,11 @@ To interact with an element, keyboard users need to move the so called "focus" s
 Using the keyboard shortcuts above (and maybe more), you should be able to use any website to its fullest.
 
 From now on, why not try to read this complete guide without using a mouse? Learning by doing is always a good way to level up your skills!
+
+# You could also be interested in
+
+Knowledge is power! Our guide has more to offer about:
+
+- [Controlling a computer with a keyboard only](/knowledge/keyboard-only/controlling-a-computer/)
+- [How to implement websites that are ready for keyboard only usage](/knowledge/keyboard-only/how-to-implement/)
+- [What screen readers are - and why they are so important to accessibility testing](/knowledge/screen-readers/what-and-why/)
