@@ -90,6 +90,8 @@ If you need to describe the expandability status of interactive elements, `aria-
 
 ## You could be also interested in 
 
+Knowledge is power! Our guide has more to offer about:
+
 - [The purpose behind the WAI-ARIA standard](/knowledge/aria/purpose)
 - [Bad ARIA practices](/knowledge/aria/bad-practices)
 - [Sensible usage of ARIA roles and attributes](/examples/sensible-aria-usage)
