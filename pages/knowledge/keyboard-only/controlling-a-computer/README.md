@@ -83,7 +83,7 @@ Most of the following shortcuts are pretty common to a wide set of similar appli
 
 This list by far is not complete, and each application may offer very distinct additional shortcuts.
 
-# You could also be interested in
+## You could also be interested in
 
 Knowledge is power! Our guide has more to offer about:
 
