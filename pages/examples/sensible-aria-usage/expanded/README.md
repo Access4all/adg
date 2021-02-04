@@ -87,3 +87,12 @@ While this is even more robust than using `aria-expanded`, it may feel out of pl
 ## Conclusion
 
 If you need to describe the expandability status of interactive elements, `aria-expanded` is one of the few ARIA attributes we truly recommend for general use.
+
+## You could be also interested in 
+
+Knowledge is power! Our guide has more to offer about:
+
+- [The purpose behind the WAI-ARIA standard](/knowledge/aria/purpose)
+- [Bad ARIA practices](/knowledge/aria/bad-practices)
+- [Sensible usage of ARIA roles and attributes](/examples/sensible-aria-usage)
+
