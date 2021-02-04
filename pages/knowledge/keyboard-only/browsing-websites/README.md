@@ -56,7 +56,7 @@ Using the keyboard shortcuts above (and maybe more), you should be able to use a
 
 From now on, why not try to read this complete guide without using a mouse? Learning by doing is always a good way to level up your skills!
 
-# You could also be interested in
+## You could also be interested in
 
 Knowledge is power! Our guide has more to offer about:
 
