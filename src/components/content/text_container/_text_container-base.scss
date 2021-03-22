@@ -1,5 +1,19 @@
+@mixin text_lead {
+  font-size: 1.5em;
+
+  @include mobile {
+    font-size: 1.25em;
+  }
+
+  margin-bottom: 100px;
+
+  strong {
+    font-weight: 300;
+  }
+}
+
 @mixin text_container {
-	@include richtext(all);
+  @include richtext(all);
   h1 {
     @include h1;
     @include theme-color;
@@ -8,17 +22,7 @@
     padding-bottom: 1.5em;
 
     + p {
-      font-size: 1.5em;
-
-      @include mobile {
-        font-size: 1.25em;
-      }
-
-      margin-bottom: 100px;
-
-      strong {
-        font-weight: 300;
-      }
+      @include text_lead;
     }
   }
   h2 {
