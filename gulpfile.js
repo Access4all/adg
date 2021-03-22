@@ -127,6 +127,14 @@ gulp.task(
         })
         .pipe(changed('./dist'))
         .pipe(gulp.dest('./dist'))
+    },
+    function staticFiles () {
+      return gulp
+        .src(['./pages/**/_static/**/*'], {
+          base: './pages'
+        })
+        .pipe(changed('./dist'))
+        .pipe(gulp.dest('./dist'))
     }
   )
 )
@@ -249,6 +257,20 @@ gulp.task(
       gulp.series('html')
     )
     gulp.watch(['./pages/**/example.*'], gulp.series('html:examples'))
-    gulp.watch(['./pages/{,**/}_media/**/*'], gulp.series('media'))
+    gulp.watch(
+      [
+        // demo
+        './pages/**/_examples/**/*.html',
+        '!./pages/**/_examples/**/index.html',
+        // content
+        './pages/{,**/}_media/**/*',
+        './pages/**/*.{png,jpg,mp3}',
+        // assets
+        './src/assets/img/**/*',
+        // static
+        './pages/{,**/}_static/**/*'
+      ],
+      gulp.series('media')
+    )
   })
 )
