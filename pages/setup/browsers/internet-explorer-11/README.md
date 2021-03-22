@@ -1,12 +1,13 @@
 ---
 navigation_title: "Internet Explorer 11"
+navigation_ignore: true
 position: 1
-changed: "2018-03-12"
+changed: "2021-03-22"
 ---
 
 # Internet Explorer 11 installation and configuration
 
-**Microsoft's legacy browser (and every serious web developers' longtime nemesis) Internet Explorer 11 (IE11) remains relevant when it comes to accessibility, as many users with special needs still rely on it. Especially among blind people, Internet Explorer 11 enjoys wide distribution.**
+**Microsoft's legacy browser (and every serious web developers' longtime nemesis) Internet Explorer 11 (IE 11) is not officially supported any more. See [Edge](../edge) for its successor.**
 
 ![Internet Explorer logo](_media/internet-explorer-logo.png)
 

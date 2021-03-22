@@ -210,15 +210,17 @@ module.exports = (config, cb) => {
 
           files.push(file)
 
-          navigation.push({
-            url,
-            parent: parent !== url ? parent : null,
-            title: file.frontMatter.navigation_title,
-            domid: 'nav-' + normalize(file.frontMatter.navigation_title),
-            titleDetailed: file.data.title,
-            lead: file.data.lead,
-            position: file.frontMatter.position
-          })
+          if (!file.frontMatter.navigation_ignore) {
+            navigation.push({
+              url,
+              parent: parent !== url ? parent : null,
+              title: file.frontMatter.navigation_title,
+              domid: 'nav-' + normalize(file.frontMatter.navigation_title),
+              titleDetailed: file.data.title,
+              lead: file.data.lead,
+              position: file.frontMatter.position
+            })
+          }
 
           return cb()
         },
