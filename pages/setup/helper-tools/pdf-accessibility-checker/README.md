@@ -12,7 +12,7 @@ changed: "2018-04-06"
 
 ## Installation
 
-[Download PDF Accessibility Checker](http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html).
+[Download PDF Accessibility Checker](https://www.access-for-all.ch/en/pdf-accessibility-checker.html).
 
 As it does not have an installer, you can simply extract it to a folder of your liking.
 

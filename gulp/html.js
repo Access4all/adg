@@ -89,7 +89,10 @@ const extendNavigationItem = (origItem, index, options) => {
       // Not a grand parent of the current item
       item.parent !== getParentUrl(getParentUrl(options.currentUrl)) &&
       // Not a first level item
-      item.parent
+      item.parent &&
+      // Not a great uncle/aunt of the current item
+      getParentUrl(item.url) !==
+        getParentUrl(getParentUrl(getParentUrl(options.currentUrl)))
 
     if (isInactive) {
       item.isInactive = true
@@ -149,6 +152,30 @@ module.exports = (config, cb) => {
 
     // Extract YAML front matter
     .pipe(frontMatter().on('error', config.errorHandler))
+
+    // Add [[toc]] placeholder to markdown
+    .pipe(
+      through
+        .obj((file, enc, cb) => {
+          const url = getUrl(file.path, config.base)
+          const level = url.split('/').length
+
+          // Skip first level pages
+          if (level < 2) {
+            return cb(null, file)
+          }
+
+          // Insert placeholder right after main title
+          const contents = file.contents
+            .toString()
+            .replace(/\n# (.*?)\n/, '\n# $1\n[[toc]]\n')
+
+          file.contents = Buffer.from(contents)
+
+          return cb(null, file)
+        })
+        .on('error', config.errorHandler)
+    )
 
     // Compile Markdown to HTML
     .pipe(

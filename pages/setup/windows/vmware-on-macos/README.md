@@ -1,7 +1,7 @@
 ---
 navigation_title: "VMware on macOS"
 position: 3
-changed: "2020-04-30"
+changed: "2021-03-22"
 ---
 
 # Configuring VMware Fusion on macOS
@@ -12,7 +12,7 @@ changed: "2020-04-30"
 
 ## Preparing the virtual machine
 
-Before you proceed, be sure you have downloaded a pre-configured virtual machine (VM) as described here: [Getting a free Windows virtual machine from Modern.IE](/setup/windows/modern-ie).
+Before you proceed, be sure you have downloaded a pre-configured virtual machine (VM) as described here: [Getting a free Windows virtual machine from Microsoft](/setup/windows/virtual-machines).
 
 Then extract the VM (using [The Unarchiver](http://wakaba.c3.cx/s/apps/unarchiver.html), as the built-in unzip version is not capable of zip64 files) to a proper location, for example `~/Virtual Machines`.
 
@@ -32,7 +32,7 @@ After downloading [VMware Fusion](http://www.vmware.com/ch/products/fusion), ins
 
 ## Booting up the VM for the first time
 
-Start the VM. User and password can be found here: [Getting a free Windows virtual machine from Modern.IE](/setup/windows/modern-ie).
+Start the VM. User and password can be found here: [Getting a free Windows virtual machine from Microsoft](/setup/windows/virtual-machines).
 
 ## Improving seamless integration
 

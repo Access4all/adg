@@ -82,3 +82,11 @@ Most of the following shortcuts are pretty common to a wide set of similar appli
 - `Ctrl + F`: Find
 
 This list by far is not complete, and each application may offer very distinct additional shortcuts.
+
+## You could also be interested in
+
+Knowledge is power! Our guide has more to offer about:
+
+- [How to browse websites using a keyboard only](/knowledge/keyboard-only/browsing-websites/)
+- [How to implement websites that are ready for keyboard only usage](/knowledge/keyboard-only/how-to-implement/)
+- [Relevant combinations of screen readers and browsers](/knowledge/screen-readers/relevant-combinations/)

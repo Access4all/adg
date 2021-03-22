@@ -1,0 +1,12 @@
+.toc {
+  margin-bottom: 100px;
+  margin-top: -100px;
+
+  + p {
+    @include text_lead;
+  }
+
+  ul ul {
+    margin-bottom: 0;
+  }
+}
