@@ -1,7 +1,7 @@
 ---
 navigation_title: "Contents Structured"
 position: 1
-changed: "2019-01-31"
+changed: "2021-03-22"
 ---
 
 # Contents Structured
