@@ -1,5 +1,6 @@
 ---
 navigation_title: "Internet Explorer 11"
+navigation_ignore: true
 position: 1
 changed: "2018-03-12"
 ---
