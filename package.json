@@ -72,6 +72,7 @@
     "markdown-it-toc-done-right": "^4.2.0",
     "merge-stream": "^2.0.0",
     "minimist": "^1.2.3",
+    "node-sass": "^4.12.0",
     "node-sass-globbing": "0.0.23",
     "prettier-standard": "^16.1.0",
     "require-new": "^1.1.1",
