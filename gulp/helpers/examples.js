@@ -87,7 +87,7 @@ const getExample = (examplePath, filePath) => {
   const code = getCode(examplePath)
   const id = _.uniqueId('example-')
 
-  const compatibilitySummaryBrowsers = ['FF', 'IE']
+  const compatibilitySummaryBrowsers = ['Chrome', 'Edge', 'FF', 'Safari', 'IE']
   const compatibilitySummary = []
 
   let compatibility = []
@@ -98,8 +98,8 @@ const getExample = (examplePath, filePath) => {
     )) {
       const results = value.status
         ? {
-            [category]: value
-          }
+          [category]: value
+        }
         : value
 
       for (const [browser, result] of Object.entries(results)) {
