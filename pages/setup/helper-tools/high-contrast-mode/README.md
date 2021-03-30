@@ -18,6 +18,6 @@ You can toggle HCM using the keyboard shortcut `Alt + Shift + PrtScn`. Alternati
 
 ![Windows HCM themes](_media/windows-hcm-themes.png)
 
-Now take a look at your website in Internet Explorer or Firefox (restart required) and ensure that all visual information is still perceivable. For example, when the currently active link in a navigation is marked using a symbol, this symbol still needs to be displayed in HCM. Also, the keyboard focus always needs to be clearly perceivable.
+Now take a look at your website in Edge and ensure that all visual information is still perceivable. For example, when the currently active link in a navigation is marked using a symbol, this symbol still needs to be displayed in HCM. Also, the keyboard focus always needs to be clearly perceivable. Do not use Firefox or Chrome when you are testing HCM.
 
 ![The WCAG 2.0 website in high contrast mode](_media/the-wcag-20-website-in-high-contrast-mode.png)
