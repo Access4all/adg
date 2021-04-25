@@ -21,7 +21,7 @@ export default () => {
       }
     })
   })
-
+  /*
   contextTrigger.add('.js-theme', function () {
     var elem = this
 
@@ -33,6 +33,7 @@ export default () => {
       }
     })
   })
+  */
   contextTrigger.add('.js-anchor', function () {
     var elem = this
 

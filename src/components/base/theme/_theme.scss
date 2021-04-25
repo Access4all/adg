@@ -6,9 +6,9 @@
   --theme-main-color-inverse: #{$c-white};
   --theme-bg-color-inverse: var(--theme-color-dark);
 
-  &.is-below {
+  /* &.is-below {
     --theme-main-color: var(--theme-color-dark);
-    --theme-bg-color: #{$c-white};
+    --theme-bg-color: blue; // #{$c-white};
     --theme-main-color-inverse: #{$c-black};
     --theme-bg-color-inverse: var(--theme-color-light);
   }
@@ -18,7 +18,7 @@
     --theme-bg-color: #{$c-white};
     --theme-main-color-inverse: #{$c-black};
     --theme-bg-color-inverse: var(--theme-color-light);
-  }
+  } */
 }
 
 .theme-introduction {
@@ -42,6 +42,11 @@
 .theme-examples {
   --theme-color-dark: #{$theme-1-dark};
   --theme-color-light: #{$theme-1-light};
+}
+
+.theme-contribute {
+  --theme-color-dark: #{$theme-4-dark};
+  --theme-color-light: #{$theme-4-light};
 }
 
 .theme-welcome {

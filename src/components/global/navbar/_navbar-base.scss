@@ -8,16 +8,12 @@ $navWidthMax: 260px;
   position: absolute;
   display: inline-block;
   opacity: 1;
-  @include theme-isLight {
-    opacity: 1;
-  }
 }
 
 
 @mixin navbar_white_line__bg {
   background-color: $c-white;
-  transition: all .5s ease .5s;
-  @include theme-isLight {
-    @include theme(background-color, var(--theme-color-light));
+  .theme-contribute & {
+    background-color: $c-gray;
   }
 }

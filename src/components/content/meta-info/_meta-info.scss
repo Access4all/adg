@@ -3,7 +3,11 @@
 
   display: flex;
   font-size: 0.8rem;
-  border-top: 1px solid var(--theme-color-light, grey);
+  border-top: 1px solid $c-white;
+
+  .theme-contribute & {
+    border-color: $c-gray;
+  }
 }
 
 .meta-info__title {

@@ -1,3 +1,4 @@
+/*
 import $ from 'jquery'
 
 import BaseModule from '../BaseModule'
@@ -7,7 +8,7 @@ import BaseModule from '../BaseModule'
  *
  * @selector .js-theme
  * @enabled true
- */
+ * /
 export default class Theme extends BaseModule {
   constructor () {
     super()
@@ -16,7 +17,7 @@ export default class Theme extends BaseModule {
 
   init (element) {
     var DEFAULTS = {
-      belowClass: 'is-below'
+      // belowClass: 'is-below'
     }
     this.$el = $(element)
     this.config = $.extend(true, {}, DEFAULTS)
@@ -46,3 +47,4 @@ export default class Theme extends BaseModule {
     this.$el.removeClass(this.config.belowClass)
   }
 }
+*/

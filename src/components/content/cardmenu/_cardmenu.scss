@@ -59,10 +59,10 @@
 
 .cardmenu--card--link {
   @include card;
-  box-shadow: 0 22px 30px -27px rgba(0, 0, 0, 0.3);
-  @include theme-isLight {
+  // box-shadow: 0 22px 30px -27px rgba(0, 0, 0, 0.3);
+  // @include theme-isLight {
     box-shadow: 0 10px 34px 0 rgba(0, 0, 0, 0.2);
-  }
+  // }
   font-weight: 300;
   width: 100%;
   height: 100%;
