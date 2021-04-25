@@ -34,14 +34,14 @@
     }
   }
 
+  &:empty {
+    display: none;
+  }
+
   &::before {
     content: 'On this page';
     display: block;
     @include font-weight(bold);
-  }
-
-  + p {
-    @include text_lead;
   }
 
   ul ul {
