@@ -16,20 +16,20 @@
   }
 
   h1 + & {
-    margin-top: -88px;
+    margin-top: -80px;
     margin-bottom: 96px;
 
     @media (max-width: $mq-tablet) {
-      margin-top: -48px;
+      margin-top: -32px;
       margin-bottom: 88px;
     }
 
     @media (max-width: $mq-mobile) {
-      margin-top: -16px;
+      margin-top: -8px;
     }
 
     @media (max-width: $mq-mobile-narrow) {
-      margin-top: -8px;
+      margin-top: 0;
       margin-bottom: 80px;
     }
   }
