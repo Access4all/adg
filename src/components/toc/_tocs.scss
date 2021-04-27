@@ -1,9 +1,47 @@
 .toc {
-  margin-bottom: 100px;
-  margin-top: -100px;
+  margin-top: 0;
+  margin-bottom: 104px;
 
-  + p {
-    @include text_lead;
+  border-left: 2px solid var(--theme-color-dark);
+  @include rem(padding-left, 20px);
+  font-size: 0.9em;
+
+  @media (max-width: $mq-mobile) {
+    margin-top: -8px;
+  }
+
+  @media (max-width: $mq-mobile-narrow) {
+    margin-top: -8px;
+    margin-bottom: 96px;
+  }
+
+  h1 + & {
+    margin-top: -80px;
+    margin-bottom: 96px;
+
+    @media (max-width: $mq-tablet) {
+      margin-top: -32px;
+      margin-bottom: 88px;
+    }
+
+    @media (max-width: $mq-mobile) {
+      margin-top: -8px;
+    }
+
+    @media (max-width: $mq-mobile-narrow) {
+      margin-top: 0;
+      margin-bottom: 80px;
+    }
+  }
+
+  &:empty {
+    display: none;
+  }
+
+  &::before {
+    content: 'On this page';
+    display: block;
+    @include font-weight(bold);
   }
 
   ul ul {
