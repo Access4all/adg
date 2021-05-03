@@ -15,7 +15,7 @@
   margin-right: 0.25em;
   }
   @include above-mobile {
-    &:after {
+    &::after {
       @include navbar_white_line__pseudo;
       left: -50vw; right: -50vw;
       bottom: 0;
@@ -40,12 +40,9 @@
 
 .breadcrumbs--list--item {
     display: inline-block;
-    & + & {
-        margin-left: $gutter / 4;
-    }
 
-    &:last-child {
-        a:after {
+    &:last-of-type {
+        .breadcrumbs--list--item--link::after {
             display: none;
         }
     }
@@ -53,14 +50,14 @@
 
 .breadcrumbs--list--item--link {
     font-weight: 300;
-    display: block;
     @include font-xs;
-    &:after {
+
+    &::after {
         content: "/";
-        padding-left: $gutter / 4;
+        padding: 0 $gutter / 4;
         display: inline-block;
     }
-    //.is-back-link &,
+
     &:hover, &:focus {
       @include theme(color, var(--theme-color-dark));
       text-decoration: underline;
