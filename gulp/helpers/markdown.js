@@ -270,7 +270,7 @@ module.exports = rootDir => filePath => {
 
             if (token.type === 'paragraph_open') {
               let lead = ''
-
+              token.attrJoin('class', 'lead')
               state.tokens[idx + 1].children.forEach(child => {
                 if (child.type === 'text') {
                   lead += child.content
@@ -293,7 +293,7 @@ module.exports = rootDir => filePath => {
         callback: (html, ast) => {
           // Skip single-item ToCs
           if (ast.c[0].c.length < 2) {
-            ast.c[0].c = []
+            ast.c = []
           }
         }
       })
