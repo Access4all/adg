@@ -98,8 +98,8 @@ const getExample = (examplePath, filePath) => {
     )) {
       const results = value.status
         ? {
-          [category]: value
-        }
+            [category]: value
+          }
         : value
 
       for (const [browser, result] of Object.entries(results)) {
