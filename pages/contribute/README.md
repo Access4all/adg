@@ -1,7 +1,7 @@
 ---
 navigation_title: "Contribute"
 position: 5
-changed: "2018-06-15"
+changed: "2021-05-03"
 ---
 
 # Contribute to this guide
@@ -36,13 +36,13 @@ We organise frequent gatherings (we call them "hackdays") to discuss the state o
 
 You can also contribute by spreading awareness about the topic to your fellow developers.
 
-* **Share the guide on Twitter** and other channels if you find it useful and want to give something back. We're also available on Twitter under [@A11yDevGuide (Twitter.com)] and on [Facebook].
-* **Talk about accessibility at your local meetup**. Feel free to use the guide as resource. We appreciate every developer who is concerned about accessibility. Let us know so we can share your event.
+- **Share the guide on Twitter** and other channels if you find it useful and want to give something back. We're also available on Twitter under [@A11yDevGuide (Twitter.com)] and on [Facebook].
+- **Talk about accessibility at your local meetup**. Feel free to use the guide as resource. We appreciate every developer who is concerned about accessibility. Let us know so we can share your event.
 
-[Join our Slack team]: https://join.slack.com/t/a11y-dev-guide/shared_invite/enQtMzMwOTkxNTI3NDYwLWI3MjRmZDQwOGMxOGVhNTI2NDg0ODhiMDUyZTQ4MDE4MzU1NmZiMTY2YmNjNjliYWEzODhjZDYwYjA1MDU4NmU
-[create an issue on GitHub]: https://github.com/Access4all/adg/issues
-[Access4all/adg (GitHub.com)]: https://github.com/Access4all/adg
-[Access4all/adg/CONTRIBUTING.md (GitHub.com)]: https://github.com/Access4all/adg/blob/master/CONTRIBUTING.md 
-[Join our Meetup.com group]: https://www.meetup.com/Accessibility-Developer-Guide-ADG/
-[@A11yDevGuide (Twitter.com)]: https://twitter.com/A11yDevGuide
-[Facebook]: https://www.facebook.com/AccessibilityDeveloperGuide
+[join our slack team]: https://join.slack.com/t/a11y-dev-guide/shared_invite/zt-481zt544-HZCboLee6JL__6LnHl1N5w
+[create an issue on github]: https://github.com/Access4all/adg/issues
+[access4all/adg (github.com)]: https://github.com/Access4all/adg
+[access4all/adg/contributing.md (github.com)]: https://github.com/Access4all/adg/blob/master/CONTRIBUTING.md
+[join our meetup.com group]: https://www.meetup.com/Accessibility-Developer-Guide-ADG/
+[@a11ydevguide (twitter.com)]: https://twitter.com/A11yDevGuide
+[facebook]: https://www.facebook.com/AccessibilityDeveloperGuide
