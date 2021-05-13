@@ -2394,6 +2394,7 @@
                       var variable = match.replace(/#/g, '')
                       var replacement = undefined
 
+                      // DEV: Manually added the second part of the condition
                       if (replacement === undefined && suggest['dataPoints']) {
                         for (var d = 0; d < suggest['dataPoints'].length; d++) {
                           var dpo = suggest['dataPoints'][d]
