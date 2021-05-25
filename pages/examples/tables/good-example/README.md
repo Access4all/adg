@@ -1,7 +1,7 @@
 ---
 navigation_title: "Good example"
 position: 2
-changed: "2018-06-15"
+changed: "2021-05-25"
 ---
 
 # General good table example
@@ -15,7 +15,7 @@ The following example provides a very basic table: both the first row and first 
 Navigate the example using table navigation and notice how the screen reader announces the current data cell's corresponding header cells:
 
 - If you navigate horizontally (using `Ctrl + Alt + Left/Right`), in addition to the current cell's content, the screen reader also announces the current column's header cell.
-- If you navigate vertically (using `Ctrl + Alt + Left/Right`), the screen reader announces the current row's header cell.
+- If you navigate vertically (using `Ctrl + Alt + Up/Down`), the screen reader announces the current row's header cell.
 
 This provides all information needed to browse a table efficiently using a screen reader: you always know the current data cell's context, similar to a visual user. Easy and effective.
 
