@@ -215,7 +215,9 @@ module.exports = (config, cb) => {
               url,
               parent: parent !== url ? parent : null,
               title: file.frontMatter.navigation_title,
-              domid: ('nav-' + normalize(file.frontMatter.navigation_title)).replace(/\s+/g, '-'),
+              domid: (
+                'nav-' + normalize(file.frontMatter.navigation_title)
+              ).replace(/\s+/g, '-'),
               titleDetailed: file.data.title,
               lead: file.data.lead,
               position: file.frontMatter.position
