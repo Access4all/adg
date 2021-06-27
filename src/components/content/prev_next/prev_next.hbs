@@ -4,7 +4,7 @@
 
     <ul>
     {{#if prev}}
-      <li>
+      <li class="prev_next__link-wrapper prev_next__link-wrapper--previous">
         <a href="/{{prev.url}}" class="prev_next__link prev_next__link--previous">
           <span class="visuallyhidden">Previous:</span>
           <span class="text">{{prev.title}}</span>
@@ -13,7 +13,7 @@
     {{/if}}
 
     {{#if next}}
-      <li>
+      <li class="prev_next__link-wrapper prev_next__link-wrapper--next">
         <a href="/{{next.url}}" class="prev_next__link prev_next__link--next">
           <span class="visuallyhidden">Next:</span>
           <span class="text">{{next.title}}</span>

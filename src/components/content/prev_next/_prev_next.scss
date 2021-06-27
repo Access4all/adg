@@ -10,11 +10,11 @@
     width: 50%;
     position: relative;
 
-    &:first-child {
+    &.prev_next__link-wrapper--previous {
       padding-right: .25em;
     }
 
-    &:last-child {
+    &.prev_next__link-wrapper--next {
       float: right;
       padding-left: .25em;
     }
