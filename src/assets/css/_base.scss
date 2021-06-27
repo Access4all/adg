@@ -84,11 +84,12 @@ button {
 
 p img {
   background-color: $c-white;
-  border: 1px solid var(--theme-color-dark);
+  border: 1px solid var(--theme-main-color);
   max-width: 100%;
 
   &.no-border {
     border: none;
+    background-color: transparent;
   }
 }
 

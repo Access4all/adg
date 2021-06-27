@@ -109,7 +109,7 @@
   overflow-x: auto;
 }
 @mixin code {
-  background: white;
+  background: $c-white;
   white-space: pre;
   overflow-x: auto;
 }

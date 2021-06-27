@@ -5,25 +5,9 @@
   --theme-bg-color: var(--theme-color-light);
   --theme-main-color-inverse: #{$c-white};
   --theme-bg-color-inverse: var(--theme-color-dark);
-
-  /* &.is-below {
-    --theme-main-color: var(--theme-color-dark);
-    --theme-bg-color: blue; // #{$c-white};
-    --theme-main-color-inverse: #{$c-black};
-    --theme-bg-color-inverse: var(--theme-color-light);
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    --theme-main-color: var(--theme-color-dark);
-    --theme-bg-color: #{$c-white};
-    --theme-main-color-inverse: #{$c-black};
-    --theme-bg-color-inverse: var(--theme-color-light);
-  } */
 }
 
 .theme-introduction {
-//  --theme-color-dark: #{$theme-1-dark};
-//  --theme-color-light: #{$theme-1-light};
   --theme-color-dark: #{$theme-0-dark};
   --theme-color-light: #{$theme-0-light};
 }

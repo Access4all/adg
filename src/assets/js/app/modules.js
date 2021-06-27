@@ -21,19 +21,7 @@ export default () => {
       }
     })
   })
-  /*
-  contextTrigger.add('.js-theme', function () {
-    var elem = this
 
-    require(['./modules/content/Theme'], function (Module) {
-      if (Module.default) {
-        ModuleManager.connect(Module.default, elem)
-      } else {
-        ModuleManager.connect(Module, elem)
-      }
-    })
-  })
-  */
   contextTrigger.add('.js-anchor', function () {
     var elem = this
 
