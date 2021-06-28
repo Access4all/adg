@@ -8,6 +8,8 @@ changed: "2020-04-07"
 
 **VoiceOver/iOS is the most advanced mobile screen reader. It is pre-installed on iOS devices, easy to understand, and the most used mobile screen reader in Western countries. Because of its reliable and easy activation shortcut, it is the mobile screen reader of choice when developing accessible websites.**
 
+[[toc]]
+
 ## iOS vs. macOS
 
 By the way: VoiceOver is available for both mobile (iOS) and desktop (macOS) platforms. To avoid confusion, we always add the operating system to its name: VoiceOver/iOS and VoiceOver/macOS.

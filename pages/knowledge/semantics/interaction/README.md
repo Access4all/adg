@@ -8,6 +8,8 @@ changed: "2018-04-12"
 
 **Semantic HTML does not only provide meaning to content elements, it also provides the foundation for elements' interactivity. Be it links, buttons or various form inputs - browsers know exactly how to deal with them, and they provide the user with everything needed for proper interaction with the website.**
 
+[[toc]]
+
 ## Standard functionality is good
 
 Let's look at this topic based on the example of the tag that made the internet what it is today: the hyperlink.

@@ -8,6 +8,8 @@ changed: "2018-03-12"
 
 **Being the favourite browser of many web developers anyway, Chrome also has some nice features and extensions that are useful in the daily accessibility workflow.**
 
+[[toc]]
+
 ![Chrome logo](_media/chrome-logo.png)
 
 ## Installation

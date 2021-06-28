@@ -8,6 +8,8 @@ changed: "2019-12-15"
 
 **There is a general minimal colour contrast level for all kinds of text. As an exception, large text can have slightly lower contrast. This requirement applies to both "real" text and rasterised text on images.**
 
+[[toc]]
+
 ## Minimal contrast ratio
 
 The Web Content Accessibility Guidelines (WCAG) specify a [minimal contrast ratio of `4.5:1` against adjacent colour(s) for text in general](https://www.w3.org/TR/WCAG21/#contrast-minimum). An exception is made for large-scale text: It is considered easier to read and can therefore be set in a lower contrast ratio of at least `3:1`.

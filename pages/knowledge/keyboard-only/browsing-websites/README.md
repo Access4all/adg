@@ -8,6 +8,8 @@ changed: "2018-04-12"
 
 **Browsing a website (which means opening it, reading its content and interacting with the available controls) using a keyboard only is delightfully easy. Browsers offer all this functionality with only a few keys on the keyboard. And maybe you use most of those keys already on a daily basis.**
 
+[[toc]]
+
 **Notice:** we are talking specifically about Windows browsers here. For macOS, Linux, and others, there exist similar keyboard shortcuts.
 
 ## Opening a website

@@ -8,6 +8,8 @@ changed: "2018-05-15"
 
 **Websites optimised for accessibility also result in better search engine rankings. The question regarding multiple headings on level 1 often concerns search engine optimisation (SEO) experts. While we do have a clear opinion on it (based on years of experience and intense debates with various experts) we also offer alternative solutions.**
 
+[[toc]]
+
 SEO experts often state that a web page must only have a single heading on level 1 (`<h1>`). According to them, like the `<title>` tag in the `<head>` of a page, this single heading on level one must describe the main content of the page. Because if there were more than one of them (SEO experts claim), search engines wouldn't be capable of deciding which one is the most important.
 
 And sure, this may have been true some time in the past.

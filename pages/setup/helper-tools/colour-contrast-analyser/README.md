@@ -8,6 +8,8 @@ changed: "2018-04-02"
 
 **Having sufficient contrast between foreground and background colours is an essential part of usability in general and accessibility in particular. The Colour Contrast Analyser (CCA) is a tool that calculates the contrast between two colours and automatically evaluates the returned value against the Web Content Accessibility Guidelines.**
 
+[[toc]]
+
 ![CCA icon](_media/colour-contrast-analyser-icon.png)
 
 ## Installation

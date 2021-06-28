@@ -8,6 +8,8 @@ changed: "2018-05-03"
 
 **HTML 5 client side validations are a very useful feature: they allow rudimentary validation of user data without submitting anything to the server. They are supported to a high degree by modern browsers and screen readers. Still, you should obviously never think of them as a complete replacement for server side data validation.**
 
+[[toc]]
+
 ## Benefits
 
 HTML 5 client side validations have a lot of benefits, for example:

@@ -8,6 +8,8 @@ changed: "2019-12-15"
 
 **"User Interface (UI) components" are interactive elements, ranging from simple buttons and input fields to complex UI widgets. Just as for text there is a general minimal contrast level that needs to be reached to make their functionality and content accessible.**
 
+[[toc]]
+
 ## Minimal contrast ratio
 
 Version 2.1 of the Web Content Accessibility Guidelines (WCAG) specify a [minimal contrast ratio of `3:1` against adjacent colour(s) for all UI components](https://www.w3.org/TR/WCAG21/#non-text-contrast).

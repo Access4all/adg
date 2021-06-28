@@ -8,6 +8,8 @@ changed: "2020-04-07"
 
 **Blind people are only one of many groups of people with special needs. Still, to develop and test accessible websites, screen readers are considered the most important addition to a web developer's toolset. But why is that? And what are screen readers anyway?**
 
+[[toc]]
+
 ## What are screen readers?
 
 > A screen reader is a form of assistive technology which is essential to people who are blind, as well as useful to people who are visually impaired, illiterate, or have a learning disability. Screen readers are software applications that attempt to convey what people with normal eyesight see on a display to their users via non-visual means, like text-to-speech, sound icons, or a Braille device.

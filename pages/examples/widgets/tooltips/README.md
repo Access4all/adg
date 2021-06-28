@@ -8,6 +8,8 @@ changed: "2020-04-30"
 
 **Tooltips present information about a specific element in a small container on top of all other content. It is typically only displayed upon interacting with the related element in some way. Depending on the richness of its content, it is shown upon hovering or focusing the related element, or by manually toggling its visibility.**
 
+[[toc]]
+
 Tooltips are well known as native controls in many operating systems, for example for unobtrusively displaying warnings or alerts.
 
 ![Tooltip](_media/tooltip.png)

@@ -8,6 +8,8 @@ changed: "2020-04-30"
 
 **Datepickers are an easy and intuitive way to let users pick a date. They usually offer their options below their respective form control in a table-like design which can be toggled visible. Some date pickers also offer time settings.**
 
+[[toc]]
+
 ![Datepicker](_media/datepicker.png)
 
 ## General requirements

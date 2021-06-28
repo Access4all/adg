@@ -8,6 +8,8 @@ changed: "2020-04-07"
 
 **While desktop screen readers literally have dozens (if not hundreds) of keyboard shortcuts, only a fraction of them is needed for everyday usage. The following cheat-sheet lists the most important ones.**
 
+[[toc]]
+
 We keep this page short and sweet. Throughout this guide, there is much more information available about the tackled subjects.
 
 And remember: when talking about the `NVDA` or `JAWS` keys, we mean the `Insert` key.

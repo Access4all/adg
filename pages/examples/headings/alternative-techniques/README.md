@@ -8,6 +8,8 @@ changed: "2018-05-01"
 
 **Although headings are the most widely known technique to label page regions (like header, navigation, etc.), there exist other ways to label content in HTML. In our opinion though, headings are both the most expressive and simple technique. But let's examine the situation a bit deeper.**
 
+[[toc]]
+
 ## Short summary
 
 Besides traditional headings, there exists at least one other way to label regions: a combination of HTML 5 structural elements, labelled using ARIA.

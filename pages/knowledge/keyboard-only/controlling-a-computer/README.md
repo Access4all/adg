@@ -8,6 +8,8 @@ changed: "2018-04-12"
 
 **Many users control a computer using keyboard only, so no mouse or similar pointing device is available. Thus, it's crucial that any software (including websites) is operable by keyboard only. This does not only benefit disabled users, but also power users.**
 
+[[toc]]
+
 **Notice:** we are talking specifically about Windows operating systems here. For macOS, Linux, and others, there exist similar keyboard shortcuts.
 
 ## Why no mouse?

@@ -8,6 +8,8 @@ changed: "2018-04-18"
 
 **Headings are solely browsable elements and do not offer any interactivity. To work through and understand the examples in this chapter, it is good to have a screen reader at hand and know how to handle it. In addition to this, there are some tools and bookmarklets that can be a huge help in your development workflow.**
 
+[[toc]]
+
 ## Keyboard only handling
 
 For keyboard only users, headings do not offer any special functionality. So there's nothing to say here. Still, you may want to check out [How to browse websites using a keyboard only](/knowledge/keyboard-only/browsing-websites).

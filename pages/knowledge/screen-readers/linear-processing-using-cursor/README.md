@@ -8,6 +8,8 @@ changed: "2018-04-13"
 
 **Sighted users perceive a webpage as a two-dimensional, graphical area. Meanwhile, screen reader users perceive a page in a one-dimensional (linear), textual way: one element after the other, from top to bottom. Similar to reading a book, browsing websites in this way is usually considerably slow, as a lot of time is needed to get a proper overview of a full page.**
 
+[[toc]]
+
 ## Visual perception: graphical area (two-dimensional)
 
 Sighted users using a traditional display perceive a page in its full two-dimensional layout.

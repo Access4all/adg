@@ -8,6 +8,8 @@ changed: "2021-03-22"
 
 **Microsoft offers free Windows virtual machine images for testing Microsoft Internet Explorer and Microsoft Edge. While their licenses expire after 90 days of use, by creating a snapshot before activation, they can easily be reset again. This is the easiest way to get your needed Windows environment up and running quickly for testing purposes.**
 
+[[toc]]
+
 ## Download
 
 The available virtual machines can be [downloaded on Microsoft's website](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/). Get the **"MSEdge on Windows 10"** virtual machine for your desired VM platform. We describe the setup with [VMWare on macOs](/setup/windows/vmware-on-macos/), [Windows and Linux](/setup/windows/vmware-on-windows-linux/), but you can use whatever VM platform you are familiar with.

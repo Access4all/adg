@@ -8,6 +8,8 @@ changed: "2020-04-30"
 
 **Data submitted in a form is usually validated in some way. And if there is any unacceptable data, the form is traditionally re-displayed, together with validation messages. In such a case, it is important to immediately inform screen reader users, so they know that they have to look at their data and submit again.**
 
+[[toc]]
+
 As with any other non-interactive content, validation messages need to be associated to the form controls to make sure that screen readers do not miss them when navigating the form. This is done best using ARIA (for more info, see [Placing non-interactive content between form controls](/examples/forms/non-interactive-content)).
 
 We will now show the two typical use cases of displaying validation messages. Both approaches work for full page reloads and AJAX validations.

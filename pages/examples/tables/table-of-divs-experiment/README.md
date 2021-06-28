@@ -8,6 +8,8 @@ changed: "2018-04-16"
 
 **Instead of using traditional HTML table elements, it is also possible to convert a structure of non-table elements into a table using ARIA. This is an experiment, and we explicitly do not recommend using this on productive websites. So please, kids, do not try this at home!**
 
+[[toc]]
+
 ## A table of divs
 
 As we have seen, it is possible to re-apply semantics to an element that has somehow lost its inherent semantics. This is done using ARIA (if you haven't done this yet, go back and read [Responsive tables](/examples/tables/responsive)).

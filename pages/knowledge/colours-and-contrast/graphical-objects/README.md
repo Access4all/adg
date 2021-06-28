@@ -8,6 +8,8 @@ changed: "2019-12-15"
 
 **The term "graphical object" typically applies to stand-alone icons and to information graphics. The visual complexity of such objects often requires some differentiation with regards to contrast. The focus lies on the parts of the graphical object required to understand the content.**
 
+[[toc]]
+
 ## Minimal contrast ratio
 
 Version 2.1 of the Web Content Accessibility Guidelines (WCAG) specify a [minimal contrast ratio of `3:1` against adjacent colour(s)](https://www.w3.org/TR/WCAG21/#non-text-contrast) for the parts, which are required to understand the meaning or content of a graphical object.

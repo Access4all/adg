@@ -8,6 +8,8 @@ changed: "2018-05-14"
 
 **When it comes to requirements of modern interactive websites, sometimes the semantic vocabulary of HTML may not be enough anymore. To fill this gap, the Accessible Rich Internet Application (ARIA) specification was introduced: it describes how to add semantics to HTML content in order to make user controls and dynamic content more accessible. However, there are pitfalls you need to know about.**
 
+[[toc]]
+
 ## Handling HTML shortcomings
 
 Over the last 10 to 20 years, not much has changed to the way content is laid out and marked up in HTML. But since its early days, many de-facto standard user interface patterns have made their way into the collective awareness of the internet, often generally referred to as widgets or rich internet applications (RIAs). Many of those lack native HTML equivalents - typical examples being tablists, dropdown menus, and autocompletes.

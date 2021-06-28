@@ -8,6 +8,8 @@ changed: "2018-05-29"
 
 **Asterisk (*) next to a form control's label usually indicates it as "required". Oftentimes, this asterisk's purpose is then explained somewhere else on the page. Many users (especially screen reader users) may be confused with that, so be sure to make this information is easily accessible.**
 
+[[toc]]
+
 ## Foot notes explaining asterisks
 
 It is a common technique to add an asterisk `*` to a form control's label. Then, somewhere else on the page, for example below the form, this asterisk is explained to indicate a required input (in allusion to foot notes in text documents).

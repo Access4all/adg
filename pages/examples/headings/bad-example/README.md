@@ -8,6 +8,8 @@ changed: "2018-04-03"
 
 **To be meaningful, heading outlines must be coherent on both a technical and textual level. While headings often are omitted completely by naive web developers, existing heading outlines can suffer of various accessibility problems on both a syntactical and a semantical level.**
 
+[[toc]]
+
 This heading outline in the following example has three problems.
 
 [Example](_examples/generally-bad-headings)

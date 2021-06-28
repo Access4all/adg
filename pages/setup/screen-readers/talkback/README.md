@@ -8,6 +8,8 @@ changed: "2020-04-23"
 
 **TalkBack is the mobile screen reader of Android. It is pre-installed on Android devices, easy to understand, and the most used mobile screen reader in non-Western countries. Because of its rather unreliable activation shortcut, TalkBack is a bit less convenient than VoiceOver/iOS, but still needs to be used for frequent counterchecking accessibility on mobile platforms.**
 
+[[toc]]
+
 On some older Android versions, the TalkBack service is not enabled by default. In this case, just install or update the [Android Accessibility Suite](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback&hl=en_US) from the Google Play Store.
 
 Android comes equipped with a number of accessibility features which can usually be configured under `Settings` -> `Accessibility`.

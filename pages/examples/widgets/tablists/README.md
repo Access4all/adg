@@ -8,6 +8,8 @@ changed: "2020-04-30"
 
 **Tablists help to split up a page's content into smaller and thus more digestible parts. Each part is minimally represented in a list of names, by which their visibility can be enabled one at a time. Tablists can be thought of as small page fragments inside a page.**
 
+[[toc]]
+
 Tablists are well known as native controls in many operating systems: a list of controls (usually on top of the element) allows to toggle the visibility of corresponding panels. Only a single control can be active at a time, so exactly one panel is visible and all others are hidden.
 
 ![Tablist](_media/tablist.png)

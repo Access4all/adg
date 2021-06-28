@@ -8,6 +8,8 @@ changed: "2018-04-03"
 
 **Not only the main content of a web page needs to be marked up using headings, but also other elements like header, navigation, footer, etc. As the visual design usually does not include those headings, they need to be visually hidden by moving them off-screen.**
 
+[[toc]]
+
 ## Additional regions on a web page
 
 Besides the main content, a web page usually consists of many additional regions: a header, navigation(s), related sections (like advertisements), and a footer.

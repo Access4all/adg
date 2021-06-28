@@ -289,13 +289,7 @@ module.exports = rootDir => filePath => {
       .use(plugins.toc, {
         level: 2,
         containerClass: 'toc',
-        listType: 'ul',
-        callback: (html, ast) => {
-          // Skip single-item ToCs
-          if (ast.c[0].c.length < 2) {
-            ast.c = []
-          }
-        }
+        listType: 'ul'
       })
   )
 }

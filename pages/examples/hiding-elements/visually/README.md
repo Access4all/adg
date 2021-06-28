@@ -8,6 +8,8 @@ changed: "2018-03-24"
 
 **To hide an element visually means: visually (on a computer screen) it is not perceivable anymore, but non-visual clients (for example screen readers) still perceive it. There is no official technique for doing this, but there's a well proven workaround.**
 
+[[toc]]
+
 It may be surprising, but the only way to hide an element visually while retaining its perceptibility for screen readers is moving them out of the viewport using absolute positioning:
 
 ```css

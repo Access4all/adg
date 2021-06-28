@@ -8,6 +8,8 @@ changed: "2020-04-07"
 
 **Desktop screen readers are usually controlled with the keyboard only. Offering tons of functionalities, all of them ought to be triggered by keyboard shortcuts. But what to do if none of the standard keyboard combinations are available anymore?**
 
+[[toc]]
+
 ## Problem: no keyboard combinations left
 
 Most traditional keyboard shortcuts (a combination of at least one modifier key and any other key, if you haven't done this yet, go back and read [Controlling a computer with a keyboard only](/knowledge/keyboard-only/controlling-a-computer)) are already in use by the operating system and running applications.

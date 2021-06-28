@@ -8,6 +8,8 @@ changed: "2018-05-29"
 
 **Very similar to tablists, carousels also help to split up a page's content into smaller and thus more digestible parts which can be toggled visible one at a time.**
 
+[[toc]]
+
 Carousels are well known especially from photo galleries. They offer a list of controls (usually on top of the element) which allow to toggle the visibility of corresponding panels. Only a single control can be active at a time, so exactly one panel is visible and all others are hidden.
 
 ![Carousel](_media/carousel.png)

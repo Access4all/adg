@@ -8,6 +8,8 @@ changed: "2020-04-30"
 
 **Even in technically fully valid forms, there can be a lot messed up semantically, making it hardly accessible in many ways. Be it missing or improperly implemented elements - here we show the most common problems and explain them.**
 
+[[toc]]
+
 Most accessibility problems regarding form are caused due to bad semantics. So if you haven't done this yet, go back and read [Semantics and their importance for accessibility](/knowledge/semantics).
 
 The following example shows a basic form which is technically perfectly valid HTML code.

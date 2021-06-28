@@ -8,6 +8,8 @@ changed: "2021-03-22"
 
 **On macOS, running Windows as a virtual machine needs some special configuration, especially to integrate it seamlessly into the daily workflow. Once properly set up, accessibility testing on macOS will be as comfortable as it gets.**
 
+[[toc]]
+
 ![VMware Fusion logo](_media/vmware-fusion-logo.png)
 
 ## Preparing the virtual machine

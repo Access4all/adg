@@ -8,6 +8,8 @@ changed: "2020-04-07"
 
 **Due to the differences between browse and focus modes in desktop screen readers, interacting with form controls or widgets can be a bit of a challenge at first. In the end, well-built components can always be understood and controlled by screen reader users, regardless of the given complexities.**
 
+[[toc]]
+
 **Important:** For this article you need to know how to read websites using a desktop screen reader. If you haven't done so yet, go back and read [How to read websites using a desktop screen reader](/knowledge/screen-readers/desktop/reading-websites/) thoroughly before you continue here.
 
 ## Activating elements

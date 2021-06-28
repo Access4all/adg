@@ -8,6 +8,8 @@ changed: "2020-04-30"
 
 **Dropdowns allow to toggle an element's visibility. They usually contain some sort of navigation, be it a bare list of links, or more complex elements. They can offer one to multiple nesting levels.**
 
+[[toc]]
+
 ![Dropdown](_media/dropdown.png)
 
 We do not call dropdowns simply "menu" as dropdowns can have a much wider field of application than menus of traditional applications.

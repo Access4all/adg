@@ -8,6 +8,8 @@ changed: "2018-05-30"
 
 **Fortunately, to make sure a website is ready to be used by keyboard only, there is very little you need to consider. Still, a lot can go wrong if not paying attention, and bad old habits of some web developers seem to be hard to overcome.**
 
+[[toc]]
+
 ## Standard functionality
 
 As HTML is fully keyboard only ready, all standard HTML controls offer built-in support for keyboard interaction. This is provided by the browser. So if you stick to using proper semantic HTML markup, you're all fine.

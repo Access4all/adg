@@ -8,6 +8,8 @@ changed: "2020-04-30"
 
 **Forms are widely used to accept user input, be it for transferring it to the server or to act upon it locally using some JavaScript. HTML provides for accessibility, so cleanly laid out and marked up form controls are already fully accessible all by themselves. Still, screen readers may sometimes announce specific elements a bit irritatingly.**
 
+[[toc]]
+
 The following example contains all basic HTML form controls:
 
 - Single line text input: `<input type="text">` (with `maxlength`, `readonly`, and `disabled` variants).

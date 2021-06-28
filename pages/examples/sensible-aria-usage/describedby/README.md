@@ -8,6 +8,8 @@ changed: "2018-05-14"
 
 **ARIA provides an attribute which allows to attach other elements as descriptions to an element. They work pretty non-uniformly in modern browsers and screen readers, and as such they must be used with extreme caution.**
 
+[[toc]]
+
 ## Background
 
 In addition to an element's label (see [Labelling elements using aria-label and aria-labelledby](/examples/sensible-aria-usage/label-labelledby)), screen readers can announce a referenced element (or more than one) as its description.

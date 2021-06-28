@@ -8,6 +8,8 @@ changed: "2019-11-12"
 
 **This guide aims to provide a comprehensive resource for both beginners looking for a pragmatic way to dive into the world of accessibility, as well as seasoned experts wanting to extend their knowledge and embrace new inspirations. Here you will find out how to read through our guide, and how to stay up to date.**
 
+[[toc]]
+
 ## Reading through this guide
 
 This guide encompasses a huge amount of knowledge about various topics of both theoretical and practical nature, all of which are highly relevant to developing accessible websites.

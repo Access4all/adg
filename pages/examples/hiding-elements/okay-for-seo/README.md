@@ -8,6 +8,8 @@ changed: "2018-04-03"
 
 **Search engine optimisation (SEO) experts often are concerned about hiding elements visually. This due to the fear of being penalised for SEO fraud. But today's search engines are very smart, and sensible optimisation of content for accessibility reasons is honoured by them.**
 
+[[toc]]
+
 ## The past: tricking search engines
 
 In earlier days, visually hidden elements have been used excessively to trick search engines. For examples, visually hidden keywords were placed on the page.

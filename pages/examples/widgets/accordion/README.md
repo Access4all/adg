@@ -8,6 +8,8 @@ changed: "2018-05-29"
 
 **Accordions contain of a number of content panels, each of wich can be expanded or collapsed vertically by the user.**
 
+[[toc]]
+
 Accordions help to save vertical space and prevent from visual noise. Some accordions allow only a single panel to be expanded at a time, others allow multiple.
 
 ![Accordion](_media/accordion.png)

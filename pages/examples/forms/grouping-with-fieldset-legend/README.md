@@ -8,6 +8,8 @@ changed: "2018-05-03"
 
 **Grouping form controls in a meaningful way can make them much easier to handle for everyone. While most controls can be grouped, some must be grouped. The fieldset/legend structure is available for exact that - it can even be nested. And if its visual limitations are a problem, ARIA can be of help.**
 
+[[toc]]
+
 `<fieldset>`/`<legend>` structures are used for grouping form controls that are related in some way. While in complex forms they can be used to group all kinds of form controls, groups of radio buttons and checkboxes should always be grouped by them.
 
 ## Grouping any kinds of controls

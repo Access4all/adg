@@ -8,6 +8,8 @@ changed: "2020-04-30"
 
 **Autosuggests offer a number of possible values, usually presented as some sort of a dropdown element, allowing to select one. By entering a filter string, the possible values are filtered.**
 
+[[toc]]
+
 Best known from search fields (like [Google](https://www.google.com) or [YouTube](https://www.youtube.com)), autocompletes immediately offer suggestions based on the user's input.
 
 ![Autosuggest](_media/autosuggest.png)

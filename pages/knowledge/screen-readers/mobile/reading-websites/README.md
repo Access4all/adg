@@ -8,6 +8,8 @@ changed: "2020-04-23"
 
 **For a sighted person, it's hard to imagine how a screen reader user surfs the internet. For a web developer with accessibility in mind, it's crucial to have a basic knowledge about this topic. So be ready to get a concrete idea of the main strategies available to read a website using a mobile screen reader!**
 
+[[toc]]
+
 ## Opening a website
 
 We advise you to activate your mobile screen reader only when reading and interacting with a web page. For anything else like entering an URL into the browser's address bar we advise you to deactivate it temporarily; as soon as the web page has loaded, start it again.

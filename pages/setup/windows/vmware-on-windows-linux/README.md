@@ -8,6 +8,8 @@ changed: "2021-03-22"
 
 **Even if you are already running Windows as your operating system, it is highly recommended making the initial effort needed to set up another Windows within a virtual machine, configured specifically for accessibility testing. This keeps your own system clean and makes accessibility testing much more comfortable.**
 
+[[toc]]
+
 ![VMware Workstation Pro logo](_media/vmware-workstation-pro-logo.png)
 
 ## Windows vs. Linux

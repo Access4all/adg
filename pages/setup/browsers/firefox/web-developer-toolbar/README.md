@@ -8,6 +8,8 @@ changed: "2018-05-10"
 
 **Probably well known by most web developers already, the Web Developer toolbar extension adds various tools to Firefox that are incredibly useful for all sorts of code inspection and debugging. It can sometimes even be seen as a screen reader substitute — if you know its limitations.**
 
+[[toc]]
+
 ![Web Developer toolbar](_media/web-developer-toolbar.png)
 
 ## Installation

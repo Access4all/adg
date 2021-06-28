@@ -8,6 +8,8 @@ changed: "2020-04-30"
 
 **Sometimes it is necessary to have form controls within tables. And while tables provide their own labelling mechanism, it is important that each and every control still has its dedicated label.**
 
+[[toc]]
+
 Forms in tables are rather rare, but they can be a necessity. Be sure though you are using tables not simply for layout purposes - the days of layout tables are long gone. Forms in tables only make sense if they are handling data that has a tabular structure itself.
 
 It is important that the table itself is marked up properly using table headers `<th>` (see [General good table example](/examples/tables/good-example)). This allows navigating the table (and the contained form controls) using desktop screen readers' table navigation: simply press `Ctrl + Alt + Up/Down/Left/Right` when inside a table (see [How to handle tables](/examples/tables/handling)).

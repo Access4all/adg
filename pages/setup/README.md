@@ -8,6 +8,8 @@ changed: "2018-04-02"
 
 **For creating websites with accessibility in mind, you need to have some specific software at hand. The chapters in this second part of our guide, the Setup part, will teach you how to set up all of the software. The complete setup is tailored to the needs of developers, but for readers with lesser demands, we also provide a pragmatic minimal version of the setup.**
 
+[[toc]]
+
 To guarantee the accessibility of your websites, you must ensure that they are compatible with commonly used input and output tools (software and/or devices). This also includes Assistive Technologies which are created specifically for people with special needs, like blind, hard-of-hearing, or motor-impaired people.
 
 - Input tools: pointing devices (mouse), keyboards, touch screens, alternative controlling systems, etc.

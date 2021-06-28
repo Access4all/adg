@@ -8,6 +8,8 @@ changed: "2020-04-07"
 
 **Sitting on top of another application, screen readers announce the underlying content - often trying to compensate for inadequate presentation by both the underlying application and its content. This is a very hard task and prone to regressions, as we try to explain here.**
 
+[[toc]]
+
 ## Short summary
 
 Screen readers "sit" on top of another application, conveying its contents to the user through audio or braille.

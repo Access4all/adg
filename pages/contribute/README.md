@@ -8,6 +8,8 @@ changed: "2021-05-03"
 
 **This guide is the result of tight collaboration between accessibility experts and web developers. Its content by far is not exhaustive yet: there remain a lot of topics to talk about, and due to the fast evolution of web technologies, there certainly will always be.**
 
+[[toc]]
+
 We welcome everyone who wants to join our initiative, be it with adding new contents, fixing typos or bugs, etc.
 
 Let us make the Internet a more accessible place together!

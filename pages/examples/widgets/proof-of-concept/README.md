@@ -8,6 +8,8 @@ changed: "2018-05-31"
 
 **All our widgets are so called "Proofs of concepts" (POCs), meaning they show how an interaction pattern can be implemented in an accessible way. As such, they are intended to serve as inspiration for your own implementations, but are not meant to be copied 1:1 into real projects.**
 
+[[toc]]
+
 ## Proofing collectively accepted patterns
 
 There are many patterns of interactive controls that have made its way into the collective awareness of the web, but for which no native HTML standard element is available (they are generally referred to as "widgets"). Alas, there exist no strict requirements, and most implementations of the pattern vary greatly regarding their functionalities and target audiences.

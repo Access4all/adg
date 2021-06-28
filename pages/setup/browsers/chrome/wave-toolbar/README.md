@@ -8,6 +8,8 @@ changed: "2018-04-06"
 
 **WAVE toolbar gives you a very quick first impression about the quality of the current webpage's accessibility. At the press of a button, it provides visual cues by injecting icons and detailed information right into the page.**
 
+[[toc]]
+
 ![WAVE toolbar](_media/wave-toolbar.png)
 
 ## Installation

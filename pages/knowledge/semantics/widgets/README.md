@@ -8,6 +8,8 @@ changed: "2018-04-12"
 
 **HTML supports interactive controls for most requirements. But what about additional interaction patterns that do not offer an HTML equivalent? Surprisingly to many, standard browser behaviour is also a fool-proof way to provide even complex custom functionalities in the style of modern widgets. The trick is to simply use traditional form controls, change their visual design using CSS, and add the needed interactivity using JavaScript.**
 
+[[toc]]
+
 Let's think about the true spirit of a typical widget, for example a tablist: what is its purpose? It offers a list of items that are toggling the visibility of related containers. Only one item can be visible at a time, and if another one is activated, the previously active one gets deactivated automatically.
 
 This sounds a lot like a group of radio buttons, does not it?

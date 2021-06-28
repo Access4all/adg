@@ -8,6 +8,8 @@ changed: "2019-12-15"
 
 **There is a mathematical formula to calculate the contrast ratio between two colours. Using this formula for contrast evaluation is always better than relying only on your eyes.**
 
+[[toc]]
+
 Please note that we are keeping technical explanations simple here. If you want to read a detailed definition of the colour contrast formula, please go to [contrast ratio (W3.org)](https://www.w3.org/TR/WCAG20/#contrast-ratiodef).
 
 ## Relative luminance

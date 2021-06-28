@@ -8,6 +8,8 @@ changed: "2020-04-07"
 
 **The relevant desktop screen readers on Windows offer different ways of interacting with the underlying application. The most common ones are browse mode and focus mode. We cannot overestimate the importance of thoroughly knowing their differences.**
 
+[[toc]]
+
 ## Browse mode
 
 Reading through a website by moving the screen reader's cursor through a page's information fragments is called "browse" mode:

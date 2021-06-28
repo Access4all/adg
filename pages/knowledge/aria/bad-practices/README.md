@@ -8,6 +8,8 @@ changed: "2018-04-12"
 
 **There are certain situations where ARIA is a good (and maybe the only) way to go. But if done wrong, usage of ARIA often leads to even worse accessibility. Especially accessibility novices tend to misuse ARIA to "optimise" smelly code.**
 
+[[toc]]
+
 ARIA is often misunderstood as "general repair kit" for accessibility problems. Developers new to accessibility usually think that ARIA can be used to fix accessibility problems for all sorts of bad HTML code. In general though, throwing some ARIA attributes into the mix of bad semantics does not leverage any problem (most of the time, the exact opposite is the case).
 
 ## Fixing broken semantics

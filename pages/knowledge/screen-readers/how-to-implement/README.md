@@ -8,6 +8,8 @@ changed: "2020-04-07"
 
 **If a website is optimised already for use with a keyboard only, it will also work in many respects with a screen reader. Still, some close attention needs to be paid, especially regarding semantics and custom interactivity.**
 
+[[toc]]
+
 ## Some words about ARIA
 
 While most requirements for screen readers can be fulfilled best with traditional HTML (and maybe some JavaScript), the usage of ARIA sometimes is necessary and a big help. So if you haven't done this yet, go back and read [ARIA - when HTML simply is not enough](/knowledge/aria).

@@ -8,6 +8,8 @@ changed: "2018-09-02"
 
 **An HTML file has a clearly defined structure that allows any browser to render the content correctly. To make an HTML file accessible you need to know the basic structure and its roles.**
 
+[[toc]]
+
 Each HTML file consists of a structure that includes the declaration of the document type, a header that describes the document, followed by a body that contains the actual content:
 
 ```html

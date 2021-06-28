@@ -8,6 +8,8 @@ changed: "2018-04-02"
 
 **There often exist various approaches to solving an accessibility requirement, but usually one specific solution stands out clearly. The chapters in this 4th part of our guide, the Examples part, contain our collection of such rock-solid and inspiring solutions. They are available as real-life code examples (ready for copy&paste), and as such can be executed and played with directly in the browser.**
 
+[[toc]]
+
 ## How to go through this part
 
 First of all, before you continue reading, be sure you have gone through the previous parts already:

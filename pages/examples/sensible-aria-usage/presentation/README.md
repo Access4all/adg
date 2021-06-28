@@ -8,6 +8,8 @@ changed: "2018-05-15"
 
 **ARIA provides a role which removes the inherent semantics of an element. While this works in most browsers and screen readers, it is rarely needed.**
 
+[[toc]]
+
 ## Background
 
 As we know from [Semantics and their importance for accessibility](/knowledge/semantics), HTML elements all have their inherent role. If for some reason you need to remove this role from an element, you can do this by setting `role="presentation"` (it should be treated like a `<div>` then).

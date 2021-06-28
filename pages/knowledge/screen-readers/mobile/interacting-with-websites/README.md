@@ -8,6 +8,8 @@ changed: "2020-04-23"
 
 **Modern websites offer a lot of interactivity - long gone are the times of static pages. Even complex widgets can be controlled relatively easy using mobile screen readers. And while there are pretty advanced gestures for some native applications, the interaction with websites fortunately is surprisingly easy.**
 
+[[toc]]
+
 **Important:** For this article you need to know how to read websites using a mobile screen reader. If you haven't done so yet, go back and read [How to read websites using a mobile screen reader](/knowledge/screen-readers/mobile/reading-websites/) thoroughly before you continue here.
 
 ## Activating elements

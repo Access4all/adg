@@ -8,6 +8,8 @@ changed: "2018-05-14"
 
 **ARIA provides an attribute which allows to mark an element as activatable. It works pretty uniformly in modern browsers and screen readers. Still, for most situations there exist alternative techniques that are more robust.**
 
+[[toc]]
+
 ## Background
 
 In modern web applications there are often situations where the user needs to be able to toggle an element's activity.

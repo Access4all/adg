@@ -8,6 +8,8 @@ changed: "2018-03-12"
 
 **Being one of the most sympathetic browsers available, Firefox (FF) is widely used and loved by people with special needs, especially technology-adept ones. One of FF's main characteristics is its high conformance regarding web standards, including those related to accessibility.**
 
+[[toc]]
+
 ![Firefox logo](_media/firefox-logo.png)
 
 ## Installation
