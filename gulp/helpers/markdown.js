@@ -289,7 +289,8 @@ module.exports = rootDir => filePath => {
       .use(plugins.toc, {
         level: 2,
         containerClass: 'toc',
-        listType: 'ul'
+        listType: 'ul',
+        slugify
       })
   )
 }
