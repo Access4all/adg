@@ -47,7 +47,7 @@ export default () => {
 
   contextTrigger.validate('body')
 
-  console.log('Selecting components took: ', new Date() - time, 'ms')
+  //console.log('Selecting components took: ', new Date() - time, 'ms')
 
   return ModuleManager
 }
