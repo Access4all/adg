@@ -1,6 +1,6 @@
 
 .button {
-  background-color: $c-white;
+  background-color: var(--theme-main-color-inverse, $c-white);
   border: 1px solid var(--theme-color-dark);
   color: var(--theme-color-dark);
 
@@ -13,7 +13,7 @@
     @include theme(background-color, white);
   }
   &:hover {
-    @include theme(background-color, $c-white);
+    @include theme(background-color, var(--theme-main-color-inverse, $c-white));
   }
 
   &:focus {

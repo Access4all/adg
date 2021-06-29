@@ -3,10 +3,10 @@
 
   display: flex;
   font-size: 0.8rem;
-  border-top: 1px solid $c-white;
+  border-top: 1px solid var(--theme-main-color-inverse, $c-white);
 
   .theme-contribute & {
-    border-color: $c-gray;
+    border-color: var(--theme-color-medium, $c-gray);
   }
 }
 

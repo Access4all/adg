@@ -40,7 +40,7 @@
 
   p, p > a, li, pre {
     > code {
-      background-color: $c-white;
+      background-color: var(--theme-main-color-inverse, $c-white);
       color: var(--theme-color-dark);
       padding: .1em .25em;
       border-radius: 3px;
@@ -71,7 +71,7 @@
   }
 
   th {
-    background-color: $c-white;
+    background-color: var(--theme-main-color-inverse);
   }
 
   td {
@@ -96,7 +96,7 @@
 
   img.zfa-logo {
     border-radius: 10px;
-    background-color: $c-white;
+    background-color: var(--theme-main-color-inverse, $c-white);
     border-color: var(--theme-main-color);
     padding: 1.5em 2em;
   }

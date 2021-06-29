@@ -83,7 +83,7 @@ button {
 }
 
 p img {
-  background-color: $c-white;
+  background-color: var(--theme-main-color-inverse, $c-white);
   border: 1px solid var(--theme-main-color);
   max-width: 100%;
 
@@ -96,7 +96,7 @@ p img {
 .example-link {
   display: block;
   border: 1px solid var(--theme-color-dark);
-  background-color: $c-white;
+  background-color: var(--theme-main-color-inverse, $c-white);
   border-radius: 10px;
   padding: 10px 12px 4px 12px;
 
@@ -173,7 +173,7 @@ p img {
     pre {
       margin: 0;
       border-radius: 10px;
-      background-color: $c-white;
+      background-color: var(--theme-main-color-inverse, $c-white);
       border: 1px solid var(--theme-color-dark);
 
       code {
