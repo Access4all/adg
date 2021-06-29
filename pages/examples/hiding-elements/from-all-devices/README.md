@@ -1,7 +1,7 @@
 ---
 navigation_title: "From all devices"
 position: 3
-changed: "2018-05-13"
+changed: "2021-06-29"
 ---
 
 # Hiding elements from all devices
@@ -15,16 +15,6 @@ Elements can be hidden completely from all devices (including screen readers).
 In HTML 5, the `hidden` attribute was introduced. It can be set on an element directly and makes it completely invisible to any device.
 
 [Example](_examples/hiding-elements-from-all-devices-using-hidden-attribute)
-
-### Cross browser compatibility
-
-To make the `hidden` attribute work in older browsers, simply do:
-
-```css
-[hidden] {
-   display: none;
-}
-```
 
 ## Using CSS properties
 
