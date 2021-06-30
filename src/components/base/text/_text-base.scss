@@ -104,12 +104,12 @@
 }
 
 @mixin pre {
-  background: var(--theme-main-color-inverse, $c-white);;
+  background: var(--theme-main-color-inverse, $c-white);
   white-space: pre;
   overflow-x: auto;
 }
 @mixin code {
-  background: var(--theme-main-color-inverse, $c-white);;
+  background: var(--theme-main-color-inverse, $c-white);
   white-space: pre;
   overflow-x: auto;
 }
