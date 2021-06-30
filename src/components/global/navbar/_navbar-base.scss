@@ -12,8 +12,8 @@ $navWidthMax: 260px;
 
 
 @mixin navbar_white_line__bg {
-  background-color: $c-white;
+  background-color: var(--theme-main-color-inverse, $c-white);;
   .theme-contribute & {
-    background-color: $c-gray;
+    background-color: var(--theme-color-medium, $c-gray);
   }
 }

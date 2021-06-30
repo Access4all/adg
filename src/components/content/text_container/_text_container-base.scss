@@ -71,7 +71,7 @@
   }
 
   th {
-    background-color: var(--theme-main-color-inverse);
+    background-color: var(--theme-main-color-inverse, $c-white);
   }
 
   td {
