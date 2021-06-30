@@ -33,14 +33,14 @@
   }
 
   blockquote {
-    padding-left: 10px;
-    border-left: 10px solid var(--theme-color-light);
+    padding-left: 22px;
+    border-left: 6px solid var(--theme-main-color);
     font-style: italic;
   }
 
-  p, li, pre {
+  p, p > a, li, pre {
     > code {
-      background-color: var(--theme-color-light);
+      background-color: var(--theme-main-color-inverse, $c-white);
       color: var(--theme-color-dark);
       padding: .1em .25em;
       border-radius: 3px;
@@ -71,7 +71,7 @@
   }
 
   th {
-    background-color: var(--theme-color-light);
+    background-color: var(--theme-main-color-inverse, $c-white);
   }
 
   td {
@@ -91,12 +91,13 @@
     border: none;
     margin-left: 2em;
     margin-bottom: 2em;
+    background-color: transparent;
   }
 
   img.zfa-logo {
     border-radius: 10px;
-    background-color: #fff;
-    border-color: var(--theme-color-light);
+    background-color: var(--theme-main-color-inverse, $c-white);
+    border-color: var(--theme-main-color);
     padding: 1.5em 2em;
   }
 }

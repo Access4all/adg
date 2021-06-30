@@ -1,7 +1,7 @@
 
 @mixin card {
   display: block;
-  background: $c-white;
+  background: var(--theme-main-color-inverse, $c-white);
   @include rem(border-radius, 10px);
   @include rem(padding, 20px);
   border: 1px solid var(--theme-color-dark);

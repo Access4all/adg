@@ -87,8 +87,8 @@ html {
   z-index: -1;
   font-weight: 500;
   border: 1px solid var(--theme-color-dark);
-  background-color: var(--theme-color-light);
-  color: var(--theme-color-ark);
+  background-color: var(--theme-main-color-inverse, $c-white);
+  color: var(--theme-color-dark);
   padding: 10px;
 
   &:focus {

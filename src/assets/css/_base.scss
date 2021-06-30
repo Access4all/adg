@@ -13,7 +13,7 @@ html {
 		font-size: $base-font-size / 16px * 85%;
 	}
 	text-size-adjust: 100%;
-	background-color: $c-white;
+	background-color: var(--theme-main-color-inverse, $c-white);
 	&.no-overflow {
 		overflow-y: hidden;
 	}
@@ -83,18 +83,20 @@ button {
 }
 
 p img {
-  border: 1px solid;
+  background-color: var(--theme-main-color-inverse, $c-white);
+  border: 1px solid var(--theme-main-color);
   max-width: 100%;
 
   &.no-border {
     border: none;
+    background-color: transparent;
   }
 }
 
 .example-link {
   display: block;
   border: 1px solid var(--theme-color-dark);
-  background-color: var(--theme-color-light);
+  background-color: var(--theme-main-color-inverse, $c-white);
   border-radius: 10px;
   padding: 10px 12px 4px 12px;
 
@@ -171,7 +173,7 @@ p img {
     pre {
       margin: 0;
       border-radius: 10px;
-      background-color: var(--theme-color-light);
+      background-color: var(--theme-main-color-inverse, $c-white);
       border: 1px solid var(--theme-color-dark);
 
       code {
