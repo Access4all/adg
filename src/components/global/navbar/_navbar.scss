@@ -193,13 +193,20 @@
   left: 50%;
   transform: translate(-50%,-50%);
 
+  @media screen and (-ms-high-contrast: active) {
+    background-color: ButtonFace;
+  }
+
   &:hover {
     .navbar--toggle--line {
       background-color: var(--theme-color-dark);
+
+      @media screen and (-ms-high-contrast: active) {
+        background-color: ButtonText;
+      }
     }
   }
 }
-
 
 .navbar--toggle--input {
   @include visuallyhidden;
@@ -215,17 +222,17 @@
   height: 4px;
   margin-bottom: 6px;
   position: relative;
-
-  background: $c-black;
+  background-color: $c-black;
   border-radius: 3px;
-
   z-index: 1;
-
   transform-origin: 50% 50%;
-
   transition: transform 0.4s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.4s cubic-bezier(0.77,0.2,0.05,1.0),
+              background-color 0.4s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.45s ease;
+
+  @media (-ms-high-contrast: active) {
+    background-color: ButtonText;
+  }
 
 	.navbar--toggle--input:checked ~ .navbar .navbar--toggle & {
 	  opacity: 1;
