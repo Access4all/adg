@@ -340,14 +340,25 @@ module.exports = (config, cb) => {
           or: function () {
             return Array.prototype.slice.call(arguments, 0, -1).some(Boolean)
           },
-          inlineSvg: function (filePath) {
+          inlineSvg: function (filePath, options = {}) {
             if (!fs.existsSync(filePath)) {
               throw new Error(
                 `Could not find ${filePath} referenced in 'inlineSvg'`
               )
             }
 
-            return fs.readFileSync(filePath)
+            // Parse as HTML so we can manipulate it
+            const dom = new JSDOM(fs.readFileSync(filePath, 'utf8'))
+            const svg = dom.window.document.querySelector('svg')
+
+            // Add helper parameters as HTML attributes to the SVG
+            for (const [attr, value] of Object.entries(options.hash)) {
+              svg.setAttribute(attr, value)
+            }
+
+            const html = svg.outerHTML
+
+            return html
           }
         }
       }).on('error', config.errorHandler)
