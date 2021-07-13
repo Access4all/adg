@@ -339,6 +339,15 @@ module.exports = (config, cb) => {
           },
           or: function () {
             return Array.prototype.slice.call(arguments, 0, -1).some(Boolean)
+          },
+          inlineSvg: function (filePath) {
+            if (!fs.existsSync(filePath)) {
+              throw new Error(
+                `Could not find ${filePath} referenced in 'inlineSvg'`
+              )
+            }
+
+            return fs.readFileSync(filePath)
           }
         }
       }).on('error', config.errorHandler)

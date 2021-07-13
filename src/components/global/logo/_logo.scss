@@ -30,14 +30,19 @@
   }
 
   .logo-title,
-  .logo-img {
+  svg {
     vertical-align: middle;
   }
 
-  .logo-img {
+  svg {
     display: inline-block;
     width: 33px;
     height: 44px;
+    fill: currentColor;
+
+    path {
+      fill: inherit;
+    }
   }
 }
 
