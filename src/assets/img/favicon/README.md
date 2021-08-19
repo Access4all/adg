@@ -18,8 +18,8 @@ Insert the following code in the `head` section of your pages:
     <link rel="shortcut icon" href="/img/favicon/favicon.ico">
     <meta name="apple-mobile-web-app-title" content="Accessibility Developer Guide">
     <meta name="application-name" content="Accessibility Developer Guide">
-    <meta name="msapplication-TileColor" content="#fff0d8">
+    <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#fff0d8">
+    <meta name="theme-color" content="#ffffff">
 
 *Optional* - Check your favicon with the [favicon checker](https://realfavicongenerator.net/favicon_checker)
