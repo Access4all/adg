@@ -5,25 +5,9 @@
   --theme-bg-color: var(--theme-color-light);
   --theme-main-color-inverse: #{$c-white};
   --theme-bg-color-inverse: var(--theme-color-dark);
-
-  &.is-below {
-    --theme-main-color: var(--theme-color-dark);
-    --theme-bg-color: #{$c-white};
-    --theme-main-color-inverse: #{$c-black};
-    --theme-bg-color-inverse: var(--theme-color-light);
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    --theme-main-color: var(--theme-color-dark);
-    --theme-bg-color: #{$c-white};
-    --theme-main-color-inverse: #{$c-black};
-    --theme-bg-color-inverse: var(--theme-color-light);
-  }
 }
 
 .theme-introduction {
-//  --theme-color-dark: #{$theme-1-dark};
-//  --theme-color-light: #{$theme-1-light};
   --theme-color-dark: #{$theme-0-dark};
   --theme-color-light: #{$theme-0-light};
 }
@@ -44,12 +28,33 @@
   --theme-color-light: #{$theme-1-light};
 }
 
+.theme-contribute {
+  --theme-color-dark: #{$theme-4-dark};
+  --theme-color-medium: #{$c-gray};
+  --theme-color-light: #{$theme-4-light};
+}
+
 .theme-welcome {
   .site-content {
-    h1 {
-      padding-bottom: 40px;
-    }
-
     margin-bottom: 0;
+
+    h1 {
+      padding-top: 1.5em;
+
+      @media (max-width: $mq-tablet) {
+        padding-top: 1.9em;
+        padding-bottom: 0.8em;
+      }
+
+      @media (max-width: $mq-mobile) {
+        padding-top: 1.75em;
+        padding-bottom: 1em;
+      }
+
+      @media (max-width: $mq-mobile-narrow) {
+        padding-top: 2em;
+        padding-bottom: 1.5em;
+      }
+    }
   }
 }

@@ -5,7 +5,15 @@
     font-size: 1.25em;
   }
 
-  margin-bottom: 100px;
+  margin-bottom: 5rem;
+
+  @media (max-width: $mq-mobile) {
+    margin-bottom: 3.5rem;
+  }
+
+  @media (max-width: $mq-mobile-narrow) {
+    margin-bottom: 4.5rem;
+  }
 
   strong {
     font-weight: 300;
@@ -18,8 +26,22 @@
     @include h1;
     @include theme-color;
     letter-spacing: 0.05em;
-    padding-top: 2em;
-    padding-bottom: 1.5em;
+    padding-top: 1.25em;
+    padding-bottom: 0.6em;
+
+    @media (max-width: $mq-tablet) {
+      padding-top: 1.5em;
+    }
+
+    @media (max-width: $mq-mobile) {
+      padding-top: 1.2em;
+      padding-bottom: 1em;
+    }
+
+    @media (max-width: $mq-mobile-narrow) {
+      padding-top: 1.9em;
+      padding-bottom: 1.5em;
+    }
   }
   h2 {
     @include theme-color;
@@ -33,14 +55,14 @@
   }
 
   blockquote {
-    padding-left: 10px;
-    border-left: 10px solid var(--theme-color-light);
+    padding-left: 22px;
+    border-left: 6px solid var(--theme-main-color);
     font-style: italic;
   }
 
-  p, li, pre {
+  p, p > a, li, pre {
     > code {
-      background-color: var(--theme-color-light);
+      background-color: var(--theme-main-color-inverse, $c-white);
       color: var(--theme-color-dark);
       padding: .1em .25em;
       border-radius: 3px;
@@ -71,7 +93,7 @@
   }
 
   th {
-    background-color: var(--theme-color-light);
+    background-color: var(--theme-main-color-inverse, $c-white);
   }
 
   td {
@@ -91,12 +113,13 @@
     border: none;
     margin-left: 2em;
     margin-bottom: 2em;
+    background-color: transparent;
   }
 
   img.zfa-logo {
     border-radius: 10px;
-    background-color: #fff;
-    border-color: var(--theme-color-light);
+    background-color: var(--theme-main-color-inverse, $c-white);
+    border-color: var(--theme-main-color);
     padding: 1.5em 2em;
   }
 }
