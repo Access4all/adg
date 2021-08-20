@@ -36,10 +36,25 @@
 
 .theme-welcome {
   .site-content {
-    h1 {
-      padding-bottom: 40px;
-    }
-
     margin-bottom: 0;
+
+    h1 {
+      padding-top: 1.5em;
+
+      @media (max-width: $mq-tablet) {
+        padding-top: 1.9em;
+        padding-bottom: 0.8em;
+      }
+
+      @media (max-width: $mq-mobile) {
+        padding-top: 1.75em;
+        padding-bottom: 1em;
+      }
+
+      @media (max-width: $mq-mobile-narrow) {
+        padding-top: 2em;
+        padding-bottom: 1.5em;
+      }
+    }
   }
 }

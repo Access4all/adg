@@ -5,7 +5,15 @@
     font-size: 1.25em;
   }
 
-  margin-bottom: 100px;
+  margin-bottom: 5rem;
+
+  @media (max-width: $mq-mobile) {
+    margin-bottom: 3.5rem;
+  }
+
+  @media (max-width: $mq-mobile-narrow) {
+    margin-bottom: 4.5rem;
+  }
 
   strong {
     font-weight: 300;
@@ -18,8 +26,22 @@
     @include h1;
     @include theme-color;
     letter-spacing: 0.05em;
-    padding-top: 2em;
-    padding-bottom: 1.5em;
+    padding-top: 1.25em;
+    padding-bottom: 0.6em;
+
+    @media (max-width: $mq-tablet) {
+      padding-top: 1.5em;
+    }
+
+    @media (max-width: $mq-mobile) {
+      padding-top: 1.2em;
+      padding-bottom: 1em;
+    }
+
+    @media (max-width: $mq-mobile-narrow) {
+      padding-top: 1.9em;
+      padding-bottom: 1.5em;
+    }
   }
   h2 {
     @include theme-color;
