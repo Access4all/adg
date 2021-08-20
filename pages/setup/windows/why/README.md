@@ -8,7 +8,7 @@ changed: "2020-04-30"
 
 **To ensure a website is accessible to as many users as possible, it is important to make sure it is working on the most widespread assistive software. At the time being, most users with special needs have Windows-specific software running. That's the reason why you need to have a Windows environment available to you, whether you like it or not.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Indispensable software
 

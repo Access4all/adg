@@ -8,7 +8,7 @@ changed: "2020-04-23"
 
 **For a sighted person, it's hard to imagine how a screen reader user surfs the internet. For a web developer with accessibility in mind, it's crucial to have a basic knowledge about this topic. So be ready to get a concrete idea of the main strategies available to read a website using a mobile screen reader!**
 
-[[toc]]
+[[_TOC_]]
 
 ## Opening a website
 

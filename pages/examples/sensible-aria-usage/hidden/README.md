@@ -8,7 +8,7 @@ changed: "2018-05-14"
 
 **ARIA provides an attribute which allows to hide elements from screen readers. It works pretty uniformly on non-focusable elements in modern browsers and screen readers, but it still has some very odd peculiarities. So you better try to create solutions that do not need it.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Background
 

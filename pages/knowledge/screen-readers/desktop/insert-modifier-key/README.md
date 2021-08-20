@@ -8,7 +8,7 @@ changed: "2020-04-07"
 
 **Desktop screen readers are usually controlled with the keyboard only. Offering tons of functionalities, all of them ought to be triggered by keyboard shortcuts. But what to do if none of the standard keyboard combinations are available anymore?**
 
-[[toc]]
+[[_TOC_]]
 
 ## Problem: no keyboard combinations left
 

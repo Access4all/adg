@@ -8,7 +8,7 @@ changed: "2018-04-18"
 
 **Headings are solely browsable elements and do not offer any interactivity. To work through and understand the examples in this chapter, it is good to have a screen reader at hand and know how to handle it. In addition to this, there are some tools and bookmarklets that can be a huge help in your development workflow.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Keyboard only handling
 

@@ -8,7 +8,7 @@ changed: "2020-04-07"
 
 **While mobile screen readers already offer a pretty good idea of how it is to surf the internet as a blind person, they offer way less features (and thus complexity) than desktop ones. So be ready to get a concrete idea of the main strategies available to read a website using a desktop screen reader!**
 
-[[toc]]
+[[_TOC_]]
 
 ## Opening a website
 

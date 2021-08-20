@@ -8,7 +8,7 @@ changed: "2018-04-13"
 
 **Spanning rows and columns is a standard HTML feature and exists for decades already. Be sure not to overuse them though, as they can be a bit tricky for screen readers, especially in complex data tables. And in general: keep your tables simple.**
 
-[[toc]]
+[[_TOC_]]
 
 Take a look at the following data table example showing a week schedule. It groups work days and leisure days together using `colspan`. Also, while most data cells span exactly one row, a sigle one (Dancing) spans two rows using `rowspan`.
 

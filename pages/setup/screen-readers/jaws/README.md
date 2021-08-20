@@ -8,7 +8,7 @@ changed: "2020-04-30"
 
 **JAWS (Job Access With Speech) is one of the most-used desktop screen readers. Therefore it's very important to ensure its compatibility with your websites. Due to its heavy weight, JAWS is a rather clumsy companion while developing, but it's absolutely crucial to fire it up every now and then for counterchecking accessibility on desktop.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Installation
 

@@ -8,7 +8,7 @@ changed: "2019-12-15"
 
 **"User Interface (UI) components" are interactive elements, ranging from simple buttons and input fields to complex UI widgets. Just as for text there is a general minimal contrast level that needs to be reached to make their functionality and content accessible.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Minimal contrast ratio
 

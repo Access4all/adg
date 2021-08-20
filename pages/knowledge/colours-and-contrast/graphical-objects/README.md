@@ -8,7 +8,7 @@ changed: "2019-12-15"
 
 **The term "graphical object" typically applies to stand-alone icons and to information graphics. The visual complexity of such objects often requires some differentiation with regards to contrast. The focus lies on the parts of the graphical object required to understand the content.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Minimal contrast ratio
 

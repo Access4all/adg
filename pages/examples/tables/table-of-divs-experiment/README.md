@@ -8,7 +8,7 @@ changed: "2018-04-16"
 
 **Instead of using traditional HTML table elements, it is also possible to convert a structure of non-table elements into a table using ARIA. This is an experiment, and we explicitly do not recommend using this on productive websites. So please, kids, do not try this at home!**
 
-[[toc]]
+[[_TOC_]]
 
 ## A table of divs
 

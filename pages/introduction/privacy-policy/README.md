@@ -8,7 +8,7 @@ changed: "2020-04-30"
 
 **In order for us to provide you the best possible experience on our guide, we need to collect and process certain information.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Usage data
 

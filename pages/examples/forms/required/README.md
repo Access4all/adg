@@ -8,7 +8,7 @@ changed: "2018-05-29"
 
 **Asterisk (*) next to a form control's label usually indicates it as "required". Oftentimes, this asterisk's purpose is then explained somewhere else on the page. Many users (especially screen reader users) may be confused with that, so be sure to make this information is easily accessible.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Foot notes explaining asterisks
 

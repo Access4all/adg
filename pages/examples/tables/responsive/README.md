@@ -8,7 +8,7 @@ changed: "2018-04-16"
 
 **The introduction of smartphones increasingly led web designers to avoid traditional "bulky" HTML tables - because these would exceed the limited screen dimensions. Others tried to find ways to change the layout of tables so they would not need so much horizontal space anymore. Responsive tables were born. But to make them accessible, the use of some ARIA is essential.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Tables - a relic of days gone by?
 

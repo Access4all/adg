@@ -8,7 +8,7 @@ changed: "2021-03-22"
 
 **Microsoft offers free Windows virtual machine images for testing Microsoft Internet Explorer and Microsoft Edge. While their licenses expire after 90 days of use, by creating a snapshot before activation, they can easily be reset again. This is the easiest way to get your needed Windows environment up and running quickly for testing purposes.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Download
 

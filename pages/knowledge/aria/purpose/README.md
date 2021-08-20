@@ -8,7 +8,7 @@ changed: "2018-05-14"
 
 **When it comes to requirements of modern interactive websites, sometimes the semantic vocabulary of HTML may not be enough anymore. To fill this gap, the Accessible Rich Internet Application (ARIA) specification was introduced: it describes how to add semantics to HTML content in order to make user controls and dynamic content more accessible. However, there are pitfalls you need to know about.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Handling HTML shortcomings
 

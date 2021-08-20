@@ -8,7 +8,7 @@ changed: "2020-04-30"
 
 **Screen reader interaction with forms usually happens in focus mode. So if there are any non-interactive elements (like a paragraph) in the form, they are prone to be missed. To prevent this, they need to be attached specifically to the form controls. There are several ways to achieve this goal.**
 
-[[toc]]
+[[_TOC_]]
 
 Screen reader users generally interact with form controls using focus mode, meaning they navigate back and forth only between interactive (which are focusable) elements using the `Tab` key (if you haven't done this yet, go back and read [Screen readers' browse and focus modes](/knowledge/screen-readers/desktop/browse-focus-modes)).
 

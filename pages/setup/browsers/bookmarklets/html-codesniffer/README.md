@@ -8,7 +8,7 @@ changed: "2018-04-06"
 
 **This bookmarklet analyses the displayed page's HTML source and detects violations of the coding standard. It offers a huge amount of predefined rules and can be extended with custom rules.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Installation
 

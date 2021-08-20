@@ -8,7 +8,7 @@ changed: "2019-12-15"
 
 **There is a general minimal colour contrast level for all kinds of text. As an exception, large text can have slightly lower contrast. This requirement applies to both "real" text and rasterised text on images.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Minimal contrast ratio
 

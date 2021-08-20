@@ -8,7 +8,7 @@ changed: "2018-05-01"
 
 **The idea behind HTML 5's heading algorithm is great: it promises to offer valid and highly accessible heading outlines that can be much easier to implement than traditional ones. Sadly, it was never really picked up by any browser or screen reader, and the HTML 5.2 draft advises against using it any further.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Short summary
 

@@ -8,7 +8,7 @@ changed: "2018-06-15"
 
 **Iframes allow to include any external content into a page. As such, precaution must be taken that external content does not mess up the semantics of the surrounding content with improper heading levels and hierarchies.**
 
-[[toc]]
+[[_TOC_]]
 
 In general, screen readers treat content in an iframe like any other content on the page.
 

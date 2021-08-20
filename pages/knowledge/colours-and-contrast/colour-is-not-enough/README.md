@@ -8,7 +8,7 @@ changed: "2019-12-15"
 
 **The purpose of contrast is allowing people to see and distinguish different parts of an interface. Colour is an important factor in this context, but it has some clear limitations. That is why relying on colour alone is usually not a good strategy.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Limitations of colour contrast
 

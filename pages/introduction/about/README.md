@@ -8,7 +8,7 @@ changed: "2019-11-12"
 
 **The «Accessibility Developer Guide», in its entirety, is the result of many years of hands-on practice in the field of testing websites for accessibility, as well as developing accessible web applications. The daily experience of user experts with special needs, blended together with the profound technical knowledge of fullstack web developers, resulted in forming the «Accessibility Alliance».**
 
-[[toc]]
+[[_TOC_]]
 
 ## «Access for all»
 

@@ -8,7 +8,7 @@ changed: "2018-04-03"
 
 **Not only the main content of a web page needs to be marked up using headings, but also other elements like header, navigation, footer, etc. As the visual design usually does not include those headings, they need to be visually hidden by moving them off-screen.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Additional regions on a web page
 

@@ -8,7 +8,7 @@ changed: "2018-05-14"
 
 **ARIA provides attributes which override the accessible label of an element. As they are treated differently in modern browsers and screen readers, they must be used with caution. They also have some noticeable side effects. There exist alternative techniques that are much more robust.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Background
 

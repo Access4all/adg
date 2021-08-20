@@ -8,7 +8,7 @@ changed: "2018-06-15"
 
 **Forms consist of many interactive elements. To work through and understand the examples in this chapter, besides knowing keyboard only usage, it is good to have a screen reader at hand and know how to handle it. In addition to this, there are some tools and bookmarklets that can be a huge help in your development workflow.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Keyboard only handling
 

@@ -8,7 +8,7 @@ changed: "2018-05-14"
 
 **ARIA provides an attribute which allows to attach other elements as descriptions to an element. They work pretty non-uniformly in modern browsers and screen readers, and as such they must be used with extreme caution.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Background
 

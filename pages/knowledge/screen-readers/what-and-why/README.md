@@ -8,7 +8,7 @@ changed: "2020-04-07"
 
 **Blind people are only one of many groups of people with special needs. Still, to develop and test accessible websites, screen readers are considered the most important addition to a web developer's toolset. But why is that? And what are screen readers anyway?**
 
-[[toc]]
+[[_TOC_]]
 
 ## What are screen readers?
 

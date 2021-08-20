@@ -8,7 +8,7 @@ changed: "2018-04-13"
 
 **A table's header cells are in charge of making the corresponding data cells distinguishable, so users can easily identify data cells and navigate through the table flawlessly. But sometimes it is hard to find the correct cells that fit in this respect, so you can try to introduce another one - or to use a combination of cells.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Ambiguous data
 

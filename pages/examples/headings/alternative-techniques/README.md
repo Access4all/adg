@@ -8,7 +8,7 @@ changed: "2018-05-01"
 
 **Although headings are the most widely known technique to label page regions (like header, navigation, etc.), there exist other ways to label content in HTML. In our opinion though, headings are both the most expressive and simple technique. But let's examine the situation a bit deeper.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Short summary
 

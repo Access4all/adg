@@ -8,7 +8,7 @@ changed: "2020-04-07"
 
 **If a website is optimised already for use with a keyboard only, it will also work in many respects with a screen reader. Still, some close attention needs to be paid, especially regarding semantics and custom interactivity.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Some words about ARIA
 

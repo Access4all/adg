@@ -8,7 +8,7 @@ changed: "2018-04-09"
 
 **TotalValidator checks your website regarding various web and accessibility standards by the press of a button. Building valid code is one of the highest goals developers should strive for. TotalValidator helps a lot with achieving this.**
 
-[[toc]]
+[[_TOC_]]
 
 ![TotalValidator icon](_media/totalvalidator-icon.png)
 

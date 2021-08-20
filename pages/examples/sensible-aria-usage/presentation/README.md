@@ -8,7 +8,7 @@ changed: "2018-05-15"
 
 **ARIA provides a role which removes the inherent semantics of an element. While this works in most browsers and screen readers, it is rarely needed.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Background
 

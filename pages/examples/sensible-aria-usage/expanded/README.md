@@ -8,7 +8,7 @@ changed: "2018-05-29"
 
 **ARIA provides an attribute which allows to describe the expandability status of an element. It works pretty uniformly in modern browsers and screen readers, and as such is a good solution for many situations where an element's visibility should can be toggled.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Background
 

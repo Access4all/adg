@@ -8,7 +8,7 @@ changed: "2018-05-14"
 
 **ARIA provides an attribute which allows to mark an element in a set of elements as the current one. It works pretty uniformly in modern browsers and screen readers. Still, for most situations there exist alternative techniques that are more robust.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Background
 

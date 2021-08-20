@@ -8,7 +8,7 @@ changed: "2018-04-16"
 
 **Sometimes it is necessary to style tables visually in a way that standard tables are not capable of. For example, with some CSS, it is possible to stack all cells of a table vertically on top of each other. This provides a lot of new ways of styling a table. But as this potentially also changes its semantics, ARIA must be used to ensure accessibility.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Table layout - not layout table
 

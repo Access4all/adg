@@ -8,7 +8,7 @@ changed: "2020-04-07"
 
 **The relevant desktop screen readers on Windows offer different ways of interacting with the underlying application. The most common ones are browse mode and focus mode. We cannot overestimate the importance of thoroughly knowing their differences.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Browse mode
 

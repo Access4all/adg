@@ -8,7 +8,7 @@ changed: "2019-12-15"
 
 **Calculating contrast ratios is complex. Fortunately there are contrast calculators which take care of the math. We only need to provide the correct colour codes – which has a few potential pitfalls.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Colour Contrast Analyser
 

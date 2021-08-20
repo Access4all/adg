@@ -8,7 +8,7 @@ changed: "2021-03-22"
 
 **Edge replaces Microsoft's legacy browser Internet Explorer 11 (IE 11) and is based on the same [Chromium](https://www.chromium.org/Home) open-source code base as Google Chrome.**
 
-[[toc]]
+[[_TOC_]]
 
 ![Edge logo](_media/edge-logo.png){.no-border}
 

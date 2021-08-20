@@ -8,7 +8,7 @@ changed: "2018-05-15"
 
 **ARIA provides a role which makes screen readers announce an element immediately after its addition to the DOM (using JavaScript). While this works in most browsers and screen readers, it must be used with extreme caution as it interrupts the screen reader's current output.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Background
 

@@ -8,7 +8,7 @@ changed: "2021-03-22"
 
 **This bookmarklet highlights a lot of typical semantic HTML elements, conveying their tag names. This makes inspection of the current page's semantic structure pretty easy.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Installation
 

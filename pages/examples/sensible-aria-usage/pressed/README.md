@@ -8,7 +8,7 @@ changed: "2018-05-14"
 
 **ARIA provides an attribute which allows to mark an element as activatable. It works pretty uniformly in modern browsers and screen readers. Still, for most situations there exist alternative techniques that are more robust.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Background
 

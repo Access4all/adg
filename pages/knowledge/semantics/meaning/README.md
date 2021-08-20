@@ -8,7 +8,7 @@ changed: "2020-04-07"
 
 **Not surprisingly, HTML (Hyper Text Markup Language) is exactly that: a markup language. This means that it is not only plain text, but text marked up with meaning - so called "semantics". For this, HTML offers a lot of tags, each with an inherent, unique semantic meaning. And it is absolutely crucial that those tags are used properly.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Tags with no meaning
 

@@ -8,7 +8,7 @@ changed: "2018-05-30"
 
 **Fortunately, to make sure a website is ready to be used by keyboard only, there is very little you need to consider. Still, a lot can go wrong if not paying attention, and bad old habits of some web developers seem to be hard to overcome.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Standard functionality
 

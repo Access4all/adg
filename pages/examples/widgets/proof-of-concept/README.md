@@ -8,7 +8,7 @@ changed: "2018-05-31"
 
 **All our widgets are so called "Proofs of concepts" (POCs), meaning they show how an interaction pattern can be implemented in an accessible way. As such, they are intended to serve as inspiration for your own implementations, but are not meant to be copied 1:1 into real projects.**
 
-[[toc]]
+[[_TOC_]]
 
 ## Proofing collectively accepted patterns
 
