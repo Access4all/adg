@@ -15,6 +15,7 @@ We use a bunch of nice Open Source tools to make collaboration of both developer
 - We use [Node.js](https://github.com/nodejs/node) as JavaScript run-time environment to build the page.
 - All contents are written in clean and sexy Markdown, see [Markdown (Wikipedia.org)](https://en.wikipedia.org/wiki/Markdown).
     - We use the [markdown-it](https://github.com/markdown-it/markdown-it) parser to have some additional parsing features available.
+    - A table of content can be inserted in any README.md via `[[_TOC_]]` placeholder.
 - Thanks to [Netlify](https://www.netlify.com/), the final page is deployed automatically.
 - The search is generously sponsored by [Site Search 360](https://sitesearch360.com/). Thanks, guys!
 

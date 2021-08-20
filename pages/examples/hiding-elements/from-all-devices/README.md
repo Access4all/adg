@@ -8,6 +8,8 @@ changed: "2021-06-29"
 
 **To hide an element from all devices means just that: no single device will perceive it anymore (although the element still is present in the DOM). This can be achieved using either an HTML attribute or CSS attributes.**
 
+[[_TOC_]]
+
 Elements can be hidden completely from all devices (including screen readers).
 
 ## Using hidden attribute
