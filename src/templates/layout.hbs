@@ -27,13 +27,18 @@
   {{#each metatags.og}}
     <meta property="{{this.property}}" content="{{this.content}}">
   {{/each}}
-
-
   {{#each metatags.standard}}
     <meta name="{{this.name}}" content="{{this.content}}">
   {{/each}}
+  <meta name="apple-mobile-web-app-title" content="Accessibility Developer Guide">
+  <meta name="application-name" content="Accessibility Developer Guide">
+  <meta name="theme-color" content="#ffffff">
   <link rel="alternate" type="application/rss+xml" href="/feed/rss.xml">
   {{> "global/tracking/tracking"}}
+  <link rel="icon" href="/img/favicon/favicon.ico" sizes="any">
+  <link rel="icon" href="/img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/img/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/img/favicon/manifest.webmanifest">
 </head>
 <body class="js-theme theme{{#if section }} theme-{{section}}{{/if}}">
   <div id="body">

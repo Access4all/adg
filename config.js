@@ -5,9 +5,9 @@ module.exports = {
   twitter: '', // TODO: Add
   media: {
     image:
-      'https://www.accessibility-developer-guide.com/assets/img/logo/adg.svg',
+      'https://www.accessibility-developer-guide.com/img/logo/adg.svg',
     favicon:
-      'https://www.accessibility-developer-guide.com/assets/img/favicon.png' // TODO: Add
+      'https://www.accessibility-developer-guide.com/img/favicon/favicon.ico'
   },
   copyright: 'MIT',
   author: {
