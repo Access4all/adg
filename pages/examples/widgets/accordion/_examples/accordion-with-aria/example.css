@@ -1,12 +1,13 @@
-*:focus {
+*:focus,
+[data-adg-accordion] button[aria-controls]:focus {
   outline: 2px dotted #000;
 }
 
-#first_entry,
-#second_entry {
-  display: none;
-}
-
-[data-adg-accordion] > a {
+[data-adg-accordion] button[aria-controls] {
+  all: inherit;
   display: block;
+  width: 100%;
+  color: #0000ee;
+  text-decoration: underline;
+  cursor: pointer;
 }

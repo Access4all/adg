@@ -1,42 +1,40 @@
-;(function () {
-  var AdgAccordion
-
-  AdgAccordion = class AdgAccordion {
-    constructor (el) {
-      this.$el = $(el)
-      this.initHeadings()
-      this.initTogglers()
-    }
-
-    initHeadings () {
-      return (this.$headings = this.$el.find('[data-adg-accordion-target]'))
-    }
-
-    initTogglers () {
-      return this.$headings.each(function () {
-        var $container, $heading, $toggler, targetId
-        $heading = $(this)
-        $toggler = $heading
-          .wrap("<a href='#' aria-expanded='false'></a>")
-          .parent()
-        targetId = $heading.attr('data-adg-accordion-target')
-        $container = $('#' + targetId)
-        $container.hide()
-        return $toggler.click(e => {
-          $container.toggle()
-          $toggler.attr(
-            'aria-expanded',
-            $toggler.attr('aria-expanded') === 'false' ? 'true' : 'false'
-          )
-          return e.preventDefault()
-        })
-      })
-    }
+class AdgAccordion {
+  constructor (el) {
+    this.element = el
+    this.toggles = this.element.querySelectorAll('[aria-controls]')
+    this.initToggles()
   }
 
-  $(document).ready(function () {
-    return $('[data-adg-accordion]').each(function () {
-      return new AdgAccordion(this)
+  initToggles () {
+    this.toggles.forEach(toggle => {
+      const containerId = toggle.getAttribute('aria-controls')
+      const container = document.querySelector(`#${containerId}`)
+
+      this.hide(container, toggle)
+
+      toggle.addEventListener('click', () => {
+        if (container.hidden) {
+          this.show(container, toggle)
+        } else {
+          this.hide(container, toggle)
+        }
+      })
     })
-  })
-}.call(this))
+  }
+
+  show (container, toggle) {
+    container.hidden = false
+    toggle.setAttribute('aria-expanded', 'true')
+  }
+
+  hide (container, toggle) {
+    container.hidden = true
+    toggle.setAttribute('aria-expanded', 'false')
+  }
+}
+
+const accordions = []
+
+document
+  .querySelectorAll('[data-adg-accordion]')
+  .forEach(element => accordions.push(new AdgAccordion(element)))

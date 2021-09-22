@@ -1,29 +1,40 @@
 <button>Focusable element before</button>
-<div data-adg-accordion="true">
-  <h2 data-adg-accordion-target="first_entry">
-    This is the first accordion entry
+<div data-adg-accordion="my-accordion">
+  <h2>
+    <button aria-controls="first_item">This is the first accordion item</button>
   </h2>
-  <div id="first_entry">
+  <section id="first_item">
     <p>
-      This is some content of the first entry.
+      This is some content of the first item.
     </p>
     <p>
-      And some <a href="#">link</a>! Nice, isn't it?
+      And some <a href="#">link</a>! Nice, isn’t it?
     </p>
-  </div>
-  <h2 data-adg-accordion-target="second_entry">
-    This is the second accordion entry
+  </section>
+  <h2>
+    <button aria-controls="second_item">This is the second accordion item</button>
   </h2>
-  <div id="second_entry">
+  <section id="second_item">
     <p>
-      This is some cocntent of the second entry.
+      This is some content of the second item.
     </p>
     <p>
       <label for="some_input">Some input: </label><input id="some_input" type="text" />
     </p>
     <p>
+      And another paragraph.
+    </p>
+  </section>
+  <h2>
+    <button aria-controls="third_item">This is the third accordion item</button>
+  </h2>
+  <section id="third_item">
+    <p>
+      This is some content of the third item.
+    </p>
+    <p>
       And finally a last paragraph.
     </p>
-  </div>
+  </section>
 </div>
 <button>Focusable element after</button>
