@@ -34,11 +34,12 @@ For example, most of our POCs are optimised for being used either with a mouse o
 
 And while the semantics are well chosen (see [Semantics and their importance for accessibility](/knowledge/semantics)), the visual design of the POCs is quite sparse.
 
-### ARIA only when inevitable
+### ARIA only when safe and sound
 
-According to our credo of [Widgets simply working for all](/knowledge/semantics/widgets), ARIA roles and states were relinquished wherever possible, and traditional HTML elements are used.
+According to our credo of [Widgets simply working for all](/knowledge/semantics/widgets)  and our principles of [Sensible usage of ARIA roles and attributes](/examples/sensible-aria-usage), ARIA is used conservatively:
 
-In certain well-reasoned situations though, ARIA is used according to the principles of [Sensible usage of ARIA roles and attributes](/examples/sensible-aria-usage) to optimise the user experience for screen readers.
+- either wenn there is no appropriate traditional HTML feature available
+- or when the ARIA feature has proved to be well supported and delivers a much better experience among screen readers
 
 ## Icing on the cake
 
