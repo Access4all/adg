@@ -6,7 +6,7 @@ changed: "2020-04-07"
 
 # How screen readers work - and why they seem so buggy
 
-**Sitting on top of another application, screen readers announce the underlying content - often trying to compensate for inadequate presentation by both the underlying application and its content. This is a very hard task and prone to regressions, as we try to explain here.**
+**Sitting on top of another application, screen readers announce the underlying content - often trying to compensate for inadequate presentation by both the underlying application (ie. browser) and its content (ie. website). This is a very hard task and prone to regressions, as we try to explain here.**
 
 [[_TOC_]]
 
@@ -14,9 +14,9 @@ changed: "2020-04-07"
 
 Screen readers "sit" on top of another application, conveying its contents to the user through audio or braille.
 
-As many of those applications do not care too much about accessibility and present their content in non-semantical or other inadequate ways, screen readers try to compensate for this. In addition to this, many websites are coded poorly, and some screen readers even try to compensate for this.
+As many of those applications do not care too much about accessibility and present their content in non-semantical or other inadequate ways, screen readers try to compensate for this. In addition, many websites are coded poorly, and some screen readers even try to compensate for this.
 
-While this works sometimes, it often results in strange behaviours. Thus, screen readers often are perceived as being buggy.
+While this works sometimes, in other situations it results in strange behaviours. Thus, screen readers often are perceived as being buggy.
 
 To prevent bugs, it is best to follow established standards and best practices.
 
@@ -50,7 +50,7 @@ So please, do not kill the messenger - instead, follow this guide and provide hi
 
 ### Reasons for bugs
 
-Screen readers sadly seem to be very prone to regressions, meaning that a feature which worked well in an earlier combination of browser and screen reader versions does not work anymore in subsequent versions. For example, the fact that a specific accessibility feature worked well in the combination of NVDA 2018.1 and Firefox 58 is no guarantee that it will still work in NVDA 2018.2 with Firefox 58 (or NVDA 2018.1 and Firefox 59).
+Screen readers sadly seem to be very prone to regressions, meaning that a feature which worked well in an earlier combination of browser and screen reader versions does not work anymore in subsequent versions. For example, the fact that a specific accessibility feature worked well in the combination of NVDA 2021.1 and Firefox 89 is no guarantee that it will still work in NVDA 2021.2 with Firefox 91 (or NVDA 2021.1 and Firefox 91).
 
 Let's look at a hypothetical example. Let's say that for an ARIA tablist implementation, the browser does not provide the necessary information about which tab currently is active to the accessibility API:
 
@@ -80,7 +80,7 @@ If you find bugs in either screen readers or browsers, we highly urge you to get
 - For filing JAWS issues, please use the [issue tracker for VFO-standards-support (GitHub.com)](https://github.com/FreedomScientific/VFO-standards-support/issues) by FreedomScientific.
     - For more details, please read [JAWS wide open (PacielloGroup.com)](https://developer.paciellogroup.com/blog/2017/10/jaws-wide-open/).
 - For filing Firefox issues, please use the [issue tracker for Firefox (Mozilla.org)](https://bugzilla.mozilla.org).
-- TODO: Chrome!
+- TODO: Chrome! TODO!!!
 
 ### What will the future bring?
 
@@ -88,4 +88,4 @@ Traditionally, desktop screen readers haven't been incorporated into operating s
 
 With the screen readers VoiceOver on macOS and Narrator on Windows, this has changed fundamentally in recent years: both are incorporated deeply into the operating system by default. Being an official part of their ecosystem, support is expected to be much better and more reliable than for 3rd party screen readers. Especially VoiceOver on macOS is currently seen by many users as being the best screen reader available.
 
-But it will take time until the majority of users will have switched (if ever). So for the time being, developers need to keep JAWS and consorts as their main references.
+But it will take time until the majority of users will have switched (if ever). So for the time being, developers need to keep NVDA and JAWS as their main references.

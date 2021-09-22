@@ -28,11 +28,11 @@ As such, our POCs are not intended to be copied & pasted 1:1 into "real world" p
 
 ### Simple and straight to the point
 
-Many of our POCs are lacking a lot of functionality that generally would be expected from "real world" implementations.
+Many of our POCs are lacking some functionality that generally would be expected from "real world" implementations.
 
 For example, most of our POCs are optimised for being used either with a mouse or with a keyboard, while certain edge cases of interactions of the two of them is not taken care of. Also, touch usage with gestures are not implemented in any way.
 
-And while the semantics are well chosen (see [Semantics and their importance for accessibility](/knowledge/semantics)), the visual design of the POCs is very sparse.
+And while the semantics are well chosen (see [Semantics and their importance for accessibility](/knowledge/semantics)), the visual design of the POCs is quite sparse.
 
 ### ARIA only when inevitable
 
