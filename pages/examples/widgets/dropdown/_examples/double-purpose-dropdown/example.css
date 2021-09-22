@@ -20,13 +20,29 @@ p button {
 
 ol {
   padding: 0;
-}
-ol > li {
-  float: left;
+  display: flex;
   list-style: none;
-  position: relative;
 }
-ol a, ol button {
+ol ol {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  flex-direction: column;
+}
+ol[hidden] {
+  display: none;
+}
+
+ol li {
+  position: relative;
+  display: flex;
+}
+
+ol button {
+  all: inherit;
+}
+ol a,
+ol button {
   display: block;
   border: 1px solid #000;
   color: #000;
@@ -36,28 +52,15 @@ ol a, ol button {
   box-sizing: border-box;
   text-decoration: none;
 }
-ol a:hover, ol button:hover {
-  text-decoration: underline;
-}
 ol button {
-  font-size: inherit;
-  font-family: inherit;
-  text-align: inherit;
-  width: 31px;
-  height: 40px;
-  border-left: none;
+  width: auto;
   margin-left: -1px;
-}
-ol button:hover {
   cursor: pointer;
 }
-ol button[aria-expanded="true"] + ol {
-  position: absolute;
-  right: 0;
+ol a:hover,
+ol button:hover {
+  text-decoration: underline;
 }
-ol button[aria-expanded="true"] + ol a {
+ol ol a {
   width: 200px;
-}
-ol button[aria-expanded="false"] + ol {
-  display: none;
 }

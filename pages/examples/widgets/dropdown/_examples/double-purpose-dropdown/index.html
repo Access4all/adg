@@ -1,11 +1,11 @@
 <button>Focusable element before</button>
-<ol data-adg-dropdown="">
+<ol data-adg-dropdown>
   <li>
     <a href="http://www.google.ch/search?q=physical">Physical activities</a>
-  </li>
-  <li>
-    <button aria-expanded="false">▾<span class="visually-hidden">Open physical activities</span></button>
-    <ol>
+    <button type="button" aria-expanded="true" aria-controls="dropdown01">
+      ▾<span class="visually-hidden">Open physical activities</span>
+    </button>
+    <ol id="dropdown01">
       <li>
         <a href="http://www.google.ch/search?q=soccer">Playing soccer</a>
       </li>
@@ -16,10 +16,10 @@
   </li>
   <li>
     <a href="http://www.google.ch/search?q=relaxing">Relaxing activities</a>
-  </li>
-  <li>
-    <button aria-expanded="false">▾<span class="visually-hidden">Open relaxing activities</span></button>
-    <ol>
+    <button type="button" aria-expanded="true" aria-controls="dropdown02">
+      ▾<span class="visually-hidden">Open relaxing activities</span>
+    </button>
+    <ol id="dropdown02">
       <li>
         <a href="http://www.google.ch/search?q=movies">Watching movies</a>
       </li>
