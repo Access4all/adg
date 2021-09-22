@@ -1,7 +1,7 @@
 ---
 navigation_title: "Widgets"
 position: 3
-changed: "2018-04-12"
+changed: "2021-09-22"
 ---
 
 # Widgets simply working for all
