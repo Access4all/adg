@@ -42,11 +42,15 @@ Before you go on, please read [What is a "Proof of concept"?](/examples/widgets/
 
 ARIA is supported pretty well for tablists (see POC #1). If you need a much simpler solution though, and according to our credo [Widgets simply working for all](/knowledge/semantics/widgets), the easiest way to create a tablist is using a simple group of radio buttons (see POC #2).
 
-### POC #1: ARIA implementation
+### POC #1: ARIA
 
 TODO
 
-### POC #2: Radio buttons implementation
+#### Implementation details
+
+TODO
+
+### POC #2: Radio buttons
 
 They can be styled visually as needed using CSS, and spiced up with (very little) JavaScript, so they behave like perfect tablists.
 
@@ -54,7 +58,7 @@ Sensible naming of elements (and a few specifically added visually hidden texts)
 
 [Example](_examples/tablist-with-radio-buttons)
 
-### Implementation details
+#### Implementation details
 
 Some interesting peculiarities:
 
