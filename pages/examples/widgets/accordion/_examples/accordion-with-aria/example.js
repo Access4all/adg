@@ -6,7 +6,7 @@ class AdgAccordion {
   }
 
   initToggles () {
-    this.toggles.forEach(toggle => {
+    this.toggles.forEach((toggle, toggleIndex, toggleArray) => {
       const containerId = toggle.getAttribute('aria-controls')
       const container = document.querySelector(`#${containerId}`)
 
@@ -17,6 +17,23 @@ class AdgAccordion {
           this.show(container, toggle)
         } else {
           this.hide(container, toggle)
+        }
+      })
+
+      toggle.addEventListener('keydown', event => {
+        if (toggle === document.activeElement) {
+          let focusTarget
+          switch (event.keyCode) {
+            case 38:
+              focusTarget = toggleIndex > 0 ? toggleIndex - 1 : toggleArray.length - 1
+              break
+            case 40:
+              focusTarget = toggleIndex < toggleArray.length - 1 ? toggleIndex + 1 : 0
+              break
+          }
+          if (toggleArray[focusTarget]) {
+            toggleArray[focusTarget].focus()
+          }
         }
       })
     })
