@@ -1,52 +1,54 @@
 class AdgAccordion {
   constructor (el) {
     this.element = el
-    this.toggles = this.element.querySelectorAll('[aria-controls]')
-    this.initToggles()
+    this.triggers = this.element.querySelectorAll('[aria-controls]')
+    this.initTriggers()
   }
 
-  initToggles () {
-    this.toggles.forEach((toggle, toggleIndex, toggleArray) => {
-      const containerId = toggle.getAttribute('aria-controls')
-      const container = document.querySelector(`#${containerId}`)
+  initTriggers () {
+    this.triggers.forEach((trigger, triggerIndex, triggerArray) => {
+      const panelId = trigger.getAttribute('aria-controls')
+      const panel = document.getElementById(panelId)
 
-      this.hide(container, toggle)
+      this.hide(panel, trigger)
 
-      toggle.addEventListener('click', () => {
-        if (container.hidden) {
-          this.show(container, toggle)
+      trigger.addEventListener('click', () => {
+        if (panel.hidden) {
+          this.show(panel, trigger)
         } else {
-          this.hide(container, toggle)
+          this.hide(panel, trigger)
         }
       })
 
-      toggle.addEventListener('keydown', event => {
-        if (toggle === document.activeElement) {
+      trigger.addEventListener('keydown', event => {
+        if (trigger === document.activeElement) {
           let focusTarget
           switch (event.keyCode) {
             case 38:
-              focusTarget = toggleIndex > 0 ? toggleIndex - 1 : toggleArray.length - 1
+              focusTarget =
+                triggerIndex > 0 ? triggerIndex - 1 : triggerArray.length - 1
               break
             case 40:
-              focusTarget = toggleIndex < toggleArray.length - 1 ? toggleIndex + 1 : 0
+              focusTarget =
+                triggerIndex < triggerArray.length - 1 ? triggerIndex + 1 : 0
               break
           }
-          if (toggleArray[focusTarget]) {
-            toggleArray[focusTarget].focus()
+          if (triggerArray[focusTarget]) {
+            triggerArray[focusTarget].focus()
           }
         }
       })
     })
   }
 
-  show (container, toggle) {
-    container.hidden = false
-    toggle.setAttribute('aria-expanded', 'true')
+  show (panel, trigger) {
+    panel.hidden = false
+    trigger.setAttribute('aria-expanded', 'true')
   }
 
-  hide (container, toggle) {
-    container.hidden = true
-    toggle.setAttribute('aria-expanded', 'false')
+  hide (panel, trigger) {
+    panel.hidden = true
+    trigger.setAttribute('aria-expanded', 'false')
   }
 }
 
