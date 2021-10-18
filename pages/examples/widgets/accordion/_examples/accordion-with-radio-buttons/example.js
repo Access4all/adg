@@ -6,10 +6,11 @@ class AdgRadioAccordion {
   }
 
   initTriggers () {
-    this.triggers.forEach((trigger, triggerIndex, triggerArray) => {
+    this.triggers.forEach(trigger => {
       const triggerRadio = trigger.querySelector('input[type="radio"]')
       const panelId = `${triggerRadio.id}_panel`
       const panel = document.getElementById(panelId)
+      panel.style.display = triggerRadio.checked ? 'block' : 'none'
 
       triggerRadio.addEventListener('change', () => {
         this.element.querySelectorAll('.panel').forEach(p => {

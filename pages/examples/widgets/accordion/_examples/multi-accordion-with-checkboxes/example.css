@@ -15,17 +15,17 @@ body {
   margin-bottom: 20px;
 }
 
-.control h2 {
+.trigger h2 {
   margin-bottom: 0;
 }
-.control label {
+.trigger label {
   display: block;
   border: 1px solid black;
   margin: 0 0 -1px 0;
   padding: 4px 10px;
   background-color: lightyellow;
 }
-.control label::before {
+.trigger label::before {
   content: "+";
   display: inline-block;
   width: 0.75em;

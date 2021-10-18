@@ -1,25 +1,38 @@
-;(function () {
-  $(document).ready(function () {
-    return $("input[type='checkbox']").each((i, element) => {
-      var $checkbox
-      $checkbox = $(element)
+class AdgCheckboxAccordion {
+  constructor (el) {
+    this.element = el
+    this.triggers = this.element.querySelectorAll('.trigger')
+    this.initTriggers()
+  }
 
-      // Make Enter select/deselect checkbox (instead of submitting form)
-      $checkbox.keypress(function (e) {
-        if ((e.keyCode ? e.keyCode : e.which) === 13) {
-          return $(this).trigger('click')
+  initTriggers () {
+    this.triggers.forEach(trigger => {
+      const triggerCheckbox = trigger.querySelector('input[type="checkbox"]')
+      const panelId = `${triggerCheckbox.id}_panel`
+      const panel = document.getElementById(panelId)
+      this.updatePanelVisibility(panel, triggerCheckbox)
+
+      triggerCheckbox.addEventListener('keydown', event => {
+        if (event.keyCode === 13 || event.key === 'Enter') {
+          event.preventDefault()
+          triggerCheckbox.checked = !triggerCheckbox.checked
+          this.updatePanelVisibility(panel, triggerCheckbox)
         }
       })
-      return $checkbox.change(function () {
-        var $panel, panel_id
-        panel_id = `#${$checkbox.attr('id')}_panel`
-        $panel = $(panel_id)
-        if ($checkbox.is(':checked')) {
-          return $panel.show()
-        } else {
-          return $panel.hide()
-        }
+
+      triggerCheckbox.addEventListener('change', () => {
+        this.updatePanelVisibility(panel, triggerCheckbox)
       })
     })
-  })
-}.call(this))
+  }
+
+  updatePanelVisibility (panel, triggerCheckbox) {
+    panel.style.display = triggerCheckbox.checked === true ? 'block' : 'none'
+  }
+}
+
+const accordions = []
+
+document
+  .querySelectorAll('[data-adg-checkbox-accordion]')
+  .forEach(element => accordions.push(new AdgCheckboxAccordion(element)))

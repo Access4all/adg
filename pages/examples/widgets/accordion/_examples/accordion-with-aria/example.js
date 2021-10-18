@@ -23,12 +23,16 @@ class AdgAccordion {
       trigger.addEventListener('keydown', event => {
         if (trigger === document.activeElement) {
           let focusTarget
-          switch (event.keyCode) {
+          switch (event.keyCode || event.key) {
             case 38:
+            case 'Up':
+            case 'ArrowUp':
               focusTarget =
                 triggerIndex > 0 ? triggerIndex - 1 : triggerArray.length - 1
               break
             case 40:
+            case 'Down':
+            case 'ArrowDown':
               focusTarget =
                 triggerIndex < triggerArray.length - 1 ? triggerIndex + 1 : 0
               break
