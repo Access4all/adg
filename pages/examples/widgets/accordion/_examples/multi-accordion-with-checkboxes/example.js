@@ -7,27 +7,26 @@ class AdgCheckboxAccordion {
 
   initTriggers () {
     this.triggers.forEach(trigger => {
-      const triggerCheckbox = trigger.querySelector('input[type="checkbox"]')
-      const panelId = `${triggerCheckbox.id}_panel`
+      const panelId = `${trigger.id}_panel`
       const panel = document.getElementById(panelId)
-      this.updatePanelVisibility(panel, triggerCheckbox)
+      this.updatePanelVisibility(panel, trigger)
 
-      triggerCheckbox.addEventListener('keydown', event => {
+      trigger.addEventListener('keydown', event => {
         if (event.keyCode === 13 || event.key === 'Enter') {
           event.preventDefault()
-          triggerCheckbox.checked = !triggerCheckbox.checked
-          this.updatePanelVisibility(panel, triggerCheckbox)
+          trigger.checked = !trigger.checked
+          this.updatePanelVisibility(panel, trigger)
         }
       })
 
-      triggerCheckbox.addEventListener('change', () => {
-        this.updatePanelVisibility(panel, triggerCheckbox)
+      trigger.addEventListener('change', () => {
+        this.updatePanelVisibility(panel, trigger)
       })
     })
   }
 
-  updatePanelVisibility (panel, triggerCheckbox) {
-    panel.style.display = triggerCheckbox.checked === true ? 'block' : 'none'
+  updatePanelVisibility (panel, trigger) {
+    panel.style.display = trigger.checked === true ? 'block' : 'none'
   }
 }
 

@@ -1,35 +1,34 @@
+*:focus {
+  outline: 2px dotted black;
+}
+
 .visually-hidden {
   position: absolute;
-  left: -10000px;
-  top: auto;
+  margin: -1px;
+  border: 0;
+  padding: 0;
   width: 1px;
   height: 1px;
   overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
 }
 
-body {
-  padding: 20px;
+.accordion:focus-within .header label {
+  background-color: #ffffb3;
 }
 
-.accordion {
-  margin-bottom: 20px;
-}
-
-.accordion:focus-within .trigger label {
-  background-color: yellow;
-}
-
-.trigger h2 {
+.header h2 {
   margin-bottom: 0;
 }
-.trigger label {
+.header label {
   display: block;
   border: 1px solid black;
   margin: 0 0 -1px 0;
   padding: 4px 10px;
   background-color: lightyellow;
 }
-.trigger label::before {
+.header label::before {
   content: "+";
   display: inline-block;
   width: 0.75em;
@@ -44,9 +43,9 @@ input[type="radio"]:checked + h2 label::before {
   content: "-";
 }
 
-a:focus,
-input:focus,
-input[type="radio"]:focus + h2 label {
+.accordion a:focus,
+.accordion input:focus,
+.accordion input[type="radio"]:focus + h2 label {
   outline: 2px dotted red;
   outline-offset: 2px;
 }

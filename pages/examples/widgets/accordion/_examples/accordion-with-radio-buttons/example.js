@@ -7,12 +7,11 @@ class AdgRadioAccordion {
 
   initTriggers () {
     this.triggers.forEach(trigger => {
-      const triggerRadio = trigger.querySelector('input[type="radio"]')
-      const panelId = `${triggerRadio.id}_panel`
+      const panelId = `${trigger.id}_panel`
       const panel = document.getElementById(panelId)
-      panel.style.display = triggerRadio.checked ? 'block' : 'none'
+      panel.style.display = trigger.checked ? 'block' : 'none'
 
-      triggerRadio.addEventListener('change', () => {
+      trigger.addEventListener('change', () => {
         this.element.querySelectorAll('.panel').forEach(p => {
           p.style.display = p.id === panel.id ? 'block' : 'none'
         })
