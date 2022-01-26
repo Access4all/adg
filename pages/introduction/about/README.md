@@ -62,7 +62,7 @@ On the other side of the «Accessibility Alliance», there are several acclaimed
 
 ### Zeix
 
-![Dept logo](_media/zeix.png){.agency-logo}
+![Zeix logo](_media/zeix.png){.agency-logo}
 
 > The Accessibility Developer Guide allows us to easily share knowledge within the team and build on reliable best practices. This enables us to design, create and program websites that all people like to use.
 
