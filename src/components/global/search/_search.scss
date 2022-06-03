@@ -11,9 +11,7 @@
     @include searchbtn;
     order: 1;
 
-    &:focus {
-      outline: 2px dotted var(--theme-color-dark);
-    }
+    @include btn-focus;
   }
 
   .search--field {
@@ -42,16 +40,12 @@
     display: none;
     font-family: inherit;
     font-weight: 300;
-
     display: inline;
     width: 100%;
     height: 45px;
     transition: width 0.25s, height 0.25s, padding 0.25s;
 
-    &:focus {
-      outline: 2px dotted var(--theme-color-dark);
-      outline-offset: 2px;
-    }
+    @include btn-focus;
   }
 }
 
