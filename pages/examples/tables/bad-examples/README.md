@@ -1,12 +1,14 @@
 ---
 navigation_title: "Bad examples"
 position: 3
-changed: "2018-??-??"
+changed: "2018-06-15"
 ---
 
 # General bad table examples
 
 **Oftentimes, developers forget to mark up a table's header cells with the proper HTML tag. Instead, they are styled only visually as headers. But tables lacking proper header cells are tricky to navigate by screen reader users, and the more complex they are, the less they can be understood.**
+
+[[_TOC_]]
 
 Most accessibility problems regarding tables are caused due to bad semantics. So if you haven't done this yet, go back and read [Semantics and their importance for accessibility](/knowledge/semantics).
 

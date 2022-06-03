@@ -8,13 +8,15 @@ changed: "2018-04-18"
 
 **Headings are solely browsable elements and do not offer any interactivity. To work through and understand the examples in this chapter, it is good to have a screen reader at hand and know how to handle it. In addition to this, there are some tools and bookmarklets that can be a huge help in your development workflow.**
 
+[[_TOC_]]
+
 ## Keyboard only handling
 
 For keyboard only users, headings do not offer any special functionality. So there's nothing to say here. Still, you may want to check out [How to browse websites using a keyboard only](/knowledge/keyboard-only/browsing-websites).
 
 ## Screen reader handling
 
-For screen reader users, headings offer a lot of special functionalities. Here follows a quick nomination of the most important features. Besides this, check out [How to read websites using a desktop screen reader](/knowledge/desktop-screen-readers/reading-websites).
+For screen reader users, headings offer a lot of special functionalities. Here follows a quick nomination of the most important features. Besides this, check out [How to read websites using a desktop screen reader](/knowledge/screen-readers/desktop/reading-websites).
 
 ### Quick navigation
 
@@ -31,14 +33,15 @@ You can add `Shift` to most shortcuts to reverse direction. For example press `S
 
 As an alternative to navigating through the headings directly on the page, screen readers offer a heading outline view. It resembles the table of contents of a traditional book.
 
-In the upcoming text, we are referring to the keys `NVDA` and `JAWS`. If you do not know about them, see [Screen readers are keyboard shortcut monsters](/knowledge/desktop-screen-readers/shortcut-monsters).
+In the upcoming text, we are referring to the keys `NVDA` and `JAWS`. If you do not know about them, see [The Insert Modifier Key](/knowledge/screen-readers/desktop/insert-modifier-key).
 
 #### Elements List (NVDA)
 
 NVDA's "Elements List" displays a page's heading outline in a tree view. To open it:
 
 - First make sure you are in browse mode.
-    - If unclear to you, see [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes).
+    - If unclear to you, see [Screen readers' browse and focus modes](/knowledge/screen-readers/desktop/browse-focus-modes).
+- To open it, press `NVDA + F7`.
 - Press `Alt + H` to select the "Headings" area.
 
 ![NVDA's "Elements List" dialog](_media/nvdas-elements-list-dialog.png)

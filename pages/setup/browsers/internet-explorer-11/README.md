@@ -1,20 +1,21 @@
 ---
 navigation_title: "Internet Explorer 11"
+navigation_ignore: true
 position: 1
-changed: "2018-03-12"
+changed: "2021-03-22"
 ---
 
 # Internet Explorer 11 installation and configuration
 
-**Microsoft's legacy browser (and every serious web developers' longtime nemesis) Internet Explorer 11 (IE11) keeps on being relevant when it comes to accessibility, as many users with special needs still rely on it. Especially among blind people, Internet Explorer 11 enjoys wide distribution.**
+**Microsoft's legacy browser (and every serious web developers' longtime nemesis) Internet Explorer 11 (IE 11) is not officially supported any more. See [Edge](../edge) for its successor.**
 
 ![Internet Explorer logo](_media/internet-explorer-logo.png)
 
 ## Installation
 
-[Internet Explorer 11](http://windows.microsoft.com/en-US/internet-explorer/download-ie) is already installed in Windows environments - even on Windows 10, where [Edge](http://windows.microsoft.com/en-US/windows-10/getstarted-get-to-know-microsoft-edge) is the default browser.
+[Internet Explorer 11](http://windows.microsoft.com/en-US/internet-explorer/download-ie) is already installed in Windows environments — even on Windows 10, where [Edge](http://windows.microsoft.com/en-US/windows-10/getstarted-get-to-know-microsoft-edge) is the default browser.
 
-If needed, check out [How to locate and open Internet Explorer in Windows 10 (Microsoft.com)](https://answers.microsoft.com/en-us/windows/forum/windows_10-networking-winpc/how-to-locate-and-open-internet-explorer-in/4b067f8b-a0dc-4fba-9e63-00fb14ea82e8). And be sure not to accidentally mix up these two while developing and testing for accessibility!
+If needed, check out [How to locate and open Internet Explorer in Windows 10 (Microsoft.com)](https://answers.microsoft.com/en-us/windows/forum/windows_10-networking-winpc/how-to-locate-and-open-internet-explorer-in/4b067f8b-a0dc-4fba-9e63-00fb14ea82e8). Be sure not to accidentally mix up these two while developing and testing for accessibility!
 
 ## Configuration
 

@@ -1,3 +1,4 @@
+/* globals initializeSs360 */
 import $ from 'jquery'
 
 import BaseModule from './BaseModule'
@@ -18,9 +19,6 @@ export default class Search extends BaseModule {
   }
 
   init (element) {
-    var DEFAULTS = {}
-    var self = this
-
     this.$el = $(element)
 
     this.enable()
@@ -29,30 +27,26 @@ export default class Search extends BaseModule {
   }
 
   enable () {
-    window.ss360Config = {
+    let ss360Config = {
       siteId: 'accessibility-developer-guide.netlify.com',
-      searchBoxSelector: '#' + this.$el.find('input').attr('id'),
-      showImagesSuggestions: false,
-      specialMobileSuggest: {
-        enabled: false
+      searchBox: {
+        selector: '#' + this.$el.find('input').attr('id')
       },
-      suggestionsEqualSearch: true
+      suggestions: {
+        showImages: false,
+        showOnMobile: true,
+        mobileScrollOnFocus: false,
+        extraHtml: '#Snippet#' // this refers to the "Snippet" Global Data Point
+      },
+      tracking: {
+        enhanced: false,
+        logQueries: false
+      },
+      callbacks: {
+        enter: function () {}
+      }
     }
 
-    initializeSs360()
-
-    this.$el.find('.search--toggle').on('click', function () {
-      // Hiding breadcrumbs does not make any sense in mobile view. We just let the search input overlap.
-      // var breadcrumbs = $('nav.breadcrumbs .breadcrumbs--inner')
-      // breadcrumbs.css('visibility', 'hidden')
-      $(this)
-        .siblings('.search--input')
-        .addClass('search--input-expanded')
-        .focus()
-        .focusout(function () {
-          $(this).removeClass('search--input-expanded')
-          breadcrumbs.css('visibility', 'visible')
-        })
-    })
+    initializeSs360(ss360Config)
   }
 }

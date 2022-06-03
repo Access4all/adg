@@ -8,6 +8,8 @@ changed: "2018-05-29"
 
 **Asterisk (*) next to a form control's label usually indicates it as "required". Oftentimes, this asterisk's purpose is then explained somewhere else on the page. Many users (especially screen reader users) may be confused with that, so be sure to make this information is easily accessible.**
 
+[[_TOC_]]
+
 ## Foot notes explaining asterisks
 
 It is a common technique to add an asterisk `*` to a form control's label. Then, somewhere else on the page, for example below the form, this asterisk is explained to indicate a required input (in allusion to foot notes in text documents).
@@ -57,3 +59,12 @@ Instead of a applying a visually hidden text "required", one can set a `required
 Technically this is much easier and cleaner (more information here: [HTML 5 client side validations](/examples/forms/html-5-validations)). But browser support is still rather shaky and the user experience with screen readers is shaky.
 
 And often there may be cases where other texts than simply "required" are needed (and where there is no standard HTML attribute available), so it's good to have a more flexible solution: namely hidden texts.
+
+## You could also be interested in
+
+Knowledge is power! Our guide has more to offer about:
+
+- [Placing non-interactive content between form controls](/examples/forms/non-interactive-content)
+- [Hiding elements from screen readers using aria-hidden](/examples/sensible-aria-usage/hidden/)
+- [Validation messages](/examples/forms/validation-messages)
+- [HTML 5 client side validations](/examples/forms/html-5-validations)

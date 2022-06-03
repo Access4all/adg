@@ -1,12 +1,14 @@
 ---
 navigation_title: "Meaning"
 position: 1
-changed: "2018-04-12"
+changed: "2020-04-07"
 ---
 
 # Semantics provide meaning
 
 **Not surprisingly, HTML (Hyper Text Markup Language) is exactly that: a markup language. This means that it is not only plain text, but text marked up with meaning - so called "semantics". For this, HTML offers a lot of tags, each with an inherent, unique semantic meaning. And it is absolutely crucial that those tags are used properly.**
+
+[[_TOC_]]
 
 ## Tags with no meaning
 
@@ -118,7 +120,7 @@ Screen readers recognise these containers, announce them to the user and offer a
 
 ### Missing semantics
 
-It is very important to acknowledge that while visual attributes are displayed in web browsers, screen readers do not care about them. Regardless whether text has `color: blue` or `color: red`, whether it is `font-size: 1px` or `font-size: 100px`, whether it has a `border` or a `text-shadow`, it's always announced as plain text. Only if it is semantically marked up, screen readers do care (if you are really curious and want to learn more about this, skip ahead and read [Screen readers do not convey visual attributes](/knowledge/desktop-screen-readers/no-visual-attributes)).
+It is very important to acknowledge that while visual attributes are displayed in web browsers, screen readers do not care about them. Regardless whether text has `color: blue` or `color: red`, whether it is `font-size: 1px` or `font-size: 100px`, whether it has a `border` or a `text-shadow`, it's always announced as plain text. Only if it is semantically marked up, screen readers do care (if you are really curious and want to learn more about this, skip ahead and read [Screen readers do not convey visual attributes](/knowledge/screen-readers/no-visual-attributes)).
 
 Let's now look at the following example, where the developers may not have felt like overriding default browser styles. So they decided to avoid real headings and just apply some visual attributes to meaningless containers:
 

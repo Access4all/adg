@@ -1,14 +1,14 @@
 ---
 navigation_title: "NVDA"
-position: 1
-changed: "2018-05-30"
+position: 3
+changed: "2020-04-30"
 ---
 
 # NVDA installation and configuration
 
-**NVDA (Non Visual Desktop Access) is a lightweight and reliable open source screen reader. It is very compliant to standards and is the best choice to be used as a reference for accessibility. NVDA is the perfect companion to be fired up frequently while developing. After using it for a while, you will respect it as a firm but fair teacher.**
+**NVDA (Non Visual Desktop Access) is a lightweight and reliable open source desktop screen reader. Because of its firm compliance to standards, it is the desktop screen reader of choice when developing accessible websites. After using it for a while, you will respect it as a firm but fair teacher.**
 
-![NVDA icon](_media/nvda-icon.png)
+[[_TOC_]]
 
 ## Installation
 
@@ -18,7 +18,7 @@ changed: "2018-05-30"
 
 Normal installation offers automatic startup on boot (optional), a keyboard shortcut to start/restart it, association with proprietary files, etc.
 
-We recommend normal over portable installation (see below).
+We recommend the normal over portable installation (see below).
 
 Simply run the installer, or see [Installing NVDA (NVAccess.org)](http://www.nvaccess.org/files/nvda/documentation/userGuide.html?#toc11) for detailed information.
 
@@ -34,6 +34,8 @@ For detailed information, see [Creating a Portable Copy (NVAccess.org)](http://w
 
 If you chose normal installation, you can start (and restart) NVDA any time by pressing the `Ctrl + Alt + N`, or using its icon on the desktop.
 
+![NVDA icon](_media/nvda-icon.png)
+
 If you chose portable installation, simply start NVDA using the `NVDA.exe` in its installation folder.
 
 ### Using the menu
@@ -46,21 +48,21 @@ By clicking on the icon, the NVDA menu is displayed.
 
 ![The NVDA menu](_media/the-nvda-menu.png)
 
-Alternatively, you can press `NVDA + N` to display it. By default, the `NVDA` key is the `Insert` key (if you are really curious and want to learn more about this, skip ahead and read [Screen readers are keyboard shortcut monsters](/knowledge/desktop-screen-readers/shortcut-monsters)).
+Alternatively, you can press `NVDA + N` to display it. By default, the `NVDA` key is the `Insert` key (if you are really curious and want to learn more about this, skip ahead and read [The Insert Modifier Key](/knowledge/screen-readers/desktop/insert-modifier-key).
 
 The best way to use the NVDA menu is by keyboard:
 
 - Use the arrow keys to navigate it and press `Enter` to select an item.
 - For even quicker navigation, press the letter on you keyboard that is underlined in the intended menu item.
     - For example, press `E` for `Exit`.
-    - In this guide, we indicate those letters by putting braces around them, for instance like so: `(E)xit` or `(H)elp`.
+    - In this guide, we indicate those letters by putting parentheses around them, for instance like so: `(E)xit` or `(H)elp`.
 - You can close the menu items by pressing `Esc`.
 
 ### Silencing NVDA on demand
 
 While NVDA is running, it's announcing whatever your screen is currently showing.
 
-- To make NVDA abort the current stream of words, press `Ctrl`.
+- To make NVDA abort the current output, press `Ctrl` (or `Shift` to skip the current line).
 - To make NVDA shut up completely, you can toggle speech mode by pressing `NVDA + S`.
     - Be aware though that NVDA is still running in the background, so your computer may behave differently in some situations!
 
@@ -85,7 +87,7 @@ We highly recommend to have the speech viewer always open while using NVDA. Plac
 
 ## Configuration
 
-Screen readers in general offer tons of configuration options which can drastically influence their behaviour. In general, we advise to stick to the defaults. The following configuration suggestions are known to be useful and safe though.
+Screen readers in general offer tons of configuration options which can drastically influence their behaviour. We advise to stick to the defaults. The following configuration suggestions are known to be useful and safe though.
 
 ### Disabling mouse focus
 
@@ -142,11 +144,11 @@ You can disable that:
 
 ## Add-ons
 
-There is lots of add-ons for NVDA in the [NVDA Community Add-ons website (NVDA-Project.org)](https://addons.nvda-project.org/index.en.html).
+There are lots of add-ons for NVDA in the [NVDA Community Add-ons website (NVDA-Project.org)](https://addons.nvda-project.org/index.en.html).
 
 ### FocusHighlight
 
-This add-on visually indicates where NVDA's internal cursor currently is on the screen - an invaluable help for sighted users.
+This add-on visually indicates where NVDA's internal cursor currently is on the screen — an invaluable help for sighted users.
 
 ![The FocusHighlight add-on in action](_media/the-focushighlight-add-on-in-action.png)
 
@@ -156,7 +158,7 @@ There are several indications:
 - A red border is painted around the element where the focus cursor currently is.
     - The red border turns into blue when the element is being interacted with.
 
-If you are really curious and want to learn more about these different cursor types, skip ahead and read [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes).
+If you are really curious and want to learn more about these different cursor types, skip ahead and read [Screen readers' browse and focus modes](/knowledge/screen-readers/desktop/browse-focus-modes).
 
 [Download FocusHighlight add-on](http://addons.nvda-project.org/addons/focusHighlight.en.html) (stable version) and install it!
 

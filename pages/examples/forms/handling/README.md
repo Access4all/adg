@@ -1,12 +1,14 @@
 ---
 navigation_title: "Handling"
 position: 1
-changed: "2018-??-??"
+changed: "2018-06-15"
 ---
 
 # How to handle forms
 
 **Forms consist of many interactive elements. To work through and understand the examples in this chapter, besides knowing keyboard only usage, it is good to have a screen reader at hand and know how to handle it. In addition to this, there are some tools and bookmarklets that can be a huge help in your development workflow.**
+
+[[_TOC_]]
 
 ## Keyboard only handling
 
@@ -16,8 +18,8 @@ Forms offer a lot of keyboard interactivity, so please check out thoroughly [How
 
 For screen reader users, forms offer a lot of special functionalities. Here follows a quick nomination of the most important features. Besides this, check out:
 
-- [How to read websites using a desktop screen reader](/knowledge/desktop-screen-readers/reading-websites)
-- [How to interact with websites using a desktop screen reader](/knowledge/desktop-screen-readers/interacting-with-websites)
+- [How to read websites using a desktop screen reader](/knowledge/screen-readers/desktop/reading-websites)
+- [How to interact with websites using a desktop screen reader](/knowledge/screen-readers/desktop/interacting-with-websites)
 
 ### Quick navigation
 
@@ -57,14 +59,14 @@ In addition to this, grouped elements are indicated with their legend like `Hobb
 
 As an alternative to navigating through the form elements directly on the page, screen readers offer a form outline view.
 
-In the upcoming text, we are referring to the keys `NVDA` and `JAWS`. If you do not know about them, see [Screen readers are keyboard shortcut monsters](/knowledge/desktop-screen-readers/shortcut-monsters).
+In the upcoming text, we are referring to the keys `NVDA` and `JAWS`. If you do not know about them, see [The Insert Modifier Key](/knowledge/screen-readers/desktop/insert-modifier-key).
 
 #### Elements List (NVDA)
 
 NVDA's "Elements List" displays a page's form outline. To open it:
 
 - First make sure you are in browse mode.
-    - If unclear to you, see [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes).
+    - If unclear to you, see [Screen readers' browse and focus modes](/knowledge/screen-readers/desktop/browse-focus-modes).
 - Press `Alt + F` to select the "Form fields" area.
 - Press `Alt + B` to select the "Buttons" area.
 

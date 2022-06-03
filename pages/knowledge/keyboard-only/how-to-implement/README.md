@@ -1,12 +1,14 @@
 ---
 navigation_title: "How to implement"
-position: 4
+position: 3
 changed: "2018-05-30"
 ---
 
 # How to implement websites that are ready for keyboard only usage
 
 **Fortunately, to make sure a website is ready to be used by keyboard only, there is very little you need to consider. Still, a lot can go wrong if not paying attention, and bad old habits of some web developers seem to be hard to overcome.**
+
+[[_TOC_]]
 
 ## Standard functionality
 

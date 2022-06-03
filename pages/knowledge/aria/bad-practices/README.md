@@ -6,9 +6,11 @@ changed: "2018-04-12"
 
 # Bad ARIA practices
 
-**There are certain situations where ARIA is a good (and maybe the only) way to go. But if done wrong, usage of ARIA often leads to even worse accessibility. Especially accessibility novices tend to misuse ARIA to optimise smelly code. Here we explain some of the typical dos and do nots.**
+**There are certain situations where ARIA is a good (and maybe the only) way to go. But if done wrong, usage of ARIA often leads to even worse accessibility. Especially accessibility novices tend to misuse ARIA to "optimise" smelly code.**
 
-ARIA is often misunderstood as "general repair kit" for accessibility problems. Developers new to accessibility usually think that ARIA that can be used to fix accessibility problems for all sorts of bad HTML code. In general though, throwing some ARIA attributes into the mix of bad semantics does not leverage any problem. Most of the time, the exact opposite is the case.
+[[_TOC_]]
+
+ARIA is often misunderstood as "general repair kit" for accessibility problems. Developers new to accessibility usually think that ARIA can be used to fix accessibility problems for all sorts of bad HTML code. In general though, throwing some ARIA attributes into the mix of bad semantics does not leverage any problem (most of the time, the exact opposite is the case).
 
 ## Fixing broken semantics
 
@@ -72,7 +74,7 @@ To make the image accessible, it could be tempting now to simply add an ARIA lab
 
 If you are really curious and want to learn more about this, skip ahead and read [Labelling elements using aria-label and aria-labelledby](/examples/sensible-aria-usage/label-labelledby).
 
-While this certainly is an improvement over offering no label at all, it is not the technique of choice. This is du to several reasons, some very obvious ones outlined here:
+While this certainly is an improvement over offering no label at all, it is not the technique of choice. This is due to several reasons, some very obvious ones outlined here:
 
 - First of all, ARIA labels are only visible to screen readers.
     - But a text browser (unable to display background images) would still not be able to convey a link label to the user.
@@ -150,9 +152,3 @@ So in most cases this holds true: if you face a situation where a screen reader 
 Sometimes, developers try to hide focusable elements (or elements that contain focusable children) from screen readers using `aria-hidden`. This leads to unpredictable behaviour in many screen readers, as the browser still allows to focus such elements using the `Tab` key, but because of `aria-hidden` screen readers will not announce it.
 
 If you are really curious and want to learn more about this, skip ahead and read [Hiding elements from screen readers using aria-hidden](/examples/hiding-elements/from-screen-readers).
-
-The purpose of hiding something from a specific user group leads us to the next misuse of ARIA. Read on.
-
-## Conclusion: caution with ARIA!
-
-ARIA is an intriguing approach to make the web a more accessible place. In most situations though, it is neither needed (because there are usually better ways to achieve the same result) nor useful (because browser and screen reader support is still shaky).

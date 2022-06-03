@@ -8,6 +8,8 @@ changed: "2018-04-12"
 
 **Many users control a computer using keyboard only, so no mouse or similar pointing device is available. Thus, it's crucial that any software (including websites) is operable by keyboard only. This does not only benefit disabled users, but also power users.**
 
+[[_TOC_]]
+
 **Notice:** we are talking specifically about Windows operating systems here. For macOS, Linux, and others, there exist similar keyboard shortcuts.
 
 ## Why no mouse?
@@ -82,3 +84,11 @@ Most of the following shortcuts are pretty common to a wide set of similar appli
 - `Ctrl + F`: Find
 
 This list by far is not complete, and each application may offer very distinct additional shortcuts.
+
+## You could also be interested in
+
+Knowledge is power! Our guide has more to offer about:
+
+- [How to browse websites using a keyboard only](/knowledge/keyboard-only/browsing-websites/)
+- [How to implement websites that are ready for keyboard only usage](/knowledge/keyboard-only/how-to-implement/)
+- [Relevant combinations of screen readers and browsers](/knowledge/screen-readers/relevant-combinations/)

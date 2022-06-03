@@ -1,0 +1,7 @@
+[[redirects]]
+  from = "/introduction/contributing/"
+  to = "/contribute/"
+
+[[redirects]]
+  from = "/setup/windows/modern-ie"
+  to = "/setup/windows/virtual-machines"

@@ -1,12 +1,14 @@
 ---
 navigation_title: "Tooltips"
 position: 5
-changed: "2018-05-29"
+changed: "2020-04-30"
 ---
 
 # Tooltip widgets (or: screen tip, balloon)
 
 **Tooltips present information about a specific element in a small container on top of all other content. It is typically only displayed upon interacting with the related element in some way. Depending on the richness of its content, it is shown upon hovering or focusing the related element, or by manually toggling its visibility.**
+
+[[_TOC_]]
 
 Tooltips are well known as native controls in many operating systems, for example for unobtrusively displaying warnings or alerts.
 
@@ -19,7 +21,7 @@ The following requirements are based on well established best practices and [WAI
 Besides many other requirements, we want to stress out explicitly the following:
 
 - The meaning and usage of the tooltip must be clear.
-- The tooltip must be operable using both keyboard only and screen reader (with a reasonable interplay of default keys like `Tab`, `Enter`/`Space`, `Esc`, `Arrow` keys):
+- The tooltip must be operable using both keyboard only and screen readers (with a reasonable interplay of default keys like `Tab`, `Enter`/`Space`, `Esc`, `Arrow` keys), as well as mobile screen readers:
     - Simple tooltips should be displayed automatically.
     - Simple tooltips should be displayed manually.
 - The tooltip content must be accessible:

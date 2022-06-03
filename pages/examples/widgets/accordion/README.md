@@ -8,6 +8,8 @@ changed: "2018-05-29"
 
 **Accordions contain of a number of content panels, each of wich can be expanded or collapsed vertically by the user.**
 
+[[_TOC_]]
+
 Accordions help to save vertical space and prevent from visual noise. Some accordions allow only a single panel to be expanded at a time, others allow multiple.
 
 ![Accordion](_media/accordion.png)
@@ -23,6 +25,8 @@ In addition to the tablists' requirements, and besides many other requirements, 
 - Multiple slides can be visible (optional).
 
 ## Proofs of concept
+
+**Update 2020:** Due to the fact that Internet Explorer doesn't need to be supported anymore (see [Relevant combinations of screen readers and browsers](/knowledge/screen-readers/relevant-combinations)), we now favor the [Simple ARIA implementation](#simple-aria-implementation) (the one at the end of this page) over the preceding ones.
 
 ### Radio buttons implementation
 
@@ -57,7 +61,7 @@ Some interesting peculiarities:
 
 ### Simple ARIA implementation
 
-Instead of using radio buttons or checkboxes, it is relatively simple to create a custom carousel implementation with ARIA:
+Instead of using radio buttons or checkboxes, it is relatively simple to create a custom accordion implementation with ARIA:
 
 [Example](_examples/accordion-with-aria)
 

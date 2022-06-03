@@ -11,7 +11,19 @@ const plugins = {
   kbd: require('markdown-it-kbd'),
   samp: require('markdown-it-samp'),
   responsive: require('@gerhobbelt/markdown-it-responsive'),
-  replacements: require('markdown-it-replacements')
+  replacements: require('markdown-it-replacements'),
+  toc: require('markdown-it-toc-done-right')
+}
+
+const slugify = text => {
+  return text
+    .toString()
+    .toLowerCase()
+    .replace(/\s+/g, '-') // Replace spaces with -
+    .replace(/[^\w\-]+/g, '') // Remove all non-word chars
+    .replace(/\-\-+/g, '-') // Replace multiple - with single -
+    .replace(/^-+/, '') // Trim - from start of text
+    .replace(/-+$/, '') // Trim - from end of text
 }
 
 module.exports = rootDir => filePath => {
@@ -116,6 +128,30 @@ module.exports = rootDir => filePath => {
           })
         })
       })
+      .use(() => {
+        // Add unique IDs to each heading.
+        let uniqueIds = {}
+        markdown.core.ruler.push('manipulate_heading_anchor', state => {
+          for (let i = 0; i < state.tokens.length; i++) {
+            let token = state.tokens[i]
+            if (['heading_open'].includes(token.type)) {
+              if (token.tag !== 'h1') {
+                let heading_anchor = slugify(state.tokens[i + 1].content)
+                if (!uniqueIds[heading_anchor]) {
+                  uniqueIds[heading_anchor] = 0
+                }
+                uniqueIds[heading_anchor]++
+                if (uniqueIds[heading_anchor] > 1) {
+                  heading_anchor =
+                    heading_anchor + '-' + uniqueIds[heading_anchor]
+                }
+                token.attrSet('id', heading_anchor)
+                token.attrSet('class', 'js-anchor anchor-element')
+              }
+            }
+          }
+        })
+      })
       // .use(() => {
       //   // Currently unused: Increase heading levels by 1
       //   markdown.core.ruler.push('increase_heading_level', state => {
@@ -168,9 +204,9 @@ module.exports = rootDir => filePath => {
                       }</span>${
                         example.code.preview
                           ? `<img src="/${path.relative(
-                            path.join(rootDir, 'pages'),
-                            example.code.preview
-                          )}" alt="Preview">`
+                              path.join(rootDir, 'pages'),
+                              example.code.preview
+                            )}" alt="Preview">`
                           : ''
                       }`
                     }
@@ -234,7 +270,7 @@ module.exports = rootDir => filePath => {
 
             if (token.type === 'paragraph_open') {
               let lead = ''
-
+              token.attrJoin('class', 'lead')
               state.tokens[idx + 1].children.forEach(child => {
                 if (child.type === 'text') {
                   lead += child.content
@@ -249,6 +285,12 @@ module.exports = rootDir => filePath => {
             }
           })
         })
+      })
+      .use(plugins.toc, {
+        level: 2,
+        containerClass: 'toc',
+        listType: 'ul',
+        slugify
       })
   )
 }

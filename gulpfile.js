@@ -1,6 +1,5 @@
 const gulp = require('gulp')
 const browserSync = require('browser-sync').create()
-const argv = require('minimist')(process.argv.slice(2))
 const log = require('fancy-log')
 const colors = require('ansi-colors')
 const del = require('del')
@@ -11,6 +10,7 @@ const css = require('./gulp/css')
 const js = require('./gulp/javascript')
 const examples = require('./gulp/examples')
 const concat = require('gulp-concat')
+const changed = require('gulp-changed')
 
 function errorHandler (err) {
   log(err.plugin || '', colors.cyan(err.fileName), colors.red(err.message))
@@ -102,6 +102,7 @@ gulp.task(
       return gulp
         .src(
           [
+            // Static html files, e.g. `bad-iframe-with-interferring-headings/iframe.html`
             './pages/**/_examples/**/*.html',
             '!./pages/**/_examples/**/index.html'
           ],
@@ -109,6 +110,7 @@ gulp.task(
             base: './pages'
           }
         )
+        .pipe(changed('./dist'))
         .pipe(gulp.dest('./dist'))
     },
     function content () {
@@ -116,6 +118,7 @@ gulp.task(
         .src(['./pages/{,**/}_media/**/*', './pages/**/*.{png,jpg,mp3}'], {
           base: './pages'
         })
+        .pipe(changed('./dist'))
         .pipe(gulp.dest('./dist'))
     },
     function assets () {
@@ -123,6 +126,15 @@ gulp.task(
         .src(['./src/assets/img/**/*'], {
           base: './src/assets'
         })
+        .pipe(changed('./dist'))
+        .pipe(gulp.dest('./dist'))
+    },
+    function staticFiles () {
+      return gulp
+        .src(['./pages/**/_static/**/*'], {
+          base: './pages'
+        })
+        .pipe(changed('./dist'))
         .pipe(gulp.dest('./dist'))
     }
   )
@@ -137,6 +149,17 @@ gulp.task('media:resize', () => {
     .src(['./pages/{,**/}_media/**/*', './pages/**/_examples/**/*.png'], {
       base: './pages'
     })
+    .pipe(
+      changed('./dist', {
+        transformPath: newPath =>
+          path.join(
+            path.dirname(newPath),
+            path.basename(newPath, path.extname(newPath)) +
+              '-large' +
+              path.extname(newPath)
+          )
+      })
+    )
     .pipe(
       resize({
         sizes: [
@@ -188,8 +211,9 @@ gulp.task('sprite', () => {
         }
       })
     )
+
   const imgStream = data.img.pipe(gulp.dest('./src/assets/img/icons'))
-  const cssStream = data.css.pipe(gulp.dest('./tmp'))
+  const cssStream = data.css.pipe(changed('./tmp')).pipe(gulp.dest('./tmp'))
 
   return merge(imgStream, cssStream)
 })
@@ -201,43 +225,62 @@ gulp.task('clean', () => del('./dist'))
 gulp.task(
   'build',
   gulp.series(
-    'clean',
     'sprite',
     gulp.parallel('css', 'js', 'media', 'html', 'html:examples')
   )
 )
 
+gulp.task('rebuild', gulp.series('clean', 'build'))
+
 gulp.task(
   'default',
-  gulp.series(
-    function setWatchEnv (cb) {
-      argv.watch = true
+  gulp.series('build', function serveAndWatch () {
+    browserSync.init({
+      server: {
+        baseDir: './dist'
+      }
+    })
 
-      return cb()
-    },
-    'build',
-    function serveAndWatch () {
-      browserSync.init({
-        server: {
-          baseDir: './dist'
-        }
-      })
-
-      gulp.watch(
-        ['./src/assets/css/**/*.scss', './src/components/**/*.scss'],
-        gulp.series('css')
-      )
-      gulp.watch(
-        [
-          './pages/**/*.md',
-          './src/templates/**/*.hbs',
-          './src/components/**/*.hbs',
-          './gulp/helpers/*'
-        ],
-        gulp.series('html')
-      )
-      gulp.watch(['./pages/**/example.*'], gulp.series('html:examples'))
-      gulp.watch(['./pages/{,**/}_media/**/*'], gulp.series('media'))
-    }
-  )
+    gulp.watch(
+      ['./src/assets/css/**/*.scss', './src/components/**/*.scss'],
+      gulp.series('css')
+    )
+    gulp.watch(
+      [
+        './pages/**/*.md',
+        './src/templates/**/*.hbs',
+        './src/components/**/*.hbs',
+        './gulp/helpers/*',
+        // Example content which is embedded in HTML pages
+        './pages/**/_examples/**/*.html',
+        './pages/**/_examples/**/*.js',
+        './pages/**/_examples/**/*.css'
+      ],
+      gulp.series('html')
+    )
+    gulp.watch(['./pages/**/_examples/**/*'], gulp.series('html:examples'))
+    gulp.watch(
+      [
+        // demo
+        './pages/**/_examples/**/*.html',
+        '!./pages/**/_examples/**/index.html',
+        // content
+        './pages/{,**/}_media/**/*',
+        './pages/**/*.{png,jpg,mp3}',
+        // assets
+        './src/assets/img/**/*',
+        // static
+        './pages/{,**/}_static/**/*'
+      ],
+      gulp.series('media:copy')
+    )
+    gulp.watch(
+      ['./pages/{,**/}_media/**/*', './pages/**/_examples/**/*.png'],
+      gulp.series('media:resize')
+    )
+    gulp.watch(
+      ['./src/assets/img/icons/**/*.png', '!./src/assets/img/icons/*.png'],
+      gulp.series('sprite')
+    )
+  })
 )

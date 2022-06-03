@@ -8,6 +8,8 @@ changed: "2018-05-29"
 
 **ARIA provides an attribute which allows to describe the expandability status of an element. It works pretty uniformly in modern browsers and screen readers, and as such is a good solution for many situations where an element's visibility should can be toggled.**
 
+[[_TOC_]]
+
 ## Background
 
 In modern web applications there are often situations where the user needs to be able to toggle an element's visibility.
@@ -58,7 +60,7 @@ We do not recommend to use `aria-haspopup` as it does not provide any additional
 
 As shown above, if the button's `aria-expanded` value is changed using JavaScript while it is focused, screen readers announce the change. This is pretty exceptional, as most other changes to an element are not detected by screen readers (and as such not announced).
 
-In line with the requirement that every user interaction must result in an adequate feedback (see [How to implement websites that are ready for screen reader usage](/knowledge/desktop-screen-readers/how-to-implement)), the `aria-expanded` attribute is really useful with describing elements like:
+In line with the requirement that every user interaction must result in an adequate feedback (see [How to implement websites that are ready for screen reader usage](/knowledge/screen-readers/how-to-implement)), the `aria-expanded` attribute is really useful with describing elements like:
 
 - Tooltips, see [Tooltip widgets (or: screen tip, balloon)](/examples/widgets/tooltips)
 - Accordions, see [Accordions](/examples/widgets/accordion)
@@ -87,3 +89,12 @@ While this is even more robust than using `aria-expanded`, it may feel out of pl
 ## Conclusion
 
 If you need to describe the expandability status of interactive elements, `aria-expanded` is one of the few ARIA attributes we truly recommend for general use.
+
+## You could be also interested in 
+
+Knowledge is power! Our guide has more to offer about:
+
+- [The purpose behind the WAI-ARIA standard](/knowledge/aria/purpose)
+- [Bad ARIA practices](/knowledge/aria/bad-practices)
+- [Sensible usage of ARIA roles and attributes](/examples/sensible-aria-usage)
+

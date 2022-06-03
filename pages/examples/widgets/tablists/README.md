@@ -1,12 +1,14 @@
 ---
 navigation_title: "Tablists"
 position: 6
-changed: "2018-05-29"
+changed: "2020-04-30"
 ---
 
 # Tablist widgets (or: tab panels, tabs)
 
 **Tablists help to split up a page's content into smaller and thus more digestible parts. Each part is minimally represented in a list of names, by which their visibility can be enabled one at a time. Tablists can be thought of as small page fragments inside a page.**
+
+[[_TOC_]]
 
 Tablists are well known as native controls in many operating systems: a list of controls (usually on top of the element) allows to toggle the visibility of corresponding panels. Only a single control can be active at a time, so exactly one panel is visible and all others are hidden.
 
@@ -23,7 +25,7 @@ Besides many other requirements, we want to stress out explicitly the following:
 - The meaning and usage of the tablist must be clear.
 - The state of each tab control must be perceivable ("active/inactive" or similar).
 - Proper feedback must be given upon activating a tab control ("active" or similar).
-- The tablist must be operable using both keyboard only and screen reader (with a reasonable interplay of default keys like `Tab`, `Enter`/`Space`, `Esc`, `Arrow` keys).
+- The tablist must be operable using both keyboard only and screen readers (with a reasonable interplay of default keys like `Tab`, `Enter`/`Space`, `Esc`, `Arrow` keys), as well as mobile screen readers.
 - The panel contents must be easily accessible using both keyboard only and screen reader.
 
 ### Similarities with accordions and carousels

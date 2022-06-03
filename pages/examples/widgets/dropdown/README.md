@@ -1,12 +1,14 @@
 ---
 navigation_title: "Dropdown"
 position: 11
-changed: "2018-05-29"
+changed: "2020-04-30"
 ---
 
 # Dropdown widget (or: menu, pulldown)
 
 **Dropdowns allow to toggle an element's visibility. They usually contain some sort of navigation, be it a bare list of links, or more complex elements. They can offer one to multiple nesting levels.**
+
+[[_TOC_]]
 
 ![Dropdown](_media/dropdown.png)
 
@@ -19,7 +21,7 @@ The following requirements are based on well established best practices and [WAI
 Besides many other requirements, we want to stress out explicitly the following:
 
 - The meaning and usage of the dropdown must be clear.
-- The dropdown must be operable using both keyboard only and screen reader (with a reasonable interplay of default keys like `Tab`, `Enter`/`Space`, `Esc`, `Arrow` keys).
+- The dropdown must be operable using both keyboard only and screen readers (with a reasonable interplay of default keys like `Tab`, `Enter`/`Space`, `Esc`, `Arrow` keys), as well as mobile screen readers.
 - Proper feedback must be given upon opening/closing a dropdown.
 
 By the way, dropdowns are very similar to:

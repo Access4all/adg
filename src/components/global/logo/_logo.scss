@@ -7,18 +7,36 @@
 	text-decoration: none;
   overflow: hidden;
   display: block;
+
+  @media screen and (-ms-high-contrast: active) {
+    color: ButtonText;
+  }
+
   &:hover {
     color: var(--theme-color-dark);
+
+    @media screen and (-ms-high-contrast: active) {
+      color: ButtonText;
+    }
   }
 
   @include btn-focus;
+
+  &:focus {
+    @media screen and (-ms-high-contrast: active) {
+      color: ButtonText;
+    }
+  }
 
   .logo-title,
   .logo-img {
     vertical-align: middle;
   }
+
   .logo-img {
     display: inline-block;
+    width: 33px;
+    height: 44px;
   }
 }
 

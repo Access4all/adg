@@ -22,10 +22,10 @@ export default () => {
     })
   })
 
-  contextTrigger.add('.js-theme', function () {
+  contextTrigger.add('.js-anchor', function () {
     var elem = this
 
-    require(['./modules/content/Theme'], function (Module) {
+    require(['./modules/content/Anchor'], function (Module) {
       if (Module.default) {
         ModuleManager.connect(Module.default, elem)
       } else {
@@ -48,7 +48,7 @@ export default () => {
 
   contextTrigger.validate('body')
 
-  console.log('Selecting components took: ', new Date() - time, 'ms')
+  //console.log('Selecting components took: ', new Date() - time, 'ms')
 
   return ModuleManager
 }

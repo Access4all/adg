@@ -1,0 +1,38 @@
+.toc {
+  margin-top: 0;
+  margin-bottom: 5em;
+
+  border-left: 2px solid var(--theme-color-dark);
+  @include rem(padding-left, 20px);
+  font-size: 0.9em;
+
+  @media (max-width: $mq-tablet) {
+    margin-top: -0.5em;
+  }
+
+  @media (max-width: $mq-mobile) {
+    margin-top: 0;
+  }
+
+  h1 + & {
+    margin-bottom: 4.5em;
+
+    @media (max-width: $mq-tablet) {
+      margin-top: 0;
+    }
+  }
+
+  &:empty {
+    display: none;
+  }
+
+  &::before {
+    content: 'On this page';
+    display: block;
+    @include font-weight(bold);
+  }
+
+  ul ul {
+    margin-bottom: 0;
+  }
+}

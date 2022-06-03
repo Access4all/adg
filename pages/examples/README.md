@@ -8,6 +8,8 @@ changed: "2018-04-02"
 
 **There often exist various approaches to solving an accessibility requirement, but usually one specific solution stands out clearly. The chapters in this 4th part of our guide, the Examples part, contain our collection of such rock-solid and inspiring solutions. They are available as real-life code examples (ready for copy&paste), and as such can be executed and played with directly in the browser.**
 
+[[_TOC_]]
+
 ## How to go through this part
 
 First of all, before you continue reading, be sure you have gone through the previous parts already:
@@ -43,7 +45,7 @@ All our examples are heavily tested on accessibility. The compatibility results 
 There are results of the currently relevant assistive devices:
 
 - Keyboard only (see [Introduction to keyboard only usage](/knowledge/keyboard-only/)).
-- [Relevant combinations of screen readers and browsers](/knowledge/desktop-screen-readers/relevant-combos/).
+- [Relevant combinations of screen readers and browsers](/knowledge/screen-readers/relevant-combinations/).
 
 #### Special results
 
@@ -68,7 +70,7 @@ We have conducted additional compatibility tests, all with assistive devices tha
     - Narrator with Edge
 - Mobile screen readers:
     - VoiceOver/iOS with Safari
-    - Talkback with Chrome
+    - TalkBack with Chrome
 
 While some of these devices still show problems, the general outlook confirms that our examples are as future-proof as possible.
 

@@ -8,11 +8,13 @@ changed: "2018-04-06"
 
 **The PDF Accessibility Checker (PAC) provides a fast way to test the accessibility of PDF files. On one hand, it checks whether the PDF/UA standard is met. On the other hand, it offers a great preview feature that visually displays the document similar to the way a screen reader perceives it, making it easy to spot problems in both sequence and meaning of elements.**
 
+[[_TOC_]]
+
 ![PAC icon](_media/pac-icon.png)
 
 ## Installation
 
-[Download PDF Accessibility Checker](http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html).
+[Download PDF Accessibility Checker](https://www.access-for-all.ch/en/pdf-accessibility-checker.html).
 
 As it does not have an installer, you can simply extract it to a folder of your liking.
 

@@ -8,6 +8,8 @@ changed: "2018-05-14"
 
 **ARIA provides an attribute which allows to attach other elements as descriptions to an element. They work pretty non-uniformly in modern browsers and screen readers, and as such they must be used with extreme caution.**
 
+[[_TOC_]]
+
 ## Background
 
 In addition to an element's label (see [Labelling elements using aria-label and aria-labelledby](/examples/sensible-aria-usage/label-labelledby)), screen readers can announce a referenced element (or more than one) as its description.
@@ -69,7 +71,7 @@ The only case where we truly recommend the usage of `aria-describedby`, is to at
 
 For this, the information itself must be visible (and as such discoverable also in browse mode) and as close as possible to the element it describes.
 
-If instead you need to attach information that itself is invisible, you better use visually hidden text (see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually)). For an example, see [Indicating form controls as required using asterisks (*)](/examples/forms/required-).
+If instead you need to attach information that itself is invisible, you better use visually hidden text (see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually)). For an example, see [Indicating form controls as required using asterisks (*)](/examples/forms/required).
 
 ## Conclusion
 

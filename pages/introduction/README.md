@@ -12,4 +12,4 @@ changed: "2018-06-06"
 
 This part gives you a broad picture of how to use the Accessibility Developer Guide either as a comprehensive tutorial for learning accessibility, as well as a quick reference for your daily development business. As the guide is Open Source, we welcome contributions from the community, and here we explain how to accomplish that.
 
-This part also provides information about the so called «Accessibility Alliance», consisting of the people and organisations behind this initiative, and how to contact and join them.
+This part also provides information about the so-called «Accessibility Alliance», consisting of the people and organisations behind this initiative, and how to contact and join them.

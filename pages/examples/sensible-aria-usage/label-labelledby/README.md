@@ -8,6 +8,8 @@ changed: "2018-05-14"
 
 **ARIA provides attributes which override the accessible label of an element. As they are treated differently in modern browsers and screen readers, they must be used with caution. They also have some noticeable side effects. There exist alternative techniques that are much more robust.**
 
+[[_TOC_]]
+
 ## Background
 
 How an element is announced by a screen reader is usually determined by its content. For example, the following link's label is "Google":
@@ -59,7 +61,7 @@ Using `aria-labelledby`, an element's label can be set by referencing the ID of 
 By the way, elements hidden using CSS can still be referenced:
 
 ```css
-##bing {
+#bing {
   display: none;
 }
 ```

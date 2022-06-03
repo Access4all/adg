@@ -1,12 +1,14 @@
 ---
 navigation_title: "Autosuggest"
 position: 9
-changed: "2018-05-30"
+changed: "2020-04-30"
 ---
 
 # Autosuggest widget (or: autocomplete, lookahead, typeahead)
 
 **Autosuggests offer a number of possible values, usually presented as some sort of a dropdown element, allowing to select one. By entering a filter string, the possible values are filtered.**
+
+[[_TOC_]]
 
 Best known from search fields (like [Google](https://www.google.com) or [YouTube](https://www.youtube.com)), autocompletes immediately offer suggestions based on the user's input.
 
@@ -23,7 +25,7 @@ Besides many other requirements, we want to stress out explicitly the following:
 - The meaning and usage of the autosuggest must be clear.
 - If possible, the total number of suggestions should be perceivable ("3 suggestions in total" or similar).
 - Proper feedback must be given upon entering a filter ("2 suggestions available for X" or similar).
-- The autosuggest must be operable using both keyboard only and screen reader (with a reasonable interplay of default keys like `Tab`, `Enter`/`Space`, `Esc`, `Arrow` keys).
+- The autosuggest must be operable using both keyboard only and desktop screen readers (with a reasonable interplay of default keys like `Tab`, `Enter`/`Space`, `Esc`, `Arrow` keys), as well as mobile screen readers.
 
 ## Proof of concept
 
@@ -54,7 +56,7 @@ Some interesting peculiarities:
 
 ### JAWS' auto forms mode
 
-As we know from [Screen readers' browse and focus modes](/knowledge/desktop-screen-readers/browse-focus-modes), JAWS' "Auto Forms Mode" can lead to leaving a text input upon pressing `Up` and `Down`.
+As we know from [Screen readers' browse and focus modes](/knowledge/screen-readers/desktop/browse-focus-modes), JAWS' "Auto Forms Mode" can lead to leaving a text input upon pressing `Up` and `Down`.
 
 In our autosuggest widget we have bound these keys to toggle through the displayed results. And although preventing the default action upon pressing those keys (using JavaScript's `event.preventDefault()`), JAWS (sometimes) does not respect this and leaves the text input.
 
