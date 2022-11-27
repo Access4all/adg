@@ -1,12 +1,60 @@
 *:focus {
-  outline: 2px dotted #000;
+  outline: 2px dotted black;
 }
 
-#first_entry,
-#second_entry {
-  display: none;
+.visually-hidden {
+  position: absolute;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
 }
 
-[data-adg-accordion] > a {
+.accordion button[aria-controls] {
+  appearance: none;
+  all: inherit;
   display: block;
+  box-sizing: border-box;
+  margin: 0 0 -1px 0;
+  border: 1px solid black;
+  padding: 4px 10px;
+  width: 100%;
+  background-color: lightyellow;
+  cursor: pointer;
+}
+
+.accordion button[aria-controls]:hover {
+  text-decoration: underline;
+}
+
+.accordion *:focus,
+.accordion button[aria-controls]:focus {
+  outline: 2px dotted red;
+  outline-offset: 2px;
+}
+
+.accordion button[aria-controls]::before {
+  content: "-";
+  display: inline-block;
+  width: 0.75em;
+  font-weight: normal;
+}
+
+.accordion button[aria-controls][aria-expanded=false]::before {
+  content: "+";
+}
+
+.header {
+  margin-bottom: 0;
+}
+
+.panel {
+  border: 1px solid black;
+  border-top-color: lightyellow;
+  padding: 0 0 0 10px;
+  background-color: lightyellow;
 }

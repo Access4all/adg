@@ -115,10 +115,10 @@ function measureStop (name, element) {
 }
 
 setTimeout(function () {
-  console.log('Module init took ' + totalTime.toFixed(1) + ' ms')
+  //console.log('Module init took ' + totalTime.toFixed(1) + ' ms')
 
   if (console.table && measureTable.length > 0) {
-    console.table(measureTable)
+    //console.table(measureTable)
   }
   measureTable = []
 }, 5000)

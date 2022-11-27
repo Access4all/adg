@@ -1,29 +1,74 @@
-<button>Focusable element before</button>
-<div data-adg-accordion="true">
-  <h2 data-adg-accordion-target="first_entry">
-    This is the first accordion entry
+<p>
+  <button>Focusable element before</button>
+</p>
+<div class="accordion" data-adg-accordion="my-accordion">
+  <h2 class="header">
+    <button aria-controls="first_item"><span class="visually-hidden">Show panel </span>Rose</button>
   </h2>
-  <div id="first_entry">
+  <section class="panel" id="first_item">
     <p>
-      This is some content of the first entry.
+      A rose is a woody perennial flowering plant of the genus Rosa, in the family Rosaceae, or the flower it bears. There are over three hundred species and tens of thousands of cultivars.
+    </p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Rosa_rubiginosa_1.jpg/259px-Rosa_rubiginosa_1.jpg" alt="Rosa rubiginosa by Stan Shebs (wikimedia.org)" width="200">
+    <h3>
+      Botany
+    </h3>
+    <p>
+      The flowers of most species have five petals, with the exception of Rosa sericea, which usually has only four. Each petal is divided into two distinct lobes and is usually white or pink, though in a few species yellow or red. Beneath the petals are five sepals (or in the case of some Rosa sericea, four).
     </p>
     <p>
-      And some <a href="#">link</a>! Nice, isn't it?
+      Learn more: <a href="https://en.wikipedia.org/wiki/Rose" target="_blank">Rose (wikipedia.org)</a>
     </p>
-  </div>
-  <h2 data-adg-accordion-target="second_entry">
-    This is the second accordion entry
+    <p>
+      <label for="first_input"><strong>Name your favorite rose:</strong></label>
+      <input id="first_input" type="text" />
+    </p>
+  </section>
+  <h2 class="header">
+    <button aria-controls="second_item"><span class="visually-hidden">Show panel </span>Tulip</button>
   </h2>
-  <div id="second_entry">
+  <section class="panel" id="second_item">
     <p>
-      This is some cocntent of the second entry.
+      Tulips are a genus of spring-blooming perennial herbaceous bulbiferous geophytes. The flowers are usually large, showy and brightly colored, generally red, pink, yellow, or white.
+    </p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/The_Dallas_Arboretum_and_Botanical_Garden.jpg/320px-The_Dallas_Arboretum_and_Botanical_Garden.jpg" alt="Red and pink tulips by Inuyas (wikimedia.org)" width="200">
+    <h3>
+      Description
+    </h3>
+    <p>
+      The tulip’s flowers are usually large and are actinomorphic (radially symmetric) and hermaphrodite (contain both male and female characteristics), generally erect, or more rarely pendulous, and are arranged more usually as a single terminal flower. In structure, the flower is generally cup or star shaped.
     </p>
     <p>
-      <label for="some_input">Some input: </label><input id="some_input" type="text" />
+      Learn more: <a href="https://en.wikipedia.org/wiki/Tulip" target="_blank">Tulip (wikipedia.org)</a>
     </p>
     <p>
-      And finally a last paragraph.
+      <label for="second_input"><strong>Name your favorite tulip:</strong></label>
+      <input id="second_input" type="text" />
     </p>
-  </div>
+  </section>
+  <h2 class="header">
+    <button aria-controls="third_item"><span class="visually-hidden">Show panel </span>Sunflower</button>
+  </h2>
+  <section class="panel" id="third_item">
+    <p>
+      Helianthus annuus, the common sunflower, is a large annual forb of the genus Helianthus grown as a crop for its edible oil and edible fruits. The name sunflower may derive from the flower’s head’s shape, which resembles the sun.
+    </p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sunflower_sky_backdrop.jpg/217px-Sunflower_sky_backdrop.jpg" alt="Sunflower against a blue sky by Fir0002 (wikimedia.org)" width="200">
+    <h3>
+      Description
+    </h3>
+    <p>
+      The plant has an erect rough-hairy stem, reaching typical heights of 3 metres. The tallest sunflower on record achieved 9.17 metres. Sunflower leaves are broad, coarsely toothed, rough and mostly alternate. What is often called the "flower" of the sunflower is actually a "flower head" or pseudanthium of numerous small individual five-petaled flowers. The outer flowers, which resemble petals, are called ray flowers.
+    </p>
+    <p>
+      Learn more: <a href="https://en.wikipedia.org/wiki/Helianthus_annuus" target="_blank">Sunflower (wikipedia.org)</a>
+    </p>
+    <p>
+      <label for="third_input"><strong>Name your favorite sunflower:</strong></label>
+      <input id="third_input" type="text" />
+    </p>
+  </section>
 </div>
-<button>Focusable element after</button>
+<p>
+  <button>Focusable element after</button>
+</p>
