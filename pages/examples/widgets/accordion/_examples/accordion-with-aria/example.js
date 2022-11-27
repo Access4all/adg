@@ -1,42 +1,63 @@
-;(function () {
-  var AdgAccordion
-
-  AdgAccordion = class AdgAccordion {
-    constructor (el) {
-      this.$el = $(el)
-      this.initHeadings()
-      this.initTogglers()
-    }
-
-    initHeadings () {
-      return (this.$headings = this.$el.find('[data-adg-accordion-target]'))
-    }
-
-    initTogglers () {
-      return this.$headings.each(function () {
-        var $container, $heading, $toggler, targetId
-        $heading = $(this)
-        $toggler = $heading
-          .wrap("<a href='#' aria-expanded='false'></a>")
-          .parent()
-        targetId = $heading.attr('data-adg-accordion-target')
-        $container = $('#' + targetId)
-        $container.hide()
-        return $toggler.click(e => {
-          $container.toggle()
-          $toggler.attr(
-            'aria-expanded',
-            $toggler.attr('aria-expanded') === 'false' ? 'true' : 'false'
-          )
-          return e.preventDefault()
-        })
-      })
-    }
+class AdgAccordion {
+  constructor (el) {
+    this.element = el
+    this.triggers = this.element.querySelectorAll('[aria-controls]')
+    this.initTriggers()
   }
 
-  $(document).ready(function () {
-    return $('[data-adg-accordion]').each(function () {
-      return new AdgAccordion(this)
+  initTriggers () {
+    this.triggers.forEach((trigger, triggerIndex, triggerArray) => {
+      const panelId = trigger.getAttribute('aria-controls')
+      const panel = document.getElementById(panelId)
+
+      this.hide(panel, trigger)
+
+      trigger.addEventListener('click', () => {
+        if (panel.hidden) {
+          this.show(panel, trigger)
+        } else {
+          this.hide(panel, trigger)
+        }
+      })
+
+      trigger.addEventListener('keydown', event => {
+        if (trigger === document.activeElement) {
+          let focusTarget
+          switch (event.keyCode || event.key) {
+            case 38:
+            case 'Up':
+            case 'ArrowUp':
+              focusTarget =
+                triggerIndex > 0 ? triggerIndex - 1 : triggerArray.length - 1
+              break
+            case 40:
+            case 'Down':
+            case 'ArrowDown':
+              focusTarget =
+                triggerIndex < triggerArray.length - 1 ? triggerIndex + 1 : 0
+              break
+          }
+          if (triggerArray[focusTarget]) {
+            triggerArray[focusTarget].focus()
+          }
+        }
+      })
     })
-  })
-}.call(this))
+  }
+
+  show (panel, trigger) {
+    panel.hidden = false
+    trigger.setAttribute('aria-expanded', 'true')
+  }
+
+  hide (panel, trigger) {
+    panel.hidden = true
+    trigger.setAttribute('aria-expanded', 'false')
+  }
+}
+
+const accordions = []
+
+document
+  .querySelectorAll('[data-adg-accordion]')
+  .forEach(element => accordions.push(new AdgAccordion(element)))

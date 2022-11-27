@@ -1,25 +1,37 @@
-;(function () {
-  $(document).ready(function () {
-    return $("input[type='checkbox']").each((i, element) => {
-      var $checkbox
-      $checkbox = $(element)
+class AdgCheckboxAccordion {
+  constructor (el) {
+    this.element = el
+    this.triggers = this.element.querySelectorAll('.trigger')
+    this.initTriggers()
+  }
 
-      // Make Enter select/deselect checkbox (instead of submitting form)
-      $checkbox.keypress(function (e) {
-        if ((e.keyCode ? e.keyCode : e.which) === 13) {
-          return $(this).trigger('click')
+  initTriggers () {
+    this.triggers.forEach(trigger => {
+      const panelId = `${trigger.id}_panel`
+      const panel = document.getElementById(panelId)
+      this.updatePanelVisibility(panel, trigger)
+
+      trigger.addEventListener('keydown', event => {
+        if (event.keyCode === 13 || event.key === 'Enter') {
+          event.preventDefault()
+          trigger.checked = !trigger.checked
+          this.updatePanelVisibility(panel, trigger)
         }
       })
-      return $checkbox.change(function () {
-        var $panel, panel_id
-        panel_id = `#${$checkbox.attr('id')}_panel`
-        $panel = $(panel_id)
-        if ($checkbox.is(':checked')) {
-          return $panel.show()
-        } else {
-          return $panel.hide()
-        }
+
+      trigger.addEventListener('change', () => {
+        this.updatePanelVisibility(panel, trigger)
       })
     })
-  })
-}.call(this))
+  }
+
+  updatePanelVisibility (panel, trigger) {
+    panel.style.display = trigger.checked === true ? 'block' : 'none'
+  }
+}
+
+const accordions = []
+
+document
+  .querySelectorAll('[data-adg-checkbox-accordion]')
+  .forEach(element => accordions.push(new AdgCheckboxAccordion(element)))
