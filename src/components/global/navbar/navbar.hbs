@@ -1,19 +1,20 @@
-<input class="navbar--toggle--input" type="checkbox" id="navbar-toggle" />
-<nav class="navbar">
+
+<nav class="navbar js-mainnav">
   <h1 class="visuallyhidden">Navigation</h1>
-  <label class="navbar--toggle" for="navbar-toggle" title="Open/Close Menu">
-    <span class="navbar--toggle--inner">
-      <span class="navbar--toggle--line"></span>
-      <span class="navbar--toggle--line"></span>
-      <span class="navbar--toggle--line"></span>
-    </span>
-    <span class="visuallyhidden">Open/Close Menu</span>
-  </label>
   <div class="navbar--container">
     <div class="navbar--logo">
       {{> "global/logo/logo"}}
     </div>
-    <div class="navbar--inner">
+
+    <button class="navbar--toggle js-mainnav-toggle" title="Menu" type="button" aria-expaned="false" aria-controls="navbar-inner">
+      <span class="navbar--toggle--inner">
+        <span class="navbar--toggle--line"></span>
+        <span class="navbar--toggle--line"></span>
+        <span class="navbar--toggle--line"></span>
+      </span>
+      <span class="visuallyhidden">Menu</span>
+    </button>
+    <div class="navbar--inner" id="navbar-inner">
   	  <div class="navbar--nav">
         {{> "global/search/search"}}
   	    <ul class="navbar--nav--list nav-list nav-list-main">

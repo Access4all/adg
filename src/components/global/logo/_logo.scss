@@ -20,10 +20,9 @@
     }
   }
 
-  &:focus {
-    outline: 2px dotted var(--theme-color-dark);
-    outline-offset: 2px;
+  @include btn-focus;
 
+  &:focus {
     @media screen and (-ms-high-contrast: active) {
       color: ButtonText;
     }

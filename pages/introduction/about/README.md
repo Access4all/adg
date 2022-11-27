@@ -28,13 +28,13 @@ For more information, see [www.access-for-all.ch](http://access-for-all.ch/).
 
 On the other side of the «Accessibility Alliance», there are several acclaimed web agencies. They provided the technical solution and visual design for the guide, gave support in marketing it, etc.
 
-### Hinderling Volkart
+### Dept
 
-![Hinderling Volkart logo](_media/hv.png){.agency-logo}
+![Dept logo](_media/dept.png){.agency-logo}
 
 > Until now, web developers have lacked a good, practical reference on accessibility. It doesn't need more rules, but more guidance to make the web usable for everyone. The Accessibility Developer Guide will provide access where hardly anyone has been before, with practical examples, tested by experts and supported by developers. From the very beginning we were convinced of the purpose of this commitment and are proud to be able to contribute a small part to it.
 
-**Severin Klaus**, Frontend Leader, [Hinderling Volkart](https://www.hinderlingvolkart.com/).
+**Severin Klaus**, Frontend Leader, [Dept](https://www.deptagency.com/).
 
 ### UNIC
 
@@ -62,7 +62,7 @@ On the other side of the «Accessibility Alliance», there are several acclaimed
 
 ### Zeix
 
-![Hinderling Volkart logo](_media/zeix.png){.agency-logo}
+![Zeix logo](_media/zeix.png){.agency-logo}
 
 > The Accessibility Developer Guide allows us to easily share knowledge within the team and build on reliable best practices. This enables us to design, create and program websites that all people like to use.
 
@@ -96,7 +96,7 @@ Besides the diligent online community, a group of people regularly physically ga
 - **Esther Brunner**, web developer, Zeix AG.
 - **Graciela Schütz**, senior UX architect, UNIC AG.
 - **Joshua Muheim**, web developer & accessibility expert, «Access for all».
-- **Jürgen Rudigier**, frontend developer, Hinderling Volkart.
+- **Jürgen Rudigier**, frontend developer, Dept.
 - **René Stalder**, web developer, Nothing AG.
 - **Thomas Jaggi**, web developer, former UNIC AG.
 
@@ -105,7 +105,7 @@ Former contributors:
 - **Anton Bolfing**, former accessibility expert at «Access for all».
 - **Bernhard Heinser**, former CEO at «Access for all».
 - **Markus Graf**, web developer.
-- **Severin Klaus**, web developer, Hinderling Volkart.
+- **Severin Klaus**, web developer, Dept.
 
 ### Testing staff
 

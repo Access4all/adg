@@ -30,10 +30,7 @@
  a {
     text-decoration: underline;
 
-    &:focus {
-      outline: 2px dotted var(--theme-color-dark);
-      outline-offset: 2px;
-    }
+    @include btn-focus;
 
     &:hover, &:focus {
       color: var(--theme-color-dark);
@@ -68,6 +65,7 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   margin: -$gutter / 2;
+  align-items: center;
 }
 
 .footer--agency {
