@@ -26,7 +26,7 @@ To be safe, please make sure you have configured the start/stop shortcut (see be
 
 ### Shortcut
 
-The best way to toggle VoiceOver/iOS is to assign it to the accessibility shortcut. Go to `Settings` -> `Accessibility` -> `Shortcut` and select `VoiceOver`. If you are running iOS 12 or older you will find it under `Settings` -> `General` -> `Accessibility` -> `Shortcut`.
+The best way to toggle VoiceOver/iOS is to assign it to the accessibility shortcut. Go to `Settings` -> `Accessibility` -> `Accessibility Shortcut` and select `VoiceOver`. If you are running iOS 12 or older you will find it under `Settings` -> `General` -> `Accessibility` -> `Shortcut`.
 
 Now simply triple tap (press three times in rapid succession) the Home button to turn VoiceOver on or off. VoiceOver says "VoiceOver on" or "VoiceOver off" according to its status.
 
