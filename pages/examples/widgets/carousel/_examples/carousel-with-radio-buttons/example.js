@@ -46,6 +46,7 @@ class AdgCarousel {
         this.element.querySelectorAll(`[name='${currentRadioName}']`).forEach((radio) => {
           const panelId = `#${radio.getAttribute('id')}_panel`
           const panel = this.element.querySelector(panelId)
+
           if (currentPanelId === panelId) {
             panel.style.display = ''
           } else {
@@ -64,16 +65,18 @@ class AdgCarousel {
     this.autoplayControl.addEventListener('click', (event) => {
       const toggle = event.target
       const autoplayState = toggle.getAttribute('aria-pressed') !== 'true' ? 'true' : 'false'
+
       toggle.setAttribute('aria-pressed', autoplayState)
     })
   }
 
   pushAlertMessage (text) {
-    clearTimeout(this.alertsTimeoutId)
     const alert = document.createElement('div')
+
     alert.setAttribute('role', 'alert')
     alert.append(text)
     this.alertsContainer.append(alert)
+    clearTimeout(this.alertsTimeoutId)
     this.alertsTimeoutId = setTimeout(() => { this.alertsContainer.replaceChildren() }, 2000)
   }
 }
