@@ -45,6 +45,6 @@ You can also contribute by spreading awareness about the topic to your fellow de
 [create an issue on github]: https://github.com/Access4all/adg/issues
 [access4all/adg (github.com)]: https://github.com/Access4all/adg
 [access4all/adg/contributing.md (github.com)]: https://github.com/Access4all/adg/blob/master/CONTRIBUTING.md
-[join our meetup.com group]: https://www.meetup.com/Accessibility-Developer-Guide-ADG/
+[join our meetup.com group]: https://www.meetup.com/accessibility-community-meetup/
 [@a11ydevguide (twitter.com)]: https://twitter.com/A11yDevGuide
 [facebook]: https://www.facebook.com/AccessibilityDeveloperGuide
