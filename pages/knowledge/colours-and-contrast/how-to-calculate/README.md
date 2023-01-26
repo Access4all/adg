@@ -56,6 +56,6 @@ While visually non-impaired users might be able to easily perceive the green and
 
 ![The same picture with the words "Hello" and "Goodbye" but in grayscale](_media/three-colours-words-grayscale.png)
 
-It's therefore impotant to remember:
-- Always examine contrast ratios as calculated values, don't just rely on your eyes. More on that in the next [chapter "How to exampine colour contrast"](/knowledge/colours-and-contrast/how-to-examine/).
+It's therefore important to remember:
+- Always examine contrast ratios as calculated values, don't just rely on your eyes. More on that in the next [chapter "How to examine colour contrast"](/knowledge/colours-and-contrast/how-to-examine/).
 - Colour contrast has its limits, especially when multiple objects have to be clearly distinguishable not just from the background but also from each other. More on that in the [chapter "Colour is not enough"](/knowledge/colours-and-contrast/colour-is-not-enough/).
