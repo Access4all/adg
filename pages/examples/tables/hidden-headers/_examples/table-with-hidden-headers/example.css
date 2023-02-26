@@ -7,29 +7,21 @@
   overflow: hidden;
 }
 
-.table {
+table {
   border-left: 1px solid;
   border-bottom: 1px solid;
-  display: table;
+  border-collapse: collapse;
 }
 
-.tr {
-  display: table-row;
-}
-
-.th, .td {
+th, td {
   border-top: 1px solid;
   border-right: 1px solid;
   padding: 4px 8px;
-  display: table-cell;
 }
 
-.th {
-  font-weight: bold;
-}
-.th[role="rowheader"] {
+th[scope="row"] {
   background-color: lightgreen;
 }
-.th[role="columnheader"] {
+th[scope="col"] {
   background-color: lightpink;
 }
