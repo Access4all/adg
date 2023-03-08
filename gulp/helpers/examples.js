@@ -178,7 +178,7 @@ const getExample = (examplePath, filePath) => {
 
   if (compatibility.length) {
     btns.push(`<div class="control">
-      <input type="checkbox" id="${id}-compatibility" name="${id}" value="compatibility" />
+      <input type="checkbox" id="${id}-compatibility" name="${id}" value="compatibility" class="js-panel" />
       <label class="button" for="${id}-compatibility">
         <span class="summary">
           ${compatibilitySummary
