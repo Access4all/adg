@@ -46,6 +46,18 @@ export default () => {
     })
   })
 
+  contextTrigger.add('.js-panel', function () {
+    var elem = this
+
+    require(['./modules/content/Panel'], function (Module) {
+      if (Module.default) {
+        ModuleManager.connect(Module.default, elem)
+      } else {
+        ModuleManager.connect(Module, elem)
+      }
+    })
+  })
+
   contextTrigger.validate('body')
 
   //console.log('Selecting components took: ', new Date() - time, 'ms')

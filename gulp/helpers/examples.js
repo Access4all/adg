@@ -158,7 +158,7 @@ const getExample = (examplePath, filePath) => {
     .filter(type => code[type])
     .map(type => {
       return `<div class="control">
-      <input type="checkbox" id="${id}-${type}" name="${id}" value="${type}" />
+      <input type="checkbox" id="${id}-${type}" name="${id}" value="${type}" class="js-panel" />
       <label class="button" for="${id}-${type}">
         <span class="visuallyhidden">Show </span>
         ${type.toUpperCase()}
