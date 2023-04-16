@@ -230,7 +230,10 @@ module.exports = (config, cb) => {
           try {
             const layout = getLayout(file.frontMatter.layout, layouts)
             const relPath = path.relative('./pages', file.path)
-            const currentUrl = relPath.substring(0, relPath.lastIndexOf('/'))
+            const currentUrl = relPath.substring(
+              0,
+              relPath.lastIndexOf(path.sep)
+            )
             const prevNext = {}
             const breadcrumb = []
             const subPages = []
@@ -296,6 +299,7 @@ module.exports = (config, cb) => {
           return path
             .relative('./src/components', file.path)
             .replace(path.extname(file.path), '')
+            .replace(new RegExp('\\' + path.sep, 'g'), '/')
         },
         helpers: {
           formatDate: datetime.formatDate,
