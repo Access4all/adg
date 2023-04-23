@@ -20,7 +20,7 @@ The foundation has been in business since the year 2000, and since then has guid
 
 > The Accessibility Developer Guide offers easy and free access to a comprehensive and application-oriented knowledge database on the subject of how to build a barrier-free website. The platform aims to share and pass on accessibility know-how to everyone. It is a tangible open source project on ethics in the digital economy. Join in and be part of an exciting community realizing a web for all.
 
-**Sylvia Winkelmann-Ackermann**, CEO, «Access for all».
+**Sylvia Winkelmann-Ackermann**, former CEO, «Access for all».
 
 For more information, see [www.access-for-all.ch](http://access-for-all.ch/).
 
@@ -34,7 +34,7 @@ On the other side of the «Accessibility Alliance», there are several acclaimed
 
 > Until now, web developers have lacked a good, practical reference on accessibility. It doesn't need more rules, but more guidance to make the web usable for everyone. The Accessibility Developer Guide will provide access where hardly anyone has been before, with practical examples, tested by experts and supported by developers. From the very beginning we were convinced of the purpose of this commitment and are proud to be able to contribute a small part to it.
 
-**Severin Klaus**, Frontend Leader, [Dept](https://www.deptagency.com/).
+**Severin Klaus**, Technical Director, [Dept](https://www.deptagency.com/).
 
 ### UNIC
 
@@ -42,7 +42,7 @@ On the other side of the «Accessibility Alliance», there are several acclaimed
 
 > Accessibility is a complex issue and so equally large effort is required to develop the necessary know-how. That is why we have participated in the establishment of the Accessibility Developer Guide, which will be a key tool in the process of creating accessible websites for everyone in the future. We are looking forward to collaborating with the frontend community so that the development of the Accessibility Developer Guide will be continued.
 
-**Thomas Jaggi**, Expert Frontend Engineer, [UNIC](https://www.unic.com/).
+**Thomas Jaggi**, Expert Frontend Engineer, formerly [UNIC](https://www.unic.com/).
 
 ### Nothing
 
@@ -50,7 +50,7 @@ On the other side of the «Accessibility Alliance», there are several acclaimed
 
 > Tim Berners-Lee, the inventor of the World Wide Web once said “The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.”. This aspect which can only be fulfilled by the web is ignored by a wide range of people. We feel responsible for what we develop and for who we develop for. With the Accessibility Developer Guide we finally have a practical guide to accessible web development and can contribute our knowledge.
 
-**René Stalder**, Senior Frontend Developer, [Nothing](https://www.nothing.ch/).
+**René Stalder**, Senior Frontend Developer, formerly [Nothing](https://www.nothing.ch/).
 
 ### Liip
 
@@ -92,20 +92,21 @@ Besides the diligent online community, a group of people regularly physically ga
 <!-- ![The core team working on the Accessibility Developer Guide (details read below)](_media/core-team.jpg) -->
 
 - **Andreas Moesch**, web developer, Nothing.
-- **Donato Rotunno**, web developer, Liip.
-- **Esther Brunner**, web developer, Zeix.
-- **Graciela Schütz**, senior UX architect, UNIC.
-- **Joshua Muheim**, web developer & accessibility expert, «Access for all».
+- **Christoph Dubach**, UX architect & web developer, UNIC.
+- **Donato Rotunno**, frontend developer & accessibility expert, Liip.
+- **Esther Brunner**, interface developer, Zeix.
+- **Graciela Schütz**, UX architect, UNIC.
+- **Joshua Muheim**, frontend developer & accessibility expert, Accessify&#46;me.
 - **Jürgen Rudigier**, frontend developer, Dept.
-- **René Stalder**, web developer, Nothing.
-- **Thomas Jaggi**, web developer, former UNIC.
+- **René Stalder**, web developer & accessibility consultant, whatwedo.
+- **Thomas Jaggi**, web developer, responsive&#46;ch.
 
 Former contributors:
 
 - **Anton Bolfing**, former accessibility expert at «Access for all».
 - **Bernhard Heinser**, former CEO at «Access for all».
 - **Markus Graf**, web developer.
-- **Severin Klaus**, web developer, Dept.
+- **Severin Klaus**, technical director, Dept.
 
 ### Testing staff
 
