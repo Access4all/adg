@@ -42,11 +42,11 @@ On the other side of the «Accessibility Alliance», there are several acclaimed
 
 > Accessibility is a complex issue and so equally large effort is required to develop the necessary know-how. That is why we have participated in the establishment of the Accessibility Developer Guide, which will be a key tool in the process of creating accessible websites for everyone in the future. We are looking forward to collaborating with the frontend community so that the development of the Accessibility Developer Guide will be continued.
 
-**Thomas Jaggi**, Expert Frontend Engineer, [UNIC AG](https://www.unic.com/).
+**Thomas Jaggi**, Expert Frontend Engineer, [UNIC](https://www.unic.com/).
 
 ### Nothing
 
-![Nothing AG logo](_media/nothing.png){.agency-logo}
+![Nothing logo](_media/nothing.png){.agency-logo}
 
 > Tim Berners-Lee, the inventor of the World Wide Web once said “The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.”. This aspect which can only be fulfilled by the web is ignored by a wide range of people. We feel responsible for what we develop and for who we develop for. With the Accessibility Developer Guide we finally have a practical guide to accessible web development and can contribute our knowledge.
 
@@ -58,7 +58,7 @@ On the other side of the «Accessibility Alliance», there are several acclaimed
 
 > As a web agency committed to provide continuous improvements to the way the internet is built and used, Liip is excited to join and contribute to the Accessibility Developer Guide initiative. In our inclusive vision, this will bring benefits to everyone, first to the developers but finally to the end-users. The Open Source nature of the project, furthermore, fully embraces our principles and opens the doors to worldwide contributions.
 
-**Donato Rotunno**, Senior Frontend Developer, [Liip AG](https://www.liip.ch/en).
+**Donato Rotunno**, Senior Frontend Developer, [Liip](https://www.liip.ch/en).
 
 ### Zeix
 
@@ -66,7 +66,7 @@ On the other side of the «Accessibility Alliance», there are several acclaimed
 
 > The Accessibility Developer Guide allows us to easily share knowledge within the team and build on reliable best practices. This enables us to design, create and program websites that all people like to use.
 
-**Esther Brunner**, User Interface Developer, [Zeix AG](https://zeix.com/).
+**Esther Brunner**, User Interface Developer, [Zeix](https://zeix.com/).
 
 ### Your company here?
 
@@ -91,14 +91,14 @@ Besides the diligent online community, a group of people regularly physically ga
 
 <!-- ![The core team working on the Accessibility Developer Guide (details read below)](_media/core-team.jpg) -->
 
-- **Andreas Moesch**, web developer, Nothing AG.
-- **Donato Rotunno**, web developer, Liip AG.
-- **Esther Brunner**, web developer, Zeix AG.
-- **Graciela Schütz**, senior UX architect, UNIC AG.
+- **Andreas Moesch**, web developer, Nothing.
+- **Donato Rotunno**, web developer, Liip.
+- **Esther Brunner**, web developer, Zeix.
+- **Graciela Schütz**, senior UX architect, UNIC.
 - **Joshua Muheim**, web developer & accessibility expert, «Access for all».
 - **Jürgen Rudigier**, frontend developer, Dept.
-- **René Stalder**, web developer, Nothing AG.
-- **Thomas Jaggi**, web developer, former UNIC AG.
+- **René Stalder**, web developer, Nothing.
+- **Thomas Jaggi**, web developer, former UNIC.
 
 Former contributors:
 
