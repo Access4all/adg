@@ -13,7 +13,7 @@ The «Accessibility Developer Guide» is an initiative of [«Access for all»](h
 It is developed and maintained in collaboration with a number of acclaimed web agencies, currently:
 
 - [Dept](https://www.deptagency.com/)
-- [UNIC](https://www.unic.com/)
+- [Unic](https://www.unic.com/)
 - [Liip](https://www.liip.ch/)
 - [Zeix](https://www.zeix.com/)
 - [Nothing](https://www.nothing.ch)

@@ -36,13 +36,13 @@ On the other side of the «Accessibility Alliance», there are several acclaimed
 
 **Severin Klaus**, Technical Director, [Dept](https://www.deptagency.com/).
 
-### UNIC
+### Unic
 
-![UNIC logo](_media/unic.png){.agency-logo}
+![Unic logo](_media/unic.png){.agency-logo}
 
 > Accessibility is a complex issue and so equally large effort is required to develop the necessary know-how. That is why we have participated in the establishment of the Accessibility Developer Guide, which will be a key tool in the process of creating accessible websites for everyone in the future. We are looking forward to collaborating with the frontend community so that the development of the Accessibility Developer Guide will be continued.
 
-**Thomas Jaggi**, Expert Frontend Engineer, formerly [UNIC](https://www.unic.com/).
+**Thomas Jaggi**, Expert Frontend Engineer, formerly [Unic](https://www.unic.com/).
 
 ### Nothing
 
@@ -92,10 +92,10 @@ Besides the diligent online community, a group of people regularly physically ga
 <!-- ![The core team working on the Accessibility Developer Guide (details read below)](_media/core-team.jpg) -->
 
 - **Andreas Moesch**, web developer, Nothing.
-- **Christoph Dubach**, UX architect & web developer, UNIC.
+- **Christoph Dubach**, UX architect & web developer, Unic.
 - **Donato Rotunno**, frontend developer & accessibility expert, Liip.
 - **Esther Brunner**, interface developer, Zeix.
-- **Graciela Schütz**, UX architect, UNIC.
+- **Graciela Schütz**, UX architect, Unic.
 - **Joshua Muheim**, frontend developer & accessibility expert, Accessify&#46;me.
 - **Jürgen Rudigier**, frontend developer, Dept.
 - **René Stalder**, web developer & accessibility consultant, whatwedo.
