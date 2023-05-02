@@ -44,7 +44,6 @@
     "fancy-log": "^1.3.3",
     "feed": "^4.0.0",
     "front-matter": "^3.0.2",
-    "fs": "0.0.2",
     "gulp": "^4.0.2",
     "gulp-changed": "^4.0.2",
     "gulp-concat": "^2.6.1",
@@ -74,15 +73,14 @@
     "minimist": "^1.2.3",
     "node-sass": "^4.12.0",
     "node-sass-globbing": "0.0.23",
+    "normalize-strings": "^1.1.0",
     "prettier-standard": "^16.1.0",
     "require-new": "^1.1.1",
     "sitemap": "^5.1.0",
     "webpack": "^4.41.2"
   },
   "dependencies": {
-    "ajv": "^6.10.2",
     "details-polyfill": "^1.1.0",
-    "jquery": "^3.5.0",
-    "normalize-strings": "^1.1.0"
+    "jquery": "^3.5.0"
   }
 }
