@@ -5,7 +5,7 @@
     var config
 
     class AdgDatepicker {
-      constructor (el, options = {}) {
+      constructor(el, options = {}) {
         this.$el = $(el)
         this.config = config
         this.currentDate = this.config['date']
@@ -15,7 +15,7 @@
       }
 
       // Executes the given selector on @$el and returns the element. Makes sure exactly one element exists.
-      findOne (selector) {
+      findOne(selector) {
         var result
         result = this.$el.find(selector)
         switch (result.length) {
@@ -38,19 +38,19 @@
         }
       }
 
-      name () {
+      name() {
         return 'adg-datepicker'
       }
 
-      addAdgDataAttribute ($target, name, value = '') {
+      addAdgDataAttribute($target, name, value = '') {
         return $target.attr(this.adgDataAttributeName(name), value)
       }
 
-      removeAdgDataAttribute ($target, name) {
+      removeAdgDataAttribute($target, name) {
         return $target.removeAttr(this.adgDataAttributeName(name))
       }
 
-      adgDataAttributeName (name = null) {
+      adgDataAttributeName(name = null) {
         var result
         result = `data-${this.name()}`
         if (name) {
@@ -59,7 +59,7 @@
         return result
       }
 
-      labelOfInput ($inputs) {
+      labelOfInput($inputs) {
         return $inputs.map((i, input) => {
           var $input, $label, id
           $input = $(input)
@@ -80,24 +80,24 @@
         })
       }
 
-      show ($el) {
+      show($el) {
         $el.removeAttr('hidden')
         return $el.show()
       }
 
       // TODO Would be cool to renounce CSS and solely use the hidden attribute. But jQuery's :visible doesn't seem to work with it!?
       // @throwMessageAndPrintObjectsToConsole("Element is still hidden, although hidden attribute was removed! Make sure there's no CSS like display:none or visibility:hidden left on it!", element: $el) if $el.is(':hidden')
-      hide ($el) {
+      hide($el) {
         $el.attr('hidden', '')
         return $el.hide()
       }
 
-      throwMessageAndPrintObjectsToConsole (message, elements = {}) {
+      throwMessageAndPrintObjectsToConsole(message, elements = {}) {
         console.log(elements)
         throw message
       }
 
-      text (text, options = {}) {
+      text(text, options = {}) {
         var key, value
         text = this.config[`${text}Text`]
         for (key in options) {
@@ -107,14 +107,14 @@
         return text
       }
 
-      initInput () {
+      initInput() {
         this.$input = this.findOne('input[type="text"]')
         this.$input.attr('autocomplete', 'off')
         this.$input.attr('aria-expanded', 'false')
         return this.attachInputEvents()
       }
 
-      initOptions () {
+      initOptions() {
         this.$optionsContainer = this.findOne('fieldset')
         this.addAdgDataAttribute(this.$optionsContainer, 'options')
         this.$optionsContainerLabel = this.findOne('legend')
@@ -123,21 +123,21 @@
         return this.setSelection(this.currentDate.getDate() - 1, false)
       }
 
-      getFirstMonthDay (date) {
+      getFirstMonthDay(date) {
         var m, y
         y = date.getFullYear()
         m = date.getMonth()
         return new Date(y, m, 1)
       }
 
-      getLastMonthDay (date) {
+      getLastMonthDay(date) {
         var m, y
         y = date.getFullYear()
         m = date.getMonth()
         return new Date(y, m + 1, 0)
       }
 
-      initDate () {
+      initDate() {
         var $dateTable,
           $tr,
           day,
@@ -211,14 +211,14 @@
         return this.$options.addClass('adg-visually-hidden')
       }
 
-      getDayName (day) {
+      getDayName(day) {
         if (day === 0) {
           day = 6
         }
         return this.config['dayNames'][day - 1]
       }
 
-      attachInputEvents () {
+      attachInputEvents() {
         this.attachClickEventToInput()
         this.attachEscapeKeyToInput()
         this.attachEnterKeyToInput()
@@ -226,7 +226,7 @@
         return this.attachUpDownKeysToInput()
       }
 
-      attachOptionsEvents () {
+      attachOptionsEvents() {
         this.attachArrowKeysToOptions()
         this.attachChangeEventToOptions()
         this.attachClickEventToOptionLabels()
@@ -234,7 +234,7 @@
         return this.attachTabEventToOptions()
       }
 
-      attachClickEventToInput () {
+      attachClickEventToInput() {
         return this.$input.click(() => {
           if (this.$optionsContainer.is(':visible')) {
             return this.hideOptions()
@@ -244,7 +244,7 @@
         })
       }
 
-      attachEscapeKeyToInput () {
+      attachEscapeKeyToInput() {
         return this.$input.keydown(e => {
           if (e.which === 27) {
             if (this.$optionsContainer.is(':visible')) {
@@ -261,7 +261,7 @@
         })
       }
 
-      attachEnterKeyToInput () {
+      attachEnterKeyToInput() {
         return this.$input.keydown(e => {
           if (e.which === 13) {
             if (this.$optionsContainer.is(':visible')) {
@@ -274,7 +274,7 @@
         })
       }
 
-      attachTabKeyToInput () {
+      attachTabKeyToInput() {
         return this.$input.keydown(e => {
           if (e.which === 9) {
             if (this.$optionsContainer.is(':visible')) {
@@ -284,7 +284,7 @@
         })
       }
 
-      attachUpDownKeysToInput () {
+      attachUpDownKeysToInput() {
         return this.$input.keydown(e => {
           if (e.which === 38 || e.which === 40) {
             this.showOptions()
@@ -293,7 +293,7 @@
         })
       }
 
-      showOptions () {
+      showOptions() {
         this.show(this.$optionsContainer)
         this.$input.attr('aria-expanded', 'true')
         if (this.$options.filter(':checked').length === 0) {
@@ -304,13 +304,13 @@
         return this.$options.filter(':checked').focus()
       }
 
-      hideOptions () {
+      hideOptions() {
         this.hide(this.$optionsContainer)
         this.$input.attr('aria-expanded', 'false')
         return this.$input.focus()
       }
 
-      moveSelection (direction) {
+      moveSelection(direction) {
         var currentIndex, maxIndex, upcomingIndex
         maxIndex = this.$options.length - 1
         currentIndex = this.$options.index(
@@ -345,7 +345,7 @@
         return this.setSelection(upcomingIndex)
       }
 
-      setSelection (current, change = true) {
+      setSelection(current, change = true) {
         var $currentOption
         if (current === -1) {
           current = this.$options.length - 1
@@ -358,7 +358,7 @@
         }
       }
 
-      previousMonth (now) {
+      previousMonth(now) {
         if (now.getMonth() === 0) {
           return new Date(now.getFullYear() - 1, 11, 1)
         } else {
@@ -366,7 +366,7 @@
         }
       }
 
-      nextMonth (now) {
+      nextMonth(now) {
         if (now.getMonth() === 11) {
           return new Date(now.getFullYear() + 1, 11, 1)
         } else {
@@ -374,7 +374,7 @@
         }
       }
 
-      attachArrowKeysToOptions () {
+      attachArrowKeysToOptions() {
         return this.$options.keydown(e => {
           if (
             e.which === 37 ||
@@ -396,18 +396,18 @@
         })
       }
 
-      attachChangeEventToOptions () {
+      attachChangeEventToOptions() {
         return this.$options.change(e => {
           return this.applyCheckedOptionToInput()
         })
       }
 
-      applyCheckedOptionToInputAndResetOptions () {
+      applyCheckedOptionToInputAndResetOptions() {
         this.applyCheckedOptionToInput()
         return this.hideOptions()
       }
 
-      applyCheckedOptionToInput () {
+      applyCheckedOptionToInput() {
         var $checkedOption, $checkedOptionLabel, $previouslyCheckedOptionLabel
         $previouslyCheckedOptionLabel = $(
           `[${this.adgDataAttributeName('option-selected')}]`
@@ -431,13 +431,13 @@
         }
       }
 
-      attachClickEventToOptionLabels () {
+      attachClickEventToOptionLabels() {
         return this.labelOfInput(this.$options).click(e => {
           return this.hideOptions()
         })
       }
 
-      attachEnterEventToOptions () {
+      attachEnterEventToOptions() {
         return this.$options.keydown(e => {
           if (e.which === 13) {
             this.hideOptions()
@@ -447,7 +447,7 @@
         })
       }
 
-      attachTabEventToOptions () {
+      attachTabEventToOptions() {
         return this.$options.keydown(e => {
           if (e.which === 9) {
             return this.hideOptions()
@@ -491,4 +491,4 @@
       return new AdgDatepicker(this)
     })
   })
-}.call(this))
+}).call(this)

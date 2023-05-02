@@ -5,11 +5,11 @@ import ADGBase from './ADGBase'
 export default class ADGAutocomplete extends ADGBase {
   // Need to override the base class method
   // TODO: make this explicit
-  name () {
+  name() {
     return 'adg-autocomplete'
   }
 
-  init () {
+  init() {
     var jsonOptions, key, val
     // Merge config into existing one (not nice, see https://stackoverflow.com/questions/47721699/)
     // for (key in config) {
@@ -42,14 +42,14 @@ export default class ADGAutocomplete extends ADGBase {
     return this.attachEvents()
   }
 
-  initFilter () {
+  initFilter() {
     this.$filter = this.findOne('input[type="text"]')
     this.addAdgDataAttribute(this.$filter, 'filter')
     this.$filter.attr('autocomplete', 'off')
     return this.$filter.attr('aria-expanded', 'false')
   }
 
-  initOptions () {
+  initOptions() {
     this.$optionsContainer = this.findOne(this.config.optionsContainer)
     this.addAdgDataAttribute(this.$optionsContainer, 'options')
     this.$optionsContainerLabel = this.findOne(
@@ -61,7 +61,7 @@ export default class ADGAutocomplete extends ADGBase {
     return this.$options.addClass(this.config.hiddenCssClass)
   }
 
-  initAlerts () {
+  initAlerts() {
     this.$alertsContainer = $(
       `<div id='${this.uniqueId(this.config.alertsContainerId)}'></div>`
     )
@@ -75,7 +75,7 @@ export default class ADGAutocomplete extends ADGBase {
     return this.addAdgDataAttribute(this.$alertsContainer, 'alerts')
   }
 
-  attachEvents () {
+  attachEvents() {
     this.attachClickEventToFilter()
     this.attachChangeEventToFilter()
     this.attachEscapeKeyToFilter()
@@ -86,7 +86,7 @@ export default class ADGAutocomplete extends ADGBase {
     return this.attachClickEventToOptions()
   }
 
-  attachClickEventToFilter () {
+  attachClickEventToFilter() {
     return this.$filter.click(() => {
       this.debugMessage('click filter')
       if (this.$optionsContainer.is(':visible')) {
@@ -97,7 +97,7 @@ export default class ADGAutocomplete extends ADGBase {
     })
   }
 
-  attachEscapeKeyToFilter () {
+  attachEscapeKeyToFilter() {
     return this.$filter.keydown(e => {
       if (e.which === 27) {
         if (this.$optionsContainer.is(':visible')) {
@@ -114,7 +114,7 @@ export default class ADGAutocomplete extends ADGBase {
     })
   }
 
-  attachEnterKeyToFilter () {
+  attachEnterKeyToFilter() {
     return this.$filter.keydown(e => {
       var $checkedOption
       if (e.which === 13) {
@@ -135,7 +135,7 @@ export default class ADGAutocomplete extends ADGBase {
     })
   }
 
-  attachTabKeyToFilter () {
+  attachTabKeyToFilter() {
     return this.$filter.keydown(e => {
       if (e.which === 9) {
         this.debugMessage('tab')
@@ -146,7 +146,7 @@ export default class ADGAutocomplete extends ADGBase {
     })
   }
 
-  attachUpDownKeysToFilter () {
+  attachUpDownKeysToFilter() {
     return this.$filter.keydown(e => {
       if (e.which === 38 || e.which === 40) {
         if (this.$optionsContainer.is(':visible')) {
@@ -163,19 +163,19 @@ export default class ADGAutocomplete extends ADGBase {
     })
   }
 
-  showOptions () {
+  showOptions() {
     this.debugMessage('(show options)')
     this.show(this.$optionsContainer)
     return this.$filter.attr('aria-expanded', 'true')
   }
 
-  hideOptions () {
+  hideOptions() {
     this.debugMessage('(hide options)')
     this.hide(this.$optionsContainer)
     return this.$filter.attr('aria-expanded', 'false')
   }
 
-  moveSelection (direction) {
+  moveSelection(direction) {
     var $upcomingOption, $visibleOptions, currentIndex, maxIndex, upcomingIndex
     $visibleOptions = this.$options.filter(':visible')
     maxIndex = $visibleOptions.length - 1
@@ -194,7 +194,7 @@ export default class ADGAutocomplete extends ADGBase {
     return $upcomingOption.prop('checked', true).trigger('change')
   }
 
-  attachChangeEventToOptions () {
+  attachChangeEventToOptions() {
     return this.$options.change(e => {
       this.debugMessage('option change')
       this.applyCheckedOptionToFilter()
@@ -202,13 +202,13 @@ export default class ADGAutocomplete extends ADGBase {
     })
   }
 
-  applyCheckedOptionToFilterAndResetOptions () {
+  applyCheckedOptionToFilterAndResetOptions() {
     this.applyCheckedOptionToFilter()
     this.hideOptions()
     return this.filterOptions()
   }
 
-  applyCheckedOptionToFilter () {
+  applyCheckedOptionToFilter() {
     var $checkedOption, $checkedOptionLabel, $previouslyCheckedOptionLabel
     this.debugMessage('(apply option to filter)')
     $previouslyCheckedOptionLabel = $(
@@ -230,14 +230,14 @@ export default class ADGAutocomplete extends ADGBase {
     }
   }
 
-  attachClickEventToOptions () {
+  attachClickEventToOptions() {
     return this.$options.click(e => {
       this.debugMessage('click option')
       return this.hideOptions()
     })
   }
 
-  attachChangeEventToFilter () {
+  attachChangeEventToFilter() {
     return this.$filter.on('input propertychange paste', e => {
       this.debugMessage('(filter changed)')
       this.filterOptions(e.target.value)
@@ -245,7 +245,7 @@ export default class ADGAutocomplete extends ADGBase {
     })
   }
 
-  filterOptions (filter = '') {
+  filterOptions(filter = '') {
     var fuzzyFilter, visibleNumber
     fuzzyFilter = this.fuzzifyFilter(filter)
     visibleNumber = 0
@@ -264,7 +264,7 @@ export default class ADGAutocomplete extends ADGBase {
     return this.announceOptionsNumber(filter, visibleNumber)
   }
 
-  announceOptionsNumber (
+  announceOptionsNumber(
     filter = this.$filter.val(),
     number = this.$options.length
   ) {
@@ -283,7 +283,7 @@ export default class ADGAutocomplete extends ADGBase {
     return this.$alertsContainer.append(`<p role='alert'>${message}</p>`)
   }
 
-  fuzzifyFilter (filter) {
+  fuzzifyFilter(filter) {
     var escapedCharacter, fuzzifiedFilter, i
     i = 0
     fuzzifiedFilter = ''

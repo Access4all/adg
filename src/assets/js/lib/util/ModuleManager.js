@@ -11,7 +11,7 @@ var moduleInstances = []
 
 var garbageCollectedOnInitialise = false
 
-function initialiseModule (Module, element) {
+function initialiseModule(Module, element) {
   // we want old modules garbaged before creating new ones
   if (!garbageCollectedOnInitialise) {
     checkModuleGarbage()
@@ -47,7 +47,7 @@ function initialiseModule (Module, element) {
   )
 }
 
-function checkModuleGarbage () {
+function checkModuleGarbage() {
   var elem,
     inst,
     len = moduleInstances.length
@@ -83,11 +83,11 @@ if (typeof window !== 'undefined' && window.MutationObserver) {
     observer.observe(target, config)
 
     var timeout
-    function invalidate () {
+    function invalidate() {
       clearTimeout(timeout)
       timeout = setTimeout(validate, 50)
     }
-    function validate () {
+    function validate() {
       clearTimeout(timeout)
       checkModuleGarbage()
     }
@@ -99,13 +99,13 @@ if (typeof window !== 'undefined' && window.MutationObserver) {
 var measureTime,
   totalTime = 0, // eslint-disable-line no-unused-vars
   measureTable = []
-function now () {
+function now() {
   return window.performance && performance.now ? performance.now() : new Date()
 }
-function measureStart () {
+function measureStart() {
   measureTime = now()
 }
-function measureStop (name, element) {
+function measureStop(name, element) {
   totalTime += now() - measureTime
   measureTable.push({
     Module: name,

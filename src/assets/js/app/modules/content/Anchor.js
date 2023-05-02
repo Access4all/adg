@@ -9,12 +9,12 @@ import BaseModule from '../BaseModule'
  * @enabled true
  */
 export default class Anchor extends BaseModule {
-  constructor () {
+  constructor() {
     super()
     this.ns = BaseModule.ns('Anchor')
   }
 
-  init (element) {
+  init(element) {
     var DEFAULTS = {}
     this.$el = $(element)
     this.config = $.extend(true, {}, DEFAULTS)
@@ -29,7 +29,7 @@ export default class Anchor extends BaseModule {
     return this
   }
 
-  initLink () {
+  initLink() {
     let $link = $(
       '<a class="anchor-link"><span aria-hidden="true">#</span><span class="visuallyhidden">Link to heading "' +
         this.$el.text() +

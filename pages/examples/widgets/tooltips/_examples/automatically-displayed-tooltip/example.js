@@ -2,7 +2,7 @@
   var AdgTooltipSimple
 
   AdgTooltipSimple = class AdgTooltipSimple {
-    constructor (el) {
+    constructor(el) {
       this.$el = $(el)
       this.value = this.$el.attr('data-adg-tooltip-simple')
       this.$el.attr('data-adg-tooltip-simple', null)
@@ -12,7 +12,7 @@
       this.initContainerEvents()
     }
 
-    initContainer () {
+    initContainer() {
       this.$container = $(
         "<span class='adg-tooltip-simple' aria-hidden='true'></span>"
       )
@@ -21,7 +21,7 @@
       return this.initBalloon()
     }
 
-    initIcon () {
+    initIcon() {
       // Set focusable="false" for IE, see https://stackoverflow.com/questions/18646111/disable-onfocus-event-for-svg-element
       this.$icon = $(
         "<span class='adg-tooltip-simple-icon'><svg class='icon' focusable='false'><use xlink:href='#tooltip' /></svg></span>"
@@ -29,7 +29,7 @@
       return this.$container.append(this.$icon)
     }
 
-    initBalloon () {
+    initBalloon() {
       this.$balloon = $(
         `<span class='adg-tooltip-simple-balloon' hidden>${this.value}</span>`
       )
@@ -37,7 +37,7 @@
       return this.$container.append(this.$balloon)
     }
 
-    attachContentToEl () {
+    attachContentToEl() {
       var valueElement
       valueElement = $(
         `<span class='adg-visually-hidden'> (${this.value})</span>`
@@ -49,7 +49,7 @@
       }
     }
 
-    initElEvents () {
+    initElEvents() {
       this.$el.focusin(() => {
         return this.show()
       })
@@ -78,7 +78,7 @@
       })
     }
 
-    initContainerEvents () {
+    initContainerEvents() {
       this.$container.mouseenter(() => {
         return this.show()
       })
@@ -89,11 +89,11 @@
       })
     }
 
-    show () {
+    show() {
       return this.$balloon.attr('hidden', false)
     }
 
-    hide () {
+    hide() {
       return this.$balloon.attr('hidden', true)
     }
   }
@@ -103,4 +103,4 @@
       return new AdgTooltipSimple(this)
     })
   })
-}.call(this))
+}).call(this)

@@ -1,11 +1,11 @@
 class AdgRadioAccordion {
-  constructor (el) {
+  constructor(el) {
     this.element = el
     this.triggers = this.element.querySelectorAll('.trigger')
     this.initTriggers()
   }
 
-  initTriggers () {
+  initTriggers() {
     this.triggers.forEach(trigger => {
       const panelId = `${trigger.id}_panel`
       const panel = document.getElementById(panelId)

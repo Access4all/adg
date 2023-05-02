@@ -1,12 +1,12 @@
 class AdgDropdown {
-  constructor (element) {
+  constructor(element) {
     this.element = element
     this.buttons = this.element.querySelectorAll('[aria-expanded]')
 
     this.init()
   }
 
-  init () {
+  init() {
     this.buttons.forEach(button => {
       const containerId = button.getAttribute('aria-controls')
       const container = document.querySelector(`#${containerId}`)
@@ -25,12 +25,12 @@ class AdgDropdown {
     })
   }
 
-  show (button, container) {
+  show(button, container) {
     container.hidden = false
     button.setAttribute('aria-expanded', true)
   }
 
-  hide (button, container) {
+  hide(button, container) {
     container.hidden = true
     button.setAttribute('aria-expanded', false)
   }

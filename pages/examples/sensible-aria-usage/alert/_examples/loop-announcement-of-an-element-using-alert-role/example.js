@@ -7,4 +7,4 @@
     }
     return setInterval(sayHello, 2000)
   })
-}.call(this))
+}).call(this)
