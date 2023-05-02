@@ -47,6 +47,7 @@ export default class MainNav extends BaseModule {
     this.$toggle.addClass(this.config.toggle.isActiveClassname)
     this.$toggle.attr("aria-expanded", "true")
   }
+
   disable () {
     this.$el.removeClass(this.config.isActiveClassname)
     this.$toggle.removeClass(this.config.toggle.isActiveClassname)

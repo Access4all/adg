@@ -1,6 +1,6 @@
 const gulp = require('gulp')
 const handlebars = require('gulp-hb')
-const prettify = require('gulp-prettify')
+// const prettify = require('gulp-prettify')
 const frontMatter = require('gulp-front-matter')
 const through = require('through2')
 const fs = require('fs')

@@ -8,7 +8,7 @@ export default () => {
   //
   // Modules are per se site specific (if necessary).
 
-  var time = new Date()
+  // var time = new Date()
 
   contextTrigger.add('.js-search', function () {
     var elem = this
@@ -60,7 +60,7 @@ export default () => {
 
   contextTrigger.validate('body')
 
-  //console.log('Selecting components took: ', new Date() - time, 'ms')
+  // console.log('Selecting components took: ', new Date() - time, 'ms')
 
   return ModuleManager
 }

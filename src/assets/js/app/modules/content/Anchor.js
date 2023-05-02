@@ -20,7 +20,7 @@ export default class Anchor extends BaseModule {
     this.config = $.extend(true, {}, DEFAULTS)
     this.id = this.$el.attr('id')
 
-    var self = this
+    // var self = this
 
     this.on('click', function (e) {})
 
