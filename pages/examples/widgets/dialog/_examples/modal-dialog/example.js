@@ -2,13 +2,13 @@
   var AdgDialog
 
   AdgDialog = class AdgDialog {
-    constructor (el) {
+    constructor(el) {
       this.$openButton = $(el)
       this.initContainer(this.$openButton.attr('data-adg-dialog'))
       this.initOpenButton()
     }
 
-    initOpenButton () {
+    initOpenButton() {
       this.$openButton.attr('aria-expanded', false)
       this.$openButton.append(
         '<span class="adg-visually-hidden"> (dialog)</span>'
@@ -22,7 +22,7 @@
       })
     }
 
-    initContainer (id) {
+    initContainer(id) {
       this.$container = $(`#${id}`)
       this.$container.attr('data-adg-dialog-container', true)
       this.$container.wrap(
@@ -33,21 +33,21 @@
       return this.initContainerButtonEvents()
     }
 
-    initConfirmButton () {
+    initConfirmButton() {
       this.$confirmButton = $(
         '<button>Confirm<span class="adg-visually-hidden"> (close)</span></button>'
       )
       return this.$container.append(this.$confirmButton)
     }
 
-    initCloseButton () {
+    initCloseButton() {
       this.$closeButton = $(
         '<button class="adg-dialog-icon"><svg class="icon" focusable="false"><use xlink:href="#tooltip" /></svg></span><span class="adg-visually-hidden">Close dialog</span></button>'
       )
       return this.$container.prepend(this.$closeButton)
     }
 
-    initContainerButtonEvents () {
+    initContainerButtonEvents() {
       this.$confirmButton.click(() => {
         return this.hide()
       })
@@ -69,14 +69,14 @@
       })
     }
 
-    show () {
+    show() {
       this.$container.before("<div class='adg-dialog-curtain'></div>")
       this.$container.attr('hidden', false)
       this.$openButton.attr('aria-expanded', true)
       return this.$closeButton.focus()
     }
 
-    hide () {
+    hide() {
       $('.adg-dialog-curtain').remove()
       this.$container.attr('hidden', true)
       this.$openButton.attr('aria-expanded', false)
@@ -89,4 +89,4 @@
       return new AdgDialog(this)
     })
   })
-}.call(this))
+}).call(this)

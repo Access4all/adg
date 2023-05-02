@@ -132,8 +132,9 @@ const getExample = (examplePath, filePath) => {
 
     // eslint-disable-next-line eqeqeq
     if (date != 'Invalid Date') {
-      result.date = `${date.getFullYear()}-${date.getMonth() +
-        1}-${date.getDate()}`
+      result.date = `${date.getFullYear()}-${
+        date.getMonth() + 1
+      }-${date.getDate()}`
     }
 
     // Create summary of screenreader+browser combinations

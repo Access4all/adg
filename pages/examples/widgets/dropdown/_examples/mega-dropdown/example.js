@@ -2,12 +2,12 @@
   var AdgDropdown
 
   AdgDropdown = class AdgDropdown {
-    constructor (el) {
+    constructor(el) {
       this.$el = $(el)
       this.initExpandables()
     }
 
-    initExpandables () {
+    initExpandables() {
       return this.$el.find('[aria-expanded]').click(e => {
         var $button, $container
         $button = $(e.target)
@@ -20,12 +20,12 @@
       })
     }
 
-    show ($button, $container) {
+    show($button, $container) {
       $container.attr('hidden', false)
       return $button.attr('aria-expanded', true)
     }
 
-    hide ($button, $container) {
+    hide($button, $container) {
       $container.attr('hidden', true)
       return $button.attr('aria-expanded', false)
     }
@@ -36,4 +36,4 @@
       return new AdgDropdown(this)
     })
   })
-}.call(this))
+}).call(this)

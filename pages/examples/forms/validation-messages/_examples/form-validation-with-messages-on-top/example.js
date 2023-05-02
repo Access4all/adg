@@ -52,10 +52,7 @@
         return e.preventDefault()
       })
       $elementToDescribe.attr('aria-describedby', input + '_description')
-      $errorContainer
-        .append('<li>')
-        .find('li:last')
-        .append($error)
+      $errorContainer.append('<li>').find('li:last').append($error)
       if ($(':not(body):focus').length === 0) {
         // See https://stackoverflow.com/questions/46134247/jquery-setting-focus-doesnt-work-in-ie11/
         return $errorContainer.find('a').focus()
@@ -83,4 +80,4 @@
       }
     }
   })
-}.call(this))
+}).call(this)

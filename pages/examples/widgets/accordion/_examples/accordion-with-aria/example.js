@@ -1,11 +1,11 @@
 class AdgAccordion {
-  constructor (el) {
+  constructor(el) {
     this.element = el
     this.triggers = this.element.querySelectorAll('[aria-controls]')
     this.initTriggers()
   }
 
-  initTriggers () {
+  initTriggers() {
     this.triggers.forEach((trigger, triggerIndex, triggerArray) => {
       const panelId = trigger.getAttribute('aria-controls')
       const panel = document.getElementById(panelId)
@@ -45,12 +45,12 @@ class AdgAccordion {
     })
   }
 
-  show (panel, trigger) {
+  show(panel, trigger) {
     panel.hidden = false
     trigger.setAttribute('aria-expanded', 'true')
   }
 
-  hide (panel, trigger) {
+  hide(panel, trigger) {
     panel.hidden = true
     trigger.setAttribute('aria-expanded', 'false')
   }
