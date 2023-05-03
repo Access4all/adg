@@ -141,9 +141,35 @@ gulp.task(
 )
 
 gulp.task('media:resize', () => {
-  const resize = require('gulp-jimp-resize')
+  const Jimp = require('jimp')
+  const mime = require('mime-types')
   const through = require('through2')
   const path = require('path')
+
+  const resize = async ({ file, image, key, width }) => {
+    const mimeType = mime.lookup(file.path)
+    const extension = path.extname(file.path)
+    const fileName = path.basename(file.path, extension)
+    const resizedPath = file.path.replace(
+      `${fileName}${extension}`,
+      `${fileName}-${key}${extension}`
+    )
+
+    let contents = file.contents
+
+    if (image.bitmap.width > width) {
+      contents = await image
+        .cloneQuiet()
+        .resize(width, Jimp.AUTO)
+        .getBufferAsync(mimeType)
+    }
+
+    return {
+      ...file,
+      path: resizedPath,
+      contents
+    }
+  }
 
   return gulp
     .src(['./pages/{,**/}_media/**/*', './pages/**/_examples/**/*.png'], {
@@ -161,30 +187,20 @@ gulp.task('media:resize', () => {
       })
     )
     .pipe(
-      resize({
-        sizes: [
-          {
-            suffix: 'large',
-            width: 680,
-            upscale: false
-          },
-          {
-            suffix: 'medium',
-            width: 546,
-            upscale: false
-          },
-          {
-            suffix: 'small',
-            width: 340,
-            upscale: false
-          }
-        ]
-      })
-    )
-    .pipe(
-      // `base` option seems to be ignored by plugin
-      through.obj((file, enc, cb) => {
-        file.path = path.relative('./pages', file.path)
+      through.obj(async function (file, enc, cb) {
+        // Work around duplicated files not taking `base` option into account
+        const originalFilePath = file.path
+        file.path = path.relative('./pages', originalFilePath)
+
+        // Create resized images
+        const image = await Jimp.read(file.contents)
+
+        this.push(await resize({ file, image, width: 680, key: 'large' }))
+        this.push(await resize({ file, image, width: 546, key: 'medium' }))
+        this.push(await resize({ file, image, width: 340, key: 'small' }))
+
+        // Reset path
+        file.path = originalFilePath
 
         cb(null, file)
       })
