@@ -141,13 +141,11 @@ gulp.task(
 )
 
 gulp.task('media:resize', () => {
-  const Jimp = require('jimp')
-  const mime = require('mime-types')
+  const sharp = require('sharp')
   const through = require('through2')
   const path = require('path')
 
-  const resize = async ({ file, image, key, width }) => {
-    const mimeType = mime.lookup(file.path)
+  const resize = async ({ file, image, metadata, key, width }) => {
     const extension = path.extname(file.path)
     const fileName = path.basename(file.path, extension)
     const resizedPath = file.path.replace(
@@ -157,11 +155,8 @@ gulp.task('media:resize', () => {
 
     let contents = file.contents
 
-    if (image.bitmap.width > width) {
-      contents = await image
-        .cloneQuiet()
-        .resize(width, Jimp.AUTO)
-        .getBufferAsync(mimeType)
+    if (metadata.width > width) {
+      contents = await image.resize(width).toBuffer()
     }
 
     return {
@@ -193,11 +188,18 @@ gulp.task('media:resize', () => {
         file.path = path.relative('./pages', originalFilePath)
 
         // Create resized images
-        const image = await Jimp.read(file.contents)
+        const image = await sharp(file.contents)
+        const metadata = await image.metadata()
 
-        this.push(await resize({ file, image, width: 680, key: 'large' }))
-        this.push(await resize({ file, image, width: 546, key: 'medium' }))
-        this.push(await resize({ file, image, width: 340, key: 'small' }))
+        this.push(
+          await resize({ file, image, metadata, width: 680, key: 'large' })
+        )
+        this.push(
+          await resize({ file, image, metadata, width: 546, key: 'medium' })
+        )
+        this.push(
+          await resize({ file, image, metadata, width: 340, key: 'small' })
+        )
 
         // Reset path
         file.path = originalFilePath
