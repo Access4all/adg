@@ -184,8 +184,7 @@ gulp.task('media:resize', () => {
     .pipe(
       through.obj(async function (file, enc, cb) {
         // Work around duplicated files not taking `base` option into account
-        const originalFilePath = file.path
-        file.path = path.relative('./pages', originalFilePath)
+        file.path = path.relative('./pages', file.path)
 
         // Create resized images
         const image = await sharp(file.contents)
@@ -201,10 +200,7 @@ gulp.task('media:resize', () => {
           await resize({ file, image, metadata, width: 340, key: 'small' })
         )
 
-        // Reset path
-        file.path = originalFilePath
-
-        cb(null, file)
+        cb()
       })
     )
     .pipe(gulp.dest('./dist'))
