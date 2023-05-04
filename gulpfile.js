@@ -141,9 +141,30 @@ gulp.task(
 )
 
 gulp.task('media:resize', () => {
-  const resize = require('gulp-jimp-resize')
+  const sharp = require('sharp')
   const through = require('through2')
   const path = require('path')
+
+  const resize = async ({ file, image, metadata, key, width }) => {
+    const extension = path.extname(file.path)
+    const fileName = path.basename(file.path, extension)
+    const resizedPath = file.path.replace(
+      `${fileName}${extension}`,
+      `${fileName}-${key}${extension}`
+    )
+
+    let contents = file.contents
+
+    if (metadata.width > width) {
+      contents = await image.resize(width).toBuffer()
+    }
+
+    return {
+      ...file,
+      path: resizedPath,
+      contents
+    }
+  }
 
   return gulp
     .src(['./pages/{,**/}_media/**/*', './pages/**/_examples/**/*.png'], {
@@ -161,32 +182,25 @@ gulp.task('media:resize', () => {
       })
     )
     .pipe(
-      resize({
-        sizes: [
-          {
-            suffix: 'large',
-            width: 680,
-            upscale: false
-          },
-          {
-            suffix: 'medium',
-            width: 546,
-            upscale: false
-          },
-          {
-            suffix: 'small',
-            width: 340,
-            upscale: false
-          }
-        ]
-      })
-    )
-    .pipe(
-      // `base` option seems to be ignored by plugin
-      through.obj((file, enc, cb) => {
+      through.obj(async function (file, enc, cb) {
+        // Work around duplicated files not taking `base` option into account
         file.path = path.relative('./pages', file.path)
 
-        cb(null, file)
+        // Create resized images
+        const image = await sharp(file.contents)
+        const metadata = await image.metadata()
+
+        this.push(
+          await resize({ file, image, metadata, width: 680, key: 'large' })
+        )
+        this.push(
+          await resize({ file, image, metadata, width: 546, key: 'medium' })
+        )
+        this.push(
+          await resize({ file, image, metadata, width: 340, key: 'small' })
+        )
+
+        cb()
       })
     )
     .pipe(gulp.dest('./dist'))
