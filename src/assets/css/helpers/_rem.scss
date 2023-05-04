@@ -103,13 +103,13 @@ $rem-with-px-fallback: true !default;
   @if $to-unit != 'px' {
     // Relative units
     @if $to-unit == 'em' {
-      $output-length: $px-length * 1em / $to-context;
+      $output-length: math.div($px-length * 1em, $to-context);
     } @else if $to-unit == 'rem' {
-      $output-length: $px-length * 1rem / $base-font-size;
+      $output-length: math.div($px-length * 1rem, $base-font-size);
     } @else if $to-unit == '%' {
-      $output-length: $px-length * 100% / $to-context;
+      $output-length: math.div($px-length * 100%, $to-context);
     } @else if $to-unit == 'ex' {
-      $output-length: $px-length * 2ex / $to-context;
+      $output-length: math.div($px-length * 2ex, $to-context);
     }
     // Absolute units
     @else if $to-unit == 'in' {

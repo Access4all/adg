@@ -72,11 +72,11 @@
     "markdown-it-toc-done-right": "^4.2.0",
     "merge-stream": "^2.0.0",
     "minimist": "^1.2.8",
-    "node-sass": "^8.0.0",
     "node-sass-glob-importer": "^5.3.2",
     "normalize-strings": "^1.1.1",
     "postcss": "^8.4.23",
     "prettier": "^2.8.8",
+    "sass": "^1.62.1",
     "sharp": "^0.32.1",
     "sitemap": "^7.1.1",
     "webpack": "^5.82.0"

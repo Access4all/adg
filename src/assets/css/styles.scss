@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 // Settings
 @import 'settings', '../../components/**/*-settings.scss';
 
@@ -18,4 +20,8 @@ pre {
     border: 1px solid #ddd;
     padding: 1em;
   }
+}
+
+body {
+  color: blue;
 }

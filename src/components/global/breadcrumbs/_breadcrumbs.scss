@@ -5,7 +5,7 @@
 
   @include mobile {
     padding-top: $gutter;
-    padding-bottom: $gutter / 4;
+    padding-bottom: math.div($gutter, 4);
   }
 
   h2 {
@@ -55,7 +55,7 @@
 
   &::after {
     content: '/';
-    padding: 0 $gutter / 4;
+    padding: 0 math.div($gutter, 4);
     display: inline-block;
   }
 
