@@ -5,7 +5,7 @@ const frontMatter = require('gulp-front-matter')
 const through = require('through2')
 const fs = require('fs')
 const path = require('path')
-const requireNew = require('require-new')
+const importFresh = require('import-fresh')
 const plumber = require('gulp-plumber')
 const normalize = require('normalize-strings')
 const { SitemapStream, streamToPromise } = require('sitemap')
@@ -127,11 +127,11 @@ const flattenNavigation = items =>
   }, [])
 
 module.exports = (config, cb) => {
-  const datetime = requireNew('./helpers/datetime')
-  const markdown = requireNew('./helpers/markdown')(config.rootDir)
-  const metatags = requireNew('./helpers/metatags')
-  const Feed = requireNew('./helpers/rss')
-  const appConfig = requireNew('../config')
+  const datetime = importFresh('./helpers/datetime')
+  const markdown = importFresh('./helpers/markdown')(config.rootDir)
+  const metatags = importFresh('./helpers/metatags')
+  const Feed = importFresh('./helpers/rss')
+  const appConfig = importFresh('../config')
 
   const files = []
   const sitemap = []

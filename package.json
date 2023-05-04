@@ -57,6 +57,7 @@
     "gulp.spritesmith": "^6.13.0",
     "highlight.js": "^11.8.0",
     "husky": "^8.0.3",
+    "import-fresh": "^3.3.0",
     "jsdom": "^22.0.0",
     "lodash": "^4.17.21",
     "markdown-it": "^13.0.1",
@@ -76,7 +77,6 @@
     "normalize-strings": "^1.1.1",
     "postcss": "^8.4.23",
     "prettier": "^2.8.8",
-    "require-new": "^1.1.1",
     "sharp": "^0.32.1",
     "sitemap": "^7.1.1",
     "webpack": "^5.82.0"
