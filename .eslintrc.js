@@ -1,7 +1,7 @@
 module.exports = {
   extends: ['standard', 'prettier'],
   parserOptions: {
-    ecmaVersion: 6
+    ecmaVersion: 2018
   },
   globals: {
     $: true,
