@@ -10,7 +10,7 @@
     "rebuild": "gulp rebuild",
     "gulp": "gulp",
     "lint": "eslint --fix '**/*.js'",
-    "format": "prettier --write '**/*.js'",
+    "format": "prettier --write '**/*.{js,scss}'",
     "precommit": "npm run lint && npm run format",
     "update": "npx npm-check -u",
     "dev": "node --inspect node_modules/.bin/gulp"

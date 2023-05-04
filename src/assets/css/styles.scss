@@ -1,36 +1,17 @@
-
-
 // Settings
-@import "settings",
-		"../../components/**/*-settings.scss";
+@import 'settings', '../../components/**/*-settings.scss';
 
 // Reset & asics
-@import "vendor/reset",
-    "helpers/clearfix",
-    "helpers/px2percent",
-    "helpers/rem",
-    "helpers/fonts",
-    "helpers/interaction",
-    "icon-sprite",
-	"../../components/**/*-base.scss";
-
+@import 'vendor/reset', 'helpers/clearfix', 'helpers/px2percent', 'helpers/rem',
+  'helpers/fonts', 'helpers/interaction', 'icon-sprite',
+  '../../components/**/*-base.scss';
 
 // Content
-@import "base",
-    "layout",
-    "../../components/**/*!(-base|-settings).scss";
+@import 'base', 'layout', '../../components/**/*!(-base|-settings).scss';
 
-
-
-
-
-
-@import "highlight.js/styles/github";
-
-
+@import 'highlight.js/styles/github';
 
 pre {
-
   code {
     display: block;
     background: #eee;

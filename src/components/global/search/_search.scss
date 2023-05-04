@@ -19,7 +19,7 @@
     position: static !important;
 
     &:after {
-      content: "";
+      content: '';
       display: inline-block;
       @include searchbtn;
       position: absolute;
@@ -123,6 +123,6 @@
   display: none;
 }
 
-label[for="search--input"] {
+label[for='search--input'] {
   display: none;
 }

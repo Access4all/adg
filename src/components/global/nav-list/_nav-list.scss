@@ -1,17 +1,17 @@
 .nav-list {
-	&-main {
-		margin-top: - $gutter / 2;
-		& > .nav-list--item {
-			padding-left: $gutter;
-			& > .nav-list--link {
-				display: block;
-				padding: $gutter / 3 0;
-			}
-		}
-	}
-	&-subnav {
-		margin-left: 20px;
-	}
+  &-main {
+    margin-top: -$gutter / 2;
+    & > .nav-list--item {
+      padding-left: $gutter;
+      & > .nav-list--link {
+        display: block;
+        padding: $gutter / 3 0;
+      }
+    }
+  }
+  &-subnav {
+    margin-left: 20px;
+  }
 }
 .nav-list--item {
   &:last-child {
@@ -23,12 +23,12 @@
   }
 }
 .nav-list--link {
-	display: block;
-	padding: $gutter / 4 0;
+  display: block;
+  padding: $gutter / 4 0;
   position: relative;
   font-weight: 300;
   line-height: 1.25;
-	&-current {
+  &-current {
     @include theme(color, var(--theme-color-dark));
     font-weight: 500;
 
@@ -39,10 +39,11 @@
       left: -0.75em;
       font-weight: bold;
     }
-	}
-	&-active {
-	}
-  &:hover, &:focus {
+  }
+  &-active {
+  }
+  &:hover,
+  &:focus {
     @include theme(color, var(--theme-color-dark));
     text-decoration: underline;
     outline: none;

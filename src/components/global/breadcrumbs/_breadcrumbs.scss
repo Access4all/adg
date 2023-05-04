@@ -9,15 +9,16 @@
   }
 
   h2 {
-  display: inline-block;
-  font-size: 1rem;
-  font-weight: 500;
-  margin-right: 0.25em;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-right: 0.25em;
   }
   @include above-mobile {
     &::after {
       @include navbar_white_line__pseudo;
-      left: -50vw; right: -50vw;
+      left: -50vw;
+      right: -50vw;
       bottom: 0;
       height: 1px;
     }
@@ -27,40 +28,41 @@
   @include l-site_width;
   min-height: $logo_height + 1px; // todo: find out why +1?
   &:before {
-    content: "📍";
+    content: '📍';
     font-size: 1.5em;
     vertical-align: middle;
   }
 }
 
 .breadcrumbs--list {
-    display: inline-block;
-    font-size: 0;
+  display: inline-block;
+  font-size: 0;
 }
 
 .breadcrumbs--list--item {
-    display: inline-block;
+  display: inline-block;
 
-    &:last-of-type {
-        .breadcrumbs--list--item--link::after {
-            display: none;
-        }
+  &:last-of-type {
+    .breadcrumbs--list--item--link::after {
+      display: none;
     }
+  }
 }
 
 .breadcrumbs--list--item--link {
-    font-weight: 300;
-    @include font-xs;
+  font-weight: 300;
+  @include font-xs;
 
-    &::after {
-        content: "/";
-        padding: 0 $gutter / 4;
-        display: inline-block;
-    }
+  &::after {
+    content: '/';
+    padding: 0 $gutter / 4;
+    display: inline-block;
+  }
 
-    &:hover, &:focus {
-      @include theme(color, var(--theme-color-dark));
-      text-decoration: underline;
-      outline: none;
-    }
+  &:hover,
+  &:focus {
+    @include theme(color, var(--theme-color-dark));
+    text-decoration: underline;
+    outline: none;
+  }
 }
