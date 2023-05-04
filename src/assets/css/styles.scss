@@ -9,7 +9,7 @@
 // Content
 @import 'base', 'layout', '../../components/**/*!(-base|-settings).scss';
 
-@import 'highlight.js/styles/github';
+@import 'vendor/github';
 
 pre {
   code {

@@ -3,14 +3,14 @@ const plumber = require('gulp-plumber')
 const through = require('through2')
 const handlebars = require('gulp-hb')
 const frontMatter = require('front-matter')
-const requireNew = require('require-new')
+const importFresh = require('import-fresh')
 const fs = require('fs')
 const path = require('path')
 const babel = require('@babel/core')
 const babelPreset = require('@babel/preset-env')
 
 module.exports = (config, cb) => {
-  const helpers = requireNew('./helpers/examples')
+  const helpers = importFresh('./helpers/examples')
 
   const layout = fs.readFileSync('./src/templates/example.hbs')
 

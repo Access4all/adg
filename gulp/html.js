@@ -5,10 +5,11 @@ const frontMatter = require('gulp-front-matter')
 const through = require('through2')
 const fs = require('fs')
 const path = require('path')
-const requireNew = require('require-new')
+const importFresh = require('import-fresh')
 const plumber = require('gulp-plumber')
 const normalize = require('normalize-strings')
-const { Sitemap } = require('sitemap')
+const { SitemapStream, streamToPromise } = require('sitemap')
+const { Readable } = require('stream')
 const _ = require('lodash')
 const { JSDOM } = require('jsdom')
 
@@ -126,11 +127,11 @@ const flattenNavigation = items =>
   }, [])
 
 module.exports = (config, cb) => {
-  const datetime = requireNew('./helpers/datetime')
-  const markdown = requireNew('./helpers/markdown')(config.rootDir)
-  const metatags = requireNew('./helpers/metatags')
-  const Feed = requireNew('./helpers/rss')
-  const appConfig = requireNew('../config')
+  const datetime = importFresh('./helpers/datetime')
+  const markdown = importFresh('./helpers/markdown')(config.rootDir)
+  const metatags = importFresh('./helpers/metatags')
+  const Feed = importFresh('./helpers/rss')
+  const appConfig = importFresh('../config')
 
   const files = []
   const sitemap = []
@@ -390,7 +391,7 @@ module.exports = (config, cb) => {
       })
     )
     .pipe(gulp.dest('./dist'))
-    .on('finish', () => {
+    .on('finish', async () => {
       // Generate RSS feeds
       const feed = Feed(files)
 
@@ -403,12 +404,13 @@ module.exports = (config, cb) => {
       fs.writeFileSync(config.feed.rss, feed.rss2())
 
       // Generate sitemap
-      const sm = new Sitemap({
-        hostname: config.host,
-        urls: sitemap
+      const sitemapStream = new SitemapStream({
+        hostname: config.host
       })
 
-      const xml = sm.toString()
+      const xml = await streamToPromise(
+        Readable.from(sitemap).pipe(sitemapStream)
+      ).then(data => data.toString())
 
       fs.writeFileSync(config.sitemap, xml)
 

@@ -1,5 +1,5 @@
 const markdownIt = require('markdown-it')
-const requireNew = require('require-new')
+const importFresh = require('import-fresh')
 const path = require('path')
 
 const plugins = {
@@ -32,7 +32,7 @@ module.exports = rootDir => filePath => {
     linkify: true,
     typography: true
   })
-  const examples = requireNew('./examples')
+  const examples = importFresh('./examples')
 
   markdown.validateLink = url => {
     const BAD_PROTO_RE = /^(vbscript|file|data):/
