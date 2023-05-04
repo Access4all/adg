@@ -1,11 +1,11 @@
 class AdgCheckboxAccordion {
-  constructor (el) {
+  constructor(el) {
     this.element = el
     this.triggers = this.element.querySelectorAll('.trigger')
     this.initTriggers()
   }
 
-  initTriggers () {
+  initTriggers() {
     this.triggers.forEach(trigger => {
       const panelId = `${trigger.id}_panel`
       const panel = document.getElementById(panelId)
@@ -25,7 +25,7 @@ class AdgCheckboxAccordion {
     })
   }
 
-  updatePanelVisibility (panel, trigger) {
+  updatePanelVisibility(panel, trigger) {
     panel.style.display = trigger.checked === true ? 'block' : 'none'
   }
 }

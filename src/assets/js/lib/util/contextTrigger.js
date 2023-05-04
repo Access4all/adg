@@ -30,7 +30,7 @@ export default (() => {
     events: []
   }
 
-  function TriggerEvent (selector, callback) {
+  function TriggerEvent(selector, callback) {
     this.selector = selector
     this.callback = callback
     this.processed = false
@@ -124,7 +124,7 @@ export default (() => {
     }
   }
 
-  function matches (el, selector) {
+  function matches(el, selector) {
     return (
       el.matches ||
       el.matchesSelector ||
@@ -135,7 +135,7 @@ export default (() => {
     ).call(el, selector)
   }
 
-  function checkNode (node, result) {
+  function checkNode(node, result) {
     if (!node.contextTriggerProcessed) {
       result.push(node)
     } else {
@@ -149,7 +149,7 @@ export default (() => {
     }
   }
 
-  function checkForNewElements () {
+  function checkForNewElements() {
     // first we loop through all dom elements to see if we find at least
     // one element that's not processed yet
     var i

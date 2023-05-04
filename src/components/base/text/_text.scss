@@ -1,7 +1,6 @@
-
 .richtext {
-	@include richtext(all);
-	& > *:first-child {
-		margin-top: 0;
-	}
+  @include richtext(all);
+  & > *:first-child {
+    margin-top: 0;
+  }
 }

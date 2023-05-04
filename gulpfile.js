@@ -12,7 +12,7 @@ const examples = require('./gulp/examples')
 const concat = require('gulp-concat')
 const changed = require('gulp-changed')
 
-function errorHandler (err) {
+function errorHandler(err) {
   log(err.plugin || '', colors.cyan(err.fileName), colors.red(err.message))
 }
 
@@ -98,7 +98,7 @@ gulp.task('js', cb => {
 gulp.task(
   'media:copy',
   gulp.parallel(
-    function demo () {
+    function demo() {
       return gulp
         .src(
           [
@@ -113,7 +113,7 @@ gulp.task(
         .pipe(changed('./dist'))
         .pipe(gulp.dest('./dist'))
     },
-    function content () {
+    function content() {
       return gulp
         .src(['./pages/{,**/}_media/**/*', './pages/**/*.{png,jpg,mp3}'], {
           base: './pages'
@@ -121,7 +121,7 @@ gulp.task(
         .pipe(changed('./dist'))
         .pipe(gulp.dest('./dist'))
     },
-    function assets () {
+    function assets() {
       return gulp
         .src(['./src/assets/img/**/*'], {
           base: './src/assets'
@@ -129,7 +129,7 @@ gulp.task(
         .pipe(changed('./dist'))
         .pipe(gulp.dest('./dist'))
     },
-    function staticFiles () {
+    function staticFiles() {
       return gulp
         .src(['./pages/**/_static/**/*'], {
           base: './pages'
@@ -234,7 +234,7 @@ gulp.task('rebuild', gulp.series('clean', 'build'))
 
 gulp.task(
   'default',
-  gulp.series('build', function serveAndWatch () {
+  gulp.series('build', function serveAndWatch() {
     browserSync.init({
       server: {
         baseDir: './dist'

@@ -1,13 +1,13 @@
-
 .button {
   background-color: var(--theme-main-color-inverse, $c-white);
   border: 1px solid var(--theme-color-dark);
   color: var(--theme-color-dark);
 
-  padding: .25em .5em;
+  padding: 0.25em 0.5em;
   border-radius: 3px;
   display: inline-block;
-  margin-bottom: .5em; margin-right: .5em;
+  margin-bottom: 0.5em;
+  margin-right: 0.5em;
   &.is-active {
     @include theme(color, var(--theme-color-dark));
     @include theme(background-color, white);

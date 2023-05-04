@@ -13,45 +13,44 @@ $theme-3-light: $c-blue-light;
 $theme-4-dark: $c-black;
 $theme-4-light: $c-white;
 
-
 @mixin theme($property, $color: main) {
   @if ($color == main) {
-    $color: var(--theme-main-color)
+    $color: var(--theme-main-color);
   }
   @if ($color == bg) {
-    $color: var(--theme-bg-color)
+    $color: var(--theme-bg-color);
   }
   @if ($color == 0) {
-    $color: $theme-0-dark
+    $color: $theme-0-dark;
   }
   @if ($color == 1) {
-    $color: $theme-1-dark
+    $color: $theme-1-dark;
   }
   @if ($color == 2) {
-    $color: $theme-2-dark
+    $color: $theme-2-dark;
   }
   @if ($color == 3) {
-    $color: $theme-3-dark
+    $color: $theme-3-dark;
   }
   @if ($color == 4) {
-    $color: $theme-4-dark
+    $color: $theme-4-dark;
   }
   @if ($color == 0_light) {
-    $color: $theme-0-light
+    $color: $theme-0-light;
   }
   @if ($color == 1_light) {
-    $color: $theme-1-light
+    $color: $theme-1-light;
   }
   @if ($color == 2_light) {
-    $color: $theme-2-light
+    $color: $theme-2-light;
   }
   @if ($color == 3_light) {
-    $color: $theme-3-light
+    $color: $theme-3-light;
   }
   @if ($color == 4_light) {
-    $color: $theme-4-light
+    $color: $theme-4-light;
   }
-  transition: #{$property} .6s ease;
+  transition: #{$property} 0.6s ease;
   #{$property}: $color;
 }
 

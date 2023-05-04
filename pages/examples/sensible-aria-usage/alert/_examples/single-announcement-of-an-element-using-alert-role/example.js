@@ -6,4 +6,4 @@
     }
     return setTimeout(sayHello, 10000)
   })
-}.call(this))
+}).call(this)

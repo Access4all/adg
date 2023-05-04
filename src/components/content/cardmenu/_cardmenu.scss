@@ -1,45 +1,44 @@
 .cardmenu {
-
 }
 
 .cardmenu--list--item {
   display: inline-block;
 }
 .cardmenu--list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
 
-    .text_container & {
-      margin: 40px -10px;
-    }
+  .text_container & {
+    margin: 40px -10px;
+  }
 }
 .cardmenu--list--item {
-    display: inline-block;
-    margin: 10px;
-    width: calc(100% / 4 - 20px);
+  display: inline-block;
+  margin: 10px;
+  width: calc(100% / 4 - 20px);
 
-    .text_container & {
-      padding: 0;
+  .text_container & {
+    padding: 0;
 
-      &::before {
-        display: none;
-      }
+    &::before {
+      display: none;
     }
+  }
 
-    @include mobile-narrow {
-      width: calc(100% / 2 - 20px);
-    }
+  @include mobile-narrow {
+    width: calc(100% / 2 - 20px);
+  }
+  @include mobile-portrait {
+    width: calc(100% / 1 - 20px);
+  }
+
+  .cardmenu-default & {
+    width: calc(100% / 2 - 20px);
     @include mobile-portrait {
       width: calc(100% / 1 - 20px);
     }
-
-    .cardmenu-default & {
-      width: calc(100% / 2 - 20px);
-      @include mobile-portrait {
-        width: calc(100% / 1 - 20px);
-      }
-    }
+  }
 }
 .cardmenu--card {
   @include font-xs;
@@ -80,7 +79,6 @@
     }
 
     outline: none;
-
   }
 
   .text_container & {
@@ -99,7 +97,7 @@
   width: auto;
   height: 35px;
   &:after {
-    content: "";
+    content: '';
     display: inline-block;
   }
 }
@@ -138,7 +136,7 @@
 .cardmenu--card-default {
   .cardmenu--card--label {
     display: inline-block;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
     font-weight: 500;
     color: var(--theme-color-dark);
   }
@@ -153,7 +151,7 @@
   .cardmenu--card--icon {
     vertical-align: middle;
     height: 20px;
-     &:after {
+    &:after {
       @include sprite($books);
     }
   }

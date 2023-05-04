@@ -1,10 +1,9 @@
-
 .logo {
   margin-left: $gutter;
   @media (max-width: $navWidthMax + $site-maxWidth) {
     margin-left: ($navWidthMin - $logo_width) / 2;
   }
-	text-decoration: none;
+  text-decoration: none;
   overflow: hidden;
   display: block;
 
@@ -51,6 +50,6 @@
   line-height: 1.05;
   text-transform: uppercase;
   width: 0;
-  padding-left: .5em;
+  padding-left: 0.5em;
   margin: -2px 0;
 }

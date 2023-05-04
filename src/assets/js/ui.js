@@ -9,8 +9,6 @@ modules()
 $(document).ready(function () {
   $('#jump').click(function (e) {
     e.preventDefault()
-    $('#main-content')
-      .attr('tabindex', '-1')
-      .focus()
+    $('#main-content').attr('tabindex', '-1').focus()
   })
 })

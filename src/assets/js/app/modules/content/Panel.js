@@ -9,12 +9,12 @@ import BaseModule from '../BaseModule'
  * @enabled true
  */
 export default class Panel extends BaseModule {
-  constructor () {
+  constructor() {
     super()
     this.ns = BaseModule.ns('Panel')
   }
 
-  init (element) {
+  init(element) {
     var DEFAULTS = {}
     this.$el = $(element)
     this.config = $.extend(true, {}, DEFAULTS)
@@ -27,7 +27,7 @@ export default class Panel extends BaseModule {
     })
 
     this.$el.change(function () {
-      function hideShowPanel (hide, id) {
+      function hideShowPanel(hide, id) {
         var $trigger = $("[for='" + id + "']")
         var $panel = $(`#${id}_panel`)
 

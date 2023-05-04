@@ -10,7 +10,7 @@ import BaseModule from './BaseModule'
  * @enabled true
  */
 export default class Search extends BaseModule {
-  constructor () {
+  constructor() {
     super()
     this.ns = BaseModule.ns('Search')
     // this.config = $.extend(true, {}, DEFAULTS, config || {})
@@ -18,7 +18,7 @@ export default class Search extends BaseModule {
     this.DEFAULT_OPTIONS = {}
   }
 
-  init (element) {
+  init(element) {
     this.$el = $(element)
 
     this.enable()
@@ -26,7 +26,7 @@ export default class Search extends BaseModule {
     return this
   }
 
-  enable () {
+  enable() {
     let ss360Config = {
       siteId: 'accessibility-developer-guide.netlify.com',
       searchBox: {
