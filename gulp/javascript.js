@@ -67,7 +67,7 @@ module.exports = (config, cb) => {
     return cb()
   }
 
-  if (argv.watch) {
+  if (argv.webpackWatch) {
     compiler.watch({}, log)
   } else {
     compiler.run(log)
