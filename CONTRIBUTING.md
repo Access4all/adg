@@ -14,40 +14,34 @@ We use a bunch of nice Open Source tools to make collaboration of both developer
 
 - We use [Node.js](https://github.com/nodejs/node) as JavaScript run-time environment to build the page.
 - All contents are written in clean and sexy Markdown, see [Markdown (Wikipedia.org)](https://en.wikipedia.org/wiki/Markdown).
-    - We use the [markdown-it](https://github.com/markdown-it/markdown-it) parser to have some additional parsing features available.
-    - A table of content can be inserted in any README.md via `[[_TOC_]]` placeholder.
+  - We use the [markdown-it](https://github.com/markdown-it/markdown-it) parser to have some additional parsing features available.
+  - A table of content can be inserted in any README.md via `[[_TOC_]]` placeholder.
 - Thanks to [Netlify](https://www.netlify.com/), the final page is deployed automatically.
 - The search is generously sponsored by [Site Search 360](https://sitesearch360.com/). Thanks, guys!
 
 ## Local setup
 
-Prerequisites: Node >=12 (you may want to use [Node Version Manager](https://github.com/creationix/nvm)).
+Prerequisites: Node >=18 (you may want to use [nvm](https://github.com/nvm-sh/nvm) or [nvm-windows](https://github.com/coreybutler/nvm-windows)).
 
-- Setup: `npm ci`
+- Setup: `npm install`
 - Develop: `npm start`
 
 Happy coding!
 
 ## Netlify
 
-We use [Netlify](https://www.netlify.com/) in the background to build and deploy our pages.
+We use [Netlify](https://www.netlify.com/) to build and deploy our website.
 
-### Branching
+Deployments are happening automatically:
+
+- A production deployment is triggered for every change in `main`.
+- A preview deployment is triggered for every new pull request and the link posted as a comment.
+
+## Branching
 
 Our branching strategy is the following:
 
-- `production` is the Production branch and reflects the state of the Live website
-- `master` is the default branch and the one used for current development. Any feature/bugfix starts from it and is merged back to it once approved. Single commits can still be cherry-picked into `production` if needed
-- a `feature/meaningful-short-description` branch is created whenever a new feature is started
-- a `bugfix/meaningful-short-description` branch is created whenever a new bugfix is started
-
-### Production deployment
-
-- a Production deployment is triggered by merging `master` into `production`
-- before merging, a proper tag, based on the [semantic versioning](https://semver.org/), is created
-
-This allows to quickly revert a broken deployment.
-
-### Feature/bugfix testing deployment
-
-- a new pull request automatically trigger a build of the related branch
+- `main` is the default branch and reflects the state of the live website.
+- Any feature/bugfix starts from `main` and is merged back to it once approved:
+  - A `feature/meaningful-short-description` branch is created whenever a new feature is started
+  - A `bugfix/meaningful-short-description` branch is created whenever a new bugfix is started
