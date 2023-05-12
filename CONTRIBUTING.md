@@ -23,7 +23,7 @@ We use a bunch of nice Open Source tools to make collaboration of both developer
 
 Prerequisites: Node >=18 (you may want to use [nvm](https://github.com/nvm-sh/nvm) or [nvm-windows](https://github.com/coreybutler/nvm-windows)).
 
-- Setup: `npm install`
+- Setup: `npm ci`
 - Develop: `npm start`
 
 Happy coding!
