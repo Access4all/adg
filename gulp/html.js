@@ -13,10 +13,13 @@ const { Readable } = require('stream')
 const _ = require('lodash')
 const { JSDOM } = require('jsdom')
 
+const pathSeparatorRegExp = new RegExp('\\' + path.sep, 'g')
+
 const getUrl = (filePath, base) => {
   return path
     .relative(base, filePath)
     .replace(path.basename(filePath), '')
+    .replace(pathSeparatorRegExp, '/')
     .replace(/\/$/, '')
 }
 
@@ -231,10 +234,9 @@ module.exports = (config, cb) => {
           try {
             const layout = getLayout(file.frontMatter.layout, layouts)
             const relPath = path.relative('./pages', file.path)
-            const currentUrl = relPath.substring(
-              0,
-              relPath.lastIndexOf(path.sep)
-            )
+            const currentUrl = relPath
+              .substring(0, relPath.lastIndexOf(path.sep))
+              .replace(pathSeparatorRegExp, '/')
             const prevNext = {}
             const breadcrumb = []
             const subPages = []
@@ -300,7 +302,7 @@ module.exports = (config, cb) => {
           return path
             .relative('./src/components', file.path)
             .replace(path.extname(file.path), '')
-            .replace(new RegExp('\\' + path.sep, 'g'), '/')
+            .replace(pathSeparatorRegExp, '/')
         },
         helpers: {
           formatDate: datetime.formatDate,
