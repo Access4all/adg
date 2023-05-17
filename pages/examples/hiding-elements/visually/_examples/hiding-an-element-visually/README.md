@@ -9,7 +9,7 @@ compatibility:
       status: pass
       date: 2018-03-27
   JAWS:
-    2018.3 + IE 11:
+    2018.3 + Edge:
       status: pass
       date: 2018-03-26
     2018.3 + FF ESR 52.7.3:
