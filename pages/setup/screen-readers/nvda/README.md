@@ -146,7 +146,7 @@ You can disable that:
 
 The [visual highlight setting](https://www.nvaccess.org/files/nvda/documentation/userGuide.html#VisionFocusHighlight) enables indicating where NVDA's internal cursor currently is on the screen — an invaluable help for sighted users.
 
-![The visual highlight setting in action](_media/the-focushighlight-add-on-in-action.png)
+![The visual highlight setting in action](_media/nvda-focus-highlighting.png)
 
 
 ## Add-ons
