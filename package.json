@@ -9,8 +9,8 @@
     "build": "gulp build",
     "rebuild": "gulp rebuild",
     "gulp": "gulp",
-    "lint": "eslint --fix '**/*.js'",
-    "format": "prettier --write '**/*.{js,scss}'",
+    "lint": "eslint --fix \"**/*.js\"",
+    "format": "prettier --write \"**/*.{js,scss}\"",
     "update": "npx npm-check -u",
     "prepare": "husky install"
   },
