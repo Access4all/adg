@@ -12,7 +12,7 @@ In addition to using issues and PRs to dicuss topics, we use Slack for general c
 
 We use a bunch of nice Open Source tools to make collaboration of both developers and content editors as easy as possible:
 
-- We use [Node.js](https://github.com/nodejs/node) as JavaScript run-time environment to build the page.
+- We use [Node.js](https://nodejs.org/) as JavaScript run-time environment to build the page.
 - All contents are written in clean and sexy Markdown, see [Markdown (Wikipedia.org)](https://en.wikipedia.org/wiki/Markdown).
   - We use the [markdown-it](https://markdown-it.github.io/) parser to have some additional parsing features available.
   - A table of content can be inserted in any README.md via `[[_TOC_]]` placeholder.
