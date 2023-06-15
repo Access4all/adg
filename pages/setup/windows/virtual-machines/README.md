@@ -12,7 +12,7 @@ changed: "2021-03-22"
 
 ## Download
 
-The available virtual machines can be [downloaded on Microsoft's website](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/). Get the **"MSEdge on Windows 10"** virtual machine for your desired VM platform. We describe the setup with [VMWare on macOs](/setup/windows/vmware-on-macos/), [Windows and Linux](/setup/windows/vmware-on-windows-linux/), but you can use whatever VM platform you are familiar with.
+The available virtual machines can be [downloaded on Microsoft's website](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/). We describe the setup with [VMWare on macOs](/setup/windows/vmware-on-macos/), [Windows and Linux](/setup/windows/vmware-on-windows-linux/), but you can use whatever VM platform you are familiar with.
 
 The VMs are meant to be used for testing purposes only.
 
