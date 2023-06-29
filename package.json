@@ -55,7 +55,6 @@
     "gulp-sass": "^5.1.0",
     "gulp.spritesmith": "^6.13.0",
     "highlight.js": "^11.8.0",
-    "husky": "^8.0.3",
     "import-fresh": "^3.3.0",
     "jsdom": "^22.0.0",
     "lint-staged": "^13.2.2",
