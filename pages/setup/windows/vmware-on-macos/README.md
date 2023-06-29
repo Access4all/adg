@@ -1,7 +1,7 @@
 ---
 navigation_title: "VMware on macOS"
 position: 3
-changed: "2021-03-22"
+changed: "2023-06-29"
 ---
 
 # Configuring VMware Fusion on macOS
@@ -11,6 +11,10 @@ changed: "2021-03-22"
 [[_TOC_]]
 
 ![VMware Fusion logo](_media/vmware-fusion-logo.png)
+
+## IMPORTANT NOTE regarding M1/M2 ARM processors
+
+The options for Windows VMs on Apple M1 and M2 chips seem to be [very limited at the time of writing](https://support.microsoft.com/en-us/windows/options-for-using-windows-11-with-mac-computers-with-apple-m1-and-m2-chips-cd15fd62-9b34-4b78-b0bc-121baa3c568c). We have been successful with Parallels Desktop only.
 
 ## Preparing the virtual machine
 
