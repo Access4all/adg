@@ -5,7 +5,7 @@ module.exports = (origPages = []) => {
 
   // Sort by date
   const pages = origPages.sort((a, b) => {
-    return a.data.changed - b.data.changed
+    return new Date(b.data.changed) - new Date(a.data.changed)
   })
 
   const feed = new Feed({
