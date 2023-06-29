@@ -12,6 +12,10 @@ changed: "2021-03-22"
 
 ![VMware Fusion logo](_media/vmware-fusion-logo.png)
 
+## IMPORTANT NOTE regarding M1/M2 ARM processors
+
+The options for Windows VMs on Apple M1 and M2 chips seem to be [very limited at the time of writing](https://support.microsoft.com/en-us/windows/options-for-using-windows-11-with-mac-computers-with-apple-m1-and-m2-chips-cd15fd62-9b34-4b78-b0bc-121baa3c568c). We have been successful with Parallels Desktop only.
+
 ## Preparing the virtual machine
 
 Before you proceed, be sure you have downloaded a pre-configured virtual machine (VM) as described here: [Getting a free Windows virtual machine from Microsoft](/setup/windows/virtual-machines).
