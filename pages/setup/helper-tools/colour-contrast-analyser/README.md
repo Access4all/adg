@@ -1,7 +1,7 @@
 ---
-navigation_title: "Colour Contrast Analyser"
+navigation_title: 'Colour Contrast Analyser'
 position: 1
-changed: "2018-04-02"
+changed: '2018-04-02'
 ---
 
 # Colour Contrast Analyser

@@ -1,7 +1,7 @@
 ---
-navigation_title: "Relevant combinations"
+navigation_title: 'Relevant combinations'
 position: 2
-changed: "2020-04-07"
+changed: '2020-04-07'
 ---
 
 # Relevant combinations of screen readers and browsers
@@ -74,7 +74,7 @@ Respondents with disabilities used iOS devices at a higher rate than those witho
 
 While most screen reader users now use mobile devices, still almost half of the respondents (41.3%) say that they are using a screen reader on a desktop/laptop computer most often.
 
-The responses to the question "Which of the following desktop/laptop screen readers do you commonly use?" clearly tell us that  NVDA (72.4%) and JAWS (61.7%) are the most popular desktop/laptop screen readers, followed by VoiceOver/macOS (47.1%). Very interestingly, those figures underline many users do use more than one screen reader.
+The responses to the question "Which of the following desktop/laptop screen readers do you commonly use?" clearly tell us that NVDA (72.4%) and JAWS (61.7%) are the most popular desktop/laptop screen readers, followed by VoiceOver/macOS (47.1%). Very interestingly, those figures underline many users do use more than one screen reader.
 
 Regarding the question, which browser is used with the user's desktop/laptop primary screen reader, the survey results show that Chrome (44.4%), FF (27.4%) are the prevailing browsers, followed by IE 11 (10.9%) and Safari (9.8%).
 
@@ -105,11 +105,11 @@ To make the whole topic even more complex, we could ask for combinations of spec
 Even though having current versions of both screen readers and browsers available is essential for users with special needs, we are aware that many of them keep running legacy versions. This is due to various reasons:
 
 - Many commercial screen readers are very expensive, and license upgrades are affordable only every few years for a lot of users.
-    - Even health insurance or social security often do not guarantee their clients to keep their assistive technology equipment up to date: in Switzerland, the invalidity insurance does not sponsor new JAWS licenses at the intervals needed.
+  - Even health insurance or social security often do not guarantee their clients to keep their assistive technology equipment up to date: in Switzerland, the invalidity insurance does not sponsor new JAWS licenses at the intervals needed.
 - When it comes to installing, configuring, and updating their software, many users with special needs are dependent on assistance.
-    - Most users with special needs aren't "digital natives" and are thankful if something "just works".
-        - This may change in the future, as people with special needs begin to realise the vast potential of modern technology and the impact it can have on their lives.
-    - Much software needed to run assistive devices is not built accessibly itself, making it hard or even impossible to be self-managed by users with special needs.
+  - Most users with special needs aren't "digital natives" and are thankful if something "just works".
+    - This may change in the future, as people with special needs begin to realise the vast potential of modern technology and the impact it can have on their lives.
+  - Much software needed to run assistive devices is not built accessibly itself, making it hard or even impossible to be self-managed by users with special needs.
 
 As it is not feasible to test dozens of possible software versions, we follow a pragmatic way which is to test always the newest stable versions of both browsers and screen readers.
 

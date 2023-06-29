@@ -35,17 +35,17 @@
   margin: 0;
 }
 [data-adg-autosuggest-alerts] kbd::before {
-  content: "«";
+  content: '«';
 }
 [data-adg-autosuggest-alerts] kbd::after {
-  content: "»";
+  content: '»';
 }
 
 .control {
   margin: 6px 0;
 }
 
-input[type="text"] {
+input[type='text'] {
   width: 140px;
 }
 

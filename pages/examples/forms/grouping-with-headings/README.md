@@ -1,7 +1,7 @@
 ---
-navigation_title: "Grouping with headings"
+navigation_title: 'Grouping with headings'
 position: 5
-changed: "2018-05-03"
+changed: '2018-05-03'
 ---
 
 # Grouping form controls with headings

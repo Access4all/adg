@@ -13,15 +13,16 @@ table {
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   border-top: 1px solid;
   border-right: 1px solid;
   padding: 4px 8px;
 }
 
-th[scope="row"] {
+th[scope='row'] {
   background-color: lightgreen;
 }
-th[scope="col"] {
+th[scope='col'] {
   background-color: lightpink;
 }

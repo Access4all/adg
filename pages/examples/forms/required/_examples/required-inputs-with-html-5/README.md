@@ -1,5 +1,5 @@
 ---
-title: "Required inputs with HTML 5 and ARIA"
+title: 'Required inputs with HTML 5 and ARIA'
 compatibility:
   Keyboard only:
     status: pass

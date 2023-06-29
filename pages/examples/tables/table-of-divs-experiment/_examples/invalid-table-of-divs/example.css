@@ -7,7 +7,8 @@
   display: flex;
 }
 
-.th, .td {
+.th,
+.td {
   border-top: 1px solid;
   border-right: 1px solid;
   padding: 4px 8px;
@@ -17,10 +18,10 @@
 .th {
   font-weight: bold;
 }
-.th[role="rowheader"] {
+.th[role='rowheader'] {
   background-color: lightgreen;
 }
-.th[role="columnheader"] {
+.th[role='columnheader'] {
   background-color: lightpink;
 }
 

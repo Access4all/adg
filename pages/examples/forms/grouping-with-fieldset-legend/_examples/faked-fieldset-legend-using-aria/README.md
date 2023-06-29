@@ -1,5 +1,5 @@
 ---
-title: "Faked fieldset/legend using ARIA"
+title: 'Faked fieldset/legend using ARIA'
 compatibility:
   Keyboard only:
     status: pass

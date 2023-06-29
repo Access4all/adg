@@ -1,5 +1,5 @@
 ---
-title: "HTML 5 headings outline with ARIA level fixes"
+title: 'HTML 5 headings outline with ARIA level fixes'
 compatibility:
   Keyboard only:
     status: pass

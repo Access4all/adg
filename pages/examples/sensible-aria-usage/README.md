@@ -1,7 +1,7 @@
 ---
-navigation_title: "Sensible ARIA usage"
+navigation_title: 'Sensible ARIA usage'
 position: 7
-changed: "2021-09-22"
+changed: '2021-09-22'
 ---
 
 # Sensible usage of ARIA roles and attributes

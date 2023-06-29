@@ -1,5 +1,5 @@
 ---
-title: "Marking elements using visually hidden text"
+title: 'Marking elements using visually hidden text'
 compatibility:
   Keyboard only:
     status: pass

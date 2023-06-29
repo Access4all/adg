@@ -1,5 +1,5 @@
 ---
-title: "Form validation with messages on top"
+title: 'Form validation with messages on top'
 compatibility:
   Keyboard only:
     status: pass

@@ -1,5 +1,5 @@
 ---
-title: "Table with visually hidden headers in narrow view"
+title: 'Table with visually hidden headers in narrow view'
 compatibility:
   Keyboard only:
     status: pass

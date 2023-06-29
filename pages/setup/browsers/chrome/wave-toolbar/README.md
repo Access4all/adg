@@ -1,7 +1,7 @@
 ---
-navigation_title: "WAVE toolbar"
+navigation_title: 'WAVE toolbar'
 position: 1
-changed: "2018-04-06"
+changed: '2018-04-06'
 ---
 
 # WAVE toolbar

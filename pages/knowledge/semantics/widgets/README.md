@@ -1,7 +1,7 @@
 ---
-navigation_title: "Widgets"
+navigation_title: 'Widgets'
 position: 3
-changed: "2021-09-22"
+changed: '2021-09-22'
 ---
 
 # Widgets simply working for all
@@ -22,7 +22,13 @@ Instead of re-inventing the wheel by creating our own tablist implementation usi
 <div class="tablist">
   <fieldset>
     <legend>Tablist controls</legend>
-    <input type="radio" name="tablist" value="dancing" id="dancing_label" checked />
+    <input
+      type="radio"
+      name="tablist"
+      value="dancing"
+      id="dancing_label"
+      checked
+    />
     <label for="dancing_label">Dancing</label>
 
     <input type="radio" name="tablist" value="soccer" id="soccer_label" />
@@ -45,7 +51,7 @@ It is not always as easy as with tablists. But the approach of using standard HT
 It may feel a bit weird (if not to say: blasphemic) to use radio buttons as a tablist. But actually, the majority of users (those with good vision) will never even become aware of the radio buttons, as these are acting completely behind the scenes, and it "just works", out of the box, with minimal effort. So in the end, this is a huge plus in many aspects, be it usability, accessibility, readability of code (and thus maintainability), or performance.
 
 For screen reader users, this approach may be a bit surprising in the first place. They might wonder: "Why is there a group of radio buttons? I'm not inside a form, am I?" To alleviate this, we can make the element more self-explanatory by improving the label texts for screen readers, ie. "Show panel Dancing" (instead of just "Dancing"). And as radio buttons are not tied to a `<form>` element, they can exist anywhere in a website anyway. In general we can say: screen reader users are so much used to encounter inaccessible widgets on a daily basis that they will be very happy that our implementation just does the job for them.
-  
+
 ## ARIA - Pushing accessibility to the max
 
 If you want to provide an even more accessible experience to screen reader users, you are welcome to use the Accessible Rich Internet Application (ARIA) standard which is aimed to implement widgets that are 100% optimised for screen readers. Just read on, please.

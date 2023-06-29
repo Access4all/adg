@@ -10,7 +10,8 @@ tbody th {
   background-color: lightgreen;
 }
 
-th, td {
+th,
+td {
   border: 1px solid;
 }
 
@@ -20,7 +21,9 @@ th, td {
     border-bottom: 1px solid;
   }
 
-  caption, tr, tbody {
+  caption,
+  tr,
+  tbody {
     display: block;
   }
 
@@ -33,7 +36,8 @@ th, td {
     overflow: hidden;
   }
 
-  td, th {
+  td,
+  th {
     border-bottom: 0;
     padding: 4px 8px;
     display: block;

@@ -1,7 +1,7 @@
 ---
-navigation_title: "HTML 5 outline"
+navigation_title: 'HTML 5 outline'
 position: 7
-changed: "2018-05-01"
+changed: '2018-05-01'
 ---
 
 # HTML 5's headings outline algorithm

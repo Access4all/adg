@@ -1,5 +1,5 @@
 ---
-title: "Marking an element expandable using aria-haspopup"
+title: 'Marking an element expandable using aria-haspopup'
 compatibility:
   Keyboard only:
     status: pass

@@ -1,7 +1,7 @@
 ---
-navigation_title: "Alternative techniques"
+navigation_title: 'Alternative techniques'
 position: 6
-changed: "2018-05-01"
+changed: '2018-05-01'
 ---
 
 # Alternative techniques for labelling page regions
@@ -25,11 +25,11 @@ So you should always provide a proper headings outline which covers all regions 
 Since HTML 5 there are some new containers that provide semantical context:
 
 - `<header>` is meant to contain header info.
-    - For example a page's logo, slogan, etc.
+  - For example a page's logo, slogan, etc.
 - `<main>` is meant to contain the main content of a page.
-    - For example, on a website with cooking recipes, a page showing a single recipe would contain exactly that recipe in the `<main>` container (but not any additional page areas like header, navigation, or footer).
+  - For example, on a website with cooking recipes, a page showing a single recipe would contain exactly that recipe in the `<main>` container (but not any additional page areas like header, navigation, or footer).
 - `<footer>` is meant to contain footer info.
-    - For example links to a page's disclaimer, copyright info, etc.
+  - For example links to a page's disclaimer, copyright info, etc.
 - There are a few more of those containers, like `<article>` or `<aside>`, but let's not bother about them right now.
 
 In screen reader talk, these elements usually are called landmarks. Theoretically speaking, landmarks are a valid alternative to traditional headings when it comes to labelling page regions, as screen readers can convey them to the user.

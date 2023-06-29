@@ -1,7 +1,7 @@
 ---
-navigation_title: "Responsive"
+navigation_title: 'Responsive'
 position: 7
-changed: "2018-04-16"
+changed: '2018-04-16'
 ---
 
 # Responsive tables

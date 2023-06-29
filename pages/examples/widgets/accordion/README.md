@@ -1,7 +1,7 @@
 ---
-navigation_title: "Accordion"
+navigation_title: 'Accordion'
 position: 8
-changed: "2021-09-22"
+changed: '2021-09-22'
 ---
 
 # Accordions
@@ -41,7 +41,7 @@ A link with an `aria-expanded="true"` attribute is placed around each panel’s 
 While this may feel tempting in some circumstances, there are several drawbacks:
 
 - It needs more JavaScript (instead of relying on browser standard behaviour).
-    - The current implementation allows multiple elements to be open. If you wanted to restrict it to one element though, a lot of additional JavaScript would be needed to manage states - something that radio buttons would offer "for free".
+  - The current implementation allows multiple elements to be open. If you wanted to restrict it to one element though, a lot of additional JavaScript would be needed to manage states - something that radio buttons would offer "for free".
 - This solution is less intuitive: a screen reader announcement "link X collapsed" is less expressive than "show panel X checkbox not checked" or "show panel X radio button not checked 2 of 3".
 - Missing backwards compatibility for older clients with incomplete/missing ARIA support.
 
@@ -56,9 +56,8 @@ This implementation is based on the [tablists’ proof of concept](/examples/wid
 Some interesting peculiarities:
 
 - Using `.accordion:focus-within .control label`, a style can be applied to all radio button labels upon interacting with the accordion.
-    - This gives users a clue that they are interacting with a single control now (indicating to use the `Arrow` keys instead of `Tab` to navigate through accordion items).
-    - If you would rather like to make each control focusable on its own, you could use a group of checkboxes instead of radio buttons.
-          - Do not forget to make sure only one of them is checked at a time though (using some JavaScript).
+  - This gives users a clue that they are interacting with a single control now (indicating to use the `Arrow` keys instead of `Tab` to navigate through accordion items).
+  - If you would rather like to make each control focusable on its own, you could use a group of checkboxes instead of radio buttons. - Do not forget to make sure only one of them is checked at a time though (using some JavaScript).
 
 ### Checkboxes implementation
 
@@ -71,7 +70,7 @@ This implementation is based on the [tablists’ proof of concept](/examples/wid
 Some interesting peculiarities:
 
 - Checkboxes replace the radio buttons to offer multiple selection.
-    - We waived using a `<fieldset>`/`<legend>` structure, as this is no traditional group of checkboxes, and JAWS tends to be very wordy with focusable items nested within those, see [Grouping form controls with fieldset and legend](/examples/forms/grouping-with-fieldset-legend).
+  - We waived using a `<fieldset>`/`<legend>` structure, as this is no traditional group of checkboxes, and JAWS tends to be very wordy with focusable items nested within those, see [Grouping form controls with fieldset and legend](/examples/forms/grouping-with-fieldset-legend).
 - By default, only the `Space` key is used to toggle a checkbox (while pressing `Enter` submits a form).
-    - To make it more intuitive for visual users (who do not know about any checkbox behind the scenes, and thinking they are interacting with a link or button), the `Enter` key was re-wired to also toggle the checkboxes.
+  - To make it more intuitive for visual users (who do not know about any checkbox behind the scenes, and thinking they are interacting with a link or button), the `Enter` key was re-wired to also toggle the checkboxes.
 - In contrast to the radio button solution above, we omitted a visual `.accordion:focus-within .control label` state for the accordion items, as checkboxes are individual controls and (thereby accessed by the `Tab` key, as most users would expect).

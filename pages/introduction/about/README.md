@@ -1,7 +1,7 @@
 ---
-navigation_title: "About"
+navigation_title: 'About'
 position: 2
-changed: "2019-11-12"
+changed: '2019-11-12'
 ---
 
 # About this initiative

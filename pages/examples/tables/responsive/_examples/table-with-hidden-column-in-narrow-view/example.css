@@ -10,7 +10,8 @@ tbody th {
   background-color: lightgreen;
 }
 
-th, td {
+th,
+td {
   border: 1px solid;
 }
 

@@ -1,5 +1,5 @@
 ---
-title: "HTML 5 headings outline"
+title: 'HTML 5 headings outline'
 compatibility:
   Keyboard only:
     status: pass

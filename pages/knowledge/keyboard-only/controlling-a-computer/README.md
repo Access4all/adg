@@ -1,7 +1,7 @@
 ---
-navigation_title: "Controlling a computer"
+navigation_title: 'Controlling a computer'
 position: 1
-changed: "2018-04-12"
+changed: '2018-04-12'
 ---
 
 # Controlling a computer with a keyboard only
@@ -40,7 +40,7 @@ Hints about application specific keyboard shortcuts usually are displayed to the
 
 ### Quick keys
 
-In some menus, a specific character of an item name is __underlined__: if the menu is open and focused, this means you can quickly activate the item using this key.
+In some menus, a specific character of an item name is **underlined**: if the menu is open and focused, this means you can quickly activate the item using this key.
 
 ![Preferences menu of NVDA](_media/preferences-menu-of-nvda.png)
 

@@ -1,5 +1,5 @@
 ---
-title: "Form controls with labels in a table"
+title: 'Form controls with labels in a table'
 compatibility:
   Keyboard only:
     status: pass

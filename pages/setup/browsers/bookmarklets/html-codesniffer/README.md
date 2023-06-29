@@ -1,7 +1,7 @@
 ---
-navigation_title: "HTML_CodeSniffer"
+navigation_title: 'HTML_CodeSniffer'
 position: 3
-changed: "2018-04-06"
+changed: '2018-04-06'
 ---
 
 # HTML_CodeSniffer

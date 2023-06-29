@@ -1,7 +1,7 @@
 ---
-navigation_title: "PDF Accessibility Checker"
+navigation_title: 'PDF Accessibility Checker'
 position: 2
-changed: "2018-04-06"
+changed: '2018-04-06'
 ---
 
 # PDF Accessibility Checker

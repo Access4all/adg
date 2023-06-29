@@ -1,5 +1,5 @@
 ---
-title: "Multi accordion with checkboxes"
+title: 'Multi accordion with checkboxes'
 compatibility:
   Keyboard only:
     status: pass

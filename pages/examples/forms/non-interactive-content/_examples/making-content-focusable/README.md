@@ -1,5 +1,5 @@
 ---
-title: "Making content focusable"
+title: 'Making content focusable'
 compatibility:
   Keyboard only:
     status: pass

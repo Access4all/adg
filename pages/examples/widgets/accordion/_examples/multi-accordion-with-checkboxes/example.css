@@ -25,28 +25,28 @@
   background-color: lightyellow;
 }
 .header label::before {
-  content: "+";
+  content: '+';
   display: inline-block;
   width: 0.75em;
   font-weight: normal;
 }
 
-input[type="checkbox"]:checked + h2 label {
+input[type='checkbox']:checked + h2 label {
   border-bottom-color: lightyellow;
   position: relative;
 }
-input[type="checkbox"]:checked + h2 label::before {
-  content: "-";
+input[type='checkbox']:checked + h2 label::before {
+  content: '-';
 }
 
 .accordion a:focus,
 .accordion input:focus,
-.accordion input[type="checkbox"]:focus + h2 label {
+.accordion input[type='checkbox']:focus + h2 label {
   outline: 2px dotted red;
   outline-offset: 2px;
 }
 
-input[type="checkbox"] + h2 label:hover {
+input[type='checkbox'] + h2 label:hover {
   cursor: pointer;
   text-decoration: underline;
 }

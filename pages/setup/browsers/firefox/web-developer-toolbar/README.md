@@ -1,7 +1,7 @@
 ---
-navigation_title: "Web Developer toolbar"
+navigation_title: 'Web Developer toolbar'
 position: 1
-changed: "2018-05-10"
+changed: '2018-05-10'
 ---
 
 # Web Developer toolbar
@@ -35,11 +35,11 @@ By removing all visual properties, only bare HTML is left, and the available sem
 There are some clear shortcomings to this approach though, for example:
 
 - Images are still displayed visually, so be careful that a proper alternative text is present.
-    - You can use `Images` -> `Display Alt Attributes` to make up for this.
+  - You can use `Images` -> `Display Alt Attributes` to make up for this.
 - Elements that are hidden from all devices using `display: none` or `visibility: hidden`, are now unhidden.
-    - To prevent this, instead use HTML's `hidden` attribute to hide elements (if you are really curious and want to learn more about this, skip forward and read [Hiding elements from all devices](/examples/hiding-elements/from-all-devices)).
+  - To prevent this, instead use HTML's `hidden` attribute to hide elements (if you are really curious and want to learn more about this, skip forward and read [Hiding elements from all devices](/examples/hiding-elements/from-all-devices)).
 - ARIA attributes do not have any visual representation and are completely missed this way (if you are really curious and want to learn more about this, skip forward and read [ARIA — when HTML simply is not enough](/knowledge/aria)).
-    - To prevent this, keep usage of ARIA to a minimum (if you are really curious and want to learn more about this, skip forward and read [Sensible usage of ARIA roles and attributes](/examples/sensible-aria-usage)).
+  - To prevent this, keep usage of ARIA to a minimum (if you are really curious and want to learn more about this, skip forward and read [Sensible usage of ARIA roles and attributes](/examples/sensible-aria-usage)).
 - Newly added CSS will not be prevented (for example when interacting with the page through some JavaScript).
 
 So while this is a valid way to quickly get a rough idea about a page, it by far is never a substitute to testing with a real screen reader.

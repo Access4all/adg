@@ -1,7 +1,7 @@
 ---
-navigation_title: "Colour is not enough"
+navigation_title: 'Colour is not enough'
 position: 6
-changed: "2019-12-15"
+changed: '2019-12-15'
 ---
 
 # Colour is not enough
@@ -12,11 +12,11 @@ changed: "2019-12-15"
 
 ## Limitations of colour contrast
 
-Colour is a great tool for separating foreground from background. However, there are many cases where being visible against a background is not enough. Different elements of a user interface or a component also have to be distinguishable *from each other.* And while finding a combination of two colours with sufficient contrast is easy, finding three, four or even more colours with sufficient contrast from each other quickly becomes impractical if not impossible. 
+Colour is a great tool for separating foreground from background. However, there are many cases where being visible against a background is not enough. Different elements of a user interface or a component also have to be distinguishable _from each other._ And while finding a combination of two colours with sufficient contrast is easy, finding three, four or even more colours with sufficient contrast from each other quickly becomes impractical if not impossible.
 
 The [Web Content Accessibility Guidelines' rule on the use of colour](https://www.w3.org/TR/WCAG21/#use-of-color) therefore states:
 
-> Colour is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element. 
+> Colour is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.
 
 ## Example: current page indicator
 
@@ -24,7 +24,7 @@ The following picture shows a navigation bar that could be placed at the top of 
 
 ![navigation bar with one active item, visually differentiated by its blue text colour](_media/nav-with-active-colour.png)
 
-While all the labels have sufficient contrast against the white background, the colour of the active "Shop" label and the colour of the inactive labels around it only have a contrast ratio of `1.7:1`. This is how this same navigation would look in grayscale. 
+While all the labels have sufficient contrast against the white background, the colour of the active "Shop" label and the colour of the inactive labels around it only have a contrast ratio of `1.7:1`. This is how this same navigation would look in grayscale.
 
 ![the same navigation bar with one active item but monochrome](_media/nav-with-active-colour-bw.png)
 
@@ -52,7 +52,7 @@ Visual charts are a frequent example where colours are used to convey meaning. F
 
 ![Pie chart with three colour-coded sections, labelled in a separate legend](_media/pie-chart-only-colour.png)
 
-The three colours of the pie chart don't have enough contrast against the white background. And just as important in this case is the fact that they also don't have enough contrast *against each other*.
+The three colours of the pie chart don't have enough contrast against the white background. And just as important in this case is the fact that they also don't have enough contrast _against each other_.
 
 - Red/orange = `1.5:1`
 - Orange/yellow = `1.4:1`
@@ -74,4 +74,4 @@ Or in charts as simple as this one it's also possible to forego a separate legen
 
 ![The same pie chart, without patterns but with the labels placed inside the three sections](_media/pie-chart-colour-outline-labels-inline.png)
 
-Obviously, not all charts are as simple as this example. For more complex information graphics it's fine (or even necessary) to focus on the elements which are essential to understand the message of the visualisation. 
+Obviously, not all charts are as simple as this example. For more complex information graphics it's fine (or even necessary) to focus on the elements which are essential to understand the message of the visualisation.

@@ -1,7 +1,7 @@
 ---
-navigation_title: "Good example"
+navigation_title: 'Good example'
 position: 2
-changed: "2020-04-30"
+changed: '2020-04-30'
 ---
 
 # General good form example

@@ -1,5 +1,5 @@
 ---
-title: "Table with smaller elements in narrow view"
+title: 'Table with smaller elements in narrow view'
 compatibility:
   Keyboard only:
     status: pass

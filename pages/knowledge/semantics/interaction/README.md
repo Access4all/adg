@@ -1,7 +1,7 @@
 ---
-navigation_title: "Interaction"
+navigation_title: 'Interaction'
 position: 2
-changed: "2018-04-12"
+changed: '2018-04-12'
 ---
 
 # Semantics support interaction
@@ -17,9 +17,7 @@ Let's look at this topic based on the example of the tag that made the internet 
 As you can see, the following link is properly implemented using the `<a>` tag:
 
 ```html
-<a href="http://www.google.com">
-  Google
-</a>
+<a href="http://www.google.com"> Google </a>
 ```
 
 ![Screenshot of a link](_media/screenshot-of-a-link.png)
@@ -49,9 +47,7 @@ Many web developers still aren't aware of the importance of semantics and do not
 
 ```html
 <!-- Onclick would change window.location using some fancy JavaScript! -->
-<span class="link" onclick="...">
-  Google
-</span>
+<span class="link" onclick="..."> Google </span>
 ```
 
 ![Screenshot of a fake link](_media/screenshot-of-a-faked-link.png)

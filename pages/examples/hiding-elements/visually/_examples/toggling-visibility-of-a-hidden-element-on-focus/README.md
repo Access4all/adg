@@ -1,5 +1,5 @@
 ---
-title: "Toggling visibility of a hidden element on focus"
+title: 'Toggling visibility of a hidden element on focus'
 compatibility:
   Keyboard only:
     status: pass

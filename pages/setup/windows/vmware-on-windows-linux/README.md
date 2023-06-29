@@ -1,7 +1,7 @@
 ---
-navigation_title: "VMware on Windows & Linux"
+navigation_title: 'VMware on Windows & Linux'
 position: 4
-changed: "2021-03-22"
+changed: '2021-03-22'
 ---
 
 # Configuring VMware Workstation Pro on Windows (and Linux)
@@ -30,13 +30,13 @@ After downloading VMware Workstation Pro, installing and launching it:
 
 - Click `Open a virtual machine`, select the `*.ovf` file in the extracted folder, and confirm.
 - Take a snapshot (`Ctrl + Shift + S`).
-    - This allows to easily go back to that state later, meaning you can re-activate the VM's Windows 90-day license again and again.
-    - For more info, see [Understanding snapshots (VMware)](https://www.vmware.com/support/ws5/doc/ws_preserve_sshot_understanding.html).
+  - This allows to easily go back to that state later, meaning you can re-activate the VM's Windows 90-day license again and again.
+  - For more info, see [Understanding snapshots (VMware)](https://www.vmware.com/support/ws5/doc/ws_preserve_sshot_understanding.html).
 - Click `Edit virtual machine settings`.
-    - Go to `Processors & Memory`, then select at least 2000MB of memory.
-    - To be able to connect to the internet, at the bottom of the `Hardware` tab, click `Add`.
-        - From the `Hardware types` list, choose `Network Adapter`, then click `Next`.
-        - Select `NAT: Used to share the host's IP address`, click `Finish`, then `OK`.
+  - Go to `Processors & Memory`, then select at least 2000MB of memory.
+  - To be able to connect to the internet, at the bottom of the `Hardware` tab, click `Add`.
+    - From the `Hardware types` list, choose `Network Adapter`, then click `Next`.
+    - Select `NAT: Used to share the host's IP address`, click `Finish`, then `OK`.
 
 ## Booting up the VM for the first time
 

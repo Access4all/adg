@@ -1,5 +1,5 @@
 ---
-title: "Marking an element as current using aria-current"
+title: 'Marking an element as current using aria-current'
 compatibility:
   Keyboard only:
     status: pass

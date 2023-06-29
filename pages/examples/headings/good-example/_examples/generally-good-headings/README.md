@@ -1,5 +1,5 @@
 ---
-title: "Generally good headings"
+title: 'Generally good headings'
 compatibility:
   Keyboard only:
     status: pass

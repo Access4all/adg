@@ -1,5 +1,5 @@
 ---
-title: "Removing semantics using presentation role"
+title: 'Removing semantics using presentation role'
 compatibility:
   Keyboard only:
     status: pass
@@ -12,10 +12,9 @@ compatibility:
     2018.3 + IE 11:
       status: fail
       date: 2018-05-23
-      comments: "Paragraphs can still be jumped at"
+      comments: 'Paragraphs can still be jumped at'
     2018.3 + FF ESR 52.7.3:
       status: fail
       date: 2018-05-22
-      comments: "Paragraphs can still be jumped at"
-
+      comments: 'Paragraphs can still be jumped at'
 ---
