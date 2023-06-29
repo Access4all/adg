@@ -6,7 +6,7 @@ name: Code Quality checks
 on:
   pull_request:
   push:
-    branches: [main]
+    branches: [master]
 
 jobs:
   code-quality:
