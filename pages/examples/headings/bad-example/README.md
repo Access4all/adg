@@ -1,7 +1,7 @@
 ---
-navigation_title: "Bad example"
+navigation_title: 'Bad example'
 position: 3
-changed: "2018-04-03"
+changed: '2018-04-03'
 ---
 
 # General bad headings example

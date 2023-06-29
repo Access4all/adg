@@ -1,5 +1,5 @@
 ---
-title: "Associating Content to Form Inputs Using Multiple Labels"
+title: 'Associating Content to Form Inputs Using Multiple Labels'
 compatibility:
   Keyboard only:
     status: pass

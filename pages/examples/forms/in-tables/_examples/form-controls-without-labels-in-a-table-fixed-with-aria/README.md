@@ -1,5 +1,5 @@
 ---
-title: "Form controls without labels in a table, fixed with ARIA"
+title: 'Form controls without labels in a table, fixed with ARIA'
 compatibility:
   Keyboard only:
     status: pass

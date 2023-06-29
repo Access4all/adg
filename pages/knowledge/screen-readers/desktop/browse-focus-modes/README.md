@@ -1,7 +1,7 @@
 ---
-navigation_title: "Browse & focus modes"
+navigation_title: 'Browse & focus modes'
 position: 1
-changed: "2020-04-07"
+changed: '2020-04-07'
 ---
 
 # Browse and focus modes
@@ -16,11 +16,11 @@ Reading through a website by moving the screen reader's cursor through a page's 
 
 - In browse mode, the user typically reads content sequentially line by line using the `Down` arrow key (or `Up` for going back).
 - In addition, screen readers offer more sophisticated ways of moving the cursor, for example:
-    - By pressing the `H` key, the cursor is moved to the next heading (`<h1>`, `<h2>`, etc.).
-    - By pressing the `K` key, the cursor is moved to the next link (`<a>`).
-    - This allows quick navigation through different elements of a website.
+  - By pressing the `H` key, the cursor is moved to the next heading (`<h1>`, `<h2>`, etc.).
+  - By pressing the `K` key, the cursor is moved to the next link (`<a>`).
+  - This allows quick navigation through different elements of a website.
 - In browse mode, the screen reader cursor can be placed on every element on a website, even on those which aren't inherently focusable by keyboard, for example headings or paragraphs.
-    - Just to make it clear: the web browser's **focus is not the same thing as the cursor** of the screen reader (although they often move synchronously).
+  - Just to make it clear: the web browser's **focus is not the same thing as the cursor** of the screen reader (although they often move synchronously).
 
 Notice: in other resources, browse mode may sometimes also be called "read" mode.
 
@@ -36,14 +36,14 @@ Suppose you're reading a website's content using your screen reader, by moving i
 This mode - where keystrokes aren't intercepted but sent directly to the controlled application - is called "focus" mode:
 
 - When the screen reader's cursor is on an editable element, it allows to switch to focus mode using the `Enter` key.
-    - When focus mode is active, a "beep" sound is played.
-    - By pressing `Esc`, focus mode can be left (announced by a different "beep" sound) and browse mode is active again.
-    - Notice: JAWS behaves a little different in this respect because of its "Auto Forms Mode", see below for more details.
+  - When focus mode is active, a "beep" sound is played.
+  - By pressing `Esc`, focus mode can be left (announced by a different "beep" sound) and browse mode is active again.
+  - Notice: JAWS behaves a little different in this respect because of its "Auto Forms Mode", see below for more details.
 - If you use the `Tab` key to jump from focusable element to focusable element like a keyboard-only user (if you haven't done this yet, go back and read [Controlling a computer with a keyboard only](/knowledge/keyboard-only/controlling-a-computer/)), focus mode is activated automatically when appropriate:
-    - For elements allowing only basic interaction (for example links, buttons, and checkboxes), focus mode is not activated.
-        - Basic interaction means that only the `Enter` or `Space` key triggers some interaction.
-    - If the element allows complex interaction (for example textareas or comboboxes), focus mode is activated.
-        - Complex interaction means that there are additional ways to interact, for example by pressing an arrow key or by entering a value directly.
+  - For elements allowing only basic interaction (for example links, buttons, and checkboxes), focus mode is not activated.
+    - Basic interaction means that only the `Enter` or `Space` key triggers some interaction.
+  - If the element allows complex interaction (for example textareas or comboboxes), focus mode is activated.
+    - Complex interaction means that there are additional ways to interact, for example by pressing an arrow key or by entering a value directly.
 
 Notice: in other resources, focus mode may sometimes also be called "forms" or "interaction" mode.
 
@@ -105,6 +105,6 @@ It's important to know under which circumstances which interaction mode is used:
 When users reach a page, they typically start reading it from top to bottom using the `Down` key. Only when they reach an element they want to interact with, they switch to focus mode. This typically happens in forms. And after interacting with the element (for example typing their name), the user has two options:
 
 - Either they use the `Tab` key to move the focus to the next interactive element.
-    - If entering data into a form, usually the user expects more form elements to come until a submit button is reached at the end of the process.
+  - If entering data into a form, usually the user expects more form elements to come until a submit button is reached at the end of the process.
 - Or they switch back to browse mode by pressing `Esc` and read on using `Down` key.
-    - This usually is only necessary if a form is not structured well (if you are really curious and want to learn more about this, skip ahead and read [Forms](/examples/forms)).
+  - This usually is only necessary if a form is not structured well (if you are really curious and want to learn more about this, skip ahead and read [Forms](/examples/forms)).

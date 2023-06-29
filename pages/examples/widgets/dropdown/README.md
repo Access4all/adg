@@ -1,7 +1,7 @@
 ---
-navigation_title: "Dropdown"
+navigation_title: 'Dropdown'
 position: 11
-changed: "2020-04-30"
+changed: '2020-04-30'
 ---
 
 # Dropdown widget (or: menu, pulldown)

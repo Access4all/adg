@@ -1,7 +1,7 @@
 ---
-navigation_title: "Keyboard shortcuts"
+navigation_title: 'Keyboard shortcuts'
 position: 5
-changed: "2020-04-07"
+changed: '2020-04-07'
 ---
 
 # Desktop screen reader keyboard shortcuts
@@ -18,7 +18,7 @@ And remember: when talking about the `NVDA` or `JAWS` keys, we mean the `Insert`
 
 - `Ctrl + Home` announces the current page title and moves the cursor to the top of the page.
 - `Down`/`Up` announces the next/previous line of text in the current element.
-    - If the end (or start) of the element is reached, the cursor is moved to the next (or previous) one.
+  - If the end (or start) of the element is reached, the cursor is moved to the next (or previous) one.
 - In NVDA, pressing `Ctrl + Down` (or `Ctrl + Up`) moves to the next (or previous) element, announcing it fully in one go (regardless of its length).
 - `Tab` moves to the next focusable element (e.g. link or button), triggering focus mode if appropriate.
 - `H`/`Shift + H` moves to the next/previous heading.
@@ -34,8 +34,8 @@ And remember: when talking about the `NVDA` or `JAWS` keys, we mean the `Insert`
 ## Interaction
 
 - `Enter` activates an element (e.g. link or button).
-     - When on a form field, focus mode is activated.
-     - When on an ARIA widget, application mode is activated.
+  - When on a form field, focus mode is activated.
+  - When on an ARIA widget, application mode is activated.
 - `Esc` exits focus mode (if active).
 
 ## Audio output

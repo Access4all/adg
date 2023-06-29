@@ -1,7 +1,7 @@
 ---
-navigation_title: "Colour contrast for text"
+navigation_title: 'Colour contrast for text'
 position: 3
-changed: "2019-12-15"
+changed: '2019-12-15'
 ---
 
 # Colour contrast for text
@@ -33,7 +33,7 @@ For a more direct comparison: the following image shows both large and default t
 
 It may not seem like much of a difference, but in fact it heavily enlargens the number of possible colour combinations.
 
-It is important to mention that the values `3:1` and `4.5:1` represent a **minimal** standard for **acceptable** contrast, they don't represent an ideal. They should be treated as threshold and not as target; aiming higher is recommended. 
+It is important to mention that the values `3:1` and `4.5:1` represent a **minimal** standard for **acceptable** contrast, they don't represent an ideal. They should be treated as threshold and not as target; aiming higher is recommended.
 
 ## Enhancing text contrast
 
@@ -47,7 +47,7 @@ For example, look at the following image. It shows two words, both with a red fi
 
 ![A word without and a word with shadow](_media/words-without-and-with-shadow.png)
 
-The shadow of the second word results in a contrast of appropriately `4.5:1`. 
+The shadow of the second word results in a contrast of appropriately `4.5:1`.
 
 In CSS this could be something like `text-shadow: 0 0 5px #000`.
 
@@ -80,8 +80,8 @@ The WCAG's contrast requirement for text also applies to placeholder text. But i
 
 ## "Real" text vs. text images
 
-With "real" text, we mean text that is available as an arrangement of character codes (like this text here). It is inherently machine-readable and can be selected and copy-pasted. "Text images" on the other hand are rasterised pictures of typography (like the example images in the text above), e.g. stored as JPG or PNG files. 
+With "real" text, we mean text that is available as an arrangement of character codes (like this text here). It is inherently machine-readable and can be selected and copy-pasted. "Text images" on the other hand are rasterised pictures of typography (like the example images in the text above), e.g. stored as JPG or PNG files.
 
-In general, the same contrast requirements and exceptions apply for "real" text and for text images. 
+In general, the same contrast requirements and exceptions apply for "real" text and for text images.
 
-As an aside: Due to the many limitations of text images in terms of flexibility, usability and file size we generally recommend against using it. However, if you *have* to use text images make sure that the displayed text is set as the image's alternative text (`alt` attribute) so that it is accessible for screen reader users.
+As an aside: Due to the many limitations of text images in terms of flexibility, usability and file size we generally recommend against using it. However, if you _have_ to use text images make sure that the displayed text is set as the image's alternative text (`alt` attribute) so that it is accessible for screen reader users.

@@ -1,7 +1,7 @@
 ---
-navigation_title: "Keyboard only"
+navigation_title: 'Keyboard only'
 position: 3
-changed: "2018-05-02"
+changed: '2018-05-02'
 ---
 
 # Introduction to keyboard only usage

@@ -1,7 +1,7 @@
 ---
-navigation_title: "How to implement"
+navigation_title: 'How to implement'
 position: 3
-changed: "2018-05-30"
+changed: '2018-05-30'
 ---
 
 # How to implement websites that are ready for keyboard only usage
@@ -25,9 +25,9 @@ If you need to provide custom functionality on your website (for example a fancy
 First, be sure any relevant element is focusable by keyboard:
 
 - Either by using an HTML element that inherently is focusable (for example a link or a button).
-    - Whenever an element should be interacted with, this is the proper way to go.
+  - Whenever an element should be interacted with, this is the proper way to go.
 - Or by adding the `tabindex="0"` attribute, for example `<div tabindex="0">`
-    - This should only be used in situations when an element shall be focusable, but not interactive (a very rare case).
+  - This should only be used in situations when an element shall be focusable, but not interactive (a very rare case).
 - A special case are `<a>` tags: if they have an `href` attribute, they are focusable; otherwise, in most browsers they are not.
 
 ### Keyboard operability
@@ -35,17 +35,17 @@ First, be sure any relevant element is focusable by keyboard:
 Then, implement any functionality as needed by adding appropriate events, for example `onclick` or similar:
 
 - Be sure to use browser-independent events.
-    - An `onclick` event is triggered by all sorts of devices (regardless whether it's fired upon a mouse click or by pressing a keyboard's `Enter` key).
-    - On the other side, a `hover` event can only be triggered by some devices (for example mouse) and not by others (for example keyboard)
-        - A well-known accessibility problem is dropdown menus opening on `hover` only, so no keyboard user will ever be able to open it.
+  - An `onclick` event is triggered by all sorts of devices (regardless whether it's fired upon a mouse click or by pressing a keyboard's `Enter` key).
+  - On the other side, a `hover` event can only be triggered by some devices (for example mouse) and not by others (for example keyboard)
+    - A well-known accessibility problem is dropdown menus opening on `hover` only, so no keyboard user will ever be able to open it.
 - Avoid listening to specific keyboard keys, unless you really want to provide device-specific functionality.
-    - For example, listening to a `keypress` event and looking for a key code `13` (`Enter` key) will only catch a real keyboard's `Enter` key.
-        - But it won't catch a screen reader's `Enter` key, as pressing `Enter` with a screen reader running will typically fire a `click` event instead.
-        - As described above, it's usually better to listen to a `click` event here.
-    - Be aware that many keys are only available on full-fledged keyboards of desktop computers.
-        - Be sure not to bind functionality to such specific keys (for example modifier keys like `Alt`), or provide alternative ways to use the functionality.
-        - Even arrow keys aren't available on many devices, for example touch screen smartphones.
-        - Especially combinations of keys can be really hard (if not impossible) to be pressed by motor impaired people.
+  - For example, listening to a `keypress` event and looking for a key code `13` (`Enter` key) will only catch a real keyboard's `Enter` key.
+    - But it won't catch a screen reader's `Enter` key, as pressing `Enter` with a screen reader running will typically fire a `click` event instead.
+    - As described above, it's usually better to listen to a `click` event here.
+  - Be aware that many keys are only available on full-fledged keyboards of desktop computers.
+    - Be sure not to bind functionality to such specific keys (for example modifier keys like `Alt`), or provide alternative ways to use the functionality.
+    - Even arrow keys aren't available on many devices, for example touch screen smartphones.
+    - Especially combinations of keys can be really hard (if not impossible) to be pressed by motor impaired people.
 
 ### Standards over custom
 
@@ -64,15 +64,13 @@ For example, when a user clicks on a button "Show terms and conditions (dialog)"
 Specifically, the first content element of the dialog should be focused, due to the following reason: users usually make their way from top to bottom of a page, be it while reading content or moving the keyboard focus. Placing the focus on the first content element does not interrupt this workflow. It usually is a good practice to define the dialog's close button to be this first element:
 
 ```javascript
-$("button#show-dialog").click(function() {
-  $("div#dialog button.close").focus();
-});
+$('button#show-dialog').click(function () {
+  $('div#dialog button.close').focus()
+})
 ```
 
 ```html
-<button id="show-dialog">
-  Show terms and conditions (dialog)
-</button>
+<button id="show-dialog">Show terms and conditions (dialog)</button>
 
 <div id="dialog">
   <button class="close">Close dialog</button>
@@ -93,12 +91,15 @@ A better solution is to not trap the focus, but to offer another close button at
 
 ```html
 <div id="dialog">
-  <button class="close">Close dialog</button><!-- Usually an X symbol on the top right -->
+  <button class="close">Close dialog</button
+  ><!-- Usually an X symbol on the top right -->
 
   <p>Here is some content...</p>
 
-  <button class="confirm">Confirm</button><!-- This confirms the dialog -->
-  <button class="cancel">Cancel</button><!-- This cancels the dialog (like the X symbol) -->
+  <button class="confirm">Confirm</button
+  ><!-- This confirms the dialog -->
+  <button class="cancel">Cancel</button
+  ><!-- This cancels the dialog (like the X symbol) -->
 </div>
 ```
 

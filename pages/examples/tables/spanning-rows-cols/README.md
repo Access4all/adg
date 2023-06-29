@@ -1,7 +1,7 @@
 ---
-navigation_title: "Spanning rows & cols"
+navigation_title: 'Spanning rows & cols'
 position: 5
-changed: "2018-04-13"
+changed: '2018-04-13'
 ---
 
 # Spanning multiple rows and columns

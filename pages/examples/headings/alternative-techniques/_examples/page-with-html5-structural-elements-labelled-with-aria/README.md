@@ -1,5 +1,5 @@
 ---
-title: "Page with HTML5 structural elements, labelled with ARIA"
+title: 'Page with HTML5 structural elements, labelled with ARIA'
 compatibility:
   Keyboard only:
     status: pass
@@ -15,5 +15,5 @@ compatibility:
     2018.3 + FF ESR 52.7.3:
       status: pass
       date: 2018-04-09
-Comments: "strictly passes WCAG, but don't do it!" 
+Comments: "strictly passes WCAG, but don't do it!"
 ---

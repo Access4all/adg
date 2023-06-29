@@ -1,7 +1,7 @@
 ---
-navigation_title: "Meaning"
+navigation_title: 'Meaning'
 position: 1
-changed: "2020-04-07"
+changed: '2020-04-07'
 ---
 
 # Semantics provide meaning
@@ -19,17 +19,11 @@ There are only two tags in HTML that do not have any semantic meaning: `<div>` a
 Take a look at the following example:
 
 ```html
-<div>
-  My hobbies
-</div>
+<div>My hobbies</div>
 
-<div>
-  Dancing
-</div>
+<div>Dancing</div>
 
-<div>
-  Playing soccer
-</div>
+<div>Playing soccer</div>
 ```
 
 A visual user agent (web browser) displays such elements' text contents (if any) in their standard font size, line height, color, etc.
@@ -55,17 +49,11 @@ Content elements are used to give meaning to content (like headings, paragraphs,
 Let's take a look at the same example, now marked up using heading tags (`<h1>`, `<h2>`, etc.):
 
 ```html
-<h1>
-  My hobbies
-</h1>
+<h1>My hobbies</h1>
 
-<h2>
-  Dancing
-</h2>
+<h2>Dancing</h2>
 
-<h2>
-  Playing soccer
-</h2>
+<h2>Playing soccer</h2>
 ```
 
 Marking up text using an `<h#>` tag tells the user agent that this is not just plain text, but - in fact - a heading of a certain level!
@@ -96,17 +84,11 @@ For our example, we could enclose everything into a `<main>` container, separati
 </header>
 
 <main>
-  <h1>
-    My hobbies
-  </h1>
+  <h1>My hobbies</h1>
 
-  <h2>
-    Dancing
-  </h2>
+  <h2>Dancing</h2>
 
-  <h2>
-    Playing soccer
-  </h2>
+  <h2>Playing soccer</h2>
 </main>
 
 <footer>
@@ -135,17 +117,11 @@ Let's now look at the following example, where the developers may not have felt 
 ```
 
 ```html
-<div class="h1">
-  My hobbies
-</div>
+<div class="h1">My hobbies</div>
 
-<div class="h2">
-  Dancing
-</div>
+<div class="h2">Dancing</div>
 
-<div class="h2">
-  Playing soccer
-</div>
+<div class="h2">Playing soccer</div>
 ```
 
 In this case, while visual presentation may look like proper headings, screen readers won't announce them as such. The provided information is by no means identical: screen reader users are left behind, as the contents are in no identifiable relation to each other. More precisely: they will simply understand that there are hobbies, there is dancing, and there is playing soccer (but not necessarily that dancing and playing soccer are hobbies).
@@ -163,17 +139,11 @@ Let's have a look at the following example, where the developers strived for hig
 ```
 
 ```html
-<h1>
-  My hobbies
-</h1>
+<h1>My hobbies</h1>
 
-<h1 class="h2">
-  Dancing
-</h1>
+<h1 class="h2">Dancing</h1>
 
-<h1 class="h2">
-  Playing soccer
-</h1>
+<h1 class="h2">Playing soccer</h1>
 ```
 
 In this case, while visual presentation may still look like proper headings, screen readers will only announce headings on level 1! Again, the provided information is not identical: screen reader users will have trouble to relate the different headings to each other properly. More precisely: again, they won't know that dancing and playing soccer are meant to be hobbies.
@@ -189,12 +159,16 @@ Being an implementation of "eXtensible Markup Language" (XML), HTML also has ver
 For example, the following table is coded extremely bad:
 
 ```html
-<table border=1>
-  <td>Apples
-  <td>Pears
-<tr>
-  <td>Carots
-  <td>Potatoes
+<table border="1">
+  <td>Apples</td>
+  <td>
+    Pears
+    <tr>
+      <td>Carots</td>
+      <td>Potatoes</td>
+    </tr>
+  </td>
+</table>
 ```
 
 - There is no `<tr>` tag for the first row

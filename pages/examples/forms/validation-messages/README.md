@@ -1,7 +1,7 @@
 ---
-navigation_title: "Validation messages"
+navigation_title: 'Validation messages'
 position: 7
-changed: "2020-04-30"
+changed: '2020-04-30'
 ---
 
 # Validation messages

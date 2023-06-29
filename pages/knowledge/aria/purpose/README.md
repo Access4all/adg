@@ -1,7 +1,7 @@
 ---
-navigation_title: "Purpose"
+navigation_title: 'Purpose'
 position: 1
-changed: "2021-09-22"
+changed: '2021-09-22'
 ---
 
 # The purpose behind the WAI-ARIA standard
@@ -42,9 +42,9 @@ Visually, it is not a problem to mimic a tablist. Just use some appropriate stan
 ```
 
 ```javascript
-$(".tablist [data-target]").click(function() {
+$('.tablist [data-target]').click(function () {
   // Some fancy JavaScript to toggle tabpanel visibility
-});
+})
 ```
 
 ```html
@@ -72,7 +72,7 @@ To fill this gap, the [Web Accessibility Initiative (WAI)](https://www.w3.org/WA
 
 - `role` adds (or overrides) a semantical role of an element, for example `<span role="button">`.
 - `aria-*` attributes provide statuses to the current semantical role, for example `<span role="button" aria-pressed="true">`.
-    - Those statuses can have specific values, depending on the role of the element. For example, `aria-pressed` can have the values `true`, `false`, and `mixed`.
+  - Those statuses can have specific values, depending on the role of the element. For example, `aria-pressed` can have the values `true`, `false`, and `mixed`.
 
 Many de-facto standard user interface patterns do have an ARIA specification, and so do tablists, see [Accessible Rich Internet Applications (WAI-ARIA) 1.1 - Tablist](https://www.w3.org/TR/wai-aria-1.1/#tablist).
 
@@ -84,11 +84,15 @@ Marked up with ARIA, our tablist example would look something like this:
 <div class="tablist">
   <ul role="tablist">
     <li role="presentation">
-      <button role="tab" aria-controls="dancing" aria-selected="true">Dancing</button>
+      <button role="tab" aria-controls="dancing" aria-selected="true">
+        Dancing
+      </button>
     </li>
 
     <li role="presentation">
-      <button role="tab" aria-controls="soccer" aria-selected="false">Soccer</button>
+      <button role="tab" aria-controls="soccer" aria-selected="false">
+        Soccer
+      </button>
     </li>
   </ul>
 

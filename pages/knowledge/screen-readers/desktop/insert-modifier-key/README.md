@@ -1,7 +1,7 @@
 ---
-navigation_title: "The Insert modifier key"
+navigation_title: 'The Insert modifier key'
 position: 2
-changed: "2020-04-07"
+changed: '2020-04-07'
 ---
 
 # The Insert modifier key
@@ -21,11 +21,11 @@ Both screen readers NVDA and JAWS worked around this problem by hijacking the `I
 Some examples:
 
 - When running NVDA:
-    - `Insert + N` shows the NVDA menu.
-    - `Insert + F7` shows the elements list (with links, headings, landmarks, etc.).
+  - `Insert + N` shows the NVDA menu.
+  - `Insert + F7` shows the elements list (with links, headings, landmarks, etc.).
 - When running JAWS:
-    - `Insert + J` shows the JAWS menu.
-    - `Insert + F6` displays the heading list.
+  - `Insert + J` shows the JAWS menu.
+  - `Insert + F6` displays the heading list.
 
 ### Alternatives to the Insert key
 
@@ -40,10 +40,10 @@ In this guide, we do not talk about the `Insert` key. Instead, when running NVDA
 So the examples above look like this:
 
 - When running NVDA:
-    - `NVDA + N` shows the NVDA menu.
-    - `NVDA + F7` shows the elements list.
+  - `NVDA + N` shows the NVDA menu.
+  - `NVDA + F7` shows the elements list.
 - When running JAWS:
-    - `JAWS + J` shows the JAWS menu.
-    - `JAWS + F6` displays the heading list.
+  - `JAWS + J` shows the JAWS menu.
+  - `JAWS + F6` displays the heading list.
 
 For a complete guide of shortcuts please read on.

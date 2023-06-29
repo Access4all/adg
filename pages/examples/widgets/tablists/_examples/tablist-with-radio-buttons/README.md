@@ -1,5 +1,5 @@
 ---
-title: "Tablist with radio buttons"
+title: 'Tablist with radio buttons'
 compatibility:
   Keyboard only:
     status: pass

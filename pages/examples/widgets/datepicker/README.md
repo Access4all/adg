@@ -1,7 +1,7 @@
 ---
-navigation_title: "Datepicker"
+navigation_title: 'Datepicker'
 position: 13
-changed: "2020-04-30"
+changed: '2020-04-30'
 ---
 
 # Datepicker widget
@@ -37,17 +37,17 @@ Sensible naming of elements (and a few specifically added visually hidden texts)
 Some interesting peculiarities:
 
 - The filter input has:
-    - A descriptive text attached to it using `aria-describedby` (see [Adding descriptions to elements using aria-describedby](/examples/sensible-aria-usage/describedby)), giving a clue that the element provides a datepicker upon click and arrow key usage.
-    - An `aria-expanded` attribute (see [Marking elements expandable using aria-expanded](/examples/sensible-aria-usage/expanded)), giving a clue that there is something to be expanded (the datepicker).
-    - An `autocomplete="off"` attribute so it does not trigger the browser's autocomplete feature (which remembers previous user input and offers it again).
+  - A descriptive text attached to it using `aria-describedby` (see [Adding descriptions to elements using aria-describedby](/examples/sensible-aria-usage/describedby)), giving a clue that the element provides a datepicker upon click and arrow key usage.
+  - An `aria-expanded` attribute (see [Marking elements expandable using aria-expanded](/examples/sensible-aria-usage/expanded)), giving a clue that there is something to be expanded (the datepicker).
+  - An `autocomplete="off"` attribute so it does not trigger the browser's autocomplete feature (which remembers previous user input and offers it again).
 - The datepicker appears upon clicking into the input, pressing `Up`/`Down` or `Arrow` keys.
-    - As soon as the datepicker appears, its group of radio buttons gains focus: from now on, the user interacts only with the radio buttons.
+  - As soon as the datepicker appears, its group of radio buttons gains focus: from now on, the user interacts only with the radio buttons.
 - Using `Left`/`Right` keys, the date changes by one day, and using `Up`/`Down` keys, the date changes by one week.
-    - The default toggling behaviour of radio buttons is overridden using JavaScript.
+  - The default toggling behaviour of radio buttons is overridden using JavaScript.
 - The radio buttons are inside a `<fieldset>`/`<legend>` structure, giving context to them (see [Grouping form controls with fieldset and legend](/examples/forms/grouping-with-fieldset-legend)).
-    - For visual users, the legend is hidden (see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually).
+  - For visual users, the legend is hidden (see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually).
 - The radio buttons are laid out inside a `<table>`, see [Forms within tables](/examples/forms/in-tables).
-    - This does not only serve visual purposes, but also allows screen reader users to manually browse the table.
+  - This does not only serve visual purposes, but also allows screen reader users to manually browse the table.
 
 Adding more sophisticated features like controls for choosing a day, month, or year directly, or enhancing the datepicker with time options, would be easy. For simplicity though, we refrained from doing this.
 

@@ -1,7 +1,7 @@
 ---
-navigation_title: "Tables"
+navigation_title: 'Tables'
 position: 4
-changed: "2018-05-02"
+changed: '2018-05-02'
 ---
 
 # Data tables

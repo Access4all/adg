@@ -1,5 +1,5 @@
 ---
-title: "Generally good form"
+title: 'Generally good form'
 compatibility:
   Keyboard only:
     status: pass

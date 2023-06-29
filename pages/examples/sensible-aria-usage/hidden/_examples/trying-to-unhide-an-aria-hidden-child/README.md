@@ -1,3 +1,3 @@
 ---
-title: "Trying to unhide an aria-hidden child"
+title: 'Trying to unhide an aria-hidden child'
 ---

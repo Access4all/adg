@@ -1,7 +1,7 @@
 ---
-navigation_title: "Helper tools"
+navigation_title: 'Helper tools'
 position: 4
-changed: "2018-04-02"
+changed: '2018-04-02'
 ---
 
 # Accessibility helper tools

@@ -1,5 +1,5 @@
 ---
-title: "Form validation with messages next to controls"
+title: 'Form validation with messages next to controls'
 compatibility:
   Keyboard only:
     status: pass

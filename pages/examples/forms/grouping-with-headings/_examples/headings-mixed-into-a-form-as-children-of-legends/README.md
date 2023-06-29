@@ -1,5 +1,5 @@
 ---
-title: "Headings mixed into a form as children of legends"
+title: 'Headings mixed into a form as children of legends'
 compatibility:
   Keyboard only:
     status: pass

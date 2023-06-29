@@ -1,7 +1,7 @@
 ---
-navigation_title: "Windows"
+navigation_title: 'Windows'
 position: 1
-changed: "2021-03-22"
+changed: '2021-03-22'
 ---
 
 # Windows operating system

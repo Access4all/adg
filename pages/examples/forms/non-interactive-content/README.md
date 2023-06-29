@@ -1,7 +1,7 @@
 ---
-navigation_title: "Non-interactive content"
+navigation_title: 'Non-interactive content'
 position: 6
-changed: "2020-04-30"
+changed: '2020-04-30'
 ---
 
 # Placing non-interactive content between form controls
@@ -49,9 +49,9 @@ Instead of referencing all the information, simply give the user a short clue th
 The example above shows three ways to give a user clue about additional information:
 
 1. For "Full name", a clue was appended to the `<label>` and hidden visually.
-    - For more information about this, read [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually).
+   - For more information about this, read [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually).
 2. For "Biography", a clue was added anywhere on the page, then hidden completely and referenced to the input using `aria-describedby`.
-    - For more information about this, read [Hiding elements from all devices](/examples/hiding-elements/from-all-devices).
+   - For more information about this, read [Hiding elements from all devices](/examples/hiding-elements/from-all-devices).
 3. For "Terms and conditions", the label text was changed so it gives a clue itself (making it "self speaking"). This does not only serve screen reader users, but also visual users who could miss the terms and conditions because of not scrolling enough vertically.
 
 In general, when doing something like that, be sure the referenced content is easily discoverable by the user.
@@ -98,9 +98,9 @@ This solution looks very easy and as such is tempting: it does not only solve ou
 Sadly, browser support is buggy:
 
 - In Firefox this works like a charm (both JAWS and NVDA).
-    - In the example, the radio buttons for gender are correctly announced, like "Gender grouping. Male. You may be this if you like beer...".
+  - In the example, the radio buttons for gender are correctly announced, like "Gender grouping. Male. You may be this if you like beer...".
 - In Internet Explorer things are messed up when elements are packed into a `<fieldset>`/`<legend>` structure.
-    - In the example, the radio buttons for gender are both announced like "Gender. Name. Please enter your full real name."
+  - In the example, the radio buttons for gender are both announced like "Gender. Name. Please enter your full real name."
 
 What a bummer. This is why we recommend to separate form controls and their `<label>` elements strictly and to use the `for` attribute to connect them.
 

@@ -1,7 +1,7 @@
 ---
-navigation_title: "\"Table of divs\" experiment"
+navigation_title: '"Table of divs" experiment'
 position: 8
-changed: "2020-11-18"
+changed: '2020-11-18'
 ---
 
 # The "table of divs" experiment

@@ -1,7 +1,7 @@
 ---
-navigation_title: "How to implement"
+navigation_title: 'How to implement'
 position: 7
-changed: "2020-04-07"
+changed: '2020-04-07'
 ---
 
 # How to implement websites that are ready for screen reader usage

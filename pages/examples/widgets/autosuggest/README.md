@@ -1,7 +1,7 @@
 ---
-navigation_title: "Autosuggest"
+navigation_title: 'Autosuggest'
 position: 9
-changed: "2020-04-30"
+changed: '2020-04-30'
 ---
 
 # Autosuggest widget (or: autocomplete, lookahead, typeahead)
@@ -42,16 +42,16 @@ Sensible naming of elements (and a few specifically added visually hidden texts 
 Some interesting peculiarities:
 
 - The filter input has:
-    - A descriptive text attached to it using `aria-describedby` (see [Adding descriptions to elements using aria-describedby](/examples/sensible-aria-usage/describedby)), giving a clue that the element provides suggestions upon entering text, and how many options there are available.
-    - An `aria-expanded` attribute (see [Marking elements expandable using aria-expanded](/examples/sensible-aria-usage/expanded)), giving a clue that there is something to be expanded (the suggestions).
-    - An `autocomplete="off"` attribute so it does not trigger the browser's autocomplete feature (which remembers previous user input and offers it again).
+  - A descriptive text attached to it using `aria-describedby` (see [Adding descriptions to elements using aria-describedby](/examples/sensible-aria-usage/describedby)), giving a clue that the element provides suggestions upon entering text, and how many options there are available.
+  - An `aria-expanded` attribute (see [Marking elements expandable using aria-expanded](/examples/sensible-aria-usage/expanded)), giving a clue that there is something to be expanded (the suggestions).
+  - An `autocomplete="off"` attribute so it does not trigger the browser's autocomplete feature (which remembers previous user input and offers it again).
 - The suggestions appear upon pressing `Up`/`Down`, `Esc`, or upon a first character is entered into the filter input.
 - The suggestions are filtered by the characters entered by the user.
-    - The individual radio buttons are hidden from all devices using `display: none`, see [Hiding elements from all devices](/examples/hiding-elements/from-all-devices).
+  - The individual radio buttons are hidden from all devices using `display: none`, see [Hiding elements from all devices](/examples/hiding-elements/from-all-devices).
 - The number of available options is always announced by the screen reader.
-    - This is done using `role="alert"`, see [Noticing screen readers using alert role](/examples/sensible-aria-usage/alert).
+  - This is done using `role="alert"`, see [Noticing screen readers using alert role](/examples/sensible-aria-usage/alert).
 - Using `Up`/`Down`, an option can be selected.
-    - In the background, the radio button values are toggled using JavaScript, and the currently selected radio button's label is entered into the filter (which itself leads screen readers to announce the filter's new value).
+  - In the background, the radio button values are toggled using JavaScript, and the currently selected radio button's label is entered into the filter (which itself leads screen readers to announce the filter's new value).
 - The suggestions can be hidden by pressing `Esc`.
 
 ### JAWS' auto forms mode

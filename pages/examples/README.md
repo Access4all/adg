@@ -1,7 +1,7 @@
 ---
-navigation_title: "Examples"
+navigation_title: 'Examples'
 position: 4
-changed: "2018-04-02"
+changed: '2018-04-02'
 ---
 
 # Examples of accessibility patterns
@@ -52,11 +52,11 @@ There are results of the currently relevant assistive devices:
 There are some special types of examples though:
 
 - "Bad" examples aim to demonstrate typical mis-uses or misconceptions of a concept, bad code, or similar.
-     - Such examples are inaccessible by design, and do not offer any results.
+  - Such examples are inaccessible by design, and do not offer any results.
 - A starting point (or interim step) within a sequence of examples that aim to demonstrate how to deal with and optimise a certain accessibility requirement.
-    - Such sequences always result in a final (and fully accessible) example.
+  - Such sequences always result in a final (and fully accessible) example.
 - An example showing a technique that is valid according to standards, but not (yet?) accessibility supported.
-    - Alas, such results have failing results.
+  - Alas, such results have failing results.
 
 In general: only copy&paste code from examples that have fully passing compatibility results!
 
@@ -65,12 +65,12 @@ In general: only copy&paste code from examples that have fully passing compatibi
 We have conducted additional compatibility tests, all with assistive devices that are expected to play a role in future:
 
 - Desktop screen readers:
-    - JAWS with Edge
-    - VoiceOver/macOS with Safari
-    - Narrator with Edge
+  - JAWS with Edge
+  - VoiceOver/macOS with Safari
+  - Narrator with Edge
 - Mobile screen readers:
-    - VoiceOver/iOS with Safari
-    - TalkBack with Chrome
+  - VoiceOver/iOS with Safari
+  - TalkBack with Chrome
 
 While some of these devices still show problems, the general outlook confirms that our examples are as future-proof as possible.
 

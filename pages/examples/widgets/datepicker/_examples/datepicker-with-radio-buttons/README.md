@@ -1,5 +1,5 @@
 ---
-title: "Datepicker with radio buttons"
+title: 'Datepicker with radio buttons'
 compatibility:
   Keyboard only:
     status: pass
