@@ -9,10 +9,11 @@
     "build": "gulp build",
     "rebuild": "gulp rebuild",
     "gulp": "gulp",
-    "lint": "eslint --fix \"**/*.js\"",
-    "format": "prettier --write \"**/*.{js,scss}\"",
-    "update": "npx npm-check -u",
-    "prepare": "husky install"
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "update": "npx npm-check -u"
   },
   "keywords": [],
   "author": "",
