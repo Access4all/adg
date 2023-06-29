@@ -274,7 +274,8 @@ module.exports = (config, cb) => {
               metatags: metatags.generateTags(metatagsData),
               breadcrumb: breadcrumb.sort((a, b) => {
                 return a.url.length - b.url.length
-              })
+              }),
+              fileHistory: `https://github.com/Access4all/adg/blame/main/pages/${relPath}`
             })
 
             sitemap.push({
