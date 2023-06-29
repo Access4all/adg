@@ -1,7 +1,6 @@
 ---
 navigation_title: "Bad practices"
 position: 3
-changed: "2018-04-12"
 ---
 
 # Bad ARIA practices

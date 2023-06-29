@@ -1,7 +1,6 @@
 ---
 navigation_title: "Handling"
 position: 1
-changed: "2018-04-18"
 ---
 
 # How to handle headings

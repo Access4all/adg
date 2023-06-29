@@ -1,7 +1,6 @@
 ---
 navigation_title: "TalkBack"
 position: 2
-changed: "2020-04-23"
 ---
 
 # TalkBack configuration

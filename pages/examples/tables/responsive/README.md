@@ -1,7 +1,6 @@
 ---
 navigation_title: "Responsive"
 position: 7
-changed: "2018-04-16"
 ---
 
 # Responsive tables

@@ -1,7 +1,6 @@
 ---
 navigation_title: "Reading websites"
 position: 1
-changed: "2020-04-23"
 ---
 
 # How to read websites using a mobile screen reader

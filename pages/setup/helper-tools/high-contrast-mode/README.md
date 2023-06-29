@@ -1,7 +1,6 @@
 ---
 navigation_title: "High Contrast Mode"
 position: 3
-changed: "2018-04-06"
 ---
 
 # Windows High Contrast Mode

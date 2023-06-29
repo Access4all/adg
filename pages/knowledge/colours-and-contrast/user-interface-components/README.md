@@ -1,7 +1,6 @@
 ---
 navigation_title: "Colour contrast for UI components"
 position: 4
-changed: "2019-12-15"
 ---
 
 # Colour contrast for user interface components

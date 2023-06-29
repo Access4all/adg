@@ -1,7 +1,6 @@
 ---
 navigation_title: "Alert"
 position: 8
-changed: "2018-05-15"
 ---
 
 # Noticing screen readers using alert role

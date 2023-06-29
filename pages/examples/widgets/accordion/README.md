@@ -1,7 +1,6 @@
 ---
 navigation_title: "Accordion"
 position: 8
-changed: "2021-09-22"
 ---
 
 # Accordions

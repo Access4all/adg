@@ -1,7 +1,6 @@
 ---
 navigation_title: "Datepicker"
 position: 13
-changed: "2020-04-30"
 ---
 
 # Datepicker widget

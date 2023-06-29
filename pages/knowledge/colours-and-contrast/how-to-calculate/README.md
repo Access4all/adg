@@ -1,7 +1,6 @@
 ---
 navigation_title: "How to calculate"
 position: 1
-changed: "2019-12-15"
 ---
 
 # How to calculate colour contrast

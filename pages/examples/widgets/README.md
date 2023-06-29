@@ -1,7 +1,6 @@
 ---
 navigation_title: "Widgets"
 position: 6
-changed: "2018-05-14"
 ---
 
 # Interactive widgets

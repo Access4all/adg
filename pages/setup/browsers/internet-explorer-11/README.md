@@ -2,7 +2,6 @@
 navigation_title: "Internet Explorer 11"
 navigation_ignore: true
 position: 1
-changed: "2021-03-22"
 ---
 
 # Internet Explorer 11 installation and configuration

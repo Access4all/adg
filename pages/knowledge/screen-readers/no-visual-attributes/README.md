@@ -1,7 +1,6 @@
 ---
 navigation_title: "No visual attributes"
 position: 4
-changed: "2020-04-07"
 ---
 
 # Screen readers do not convey visual attributes

@@ -1,7 +1,6 @@
 ---
 navigation_title: "License"
 position: 4
-changed: "2018-06-15"
 ---
 
 # A license for 100% true Open Source
