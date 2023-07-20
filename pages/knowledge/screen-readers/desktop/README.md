@@ -1,7 +1,6 @@
 ---
 navigation_title: "Desktop: NVDA & JAWS"
 position: 6
-changed: "2020-04-07"
 ---
 
 # Desktop screen readers

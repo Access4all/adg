@@ -55,12 +55,8 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: -1px;
+  margin-bottom: 2rem;
   clear: both;
-
-  @include rem(margin-bottom, 6 * $gutter);
-  @include mobile {
-    @include rem(margin-bottom, 4 * $gutter);
-  }
 }
 
 html {

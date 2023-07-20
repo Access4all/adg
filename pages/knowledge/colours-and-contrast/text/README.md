@@ -1,7 +1,6 @@
 ---
 navigation_title: "Colour contrast for text"
 position: 3
-changed: "2019-12-15"
 ---
 
 # Colour contrast for text

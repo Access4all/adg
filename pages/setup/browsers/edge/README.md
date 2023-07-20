@@ -1,7 +1,6 @@
 ---
 navigation_title: "Edge"
 position: 3
-changed: "2021-03-22"
 ---
 
 # Microsoft Edge installation and configuration

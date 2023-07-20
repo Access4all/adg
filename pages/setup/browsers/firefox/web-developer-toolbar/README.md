@@ -1,7 +1,6 @@
 ---
 navigation_title: "Web Developer toolbar"
 position: 1
-changed: "2018-05-10"
 ---
 
 # Web Developer toolbar

@@ -1,7 +1,6 @@
 ---
 navigation_title: "Required (*)"
 position: 8
-changed: "2018-05-29"
 ---
 
 # Indicating form controls as required using asterisks (*)

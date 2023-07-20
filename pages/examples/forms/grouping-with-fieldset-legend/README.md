@@ -1,7 +1,6 @@
 ---
 navigation_title: "Grouping with fieldset/legend"
 position: 4
-changed: "2018-05-03"
 ---
 
 # Grouping form controls with fieldset and legend

@@ -1,7 +1,6 @@
 ---
 navigation_title: "Hiding elements"
 position: 2
-changed: "2018-05-02"
 ---
 
 # Hiding elements correctly

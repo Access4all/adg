@@ -1,7 +1,6 @@
 ---
 navigation_title: "Why?"
 position: 1
-changed: "2020-04-30"
 ---
 
 # Why Windows is a must-have for accessible website development

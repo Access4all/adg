@@ -1,3 +1,4 @@
+const child_process = require('child_process')
 const gulp = require('gulp')
 const handlebars = require('gulp-hb')
 // const prettify = require('gulp-prettify')
@@ -255,9 +256,14 @@ module.exports = (config, cb) => {
               site_name: appConfig.title,
               url: `${appConfig.url}/${currentUrl}`
             }
+            const { stdout: dateChanged } = child_process.spawnSync(
+              'git',
+              ['log', '-1', '--pretty=format:%cs', file.path],
+              { encoding: 'utf8' }
+            )
 
             file.data = Object.assign({}, file.data, {
-              changed: file.frontMatter.changed,
+              changed: dateChanged,
               title: file.data.title,
               contents: file.contents,
               navigation: pageNavigation,
@@ -274,7 +280,8 @@ module.exports = (config, cb) => {
               metatags: metatags.generateTags(metatagsData),
               breadcrumb: breadcrumb.sort((a, b) => {
                 return a.url.length - b.url.length
-              })
+              }),
+              fileHistory: `https://github.com/Access4all/adg/commits/main/pages/${relPath}`
             })
 
             sitemap.push({

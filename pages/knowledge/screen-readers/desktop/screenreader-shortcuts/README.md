@@ -1,7 +1,6 @@
 ---
 navigation_title: "Keyboard shortcuts"
 position: 5
-changed: "2020-04-07"
 ---
 
 # Desktop screen reader keyboard shortcuts

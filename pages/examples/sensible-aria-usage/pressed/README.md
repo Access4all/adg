@@ -1,7 +1,6 @@
 ---
 navigation_title: "Pressed"
 position: 4
-changed: "2018-05-14"
 ---
 
 # Marking elements activatable using aria-pressed

@@ -1,7 +1,6 @@
 ---
 navigation_title: "Purpose"
 position: 1
-changed: "2021-09-22"
 ---
 
 # The purpose behind the WAI-ARIA standard

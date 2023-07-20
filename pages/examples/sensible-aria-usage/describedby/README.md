@@ -1,7 +1,6 @@
 ---
 navigation_title: "Describedby"
 position: 2
-changed: "2018-05-14"
 ---
 
 # Adding descriptions to elements using aria-describedby
