@@ -14,7 +14,8 @@ changed: "2018-04-06"
 
 ## Installation
 
-[Download WAVE Evaluation Tool](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) and install it.
+[Download WAVE Evaluation Tool for Chrom](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) and install it.<br />
+[Download WAVE Evaluation Tool for Firefox](https://addons.mozilla.org/de/firefox/addon/wave-accessibility-tool/) and install it.
 
 ### Online service
 

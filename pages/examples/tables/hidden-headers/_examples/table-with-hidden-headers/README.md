@@ -11,6 +11,9 @@ compatibility:
     2021.2 + Chrome:
       status: pass
       date: 2021-02-10
+    2023.7 + Edge:
+      status: pass
+      date: 2023-07-13
   JAWS:
     18.0.5038 + FF ESR 52.8.1:
       status: pass
@@ -18,4 +21,7 @@ compatibility:
     2021.2 + Chrome:
       status: pass
       date: 2021-02-10
+    2023.7 + Edge:
+      status: pass
+      date: 2023-07-13
 ---
