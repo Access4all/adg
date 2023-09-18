@@ -1,0 +1,9 @@
+@mixin btn-focus-style {
+  outline: 2px dotted var(--theme-color-dark);
+  outline-offset: 2px;
+}
+@mixin btn-focus {
+  &:focus {
+    @include btn-focus-style;
+  }
+}

@@ -60,11 +60,14 @@
     font-style: italic;
   }
 
-  p, p > a, li, pre {
+  p,
+  p > a,
+  li,
+  pre {
     > code {
       background-color: var(--theme-main-color-inverse, $c-white);
       color: var(--theme-color-dark);
-      padding: .1em .25em;
+      padding: 0.1em 0.25em;
       border-radius: 3px;
       font-weight: 700;
       @include font-xs;
@@ -86,7 +89,9 @@
     color: var(--theme-color-dark);
   }
 
-  table, th, td {
+  table,
+  th,
+  td {
     margin: 1em 0;
     padding: 10px;
     border: 1px solid var(--theme-color-dark);

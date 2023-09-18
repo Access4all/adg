@@ -1,7 +1,6 @@
 ---
 navigation_title: "From all devices"
 position: 3
-changed: "2021-06-29"
 ---
 
 # Hiding elements from all devices

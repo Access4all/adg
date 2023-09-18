@@ -1,7 +1,6 @@
 ---
 navigation_title: "Controlling a computer"
 position: 1
-changed: "2018-04-12"
 ---
 
 # Controlling a computer with a keyboard only

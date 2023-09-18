@@ -1,7 +1,6 @@
 ---
 navigation_title: "Autosuggest"
 position: 9
-changed: "2020-04-30"
 ---
 
 # Autosuggest widget (or: autocomplete, lookahead, typeahead)

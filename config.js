@@ -4,8 +4,7 @@ module.exports = {
   description: '', // TODO: Add
   twitter: '', // TODO: Add
   media: {
-    image:
-      'https://www.accessibility-developer-guide.com/img/logo/adg.svg',
+    image: 'https://www.accessibility-developer-guide.com/img/logo/adg.svg',
     favicon:
       'https://www.accessibility-developer-guide.com/img/favicon/favicon.ico'
   },

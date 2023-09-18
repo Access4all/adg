@@ -1,7 +1,6 @@
 ---
 navigation_title: "Good example"
 position: 2
-changed: "2018-04-03"
 ---
 
 # General good headings example

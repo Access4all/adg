@@ -16,7 +16,7 @@
     var config, uniqueIdCount
 
     class AdgAutocomplete {
-      constructor (el, options = {}) {
+      constructor(el, options = {}) {
         var jsonOptions, key, val
         this.$el = $(el)
         this.config = config
@@ -41,14 +41,14 @@
       }
 
       // Prints the given message to the console if config['debug'] is true.
-      debugMessage (message) {
+      debugMessage(message) {
         if (this.config.debugMessage) {
           return console.log(`Adg debug: ${message}`)
         }
       }
 
       // Executes the given selector on @$el and returns the element. Makes sure exactly one element exists.
-      findOne (selector) {
+      findOne(selector) {
         var result
         result = this.$el.find(selector)
         switch (result.length) {
@@ -71,19 +71,19 @@
         }
       }
 
-      name () {
+      name() {
         return 'adg-autosuggest'
       }
 
-      addAdgDataAttribute ($target, name, value = '') {
+      addAdgDataAttribute($target, name, value = '') {
         return $target.attr(this.adgDataAttributeName(name), value)
       }
 
-      removeAdgDataAttribute ($target, name) {
+      removeAdgDataAttribute($target, name) {
         return $target.removeAttr(this.adgDataAttributeName(name))
       }
 
-      adgDataAttributeName (name = null) {
+      adgDataAttributeName(name = null) {
         var result
         result = `data-${this.name()}`
         if (name) {
@@ -92,11 +92,11 @@
         return result
       }
 
-      uniqueId (name) {
+      uniqueId(name) {
         return [this.name(), name, uniqueIdCount++].join('-')
       }
 
-      labelOfInput ($inputs) {
+      labelOfInput($inputs) {
         return $inputs.map((i, input) => {
           var $input, $label, id
           $input = $(input)
@@ -117,24 +117,24 @@
         })
       }
 
-      show ($el) {
+      show($el) {
         $el.removeAttr('hidden')
         return $el.show()
       }
 
       // TODO Would be cool to renounce CSS and solely use the hidden attribute. But jQuery's :visible doesn't seem to work with it!?
       // @throwMessageAndPrintObjectsToConsole("Element is still hidden, although hidden attribute was removed! Make sure there's no CSS like display:none or visibility:hidden left on it!", element: $el) if $el.is(':hidden')
-      hide ($el) {
+      hide($el) {
         $el.attr('hidden', '')
         return $el.hide()
       }
 
-      throwMessageAndPrintObjectsToConsole (message, elements = {}) {
+      throwMessageAndPrintObjectsToConsole(message, elements = {}) {
         console.log(elements)
         throw message
       }
 
-      text (text, options = {}) {
+      text(text, options = {}) {
         var key, value
         text = this.config[`${text}Text`]
         for (key in options) {
@@ -144,14 +144,14 @@
         return text
       }
 
-      initFilter () {
+      initFilter() {
         this.$filter = this.findOne('input[type="text"]')
         this.addAdgDataAttribute(this.$filter, 'filter')
         this.$filter.attr('autocomplete', 'off')
         return this.$filter.attr('aria-expanded', 'false')
       }
 
-      initOptions () {
+      initOptions() {
         this.$optionsContainer = this.findOne(this.config.optionsContainer)
         this.addAdgDataAttribute(this.$optionsContainer, 'options')
         this.$optionsContainerLabel = this.findOne(
@@ -163,7 +163,7 @@
         return this.$options.addClass(this.config.hiddenCssClass)
       }
 
-      initAlerts () {
+      initAlerts() {
         this.$alertsContainer = $(
           `<div id='${this.uniqueId(this.config.alertsContainerId)}'></div>`
         )
@@ -180,7 +180,7 @@
         return this.addAdgDataAttribute(this.$alertsContainer, 'alerts')
       }
 
-      attachEvents () {
+      attachEvents() {
         this.attachClickEventToFilter()
         this.attachChangeEventToFilter()
         this.attachEscapeKeyToFilter()
@@ -191,7 +191,7 @@
         return this.attachClickEventToOptions()
       }
 
-      attachClickEventToFilter () {
+      attachClickEventToFilter() {
         return this.$filter.click(() => {
           this.debugMessage('click filter')
           if (this.$optionsContainer.is(':visible')) {
@@ -202,7 +202,7 @@
         })
       }
 
-      attachEscapeKeyToFilter () {
+      attachEscapeKeyToFilter() {
         return this.$filter.keydown(e => {
           if (e.which === 27) {
             if (this.$optionsContainer.is(':visible')) {
@@ -219,7 +219,7 @@
         })
       }
 
-      attachEnterKeyToFilter () {
+      attachEnterKeyToFilter() {
         return this.$filter.keydown(e => {
           if (e.which === 13) {
             this.debugMessage('enter')
@@ -233,7 +233,7 @@
         })
       }
 
-      attachTabKeyToFilter () {
+      attachTabKeyToFilter() {
         return this.$filter.keydown(e => {
           if (e.which === 9) {
             this.debugMessage('tab')
@@ -244,7 +244,7 @@
         })
       }
 
-      attachUpDownKeysToFilter () {
+      attachUpDownKeysToFilter() {
         return this.$filter.keydown(e => {
           if (e.which === 38 || e.which === 40) {
             if (this.$optionsContainer.is(':visible')) {
@@ -261,19 +261,19 @@
         })
       }
 
-      showOptions () {
+      showOptions() {
         this.debugMessage('(show options)')
         this.show(this.$optionsContainer)
         return this.$filter.attr('aria-expanded', 'true')
       }
 
-      hideOptions () {
+      hideOptions() {
         this.debugMessage('(hide options)')
         this.hide(this.$optionsContainer)
         return this.$filter.attr('aria-expanded', 'false')
       }
 
-      moveSelection (direction) {
+      moveSelection(direction) {
         var $upcomingOption,
           $visibleOptions,
           currentIndex,
@@ -296,7 +296,7 @@
         return $upcomingOption.prop('checked', true).trigger('change')
       }
 
-      attachChangeEventToOptions () {
+      attachChangeEventToOptions() {
         return this.$options.change(e => {
           this.debugMessage('option change')
           this.applyCheckedOptionToFilter()
@@ -304,13 +304,13 @@
         })
       }
 
-      applyCheckedOptionToFilterAndResetOptions () {
+      applyCheckedOptionToFilterAndResetOptions() {
         this.applyCheckedOptionToFilter()
         this.hideOptions()
         return this.filterOptions()
       }
 
-      applyCheckedOptionToFilter () {
+      applyCheckedOptionToFilter() {
         var $checkedOption, $checkedOptionLabel, $previouslyCheckedOptionLabel
         this.debugMessage('(apply option to filter)')
         $previouslyCheckedOptionLabel = $(
@@ -335,14 +335,14 @@
         }
       }
 
-      attachClickEventToOptions () {
+      attachClickEventToOptions() {
         return this.$options.click(e => {
           this.debugMessage('click option')
           return this.hideOptions()
         })
       }
 
-      attachChangeEventToFilter () {
+      attachChangeEventToFilter() {
         return this.$filter.on('input propertychange paste', e => {
           this.debugMessage('(filter changed)')
           this.filterOptions(e.target.value)
@@ -350,7 +350,7 @@
         })
       }
 
-      filterOptions (filter = '') {
+      filterOptions(filter = '') {
         var fuzzyFilter, visibleNumber
         fuzzyFilter = this.fuzzifyFilter(filter)
         visibleNumber = 0
@@ -369,7 +369,7 @@
         return this.announceOptionsNumber(filter, visibleNumber)
       }
 
-      announceOptionsNumber (
+      announceOptionsNumber(
         filter = this.$filter.val(),
         number = this.$options.length
       ) {
@@ -388,7 +388,7 @@
         return this.$alertsContainer.append(`<p role='alert'>${message}</p>`)
       }
 
-      fuzzifyFilter (filter) {
+      fuzzifyFilter(filter) {
         var escapedCharacter, fuzzifiedFilter, i
         i = 0
         fuzzifiedFilter = ''
@@ -423,4 +423,4 @@
       return new AdgAutocomplete(this)
     })
   })
-}.call(this))
+}).call(this)

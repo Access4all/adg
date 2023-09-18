@@ -1,7 +1,6 @@
 ---
 navigation_title: "Hidden headers"
 position: 9
-changed: "2018-04-16"
 ---
 
 # Visually hidden table headers

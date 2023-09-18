@@ -1,15 +1,15 @@
-
 .navbar {
   position: relative;
   @include above-mobile {
-  	position: fixed;
-  	left: 0; top: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
   }
 
   @include theme-background-color;
-	z-index: 1;
-	height: 100vh;
-	display: inline-block;
+  z-index: 1;
+  height: 100vh;
+  display: inline-block;
   min-width: $navWidthMin;
   font-size: 0;
 
@@ -23,12 +23,14 @@
     @include navbar_white_line__pseudo;
     z-index: 1;
     @include above-mobile {
-      top: 0; bottom: 0;
+      top: 0;
+      bottom: 0;
       right: 0;
       width: 1px;
     }
     @include mobile {
-      left: 0; right: 0;
+      left: 0;
+      right: 0;
       bottom: 0;
       height: 1px;
     }
@@ -48,7 +50,8 @@
     position: relative;
     &:after {
       @include navbar_white_line__pseudo;
-      right: 0; left: 0;
+      right: 0;
+      left: 0;
       bottom: 0px;
       height: 1px;
     }
@@ -72,7 +75,6 @@
   }
   //@include theme-background-color;
 }
-
 
 .navbar--container {
   @include font-xs;
@@ -99,31 +101,28 @@
   padding-bottom: $gutter;
 }
 
-
-
 @include mobile {
   .logo-title {
-   display: inline-block;
+    display: inline-block;
   }
 }
 
 @include max-width($navWidthMax) {
   .logo-title {
-   display: none;
+    display: none;
   }
 }
 @include tablet {
   .navbar--inner {
     display: none;
   }
-  .navbar--toggle--input:checked ~ .navbar {
+  .navbar.is-active {
     .navbar--inner {
       display: block;
     }
     .logo-title {
-     display: inline-block;
+      display: inline-block;
     }
-
   }
 }
 
@@ -138,8 +137,8 @@
       width: 100%;
     }
   }
-  .navbar--toggle--input:checked ~ .footer,
-  .navbar--toggle--input:checked ~ .site-content {
+  .navbar.is-active ~ .footer,
+  .navbar.is-active ~ .site-content {
     padding-left: $navWidthMax;
     width: $navWidthMax + $site-maxWidth;
     @media (max-width: $navWidthMax + $site-maxWidth) {
@@ -160,28 +159,32 @@
     display: none;
   }
   // Avoid focus for checkbox when toggeling of the menu is not needed
-  .navbar--toggle--input {
-    display: none;
-  }
+
   .logo-title {
-   display: inline-block;
+    display: inline-block;
   }
-
 }
-
 
 .navbar--toggle {
   cursor: pointer;
   position: absolute;
   right: 0;
-  top: 0; bottom: 0px;
+  top: $logo_height + 2 * $gutter;
+  bottom: 0px;
   width: $navWidthMin;
 
   @include mobile {
     height: 40px;
     bottom: auto;
-    left: auto; right: 10px;
+    left: auto;
+    right: 10px;
     top: 30px;
+  }
+  &:focus {
+    outline: none;
+    .navbar--toggle--inner {
+      @include btn-focus-style;
+    }
   }
 }
 
@@ -191,7 +194,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 
   @media screen and (-ms-high-contrast: active) {
     background-color: ButtonFace;
@@ -208,43 +211,37 @@
   }
 }
 
-.navbar--toggle--input {
-  @include visuallyhidden;
-
-  // Outline the hamburger navigation to toggle the navigation when using the keyboard only
-  &:focus + .navbar .navbar--toggle .navbar--toggle--inner {
-    outline: 2px dotted var(--theme-color-dark);
-  }
-}
 .navbar--toggle--line {
   display: block;
   width: 30px;
   height: 4px;
-  margin-bottom: 6px;
   position: relative;
   background-color: $c-black;
   border-radius: 3px;
   z-index: 1;
   transform-origin: 50% 50%;
-  transition: transform 0.4s cubic-bezier(0.77,0.2,0.05,1.0),
-              background-color 0.4s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.45s ease;
+  transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background-color 0.3s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.35s ease;
+
+  &:nth-last-child(2) {
+    margin: 6px 0;
+  }
 
   @media (-ms-high-contrast: active) {
     background-color: ButtonText;
   }
 
-	.navbar--toggle--input:checked ~ .navbar .navbar--toggle & {
-	  opacity: 1;
-	  transform: translateY(10px) rotate(45deg) ;
+  .navbar.is-active .navbar--toggle & {
+    opacity: 1;
+    transform: translateY(10px) rotate(45deg);
 
-	  &:nth-last-child(2) {
-		  opacity: 0;
-		  transform: rotate(0deg) scale(0.2, 0.2);
-		}
+    &:nth-last-child(2) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
 
-		&:nth-last-child(1) {
-		  transform: translateY(-10px) rotate(-45deg) ;
-		}
-	}
+    &:nth-last-child(1) {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  }
 }

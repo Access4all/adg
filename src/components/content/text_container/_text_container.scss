@@ -1,7 +1,7 @@
 .text_container {
-	@include text_container;
+  @include text_container;
 
-	.lead {
-		@include text_lead;
-	}
+  .lead {
+    @include text_lead;
+  }
 }

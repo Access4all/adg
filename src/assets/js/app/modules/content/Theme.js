@@ -9,12 +9,12 @@ import BaseModule from '../BaseModule'
  * @enabled true
  */
 export default class Theme extends BaseModule {
-  constructor () {
+  constructor() {
     super()
     this.ns = BaseModule.ns('Theme')
   }
 
-  init (element) {
+  init(element) {
     var DEFAULTS = {}
     this.$el = $(element)
     this.config = $.extend(true, {}, DEFAULTS)

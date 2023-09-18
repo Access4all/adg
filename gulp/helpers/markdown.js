@@ -1,5 +1,5 @@
 const markdownIt = require('markdown-it')
-const requireNew = require('require-new')
+const importFresh = require('import-fresh')
 const path = require('path')
 
 const plugins = {
@@ -32,7 +32,7 @@ module.exports = rootDir => filePath => {
     linkify: true,
     typography: true
   })
-  const examples = requireNew('./examples')
+  const examples = importFresh('./examples')
 
   markdown.validateLink = url => {
     const BAD_PROTO_RE = /^(vbscript|file|data):/
@@ -94,25 +94,27 @@ module.exports = rootDir => filePath => {
           }
         }
       })
-      .use(plugins.iterator, 'add_link_title', 'link_open', function (
-        tokens,
-        idx
-      ) {
-        const title = tokens[idx].attrGet('title')
+      .use(
+        plugins.iterator,
+        'add_link_title',
+        'link_open',
+        function (tokens, idx) {
+          const title = tokens[idx].attrGet('title')
 
-        if (title) {
-          return
+          if (title) {
+            return
+          }
+
+          const href = tokens[idx].attrGet('href')
+          const metaTitle = examples.getTitle(href)
+
+          if (!metaTitle) {
+            return
+          }
+
+          tokens[idx].attrSet('title', metaTitle)
         }
-
-        const href = tokens[idx].attrGet('href')
-        const metaTitle = examples.getTitle(href)
-
-        if (!metaTitle) {
-          return
-        }
-
-        tokens[idx].attrSet('title', metaTitle)
-      })
+      )
       .use(() => {
         // Add the #main-h1 ID to each page's main heading.
         markdown.core.ruler.push('manipulate_main_heading', state => {
@@ -120,7 +122,7 @@ module.exports = rootDir => filePath => {
 
           state.tokens.forEach(token => {
             if (['heading_open'].includes(token.type)) {
-              if (token.tag == 'h1' && isMainHeading) {
+              if (token.tag === 'h1' && isMainHeading) {
                 token.attrSet('id', 'main-h1')
                 isMainHeading = false
               }
@@ -214,6 +216,8 @@ module.exports = rootDir => filePath => {
                     if (followingChildToken.type === 'link_close') {
                       return true
                     }
+
+                    return false
                   })
 
                 // Add custom class to link
@@ -228,6 +232,8 @@ module.exports = rootDir => filePath => {
 
                 return true
               }
+
+              return false
             })
 
             // Create new token to be inserted
@@ -283,6 +289,8 @@ module.exports = rootDir => filePath => {
               // Stop iterating
               return true
             }
+
+            return false
           })
         })
       })

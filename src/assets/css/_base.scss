@@ -1,32 +1,32 @@
 html {
-	width: 100%;
-	overflow-x: hidden;
-	font-size: $base-font-size;
-	font-size: $base-font-size / 16px * 100%;
-	@include tablet {
-		font-size: $base-font-size / 16px * 95%;
-	}
-	@include mobile {
-		font-size: $base-font-size / 16px * 90%;
-	}
-	@include mobile-portrait {
-		font-size: $base-font-size / 16px * 85%;
-	}
-	text-size-adjust: 100%;
-	background-color: var(--theme-main-color-inverse, $c-white);
-	&.no-overflow {
-		overflow-y: hidden;
-	}
+  width: 100%;
+  overflow-x: hidden;
+  font-size: $base-font-size;
+  font-size: $base-font-size / 16px * 100%;
+  @include tablet {
+    font-size: $base-font-size / 16px * 95%;
+  }
+  @include mobile {
+    font-size: $base-font-size / 16px * 90%;
+  }
+  @include mobile-portrait {
+    font-size: $base-font-size / 16px * 85%;
+  }
+  text-size-adjust: 100%;
+  background-color: var(--theme-main-color-inverse, $c-white);
+  &.no-overflow {
+    overflow-y: hidden;
+  }
 }
 
 body {
-	@include body-font;
-	overflow-x: hidden;
-	background-color: $c-background;
+  @include body-font;
+  overflow-x: hidden;
+  background-color: $c-background;
 
-	@media print {
-		background-color: $c-white;
-	}
+  @media print {
+    background-color: $c-white;
+  }
 }
 
 body,
@@ -34,52 +34,52 @@ input,
 select,
 button,
 textarea {
-	@include textantialiasing;
+  @include textantialiasing;
 }
 
 // links
 a:active {
-	outline: none;
+  outline: none;
 }
 
 a:selected {
-	border: none;
-	outline: none;
+  border: none;
+  outline: none;
 }
 
 *:focus {
-//  outline: none;
+  //  outline: none;
 }
 
 abbr {
-	border-bottom: 1px dotted gray;
+  border-bottom: 1px dotted gray;
 }
 
 p sup {
-	position: relative;
-	top: -0.75ex;
+  position: relative;
+  top: -0.75ex;
 }
 
 p sub {
-	position: relative;
-	top: 0.5ex;
+  position: relative;
+  top: 0.5ex;
 }
 
 button {
-	cursor: pointer;
-	border-radius: 0;
+  cursor: pointer;
+  border-radius: 0;
 
-	// DEV, replace with real styles
-	&.codepen {
-		background-image: url("/img/logo/codepen.svg");
-		background-repeat: no-repeat;
-		background-position: .5em center;
-		background-size: 20px;
-		padding-left: 40px;
-		font-weight: bold;
+  // DEV, replace with real styles
+  &.codepen {
+    background-image: url('/img/logo/codepen.svg');
+    background-repeat: no-repeat;
+    background-position: 0.5em center;
+    background-size: 20px;
+    padding-left: 40px;
+    font-weight: bold;
     text-align: left;
     line-height: inherit;
-	}
+  }
 }
 
 p img {
@@ -102,14 +102,14 @@ p img {
 
   &:hover {
     border-width: 2px;
-  padding: 9px 11px 3px 11px;
+    padding: 9px 11px 3px 11px;
   }
 
   &-text {
     display: inline-block;
     width: 100%;
-		padding-bottom: 5px;
-		font-weight: bold;
+    padding-bottom: 5px;
+    font-weight: bold;
 
     &::after {
       content: ':';
@@ -157,8 +157,7 @@ p img {
       }
 
       &:focus + label {
-        outline: 2px dotted var(--theme-color-dark);
-        outline-offset: 2px;
+        @include btn-focus-style;
       }
     }
   }

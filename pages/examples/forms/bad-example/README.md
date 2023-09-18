@@ -1,7 +1,6 @@
 ---
 navigation_title: "Bad example"
 position: 3
-changed: "2020-04-30"
 ---
 
 # General bad form example

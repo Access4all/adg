@@ -1,7 +1,6 @@
 ---
 navigation_title: "VMware on Windows & Linux"
 position: 4
-changed: "2021-03-22"
 ---
 
 # Configuring VMware Workstation Pro on Windows (and Linux)

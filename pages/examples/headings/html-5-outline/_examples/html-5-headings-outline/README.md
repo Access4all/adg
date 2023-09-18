@@ -8,11 +8,14 @@ compatibility:
     2018.1 + FF Quantum 59.0.2:
       status: fail
       date: 2018-04-09
-  JAWS:
-    2018.3 + IE 11:
+    2021.2 + Chrome:
       status: fail
-      date: 2018-04-05
+      date: 2021-02-10
+  JAWS:
     2018.3 + FF ESR 52.7.3:
       status: fail
       date: 2018-05-09
+    2021.2 + Chrome:
+      status: fail
+      date: 2021-02-10
 ---

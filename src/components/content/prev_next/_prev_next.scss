@@ -1,5 +1,4 @@
 .prev_next {
-
   @include l-site_width;
   @include rem(margin-top, 3 * $gutter);
   @include rem(margin-bottom, 3 * $gutter);
@@ -11,12 +10,12 @@
     position: relative;
 
     &.prev_next__link-wrapper--previous {
-      padding-right: .25em;
+      padding-right: 0.25em;
     }
 
     &.prev_next__link-wrapper--next {
       float: right;
-      padding-left: .25em;
+      padding-left: 0.25em;
     }
   }
 
@@ -65,9 +64,6 @@
       color: var(--theme-color-dark);
     }
 
-    &:focus {
-      outline: 2px dotted var(--theme-color-dark);
-      outline-offset: 2px;
-    }
+    @include btn-focus;
   }
 }

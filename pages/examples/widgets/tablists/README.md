@@ -1,7 +1,6 @@
 ---
 navigation_title: "Tablists"
 position: 6
-changed: "2020-04-30"
 ---
 
 # Tablist widgets (or: tab panels, tabs)
@@ -36,17 +35,29 @@ Tablists are the most basic pattern of them all. Carousels then extend it by pro
 
 Because of this, the following texts apply not only to tablists, but also to carousels (see [Carousels (or: slideshow, slider)](/examples/widgets/carousel)) and accordions (see [Accordions](/examples/widgets/accordion)).
 
-## Proof of concept
+## Proofs of concept
 
-Before you go on, please read [What is a "Proof of concept"?](/examples/widgets/proof-of-concept).
+Before you go on, please read [What is a "Proof of concept"?](/examples/widgets/proof-of-concept) (POC).
 
-According to our credo [Widgets simply working for all](/knowledge/semantics/widgets), we advise to create tablists as a simple group of radio buttons. They can be styled visually as needed using CSS, and spiced up with (very little) JavaScript, so they behave like perfect tablists.
+ARIA is supported pretty well for tablists (see POC #1). If you need a much simpler solution though, and according to our credo [Widgets simply working for all](/knowledge/semantics/widgets), the easiest way to create a tablist is using a simple group of radio buttons (see POC #2).
+
+### POC #1: ARIA
+
+TODO
+
+#### Implementation details
+
+TODO
+
+### POC #2: Radio buttons
+
+They can be styled visually as needed using CSS, and spiced up with (very little) JavaScript, so they behave like perfect tablists.
 
 Sensible naming of elements (and a few specifically added visually hidden texts) guarantees that screen reader users know how to handle the element - even if they have not seen any other tablist before.
 
 [Example](_examples/tablist-with-radio-buttons)
 
-### Implementation details
+#### Implementation details
 
 Some interesting peculiarities:
 

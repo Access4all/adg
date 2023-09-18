@@ -1,7 +1,6 @@
 ---
 navigation_title: "Label & labelledby"
 position: 1
-changed: "2018-05-14"
 ---
 
 # Labelling elements using aria-label and aria-labelledby

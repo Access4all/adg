@@ -1,7 +1,6 @@
 ---
 navigation_title: "Iframes"
 position: 8
-changed: "2018-06-15"
 ---
 
 # External content in iframes

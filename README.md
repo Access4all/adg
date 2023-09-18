@@ -12,11 +12,11 @@ The «Accessibility Developer Guide» is an initiative of [«Access for all»](h
 
 It is developed and maintained in collaboration with a number of acclaimed web agencies, currently:
 
-- [Hinderling Volkart](https://www.hinderlingvolkart.com/)
-- [UNIC AG](https://www.unic.com/)
-- [Liip AG](https://www.liip.ch/)
-- [Zeix AG](https://www.zeix.com/)
-- [Nothing AG](https://www.nothing.ch)
+- [Dept](https://www.deptagency.com/)
+- [Unic](https://www.unic.com/)
+- [Liip](https://www.liip.ch/)
+- [Zeix](https://www.zeix.com/)
+- [Nothing](https://www.nothing.ch)
 
 ## Vision
 

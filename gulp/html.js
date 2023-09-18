@@ -1,21 +1,26 @@
+const child_process = require('child_process')
 const gulp = require('gulp')
 const handlebars = require('gulp-hb')
-const prettify = require('gulp-prettify')
+// const prettify = require('gulp-prettify')
 const frontMatter = require('gulp-front-matter')
 const through = require('through2')
 const fs = require('fs')
 const path = require('path')
-const requireNew = require('require-new')
+const importFresh = require('import-fresh')
 const plumber = require('gulp-plumber')
 const normalize = require('normalize-strings')
-const { Sitemap } = require('sitemap')
+const { SitemapStream, streamToPromise } = require('sitemap')
+const { Readable } = require('stream')
 const _ = require('lodash')
 const { JSDOM } = require('jsdom')
+
+const pathSeparatorRegExp = new RegExp('\\' + path.sep, 'g')
 
 const getUrl = (filePath, base) => {
   return path
     .relative(base, filePath)
     .replace(path.basename(filePath), '')
+    .replace(pathSeparatorRegExp, '/')
     .replace(/\/$/, '')
 }
 
@@ -126,11 +131,11 @@ const flattenNavigation = items =>
   }, [])
 
 module.exports = (config, cb) => {
-  const datetime = requireNew('./helpers/datetime')
-  const markdown = requireNew('./helpers/markdown')(config.rootDir)
-  const metatags = requireNew('./helpers/metatags')
-  const Feed = requireNew('./helpers/rss')
-  const appConfig = requireNew('../config')
+  const datetime = importFresh('./helpers/datetime')
+  const markdown = importFresh('./helpers/markdown')(config.rootDir)
+  const metatags = importFresh('./helpers/metatags')
+  const Feed = importFresh('./helpers/rss')
+  const appConfig = importFresh('../config')
 
   const files = []
   const sitemap = []
@@ -230,7 +235,9 @@ module.exports = (config, cb) => {
           try {
             const layout = getLayout(file.frontMatter.layout, layouts)
             const relPath = path.relative('./pages', file.path)
-            const currentUrl = relPath.substring(0, relPath.lastIndexOf('/'))
+            const currentUrl = relPath
+              .substring(0, relPath.lastIndexOf(path.sep))
+              .replace(pathSeparatorRegExp, '/')
             const prevNext = {}
             const breadcrumb = []
             const subPages = []
@@ -249,9 +256,14 @@ module.exports = (config, cb) => {
               site_name: appConfig.title,
               url: `${appConfig.url}/${currentUrl}`
             }
+            const { stdout: dateChanged } = child_process.spawnSync(
+              'git',
+              ['log', '-1', '--pretty=format:%cs', file.path],
+              { encoding: 'utf8' }
+            )
 
             file.data = Object.assign({}, file.data, {
-              changed: file.frontMatter.changed,
+              changed: dateChanged,
               title: file.data.title,
               contents: file.contents,
               navigation: pageNavigation,
@@ -268,7 +280,8 @@ module.exports = (config, cb) => {
               metatags: metatags.generateTags(metatagsData),
               breadcrumb: breadcrumb.sort((a, b) => {
                 return a.url.length - b.url.length
-              })
+              }),
+              fileHistory: `https://github.com/Access4all/adg/commits/main/pages/${relPath}`
             })
 
             sitemap.push({
@@ -296,6 +309,7 @@ module.exports = (config, cb) => {
           return path
             .relative('./src/components', file.path)
             .replace(path.extname(file.path), '')
+            .replace(pathSeparatorRegExp, '/')
         },
         helpers: {
           formatDate: datetime.formatDate,
@@ -315,6 +329,26 @@ module.exports = (config, cb) => {
           },
           or: function () {
             return Array.prototype.slice.call(arguments, 0, -1).some(Boolean)
+          },
+          inlineSvg: function (filePath, options = {}) {
+            if (!fs.existsSync(filePath)) {
+              throw new Error(
+                `Could not find ${filePath} referenced in 'inlineSvg'`
+              )
+            }
+
+            // Parse as HTML so we can manipulate it
+            const dom = new JSDOM(fs.readFileSync(filePath, 'utf8'))
+            const svg = dom.window.document.querySelector('svg')
+
+            // Add helper parameters as HTML attributes to the SVG
+            for (const [attr, value] of Object.entries(options.hash)) {
+              svg.setAttribute(attr, value)
+            }
+
+            const html = svg.outerHTML
+
+            return html
           }
         }
       }).on('error', config.errorHandler)
@@ -366,7 +400,7 @@ module.exports = (config, cb) => {
       })
     )
     .pipe(gulp.dest('./dist'))
-    .on('finish', () => {
+    .on('finish', async () => {
       // Generate RSS feeds
       const feed = Feed(files)
 
@@ -379,12 +413,13 @@ module.exports = (config, cb) => {
       fs.writeFileSync(config.feed.rss, feed.rss2())
 
       // Generate sitemap
-      const sm = new Sitemap({
-        hostname: config.host,
-        urls: sitemap
+      const sitemapStream = new SitemapStream({
+        hostname: config.host
       })
 
-      const xml = sm.toString()
+      const xml = await streamToPromise(
+        Readable.from(sitemap).pipe(sitemapStream)
+      ).then(data => data.toString())
 
       fs.writeFileSync(config.sitemap, xml)
 

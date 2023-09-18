@@ -1,6 +1,6 @@
 const gulp = require('gulp')
-const sass = require('gulp-sass')
-const nodeSassGlobbing = require('node-sass-globbing')
+const sass = require('gulp-sass')(require('node-sass'))
+const globImporter = require('node-sass-glob-importer')
 
 const autoprefixer = require('autoprefixer')
 const postcss = require('gulp-postcss')
@@ -12,7 +12,7 @@ module.exports = config => {
     })
     .pipe(
       sass({
-        importer: nodeSassGlobbing,
+        importer: globImporter(),
         includePaths: config.includePaths
       }).on('error', config.errorHandler)
     )

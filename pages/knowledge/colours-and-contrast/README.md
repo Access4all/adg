@@ -1,7 +1,6 @@
 ---
 navigation_title: "Colours & contrast"
 position: 1
-changed: "2019-12-15"
 ---
 
 # Colours and contrast

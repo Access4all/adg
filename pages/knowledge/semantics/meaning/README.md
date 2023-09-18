@@ -1,7 +1,6 @@
 ---
 navigation_title: "Meaning"
 position: 1
-changed: "2020-04-07"
 ---
 
 # Semantics provide meaning

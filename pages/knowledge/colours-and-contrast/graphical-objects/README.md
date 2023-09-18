@@ -1,7 +1,6 @@
 ---
 navigation_title: "Colour contrast for graphical objects"
 position: 5
-changed: "2019-12-15"
 ---
 
 # Colour contrast for graphical objects

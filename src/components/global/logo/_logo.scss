@@ -1,10 +1,9 @@
-
 .logo {
   margin-left: $gutter;
   @media (max-width: $navWidthMax + $site-maxWidth) {
     margin-left: ($navWidthMin - $logo_width) / 2;
   }
-	text-decoration: none;
+  text-decoration: none;
   overflow: hidden;
   display: block;
 
@@ -20,10 +19,9 @@
     }
   }
 
-  &:focus {
-    outline: 2px dotted var(--theme-color-dark);
-    outline-offset: 2px;
+  @include btn-focus;
 
+  &:focus {
     @media screen and (-ms-high-contrast: active) {
       color: ButtonText;
     }
@@ -38,6 +36,11 @@
     display: inline-block;
     width: 33px;
     height: 44px;
+    fill: currentColor;
+
+    path {
+      fill: inherit;
+    }
   }
 }
 
@@ -47,6 +50,6 @@
   line-height: 1.05;
   text-transform: uppercase;
   width: 0;
-  padding-left: .5em;
+  padding-left: 0.5em;
   margin: -2px 0;
 }

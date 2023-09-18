@@ -1,7 +1,6 @@
 ---
 navigation_title: "Non-interactive content"
 position: 6
-changed: "2020-04-30"
 ---
 
 # Placing non-interactive content between form controls

@@ -1,7 +1,6 @@
 ---
 navigation_title: "Visually hidden headings"
 position: 4
-changed: "2018-04-03"
 ---
 
 # Adding visually hidden headings to complete a page's outline

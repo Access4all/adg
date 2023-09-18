@@ -1,15 +1,13 @@
 $navWidthMin: 80px;
 $navWidthMax: 260px;
 
-
 @mixin navbar_white_line__pseudo {
   @include navbar_white_line__bg;
-  content: "";
+  content: '';
   position: absolute;
   display: inline-block;
   opacity: 1;
 }
-
 
 @mixin navbar_white_line__bg {
   background-color: var(--theme-main-color-inverse, $c-white);

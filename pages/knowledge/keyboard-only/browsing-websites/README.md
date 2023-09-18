@@ -1,7 +1,6 @@
 ---
 navigation_title: "Browsing websites"
 position: 2
-changed: "2018-04-12"
 ---
 
 # How to browse websites using a keyboard only

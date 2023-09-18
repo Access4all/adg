@@ -1,7 +1,6 @@
 ---
 navigation_title: "Proof of concept?"
 position: 3
-changed: "2018-05-31"
 ---
 
 # What is a "Proof of concept"?
@@ -28,17 +27,18 @@ As such, our POCs are not intended to be copied & pasted 1:1 into "real world" p
 
 ### Simple and straight to the point
 
-Many of our POCs are lacking a lot of functionality that generally would be expected from "real world" implementations.
+Many of our POCs are lacking some functionality that generally would be expected from "real world" implementations.
 
 For example, most of our POCs are optimised for being used either with a mouse or with a keyboard, while certain edge cases of interactions of the two of them is not taken care of. Also, touch usage with gestures are not implemented in any way.
 
-And while the semantics are well chosen (see [Semantics and their importance for accessibility](/knowledge/semantics)), the visual design of the POCs is very sparse.
+And while the semantics are well chosen (see [Semantics and their importance for accessibility](/knowledge/semantics)), the visual design of the POCs is quite sparse.
 
-### ARIA only when inevitable
+### ARIA only when safe and sound
 
-According to our credo of [Widgets simply working for all](/knowledge/semantics/widgets), ARIA roles and states were relinquished wherever possible, and traditional HTML elements are used.
+According to our credo of [Widgets simply working for all](/knowledge/semantics/widgets)  and our principles of [Sensible usage of ARIA roles and attributes](/examples/sensible-aria-usage), ARIA is used conservatively:
 
-In certain well-reasoned situations though, ARIA is used according to the principles of [Sensible usage of ARIA roles and attributes](/examples/sensible-aria-usage) to optimise the user experience for screen readers.
+- either wenn there is no appropriate traditional HTML feature available
+- or when the ARIA feature has proved to be well supported and delivers a much better experience among screen readers
 
 ## Icing on the cake
 
