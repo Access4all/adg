@@ -12,6 +12,7 @@ compatibility:
       status: pass
       date: 2021-02-10
     2023.1 + Edge:
+    2023.7 + Edge:
       status: pass
       date: 2023-07-13
   JAWS:

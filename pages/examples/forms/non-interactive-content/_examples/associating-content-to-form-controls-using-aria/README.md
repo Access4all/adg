@@ -8,7 +8,7 @@ compatibility:
     2018.1 + FF Quantum 59.0.2:
       status: pass
       date: 2018-05-08
-    2021.2 + Chrome:
+    2023.2 + Chrome:
       status: pass
       date: 2023-07-13
     2023.1 + Edge:

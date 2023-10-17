@@ -5,9 +5,9 @@ compatibility:
     status: pass
     date: 2018-04-17
   NVDA:
-    2018.1 + FF Quantum 59.0.2:
+    2018.1 + FF 115:
       status: pass
-      date: 2018-04-17
+      date: 2023-08-03
     2021.2 + Chrome:
       status: pass
       date: 2021-02-10
