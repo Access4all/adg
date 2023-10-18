@@ -84,81 +84,104 @@ const getCodePenForm = (code, title) => {
 }
 
 const getExample = (examplePath, filePath) => {
-  const code = getCode(examplePath)
-  const id = _.uniqueId('example-')
+  try {
+    const code = getCode(examplePath)
+    const id = _.uniqueId('example-')
 
-  const compatibilitySummaryBrowsers = ['Chrome', 'Edge', 'FF', 'Safari', 'IE']
-  const compatibilitySummary = []
+    const compatibilitySummaryBrowsers = [
+      'Chrome',
+      'Edge',
+      'FF',
+      'Safari',
+      'IE'
+    ]
+    const compatibilitySummary = []
 
-  let compatibility = []
+    let compatibility = []
 
-  if (code.details.compatibility) {
-    for (const [category, value] of Object.entries(
-      code.details.compatibility
-    )) {
-      const results = value.status
-        ? {
-            [category]: value
+    if (code.details.compatibility) {
+      for (const [category, value] of Object.entries(
+        code.details.compatibility
+      )) {
+        if (!value) {
+          throw new Error(
+            `Missing value for "${category}" in "compatibility" table.`
+          )
+        }
+
+        const results = value.status
+          ? {
+              [category]: value
+            }
+          : value
+
+        for (const [browser, result] of Object.entries(results)) {
+          if (!result) {
+            throw new Error(
+              `Missing value for "${browser}" in "compatibility" table.`
+            )
           }
-        : value
 
-      for (const [browser, result] of Object.entries(results)) {
-        const env = category === browser ? category : `${category} ${browser}`
+          const env = category === browser ? category : `${category} ${browser}`
 
-        compatibility.push({
-          env,
-          status: result.status,
-          date: result.date,
-          comments: result.comments || null,
-          category
-        })
+          compatibility.push({
+            env,
+            status: result.status,
+            date: result.date,
+            comments: result.comments || null,
+            category
+          })
+        }
       }
     }
-  }
 
-  compatibility = compatibility.map(result => {
-    // Create color code and visual indication based on status and whether comments are present
-    result.statusCode =
-      result.status === 'pass' ? (result.comments ? 'yellow' : 'green') : 'red'
-    result.statusIndication =
-      result.status === 'pass'
-        ? result.comments
-          ? '⚠ <span class="visuallyhidden">(pass with comments)</span>'
-          : '✔ <span class="visuallyhidden">(pass)</span>'
-        : '✘ <span class="visuallyhidden">(fail)</span>'
+    compatibility = compatibility.map(result => {
+      // Create color code and visual indication based on status and whether comments are present
+      result.statusCode =
+        result.status === 'pass'
+          ? result.comments
+            ? 'yellow'
+            : 'green'
+          : 'red'
+      result.statusIndication =
+        result.status === 'pass'
+          ? result.comments
+            ? '⚠ <span class="visuallyhidden">(pass with comments)</span>'
+            : '✔ <span class="visuallyhidden">(pass)</span>'
+          : '✘ <span class="visuallyhidden">(fail)</span>'
 
-    // Format date
-    const date = new Date(result.date)
+      // Format date
+      const date = new Date(result.date)
 
-    // eslint-disable-next-line eqeqeq
-    if (date != 'Invalid Date') {
-      result.date = `${date.getFullYear()}-${
-        date.getMonth() + 1
-      }-${date.getDate()}`
-    }
+      // eslint-disable-next-line eqeqeq
+      if (date != 'Invalid Date') {
+        result.date = `${date.getFullYear()}-${
+          date.getMonth() + 1
+        }-${date.getDate()}`
+      }
 
-    // Create summary of screenreader+browser combinations
-    const summaryBrowser = compatibilitySummaryBrowsers.find(browser =>
-      result.env.match(browser)
-    )
+      // Create summary of screenreader+browser combinations
+      const summaryBrowser = compatibilitySummaryBrowsers.find(browser =>
+        result.env.match(browser)
+      )
 
-    if (summaryBrowser) {
-      compatibilitySummary.push({
-        name: `<img src="/img/compatibility/${result.category.toLowerCase()}.png" alt="${
-          result.category
-        }" /><span class="visuallyhidden">+</span><img src="/img/compatibility/${summaryBrowser.toLowerCase()}.png" class="browser" alt="${summaryBrowser}" />`,
-        statusCode: result.statusCode,
-        statusIndication: result.statusIndication
-      })
-    }
+      if (summaryBrowser) {
+        compatibilitySummary.push({
+          name: `<img src="/img/compatibility/${result.category.toLowerCase()}.png" alt="${
+            result.category
+          }" /><span class="visuallyhidden">+</span><img src="/img/compatibility/${summaryBrowser.toLowerCase()}.png" class="browser" alt="${summaryBrowser}" />`,
+          statusCode: result.statusCode,
+          statusIndication: result.statusIndication
+        })
+      }
 
-    return result
-  })
+      return result
+    })
 
-  const btns = ['html', 'css', 'js']
-    .filter(type => code[type])
-    .map(type => {
-      return `<div class="control">
+    const btns = ['html', 'css', 'js']
+      .filter(type => code[type])
+      .map(type => {
+        return `<div class="control">
       <input type="checkbox" id="${id}-${type}" name="${id}" value="${type}" class="js-panel" />
       <label class="button" for="${id}-${type}">
         <span class="visuallyhidden">Show </span>
@@ -166,19 +189,19 @@ const getExample = (examplePath, filePath) => {
         <span class="visuallyhidden"> code</span>
       </label>
     </div>`
-    })
-  const blocks = ['html', 'css', 'js']
-    .filter(type => code[type])
-    .map(type => {
-      const markup = hljs.highlightAuto(code[type], [type])
+      })
+    const blocks = ['html', 'css', 'js']
+      .filter(type => code[type])
+      .map(type => {
+        const markup = hljs.highlightAuto(code[type], [type])
 
-      return `<div class="panel" id="${id}-${type}_panel" style="display: none"><pre><code>${markup.value}</code></pre></div>`
-    })
+        return `<div class="panel" id="${id}-${type}_panel" style="display: none"><pre><code>${markup.value}</code></pre></div>`
+      })
 
-  const codePenForm = getCodePenForm(code)
+    const codePenForm = getCodePenForm(code)
 
-  if (compatibility.length) {
-    btns.push(`<div class="control">
+    if (compatibility.length) {
+      btns.push(`<div class="control">
       <input type="checkbox" id="${id}-compatibility" name="${id}" value="compatibility" class="js-panel" />
       <label class="button" for="${id}-compatibility">
         <span class="summary">
@@ -193,7 +216,7 @@ const getExample = (examplePath, filePath) => {
       </label>
     </div>`)
 
-    blocks.push(`<div class="panel" id="${id}-compatibility_panel" style="display: none">
+      blocks.push(`<div class="panel" id="${id}-compatibility_panel" style="display: none">
       <table class="compatibility">
         <thead>
           <th class="category">Category</th>
@@ -217,15 +240,22 @@ const getExample = (examplePath, filePath) => {
         </tbody>
       </table>
     </div>`)
-  }
+    }
 
-  return {
-    form: `
+    return {
+      form: `
   ${codePenForm}
   <div class="tablist"><div class="controls">${btns.join(
     ''
   )}</div><div class="panels">${blocks.join('')}</div></div>`,
-    code
+      code
+    }
+  } catch (err) {
+    console.error(
+      `\x1b[31m[Error] Could not extract example from ${examplePath}. See details below.\x1b[0m`
+    )
+
+    throw err
   }
 }
 
