@@ -1,7 +1,6 @@
 ---
 navigation_title: "Hidden"
 position: 6
-changed: "2018-05-14"
 ---
 
 # Hiding elements from screen readers using aria-hidden

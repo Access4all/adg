@@ -1,7 +1,6 @@
 ---
 navigation_title: "How to use"
 position: 1
-changed: "2019-11-12"
 ---
 
 # How to use this guide

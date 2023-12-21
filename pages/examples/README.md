@@ -1,7 +1,6 @@
 ---
 navigation_title: "Examples"
 position: 4
-changed: "2018-04-02"
 ---
 
 # Examples of accessibility patterns

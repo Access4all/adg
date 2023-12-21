@@ -1,7 +1,6 @@
 ---
 navigation_title: "Relevant combinations"
 position: 2
-changed: "2020-04-07"
 ---
 
 # Relevant combinations of screen readers and browsers

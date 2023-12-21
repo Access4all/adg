@@ -1,7 +1,6 @@
 ---
 navigation_title: "Setup"
 position: 2
-changed: "2018-04-02"
 ---
 
 # Setup of the accessibility environment

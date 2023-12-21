@@ -1,7 +1,6 @@
 ---
 navigation_title: "Colour is not enough"
 position: 6
-changed: "2019-12-15"
 ---
 
 # Colour is not enough

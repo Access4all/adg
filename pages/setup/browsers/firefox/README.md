@@ -1,7 +1,6 @@
 ---
 navigation_title: "Firefox"
 position: 2
-changed: "2018-03-12"
 ---
 
 # Firefox installation and configuration

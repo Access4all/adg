@@ -1,7 +1,6 @@
 ---
 navigation_title: "Dialog"
 position: 12
-changed: "2020-04-30"
 ---
 
 # Dialog widget (or: modal, popup, lightbox, overlay, alert)

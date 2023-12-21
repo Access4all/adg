@@ -1,7 +1,6 @@
 ---
 navigation_title: "How to implement"
 position: 3
-changed: "2018-05-30"
 ---
 
 # How to implement websites that are ready for keyboard only usage

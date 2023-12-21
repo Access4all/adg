@@ -1,7 +1,6 @@
 ---
 navigation_title: "NVDA"
 position: 3
-changed: "2020-04-30"
 ---
 
 # NVDA installation and configuration
@@ -142,27 +141,16 @@ You can disable that:
 - In the NVDA menu, choose `(P)references` → `(G)eneral settings`.
 - Disable `Sho(w) exit options when exiting NVDA` and confirm.
 
+### Visually highlighting focused element
+
+The [visual highlight setting](https://www.nvaccess.org/files/nvda/documentation/userGuide.html#VisionFocusHighlight) enables indicating where NVDA's internal cursor currently is on the screen — an invaluable help for sighted users.
+
+![The visual highlight setting in action](_media/nvda-focus-highlighting.png)
+
+
 ## Add-ons
 
 There are lots of add-ons for NVDA in the [NVDA Community Add-ons website (NVDA-Project.org)](https://addons.nvda-project.org/index.en.html).
-
-### FocusHighlight
-
-This add-on visually indicates where NVDA's internal cursor currently is on the screen — an invaluable help for sighted users.
-
-![The FocusHighlight add-on in action](_media/the-focushighlight-add-on-in-action.png)
-
-There are several indications:
-
-- A green border is painted around the element where the browse cursor currently is.
-- A red border is painted around the element where the focus cursor currently is.
-    - The red border turns into blue when the element is being interacted with.
-
-If you are really curious and want to learn more about these different cursor types, skip ahead and read [Screen readers' browse and focus modes](/knowledge/screen-readers/desktop/browse-focus-modes).
-
-[Download FocusHighlight add-on](http://addons.nvda-project.org/addons/focusHighlight.en.html) (stable version) and install it!
-
-### Optional add-ons
 
 Here are some more of our personal favourites:
 

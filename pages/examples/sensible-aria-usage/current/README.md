@@ -1,7 +1,6 @@
 ---
 navigation_title: "Current"
 position: 5
-changed: "2018-05-14"
 ---
 
 # Marking elements as the current one using aria-current

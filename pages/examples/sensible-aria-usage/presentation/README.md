@@ -1,7 +1,6 @@
 ---
 navigation_title: "Presentation"
 position: 7
-changed: "2018-05-15"
 ---
 
 # Removing semantics using presentation role

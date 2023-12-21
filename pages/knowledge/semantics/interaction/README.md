@@ -1,7 +1,6 @@
 ---
 navigation_title: "Interaction"
 position: 2
-changed: "2018-04-12"
 ---
 
 # Semantics support interaction

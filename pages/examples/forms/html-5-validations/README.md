@@ -1,7 +1,6 @@
 ---
 navigation_title: "HTML 5 validations"
 position: 9
-changed: "2018-05-03"
 ---
 
 # HTML 5 client side validations

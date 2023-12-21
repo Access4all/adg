@@ -1,7 +1,6 @@
 ---
 navigation_title: "HTML Boilerplate"
 position: 1
-changed: "2018-09-02"
 ---
 
 # Basic structure of an accessible HTML file

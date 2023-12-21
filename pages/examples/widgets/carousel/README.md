@@ -1,7 +1,6 @@
 ---
 navigation_title: "Carousel"
 position: 7
-changed: "2018-05-29"
 ---
 
 # Carousels (or: slideshow, slider)
