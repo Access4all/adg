@@ -1,62 +1,84 @@
 body {
-  margin-top: 0;
+  line-height: 1.5;
 }
 
-#caption {
-  width: 810px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  margin-top: -51px;
-  position: fixed;
+.container {
+  max-height: 75vh;
+  border: 0.25rem solid;
+  overflow: auto;
+}
+
+table {
+  border-collapse: collapse;
+  min-width: 100%;
+}
+
+caption {
+  padding: 0.125rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
   background-color: #fff;
   text-align: center;
 }
 
-.table {
-  border-left: 1px solid;
-  border-bottom: 1px solid;
-  display: table;
-  margin-top: 57px;
-}
-
-.thead {
-  position: fixed;
-  top: 30px;
-}
-
-.tbody {
+tbody {
   padding-top: 6px;
 }
 
-.tr {
-  display: table-row;
-}
-
-.th, .td {
-  border-top: 1px solid;
-  border-right: 1px solid;
-  padding: 4px 8px;
-  display: table-cell;
-}
-
-.th {
-  font-weight: bold;
-}
-.th[role="rowheader"] {
-  background-color: lightgreen;
-}
-.th[role="columnheader"] {
-  background-color: lightpink;
+th,
+td {
+  padding: 0.125rem 0.5rem;
+  text-align: left;
 }
 
 .name {
-  width: 200px;
+  min-width: 10rem;
 }
-
 .description {
-  width: 400px;
+  min-width: 20rem;
+}
+.resources {
+  min-width: 10rem;
 }
 
-.resources {
-  width: 200px;
+/* Sticky behavior */
+th[scope='row'],
+thead th:first-child {
+  position: sticky;
+  left: 0;
+  background-color: lightgreen;
+  /* Non-scrolling border */
+  background-image: linear-gradient(
+    to right,
+    transparent calc(100% - 0.0625rem),
+    currentColor calc(100% - 0.0625rem)
+  );
+}
+th[scope='col'],
+thead th:first-child {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: lightpink;
+  border-top: 0.0625rem solid;
+  /* Non-scrolling border */
+  background-image: linear-gradient(
+    to bottom,
+    transparent calc(100% - 1px),
+    currentColor calc(100% - 1px)
+  );
+}
+thead th:first-child {
+  z-index: 2;
+  background-image: linear-gradient(
+      to right,
+      transparent calc(100% - 1px),
+      currentColor calc(100% - 1px)
+    ),
+    linear-gradient(
+      to bottom,
+      transparent calc(100% - 1px),
+      currentColor calc(100% - 1px)
+    );
 }
