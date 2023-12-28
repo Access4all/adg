@@ -3,7 +3,7 @@ title: "Table with fixed headers"
 compatibility:
   Keyboard only:
     status: pass
-    date: 2018-04-17
+    date: 2023-10-19
   NVDA:
     2018.1 + FF 115:
       status: pass

@@ -5,7 +5,7 @@ position: 8
 
 # Indicating form controls as required using asterisks (*)
 
-**Asterisk (*) next to a form control's label usually indicates it as "required". Oftentimes, this asterisk's purpose is then explained somewhere else on the page. Many users (especially screen reader users) may be confused with that, so be sure to make this information is easily accessible.**
+**Asterisk (*) next to a form control's label usually indicates it as "required". Oftentimes, this asterisk's purpose is then explained somewhere else on the page. Many users (especially screen reader users) may be confused with that, so make sure this information is easily accessible.**
 
 [[_TOC_]]
 

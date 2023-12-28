@@ -258,7 +258,7 @@ module.exports = (config, cb) => {
             }
             const { stdout: dateChanged } = child_process.spawnSync(
               'git',
-              ['log', '-1', '--pretty=format:%cs', file.path],
+              ['log', '-1', '--pretty=format:%ci', file.path],
               { encoding: 'utf8' }
             )
 
