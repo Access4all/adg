@@ -1,6 +1,6 @@
 ---
 navigation_title: "Colour Contrast Analyser"
-position: 1
+position: 2
 ---
 
 # Colour Contrast Analyser

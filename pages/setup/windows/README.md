@@ -1,5 +1,5 @@
 ---
-navigation_title: "Windows"
+navigation_title: "Windows as OS"
 position: 1
 ---
 

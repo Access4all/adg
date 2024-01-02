@@ -1,6 +1,6 @@
 ---
 navigation_title: "PDF Accessibility Checker"
-position: 2
+position: 4
 ---
 
 # PDF Accessibility Checker

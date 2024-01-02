@@ -5,3 +5,23 @@
 [[redirects]]
   from = "/setup/windows/modern-ie"
   to = "/setup/windows/virtual-machines"
+
+[[redirects]]
+  from = "/setup/browsers/bookmarklets/"
+  to = "/setup/helper-tools/bookmarklets/"
+
+[[redirects]]
+  from = "/setup/browsers/bookmarklets/contents-structured/"
+  to = "/setup/helper-tools/bookmarklets/contents-structured/"
+
+[[redirects]]
+  from = "/setup/browsers/bookmarklets/contents-structured/_static/bookmarklet"
+  to = "/setup/helper-tools/bookmarklets/contents-structured/_static/bookmarklet"
+
+[[redirects]]
+  from = "/setup/browsers/bookmarklets/h123/"
+  to = "/setup/helper-tools/bookmarklets/h123/"
+
+[[redirects]]
+  from = "/setup/browsers/bookmarklets/html-codesniffer/"
+  to = "/setup/helper-tools/bookmarklets/html-codesniffer/"

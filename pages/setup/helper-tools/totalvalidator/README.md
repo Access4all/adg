@@ -1,6 +1,6 @@
 ---
 navigation_title: "TotalValidator"
-position: 4
+position: 1
 ---
 
 # TotalValidator
