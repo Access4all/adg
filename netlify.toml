@@ -1,6 +1,10 @@
 [[redirects]]
   from = "/introduction/contributing/"
-  to = "/contribute/"
+  to = "/contribution/"
+
+[[redirects]]
+  from = "/contribute/"
+  to = "/contribution/"
 
 [[redirects]]
   from = "/setup/windows/modern-ie"
