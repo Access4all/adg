@@ -1,6 +1,7 @@
 ---
 navigation_title: "Windows"
 position: 1
+card_text: "Learn how to prepare your work environment to use native Windows software"
 ---
 
 # Windows operating system

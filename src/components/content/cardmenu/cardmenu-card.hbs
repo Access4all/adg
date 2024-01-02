@@ -1,7 +1,9 @@
 <span class="cardmenu--card cardmenu--card-default">
   <span class="cardmenu--card--inner">
     <strong class="cardmenu--card--label">{{title}}</strong>
-    {{#if lead}}
+    {{#if cardText}}
+      <span class="cardmenu--card--lead">{{cardText}}</span>
+    {{else if lead}}
       <span class="cardmenu--card--lead">{{lead}}</span>
     {{/if}}
   </span>

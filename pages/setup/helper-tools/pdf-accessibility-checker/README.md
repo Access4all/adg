@@ -1,6 +1,7 @@
 ---
 navigation_title: "PDF Accessibility Checker"
 position: 2
+card_text: "The PDF Accessibility Checker (PAC) provides a fast way to test the accessibility of PDF files"
 ---
 
 # PDF Accessibility Checker
