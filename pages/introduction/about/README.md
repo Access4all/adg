@@ -22,7 +22,7 @@ The foundation has been in business since the year 2000, and since then has guid
 
 **Sylvia Winkelmann-Ackermann**, former CEO, «Access for all».
 
-For more information, see [www.access-for-all.ch](http://access-for-all.ch/).
+For more information, see [www.access-for-all.ch](https://access-for-all.ch/).
 
 ## Web agencies
 

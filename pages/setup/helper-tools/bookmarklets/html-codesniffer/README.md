@@ -11,7 +11,7 @@ position: 3
 
 ## Installation
 
-Go to [HTML_CodeSniffer](http://squizlabs.github.io/HTML_CodeSniffer/) and get the bookmarklet there.
+Go to [HTML_CodeSniffer](https://squizlabs.github.io/HTML_CodeSniffer/) and get the bookmarklet there.
 
 ## Usage
 

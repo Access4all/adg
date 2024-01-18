@@ -25,7 +25,7 @@ Sadly though, it is not possible to use HTML 5 heading outlines for accessible w
 
 ### Fact: HTML 5 outlines are not accessible
 
-The HTML 5 outline algorithm sadly was never implemented by any relevant assistive software. Because of that, meanwhile even the W3C advises against using the HTML 5 document outline in its HTML 5.2 draft: [Computer says NO to HTML 5 document outline (html5Doctor.com)](http://html5doctor.com/computer-says-no-to-html5-document-outline/).
+The HTML 5 outline algorithm sadly was never implemented by any relevant assistive software. Because of that, meanwhile even the W3C advises against using the HTML 5 document outline in its HTML 5.2 draft: [Computer says NO to HTML 5 document outline (html5Doctor.com)](https://html5doctor.com/computer-says-no-to-html5-document-outline/).
 
 The following example shows the technically correct usage of the HTML 5 outline algorithm.
 
