@@ -78,7 +78,8 @@ const extendNavigationItem = (origItem, index, options) => {
         title: child.titleDetailed,
         lead: child.lead,
         url: child.url,
-        level: level + 1
+        level: level + 1,
+        cardText: child.cardText
       })
     })
   } else if (options.currentUrl.includes(item.url)) {
@@ -201,7 +202,8 @@ module.exports = (config, cb) => {
               ).replace(/\s+/g, '-'),
               titleDetailed: file.data.title,
               lead: file.data.lead,
-              position: file.frontMatter.position
+              position: file.frontMatter.position,
+              cardText: file.frontMatter.card_text
             })
           }
 
