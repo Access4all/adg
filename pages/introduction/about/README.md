@@ -83,7 +83,7 @@ If you feel like you have anything to give to our movement (be it active collabo
 - Facebook: [AccessibilityDeveloperGuide](https://www.facebook.com/AccessibilityDeveloperGuide)
 - Twitter: [A11yDevGuide](https://twitter.com/A11yDevGuide)
 
-Or drop us a line using the [«Access for all» contact form](http://access-for-all.ch/en/contact.html).
+Or drop us a line using the [«Access for all» contact form](https://access-for-all.ch/en/about-us/contact/).
 
 ### Contributors
 
