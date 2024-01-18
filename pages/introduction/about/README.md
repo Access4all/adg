@@ -1,6 +1,7 @@
 ---
 navigation_title: "About"
 position: 2
+card_text: "The «Accessibility Developer Guide» is the result of many years of hands-on practice in the field of testing websites for accessibility, as well as developing accessible web applications"
 ---
 
 # About this initiative
@@ -82,7 +83,7 @@ If you feel like you have anything to give to our movement (be it active collabo
 - Facebook: [AccessibilityDeveloperGuide](https://www.facebook.com/AccessibilityDeveloperGuide)
 - Twitter: [A11yDevGuide](https://twitter.com/A11yDevGuide)
 
-Or drop us a line using the [«Access for all» contact form](http://access-for-all.ch/en/contact.html).
+Or drop us a line using the [«Access for all» contact form](https://access-for-all.ch/en/about-us/contact/).
 
 ### Contributors
 

@@ -1,6 +1,7 @@
 ---
 navigation_title: "TotalValidator"
-position: 1
+position: 4
+card_text: "TotalValidator checks your website regarding various web and accessibility standards"
 ---
 
 # TotalValidator
