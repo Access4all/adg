@@ -1,6 +1,6 @@
 ---
 navigation_title: "Colour Contrast Analyser"
-position: 1
+position: 3
 card_text: "This tool calculates the contrast between foreground and background colours and evaluates the returned value against the WCAG"
 ---
 

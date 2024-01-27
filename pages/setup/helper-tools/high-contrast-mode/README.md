@@ -1,6 +1,6 @@
 ---
 navigation_title: "High Contrast Mode"
-position: 3
+position: 5
 card_text: "A useful tool to ensure that visual information is not conveyed with purely decorative styles"
 ---
 

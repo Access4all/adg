@@ -13,7 +13,11 @@ position: 1
 
 ## Installation
 
-Install the [Web Developer toolbar](https://addons.mozilla.org/de/firefox/addon/web-developer/).
+**Firefox**<br>
+[Download Web Developer Firefox extension](https://addons.mozilla.org/en/firefox/addon/web-developer/) from Mozilla Add-ons and install it.
+
+**Microsoft Edge** and **Chrome**<br>
+[Download Web Developer Chrome extension](https://chromewebstore.google.com/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm) from the Google Web Store and install it.
 
 ## Usage
 

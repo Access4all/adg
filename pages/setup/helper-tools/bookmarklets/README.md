@@ -1,6 +1,7 @@
 ---
 navigation_title: "Bookmarklets"
-position: 5
+position: 2
+card_text: "Bookmarklets are bookmarks that contain JavaScript instead of a URL"
 ---
 
 # Bookmarklets
