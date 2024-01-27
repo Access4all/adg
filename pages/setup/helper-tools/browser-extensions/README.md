@@ -1,7 +1,7 @@
 ---
 navigation_title: "Browser extensions"
 position: 1
-card_text: "Browser extensions are software modules for customizing and extending a web browser"
+card_text: "Browser extensions are software modules for customizing and extending a web browser."
 ---
 
 # Browser extensions

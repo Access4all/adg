@@ -1,11 +1,12 @@
 ---
 navigation_title: "WAVE toolbar"
 position: 2
+card_text: "It gives you a very quick first impression about the quality of the current webpage’s accessibility."
 ---
 
 # WAVE toolbar
 
-**WAVE toolbar gives you a very quick first impression about the quality of the current webpage's accessibility. At the press of a button, it provides visual cues by injecting icons and detailed information right into the page.**
+**WAVE toolbar gives you a very quick first impression about the quality of the current webpage’s accessibility. At the press of a button, it provides visual cues by injecting icons and detailed information right into the page.**
 
 [[_TOC_]]
 

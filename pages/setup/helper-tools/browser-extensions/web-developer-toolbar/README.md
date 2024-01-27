@@ -1,11 +1,12 @@
 ---
 navigation_title: "Web Developer toolbar"
 position: 1
+card_text: "It adds various tools to the browser that are incredibly useful for all sorts of code inspection and debugging."
 ---
 
 # Web Developer toolbar
 
-**Probably well known by most web developers already, the Web Developer toolbar extension adds various tools to Firefox that are incredibly useful for all sorts of code inspection and debugging. It can sometimes even be seen as a screen reader substitute — if you know its limitations.**
+**Probably well known by most web developers already, the Web Developer toolbar extension adds various tools to the browser that are incredibly useful for all sorts of code inspection and debugging. It can sometimes even be seen as a screen reader substitute — if you know its limitations.**
 
 [[_TOC_]]
 

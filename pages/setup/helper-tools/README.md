@@ -1,7 +1,7 @@
 ---
 navigation_title: "Helper tools"
 position: 4
-card_text: "In this chapter, you will find a collection of our favourite helper tools"
+card_text: "In this chapter, you will find a collection of our favourite helper tools."
 ---
 
 # Accessibility helper tools

@@ -1,7 +1,7 @@
 ---
 navigation_title: "Screen readers"
 position: 3
-card_text: "Learn how to install and configure mobile and desktop screen readers for convenient use"
+card_text: "Learn how to install and configure mobile and desktop screen readers for convenient use."
 ---
 
 # Screen readers

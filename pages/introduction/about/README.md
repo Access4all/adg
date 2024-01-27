@@ -1,7 +1,7 @@
 ---
 navigation_title: "About"
 position: 2
-card_text: "The «Accessibility Developer Guide» is the result of many years of hands-on practice in the field of testing websites for accessibility, as well as developing accessible web applications"
+card_text: "The «Accessibility Developer Guide» is the result of many years of hands-on practice in the field of testing websites for accessibility, as well as developing accessible web applications."
 ---
 
 # About this initiative
