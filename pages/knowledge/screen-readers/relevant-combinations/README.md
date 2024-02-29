@@ -97,6 +97,11 @@ Usage of Internet Explorer has dropped significantly since the last survey (then
 
 Accessibility support in Microsoft's current browser Edge was very low upon release. Meanwhile, Edge was improved in some respects. But most screen reader users didn't switch from Internet Explorer yet or switched to other browsers. Edge did not gain sufficient traction to be considered here.
 
+#### Newer Survey
+- Screen Reader User Survey #10 Results <https://webaim.org/projects/screenreadersurvey10/>
+- Screen Reader User Survey #9 Results <https://webaim.org/projects/screenreadersurvey9/>
+
+
 ### Software versions
 
 To make the whole topic even more complex, we could ask for combinations of specific software versions of both browsers and screen readers. This would definitely result in an explosion of possible combinations.
