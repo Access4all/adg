@@ -47,8 +47,23 @@
             { n: "TEXTAREA", c: "#633974", p: 1 },
             { n: "BUTTON", c: "#34495E", p: 1 },
           ];
+          var customQuerySelectorAll = function (node, selector) {
+            var nodes = [];
+            var nodeIterator = document.createNodeIterator(node, Node.ELEMENT_NODE);
+            var currentNode;
+
+            while (currentNode = nodeIterator.nextNode()) {
+              if (currentNode.matches(selector)) {
+                nodes.push(currentNode);
+              } else if (currentNode.shadowRoot) {
+                nodes.push(...customQuerySelectorAll(currentNode.shadowRoot, selector));
+              }
+            }
+
+            return nodes;
+          };
           var hT = function (w, to) {
-            var t = w.document.getElementsByTagName(to.n);
+            var t = customQuerySelectorAll(document, to.n);
             for (var i = 0; i < t.length; i++) {
               if (to.p == 0) {
                 t[i].insertBefore(cT(w, to, ""), t[i].firstChild);
