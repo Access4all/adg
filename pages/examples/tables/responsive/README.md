@@ -21,16 +21,6 @@ On the other side, there have also been attempts to change the layout of traditi
 
 Instead of transforming a traditional table's full layout into a responsive one (as will be explained below), it can be useful already to simply hide some of its elements on smaller screens.
 
-### Hiding negligible data
-
-The following table about hobbies displays columns for a "Name", a "Description" and a link to "Additional resources".
-
-As the description in fact simply is taken from the linked additional resources, we can easily hide it on narrow view to save horizontal space (if you haven't done this yet, go back and read [Hiding elements from all devices](/examples/hiding-elements/from-all-devices)). In the following example, please resize your browser to trigger narrow view.
-
-[Example](_examples/table-with-hidden-column-in-narrow-view)
-
-By the way, we added distinctive background colours so it will be easier for you to spot any differences.
-
 ### Replacing bulky elements
 
 In the following example, the bulky "Wikipedia" links are hidden, and only small icons are shown in narrow view.
