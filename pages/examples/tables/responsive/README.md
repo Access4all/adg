@@ -1,5 +1,5 @@
 ---
-navigation_title: "Responsive"
+navigation_title: 'Responsive'
 position: 7
 ---
 
@@ -17,17 +17,13 @@ Since portable devices like smartphones have become increasingly popular, screen
 
 On the other side, there have also been attempts to change the layout of traditional tables so they would fit these new requirements. Sadly, most of these attempts left accessibility behind. So we show you to change a table's visual appearance while keeping accessibility intact.
 
-## Saving space
+## Allow scrolling
 
-Instead of transforming a traditional table's full layout into a responsive one (as will be explained below), it can be useful already to simply hide some of its elements on smaller screens.
+The safest baseline approach to make a responsive table is to **not change its layout** and add a scroll container.
 
-### Replacing bulky elements
+[Example](_examples/table-with-scroll-container)
 
-In the following example, the bulky "Wikipedia" links are hidden, and only small icons are shown in narrow view.
-
-[Example](_examples/table-with-smaller-elements-in-narrow-view)
-
-Please do not forget to set a proper alternative text to those icons.
+See details about this approach in [Adrian Roselli's post](https://adrianroselli.com/2020/11/under-engineered-responsive-tables.html).
 
 ## Changing the visual layout
 
