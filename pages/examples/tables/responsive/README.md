@@ -19,7 +19,7 @@ On the other side, there have also been attempts to change the layout of traditi
 
 ## Allow scrolling
 
-The safest baseline approach to make a responsive table is to **not change its layout** and add a scroll container.
+The safest baseline approach to make a responsive table is to not change its layout and add a scroll container.
 
 [Example](_examples/table-with-scroll-container)
 
@@ -27,13 +27,13 @@ See details about this approach in [Adrian Roselli's post](https://adrianroselli
 
 ## Changing the visual layout
 
-Sometimes, the visual layout of a table needs to be changed completely to fit small screens.
+But sometimes, the visual layout of a table needs to be changed completely to fit small screens.
 
 As we already know: to alter a table's visual appearance, the `display` property can be changed, and some ARIA needs to be added (if you haven't done this yet, go back and read [Changing a table's visual layout](/examples/tables/layout-changes)). Take a look at the following example of a responsive table: when resizing the browser, you will see all elements stack on top of each other.
 
 [Example](_examples/table-with-block-elements-in-narrow-view)
 
-As the table is enhanced using ARIA, screen reader users are very happy with this result.
+As the table is enhanced using ARIA, this generally works for screen reader users.
 
 ### Optimisation for visual users
 
@@ -57,10 +57,10 @@ But this is redundant information for screen readers, so we use `aria-hidden="tr
 
 ### Final result
 
-There we are: here you have the perfectly accessible responsive table.
+There we are: here you have an accessible responsive table.
 
-![The perfect responsive table](_media/the-perfect-responsive-table.png)
+![Responsive table](_media/responsive-table.png)
 
-Admittedly, this has become pretty complex now. But you can easily generate this automatically - even with some post-processing JavaScript.
+Admittedly, this has become a bit complex now. If you are using any kind of template engine, the additional markup can be generated automatically at least.
 
-This solution will deliver a very good experience to all kinds of users. So in our opinion, it is totally worth the effort.
+This solution will generally deliver a good experience to all kinds of users. But please keep in mind that the safest approach is still the one with a scroll container (see [first example](#allow-scrolling)).
