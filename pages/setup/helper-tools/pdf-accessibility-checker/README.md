@@ -10,11 +10,11 @@ card_text: "The PDF Accessibility Checker (PAC) provides a fast way to test the 
 
 [[_TOC_]]
 
-![PAC icon](_media/pac-icon.png)
+![PAC logo](_media/logo_pac.png){ style="max-width:350px;" }
 
 ## Installation
 
-[Download PDF Accessibility Checker](https://pdfua.foundation/en/).
+[Download PDF Accessibility Checker](https://pac.pdf-accessibility.org/en){ target=_blank }.
 
 As it does not have an installer, you can simply extract it to a folder of your liking.
 
