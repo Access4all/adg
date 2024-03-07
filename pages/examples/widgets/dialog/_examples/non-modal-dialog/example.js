@@ -1,70 +1,73 @@
-;(function () {
-  var AdgDialog
-
-  AdgDialog = class AdgDialog {
-    constructor(el) {
-      this.$openButton = $(el)
-      this.initContainer(this.$openButton.attr('data-adg-dialog'))
-      this.initOpenButton()
-    }
-
-    initOpenButton() {
-      this.$openButton.attr('aria-expanded', false)
-      this.$openButton.append(
-        '<span class="adg-visually-hidden"> (dialog)</span>'
-      )
-      return this.$openButton.click(e => {
-        if (this.$container.is(':visible')) {
-          return this.hide()
-        } else {
-          return this.show()
-        }
-      })
-    }
-
-    initContainer(id) {
-      this.$container = $(`#${id}`)
-      this.$container.attr('data-adg-dialog-container', true)
-      this.initCloseButton()
-      return this.initConfirmButton()
-    }
-
-    initConfirmButton() {
-      this.$confirmButton = $(
-        '<button>Confirm<span class="adg-visually-hidden"> (close)</span></button>'
-      )
-      this.$container.append(this.$confirmButton)
-      return this.$confirmButton.click(() => {
-        return this.hide()
-      })
-    }
-
-    initCloseButton() {
-      this.$closeButton = $(
-        '<button class="adg-dialog-icon"><svg class="icon" focusable="false"><use xlink:href="#tooltip" /></svg></span><span class="adg-visually-hidden">Close dialog</span></button>'
-      )
-      this.$container.prepend(this.$closeButton)
-      return this.$closeButton.click(() => {
-        return this.hide()
-      })
-    }
-
-    show() {
-      this.$container.attr('hidden', false)
-      this.$openButton.attr('aria-expanded', true)
-      return this.$closeButton.focus()
-    }
-
-    hide() {
-      this.$container.attr('hidden', true)
-      this.$openButton.attr('aria-expanded', false)
-      return this.$openButton.focus()
-    }
+class AdgDialog {
+  constructor (el) {
+    this.openButton = el
+    this.elementToOpenId = this.openButton.getAttribute('data-adg-dialog')
+    this.initContainer(this.elementToOpenId)
+    this.initOpenButton()
+    this.hide()
   }
 
-  $(document).ready(function () {
-    return $('[data-adg-dialog]').each(function () {
-      return new AdgDialog(this)
+  initOpenButton () {
+    this.openButton.setAttribute('aria-expanded', 'false')
+
+    const dialogHintElement = document.createElement('span')
+    dialogHintElement.classList.add('adg-visually-hidden')
+    dialogHintElement.innerText = ' (dialog)'
+
+    this.openButton.appendChild(dialogHintElement)
+
+    this.openButton.addEventListener('click', () => {
+      if (this.container.hidden) {
+        this.show()
+      } else {
+        this.hide()
+      }
     })
-  })
-}).call(this)
+  }
+
+  initContainer (id) {
+    this.container = document.getElementById(id)
+    this.container.setAttribute('data-adg-dialog-container', '')
+    this.initCloseButton()
+    this.initConfirmButton()
+  }
+
+  initConfirmButton () {
+    this.confirmButton = document.createElement('button')
+    this.confirmButton.setAttribute('type', 'button')
+    this.confirmButton.innerHTML = 'Confirm<span class="adg-visually-hidden"> (close)</span>'
+
+    this.confirmButton.addEventListener('click', () => this.hide())
+
+    this.container.append(this.confirmButton)
+  }
+
+  initCloseButton () {
+    this.closeButton = document.createElement('button')
+    this.closeButton.setAttribute('type', 'button')
+    this.closeButton.classList.add('adg-dialog-icon')
+    this.closeButton.innerHTML = '<svg class="icon" focusable="false"><use xlink:href="#tooltip" /></svg></span><span class="adg-visually-hidden">Close dialog</span>'
+
+    this.closeButton.addEventListener('click', () => this.hide())
+
+    this.container.prepend(this.closeButton)
+  }
+
+  show () {
+    this.container.hidden = false
+    this.openButton.setAttribute('aria-expanded', 'true')
+    this.closeButton.focus()
+  }
+
+  hide () {
+    this.container.hidden = true
+    this.openButton.setAttribute('aria-expanded', 'false')
+    this.openButton.focus()
+  }
+}
+
+const dialogs = []
+
+document
+  .querySelectorAll('[data-adg-dialog]')
+  .forEach((element) => dialogs.push(new AdgDialog(element)))
