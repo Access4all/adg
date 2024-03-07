@@ -19,11 +19,11 @@ The options for Windows VMs on Apple M1 and M2 chips seem to be [very limited at
 
 Before you proceed, be sure you have downloaded a pre-configured virtual machine (VM) as described here: [Getting a free Windows virtual machine from Microsoft](/setup/windows/virtual-machines).
 
-Then extract the VM (using [The Unarchiver](http://wakaba.c3.cx/s/apps/unarchiver.html), as the built-in unzip version is not capable of zip64 files) to a proper location, for example `~/Virtual Machines`.
+Then extract the VM (using [The Unarchiver](https://wakaba.c3.cx/s/apps/unarchiver.html), as the built-in unzip version is not capable of zip64 files) to a proper location, for example `~/Virtual Machines`.
 
 ## Installing VMware Fusion
 
-After downloading [VMware Fusion](http://www.vmware.com/ch/products/fusion), installing and launching it:
+After downloading [VMware Fusion](https://www.vmware.com/ch/products/fusion), installing and launching it:
 
 - Choose `File` -> `Import`, select the `*.ovf` file in the extracted folder and confirm.
 - Take a snapshot (`Command + Shift + S`).
@@ -80,7 +80,7 @@ This key is not available on Macs (in earlier days of macOS, it was the "Help" k
     - From `right_option` to `insert`.
     - Instead of `right_option`, you can choose any key you like. Make sure it is one you do not really need in your daily workflow.
 
-Alternatively, you can attach a physical [USB num lock keyboard](http://lmgtfy.com/?q=USB+num+lock+keyboard) (or any other keyboard offering an `Insert` key) to your Mac.
+Alternatively, you can attach a physical [USB num lock keyboard](https://lmgtfy.com/?q=USB+num+lock+keyboard) (or any other keyboard offering an `Insert` key) to your Mac.
 
 ## Working seamlessly with the VM
 

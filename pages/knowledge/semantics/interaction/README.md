@@ -16,7 +16,7 @@ Let's look at this topic based on the example of the tag that made the internet 
 As you can see, the following link is properly implemented using the `<a>` tag:
 
 ```html
-<a href="http://www.google.com">
+<a href="https://www.google.com">
   Google
 </a>
 ```

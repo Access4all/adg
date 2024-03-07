@@ -17,9 +17,13 @@ position: 3
 
 ## Configuration
 
-### Add-Ons
+### Restoring tabs after restart
 
-Most Chrome extensions [should be installable](https://www.howtogeek.com/411830/how-to-install-google-chrome-extensions-in-microsoft-edge/) in Edge, too. Extensions like [axe](https://microsoftedge.microsoft.com/addons/detail/axe-web-accessibility-t/kcenlimkmjjkdfcaleembgmldmnnlfkn) are additionally distributed directly via Microsoft's [Edge Add-ons page](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home).
+You may open and close browsers repeatedly during accessibility testing. To learn how to configure Edge to restore tabs upon restart, see [How to reopen closed tabs in Microsoft Edge – Restore a previous session (microsoft.com)](https://www.microsoft.com/en-us/edge/learning-center/how-to-reopen-closed-tabs).
+
+## Add-ons
+
+We recommend adding selected [browser extensions](/setup/helper-tools/browser-extensions/) and [bookmarklets](/setup/helper-tools/bookmarklets/) to your browser.
 
 ## IE 11
 

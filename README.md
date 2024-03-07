@@ -2,11 +2,11 @@
 
 **If you want to learn about accessible website development, you are at the right place.**
 
-- Live site: [www.accessibility-developer-guide.com](http://www.accessibility-developer-guide.com) / [RSS](/feed/rss.xml)
+- Live site: [www.accessibility-developer-guide.com](https://www.accessibility-developer-guide.com/) / [RSS](/feed/rss.xml)
 - Facebook: [AccessibilityDeveloperGuide](https://www.facebook.com/AccessibilityDeveloperGuide)
 - Twitter: [A11yDevGuide](https://twitter.com/A11yDevGuide)
 
-The «Accessibility Developer Guide» is an initiative of [«Access for all»](http://access-for-all.ch/), Swiss Foundation for technology adapted to people with disabilities.
+The «Accessibility Developer Guide» is an initiative of [«Access for all»](https://access-for-all.ch), Swiss Foundation for technology adapted to people with disabilities.
 
 <img src="/src/assets/img/logo/zfa.png" alt="«Access for all» logo" width="50%" />
 

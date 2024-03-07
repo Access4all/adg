@@ -1,7 +1,7 @@
 ---
 navigation_title: "About"
 position: 2
-card_text: "The «Accessibility Developer Guide» is the result of many years of hands-on practice in the field of testing websites for accessibility, as well as developing accessible web applications"
+card_text: "The «Accessibility Developer Guide» is the result of many years of hands-on practice in the field of testing websites for accessibility, as well as developing accessible web applications."
 ---
 
 # About this initiative
@@ -22,7 +22,7 @@ The foundation has been in business since the year 2000, and since then has guid
 
 **Sylvia Winkelmann-Ackermann**, former CEO, «Access for all».
 
-For more information, see [www.access-for-all.ch](http://access-for-all.ch/).
+For more information, see [www.access-for-all.ch](https://access-for-all.ch/).
 
 ## Web agencies
 

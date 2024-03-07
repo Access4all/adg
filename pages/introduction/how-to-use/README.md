@@ -1,7 +1,7 @@
 ---
 navigation_title: "How to use"
 position: 1
-card_text: "This guide aims to serve as a comprehensive resource for both beginners and experienced developers"
+card_text: "This guide aims to serve as a comprehensive resource for both beginners and experienced developers."
 ---
 
 # How to use this guide

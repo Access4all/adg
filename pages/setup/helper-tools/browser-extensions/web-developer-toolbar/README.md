@@ -1,11 +1,12 @@
 ---
 navigation_title: "Web Developer toolbar"
 position: 1
+card_text: "It adds various tools to the browser that are incredibly useful for all sorts of code inspection and debugging."
 ---
 
 # Web Developer toolbar
 
-**Probably well known by most web developers already, the Web Developer toolbar extension adds various tools to Firefox that are incredibly useful for all sorts of code inspection and debugging. It can sometimes even be seen as a screen reader substitute — if you know its limitations.**
+**Probably well known by most web developers already, the Web Developer toolbar extension adds various tools to the browser that are incredibly useful for all sorts of code inspection and debugging. It can sometimes even be seen as a screen reader substitute — if you know its limitations.**
 
 [[_TOC_]]
 
@@ -13,7 +14,11 @@ position: 1
 
 ## Installation
 
-Install the [Web Developer toolbar](https://addons.mozilla.org/de/firefox/addon/web-developer/).
+**Firefox**<br>
+[Download Web Developer Firefox extension](https://addons.mozilla.org/en/firefox/addon/web-developer/) from Mozilla Add-ons and install it.
+
+**Microsoft Edge** and **Chrome**<br>
+[Download Web Developer Chrome extension](https://chromewebstore.google.com/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm) from the Google Web Store and install it.
 
 ## Usage
 
