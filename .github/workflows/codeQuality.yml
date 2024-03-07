@@ -1,12 +1,9 @@
-#
-# linter and dependancy cruiser tests
-
 name: Code Quality checks
 
 on:
   pull_request:
   push:
-    branches: [master]
+    branches: [main]
 
 jobs:
   code-quality:
@@ -23,7 +20,20 @@ jobs:
         run: npm ci
 
       - name: ES syntax linter
-        run: npm run lint
+        run: npm run lint -- --fix
 
       - name: Prettier
-        run: npm run prettier
+        run: npm run prettier -- --write
+
+      - name: Commit formatted code
+        run: |
+          git config --global user.email "
+          git config --global user.name "GitHub Actions"
+          git add .
+          git commit -a -m "Auto-format code"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
