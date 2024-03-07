@@ -3,10 +3,10 @@
   <thead>
     <tr>
       <th></th>
-      <th colspan="5">
+      <th colspan="5" id="Work">
         Work Days
       </th>
-      <th colspan="2">
+      <th colspan="2" id="Leisure">
         Leisure Days
       </th>
     </tr>
@@ -14,25 +14,25 @@
       <th>
         Hour
       </th>
-      <th>
+      <th id="Mon" headers="Work">
         Monday
       </th>
-      <th>
+      <th id="Tue" headers="Work">
         Tuesday
       </th>
-      <th>
+      <th id="Wed" headers="Work">
         Wednesday
       </th>
-      <th>
+      <th id="Thu" headers="Work">
         Thursday
       </th>
-      <th>
+      <th id="Fri" headers="Work">
         Friday
       </th>
-      <th>
+      <th id="Sat" headers="Leisure">
         Saturday
       </th>
-      <th>
+      <th id="Sun" headers="Leisure">
         Sunday
       </th>
     </tr>
@@ -42,23 +42,23 @@
       <th>
         9:00
       </th>
-      <td>
+      <td headers="Work Mon">
         Sports
       </td>
-      <td>
+      <td headers="Work Tue">
         German
       </td>
-      <td>
+      <td headers="Work Wed">
         English
       </td>
-      <td></td>
-      <td>
+      <td headers="Work Thu"></td>
+      <td headers="Work Fri">
         German
       </td>
-      <td rowspan="2">
+      <td rowspan="2" headers="Leisure Sat">
         Dancing
       </td>
-      <td>
+      <td headers="Leisure Sun">
         Sleeping
       </td>
     </tr>
@@ -66,20 +66,20 @@
       <th>
         10:00
       </th>
-      <td>
+      <td headers="Work Mon">
         Chemistry
       </td>
-      <td>
+      <td headers="Work Tue">
         Sports
       </td>
-      <td></td>
-      <td>
+      <td headers="Work Wed"></td>
+      <td headers="Work Thu">
         Physics
       </td>
-      <td>
+      <td headers="Work Fri">
         Computer Science
       </td>
-      <td>
+      <td headers="Leisure Sun">
         Chillout
       </td>
     </tr>
