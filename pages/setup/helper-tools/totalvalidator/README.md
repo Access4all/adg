@@ -14,7 +14,7 @@ card_text: "Total Validator checks your website regarding various web and access
 
 <br>
 
-According to the W3C as of September 2023, the success criterion 4.1.1 is considered as always satisfied for any system using HTML or XML, and it is not tested in this case (see [www.w3.org/WAI/WCAG21/Understanding/parsing.html](https://www.w3.org/WAI/WCAG21/Understanding/parsing.html){ target=_blank }).
+> **Note**<br>According to the W3C as of September 2023, the success criterion 4.1.1 is considered as always satisfied for any system using HTML or XML, and there is no need to test it anymore (see [www.w3.org/WAI/WCAG21/Understanding/parsing.html](https://www.w3.org/WAI/WCAG21/Understanding/parsing.html){ target=_blank }).
 
 ## Installation
 
