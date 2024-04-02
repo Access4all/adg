@@ -10,23 +10,27 @@ card_text: "The PDF Accessibility Checker (PAC) provides a fast way to test the 
 
 [[_TOC_]]
 
-![PAC icon](_media/pac-icon.png)
+![PAC logo](_media/logo_pac.png){ style="max-width:350px;" }
 
 ## Installation
 
-[Download PDF Accessibility Checker](https://pdfua.foundation/en/).
+[Download PDF Accessibility Checker](https://pac.pdf-accessibility.org/en){ target=_blank }.
 
 As it does not have an installer, you can simply extract it to a folder of your liking.
 
 ## Usage
 
-Launch PAC. To examine a PDF document, click on the `Select PDF File` button.
+Launch PAC. To examine a PDF document, click the `Open Document` button or drag the file to the area labeled `Drop a PDF file here`.
 
-!["Select PDF File" icon](_media/select-pdf-file-icon.png)
+![PAC "Open Document" button](_media/pac-open-document.png){ style="max-width:218px;" }
+
+<br>
 
 Inspect the displayed results.
 
 ![PDF Accessibility Checker window](_media/pdf-accessibility-checker-window.png)
+
+<br>
 
 To ensure that the PDF's content is marked up correctly and the elements are ordered properly, open the `Screen Reader Preview` and compare it with the original document.
 
