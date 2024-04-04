@@ -43,15 +43,15 @@ As such it is very hard to examine:
 
 ### WebAIM's screen reader user survey
 
-The initiative [Web Accessibility In Mind (WebAIM.org)](https://webaim.org/) conducts regular surveys among users of assistive software, which gives us at least some insight into the topic.
+The initiative [Web Accessibility In Mind (WebAIM.org)](https://webaim.org/){ target=_blank } conducts regular surveys among users of assistive software, which gives us at least some insight into the topic.
 
-The most recent survey was conducted in August - September 2019 ([WebAIM's Screen Reader User Survey #8](https://webaim.org/projects/screenreadersurvey8/)). Around 58% of the roughly speaking 1200 responses came from North America and 27% from Europe.
+The most recent survey was conducted in December 2023 and January 2024 ([WebAIM's Screen Reader User Survey #10](https://webaim.org/projects/screenreadersurvey10/){ target=_blank }). Around 47% of the roughly speaking 1500 responses came from North America and 31% from Europe.
 
 #### Limitations
 
 Like every other survey, the WebAIM screen reader survey is expected to reach a rather deterministic sample only: exclusively screen reader users who somehow got to know about the survey and were eager to fill it out are included. As such, its results may be heavily biased and its representativeness may be limited.
 
-Also, we only gain an outline about rough proportions, but no detailed data about absolute statistics. For example, we can say that there are about twice as many JAWS users than NVDA users. But we cannot say whether the overall number of JAWS users worldwide is rather some ten thousands, some hundred thousands, or some millions.
+Also, we only gain an outline about rough proportions, but no detailed data about absolute statistics. For example, we can say that there are slightly more JAWS users than NVDA users. But we cannot say whether the overall number of JAWS users worldwide is rather some ten thousands, some hundred thousands, or some millions.
 
 Also, the difference between desktop and mobile often is not obvious: especially regarding VoiceOver, it often is unclear whether VoiceOver/macOS or VoiceOver/iOS is meant.
 
@@ -59,15 +59,34 @@ Finally, we do not have detailed information about differences between countries
 
 However: even if there are general limitations to the representativeness of the survey, it provides the best currently available data regarding the preferences of screen reader users, particularly in North America and Europe, including the UK.
 
+
 #### Results for mobile devices
 
-Almost all (86.3%) of the respondents use a screen reader on a mobile device or tablet. That's a greater usage than on laptop (83.9%) or desktop (67.5%).
+Almost all (91.3%) of the respondents use a screen reader on a mobile device or tablet.
 
-The reponses to the question "Which of the following mobile screen readers do you commonly use?" show us that VoiceOver/iOS (71.2%) and TalkBack (33.0%) are by far the most popular mobile screen readers.
+##### Mobile/tablet platforms:
 
-Regarding the question, which browser is used with the user's primary mobile screen reader, the survey results show that Safari (62.7%) and Chrome (25.2%) are the prevailing mobile browsers.
+- Apple iOS: 70.6%
+- Android: 27.6%
+- Chrome OS: 0.5%
+- Other mobile/tablet platforms: 1.3%
 
-Respondents with disabilities used iOS devices at a higher rate than those without disabilities. For 69% of them iOS is the primary mobile platform, followed by Android (27.5%).
+##### Mobile screen readers used:
+
+- VoiceOver: 70.6%
+- TalkBack: 34.7%
+- Commentary/Jieshuo: 10.1%
+- Other mobile screen readers: 24%
+
+##### Primary mobile web browser:
+
+- Safari: 58.2%
+- Chrome: 27.9%
+- Firefox: 4.6%
+- Other mobile web browsers: 9.3%
+
+See [webaim.org/projects/screenreadersurvey10/#mobile](https://webaim.org/projects/screenreadersurvey10/#mobile){ target=_blank } for details.
+
 
 #### Results for desktop/laptop computers
 
