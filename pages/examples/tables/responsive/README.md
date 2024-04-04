@@ -51,7 +51,7 @@ In a first attempt, we can hide them visually in narrow view (if you haven't don
 
 It would be even more beautiful if the table headers could be displayed visually next to each table cell. For this, we have to add them in each cell, but display them only in narrow view.
 
-But this is redundant information for screen readers, so we use `aria-hidden="true"`, trying to hide those additional table headers again. This works great with NVDA, while JAWS keeps announcing them (but we can live with that).
+But this is redundant information for screen readers, so we use `aria-hidden="true"`, trying to hide those additional table headers again.
 
 [Example](_examples/table-with-added-headers-in-narrow-view)
 
