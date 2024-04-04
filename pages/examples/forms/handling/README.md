@@ -100,7 +100,7 @@ By clicking on an input's label, you can verify whether the two are associated: 
 
 This conveys the tag names of a lot of HTML elements, including form elements. It allows fast visual examination of wrong (or missing) form structures.
 
-For more details, see [Contents Structured](/setup/browsers/bookmarklets/contents-structured).
+For more details, see [Contents Structured](/setup/helper-tools/bookmarklets/contents-structured).
 
 ### HTML_CodeSniffer
 
@@ -108,4 +108,4 @@ Similar to WAVE toolbar, HTML_CodeSniffer checks for some additional well-known 
 
 - Missing `<submit>` button.
 
-For more details, see [HTML_CodeSniffer](/setup/browsers/bookmarklets/html-codesniffer).
+For more details, see [HTML_CodeSniffer](/setup/helper-tools/bookmarklets/html-codesniffer).

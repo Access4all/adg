@@ -1,5 +1,5 @@
 ---
-navigation_title: 'Contribute'
+navigation_title: 'Contribution'
 position: 5
 ---
 

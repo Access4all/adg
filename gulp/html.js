@@ -265,7 +265,8 @@ module.exports = (config, cb) => {
             )
 
             file.data = Object.assign({}, file.data, {
-              changed: dateChanged,
+              changed:
+                dateChanged && dateChanged.length > 0 ? dateChanged : null,
               title: file.data.title,
               contents: file.contents,
               navigation: pageNavigation,

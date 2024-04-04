@@ -12,6 +12,6 @@ module.exports = {
   author: {
     name: 'Access For All',
     email: 'adg@access-for-all.ch',
-    link: 'http://www.access-for-all.ch'
+    link: 'https://access-for-all.ch'
   }
 }

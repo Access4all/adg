@@ -21,4 +21,4 @@ Activate the bookmarklet by clicking on it. Then inspect the displayed results a
 
 ## Credits
 
-This is a slightly enriched version of the bookmarklet [Inhalte gegliedert](http://testen.bitv-test.de/bookmarklets.html). Our version highlights some more elements like lists, tables, links, and forms.
+This is a slightly enriched version of the bookmarklet [Inhalte gegliedert](https://testen.bitv-test.de/bookmarklets.html). Our version highlights some more elements like lists, tables, links, and forms.
