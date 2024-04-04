@@ -8,13 +8,11 @@ card_text: "Total Validator checks your website regarding various web and access
 
 **Total Validator checks your website regarding various web and accessibility standards by the press of a button. Building valid code is one of the highest goals developers should strive for. Total Validator helps a lot with achieving this.**
 
+**Note:** According to the W3C as of September 2023, the success criterion 4.1.1 (“Parsing”) is considered as always satisfied for any system using HTML or XML, and there is no need to test it anymore (see [w3.org/WAI/WCAG21/Understanding/parsing.html](https://www.w3.org/WAI/WCAG21/Understanding/parsing.html){ target=_blank }).<br><br><br>
+
 [[_TOC_]]
 
 ![Total Validator logo](_media/logo_total-validator.png){ style="max-width:350px;" }
-
-<br>
-
-> **Note**<br>According to the W3C as of September 2023, the success criterion 4.1.1 is considered as always satisfied for any system using HTML or XML, and there is no need to test it anymore (see [www.w3.org/WAI/WCAG21/Understanding/parsing.html](https://www.w3.org/WAI/WCAG21/Understanding/parsing.html){ target=_blank }).
 
 ## Installation
 
@@ -28,26 +26,14 @@ Under `Validations`, we recommend to disable `Check for broken links`, as it slo
 
 ![Total Validator window](_media/totalvalidator-window.png)
 
+<br>
+
 After launching it, open your website in either Firefox or Chrome, and activate Total Validator by clicking its icon in the browser toolbar.
 
 ![Total Validator browser icon](_media/totalvalidator-browser-icon.png)
 
+<br>
+
 Inspect the displayed results (which vary from parsing errors to very specific accessibility warnings).
 
 ![Total Validator results](_media/totalvalidator-results.png)
-
-## Which ones are relevant for accessibility?
-
-The bookmarklet [Filter relevant Total Validator results](https://codepen.io/jmuheim/pen/yLNqERL) is an attempt to give a pragmatic answer to this question. It scans the summary of a results page, looking out for the following 5 types of error codes, highlighting them visually:
-
-- Incomplete start/end tags
-- Invalid nesting
-- Duplicate attributes
-- Duplicate IDs
-- Invalid ARIA
-
-It shows a summary of its findings, as well:
-
-![Filtered Total Validator results](_media/filtered-totalvalidator-results.png)
-
-Check out the bookmarklet's description text for more details.
