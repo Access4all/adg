@@ -51,7 +51,7 @@ The most recent survey was conducted in December 2023 and January 2024 ([WebAIM'
 
 Like every other survey, the WebAIM screen reader survey is expected to reach a rather deterministic sample only: exclusively screen reader users who somehow got to know about the survey and were eager to fill it out are included. As such, its results may be heavily biased and its representativeness may be limited.
 
-Also, we only gain an outline about rough proportions, but no detailed data about absolute statistics. For example, we can say that there are slightly more JAWS users than NVDA users. But we cannot say whether the overall number of JAWS users worldwide is rather some ten thousands, some hundred thousands, or some millions.
+Also, we only gain an outline about rough proportions, but no detailed data about absolute statistics. For example, we can say that there are slightly more JAWS users (40.5%) than NVDA users (37.7%). But we cannot say whether the overall number of JAWS users worldwide is rather some ten thousands, some hundred thousands, or some millions.
 
 Also, the difference between desktop and mobile often is not obvious: especially regarding VoiceOver, it often is unclear whether VoiceOver/macOS or VoiceOver/iOS is meant.
 
@@ -64,7 +64,7 @@ However: even if there are general limitations to the representativeness of the 
 
 Almost all (91.3%) of the respondents use a screen reader on a mobile device or tablet.
 
-##### **Mobile screen readers used**
+##### **Mobile screen readers commonly used**
 
 - VoiceOver: 70.6%
 - TalkBack: 34.7%
@@ -92,12 +92,13 @@ See [webaim.org/projects/screenreadersurvey10/#mobile](https://webaim.org/projec
 
 While most screen reader users now use mobile devices, still almost half of the respondents (40.2%) say that they are using a screen reader on a desktop/laptop computer most often.
 
-##### **Primary desktop/laptop screen reader**
+##### **Desktop/laptop screen readers commonly used**
 
-- JAWS: 40.5%
-- NVDA: 37.7%
-- VoiceOver: 9.7%
-- Other desktop/laptop screen readers: 12.1%
+- NVDA: 65.6%
+- JAWS: 60.5%
+- VoiceOver: 43.9%
+- Narrator: 37.3%
+- Other desktop/laptop screen readers: 33.1%
 
 ##### **Screen reader/browser combinations**
 
