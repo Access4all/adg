@@ -71,7 +71,7 @@ Almost all (91.3%) of the respondents use a screen reader on a mobile device or 
 - Commentary/Jieshuo: 10.1%
 - Other mobile screen readers: 24%
 
-##### Mobile/tablet platforms
+##### Mobile/tablet platform
 
 - Apple iOS: 70.6%
 - Android: 27.6%
@@ -119,7 +119,7 @@ While most screen reader users now use mobile devices, still almost half of the 
 - Linux: 2.9%
 - Other operating systems: 1.4%
 
-##### Browsers
+##### Primary browser
 
 - Chrome: 52.3%
 - Microsoft Edge: 19.3%
