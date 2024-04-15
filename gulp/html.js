@@ -131,6 +131,9 @@ const flattenNavigation = items =>
     return acc
   }, [])
 
+// Cache changed dates
+const changedDates = {}
+
 module.exports = (config, cb) => {
   const datetime = importFresh('./helpers/datetime')
   const markdown = importFresh('./helpers/markdown')(config.rootDir)
@@ -258,11 +261,15 @@ module.exports = (config, cb) => {
               site_name: appConfig.title,
               url: `${appConfig.url}/${currentUrl}`
             }
-            const { stdout: dateChanged } = child_process.spawnSync(
-              'git',
-              ['log', '-1', '--pretty=format:%ci', file.path],
-              { encoding: 'utf8' }
-            )
+            const dateChanged =
+              changedDates[file.path] ||
+              child_process.spawnSync(
+                'git',
+                ['log', '-1', '--pretty=format:%ci', file.path],
+                { encoding: 'utf8' }
+              ).stdout
+
+            changedDates[file.path] = dateChanged
 
             file.data = Object.assign({}, file.data, {
               changed:
