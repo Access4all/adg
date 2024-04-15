@@ -5,13 +5,13 @@ position: 5
 
 # Web Components
 
-**"Web Components" is an umbrella term for three main technologies: Custom elements, Shadow DOM and HTML templates. Using these technologies allows us to create reusable, optionally encapsulated components. There are some important caveats regarding accessibility we need to keep in mind when authoring web components.**
+**"Web Components" is an umbrella term for three main technologies: Custom elements, shadow DOM and HTML templates. Using these technologies allows us to create reusable, optionally encapsulated components. There are some important caveats regarding accessibility we need to keep in mind when authoring web components.**
 
 [[_TOC_]]
 
 ## The main technologies
 
-[mdn](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) has the most useful overview of the underlying technologies. It is important to understand that they can be used
+[mdn](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) has the most useful overview of the underlying technologies. It is important to understand that they can be used independently of each other. There is absolutely no need to use shadow DOM when writing web components. At the same time, shadow DOM can be used outside of custom elements, too.
 
 ### Custom Elements
 
@@ -32,8 +32,18 @@ position: 5
 > <cite>[Using templates and slots
 > (mdn)](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_templates_and_slots)</cite>
 
+## Browser support
+
+Overall, above technologies are well supported in current browsers. Though aspects like _declarative shadow DOM_ have [just recently landed](https://caniuse.com/declarative-shadow-dom) in all major browsers at the time of writing (April 2024). Declarative shadow DOM allows us to render shadow DOM server-side rather than relying on client-side JavaScript.
+
 ## Web Components and accessibility
 
-Web components have great potential to help us improve accessibility as they are framework-agnostic. This allows us to _share_ accessible components with everyone, independent of which UI framework they use. However, when using shadow DOM (which is absolutely not a requirement), we need to be aware of the limitations when attempting to cross "shadow boundaries". Specifically, we cannot yet easily link elements outside of a shadow root with elements within.
+Web components have great potential to help us improve accessibility as they are framework-agnostic. This allows us to _share_ accessible components with everyone, independent of which UI framework they use.
 
-Manuel Matuzović created a [great list of FAQ](https://www.matuzo.at/blog/2023/web-components-accessibility-faq) with helpful examples.
+However, when using shadow DOM, we need to be aware of the limitations of crossing "shadow boundaries". Specifically, we cannot yet easily link elements outside of a shadow root with elements within. There is ongoing specification work regarding associating [labels and form elements in particular](https://github.com/whatwg/html/issues/3219) or [any DOM elements using ARIA attributes](https://github.com/WICG/aom/issues/192), to give two examples.
+
+Manuel Matuzović gives the following recommendation in his [great list of FAQ](https://www.matuzo.at/blog/2023/web-components-accessibility-faq):
+
+> If all your relationships for an element happen exclusively in light DOM or shadow DOM and you don't try to cross boundaries, working with ARIA is not a problem.
+
+Additionally, some testing tools are not yet able to handle shadow DOM. In most cases, this should be [straight-forward to fix](https://github.com/hinderlingvolkart/h123/pull/5).
