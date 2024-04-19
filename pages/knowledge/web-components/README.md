@@ -46,4 +46,4 @@ Manuel Matuzović gives the following recommendation in his [great list of FAQ](
 
 > If all your relationships for an element happen exclusively in light DOM or shadow DOM and you don't try to cross boundaries, working with ARIA is not a problem.
 
-Additionally, some testing tools are not yet able to handle shadow DOM. In most cases, this should be [straight-forward to fix](https://github.com/hinderlingvolkart/h123/pull/5).
+Additionally, some testing tools are not yet able to handle shadow DOM. In many cases, this should be straight-forward to fix. Exemplary issue: `document.querySelectorAll(SELECTOR)` will not find nodes within a shadow root. To find all elements matching `SELECTOR` on the page, the query code additionally needs to find all shadow roots and execute `root.querySelectorAll(SELECTOR)` on each of them recursively.
