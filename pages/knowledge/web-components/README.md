@@ -19,11 +19,21 @@ position: 5
 >
 > <cite>[Using custom elements (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements)</cite>
 
+Example of a custom element formatting an ISO date string in the user's locale:
+
+[Example](_examples/custom-element)
+
 ### Shadow DOM
 
 > An important aspect of custom elements is encapsulation, because a custom element, by definition, is a piece of reusable functionality: it might be dropped into any web page and be expected to work. So it's important that code running in the page should not be able to accidentally break a custom element by modifying its internal implementation. Shadow DOM enables you to attach a DOM tree to an element, and have the internals of this tree hidden from JavaScript and CSS running in the page.
 >
 > <cite>[Using shadow DOM (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM)</cite>
+
+Example of above custom element using (declarative) shadow DOM:
+
+[Example](_examples/shadow-dom)
+
+The global color styles for `time` are not applied because our element is rendered in shadow DOM. This is one of the main use cases of shadow DOM.
 
 ### HTML templates
 
@@ -31,6 +41,10 @@ position: 5
 >
 > <cite>[Using templates and slots
 > (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_templates_and_slots)</cite>
+
+Our example with declarative shadow DOM above is already using a `template` element. For client-side rendering (where there is no _declarative_ shadow DOM involved) we do not need a `template` in every instance of `date-formatted`. Instead, we only need a single one and clone it into every instance.
+
+[Example](_examples/template)
 
 ## Browser support
 
