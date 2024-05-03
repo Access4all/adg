@@ -35,3 +35,7 @@ Inspect the displayed results.
 To ensure that the PDF's content is marked up correctly and the elements are ordered properly, open the `Screen Reader Preview` and compare it with the original document.
 
 ![Side by side comparison of original document and screen reader preview](_media/side-by-side-comparison-of-original-document-and-screen-reader-preview.png)
+
+<br>
+
+For recommendations how to use PAC, please see: [access-for-all.ch/en/accessibility-of-pdf-documents-and-misconceptions-about-pac](https://access-for-all.ch/en/accessibility-of-pdf-documents-and-misconceptions-about-pac/){ target=_blank }
