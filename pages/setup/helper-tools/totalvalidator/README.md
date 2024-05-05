@@ -8,11 +8,11 @@ card_text: "Total Validator checks your website regarding various web and access
 
 **Total Validator checks your website regarding various web and accessibility standards by the press of a button. Building valid code is one of the highest goals developers should strive for. Total Validator helps a lot with achieving this.**
 
-**Note:** According to the W3C as of September 2023, the success criterion 4.1.1 (“Parsing”) is considered as always satisfied for any system using HTML or XML, and there is no need to test it anymore (see [w3.org/WAI/WCAG21/Understanding/parsing.html](https://www.w3.org/WAI/WCAG21/Understanding/parsing.html){ target=_blank }).<br><br><br>
+**Note:** According to the W3C as of September 2023, the success criterion 4.1.1 (“Parsing”) is considered as always satisfied for any system using HTML or XML, and there is no need to test it anymore (see [w3.org/WAI/WCAG21/Understanding/parsing.html](https://www.w3.org/WAI/WCAG21/Understanding/parsing.html){ target=_blank }).{ style=margin-bottom:4em }
 
 [[_TOC_]]
 
-![Total Validator logo](_media/logo_total-validator.png){ style="max-width:350px;" }
+![Total Validator logo](_media/logo_total-validator.png){ style=max-width:350px }
 
 ## Installation
 
@@ -24,15 +24,11 @@ Under `Validations`, we recommend to disable `Check for broken links`, as it slo
 
 ## Usage
 
-![Total Validator window](_media/totalvalidator-window.png)
-
-<br>
+![Total Validator window](_media/totalvalidator-window.png){ style=margin-bottom:1em }
 
 After launching it, open your website in either Firefox or Chrome, and activate Total Validator by clicking its icon in the browser toolbar.
 
-![Total Validator browser icon](_media/totalvalidator-browser-icon.png)
-
-<br>
+![Total Validator browser icon](_media/totalvalidator-browser-icon.png){ style=max-width:135px;margin-bottom:1em }
 
 Inspect the displayed results (which vary from parsing errors to very specific accessibility warnings).
 
