@@ -17,6 +17,20 @@ Navigate the table with a screen reader using table navigation. Do you notice an
 
 Well, most of the table is announced very well by the screen reader. But as soon as cells span multiple rows or columns, it is getting a bit tricky - if not to say: confusing.
 
+## Manipulate column-heading with a headers Attribute
+
+**Sometimes it's necessary to overwrite the logical order of the header by spanning cells/rows.**
+
+Adrian roessli explained this case pretty well on his blog: <https://adrianroselli.com/2022/01/accessible-cart-tables.html>.
+
+Based on the example “Table with several rows and columns”, you cannot really see how powerful working with the “id/header” attribute is. 
+
+If you set id/header attributs to each of your header and column cell you'll get the possibility to change standard titel depending on cell order. You can set it as you like. In the following examples, the heading “Description” is added to the heading in the “Sub-total” cell.
+
+[Example](_examples/table-spanning-with-attribut)
+
+depending on which browser combination with JAWS or NVDA does not work correctly. The id/header attribute has no effect on the standard behavior.
+
 ## Tricky screen reader navigation
 
 The first thing to note is that NVDA does not announce when a cell spans multiple rows or columns! For example, the header cell "Work Days" (which spans 5 columns) is simply announced as "column 2 Work Days", and the next cell "Leisure Days" (which spans 2 columns) is announced as "column 7 Leisure Days". Did you notice the jump from 2 to 7? You have to be a pretty focused user to realise this.
