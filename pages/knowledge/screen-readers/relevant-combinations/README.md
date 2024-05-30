@@ -43,15 +43,15 @@ As such it is very hard to examine:
 
 ### WebAIM's screen reader user survey
 
-The initiative [Web Accessibility In Mind (WebAIM.org)](https://webaim.org/) conducts regular surveys among users of assistive software, which gives us at least some insight into the topic.
+The initiative [Web Accessibility In Mind (WebAIM.org)](https://webaim.org/){ target=_blank } conducts regular surveys among users of assistive software, which gives us at least some insight into the topic.
 
-The most recent survey was conducted in August - September 2019 ([WebAIM's Screen Reader User Survey #8](https://webaim.org/projects/screenreadersurvey8/)). Around 58% of the roughly speaking 1200 responses came from North America and 27% from Europe.
+The most recent survey was conducted in December 2023 and January 2024 ([WebAIM's Screen Reader User Survey #10](https://webaim.org/projects/screenreadersurvey10/){ target=_blank }). Around 47% of the roughly speaking 1500 responses came from North America and 31% from Europe.
 
 #### Limitations
 
 Like every other survey, the WebAIM screen reader survey is expected to reach a rather deterministic sample only: exclusively screen reader users who somehow got to know about the survey and were eager to fill it out are included. As such, its results may be heavily biased and its representativeness may be limited.
 
-Also, we only gain an outline about rough proportions, but no detailed data about absolute statistics. For example, we can say that there are about twice as many JAWS users than NVDA users. But we cannot say whether the overall number of JAWS users worldwide is rather some ten thousands, some hundred thousands, or some millions.
+Also, we only gain an outline about rough proportions, but no detailed data about absolute statistics. For example, we can say that there are slightly more JAWS users (40.5%) than NVDA users (37.7%). But we cannot say whether the overall number of JAWS users worldwide is rather some ten thousands, some hundred thousands, or some millions.
 
 Also, the difference between desktop and mobile often is not obvious: especially regarding VoiceOver, it often is unclear whether VoiceOver/macOS or VoiceOver/iOS is meant.
 
@@ -59,61 +59,72 @@ Finally, we do not have detailed information about differences between countries
 
 However: even if there are general limitations to the representativeness of the survey, it provides the best currently available data regarding the preferences of screen reader users, particularly in North America and Europe, including the UK.
 
+
 #### Results for mobile devices
 
-Almost all (86.3%) of the respondents use a screen reader on a mobile device or tablet. That's a greater usage than on laptop (83.9%) or desktop (67.5%).
+Almost all (91.3%) of the respondents use a screen reader on a mobile device or tablet.
 
-The reponses to the question "Which of the following mobile screen readers do you commonly use?" show us that VoiceOver/iOS (71.2%) and TalkBack (33.0%) are by far the most popular mobile screen readers.
+##### **Mobile screen readers commonly used**
 
-Regarding the question, which browser is used with the user's primary mobile screen reader, the survey results show that Safari (62.7%) and Chrome (25.2%) are the prevailing mobile browsers.
+- VoiceOver: 70.6%
+- TalkBack: 34.7%
+- Commentary/Jieshuo: 10.1%
+- Other mobile screen readers: 24%
 
-Respondents with disabilities used iOS devices at a higher rate than those without disabilities. For 69% of them iOS is the primary mobile platform, followed by Android (27.5%).
+##### Mobile/tablet platform
+
+- Apple iOS: 70.6%
+- Android: 27.6%
+- Chrome OS: 0.5%
+- Other mobile/tablet platforms: 1.3%
+
+##### Primary mobile web browser
+
+- Safari: 58.2%
+- Chrome: 27.9%
+- Firefox: 4.6%
+- Other mobile web browsers: 9.3%
+
+See [webaim.org/projects/screenreadersurvey10/#mobile](https://webaim.org/projects/screenreadersurvey10/#mobile){ target=_blank } for more details.
+
 
 #### Results for desktop/laptop computers
 
-While most screen reader users now use mobile devices, still almost half of the respondents (41.3%) say that they are using a screen reader on a desktop/laptop computer most often.
+While most screen reader users now use mobile devices, still almost half of the respondents (40.2%) say that they are using a screen reader on a desktop/laptop computer most often.
 
-The responses to the question "Which of the following desktop/laptop screen readers do you commonly use?" clearly tell us that  NVDA (72.4%) and JAWS (61.7%) are the most popular desktop/laptop screen readers, followed by VoiceOver/macOS (47.1%). Very interestingly, those figures underline many users do use more than one screen reader.
+##### **Desktop/laptop screen readers commonly used**
 
-Regarding the question, which browser is used with the user's desktop/laptop primary screen reader, the survey results show that Chrome (44.4%), FF (27.4%) are the prevailing browsers, followed by IE 11 (10.9%) and Safari (9.8%).
+- NVDA: 65.6%
+- JAWS: 60.5%
+- VoiceOver: 43.9%
+- Narrator: 37.3%
+- Other desktop/laptop screen readers: 33.1%
 
-Finally, when it comes to the mostly used desktop/laptop browser / screen reader combinations, the survey provides the following data:
+##### **Screen reader/browser combinations**
 
-- JAWS with Chrome: 21.4%
-- NVDA with Firefox: 19.6%
-- NVDA with Chrome: 18.0%
-- JAWS with IE: 11.5%
-- VoiceOver/macOS with Safari: 9.1%
-- JAWS with Firefox: 5.9%
-- VoiceOver with Chrome: 3.0%
-- NVDA with IE: 1.2%
-- Other combinations: 10.4%
+- JAWS with Chrome: 24.7%
+- NVDA with Chrome: 21.3%
+- JAWS with Edge: 11.4%
+- NVDA with Firefox: 10.0%
+- VoiceOver with Safari: 7.0%
+- NVDA with Edge: 5.0%
+- JAWS with Firefox: 2.6%
+- VoiceOver with Chrome: 2.0%
+- Other combinations: 16.0%
 
-#### What about IE?
+##### Operating system
 
-Usage of Internet Explorer has dropped significantly since the last survey (then 23.3%) as primary desktop/laptop browser. As Microsoft ceased to support IE any longer, combinations with IE are no requirement anymore. We leave the references in this guide for documentation purposes. At the time being, all of our examples are tested and are backwards compatible with JAWS with IE.
+- Windows: 86.1%
+- Mac: 9.6%
+- Linux: 2.9%
+- Other operating systems: 1.4%
 
-#### What about Edge?
+##### Primary browser
 
-Accessibility support in Microsoft's current browser Edge was very low upon release. Meanwhile, Edge was improved in some respects. But most screen reader users didn't switch from Internet Explorer yet or switched to other browsers. Edge did not gain sufficient traction to be considered here.
+- Chrome: 52.3%
+- Microsoft Edge: 19.3%
+- Firefox: 16.0%
+- Safari: 8.0%
+- Other browsers: 4.4%
 
-### Software versions
-
-To make the whole topic even more complex, we could ask for combinations of specific software versions of both browsers and screen readers. This would definitely result in an explosion of possible combinations.
-
-Even though having current versions of both screen readers and browsers available is essential for users with special needs, we are aware that many of them keep running legacy versions. This is due to various reasons:
-
-- Many commercial screen readers are very expensive, and license upgrades are affordable only every few years for a lot of users.
-    - Even health insurance or social security often do not guarantee their clients to keep their assistive technology equipment up to date: in Switzerland, the invalidity insurance does not sponsor new JAWS licenses at the intervals needed.
-- When it comes to installing, configuring, and updating their software, many users with special needs are dependent on assistance.
-    - Most users with special needs aren't "digital natives" and are thankful if something "just works".
-        - This may change in the future, as people with special needs begin to realise the vast potential of modern technology and the impact it can have on their lives.
-    - Much software needed to run assistive devices is not built accessibly itself, making it hard or even impossible to be self-managed by users with special needs.
-
-As it is not feasible to test dozens of possible software versions, we follow a pragmatic way which is to test always the newest stable versions of both browsers and screen readers.
-
-### Diverging requirements in closed environments
-
-In closed environments, where a web application is only exposed to a deterministic group of users, requirements different to the ones outlined above may be feasible.
-
-For example, in a bank, every user may have the same workstation available with default software and configuration; this could be NVDA screen reader and Firefox browser. Alas, for the intranet website of the bank (which is exclusively available from those workstations), only this specific combination needs to be supported.
+See [webaim.org/projects/screenreadersurvey10/#primary](https://webaim.org/projects/screenreadersurvey10/#primary){ target=_blank } for more details.
