@@ -2,26 +2,26 @@
 title: "Table with block elements in narrow view"
 compatibility:
   Keyboard only:
-    status: unknown
-    date: 2024-xx-xx
+    status: pass
+    date: 2024-05-02
   NVDA:
-    2023.3 + Firefox:
-      status: unknown
-      date: 2024-xx-xx
-    2023.3 + Chrome:
-      status: unknown
-      date: 2024-xx-xx
-    2023.3 + Edge:
-      status: unknown
-      date: 2024-xx-xx
+    2024.1 + Firefox 125:
+      status: pass
+      date: 2024-05-02
+    2024.1 + Chrome 124:
+      status: pass
+      date: 2024-05-02
+    2024.1 + Edge 124:
+      status: pass
+      date: 2024-05-02
   JAWS:
-    2024 + Firefox:
-      status: unknown
-      date: 2024-xx-xx
-    2024 + Chrome:
-      status: unknown
-      date: 2024-xx-xx
-    2024 + Edge:
-      status: unknown
-      date: 2024-xx-xx
+    2024 + Firefox 125:
+      status: pass
+      date: 2024-05-02
+    2024 + Chrome 124:
+      status: pass
+      date: 2024-05-02
+    2024 + Edge 124:
+      status: pass
+      date: 2024-05-02
 ---
