@@ -3,25 +3,25 @@ title: "Table with visually hidden headers in narrow view"
 compatibility:
   Keyboard only:
     status: pass
-    date: 2018-04-17
+    date: 2024-05-02
   NVDA:
-    2023.1 + FF 115:
+    2024.1 + Firefox 125:
       status: pass
-      date: 2023-08-03  
-    2021.2 + Chrome:
+      date: 2024-05-02
+    2024.1 + Chrome 124:
       status: pass
-      date: 2021-02-10
-    2023.1 + Edge:
+      date: 2024-05-02
+    2024.1 + Edge 124:
       status: pass
-      date: 2023-07-13
+      date: 2024-05-02
   JAWS:
-    2018.3 + FF ESR 52.7.3:
+    2024 + Firefox 125:
       status: pass
-      date: 2018-04-17
-    2021.2 + Chrome:
+      date: 2024-05-02
+    2024 + Chrome 124:
       status: pass
-      date: 2021-02-10
-    2023.1 + Edge:
+      date: 2024-05-02
+    2024 + Edge 124:
       status: pass
-      date: 2023-07-13
+      date: 2024-05-02
 ---

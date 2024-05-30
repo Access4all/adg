@@ -1,5 +1,5 @@
 ---
-title: 'Table with added headers in narrow view'
+title: 'Table with scroll container'
 compatibility:
   Keyboard only:
     status: pass

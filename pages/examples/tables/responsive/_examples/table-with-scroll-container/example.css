@@ -1,0 +1,28 @@
+table {
+  border-collapse: collapse;
+  min-width: 30rem; /* Arbitrary value to force scrollbars on small screens */
+}
+
+@media (max-width: 31rem) {
+  caption {
+    text-align: left;
+  }
+}
+
+thead th {
+  background-color: lightpink;
+}
+
+tbody th {
+  background-color: lightgreen;
+}
+
+th,
+td {
+  border: 1px solid;
+}
+
+/* See https://adrianroselli.com/2020/11/under-engineered-responsive-tables.html#CSS */
+.table-container[role='region'][aria-labelledby][tabindex] {
+  overflow: auto;
+}

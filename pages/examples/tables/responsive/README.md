@@ -1,5 +1,5 @@
 ---
-navigation_title: "Responsive"
+navigation_title: 'Responsive'
 position: 7
 ---
 
@@ -17,37 +17,23 @@ Since portable devices like smartphones have become increasingly popular, screen
 
 On the other side, there have also been attempts to change the layout of traditional tables so they would fit these new requirements. Sadly, most of these attempts left accessibility behind. So we show you to change a table's visual appearance while keeping accessibility intact.
 
-## Saving space
+## Allow scrolling
 
-Instead of transforming a traditional table's full layout into a responsive one (as will be explained below), it can be useful already to simply hide some of its elements on smaller screens.
+The safest baseline approach to make a responsive table is to not change its layout and add a scroll container.
 
-### Hiding negligible data
+[Example](_examples/table-with-scroll-container)
 
-The following table about hobbies displays columns for a "Name", a "Description" and a link to "Additional resources".
-
-As the description in fact simply is taken from the linked additional resources, we can easily hide it on narrow view to save horizontal space (if you haven't done this yet, go back and read [Hiding elements from all devices](/examples/hiding-elements/from-all-devices)). In the following example, please resize your browser to trigger narrow view.
-
-[Example](_examples/table-with-hidden-column-in-narrow-view)
-
-By the way, we added distinctive background colours so it will be easier for you to spot any differences.
-
-### Replacing bulky elements
-
-In the following example, the bulky "Wikipedia" links are hidden, and only small icons are shown in narrow view.
-
-[Example](_examples/table-with-smaller-elements-in-narrow-view)
-
-Please do not forget to set a proper alternative text to those icons.
+See details about this approach in [Adrian Roselli's post](https://adrianroselli.com/2020/11/under-engineered-responsive-tables.html).
 
 ## Changing the visual layout
 
-Sometimes, the visual layout of a table needs to be changed completely to fit small screens.
+But sometimes, the visual layout of a table needs to be changed completely to fit small screens.
 
 As we already know: to alter a table's visual appearance, the `display` property can be changed, and some ARIA needs to be added (if you haven't done this yet, go back and read [Changing a table's visual layout](/examples/tables/layout-changes)). Take a look at the following example of a responsive table: when resizing the browser, you will see all elements stack on top of each other.
 
 [Example](_examples/table-with-block-elements-in-narrow-view)
 
-As the table is enhanced using ARIA, screen reader users are very happy with this result.
+As the table is enhanced using ARIA, this generally works for screen reader users.
 
 ### Optimisation for visual users
 
@@ -65,16 +51,16 @@ In a first attempt, we can hide them visually in narrow view (if you haven't don
 
 It would be even more beautiful if the table headers could be displayed visually next to each table cell. For this, we have to add them in each cell, but display them only in narrow view.
 
-But this is redundant information for screen readers, so we use `aria-hidden="true"`, trying to hide those additional table headers again. This works great with NVDA, while JAWS keeps announcing them (but we can live with that).
+But this is redundant information for screen readers, so we use `aria-hidden="true"`, trying to hide those additional table headers again.
 
 [Example](_examples/table-with-added-headers-in-narrow-view)
 
 ### Final result
 
-There we are: here you have the perfectly accessible responsive table.
+There we are: here you have an accessible responsive table.
 
-![The perfect responsive table](_media/the-perfect-responsive-table.png)
+![Responsive table](_media/responsive-table.png)
 
-Admittedly, this has become pretty complex now. But you can easily generate this automatically - even with some post-processing JavaScript.
+Admittedly, this has become a bit complex now. If you are using any kind of template engine, the additional markup can be generated automatically at least.
 
-This solution will deliver a very good experience to all kinds of users. So in our opinion, it is totally worth the effort.
+This solution will generally deliver a good experience to all kinds of users. But please keep in mind that the safest approach is still the one with a scroll container (see [first example](#allow-scrolling)).
