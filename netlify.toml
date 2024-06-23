@@ -29,3 +29,11 @@
 [[redirects]]
   from = "/setup/browsers/bookmarklets/html-codesniffer/"
   to = "/setup/helper-tools/bookmarklets/html-codesniffer/"
+
+[[redirects]]
+  from = "/setup/browsers/chrome/wave-toolbar/"
+  to = "/setup/helper-tools/browser-extensions/wave-toolbar/"
+
+[[redirects]]
+  from = "/setup/browsers/firefox/web-developer-toolbar/"
+  to = "/setup/helper-tools/browser-extensions/web-developer-toolbar/"
