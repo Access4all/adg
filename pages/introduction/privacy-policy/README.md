@@ -29,5 +29,5 @@ We use cookies (small data files transferred onto computers or devices by sites)
 
 <iframe
         style="border: 0; height: 300px; width: 100%;"
-        src="https://adg-analytics.nothing.ch/index.php?module=CoreAdminHome&action=optOut&language=en&fontColor=272727&fontSize=20px&fontFamily=sans-serif"
+        src="https://analytics.access-for-all.ch/matomo/index.php?module=CoreAdminHome&action=optOut&language=en&fontColor=272727&fontSize=20px&fontFamily=sans-serif"
         ></iframe>
