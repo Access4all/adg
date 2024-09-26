@@ -1,3 +1,3 @@
 ---
-title: 'Page with additional page regions, without headings'
+title: "Page with additional page regions, without headings"
 ---

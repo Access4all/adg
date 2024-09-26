@@ -1,5 +1,5 @@
 ---
-title: 'Carousel with radio buttons'
+title: "Carousel with radio buttons"
 compatibility:
   Keyboard only:
     status: pass

@@ -1,3 +1,3 @@
 ---
-title: 'Invalid table of divs'
+title: "Invalid table of divs"
 ---

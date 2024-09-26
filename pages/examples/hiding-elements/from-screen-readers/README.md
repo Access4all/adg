@@ -1,7 +1,7 @@
 ---
-navigation_title: 'From screen readers'
+navigation_title: "From screen readers"
 position: 2
-changed: '2018-05-13'
+changed: "2018-05-13"
 ---
 
 # Hiding elements from screen readers using aria-hidden

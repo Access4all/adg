@@ -1,7 +1,7 @@
 ---
-navigation_title: 'How to examine'
+navigation_title: "How to examine"
 position: 2
-changed: '2019-12-15'
+changed: "2019-12-15"
 ---
 
 # How to examine colour contrast

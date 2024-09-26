@@ -1,7 +1,7 @@
 ---
-navigation_title: 'JAWS'
+navigation_title: "JAWS"
 position: 4
-changed: '2020-04-30'
+changed: "2020-04-30"
 ---
 
 # JAWS installation and configuration
@@ -54,8 +54,8 @@ The best way to use the JAWS menu is by keyboard:
 
 - Use the arrow keys to navigate it and press `Enter` to select an item.
 - For even quicker navigation, press the letter on your keyboard that is underlined in the intended menu item.
-  - For example, press `X` for `Exit`.
-  - In this guide, we indicate those letters by putting parentheses around them, for instance like so: `E(x)it` or `(H)elp`.
+    - For example, press `X` for `Exit`.
+    - In this guide, we indicate those letters by putting parentheses around them, for instance like so: `E(x)it` or `(H)elp`.
 - You can close the menu items by pressing `Esc`.
 
 ### Silencing JAWS on demand
@@ -64,7 +64,7 @@ While JAWS is running, it's announcing whatever your screen is currently showing
 
 - To make JAWS abort the current stream of words, press the `Ctrl` key.
 - To make JAWS shut up completely, you can toggle speech mode by pressing `JAWS + Space`, then `S`.
-  - Be aware though that JAWS is still running in the background, so your computer may behave differently in some situations!
+    - Be aware though that JAWS is still running in the background, so your computer may behave differently in some situations!
 
 ### Braille viewer
 
@@ -82,7 +82,7 @@ Sometimes it's interesting to see what JAWS announced in the past (or to copy&pa
 
 To open the output history:
 
-- Press `JAWS + Space` (a _beep_ will be played), then `H`.
+- Press `JAWS + Space` (a *beep* will be played), then `H`.
 - The history shows that last 20 announcements.
 - Sadly, the history does not refresh automatically.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Table of divs with flexbox'
+title: "Table of divs with flexbox"
 compatibility:
   Keyboard only:
     status: pass

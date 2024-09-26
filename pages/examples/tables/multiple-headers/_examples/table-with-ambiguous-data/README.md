@@ -1,3 +1,3 @@
 ---
-title: 'Table with ambiguous data'
+title: "Table with ambiguous data"
 ---

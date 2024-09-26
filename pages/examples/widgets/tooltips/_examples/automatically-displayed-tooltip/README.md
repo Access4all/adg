@@ -1,5 +1,5 @@
 ---
-title: 'Automatically displayed tooltip'
+title: "Automatically displayed tooltip"
 compatibility:
   Keyboard only:
     status: pass

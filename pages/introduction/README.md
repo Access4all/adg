@@ -1,7 +1,7 @@
 ---
-navigation_title: 'Introduction'
+navigation_title: "Introduction"
 position: 1
-changed: '2018-06-06'
+changed: "2018-06-06"
 ---
 
 # Introduction to our guide

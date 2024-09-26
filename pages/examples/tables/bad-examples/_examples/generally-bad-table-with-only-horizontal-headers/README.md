@@ -1,3 +1,3 @@
 ---
-title: 'Generally bad table, with only horizontal headers'
+title: "Generally bad table, with only horizontal headers"
 ---

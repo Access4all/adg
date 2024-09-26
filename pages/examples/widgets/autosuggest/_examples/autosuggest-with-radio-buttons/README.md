@@ -1,5 +1,5 @@
 ---
-title: 'Autosuggest with radio buttons'
+title: "Autosuggest with radio buttons"
 compatibility:
   Keyboard only:
     status: pass

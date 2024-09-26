@@ -1,5 +1,5 @@
 ---
-title: 'Generally good table'
+title: "Generally good table"
 compatibility:
   Keyboard only:
     status: pass

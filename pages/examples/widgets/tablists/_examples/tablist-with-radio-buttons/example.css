@@ -29,19 +29,19 @@ fieldset {
   padding: 4px 10px;
 }
 
-input[type='radio']:checked + label {
+input[type="radio"]:checked + label {
   background-color: lightyellow !important;
   border-bottom-color: lightyellow;
 }
 
 a:focus,
 input:focus,
-input[type='radio']:focus + label {
+input[type="radio"]:focus + label {
   outline: 2px dotted;
   outline-offset: 2px;
 }
 
-input[type='radio'] + label:hover {
+input[type="radio"] + label:hover {
   cursor: pointer;
   text-decoration: underline;
 }

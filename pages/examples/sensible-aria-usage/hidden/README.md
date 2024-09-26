@@ -1,7 +1,7 @@
 ---
-navigation_title: 'Hidden'
+navigation_title: "Hidden"
 position: 6
-changed: '2018-05-14'
+changed: "2018-05-14"
 ---
 
 # Hiding elements from screen readers using aria-hidden
@@ -19,7 +19,9 @@ While it is only possible using a workaround to hide elements visually but leave
 The following paragraph is ignored by screen readers:
 
 ```html
-<p aria-hidden="true">Hello folks!</p>
+<p aria-hidden="true">
+  Hello folks!
+</p>
 ```
 
 [Example](_examples/hiding-an-element-using-aria-hidden)

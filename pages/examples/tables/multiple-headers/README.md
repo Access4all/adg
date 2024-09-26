@@ -1,7 +1,7 @@
 ---
-navigation_title: 'Multiple headers'
+navigation_title: "Multiple headers"
 position: 4
-changed: '2018-04-13'
+changed: "2018-04-13"
 ---
 
 # Multiple header cells in a table support identification

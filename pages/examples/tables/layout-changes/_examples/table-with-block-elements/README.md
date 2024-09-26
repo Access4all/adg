@@ -1,3 +1,3 @@
 ---
-title: 'Table with block elements'
+title: "Table with block elements"
 ---

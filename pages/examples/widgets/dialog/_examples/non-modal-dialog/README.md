@@ -1,5 +1,5 @@
 ---
-title: 'Non-modal dialog'
+title: "Non-modal dialog"
 compatibility:
   Keyboard only:
     status: pass

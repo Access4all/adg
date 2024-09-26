@@ -1,7 +1,7 @@
 ---
-navigation_title: 'HTML 5 validations'
+navigation_title: "HTML 5 validations"
 position: 9
-changed: '2018-05-03'
+changed: "2018-05-03"
 ---
 
 # HTML 5 client side validations
@@ -31,8 +31,8 @@ The following example demonstrates a few of those validations:
 - All inputs are required (using `required` attribute).
 - The "Email" input checks for a valid input format (using `type="email"` attribute).
 - The "Password" input checks for a custom pattern (using `pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"` attribute).
-  - This requires an input of at least six characters with at least one number, one lowercase and one uppercase letter.
-  - To make the pattern available to the user in a human readable form, you can use the `title` attribute like this: ` title="Minimum 6 characters containing lowercase, uppercase, and at least one number"`.
+    - This requires an input of at least six characters with at least one number, one lowercase and one uppercase letter.
+    - To make the pattern available to the user in a human readable form, you can use the `title` attribute like this: ` title="Minimum 6 characters containing lowercase, uppercase, and at least one number"`.
 
 [Example](_examples/html-5-client-side-validations)
 
@@ -46,7 +46,7 @@ A few notes though:
 
 - Some screen readers announce missing required values automatically as "invalid", others do not.
 - Some screen readers announce both an input's name and validation error, others only announce the validation error.
-  - The latter case is a minor inconvenience, as the user may have to find out the input's name manually (which is easy, but still an annoyance).
+    - The latter case is a minor inconvenience, as the user may have to find out the input's name manually (which is easy, but still an annoyance).
 
 ## Using the invalid attribute
 

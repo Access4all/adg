@@ -1,5 +1,5 @@
 ---
-title: 'Grouped form controls with too long legend'
+title: "Grouped form controls with too long legend"
 compatibility:
   Keyboard only:
     status: pass

@@ -1,5 +1,5 @@
 ---
-title: 'Adding a description to an element using aria-describedby'
+title: "Adding a description to an element using aria-describedby"
 compatibility:
   Keyboard only:
     status: pass

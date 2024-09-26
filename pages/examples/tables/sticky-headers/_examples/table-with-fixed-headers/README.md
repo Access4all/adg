@@ -1,5 +1,5 @@
 ---
-title: 'Table with fixed headers'
+title: "Table with fixed headers"
 compatibility:
   Keyboard only:
     status: pass

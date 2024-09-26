@@ -1,5 +1,5 @@
 ---
-title: 'Double-purpose dropdown'
+title: "Double-purpose dropdown"
 compatibility:
   Keyboard only:
     status: pass

@@ -1,5 +1,5 @@
 ---
-title: 'Mega dropdown'
+title: "Mega dropdown"
 compatibility:
   Keyboard only:
     status: pass

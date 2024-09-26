@@ -1,7 +1,7 @@
 ---
-navigation_title: 'Dialog'
+navigation_title: "Dialog"
 position: 12
-changed: '2020-04-30'
+changed: "2020-04-30"
 ---
 
 # Dialog widget (or: modal, popup, lightbox, overlay, alert)
@@ -46,11 +46,11 @@ Some interesting peculiarities:
 - Each dialog toggler has an `aria-expanded="false"` attribute; its value (`true`/`false`) and the visibility of the corresponding dialog is toggled using JavaScript. See [Marking elements expandable using aria-expanded](/examples/sensible-aria-usage/expanded).
 - The dialog is toggled using `hidden` attribute (see [Hiding elements from all devices](/examples/hiding-elements/from-all-devices)).
 - The dialog's first element is a "Close dialog" button.
-  - Upon opening the dialog, the focus is set on this button, which announces its caption; this way users immediately know they are in a dialog now.
-  - The button has a visible SVG icon (also an image with empty `alt` attribute would work), and a visually hidden text (see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually)).
-  - Upon clicking it, the dialog is closed and focus is set on the dialog toggler again button, which makes screen readers announce its caption; this way users immediately know they are out of the dialog now.
+    - Upon opening the dialog, the focus is set on this button, which announces its caption; this way users immediately know they are in a dialog now.
+    - The button has a visible SVG icon (also an image with empty `alt` attribute would work), and a visually hidden text (see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually)).
+    - Upon clicking it, the dialog is closed and focus is set on the dialog toggler again button, which makes screen readers announce its caption; this way users immediately know they are out of the dialog now.
 - The dialog's last element is a "Confirm" button.
-  - Upon clicking it, the dialog is closed and focus is set on the dialog toggler again button, which makes screen readers announce its caption; this way users immediately know they are out of the dialog now.
+    - Upon clicking it, the dialog is closed and focus is set on the dialog toggler again button, which makes screen readers announce its caption; this way users immediately know they are out of the dialog now.
 
 Adding more sophisticated features like movability using drag and drop or similar would be easy. For simplicity though, we refrained from doing this.
 
@@ -68,10 +68,10 @@ Some interesting peculiarities:
 
 - Keyboard focus is trapped by intercepting `Tab` (and `Shift + Tab`) on the first and last button, then moving the focus manually back and forth between them.
 - The screen reader cursor is trapped by surrounding the dialog with both a `role="dialog"` container and a `role="document"` container.
-  - The `role="dialog"` container traps the focus, and forces some screen readers to remain in focus mode (so browsable content is not readable).
-  - The `role="document"` container re-enables switching to browse mode.
+    - The `role="dialog"` container traps the focus, and forces some screen readers to remain in focus mode (so browsable content is not readable).
+    - The `role="document"` container re-enables switching to browse mode.
 - The curtain is implemented with an independent container and a semi-transparent background colour.
-  - Some implementations allow clicking the curtain to dismiss a dialog. While this would be easy to implement, we omitted it for simplicity reasons.
+    - Some implementations allow clicking the curtain to dismiss a dialog. While this would be easy to implement, we omitted it for simplicity reasons.
 
 ## Further discussions
 

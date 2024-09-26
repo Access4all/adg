@@ -1,5 +1,5 @@
 ---
-title: 'Table spanning multiple rows and columns'
+title: "Table spanning multiple rows and columns"
 compatibility:
   Keyboard only:
     status: pass

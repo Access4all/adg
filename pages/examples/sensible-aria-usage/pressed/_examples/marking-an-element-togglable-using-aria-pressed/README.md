@@ -1,5 +1,5 @@
 ---
-title: 'Marking an element togglable using aria-pressed'
+title: "Marking an element togglable using aria-pressed"
 compatibility:
   Keyboard only:
     status: pass

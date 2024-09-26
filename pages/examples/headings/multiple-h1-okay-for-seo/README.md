@@ -1,7 +1,7 @@
 ---
-navigation_title: 'Multiple h1 okay for SEO?'
+navigation_title: "Multiple h1 okay for SEO?"
 position: 5
-changed: '2018-05-15'
+changed: "2018-05-15"
 ---
 
 # Regarding search engine optimisation, is it okay to have multiple headings on level 1?

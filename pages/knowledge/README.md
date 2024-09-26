@@ -1,7 +1,7 @@
 ---
-navigation_title: 'Knowledge'
+navigation_title: "Knowledge"
 position: 3
-changed: '2019-12-15'
+changed: "2019-12-15"
 ---
 
 # Knowledge about accessibility

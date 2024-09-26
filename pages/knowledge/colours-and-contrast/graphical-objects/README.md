@@ -1,7 +1,7 @@
 ---
-navigation_title: 'Colour contrast for graphical objects'
+navigation_title: "Colour contrast for graphical objects"
 position: 5
-changed: '2019-12-15'
+changed: "2019-12-15"
 ---
 
 # Colour contrast for graphical objects
@@ -16,11 +16,11 @@ Version 2.1 of the Web Content Accessibility Guidelines (WCAG) specify a [minima
 
 ## Example: line chart
 
-The following picture shows a simple line chart with overall insufficient contrast.
+The following picture shows a simple line chart with overall insufficient contrast. 
 
 ![Line chart with one blue trend line and overall low contrast](_media/line-chart-low-contrast.png)
 
-The contrast ratio of the main X and Y axis is `2.8:1`, the one of blue trend line is `2.3:1`. The text labels along the X and Y axis have a contrast ratio of `3.9:1` which can also be considered too low because [text has to meet a higher contrast requirement](/knowledge/colours-and-contrast/text) of at least `4.5:1`. All of these values are somewhat close to their formal requirements but it's important to keep in mind that those requirements only set **minimal** standards.
+The contrast ratio of the main X and Y axis is `2.8:1`, the one of blue trend line is `2.3:1`. The text labels along the X and Y axis have a contrast ratio of `3.9:1` which can also be considered too low because [text has to meet a higher contrast requirement](/knowledge/colours-and-contrast/text) of at least `4.5:1`. All of these values are somewhat close to their formal requirements but it's important to keep in mind that those requirements only set **minimal** standards. 
 
 Let's increase the contrast ratio of the aforementioned elements.
 
@@ -28,7 +28,7 @@ Let's increase the contrast ratio of the aforementioned elements.
 
 The question now is, what should happen with the grid lines in the background. Their contrast ratio is far too low, yet increasing it might result in a visually overloaded chart.
 
-This brings us back to the notion of what is "required to understand the meaning or content" of this chart.
+This brings us back to the notion of what is "required to understand the meaning or content" of this chart. 
 
 If the purpose of the chart is to just show a general trend, the grid lines might not be required. In that case, why not just remove them altogether? (If that feels like a loss, this might not be the right solution.)
 

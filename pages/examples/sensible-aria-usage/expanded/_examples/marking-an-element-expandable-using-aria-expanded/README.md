@@ -1,5 +1,5 @@
 ---
-title: 'Marking an element expandable using aria-expanded'
+title: "Marking an element expandable using aria-expanded"
 compatibility:
   Keyboard only:
     status: pass

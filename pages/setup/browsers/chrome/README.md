@@ -1,7 +1,7 @@
 ---
-navigation_title: 'Chrome'
+navigation_title: "Chrome"
 position: 3
-changed: '2018-03-12'
+changed: "2018-03-12"
 ---
 
 # Chrome installation and configuration

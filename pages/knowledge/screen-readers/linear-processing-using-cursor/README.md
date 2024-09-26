@@ -1,7 +1,7 @@
 ---
-navigation_title: 'Linear processing using cursor'
+navigation_title: "Linear processing using cursor"
 position: 3
-changed: '2018-04-13'
+changed: "2018-04-13"
 ---
 
 # Screen readers process contents in a linear way using a cursor

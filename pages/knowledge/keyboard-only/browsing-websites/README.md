@@ -1,7 +1,7 @@
 ---
-navigation_title: 'Browsing websites'
+navigation_title: "Browsing websites"
 position: 2
-changed: '2018-04-12'
+changed: "2018-04-12"
 ---
 
 # How to browse websites using a keyboard only
@@ -35,22 +35,22 @@ To interact with an element, keyboard users need to move the so called "focus" s
 ![Chrome's default focus style](_media/chromes-default-focus-style.png)
 
 - Use `Tab` to move from one focusable item to the next focusable item.
-  - This sequential navigation sometimes is called "tabbing".
-  - Focusable items typically are links, buttons, form controls (text edit, combobox, etc.), and all sorts of other interactive elements such as custom widgets.
-  - Add `Shift` to reverse the direction.
+    - This sequential navigation sometimes is called "tabbing".
+    - Focusable items typically are links, buttons, form controls (text edit, combobox, etc.), and all sorts of other interactive elements such as custom widgets.
+    - Add `Shift` to reverse the direction.
 - Use `Enter` to:
-  - Activate a link or button.
-  - Send a form (when a form item has focus).
-    - Works for all form elements except textarea.
+    - Activate a link or button.
+    - Send a form (when a form item has focus).
+        - Works for all form elements except textarea.
 - Use `Space` to:
-  - Toggle an element's state (for example checkbox).
-  - Open or close an element (for example combobox).
+    - Toggle an element's state (for example checkbox).
+    - Open or close an element (for example combobox).
 - Use arrow keys to:
-  - Change the value of an item (for example in a combobox, a radio button group, or within a min/max value slider widget).
-  - Move the cursor (for example in a text input).
+    - Change the value of an item (for example in a combobox, a radio button group, or within a min/max value slider widget).
+    - Move the cursor (for example in a text input).
 - Use `Esc` to:
-  - Cancel a prompt.
-  - Close elements like dialogs or expanded comboboxes.
+    - Cancel a prompt.
+    - Close elements like dialogs or expanded comboboxes.
 
 ## Now it's your turn!
 

@@ -1,3 +1,3 @@
 ---
-title: 'Required input with asterisk'
+title: "Required input with asterisk"
 ---

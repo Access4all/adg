@@ -1,7 +1,7 @@
 ---
-navigation_title: 'TotalValidator'
+navigation_title: "TotalValidator"
 position: 4
-changed: '2018-04-09'
+changed: "2018-04-09"
 ---
 
 # TotalValidator

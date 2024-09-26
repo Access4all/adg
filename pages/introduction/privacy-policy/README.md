@@ -1,7 +1,7 @@
 ---
-navigation_title: 'Privacy Policy'
+navigation_title: "Privacy Policy"
 position: 5
-changed: '2020-04-30'
+changed: "2020-04-30"
 ---
 
 # Privacy Policy

@@ -1,7 +1,7 @@
 ---
-navigation_title: 'Handling'
+navigation_title: "Handling"
 position: 1
-changed: '2018-04-18'
+changed: "2018-04-18"
 ---
 
 # How to handle headings
@@ -40,7 +40,7 @@ In the upcoming text, we are referring to the keys `NVDA` and `JAWS`. If you do 
 NVDA's "Elements List" displays a page's heading outline in a tree view. To open it:
 
 - First make sure you are in browse mode.
-  - If unclear to you, see [Screen readers' browse and focus modes](/knowledge/screen-readers/desktop/browse-focus-modes).
+    - If unclear to you, see [Screen readers' browse and focus modes](/knowledge/screen-readers/desktop/browse-focus-modes).
 - To open it, press `NVDA + F7`.
 - Press `Alt + H` to select the "Headings" area.
 

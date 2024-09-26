@@ -1,3 +1,3 @@
 ---
-title: 'Generally bad headings'
+title: "Generally bad headings"
 ---

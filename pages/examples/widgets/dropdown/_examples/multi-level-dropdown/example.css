@@ -17,8 +17,7 @@ ol > li {
   list-style: none;
   position: relative;
 }
-ol a,
-ol button {
+ol a, ol button {
   display: block;
   border: 1px solid #000;
   color: #000;
@@ -28,8 +27,7 @@ ol button {
   box-sizing: border-box;
   text-decoration: none;
 }
-ol a:hover,
-ol button:hover {
+ol a:hover, ol button:hover {
   text-decoration: underline;
 }
 ol button {
@@ -41,13 +39,13 @@ ol button {
 ol button:hover {
   cursor: pointer;
 }
-ol button[aria-expanded='true'] + ol {
+ol button[aria-expanded="true"] + ol {
   position: absolute;
 }
-ol button[aria-expanded='true'] + ol ol {
+ol button[aria-expanded="true"] + ol ol {
   left: 100%;
   top: 0;
 }
-ol button[aria-expanded='false'] + ol {
+ol button[aria-expanded="false"] + ol {
   display: none;
 }

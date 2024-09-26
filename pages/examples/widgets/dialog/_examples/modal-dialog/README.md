@@ -1,5 +1,5 @@
 ---
-title: 'Modal dialog'
+title: "Modal dialog"
 compatibility:
   Keyboard only:
     status: pass

@@ -1,10 +1,8 @@
-.control,
-.fieldset {
+.control, .fieldset {
   margin: 6px 0;
 }
 
-label,
-.label {
+label, .label {
   display: inline-block;
   width: 120px;
   vertical-align: top;
@@ -21,8 +19,7 @@ input + .label {
   margin-bottom: 20px;
 }
 
-legend,
-.legend {
+legend, .legend {
   background-color: #fff;
   position: absolute;
   left: 10px;

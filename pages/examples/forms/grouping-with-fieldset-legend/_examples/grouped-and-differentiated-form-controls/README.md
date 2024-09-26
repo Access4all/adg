@@ -1,5 +1,5 @@
 ---
-title: 'Grouped and differentiated form controls'
+title: "Grouped and differentiated form controls"
 compatibility:
   Keyboard only:
     status: pass

@@ -1,5 +1,5 @@
 ---
-title: 'Table with unique IDs'
+title: "Table with unique IDs"
 compatibility:
   Keyboard only:
     status: pass

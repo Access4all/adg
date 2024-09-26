@@ -1,5 +1,5 @@
 ---
-title: 'Simple dropdown'
+title: "Simple dropdown"
 compatibility:
   Keyboard only:
     status: pass

@@ -1,5 +1,5 @@
 ---
-title: 'Single announcement of an element using alert role'
+title: "Single announcement of an element using alert role"
 compatibility:
   Keyboard only:
     status: pass

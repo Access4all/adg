@@ -1,5 +1,5 @@
 ---
-title: 'Table with hidden column in narrow view'
+title: "Table with hidden column in narrow view"
 compatibility:
   Keyboard only:
     status: pass

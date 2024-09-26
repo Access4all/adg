@@ -38,17 +38,17 @@
   margin: 0;
 }
 [data-adg-datepicker-alerts] kbd::before {
-  content: '«';
+  content: "«";
 }
 [data-adg-datepicker-alerts] kbd::after {
-  content: '»';
+  content: "»";
 }
 
 .control {
   margin: 6px 0;
 }
 
-input[type='text'] {
+input[type="text"] {
   width: 140px;
 }
 

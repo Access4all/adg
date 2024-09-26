@@ -1,5 +1,5 @@
 ---
-title: 'Table with block elements in narrow view'
+title: "Table with block elements in narrow view"
 compatibility:
   Keyboard only:
     status: pass

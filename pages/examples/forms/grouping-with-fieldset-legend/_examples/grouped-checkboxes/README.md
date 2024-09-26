@@ -1,5 +1,5 @@
 ---
-title: 'Grouped checkboxes'
+title: "Grouped checkboxes"
 compatibility:
   Keyboard only:
     status: pass

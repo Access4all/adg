@@ -1,5 +1,5 @@
 ---
-title: 'Table with multiple header cells'
+title: "Table with multiple header cells"
 compatibility:
   Keyboard only:
     status: pass

@@ -1,7 +1,7 @@
 ---
-navigation_title: 'Layout changes'
+navigation_title: "Layout changes"
 position: 6
-changed: '2018-04-16'
+changed: "2018-04-16"
 ---
 
 # Changing a table's visual layout

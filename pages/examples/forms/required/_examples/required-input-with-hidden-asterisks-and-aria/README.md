@@ -1,3 +1,3 @@
 ---
-title: 'Required input with hidden asterisks and ARIA'
+title: "Required input with hidden asterisks and ARIA"
 ---

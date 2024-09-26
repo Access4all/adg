@@ -1,5 +1,5 @@
 ---
-title: 'Marking elements using different aria-current values'
+title: "Marking elements using different aria-current values"
 compatibility:
   Keyboard only:
     status: pass

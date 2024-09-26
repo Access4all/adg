@@ -1,7 +1,7 @@
 ---
-navigation_title: 'Sticky headers'
+navigation_title: "Sticky headers"
 position: 10
-changed: '2018-04-16'
+changed: "2018-04-16"
 ---
 
 # Sticky table headers

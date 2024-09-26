@@ -1,7 +1,7 @@
 ---
-navigation_title: 'Browsers'
+navigation_title: "Browsers"
 position: 2
-changed: '2018-05-02'
+changed: "2018-05-02"
 ---
 
 # Web browsers

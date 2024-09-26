@@ -1,5 +1,5 @@
 ---
-title: 'Labelling an element using aria-label'
+title: "Labelling an element using aria-label"
 compatibility:
   Keyboard only:
     status: pass

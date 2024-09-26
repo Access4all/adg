@@ -1,7 +1,7 @@
 ---
-navigation_title: 'ARIA'
+navigation_title: "ARIA"
 position: 2
-changed: '2018-05-02'
+changed: "2018-05-02"
 ---
 
 # ARIA - when HTML simply is not enough

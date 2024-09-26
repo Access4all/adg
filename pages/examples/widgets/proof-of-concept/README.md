@@ -1,7 +1,7 @@
 ---
-navigation_title: 'Proof of concept?'
+navigation_title: "Proof of concept?"
 position: 3
-changed: '2021-09-22'
+changed: "2021-09-22"
 ---
 
 # What is a "Proof of concept"?
@@ -36,7 +36,7 @@ And while the semantics are well chosen (see [Semantics and their importance for
 
 ### ARIA only when safe and sound
 
-According to our credo of [Widgets simply working for all](/knowledge/semantics/widgets) and our principles of [Sensible usage of ARIA roles and attributes](/examples/sensible-aria-usage), ARIA is used conservatively:
+According to our credo of [Widgets simply working for all](/knowledge/semantics/widgets)  and our principles of [Sensible usage of ARIA roles and attributes](/examples/sensible-aria-usage), ARIA is used conservatively:
 
 - either wenn there is no appropriate traditional HTML feature available
 - or when the ARIA feature has proved to be well supported and delivers a much better experience among screen readers
