@@ -1,7 +1,6 @@
 ---
 navigation_title: "Handling"
 position: 1
-changed: "2018-04-18"
 ---
 
 # How to handle headings
@@ -72,10 +71,10 @@ For more details, see [WAVE toolbar](/setup/browsers/chrome/wave-toolbar).
 
 This is an efficient way to display and debug the correctness of the current webpage's heading outline, without the need to fire up a screen reader.
 
-For more details, see [h123](/setup/browsers/bookmarklets/h123).
+For more details, see [h123](/setup/helper-tools/bookmarklets/h123).
 
 ### Contents Structured
 
 This conveys the tag names of a lot of HTML elements, including headings. It allows fast visual examination of wrong (or missing) headings.
 
-For more details, see [Contents Structured](/setup/browsers/bookmarklets/contents-structured).
+For more details, see [Contents Structured](/setup/helper-tools/bookmarklets/contents-structured).

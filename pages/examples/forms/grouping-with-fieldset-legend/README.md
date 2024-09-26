@@ -1,7 +1,6 @@
 ---
 navigation_title: "Grouping with fieldset/legend"
 position: 4
-changed: "2018-05-03"
 ---
 
 # Grouping form controls with fieldset and legend
@@ -69,10 +68,14 @@ On one side, JAWS attaches the `<legend>`'s text to the label of each contained 
 > Personal Details, First Name.
 > Personal Details, Last Name.
 
+
 On the other side, NVDA only announces the `<legend>`'s text when entering the `<fieldset>`. For the above example, it literally announces:
 
 > Personal Details, Grouping. First Name.
 > Last Name.
+
+
+Update 2023: JAWS and NVADA attaches the `<legend>` only once by focusing the first element 'First Name" or entering the `<fieldset>`. 
 
 [Example](_examples/grouped-form-controls-with-too-long-legend)
 

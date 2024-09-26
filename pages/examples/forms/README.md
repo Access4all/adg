@@ -1,7 +1,6 @@
 ---
 navigation_title: "Forms"
 position: 5
-changed: "2018-05-12"
 ---
 
 # Forms

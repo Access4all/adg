@@ -15,6 +15,20 @@ const plugins = {
   toc: require('markdown-it-toc-done-right')
 }
 
+plugins.replacements.replacements.push({
+  name: 'right-arrow',
+  re: /->/g,
+  sub: () => '→',
+  default: true
+})
+
+plugins.replacements.replacements.push({
+  name: 'left-arrow',
+  re: /<-/g,
+  sub: () => '←',
+  default: true
+})
+
 const slugify = text => {
   return text
     .toString()
@@ -42,20 +56,6 @@ module.exports = rootDir => filePath => {
 
     return BAD_PROTO_RE.test(str) ? !!GOOD_DATA_RE.test(str) : true
   }
-
-  plugins.replacements.replacements.push({
-    name: 'right-arrow',
-    re: /->/g,
-    sub: () => '→',
-    default: true
-  })
-
-  plugins.replacements.replacements.push({
-    name: 'left-arrow',
-    re: /<-/g,
-    sub: () => '←',
-    default: true
-  })
 
   return (
     markdown

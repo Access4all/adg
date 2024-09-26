@@ -1,7 +1,7 @@
 ---
 navigation_title: "Firefox"
 position: 2
-changed: "2018-03-12"
+card_text: "One of Firefox's main characteristics is its high conformance regarding web standards, including those related to accessibility."
 ---
 
 # Firefox installation and configuration
@@ -32,4 +32,8 @@ If you do not see the menu, press the `Alt` key once.
 
 ### Restoring tabs after restart
 
-You may open and close browsers repeatedly during accessibility testing. To see how to configure FF to restore tabs upon restart, see [Restore previous session - Configure when Firefox shows your most recent tabs and windows (Mozilla.org)](https://support.mozilla.org/en-US/kb/restore-previous-session).
+You may open and close browsers repeatedly during accessibility testing. To learn how to configure FF to restore tabs upon restart, see [Restore previous session – Configure when Firefox shows your most recent tabs and windows (mozilla.org)](https://support.mozilla.org/en-US/kb/restore-previous-session).
+
+## Add-ons
+
+We recommend adding selected [browser extensions](/setup/helper-tools/browser-extensions/) and [bookmarklets](/setup/helper-tools/bookmarklets/) to your browser.

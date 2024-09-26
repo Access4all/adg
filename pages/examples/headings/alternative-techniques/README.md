@@ -1,7 +1,6 @@
 ---
 navigation_title: "Alternative techniques"
 position: 6
-changed: "2018-05-01"
 ---
 
 # Alternative techniques for labelling page regions

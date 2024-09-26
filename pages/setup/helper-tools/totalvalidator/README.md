@@ -1,20 +1,22 @@
 ---
-navigation_title: "TotalValidator"
-position: 4
-changed: "2018-04-09"
+navigation_title: "Total Validator"
+position: 6
+card_text: "Total Validator checks your website regarding various web and accessibility standards."
 ---
 
-# TotalValidator
+# Total Validator
 
-**TotalValidator checks your website regarding various web and accessibility standards by the press of a button. Building valid code is one of the highest goals developers should strive for. TotalValidator helps a lot with achieving this.**
+**Total Validator checks your website regarding various web and accessibility standards by the press of a button. Building valid code is one of the highest goals developers should strive for. Total Validator helps a lot with achieving this.**
+
+**Note:** According to the W3C as of September 2023, the success criterion 4.1.1 (“Parsing”) is considered as always satisfied for any system using HTML or XML, and there is no need to test it anymore (see [w3.org/WAI/WCAG21/Understanding/parsing.html](https://www.w3.org/WAI/WCAG21/Understanding/parsing.html){ target=_blank }).{ style=margin-bottom:4em }
 
 [[_TOC_]]
 
-![TotalValidator icon](_media/totalvalidator-icon.png)
+![Total Validator logo](_media/logo_total-validator.png){ style=max-width:350px }
 
 ## Installation
 
-[Download TotalValidator](https://www.totalvalidator.com/downloads/index.html) and run the installer. Then install [Chrome and Firefox extensions](https://www.totalvalidator.com/downloads/extension.html).
+[Download Total Validator](https://www.totalvalidator.com/downloads/){ target=_blank } and run the installer. Then install [Chrome, Firefox or Edge extensions](https://www.totalvalidator.com/downloads/extension.html){ target=_blank }.
 
 ## Configuration
 
@@ -22,28 +24,12 @@ Under `Validations`, we recommend to disable `Check for broken links`, as it slo
 
 ## Usage
 
-![TotalValidator window](_media/totalvalidator-window.png)
+![Total Validator window](_media/totalvalidator-window.png){ style=margin-bottom:1em }
 
-After launching it, open your website in either Firefox or Chrome, and activate TotalValidator by clicking its icon in the browser toolbar.
+After launching it, open your website in either Firefox or Chrome, and activate Total Validator by clicking its icon in the browser toolbar.
 
-![TotalValidator browser icon](_media/totalvalidator-browser-icon.png)
+![Total Validator browser icon](_media/totalvalidator-browser-icon.png){ style=max-width:135px;margin-bottom:1em }
 
 Inspect the displayed results (which vary from parsing errors to very specific accessibility warnings).
 
-![TotalValidator results](_media/totalvalidator-results.png)
-
-## Which ones are relevant for accessibility?
-
-The bookmarklet [Filter relevant TotalValidator results](https://codepen.io/jmuheim/pen/yLNqERL) is an attempt to give a pragmatic answer to this question. It scans the summary of a results page, looking out for the following 5 types of error codes, highlighting them visually:
-
-- Incomplete start/end tags
-- Invalid nesting
-- Duplicate attributes
-- Duplicate IDs
-- Invalid ARIA
-
-It shows a summary of its findings, as well:
-
-![Filtered TotalValidator results](_media/filtered-totalvalidator-results.png)
-
-Check out the bookmarklet's description text for more details.
+![Total Validator results](_media/totalvalidator-results.png)

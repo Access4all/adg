@@ -1,7 +1,6 @@
 ---
 navigation_title: "JAWS"
 position: 4
-changed: "2020-04-30"
 ---
 
 # JAWS installation and configuration
@@ -16,7 +15,7 @@ JAWS is a quite heavy piece of software that installs itself deeply into the Win
 
 As JAWS is commercial software with its price, it can be checked out using its free demo version, allowing you to run it for 40 minutes.
 
-[Download JAWS](http://www.freedomscientific.com/Downloads/JAWS) and simply run the installer, or see [JAWS Quick Start (PDF, FreedomScientific.com)](http://www.freedomscientific.com/Content/Documents/Manuals/JAWS/JAWS-Quick-Start-Guide.pdf) for detailed information.
+[Download JAWS](https://www.freedomscientific.com/Downloads/JAWS) and simply run the installer, or see [JAWS Quick Start (PDF, FreedomScientific.com)](https://www.freedomscientific.com/Content/Documents/Manuals/JAWS/JAWS-Quick-Start-Guide.pdf) for detailed information.
 
 ## Running JAWS
 

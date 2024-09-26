@@ -1,7 +1,6 @@
 ---
 navigation_title: "NVDA"
 position: 3
-changed: "2020-04-30"
 ---
 
 # NVDA installation and configuration
@@ -12,7 +11,7 @@ changed: "2020-04-30"
 
 ## Installation
 
-[Download NVDA](http://www.nvaccess.org/download/).
+[Download NVDA](https://www.nvaccess.org/download/).
 
 ### Normal installation
 
@@ -20,13 +19,13 @@ Normal installation offers automatic startup on boot (optional), a keyboard shor
 
 We recommend the normal over portable installation (see below).
 
-Simply run the installer, or see [Installing NVDA (NVAccess.org)](http://www.nvaccess.org/files/nvda/documentation/userGuide.html?#toc11) for detailed information.
+Simply run the installer, or see [Installing NVDA (NVAccess.org)](https://www.nvaccess.org/files/nvda/documentation/userGuide.html#toc11) for detailed information.
 
 ### Portable installation
 
-NVDA offers the option to be run as a portable app, so no installation is required (and thus no admin rights). While for our purposes it works fine, it has some restrictions, see [Portable and Temporary Copy Restrictions (NVAccess.org)](http://www.nvaccess.org/files/nvda/documentation/userGuide.html?#toc10).
+NVDA offers the option to be run as a portable app, so no installation is required (and thus no admin rights). While for our purposes it works fine, it has some restrictions, see [Portable and Temporary Copy Restrictions (NVAccess.org)](https://www.nvaccess.org/files/nvda/documentation/userGuide.html?#toc10).
 
-For detailed information, see [Creating a Portable Copy (NVAccess.org)](http://www.nvaccess.org/files/nvda/documentation/userGuide.html?#toc15) (be sure to manually create a new folder as installation location, for example `NVDA` on your Desktop).
+For detailed information, see [Creating a Portable Copy (NVAccess.org)](https://www.nvaccess.org/files/nvda/documentation/userGuide.html?#toc15) (be sure to manually create a new folder as installation location, for example `NVDA` on your Desktop).
 
 ## Running NVDA
 
@@ -111,7 +110,7 @@ Now NVDA stops after reading the current element, waiting for the user to procee
 
 The standard NVDA voice synthesizer is a bit robotic. While it is a fast and very accurate one, it may sound odd to some. So let's install a nicer, more natural one.
 
-- [Download Svox Pico add-on](http://files.nvaccess.org/nvda-addons/svox-pico-2.0.nvda-addon) and install it.
+- [Download Svox Pico add-on](https://files.nvaccess.org/nvda-addons/svox-pico-2.0.nvda-addon) and install it.
 - In the NVDA menu, choose `(P)references` → `(S)ynthesizer`.
 - As synthesizer, choose `Svox pico synthesizer`, and confirm.
 - In the NVDA menu, choose `(P)references` → `(V)oice settings`, choose your desired voice, and confirm.
@@ -155,6 +154,6 @@ There are lots of add-ons for NVDA in the [NVDA Community Add-ons website (NVDA-
 
 Here are some more of our personal favourites:
 
-- [Tip of the day](http://addons.nvda-project.org/addons/tipOfTheDay.en.html) shows usage tips on startup.
-- [No beeps speech mode](http://addons.nvda-project.org/addons/noBeepsSpeechMode.en.html) excludes "Beeps" in speech mode when toggling speech modes (`NVDA + S`).
-- [Control usage assistant](http://addons.nvda-project.org/addons/controlUsageAssistant.en.html) offers help for the currently focused item when pressing `NVDA + H`.
+- [Tip of the day](https://addons.nvda-project.org/addons/tipOfTheDay.en.html) shows usage tips on startup.
+- [No beeps speech mode](https://addons.nvda-project.org/addons/noBeepsSpeechMode.en.html) excludes "Beeps" in speech mode when toggling speech modes (`NVDA + S`).
+- [Control usage assistant](https://addons.nvda-project.org/addons/controlUsageAssistant.en.html) offers help for the currently focused item when pressing `NVDA + H`.

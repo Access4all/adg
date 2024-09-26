@@ -1,7 +1,6 @@
 ---
 navigation_title: "HTML 5 outline"
 position: 7
-changed: "2018-05-01"
 ---
 
 # HTML 5's headings outline algorithm
@@ -26,7 +25,7 @@ Sadly though, it is not possible to use HTML 5 heading outlines for accessible w
 
 ### Fact: HTML 5 outlines are not accessible
 
-The HTML 5 outline algorithm sadly was never implemented by any relevant assistive software. Because of that, meanwhile even the W3C advises against using the HTML 5 document outline in its HTML 5.2 draft: [Computer says NO to HTML 5 document outline (html5Doctor.com)](http://html5doctor.com/computer-says-no-to-html5-document-outline/).
+The HTML 5 outline algorithm sadly was never implemented by any relevant assistive software. Because of that, meanwhile even the W3C advises against using the HTML 5 document outline in its HTML 5.2 draft: [Computer says NO to HTML 5 document outline (html5Doctor.com)](https://html5doctor.com/computer-says-no-to-html5-document-outline/).
 
 The following example shows the technically correct usage of the HTML 5 outline algorithm.
 
@@ -40,7 +39,7 @@ Checked out with a screen reader though reveal that all headings semantically ar
 
 ### How it ought to behave
 
-If you want to see how the same example ought to be interpreted by assistive software, check out the browser extension [HeadingsMap (Chrome)](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi) or [HeadingsMap (Firefox)](https://addons.mozilla.org/en-US/firefox/addon/headingsmap/). It has an experimental feature for displaying HTML 5 outlines.
+If you want to see how the same example ought to be interpreted by assistive software, check out the browser extension [HeadingsMap (Chrome)](https://chromewebstore.google.com/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi) or [HeadingsMap (Firefox)](https://addons.mozilla.org/en-US/firefox/addon/headingsmap/). It has an experimental feature for displaying HTML 5 outlines.
 
 ![HeadingMap's experimental HTML 5 outline](_media/headingmaps-experimental-html5-outline.png)
 

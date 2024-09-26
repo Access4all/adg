@@ -1,7 +1,6 @@
 ---
 navigation_title: "Handling"
 position: 1
-changed: "2020-04-30"
 ---
 
 # How to handle tables
@@ -50,4 +49,4 @@ In JAWS' braille viewer, next to the cell's content, the current row and column 
 
 This conveys the tag names of a lot of HTML elements, including tables. It allows fast visual examination of wrong (or missing) elements.
 
-For more details, see [Contents Structured](/setup/browsers/bookmarklets/contents-structured).
+For more details, see [Contents Structured](/setup/helper-tools/bookmarklets/contents-structured).

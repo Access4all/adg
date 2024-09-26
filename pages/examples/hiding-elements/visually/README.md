@@ -1,7 +1,6 @@
 ---
 navigation_title: "Visually"
 position: 1
-changed: "2018-03-24"
 ---
 
 # Hiding elements visually by moving them off-screen

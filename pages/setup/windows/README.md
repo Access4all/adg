@@ -1,7 +1,7 @@
 ---
-navigation_title: "Windows"
+navigation_title: "Windows as OS"
 position: 1
-changed: "2021-03-22"
+card_text: "Learn how to prepare your work environment to use native Windows software."
 ---
 
 # Windows operating system

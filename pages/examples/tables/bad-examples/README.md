@@ -1,7 +1,6 @@
 ---
 navigation_title: "Bad examples"
 position: 3
-changed: "2018-06-15"
 ---
 
 # General bad table examples

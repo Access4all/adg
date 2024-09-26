@@ -1,7 +1,6 @@
 ---
 navigation_title: "Okay for SEO?"
 position: 5
-changed: "2018-04-03"
 ---
 
 # Regarding search engine optimisation, is it okay to hide elements?

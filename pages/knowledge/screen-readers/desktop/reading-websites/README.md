@@ -1,7 +1,6 @@
 ---
 navigation_title: "Reading websites"
 position: 3
-changed: "2020-04-07"
 ---
 
 # How to read websites using a desktop screen reader
@@ -85,7 +84,7 @@ There are two kinds of autofocus, which may prevent that a screen reader starts 
 
 Some websites automatically set the initial focus to a specific element of the page (using `autofocus` attribute or by running some JavaScript):
 
-- This can be helpful, for example on sites like [Google.com](http://www.google.com) where most of the time users want to enter a search term right into the search field.
+- This can be helpful, for example on sites like [Google.com](https://www.google.com) where most of the time users want to enter a search term right into the search field.
 - But when opening a site for the first time, blind users usually want to read through the whole content (top to bottom) to get a general, exhaustive overview.
 
 ### Screen reader autofocus

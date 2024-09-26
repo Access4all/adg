@@ -1,3 +1,4 @@
+const child_process = require('child_process')
 const gulp = require('gulp')
 const handlebars = require('gulp-hb')
 // const prettify = require('gulp-prettify')
@@ -77,7 +78,8 @@ const extendNavigationItem = (origItem, index, options) => {
         title: child.titleDetailed,
         lead: child.lead,
         url: child.url,
-        level: level + 1
+        level: level + 1,
+        cardText: child.cardText
       })
     })
   } else if (options.currentUrl.includes(item.url)) {
@@ -128,6 +130,9 @@ const flattenNavigation = items =>
 
     return acc
   }, [])
+
+// Cache changed dates
+const changedDates = {}
 
 module.exports = (config, cb) => {
   const datetime = importFresh('./helpers/datetime')
@@ -200,7 +205,8 @@ module.exports = (config, cb) => {
               ).replace(/\s+/g, '-'),
               titleDetailed: file.data.title,
               lead: file.data.lead,
-              position: file.frontMatter.position
+              position: file.frontMatter.position,
+              cardText: file.frontMatter.card_text
             })
           }
 
@@ -255,9 +261,19 @@ module.exports = (config, cb) => {
               site_name: appConfig.title,
               url: `${appConfig.url}/${currentUrl}`
             }
+            const dateChanged =
+              changedDates[file.path] ||
+              child_process.spawnSync(
+                'git',
+                ['log', '-1', '--pretty=format:%ci', file.path],
+                { encoding: 'utf8' }
+              ).stdout
+
+            changedDates[file.path] = dateChanged
 
             file.data = Object.assign({}, file.data, {
-              changed: file.frontMatter.changed,
+              changed:
+                dateChanged && dateChanged.length > 0 ? dateChanged : null,
               title: file.data.title,
               contents: file.contents,
               navigation: pageNavigation,
@@ -274,7 +290,8 @@ module.exports = (config, cb) => {
               metatags: metatags.generateTags(metatagsData),
               breadcrumb: breadcrumb.sort((a, b) => {
                 return a.url.length - b.url.length
-              })
+              }),
+              fileHistory: `https://github.com/Access4all/adg/commits/main/pages/${relPath}`
             })
 
             sitemap.push({

@@ -1,0 +1,44 @@
+---
+navigation_title: "WAVE toolbar"
+position: 2
+card_text: "It gives you a very quick first impression about the quality of the current webpage’s accessibility."
+---
+
+# WAVE toolbar
+
+**WAVE toolbar gives you a very quick first impression about the quality of the current webpage’s accessibility. At the press of a button, it provides visual cues by injecting icons and detailed information right into the page.**
+
+[[_TOC_]]
+
+![WAVE toolbar](_media/wave-toolbar.png)
+
+## Installation
+
+**Firefox**<br>
+[Download WAVE Firefox extension](https://addons.mozilla.org/en/firefox/addon/wave-accessibility-tool/) from Mozilla Add-ons and install it.
+
+**Microsoft Edge**<br>
+[Download WAVE Edge extension](https://microsoftedge.microsoft.com/addons/detail/wave-evaluation-tool/khapceneeednkiopkkbgkibbdoajpkoj) from Edge Add-ons and install it.
+
+**Chrome**<br>
+[Download WAVE Chrome extension](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) from the Google Web Store and install it.
+
+### Online service
+
+Alternatively, instead of installing it, you can use WAVE's online service at [wave.webaim.org](https://wave.webaim.org/).
+
+## Usage
+
+Activate WAVE by clicking its symbol in the browser toolbar.
+
+![WAVE toolbar browser icon](_media/wave-toolbar-browser-icon.png).
+
+You will then see icons appear directly on the page. Click on them to get more details.
+
+![An error icon](_media/an-error-icon.png)
+
+The most interesting items are the red (error) and yellow (alert) ones.
+
+### Discretion advised
+
+In general, be careful with the displayed results. Automated test tools are very limited and tend to display both false-positive as well as false-negative results.

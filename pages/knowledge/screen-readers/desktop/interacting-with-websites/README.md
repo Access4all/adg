@@ -1,7 +1,6 @@
 ---
 navigation_title: "Interacting with websites"
 position: 4
-changed: "2020-04-07"
 ---
 
 # How to interact with websites using a desktop screen reader

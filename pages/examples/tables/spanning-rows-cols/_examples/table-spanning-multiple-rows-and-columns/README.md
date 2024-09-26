@@ -1,18 +1,27 @@
 ---
-title: "Table spanning multiple rows and columns"
+title: 'Table spanning multiple rows and columns'
 compatibility:
   Keyboard only:
     status: pass
-    date: 2018-04-17
+    date: 2024-05-30
   NVDA:
-    2018.1 + FF Quantum 59.0.2:
+    2023.3 + Firefox:
       status: pass
-      date: 2018-04-17
+      date: 2024-05-30
+    2023.3 + Chrome:
+      status: pass
+      date: 2024-05-30
+    2023.3 + Edge:
+      status: pass
+      date: 2024-05-30
   JAWS:
-    2018.3 + IE 11:
+    2024 + Firefox:
       status: pass
-      date: 2018-04-23
-    2018.3 + FF ESR 52.7.3:
+      date: 2024-05-30
+    2024 + Chrome:
       status: pass
-      date: 2018-04-17
+      date: 2024-05-30
+    2024 + Edge:
+      status: pass
+      date: 2024-05-30
 ---

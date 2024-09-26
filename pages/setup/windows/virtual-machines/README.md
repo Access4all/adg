@@ -1,7 +1,6 @@
 ---
 navigation_title: "Virtual Machines"
 position: 2
-changed: "2023-06-29"
 ---
 
 # Getting a free Windows virtual machine from Microsoft

@@ -1,7 +1,6 @@
 ---
 navigation_title: "Bad example"
 position: 3
-changed: "2018-04-03"
 ---
 
 # General bad headings example
@@ -30,7 +29,7 @@ The first problem we want to point out is that the heading "Playing Soccer" is o
 
 This problem is a syntactical one, and as such is easy to spot using automated test tools.
 
-By the way, while NVDA does not propagate this problem to the user, the bookmarklet [h123](/setup/browsers/bookmarklets/h123) does so by marking it visually:
+By the way, while NVDA does not propagate this problem to the user, the bookmarklet [h123](/setup/helper-tools/bookmarklets/h123) does so by marking it visually:
 
 ![Document outline of h123](_media/document-outline-of-h123.png)
 

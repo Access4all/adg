@@ -5,12 +5,17 @@
   font-size: 0.8rem;
   border-top: 1px solid var(--theme-main-color-inverse, $c-white);
 
-  .theme-contribute & {
+  .theme-contribution & {
     border-color: var(--theme-color-medium, $c-gray);
   }
 }
 
 .meta-info__title {
-  font-weight: bold;
   margin-right: 0.5em;
+}
+
+.meta-info__logo {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
 }

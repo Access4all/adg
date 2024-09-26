@@ -1,18 +1,27 @@
 ---
-title: "Table with added headers in narrow view"
+title: 'Table with added headers in narrow view'
 compatibility:
   Keyboard only:
     status: pass
-    date: 2018-04-17
+    date: 2024-05-02
   NVDA:
-    2018.1 + FF Quantum 59.0.2:
+    2024.1 + Firefox 125:
       status: pass
-      date: 2018-04-17
+      date: 2024-05-02
+    2024.1 + Chrome 124:
+      status: pass
+      date: 2024-05-02
+    2024.1 + Edge 124:
+      status: pass
+      date: 2024-05-02
   JAWS:
-    2018.3 + IE 11:
+    2024 + Firefox 125:
       status: pass
-      date: 2018-04-23
-    2018.3 + FF ESR 52.7.3:
+      date: 2024-05-02
+    2024 + Chrome 124:
       status: pass
-      date: 2018-04-17
+      date: 2024-05-02
+    2024 + Edge 124:
+      status: pass
+      date: 2024-05-02
 ---

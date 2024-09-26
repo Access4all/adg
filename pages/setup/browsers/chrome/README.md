@@ -1,7 +1,6 @@
 ---
 navigation_title: "Chrome"
 position: 3
-changed: "2018-03-12"
 ---
 
 # Chrome installation and configuration
@@ -20,4 +19,8 @@ changed: "2018-03-12"
 
 ### Restoring tabs after restart
 
-You may open and close browsers repeatedly during accessibility testing. To see how to configure Chrome to restore tabs upon restart, see [Restore Previous Session & Tabs in Google Chrome (Google.com)](https://productforums.google.com/forum/#!topic/chrome/7JoWEVz3CK8).
+You may open and close browsers repeatedly during accessibility testing. To learn how to configure Chrome to restore tabs upon restart, see [Set your homepage and startup page – Continue where you left off (google.com)](https://support.google.com/chrome/answer/95314#zippy=%2Ccontinue-where-you-left-off).
+
+## Add-ons
+
+We recommend adding selected [browser extensions](/setup/helper-tools/browser-extensions/) and [bookmarklets](/setup/helper-tools/bookmarklets/) to your browser.
