@@ -1,5 +1,5 @@
 ---
-navigation_title: "Label & labelledby"
+navigation_title: 'Label & labelledby'
 position: 1
 ---
 
@@ -14,9 +14,7 @@ position: 1
 How an element is announced by a screen reader is usually determined by its content. For example, the following link's label is "Google":
 
 ```html
-<a href="...">
-  Google
-</a>
+<a href="..."> Google </a>
 ```
 
 So a screen reader will announce:
@@ -32,9 +30,7 @@ ARIA provides two attributes that allow to override these labels.
 Using `aria-label`, an element's label can be set directly. For example, the following link's label is "No, Bing!":
 
 ```html
-<a href="..." aria-label="No, Bing!">
-  Google
-</a>
+<a href="..." aria-label="No, Bing!"> Google </a>
 ```
 
 So a screen reader will announce:
@@ -48,13 +44,9 @@ So a screen reader will announce:
 Using `aria-labelledby`, an element's label can be set by referencing the ID of another element. For example, the following link's label is "No, Bing!":
 
 ```html
-<a href="..." aria-labelledby="bing">
-  Google
-</a>
+<a href="..." aria-labelledby="bing"> Google </a>
 
-<div id="bing">
-  No, Bing!
-</div>
+<div id="bing">No, Bing!</div>
 ```
 
 By the way, elements hidden using CSS can still be referenced:
@@ -95,7 +87,9 @@ In general, HTML elements provide their own way of labelling:
 As such, there are very rare cases (if any) where `aria-label` and `aria-labelledby` are truly the only way to go. For example, a valid usage of `aria-label` could be to override an existing label with additional, more precise information specifically for screen reader users:
 
 ```html
-<button aria-label="Zoom image: opens a high resolution version, press Esc to close">
+<button
+  aria-label="Zoom image: opens a high resolution version, press Esc to close"
+>
   Zoom image
 </button>
 ```
@@ -105,7 +99,9 @@ However, why not present this information to every user, for example using a too
 ```html
 <button>
   Zoom image
-  <span class="tooltip">Opens a high resolution version, press Esc to close</span>
+  <span class="tooltip"
+    >Opens a high resolution version, press Esc to close</span
+  >
 </button>
 ```
 

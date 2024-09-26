@@ -1,5 +1,5 @@
 ---
-navigation_title: "How to implement"
+navigation_title: 'How to implement'
 position: 7
 ---
 

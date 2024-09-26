@@ -1,5 +1,5 @@
 ---
-navigation_title: "Virtual Machines"
+navigation_title: 'Virtual Machines'
 position: 2
 ---
 

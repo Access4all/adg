@@ -1,5 +1,5 @@
 ---
-navigation_title: "Knowledge"
+navigation_title: 'Knowledge'
 position: 3
 ---
 

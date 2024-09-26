@@ -1,5 +1,5 @@
 ---
-navigation_title: "Why?"
+navigation_title: 'Why?'
 position: 1
 ---
 

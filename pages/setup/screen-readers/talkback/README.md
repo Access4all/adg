@@ -1,5 +1,5 @@
 ---
-navigation_title: "TalkBack"
+navigation_title: 'TalkBack'
 position: 2
 ---
 

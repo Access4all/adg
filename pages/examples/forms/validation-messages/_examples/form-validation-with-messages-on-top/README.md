@@ -1,5 +1,5 @@
 ---
-title: "Form validation with messages on top"
+title: 'Form validation with messages on top'
 compatibility:
   Keyboard only:
     status: pass
@@ -24,6 +24,6 @@ compatibility:
     2023.23 + Edge:
       status: pass
       date: 2023-07-13
-      comments: 
-      - the relation between the error message and the form field it not clear in Edge. 
+      comments:
+        - the relation between the error message and the form field it not clear in Edge.
 ---

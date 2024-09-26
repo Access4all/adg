@@ -1,5 +1,5 @@
 ---
-navigation_title: "Tables"
+navigation_title: 'Tables'
 position: 4
 ---
 

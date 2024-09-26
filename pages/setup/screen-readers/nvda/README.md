@@ -1,5 +1,5 @@
 ---
-navigation_title: "NVDA"
+navigation_title: 'NVDA'
 position: 3
 ---
 
@@ -53,8 +53,8 @@ The best way to use the NVDA menu is by keyboard:
 
 - Use the arrow keys to navigate it and press `Enter` to select an item.
 - For even quicker navigation, press the letter on you keyboard that is underlined in the intended menu item.
-    - For example, press `E` for `Exit`.
-    - In this guide, we indicate those letters by putting parentheses around them, for instance like so: `(E)xit` or `(H)elp`.
+  - For example, press `E` for `Exit`.
+  - In this guide, we indicate those letters by putting parentheses around them, for instance like so: `(E)xit` or `(H)elp`.
 - You can close the menu items by pressing `Esc`.
 
 ### Silencing NVDA on demand
@@ -63,7 +63,7 @@ While NVDA is running, it's announcing whatever your screen is currently showing
 
 - To make NVDA abort the current output, press `Ctrl` (or `Shift` to skip the current line).
 - To make NVDA shut up completely, you can toggle speech mode by pressing `NVDA + S`.
-    - Be aware though that NVDA is still running in the background, so your computer may behave differently in some situations!
+  - Be aware though that NVDA is still running in the background, so your computer may behave differently in some situations!
 
 ### Speech viewer
 
@@ -76,9 +76,9 @@ The speech viewer can be opened through the NVDA menu by choosing `(T)ools` → 
 There are some useful options:
 
 - You can make the speech viewer open automatically on startup.
-    - Do so by activating the `(S)how Speech Viewer on Startup` checkbox, located at the speech viewer's bottom left.
+  - Do so by activating the `(S)how Speech Viewer on Startup` checkbox, located at the speech viewer's bottom left.
 - You can zoom the font size using `Ctrl` + mouse wheel.
-    - At the time being, font size is always set back to default on quit.
+  - At the time being, font size is always set back to default on quit.
 
 We highly recommend to have the speech viewer always open while using NVDA. Place it on the top right of your screen and resize your browser window accordingly so they do not overlap each other. To allow system tray popups some headroom, do not give the speech viewer full height.
 
@@ -121,7 +121,7 @@ You can choose the language of NVDA itself (the GUI, not the voice):
 
 - In the NVDA menu, choose `(P)references` → `(G)eneral settings`.
 - Choose your desired language and confirm.
-    - We suggest you are using `English, en` to be able to easily follow this guide.
+  - We suggest you are using `English, en` to be able to easily follow this guide.
 
 ### Keyboard layout (optional)
 
@@ -146,7 +146,6 @@ You can disable that:
 The [visual highlight setting](https://www.nvaccess.org/files/nvda/documentation/userGuide.html#VisionFocusHighlight) enables indicating where NVDA's internal cursor currently is on the screen — an invaluable help for sighted users.
 
 ![The visual highlight setting in action](_media/nvda-focus-highlighting.png)
-
 
 ## Add-ons
 

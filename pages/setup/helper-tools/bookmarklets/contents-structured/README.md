@@ -1,5 +1,5 @@
 ---
-navigation_title: "Contents Structured"
+navigation_title: 'Contents Structured'
 position: 1
 ---
 

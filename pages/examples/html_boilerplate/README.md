@@ -1,5 +1,5 @@
 ---
-navigation_title: "HTML Boilerplate"
+navigation_title: 'HTML Boilerplate'
 position: 1
 ---
 

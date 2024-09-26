@@ -1,5 +1,5 @@
 ---
-navigation_title: "Pressed"
+navigation_title: 'Pressed'
 position: 4
 ---
 
@@ -20,9 +20,7 @@ On a visual level, this status typically is indicated using icons, for example a
 On a semantical level, the `aria-pressed` attribute is a good choice to convey that an element's visibility can be activated, together with its current state:
 
 ```html
-<button aria-pressed="false">
-  Toggle
-</button>
+<button aria-pressed="false">Toggle</button>
 ```
 
 A screen reader will announce:

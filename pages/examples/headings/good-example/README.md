@@ -1,5 +1,5 @@
 ---
-navigation_title: "Good example"
+navigation_title: 'Good example'
 position: 2
 ---
 

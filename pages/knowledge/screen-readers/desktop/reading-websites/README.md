@@ -1,5 +1,5 @@
 ---
-navigation_title: "Reading websites"
+navigation_title: 'Reading websites'
 position: 3
 ---
 
@@ -93,6 +93,6 @@ When leaving a page, some screen readers try to remember the current reading pos
 
 - This can be useful, for example when re-visiting a text that was not read completely before.
 - But it can also be confusing sometimes, for example in a shopping cart when removing an item:
-    - After re-display, the removed element is missing, but the screen reader still tries to set the focus where the element had been before, resulting in focusing a seemingly random element.
+  - After re-display, the removed element is missing, but the screen reader still tries to set the focus where the element had been before, resulting in focusing a seemingly random element.
 
 This functionality dates from a passed internet era. Back then, the internet was mainly a bunch of static websites. Thus, no changes to a page would normally be expected after re-visiting it.

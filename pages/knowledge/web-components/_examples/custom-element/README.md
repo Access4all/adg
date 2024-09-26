@@ -1,3 +1,3 @@
 ---
-title: "Custom element"
+title: 'Custom element'
 ---

@@ -1,5 +1,5 @@
 ---
-navigation_title: "HTML_CodeSniffer"
+navigation_title: 'HTML_CodeSniffer'
 position: 3
 ---
 

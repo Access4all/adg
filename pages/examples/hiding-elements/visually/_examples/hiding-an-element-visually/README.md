@@ -1,5 +1,5 @@
 ---
-title: "Hiding an element visually"
+title: 'Hiding an element visually'
 compatibility:
   Keyboard only:
     status: pass

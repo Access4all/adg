@@ -1,5 +1,5 @@
 ---
-navigation_title: "Layout changes"
+navigation_title: 'Layout changes'
 position: 6
 ---
 

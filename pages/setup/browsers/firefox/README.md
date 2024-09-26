@@ -1,5 +1,5 @@
 ---
-navigation_title: "Firefox"
+navigation_title: 'Firefox'
 position: 2
 card_text: "One of Firefox's main characteristics is its high conformance regarding web standards, including those related to accessibility."
 ---

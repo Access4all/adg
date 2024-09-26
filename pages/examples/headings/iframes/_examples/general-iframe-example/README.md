@@ -1,5 +1,5 @@
 ---
-title: "General iframe example"
+title: 'General iframe example'
 compatibility:
   Keyboard only:
     status: pass

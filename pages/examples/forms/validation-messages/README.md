@@ -1,5 +1,5 @@
 ---
-navigation_title: "Validation messages"
+navigation_title: 'Validation messages'
 position: 7
 ---
 

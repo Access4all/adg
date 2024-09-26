@@ -1,5 +1,5 @@
 ---
-title: "HTML 5 headings outline with traditionally numbered headings"
+title: 'HTML 5 headings outline with traditionally numbered headings'
 compatibility:
   Keyboard only:
     status: pass

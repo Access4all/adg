@@ -1,5 +1,5 @@
 ---
-title: "Marking an element expandable using a checkbox"
+title: 'Marking an element expandable using a checkbox'
 compatibility:
   Keyboard only:
     status: pass

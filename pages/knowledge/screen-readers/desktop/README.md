@@ -1,5 +1,5 @@
 ---
-navigation_title: "Desktop: NVDA & JAWS"
+navigation_title: 'Desktop: NVDA & JAWS'
 position: 6
 ---
 

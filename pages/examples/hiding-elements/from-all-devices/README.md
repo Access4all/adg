@@ -1,5 +1,5 @@
 ---
-navigation_title: "From all devices"
+navigation_title: 'From all devices'
 position: 3
 ---
 

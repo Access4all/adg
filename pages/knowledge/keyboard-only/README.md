@@ -1,5 +1,5 @@
 ---
-navigation_title: "Keyboard only"
+navigation_title: 'Keyboard only'
 position: 3
 ---
 

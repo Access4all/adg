@@ -1,3 +1,3 @@
 ---
-title: "Hiding an element with a focusable child"
+title: 'Hiding an element with a focusable child'
 ---

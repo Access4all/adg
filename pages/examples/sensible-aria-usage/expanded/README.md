@@ -1,5 +1,5 @@
 ---
-navigation_title: "Expanded"
+navigation_title: 'Expanded'
 position: 3
 ---
 
@@ -20,9 +20,7 @@ On a visual level, this status typically is indicated using an icon, for example
 On a semantical level, the `aria-expanded` attribute is a good choice to convey that an element's visibility can be toggled, together with its current state:
 
 ```html
-<button aria-expanded="false">
-  Toggle
-</button>
+<button aria-expanded="false">Toggle</button>
 ```
 
 A screen reader will announce:
@@ -40,9 +38,7 @@ If the button is activated (and the `aria-expanded` status is changed to `true` 
 There is a similar ARIA attribute, `aria-haspopup`, which leads screen readers to announce an element as having a menu.
 
 ```html
-<button aria-haspopup="true">
-  Toggle
-</button>
+<button aria-haspopup="true">Toggle</button>
 ```
 
 A screen reader will announce:
@@ -89,11 +85,10 @@ While this is even more robust than using `aria-expanded`, it may feel out of pl
 
 If you need to describe the expandability status of interactive elements, `aria-expanded` is one of the few ARIA attributes we truly recommend for general use.
 
-## You could be also interested in 
+## You could be also interested in
 
 Knowledge is power! Our guide has more to offer about:
 
 - [The purpose behind the WAI-ARIA standard](/knowledge/aria/purpose)
 - [Bad ARIA practices](/knowledge/aria/bad-practices)
 - [Sensible usage of ARIA roles and attributes](/examples/sensible-aria-usage)
-

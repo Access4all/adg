@@ -1,5 +1,5 @@
 ---
-navigation_title: "No visual attributes"
+navigation_title: 'No visual attributes'
 position: 4
 ---
 

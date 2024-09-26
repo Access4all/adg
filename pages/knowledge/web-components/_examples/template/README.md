@@ -1,3 +1,3 @@
 ---
-title: "Template and client-side rendering"
+title: 'Template and client-side rendering'
 ---

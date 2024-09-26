@@ -1,5 +1,5 @@
 ---
-navigation_title: "Handling"
+navigation_title: 'Handling'
 position: 1
 ---
 
@@ -34,13 +34,13 @@ You can add `Shift` to most shortcuts to reverse direction. For example press `S
 ### Interaction with form elements
 
 - `Enter` (or `Esc`): enter (or exit) focus mode (a distinctive **beep** sound is played).
-    - Only available when focusing an interactive element.
-    - In NVDA, `NVDA + Space` is an alternative way of toggling interaction modes (regardless where the cursor is at the moment).
+  - Only available when focusing an interactive element.
+  - In NVDA, `NVDA + Space` is an alternative way of toggling interaction modes (regardless where the cursor is at the moment).
 - `Space`: toggle checkbox and expand/collapse combobox.
 - `Enter`: activate button (or submit form when focusing certain form elements).
 - `Up` / `Down` (and sometimes `Left` / `Right`).
-    - Select radio button value.
-    - Select element in combobox.
+  - Select radio button value.
+  - Select element in combobox.
 
 #### JAWS braille viewer
 
@@ -65,7 +65,7 @@ In the upcoming text, we are referring to the keys `NVDA` and `JAWS`. If you do 
 NVDA's "Elements List" displays a page's form outline. To open it:
 
 - First make sure you are in browse mode.
-    - If unclear to you, see [Screen readers' browse and focus modes](/knowledge/screen-readers/desktop/browse-focus-modes).
+  - If unclear to you, see [Screen readers' browse and focus modes](/knowledge/screen-readers/desktop/browse-focus-modes).
 - Press `Alt + F` to select the "Form fields" area.
 - Press `Alt + B` to select the "Buttons" area.
 

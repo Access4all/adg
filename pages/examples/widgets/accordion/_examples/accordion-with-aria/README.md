@@ -1,5 +1,5 @@
 ---
-title: "Accordion with ARIA"
+title: 'Accordion with ARIA'
 compatibility:
   Keyboard only:
     status: pass

@@ -1,5 +1,5 @@
 ---
-navigation_title: "Alert"
+navigation_title: 'Alert'
 position: 8
 ---
 
@@ -20,24 +20,20 @@ Setting `role="alert"` to a newly added DOM element (using JavaScript) forces th
 In the following code, the user is greeted "Hello!" after 10 seconds.
 
 ```html
-<p>
-  The user may read this paragraph...
-</p>
+<p>The user may read this paragraph...</p>
 
-<p>
-  ...or this paragraph.
-</p>
+<p>...or this paragraph.</p>
 
 <div id="alert"></div>
 ```
 
 ```javascript
-var sayHello;
-sayHello = function() {
-  return $("#alert").append("<p role='alert'>Hello!</p>");
-};
+var sayHello
+sayHello = function () {
+  return $('#alert').append("<p role='alert'>Hello!</p>")
+}
 
-return setTimeout(sayHello, 10000);
+return setTimeout(sayHello, 10000)
 ```
 
 [Example](_examples/single-announcement-of-an-element-using-alert-role)
@@ -51,12 +47,12 @@ You may have noticed that the screen reader's current announcement was brutally 
 But look at the following, more extreme example, where the user is greeted very 2 seconds:
 
 ```javascript
-var sayHello;
-sayHello = function() {
-  $("#alert").append(`<p role='alert'>Hello!</p>`);
-};
+var sayHello
+sayHello = function () {
+  $('#alert').append(`<p role='alert'>Hello!</p>`)
+}
 
-setInterval(sayHello, 2000);
+setInterval(sayHello, 2000)
 ```
 
 This is extremely disturbing, as the user is interrupted again and again while browsing the page. Something like this can destroy the whole user experience for screen reader users.

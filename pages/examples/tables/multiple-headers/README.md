@@ -1,5 +1,5 @@
 ---
-navigation_title: "Multiple headers"
+navigation_title: 'Multiple headers'
 position: 4
 ---
 

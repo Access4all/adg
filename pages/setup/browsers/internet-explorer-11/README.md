@@ -1,5 +1,5 @@
 ---
-navigation_title: "Internet Explorer 11"
+navigation_title: 'Internet Explorer 11'
 navigation_ignore: true
 position: 1
 ---

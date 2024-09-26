@@ -1,5 +1,5 @@
 ---
-navigation_title: "Multiple h1 okay for SEO?"
+navigation_title: 'Multiple h1 okay for SEO?'
 position: 5
 ---
 

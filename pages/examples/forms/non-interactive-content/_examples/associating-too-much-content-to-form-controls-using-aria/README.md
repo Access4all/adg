@@ -1,5 +1,5 @@
 ---
-title: "Associating too much content to form controls using ARIA"
+title: 'Associating too much content to form controls using ARIA'
 compatibility:
   Keyboard only:
     status: pass
@@ -25,5 +25,5 @@ compatibility:
       status: pass
       date: 2023-07-13
       comments:
-      - does not tell the content associated with Aria, but only the label and the fieldset/legend
+        - does not tell the content associated with Aria, but only the label and the fieldset/legend
 ---

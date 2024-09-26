@@ -1,5 +1,5 @@
 ---
-title: "Hiding an element using aria-hidden"
+title: 'Hiding an element using aria-hidden'
 compatibility:
   Keyboard only:
     status: pass

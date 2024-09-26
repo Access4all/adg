@@ -1,5 +1,5 @@
 ---
-title: "Table of divs using ARIA"
+title: 'Table of divs using ARIA'
 compatibility:
   Keyboard only:
     status: pass

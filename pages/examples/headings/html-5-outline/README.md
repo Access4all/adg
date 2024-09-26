@@ -1,5 +1,5 @@
 ---
-navigation_title: "HTML 5 outline"
+navigation_title: 'HTML 5 outline'
 position: 7
 ---
 

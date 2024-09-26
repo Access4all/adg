@@ -1,5 +1,5 @@
 ---
-navigation_title: "In tables"
+navigation_title: 'In tables'
 position: 10
 ---
 

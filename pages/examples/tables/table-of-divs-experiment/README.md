@@ -1,5 +1,5 @@
 ---
-navigation_title: "\"Table of divs\" experiment"
+navigation_title: '"Table of divs" experiment'
 position: 8
 ---
 

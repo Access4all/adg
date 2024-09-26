@@ -1,5 +1,5 @@
 ---
-title: "Hiding elements from all devices using visibility hidden"
+title: 'Hiding elements from all devices using visibility hidden'
 compatibility:
   Keyboard only:
     status: pass

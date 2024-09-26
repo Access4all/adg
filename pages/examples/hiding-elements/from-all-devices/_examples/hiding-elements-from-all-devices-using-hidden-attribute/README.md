@@ -1,5 +1,5 @@
 ---
-title: "Hiding elements from all devices using hidden attribute"
+title: 'Hiding elements from all devices using hidden attribute'
 compatibility:
   Keyboard only:
     status: pass

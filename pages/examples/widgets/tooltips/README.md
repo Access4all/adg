@@ -1,5 +1,5 @@
 ---
-navigation_title: "Tooltips"
+navigation_title: 'Tooltips'
 position: 5
 ---
 
@@ -21,11 +21,11 @@ Besides many other requirements, we want to stress out explicitly the following:
 
 - The meaning and usage of the tooltip must be clear.
 - The tooltip must be operable using both keyboard only and screen readers (with a reasonable interplay of default keys like `Tab`, `Enter`/`Space`, `Esc`, `Arrow` keys), as well as mobile screen readers:
-    - Simple tooltips should be displayed automatically.
-    - Simple tooltips should be displayed manually.
+  - Simple tooltips should be displayed automatically.
+  - Simple tooltips should be displayed manually.
 - The tooltip content must be accessible:
-    - Interactive elements must be reachable using keyboard.
-    - Complex content must be browsable line by line using screen readers.
+  - Interactive elements must be reachable using keyboard.
+  - Complex content must be browsable line by line using screen readers.
 - If tooltips are separately focusable elements, they must come before any element they describe (or they have to be referred to beforehand).
 
 ## Proofs of concept
@@ -53,10 +53,10 @@ Some interesting peculiarities:
 
 - The tooltip's content is toggled using the `hidden` attribute (see [Hiding elements from all devices](/examples/hiding-elements/from-all-devices)).
 - By duplicating the tooltip's content to each label as visually hidden text (see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually)), screen reader users will find it in both browse and focus mode.
-    - This is more robust than `aria-describedby` (see [Adding descriptions to elements using aria-describedby](/examples/sensible-aria-usage/describedby)).
-    - To prevent redundant announcements in screen readers, we hide the tooltip from them using `aria-hidden` (see [Hiding elements from screen readers using aria-hidden](/examples/hiding-elements/from-screen-readers)).
+  - This is more robust than `aria-describedby` (see [Adding descriptions to elements using aria-describedby](/examples/sensible-aria-usage/describedby)).
+  - To prevent redundant announcements in screen readers, we hide the tooltip from them using `aria-hidden` (see [Hiding elements from screen readers using aria-hidden](/examples/hiding-elements/from-screen-readers)).
 - Visibility of the tooltip can be toggled by pressing `Esc` (when the described element is focused).
-    - This is useful if the tooltip overlaps some important information.
+  - This is useful if the tooltip overlaps some important information.
 
 ### Manually displayed tooltip
 
@@ -85,8 +85,8 @@ By the way, complex tooltips are very similar to:
 Some interesting peculiarities:
 
 - Each form control's label gives a hint about the existence of a tooltip. This enables screen reader users to know about it in advance, so they can consult its contents before interacting with the form control (if wished).
-    - Alternatively, the tooltip could be placed before the form control.
+  - Alternatively, the tooltip could be placed before the form control.
 - The toggle button has a visually hidden label to provide a proper name, while the visible SVG icon is ignored by screen readers.
-    - To prevent Internet Explorer from making the SVGs focusable, the `focusable="false"` attribute is used.
-    - Instead of an SVG icon, also a traditional image with empty alternative text would work: `<img src="..." alt="" />`.
+  - To prevent Internet Explorer from making the SVGs focusable, the `focusable="false"` attribute is used.
+  - Instead of an SVG icon, also a traditional image with empty alternative text would work: `<img src="..." alt="" />`.
 - The toggle button has an `aria-expanded` attribute to announce its expandability status (see [Marking elements expandable using aria-expanded](/examples/sensible-aria-usage/expanded)).

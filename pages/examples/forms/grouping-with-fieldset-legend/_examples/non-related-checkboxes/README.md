@@ -1,5 +1,5 @@
 ---
-title: "Non related checkboxes"
+title: 'Non related checkboxes'
 compatibility:
   Keyboard only:
     status: pass

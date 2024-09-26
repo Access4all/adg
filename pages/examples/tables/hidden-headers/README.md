@@ -1,5 +1,5 @@
 ---
-navigation_title: "Hidden headers"
+navigation_title: 'Hidden headers'
 position: 9
 ---
 

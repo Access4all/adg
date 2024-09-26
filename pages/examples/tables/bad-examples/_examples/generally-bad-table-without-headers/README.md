@@ -1,3 +1,3 @@
 ---
-title: "Generally bad table, without headers"
+title: 'Generally bad table, without headers'
 ---

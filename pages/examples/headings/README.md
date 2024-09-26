@@ -1,5 +1,5 @@
 ---
-navigation_title: "Headings"
+navigation_title: 'Headings'
 position: 3
 ---
 

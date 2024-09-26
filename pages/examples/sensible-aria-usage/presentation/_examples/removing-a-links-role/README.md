@@ -15,7 +15,6 @@ compatibility:
       status: pass
       date: 2023-07-13
   JAWS:
- 
     2018.3 + FF ESR 52.7.3:
       status: pass
       date: 2018-05-22
@@ -25,5 +24,4 @@ compatibility:
     2023.1 + Edge:
       status: pass
       date: 2023-07-13
-
 ---

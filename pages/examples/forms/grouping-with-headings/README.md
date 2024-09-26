@@ -1,5 +1,5 @@
 ---
-navigation_title: "Grouping with headings"
+navigation_title: 'Grouping with headings'
 position: 5
 ---
 

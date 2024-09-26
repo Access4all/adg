@@ -1,3 +1,3 @@
 ---
-title: "Custom element using shadow DOM"
+title: 'Custom element using shadow DOM'
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Page with HTML5 structural elements, labelled with ARIA"
+title: 'Page with HTML5 structural elements, labelled with ARIA'
 compatibility:
   Keyboard only:
     status: pass
