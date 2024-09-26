@@ -25,14 +25,21 @@ jobs:
       - name: Prettier
         run: npm run prettier -- --write
 
-      - name: Commit formatted code
+      - name: Check for changes
+        id: changes
         run: |
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --global user.name "${{ github.actor }}"
+          git diff --exit-code || echo "Changes detected"
+
+      - name: Commit changes (if any)
+        if: steps.changes.outcome == 'failure'
+        run: |
           git add .
-          git commit -a -m "Auto-format code"
+          git commit -m "Auto-format code" || echo "No changes to commit"
 
       - name: Push changes
+        if: steps.changes.outcome == 'failure'
         uses: ad-m/github-push-action@master
         with:
           branch: ${{ github.ref }}
