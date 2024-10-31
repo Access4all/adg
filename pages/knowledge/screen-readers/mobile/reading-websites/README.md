@@ -1,5 +1,5 @@
 ---
-navigation_title: "Reading websites"
+navigation_title: 'Reading websites'
 position: 1
 ---
 
@@ -43,7 +43,7 @@ Some of the settings that prove to be useful in daily accessibility testing are:
 
 - Speech rate: increase or decrease.
 - Container/Headings/Characters/Words: move the cursor to the next or previous corresponding element.
-    - Especially the "Headings" setting is useful, as it allows to scan a website quickly for expected content.
+  - Especially the "Headings" setting is useful, as it allows to scan a website quickly for expected content.
 - Language: toggle through available languages (for example, if a website has a wrong or missing `lang` attribute).
 
 ## Change settings TalkBack (using context menus)
@@ -53,7 +53,7 @@ The activation gestures can be changed in the Settings.
 
 ### The global context menu
 
-This is activated by smoothly swiping down then right, like drawing an "L" sign. It presents the user with a number of options, including "TalkBack Settings" and "Text to speech settings". 
+This is activated by smoothly swiping down then right, like drawing an "L" sign. It presents the user with a number of options, including "TalkBack Settings" and "Text to speech settings".
 
 ### The local context menu
 

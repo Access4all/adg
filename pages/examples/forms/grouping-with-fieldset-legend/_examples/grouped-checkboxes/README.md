@@ -1,5 +1,5 @@
 ---
-title: "Grouped checkboxes"
+title: 'Grouped checkboxes'
 compatibility:
   Keyboard only:
     status: pass
@@ -14,8 +14,8 @@ compatibility:
     2023.1 + Edge:
       status: pass
       date: 2023-07-13
-      comments: 
-      - in clarification..
+      comments:
+        - in clarification..
   JAWS:
     2018.3 + FF ESR 52.7.3:
       status: pass

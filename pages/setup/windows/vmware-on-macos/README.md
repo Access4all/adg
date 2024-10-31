@@ -1,5 +1,5 @@
 ---
-navigation_title: "VMware on macOS"
+navigation_title: 'VMware on macOS'
 position: 3
 ---
 
@@ -27,13 +27,13 @@ After downloading [VMware Fusion](https://www.vmware.com/ch/products/fusion), in
 
 - Choose `File` -> `Import`, select the `*.ovf` file in the extracted folder and confirm.
 - Take a snapshot (`Command + Shift + S`).
-    - This allows to easily go back to that state later, meaning you can re-activate the VM's Windows 90-day license again and again.
-    - For more info, see [Understanding snapshots (VMware)](https://kb.vmware.com/s/article/1014509).
+  - This allows to easily go back to that state later, meaning you can re-activate the VM's Windows 90-day license again and again.
+  - For more info, see [Understanding snapshots (VMware)](https://kb.vmware.com/s/article/1014509).
 - Under `Virtual Machine` -> `Settings`:
-    - If you have a retina display, go to `Display` and deselect `Use full resolution for Retina display` (otherwise your eyes will begin to hurt).
-    - Go to `Processors & Memory`, then select at least 2000MB of memory.
-    - To be able to connect to the internet, click `Add Device...` and choose `Network Adapter`.
-        - Use option `Share with my Mac`.
+  - If you have a retina display, go to `Display` and deselect `Use full resolution for Retina display` (otherwise your eyes will begin to hurt).
+  - Go to `Processors & Memory`, then select at least 2000MB of memory.
+  - To be able to connect to the internet, click `Add Device...` and choose `Network Adapter`.
+    - Use option `Share with my Mac`.
 
 ## Booting up the VM for the first time
 
@@ -75,10 +75,10 @@ Windows desktop screen readers rely heavily on the `Insert` key.
 This key is not available on Macs (in earlier days of macOS, it was the "Help" key), so you will have to emulate it. The most robust way to do this is using the free software Karabiner-Elements which translates any given key to any other in macOS.
 
 - Download [Karabiner-Elements](https://pqrs.org/osx/karabiner/) and install it.
-    - Be sure to allow its execution in the `System Preferences`' `Security & Privacy` section.
+  - Be sure to allow its execution in the `System Preferences`' `Security & Privacy` section.
 - After launching it, add a `Simple Modification`:
-    - From `right_option` to `insert`.
-    - Instead of `right_option`, you can choose any key you like. Make sure it is one you do not really need in your daily workflow.
+  - From `right_option` to `insert`.
+  - Instead of `right_option`, you can choose any key you like. Make sure it is one you do not really need in your daily workflow.
 
 Alternatively, you can attach a physical [USB num lock keyboard](https://lmgtfy.com/?q=USB+num+lock+keyboard) (or any other keyboard offering an `Insert` key) to your Mac.
 

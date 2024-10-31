@@ -1,7 +1,7 @@
 ---
-navigation_title: "WAVE toolbar"
+navigation_title: 'WAVE toolbar'
 position: 2
-card_text: "It gives you a very quick first impression about the quality of the current webpage’s accessibility."
+card_text: 'It gives you a very quick first impression about the quality of the current webpage’s accessibility.'
 ---
 
 # WAVE toolbar

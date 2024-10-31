@@ -1,5 +1,5 @@
 ---
-title: "Page with additional page regions, with visually hidden headings"
+title: 'Page with additional page regions, with visually hidden headings'
 compatibility:
   Keyboard only:
     status: pass

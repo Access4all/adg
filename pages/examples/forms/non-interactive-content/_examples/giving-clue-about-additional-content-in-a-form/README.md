@@ -1,5 +1,5 @@
 ---
-title: "Giving clue about additional content in a form"
+title: 'Giving clue about additional content in a form'
 compatibility:
   Keyboard only:
     status: pass
@@ -15,7 +15,7 @@ compatibility:
       status: pass
       date: 2023-07-13
       comments:
-      - is only working in brows-mode, better example with aria-describedby.
+        - is only working in brows-mode, better example with aria-describedby.
   JAWS:
     2018.3 + FF ESR 52.7.3:
       status: pass
@@ -26,6 +26,6 @@ compatibility:
     2023.23 + Edge:
       status: pass
       date: 2023-07-13
-      comments: 
-      - is only working in brows-mode, better example with aria-describedby.
+      comments:
+        - is only working in brows-mode, better example with aria-describedby.
 ---

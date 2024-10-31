@@ -1,3 +1,3 @@
 ---
-title: "Form controls without labels in a table"
+title: 'Form controls without labels in a table'
 ---

@@ -1,5 +1,5 @@
 ---
-navigation_title: "Edge"
+navigation_title: 'Edge'
 position: 3
 ---
 

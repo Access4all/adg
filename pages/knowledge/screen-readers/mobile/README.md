@@ -1,5 +1,5 @@
 ---
-navigation_title: "Mobile: VoiceOver/iOS & TalkBack"
+navigation_title: 'Mobile: VoiceOver/iOS & TalkBack'
 position: 5
 ---
 

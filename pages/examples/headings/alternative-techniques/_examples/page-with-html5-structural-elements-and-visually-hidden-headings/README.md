@@ -1,5 +1,5 @@
 ---
-title: "Page with HTML5 structural elements and visually hidden headings"
+title: 'Page with HTML5 structural elements and visually hidden headings'
 compatibility:
   Keyboard only:
     status: pass

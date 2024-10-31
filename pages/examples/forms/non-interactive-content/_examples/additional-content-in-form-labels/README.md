@@ -1,5 +1,5 @@
 ---
-title: "Additional content in form labels"
+title: 'Additional content in form labels'
 compatibility:
   NVDA:
     2023.1 + FF Quantum 115:

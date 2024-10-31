@@ -1,5 +1,5 @@
 ---
-title: "Required input with asterisks as icons"
+title: 'Required input with asterisks as icons'
 compatibility:
   Keyboard only:
     status: pass

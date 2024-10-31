@@ -1,5 +1,5 @@
 ---
-navigation_title: "Presentation"
+navigation_title: 'Presentation'
 position: 7
 ---
 
@@ -20,9 +20,7 @@ Notice: we know that `role="presentation"` does not work in Internet Explorer. S
 To a screen reader, the following is no paragraph anymore, and as such cannot be navigated to by pressing the `P` key:
 
 ```html
-<p role="presentation">
-  Hello folks!
-</p>
+<p role="presentation">Hello folks!</p>
 ```
 
 [Example](_examples/removing-semantics-using-presentation-role)

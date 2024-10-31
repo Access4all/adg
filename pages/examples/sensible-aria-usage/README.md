@@ -1,5 +1,5 @@
 ---
-navigation_title: "Sensible ARIA usage"
+navigation_title: 'Sensible ARIA usage'
 position: 7
 ---
 

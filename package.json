@@ -9,10 +9,11 @@
     "build": "gulp build",
     "rebuild": "gulp rebuild",
     "gulp": "gulp",
-    "lint": "eslint --fix \"**/*.js\"",
-    "format": "prettier --write \"**/*.{js,scss}\"",
-    "update": "npx npm-check -u",
-    "prepare": "husky install"
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "update": "npx npm-check -u"
   },
   "keywords": [],
   "author": "",
@@ -55,7 +56,6 @@
     "gulp-sass": "^5.1.0",
     "gulp.spritesmith": "^6.13.0",
     "highlight.js": "^11.8.0",
-    "husky": "^8.0.3",
     "import-fresh": "^3.3.0",
     "jsdom": "^22.0.0",
     "lint-staged": "^13.2.2",

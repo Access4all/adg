@@ -1,5 +1,5 @@
 ---
-navigation_title: "License"
+navigation_title: 'License'
 position: 4
 ---
 

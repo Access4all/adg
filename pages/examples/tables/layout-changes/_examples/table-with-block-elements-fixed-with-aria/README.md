@@ -1,5 +1,5 @@
 ---
-title: "Table with block elements, fixed with ARIA"
+title: 'Table with block elements, fixed with ARIA'
 compatibility:
   Keyboard only:
     status: pass

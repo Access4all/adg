@@ -1,5 +1,5 @@
 ---
-title: "Grouped form controls with too long legend"
+title: 'Grouped form controls with too long legend'
 compatibility:
   Keyboard only:
     status: pass
@@ -8,8 +8,8 @@ compatibility:
     2023.1 + FF 115:
       status: pass
       date: 2023-08-03
-      comments: 
-      - Firefox (version 115.x) is reading the whole fieldset-legend once by focusing the first input field.
+      comments:
+        - Firefox (version 115.x) is reading the whole fieldset-legend once by focusing the first input field.
     2021.2 + Chrome:
       status: pass
       date: 2021-02-10

@@ -1,5 +1,5 @@
 ---
-navigation_title: "Visually"
+navigation_title: 'Visually'
 position: 1
 ---
 
@@ -14,10 +14,10 @@ It may be surprising, but the only way to hide an element visually while retaini
 ```css
 .visually-hidden {
   position: absolute;
-  left:     -10000px;
-  top:      auto;
-  width:    1px;
-  height:   1px;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
   overflow: hidden;
 }
 ```
@@ -41,9 +41,9 @@ In the following example, press the `Tab` key to focus and show the (previously 
 The usage of this technique has some side effects for visual users:
 
 - When searching in the browser for text, elements visually hidden with this technique are still found.
-    - This can be confusing, as some of the results may not be visible (though the browser scrolls to the correct viewport position when toggling through the results).
+  - This can be confusing, as some of the results may not be visible (though the browser scrolls to the correct viewport position when toggling through the results).
 - When selecting text (for example for copying it to the clipboard), elements that were visually hidden using this technique are also selected (if they are between the selection start and selection end position).
-    - This can be confusing, as the selected text may differ from what is expected.
+  - This can be confusing, as the selected text may differ from what is expected.
 
 ## Further possibilities using ARIA
 

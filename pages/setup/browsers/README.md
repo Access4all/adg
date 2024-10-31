@@ -1,7 +1,7 @@
 ---
-navigation_title: "Browsers"
+navigation_title: 'Browsers'
 position: 2
-card_text: "Learn how to install and configure common web browsers."
+card_text: 'Learn how to install and configure common web browsers.'
 ---
 
 # Web browsers

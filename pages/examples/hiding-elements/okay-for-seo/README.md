@@ -1,5 +1,5 @@
 ---
-navigation_title: "Okay for SEO?"
+navigation_title: 'Okay for SEO?'
 position: 5
 ---
 

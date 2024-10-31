@@ -1,5 +1,5 @@
 ---
-navigation_title: "Visually hidden headings"
+navigation_title: 'Visually hidden headings'
 position: 4
 ---
 

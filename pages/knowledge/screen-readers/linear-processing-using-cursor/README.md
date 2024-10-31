@@ -1,5 +1,5 @@
 ---
-navigation_title: "Linear processing using cursor"
+navigation_title: 'Linear processing using cursor'
 position: 3
 ---
 

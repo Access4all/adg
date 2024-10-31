@@ -1,5 +1,5 @@
 ---
-navigation_title: "Current"
+navigation_title: 'Current'
 position: 5
 ---
 

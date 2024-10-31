@@ -1,5 +1,5 @@
 ---
-navigation_title: "Semantics"
+navigation_title: 'Semantics'
 position: 1
 ---
 

@@ -1,5 +1,5 @@
 ---
-navigation_title: "Welcome"
+navigation_title: 'Welcome'
 position: 1
 ---
 

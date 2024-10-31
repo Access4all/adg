@@ -1,5 +1,5 @@
 ---
-navigation_title: "axe DevTools"
+navigation_title: 'axe DevTools'
 position: 4
 ---
 

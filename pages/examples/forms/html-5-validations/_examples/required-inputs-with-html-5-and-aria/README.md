@@ -1,5 +1,5 @@
 ---
-title: "Required inputs with HTML 5 and ARIA"
+title: 'Required inputs with HTML 5 and ARIA'
 compatibility:
   Keyboard only:
     status: pass
@@ -19,7 +19,7 @@ compatibility:
       status: pass
       date: 2023-07-13
       comments:
-      - The name of an invalid field is not automatically announced. This is nasty, but the user can find this information manually. After sending the form you'll get the the message per field at the first time when it is focused.
+        - The name of an invalid field is not automatically announced. This is nasty, but the user can find this information manually. After sending the form you'll get the the message per field at the first time when it is focused.
   JAWS:
     2018.3 + FF ESR 52.7.3:
       status: pass

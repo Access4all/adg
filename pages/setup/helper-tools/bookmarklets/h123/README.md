@@ -1,5 +1,5 @@
 ---
-navigation_title: "h123"
+navigation_title: 'h123'
 position: 2
 ---
 
@@ -23,8 +23,8 @@ The popover has some very useful options and features:
 
 - Activate "Mark visually hidden" to see which of the present headings are visually hidden (moved out of the viewport).
 - Activate "Show hidden" to also display headings that are completely hidden.
-    - This is useful for debugging headings that may have been completely hidden unintentionally.
+  - This is useful for debugging headings that may have been completely hidden unintentionally.
 - Activate "Hover-Highlight" to visually display the heading that corresponds to the element highlighted by the mouse cursor.
-    - This is useful for debugging whether the current heading outline is sensible: each and every element on the page must belong to a proper heading.
+  - This is useful for debugging whether the current heading outline is sensible: each and every element on the page must belong to a proper heading.
 
 The bookmarklet supports both native `<h#>` tags and `role="heading" aria-level="..."` elements.

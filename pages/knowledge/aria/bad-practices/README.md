@@ -1,5 +1,5 @@
 ---
-navigation_title: "Bad practices"
+navigation_title: 'Bad practices'
 position: 3
 ---
 
@@ -18,9 +18,7 @@ ARIA is not meant to be used to "fix" standard elements that lack semantical mea
 Let's look again at an example of a link that is not properly marked up as such. But this time, it is spiced up with `role="link"`:
 
 ```html
-<span class="link" onclick="..." role="link">
-  Google
-</span>
+<span class="link" onclick="..." role="link"> Google </span>
 ```
 
 Admittedly, this makes screen readers announce the element as link. But still, this approach is missing a lot of standard functionality: it is not focusable, it needs custom JavaScript, browser history may be broken, just to name a few. And legacy screen readers may have no support for `role="link"` anyway.
@@ -32,13 +30,9 @@ So remember: using ARIA to add missing semantical information is never a good so
 We also sometimes see overzealous developers adding redundant ARIA roles to elements, thinking it would enhance accessibility:
 
 ```html
-<form role="form">
-  ...
-</form>
+<form role="form">...</form>
 
-<a href="..." role="link">
-  Google
-</a>
+<a href="..." role="link"> Google </a>
 ```
 
 It does not - quite the contrary is often the case, as screen readers seem to behave buggy from stuff like this.
@@ -51,7 +45,7 @@ For example, the following link points to a shopping cart. It offers a visual la
 
 ```css
 a.cart {
-  background: url("cart.png"); /* Image contains shopping cart icon */
+  background: url('cart.png'); /* Image contains shopping cart icon */
 }
 ```
 
@@ -76,12 +70,12 @@ If you are really curious and want to learn more about this, skip ahead and read
 While this certainly is an improvement over offering no label at all, it is not the technique of choice. This is due to several reasons, some very obvious ones outlined here:
 
 - First of all, ARIA labels are only visible to screen readers.
-    - But a text browser (unable to display background images) would still not be able to convey a link label to the user.
-    - And legacy screen readers may even lack backwards compatibility for ARIA.
+  - But a text browser (unable to display background images) would still not be able to convey a link label to the user.
+  - And legacy screen readers may even lack backwards compatibility for ARIA.
 - What about users with bad internet connection?
-    - If for some reason the CSS or images cannot be loaded, they are also unable to understand the link's purpose.
+  - If for some reason the CSS or images cannot be loaded, they are also unable to understand the link's purpose.
 - Furthermore, commonly used browser tools may not work with ARIA.
-    - For example, people using the search of their browser wouldn't be able to look for a link with the name "shopping cart", as the browser does not search within ARIA labels.
+  - For example, people using the search of their browser wouldn't be able to look for a link with the name "shopping cart", as the browser does not search within ARIA labels.
 
 ### Approach using visually hidden text
 
@@ -133,7 +127,9 @@ It sometimes may seem tempting to give a different user experience to some user 
 In the following artificial example, lazy developers do not feel like developing an accessible zoom function. Feeling clever, they think that a zoom functionality is not of relevance to blind users anyway. Using `aria-label`, they simply override the zoom button's content:
 
 ```html
-<button aria-label="Dear screen reader user, please do not use this functionality, it is not meant for you">
+<button
+  aria-label="Dear screen reader user, please do not use this functionality, it is not meant for you"
+>
   Zoom image
 </button>
 ```

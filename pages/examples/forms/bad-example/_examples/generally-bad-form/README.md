@@ -1,3 +1,3 @@
 ---
-title: "Generally bad form"
+title: 'Generally bad form'
 ---

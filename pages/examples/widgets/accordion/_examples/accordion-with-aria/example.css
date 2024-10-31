@@ -38,14 +38,14 @@
 }
 
 .accordion button[aria-controls]::before {
-  content: "-";
+  content: '-';
   display: inline-block;
   width: 0.75em;
   font-weight: normal;
 }
 
-.accordion button[aria-controls][aria-expanded=false]::before {
-  content: "+";
+.accordion button[aria-controls][aria-expanded='false']::before {
+  content: '+';
 }
 
 .header {

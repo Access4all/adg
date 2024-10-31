@@ -1,5 +1,5 @@
 ---
-navigation_title: "Chrome"
+navigation_title: 'Chrome'
 position: 3
 ---
 

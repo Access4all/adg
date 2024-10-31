@@ -1,5 +1,5 @@
 ---
-navigation_title: "ARIA"
+navigation_title: 'ARIA'
 position: 2
 ---
 

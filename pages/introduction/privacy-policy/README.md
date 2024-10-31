@@ -1,5 +1,5 @@
 ---
-navigation_title: "Privacy Policy"
+navigation_title: 'Privacy Policy'
 position: 5
 ---
 

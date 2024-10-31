@@ -1,5 +1,5 @@
 ---
-title: "Table with hidden headers"
+title: 'Table with hidden headers'
 compatibility:
   Keyboard only:
     status: pass

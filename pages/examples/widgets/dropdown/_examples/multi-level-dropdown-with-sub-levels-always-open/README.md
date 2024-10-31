@@ -1,5 +1,5 @@
 ---
-title: "Multi-level dropdown with sub levels always open"
+title: 'Multi-level dropdown with sub levels always open'
 compatibility:
   Keyboard only:
     status: pass

@@ -1,5 +1,5 @@
 ---
-navigation_title: "Spanning rows & cols"
+navigation_title: 'Spanning rows & cols'
 position: 5
 ---
 

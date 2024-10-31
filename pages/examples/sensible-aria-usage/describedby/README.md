@@ -1,5 +1,5 @@
 ---
-navigation_title: "Describedby"
+navigation_title: 'Describedby'
 position: 2
 ---
 
@@ -18,13 +18,9 @@ In addition to an element's label (see [Labelling elements using aria-label and 
 Using `aria-describedby`, any number of elements can be set as description(s) of another element (by referencing their IDs). For example, the following link's description is "The world's best known search engine":
 
 ```html
-<a href="..." aria-describedby="description">
-  Google
-</a>
+<a href="..." aria-describedby="description"> Google </a>
 
-<div id="description">
-  The world's best known search engine
-</div>
+<div id="description">The world's best known search engine</div>
 ```
 
 By the way, elements hidden using CSS can still be referenced:
@@ -70,7 +66,7 @@ The only case where we truly recommend the usage of `aria-describedby`, is to at
 
 For this, the information itself must be visible (and as such discoverable also in browse mode) and as close as possible to the element it describes.
 
-If instead you need to attach information that itself is invisible, you better use visually hidden text (see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually)). For an example, see [Indicating form controls as required using asterisks (*)](/examples/forms/required).
+If instead you need to attach information that itself is invisible, you better use visually hidden text (see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually)). For an example, see [Indicating form controls as required using asterisks (\*)](/examples/forms/required).
 
 ## Conclusion
 

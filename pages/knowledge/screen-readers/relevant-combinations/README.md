@@ -1,5 +1,5 @@
 ---
-navigation_title: "Relevant combinations"
+navigation_title: 'Relevant combinations'
 position: 2
 ---
 
@@ -43,9 +43,9 @@ As such it is very hard to examine:
 
 ### WebAIM's screen reader user survey
 
-The initiative [Web Accessibility In Mind (WebAIM.org)](https://webaim.org/){ target=_blank } conducts regular surveys among users of assistive software, which gives us at least some insight into the topic.
+The initiative [Web Accessibility In Mind (WebAIM.org)](https://webaim.org/){ target=\_blank } conducts regular surveys among users of assistive software, which gives us at least some insight into the topic.
 
-The most recent survey was conducted in December 2023 and January 2024 ([WebAIM's Screen Reader User Survey #10](https://webaim.org/projects/screenreadersurvey10/){ target=_blank }). Around 47% of the roughly speaking 1500 responses came from North America and 31% from Europe.
+The most recent survey was conducted in December 2023 and January 2024 ([WebAIM's Screen Reader User Survey #10](https://webaim.org/projects/screenreadersurvey10/){ target=\_blank }). Around 47% of the roughly speaking 1500 responses came from North America and 31% from Europe.
 
 #### Limitations
 
@@ -58,7 +58,6 @@ Also, the difference between desktop and mobile often is not obvious: especially
 Finally, we do not have detailed information about differences between countries and continents, nor any details about specific versions of software being used.
 
 However: even if there are general limitations to the representativeness of the survey, it provides the best currently available data regarding the preferences of screen reader users, particularly in North America and Europe, including the UK.
-
 
 #### Results for mobile devices
 
@@ -85,8 +84,7 @@ Almost all (91.3%) of the respondents use a screen reader on a mobile device or 
 - Firefox: 4.6%
 - Other mobile web browsers: 9.3%
 
-See [webaim.org/projects/screenreadersurvey10/#mobile](https://webaim.org/projects/screenreadersurvey10/#mobile){ target=_blank } for more details.
-
+See [webaim.org/projects/screenreadersurvey10/#mobile](https://webaim.org/projects/screenreadersurvey10/#mobile){ target=\_blank } for more details.
 
 #### Results for desktop/laptop computers
 
@@ -127,4 +125,4 @@ While most screen reader users now use mobile devices, still almost half of the 
 - Safari: 8.0%
 - Other browsers: 4.4%
 
-See [webaim.org/projects/screenreadersurvey10/#primary](https://webaim.org/projects/screenreadersurvey10/#primary){ target=_blank } for more details.
+See [webaim.org/projects/screenreadersurvey10/#primary](https://webaim.org/projects/screenreadersurvey10/#primary){ target=\_blank } for more details.

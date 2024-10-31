@@ -1,5 +1,5 @@
 ---
-title: "Page with only one h1 on top of page"
+title: 'Page with only one h1 on top of page'
 compatibility:
   Keyboard only:
     status: pass

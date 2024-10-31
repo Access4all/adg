@@ -1,5 +1,5 @@
 ---
-title: "HTML 5 client side validations"
+title: 'HTML 5 client side validations'
 compatibility:
   Keyboard only:
     status: pass

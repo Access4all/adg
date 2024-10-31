@@ -1,5 +1,5 @@
 ---
-title: "Nested fieldset/legend structures"
+title: 'Nested fieldset/legend structures'
 compatibility:
   Keyboard only:
     status: pass

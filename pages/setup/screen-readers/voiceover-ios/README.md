@@ -1,5 +1,5 @@
 ---
-navigation_title: "VoiceOver/iOS"
+navigation_title: 'VoiceOver/iOS'
 position: 1
 ---
 

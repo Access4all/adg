@@ -1,5 +1,5 @@
 ---
-title: "Fixed table of divs"
+title: 'Fixed table of divs'
 compatibility:
   Keyboard only:
     status: pass

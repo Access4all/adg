@@ -1,5 +1,5 @@
 ---
-title: "Form validation with messages next to controls"
+title: 'Form validation with messages next to controls'
 compatibility:
   Keyboard only:
     status: pass
@@ -24,6 +24,6 @@ compatibility:
     2023.23 + Edge:
       status: fail
       date: 2023-07-13
-      comments: 
-      - error message are not read out. 
+      comments:
+        - error message are not read out.
 ---

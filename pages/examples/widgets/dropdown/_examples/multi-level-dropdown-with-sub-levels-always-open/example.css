@@ -17,7 +17,9 @@ ol > li {
   list-style: none;
   position: relative;
 }
-ol a, ol button, ol span {
+ol a,
+ol button,
+ol span {
   display: block;
   border: 1px solid #000;
   color: #000;
@@ -27,7 +29,8 @@ ol a, ol button, ol span {
   box-sizing: border-box;
   text-decoration: none;
 }
-ol a:hover, ol button:hover {
+ol a:hover,
+ol button:hover {
   text-decoration: underline;
 }
 ol span {
@@ -42,15 +45,17 @@ ol button {
 ol button:hover {
   cursor: pointer;
 }
-ol button[aria-expanded="true"] + ol {
+ol button[aria-expanded='true'] + ol {
   position: absolute;
 }
-ol button[aria-expanded="true"] + ol ol a, ol button[aria-expanded="true"] + ol ol span {
+ol button[aria-expanded='true'] + ol ol a,
+ol button[aria-expanded='true'] + ol ol span {
   padding-left: 40px;
 }
-ol button[aria-expanded="true"] + ol ol ol a, ol button[aria-expanded="true"] + ol ol ol span {
+ol button[aria-expanded='true'] + ol ol ol a,
+ol button[aria-expanded='true'] + ol ol ol span {
   padding-left: 80px;
 }
-ol button[aria-expanded="false"] + ol {
+ol button[aria-expanded='false'] + ol {
   display: none;
 }

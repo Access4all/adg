@@ -1,5 +1,5 @@
 ---
-navigation_title: "What and why"
+navigation_title: 'What and why'
 position: 1
 ---
 

@@ -1,3 +1,3 @@
 ---
-title: "Bad iframe with interferring headings"
+title: 'Bad iframe with interferring headings'
 ---

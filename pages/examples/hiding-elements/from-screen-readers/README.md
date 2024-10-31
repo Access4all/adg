@@ -1,5 +1,5 @@
 ---
-navigation_title: "From screen readers"
+navigation_title: 'From screen readers'
 position: 2
 ---
 

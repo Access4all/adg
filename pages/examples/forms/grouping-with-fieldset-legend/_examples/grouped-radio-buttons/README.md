@@ -1,5 +1,5 @@
 ---
-title: "Grouped radio buttons"
+title: 'Grouped radio buttons'
 compatibility:
   Keyboard only:
     status: pass

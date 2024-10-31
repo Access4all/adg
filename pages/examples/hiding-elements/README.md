@@ -1,5 +1,5 @@
 ---
-navigation_title: "Hiding elements"
+navigation_title: 'Hiding elements'
 position: 2
 ---
 

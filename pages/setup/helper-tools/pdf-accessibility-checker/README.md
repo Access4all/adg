@@ -1,7 +1,7 @@
 ---
-navigation_title: "PDF Accessibility Checker"
+navigation_title: 'PDF Accessibility Checker'
 position: 4
-card_text: "The PDF Accessibility Checker (PAC) provides a fast way to test the accessibility of PDF files."
+card_text: 'The PDF Accessibility Checker (PAC) provides a fast way to test the accessibility of PDF files.'
 ---
 
 # PDF Accessibility Checker
@@ -14,7 +14,7 @@ card_text: "The PDF Accessibility Checker (PAC) provides a fast way to test the 
 
 ## Installation
 
-[Download PDF Accessibility Checker](https://pac.pdf-accessibility.org/en){ target=_blank }.
+[Download PDF Accessibility Checker](https://pac.pdf-accessibility.org/en){ target=\_blank }.
 
 As it does not have an installer, you can simply extract it to a folder of your liking.
 
@@ -32,4 +32,4 @@ To ensure that the PDF's content is marked up correctly and the elements are ord
 
 ![Side by side comparison of original document and screen reader preview](_media/side-by-side-comparison-of-original-document-and-screen-reader-preview.png){ style=margin-bottom:1em }
 
-For recommendations how to use PAC, please see: [access-for-all.ch/en/accessibility-of-pdf-documents-and-misconceptions-about-pac](https://access-for-all.ch/en/accessibility-of-pdf-documents-and-misconceptions-about-pac/){ target=_blank }
+For recommendations how to use PAC, please see: [access-for-all.ch/en/accessibility-of-pdf-documents-and-misconceptions-about-pac](https://access-for-all.ch/en/accessibility-of-pdf-documents-and-misconceptions-about-pac/){ target=\_blank }

@@ -1,5 +1,5 @@
 ---
-navigation_title: "Iframes"
+navigation_title: 'Iframes'
 position: 8
 ---
 
@@ -33,11 +33,11 @@ The resulting headings outline looks like this to a screen reader:
 ![Bad heading outline](_media/bad-heading-outline.png)
 
 - `<h1>` Hobbies
-    - `<h2>` Playing Soccer
-    - `<h2>` Dancing
+  - `<h2>` Playing Soccer
+  - `<h2>` Dancing
 - `<h1>` Salsa
 - `<h1>` Rock'n'Roll
-    - `<h2>` Gardening
+  - `<h2>` Gardening
 
 To fix it, the headings in the embedded content need to be on the correct level relatively to the parent page.
 
@@ -48,8 +48,8 @@ Now the resulting headings outline looks correct:
 ![Appropriate heading outline](_media/appropriate-heading-outline.png)
 
 - `<h1>` Hobbies
-    - `<h2>` Playing Soccer
-    - `<h2>` Dancing
-        - `<h3>` Salsa
-        - `<h3>` Rock'n'Roll
-    - `<h2>` Gardening
+  - `<h2>` Playing Soccer
+  - `<h2>` Dancing
+    - `<h3>` Salsa
+    - `<h3>` Rock'n'Roll
+  - `<h2>` Gardening

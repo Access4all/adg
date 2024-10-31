@@ -1,5 +1,5 @@
 ---
-navigation_title: "Setup"
+navigation_title: 'Setup'
 position: 2
 ---
 

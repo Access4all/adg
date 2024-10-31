@@ -1,7 +1,7 @@
 ---
-navigation_title: "HeadingsMap"
+navigation_title: 'HeadingsMap'
 position: 3
-card_text: "It generates an index of any web document structured with headings and sections. It shows the headings structure and the errors in the structure."
+card_text: 'It generates an index of any web document structured with headings and sections. It shows the headings structure and the errors in the structure.'
 ---
 
 # HeadingsMap

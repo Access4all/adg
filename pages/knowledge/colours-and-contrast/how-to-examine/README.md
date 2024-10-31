@@ -1,5 +1,5 @@
 ---
-navigation_title: "How to examine"
+navigation_title: 'How to examine'
 position: 2
 ---
 

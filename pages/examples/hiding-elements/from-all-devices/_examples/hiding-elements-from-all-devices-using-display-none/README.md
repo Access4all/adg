@@ -1,5 +1,5 @@
 ---
-title: "Hiding elements from all devices using display none"
+title: 'Hiding elements from all devices using display none'
 compatibility:
   Keyboard only:
     status: pass
