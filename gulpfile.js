@@ -259,6 +259,7 @@ gulp.task(
       ['./src/assets/css/**/*.scss', './src/components/**/*.scss'],
       gulp.series('css')
     )
+    gulp.watch(['./src/assets/js/**/*.js'], gulp.series('js'))
     gulp.watch(
       [
         './pages/**/*.md',

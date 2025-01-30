@@ -2248,7 +2248,7 @@
               var suggestSet = Object(
                 _sxQuery_sxQuery__WEBPACK_IMPORTED_MODULE_0__[/* default */ 'a']
               )(
-                '<section class="unibox-suggest-cluster unibox-suggest-' +
+                '<div class="unibox-suggest-cluster unibox-suggest-' +
                   cssKey +
                   ' ' +
                   ('unibox-' + values.length + '-entries') +
@@ -2258,7 +2258,7 @@
                     : '') +
                   '" ' +
                   labelledBy +
-                  '></section>'
+                  '></div>'
               )
 
               if (key.replace(/_/, '').length > 0 && values.length > 0) {

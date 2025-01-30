@@ -26,7 +26,7 @@ Using `aria-describedby`, any number of elements can be set as description(s) of
 By the way, elements hidden using CSS can still be referenced:
 
 ```css
-##description {
+#description {
   display: none;
 }
 ```
