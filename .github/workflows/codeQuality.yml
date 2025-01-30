@@ -44,6 +44,11 @@ jobs:
           git add .
           git commit -m "Auto-format code" || echo "No changes to commit"
 
+      - name: Pull latest changes
+        if: env.CHANGES_DETECTED == 'true'
+        run: |
+          git pull --rebase origin ${{ github.head_ref }}
+
       - name: Push changes
         if: env.CHANGES_DETECTED == 'true'
         uses: ad-m/github-push-action@master
