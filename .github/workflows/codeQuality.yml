@@ -47,7 +47,7 @@ jobs:
       - name: Pull latest changes
         if: env.CHANGES_DETECTED == 'true'
         run: |
-          git pull --autostash --no-rebase origin ${{ github.head_ref }} || {
+          git pull --rebase --allow-unrelated-histories origin ${{ github.head_ref }} || {
             echo "Merge conflicts detected, skipping push";
             exit 1;
           }
