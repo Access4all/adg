@@ -32,20 +32,21 @@ jobs:
           git config --global user.name "${{ github.actor }}"
           if git diff --quiet; then
             echo "No changes to commit"
-            echo "::set-output name=changes_detected::false"
+            echo "CHANGES_DETECTED=false" >> $GITHUB_ENV
           else
             echo "Changes detected"
-            echo "::set-output name=changes_detected::true"
+            echo "CHANGES_DETECTED=true" >> $GITHUB_ENV
           fi
 
       - name: Commit changes (if any)
-        if: steps.changes.outputs.changes_detected == 'true'
+        if: env.CHANGES_DETECTED == 'true'
         run: |
           git add .
           git commit -m "Auto-format code" || echo "No changes to commit"
 
       - name: Push changes
-        if: steps.changes.outputs.changes_detected == 'true'
+        if: env.CHANGES_DETECTED == 'true'
         uses: ad-m/github-push-action@master
         with:
           branch: ${{ github.head_ref }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
