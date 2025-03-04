@@ -8,24 +8,9 @@
   <div class="control">
     <label for="biography">Biography</label><textarea aria-describedby="biography_description" id="biography"></textarea>
     <p class="description" id="biography_description">
-      Please tell us something about your history.
+      Please tell us something about yourself.
     </p>
   </div>
-  <fieldset>
-    <legend>Gender</legend>
-    <div class="control">
-      <input aria-describedby="gender_male_description" id="gender_male" name="gender" type="radio" /><label for="gender_male">Male</label>
-      <p class="description" id="gender_male_description">
-        You may be this if you like beer, gadgets, and Playboy Magazine.
-      </p>
-    </div>
-    <div class="control">
-      <input aria-describedby="gender_female_description" id="gender_female" name="gender" type="radio" /><label for="gender_female">Female</label>
-      <p class="description" id="gender_female_description">
-        You may be this if you like prosecco, make up, and Playgirl Magazine.
-      </p>
-    </div>
-  </fieldset>
   <div class="control">
     <label for="age_group">Age Group</label><select aria-describedby="age_group_description" id="age_group">
       <option>
@@ -60,9 +45,40 @@
       </option>
     </select>
     <p class="description" id="age_group_description">
-      Tell us how old you are.
+      Please tell us how old you are.
     </p>
   </div>
+  <fieldset>
+    <legend>T-Shirt Size</legend>
+    <div class="control">
+      <input aria-describedby="tshirtsize_s_description" id="tshirtsize_s" name="gender" type="radio" />
+      <label for="tshirtsize_s">S</label>
+      <p class="description" id="tshirtsize_s_description">
+        A body length of 70cm and a chest width of 56cm
+      </p>
+    </div>
+    <div class="control">
+      <input aria-describedby="tshirtsize_m_description" id="tshirtsize_m" name="gender" type="radio" />
+      <label for="tshirtsize_m">M</label>
+      <p class="description" id="tshirtsize_m_description">
+        A body length of 72cm and a chest width of 58cm
+      </p>
+    </div>
+    <div class="control">
+      <input aria-describedby="tshirtsize_l_description" id="tshirtsize_l" name="gender" type="radio" />
+      <label for="tshirtsize_l">L</label>
+      <p class="description" id="tshirtsize_l_description">
+        A body length of 74cm and a chest width of 60cm
+      </p>
+    </div>
+    <div class="control">
+      <input aria-describedby="tshirtsize_xl_description" id="tshirtsize_xl" name="gender" type="radio" />
+      <label for="tshirtsize_xl">XL</label>
+      <p class="description" id="tshirtsize_xl_description">
+        A body length of 77cm and a chest width of 62cm
+      </p>
+    </div>
+  </fieldset>
   <div class="control">
     <input aria-describedby="accept_agbs_description" id="accept_agbs" type="checkbox" /><label for="accept_agbs">I accept the following terms and conditions:</label>
     <ul id="accept_agbs_description">
@@ -70,10 +86,10 @@
         I entered all data truthfully
       </li>
       <li>
-        I'm a good person
+        I am a good person
       </li>
       <li>
-        I won't vote for Donald Trump next time
+        I only make informed decisions
       </li>
     </ul>
   </div>

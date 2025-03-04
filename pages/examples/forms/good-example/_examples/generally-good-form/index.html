@@ -17,10 +17,16 @@
   <fieldset>
     <legend>Gender</legend>
     <div class="control">
+      <input id="gender_female" name="gender" type="radio" /><label for="gender_female">Female</label>
+    </div>
+    <div class="control">
       <input id="gender_male" name="gender" type="radio" /><label for="gender_male">Male</label>
     </div>
     <div class="control">
-      <input id="gender_female" name="gender" type="radio" /><label for="gender_female">Female</label>
+      <input id="gender_nonbinary" name="gender" type="radio" /><label for="gender_nonbinary">Non-binary</label>
+    </div>
+    <div class="control">
+      <input id="gender_unknown" name="gender" type="radio" /><label for="gender_unknown">I prefer not to say</label>
     </div>
   </fieldset>
   <fieldset>
@@ -72,16 +78,19 @@
   <div class="control">
     <label for="idol">Idol</label><select id="idol" size="2">
       <option>
+        Frida Kahlo
+      </option>
+      <option>
+        Mahatma Gandhi
+      </option>
+      <option>
         Michael Jackson
       </option>
       <option>
         Jesus
       </option>
       <option>
-        Mahatma Gandhi
-      </option>
-      <option>
-        John Doe
+        Jane Doe
       </option>
     </select>
   </div>
@@ -105,24 +114,44 @@
     </select>
   </div>
   <div class="control">
-    <label for="favourite_car">Favourite Car</label><select id="favourite_car"><optgroup label="Swedish Cars">
+    <label for="favourite_vehicle">Favourite Vehicle</label>
+    <select id="favourite_vehicle">
+      <optgroup label="Bicycles">
+        <option>
+          Road bike
+        </option>
+        <option>
+          Mountain bike
+        </option>
+        <option>
+          Folding bike
+        </option>
+        <option>
+          Electric cargo bike
+        </option>
+      </optgroup>
+      <optgroup label="Swedish Cars">
         <option>
           Volvo
         </option>
         <option>
           Saab
         </option>
-      </optgroup><optgroup label="German Cars">
+      </optgroup>
+      <optgroup label="German Cars">
         <option>
           Mercedes
         </option>
         <option>
           Audi
         </option>
-      </optgroup></select>
+      </optgroup>
+    </select>
   </div>
   <div class="control">
-    <label for="my_bike">Favourite Dish</label><select id="my_bike" size="2"><optgroup label="Vegetarian">
+    <label for="favourite_dish">Favourite Dish</label>
+    <select id="favourite_dish" size="2">
+      <optgroup label="Vegetarian">
         <option>
           Green Salad
         </option>
