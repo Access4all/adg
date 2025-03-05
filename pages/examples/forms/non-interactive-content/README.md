@@ -86,7 +86,7 @@ On the other hand (which is more interesting to us), it is also possible to put 
 <label>
   Name
   <input type="text" />
-  Please enter your full real name.
+  Please enter your full name.
 </label>
 ```
 
@@ -97,9 +97,9 @@ This solution looks very easy and as such is tempting: it does not only solve ou
 Sadly, browser support is buggy:
 
 - In Firefox this works like a charm (both JAWS and NVDA).
-    - In the example, the radio buttons for gender are correctly announced, like "Gender grouping. Male. You may be this if you like beer...".
+    - In the example, the radio buttons for region are correctly announced, like "Region of residence grouping. Africa. Saharan Africa and Sub-Saharan ...".
 - In Internet Explorer things are messed up when elements are packed into a `<fieldset>`/`<legend>` structure.
-    - In the example, the radio buttons for gender are both announced like "Gender. Name. Please enter your full real name."
+    - In the example, the radio buttons for region are both announced like "Region of residence. Name. Please enter your full name."
 
 What a bummer. This is why we recommend to separate form controls and their `<label>` elements strictly and to use the `for` attribute to connect them.
 
