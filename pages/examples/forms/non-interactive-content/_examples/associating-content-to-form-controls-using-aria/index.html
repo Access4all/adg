@@ -1,18 +1,21 @@
 <form>
   <div class="control">
-    <label for="full_name">Name</label><input aria-describedby="full_name_description" id="full_name" type="text" />
+    <label for="full_name">Name</label>
+    <input aria-describedby="full_name_description" id="full_name" type="text" />
     <p class="description" id="full_name_description">
       Please tell us your full name.
     </p>
   </div>
   <div class="control">
-    <label for="biography">Biography</label><textarea aria-describedby="biography_description" id="biography"></textarea>
+    <label for="biography">Biography</label>
+    <textarea aria-describedby="biography_description" id="biography"></textarea>
     <p class="description" id="biography_description">
       Please tell us something about yourself.
     </p>
   </div>
   <div class="control">
-    <label for="age_group">Age</label><select aria-describedby="age_group_description" id="age_group">
+    <label for="age_group">Age</label>
+    <select aria-describedby="age_group_description" id="age_group">
       <option>
         0 to 9 Years
       </option>
@@ -51,36 +54,51 @@
   <fieldset>
     <legend>Region of residence</legend>
     <div class="control">
-      <input aria-describedby="tshirtsize_s_description" id="tshirtsize_s" name="gender" type="radio" />
-      <label for="tshirtsize_s">S</label>
-      <p class="description" id="tshirtsize_s_description">
-        A body length of 70cm and a chest width of 56cm ((TBD)) XXX
+      <input aria-describedby="region_africa_description" id="region_africa" name="region" type="radio" />
+      <label for="region_africa">Africa</label>
+      <p class="description" id="region_africa_description">
+        Saharan Africa and Sub-Saharan Africa
       </p>
     </div>
     <div class="control">
-      <input aria-describedby="tshirtsize_m_description" id="tshirtsize_m" name="gender" type="radio" />
-      <label for="tshirtsize_m">M</label>
-      <p class="description" id="tshirtsize_m_description">
-        A body length of 72cm and a chest width of 58cm
+      <input aria-describedby="region_americas_description" id="region_americas" name="region" type="radio" />
+      <label for="region_americas">Americas</label>
+      <p class="description" id="region_americas_description">
+        Northern America, Middle America and South America
       </p>
     </div>
     <div class="control">
-      <input aria-describedby="tshirtsize_l_description" id="tshirtsize_l" name="gender" type="radio" />
-      <label for="tshirtsize_l">L</label>
-      <p class="description" id="tshirtsize_l_description">
-        A body length of 74cm and a chest width of 60cm
+      <input aria-describedby="region_antarctica_description" id="region_antarctica" name="region" type="radio" />
+      <label for="region_antarctica">Antarctica</label>
+      <p class="description" id="region_antarctica_description">
+        East Antarctica and West Antarctica
       </p>
     </div>
     <div class="control">
-      <input aria-describedby="tshirtsize_xl_description" id="tshirtsize_xl" name="gender" type="radio" />
-      <label for="tshirtsize_xl">XL</label>
-      <p class="description" id="tshirtsize_xl_description">
-        A body length of 77cm and a chest width of 62cm
+      <input aria-describedby="region_asia_description" id="region_asia" name="region" type="radio" />
+      <label for="region_asia">Asia</label>
+      <p class="description" id="region_asia_description">
+        East Asia (Far East), Southeast Asia (Indochina), Central Asia, North Asia (Siberia), South Asia (Indian subcontinent), West Asia (Middle East) and Himalayan Rim
+      </p>
+    </div>
+    <div class="control">
+      <input aria-describedby="region_europe_description" id="region_europe" name="region" type="radio" />
+      <label for="region_europe">Europe</label>
+      <p class="description" id="region_europe_description">
+        Eastern Europe, Northern Europe, Mediterranean Europe and Western Europe
+      </p>
+    </div>
+    <div class="control">
+      <input aria-describedby="region_oceania_description" id="region_oceania" name="region" type="radio" />
+      <label for="region_oceania">Oceania</label>
+      <p class="description" id="region_oceania_description">
+        Australasia, Melanesia, Micronesia and Polynesia
       </p>
     </div>
   </fieldset>
   <div class="control">
-    <input aria-describedby="accept_agbs_description" id="accept_agbs" type="checkbox" /><label for="accept_agbs">I accept the following terms and conditions:</label>
+    <input aria-describedby="accept_agbs_description" id="accept_agbs" type="checkbox" />
+    <label for="accept_agbs">I accept the following terms and conditions:</label>
     <ul id="accept_agbs_description">
       <li>
         I entered all data truthfully

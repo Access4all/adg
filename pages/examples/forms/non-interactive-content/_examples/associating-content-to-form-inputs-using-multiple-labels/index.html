@@ -1,12 +1,17 @@
 <form>
   <div class="control">
-    <label for="full_name">Name</label><input id="full_name" type="text" /><label class="description" for="full_name">Please tell us your full name.</label>
+    <label for="full_name">Name</label>
+    <input id="full_name" type="text" />
+    <label class="description" for="full_name">Please tell us your full name.</label>
   </div>
   <div class="control">
-    <label for="biography">Biography</label><textarea id="biography"></textarea><label class="description" for="biography">Please tell us something about yourself.</label>
+    <label for="biography">Biography</label>
+    <textarea id="biography"></textarea>
+    <label class="description" for="biography">Please tell us something about yourself.</label>
   </div>
   <div class="control">
-    <label for="age_group">Age</label><select id="age_group">
+    <label for="age_group">Age</label>
+    <select id="age_group">
       <option>
         0 to 9 Years
       </option>
@@ -37,21 +42,48 @@
       <option>
         90 to 99 Years
       </option>
-    </select><label class="description" for="age_group">
+    </select>
+    <label class="description" for="age_group">
       Please tell us how old you are.
     </label>
   </div>
   <fieldset>
     <legend>Region of residence</legend>
     <div class="control">
-      <input id="gender_male" name="gender" type="radio" /><label for="gender_male">Male</label><label class="description" for="gender_male">((TBD)) XXX</label>
+      <input id="region_africa" name="region" type="radio" />
+      <label for="region_africa">Africa</label>
+      <label class="description" for="region_africa">Saharan Africa and Sub-Saharan Africa</label>
     </div>
     <div class="control">
-      <input id="gender_female" name="gender" type="radio" /><label for="gender_female">Female</label><label class="description" for="gender_female">((TBD))</label>
+      <input id="region_americas" name="region" type="radio" />
+      <label for="region_americas">Americas</label>
+      <label class="description" for="region_americas">Northern America, Middle America and South America</label>
+    </div>
+    <div class="control">
+      <input id="region_antarctica" name="region" type="radio" />
+      <label for="region_antarctica">Antarctica</label>
+      <label class="description" for="region_antarctica">East Antarctica and West Antarctica</label>
+    </div>
+    <div class="control">
+      <input id="region_asia" name="region" type="radio" />
+      <label for="region_asia">Asia</label>
+      <label class="description" for="region_asia">East Asia (Far East), Southeast Asia (Indochina), Central Asia, North Asia (Siberia), South Asia (Indian subcontinent), West Asia (Middle East) and Himalayan Rim</label>
+    </div>
+    <div class="control">
+      <input id="region_europe" name="region" type="radio" />
+      <label for="region_europe">Europe</label>
+      <label class="description" for="region_europe">Eastern Europe, Northern Europe, Mediterranean Europe and Western Europe</label>
+    </div>
+    <div class="control">
+      <input id="region_oceania" name="region" type="radio" />
+      <label for="region_oceania">Oceania</label>
+      <label class="description" for="region_oceania">Australasia, Melanesia, Micronesia and Polynesia</label>
     </div>
   </fieldset>
   <div class="control">
-    <input id="accept_agbs" type="checkbox" /><label for="accept_agbs">I accept the following terms and conditions:</label><label class="description" for="accept_agbs">
+    <input id="accept_agbs" type="checkbox" />
+    <label for="accept_agbs">I accept the following terms and conditions:</label>
+    <label class="description" for="accept_agbs">
       <ul>
         <li>
           I entered all data truthfully
