@@ -1,16 +1,18 @@
+@use 'sass:math';
+
 html {
   width: 100%;
   overflow-x: hidden;
   font-size: $base-font-size;
-  font-size: $base-font-size / 16px * 100%;
+  font-size: math.div($base-font-size, 16px) * 100%;
   @include tablet {
-    font-size: $base-font-size / 16px * 95%;
+    font-size: math.div($base-font-size, 16px) * 95%;
   }
   @include mobile {
-    font-size: $base-font-size / 16px * 90%;
+    font-size: math.div($base-font-size, 16px) * 90%;
   }
   @include mobile-portrait {
-    font-size: $base-font-size / 16px * 85%;
+    font-size: math.div($base-font-size, 16px) * 85%;
   }
   text-size-adjust: 100%;
   background-color: var(--theme-main-color-inverse, $c-white);

@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .l-clearfix {
   @extend %clearfix;
 }
@@ -22,7 +24,7 @@
   position: relative;
   width: 100%;
   max-width: $site-width-wide;
-  max-width: ($site-width-wide / $base-font-size) * 1rem;
+  max-width: math.div($site-width-wide, $base-font-size) * 1rem;
   margin: 0 auto;
   @include max-width($site-width-wide + $navWidthMax + 2 * $gutter) {
     box-sizing: border-box;
@@ -31,7 +33,7 @@
   }
   @include max-width($site-width + $navWidthMax + 2 * $gutter) {
     max-width: $site-width;
-    max-width: ($site-width / $base-font-size) * 1rem;
+    max-width: math.div($site-width, $base-font-size) * 1rem;
     box-sizing: border-box;
     width: auto;
     padding: 0 1 * $gutter;

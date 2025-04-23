@@ -13,7 +13,9 @@ module.exports = config => {
     .pipe(
       sass({
         importer: globImporter(),
-        includePaths: config.includePaths
+        includePaths: config.includePaths,
+        silenceDeprecations: ['mixed-decls', 'import', 'legacy-js-api'],
+        quietDeps: true
       }).on('error', config.errorHandler)
     )
     .pipe(
