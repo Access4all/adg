@@ -1,5 +1,5 @@
 const gulp = require('gulp')
-const sass = require('gulp-sass')(require('node-sass'))
+const sass = require('gulp-sass')(require('sass'))
 const globImporter = require('node-sass-glob-importer')
 
 const autoprefixer = require('autoprefixer')
