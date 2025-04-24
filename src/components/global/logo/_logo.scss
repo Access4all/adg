@@ -1,7 +1,9 @@
+@use 'sass:math';
+
 .logo {
   margin-left: $gutter;
   @media (max-width: $navWidthMax + $site-maxWidth) {
-    margin-left: ($navWidthMin - $logo_width) / 2;
+    margin-left: math.div($navWidthMin - $logo_width, 2);
   }
   text-decoration: none;
   overflow: hidden;

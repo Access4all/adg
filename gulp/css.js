@@ -1,5 +1,5 @@
 const gulp = require('gulp')
-const sass = require('gulp-sass')(require('node-sass'))
+const sass = require('gulp-sass')(require('sass'))
 const globImporter = require('node-sass-glob-importer')
 
 const autoprefixer = require('autoprefixer')
@@ -13,7 +13,9 @@ module.exports = config => {
     .pipe(
       sass({
         importer: globImporter(),
-        includePaths: config.includePaths
+        includePaths: config.includePaths,
+        silenceDeprecations: ['mixed-decls', 'import', 'legacy-js-api'],
+        quietDeps: true
       }).on('error', config.errorHandler)
     )
     .pipe(

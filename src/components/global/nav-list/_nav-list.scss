@@ -1,11 +1,13 @@
+@use 'sass:math';
+
 .nav-list {
   &-main {
-    margin-top: -$gutter / 2;
+    margin-top: math.div(-$gutter, 2);
     & > .nav-list--item {
       padding-left: $gutter;
       & > .nav-list--link {
         display: block;
-        padding: $gutter / 3 0;
+        padding: math.div($gutter, 3) 0;
       }
     }
   }
@@ -24,7 +26,7 @@
 }
 .nav-list--link {
   display: block;
-  padding: $gutter / 4 0;
+  padding: math.div($gutter, 4) 0;
   position: relative;
   font-weight: 300;
   line-height: 1.25;

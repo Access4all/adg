@@ -21,7 +21,7 @@ We use a bunch of nice Open Source tools to make collaboration of both developer
 
 ## Local setup
 
-Prerequisites: Node >=18 (you may want to use [nvm](https://github.com/nvm-sh/nvm) or [nvm-windows](https://github.com/coreybutler/nvm-windows)).
+Prerequisites: Node >=16 (you may want to use [nvm](https://github.com/nvm-sh/nvm) or [nvm-windows](https://github.com/coreybutler/nvm-windows)).
 
 - Setup: `npm ci`
 - Develop: `npm start`
