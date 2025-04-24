@@ -75,7 +75,7 @@ On the other side, NVDA only announces the `<legend>`'s text when entering the `
 > Last Name.
 
 
-Update 2023: JAWS and NVADA attaches the `<legend>` only once by focusing the first element 'First Name" or entering the `<fieldset>`. 
+Update 2023: JAWS and NVDA attaches the `<legend>` only once by focusing the first element 'First Name" or entering the `<fieldset>`.
 
 [Example](_examples/grouped-form-controls-with-too-long-legend)
 

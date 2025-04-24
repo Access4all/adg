@@ -24,6 +24,6 @@ compatibility:
     2023.23 + Edge:
       status: pass
       date: 2023-07-13
-      comments: 
-      - JAWS only says Male but not the fieldset-name -gendre-
+      comments:
+      - JAWS only says Female but not the fieldset-name -gender-
 ---

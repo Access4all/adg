@@ -5,7 +5,7 @@
     </div>
     <input type="text" />
     <div class="description">
-      Please enter your full real name.
+      Please tell us your full name.
     </div>
   </label><label class="control">
     <div class="label">
@@ -13,29 +13,12 @@
     </div>
     <textarea></textarea>
     <div class="description">
-      Please tell us something about your history.
+      Please tell us something about yourself.
     </div>
   </label>
-  <fieldset>
-    <legend>Gender</legend><label class="control"><input name="gender" type="radio" />
-      <div class="label">
-        Male
-      </div>
-      <div class="description">
-        You may be this if you like beer, gadgets, and Playboy Magazine.
-      </div>
-    </label><label class="control"><input name="gender" type="radio" />
-      <div class="label">
-        Female
-      </div>
-      <div class="description">
-        You may be this if you like prosecco, make up, and Playgirl Magazine.
-      </div>
-    </label>
-  </fieldset>
   <label class="control">
     <div class="label">
-      Age Group
+      Age
     </div>
     <select>
       <option>
@@ -70,9 +53,41 @@
       </option>
     </select>
     <div class="description">
-      Tell us how old you are.
+      Please tell us how old you are.
     </div>
-  </label><label class="control"><input type="checkbox" />
+  </label>
+  <fieldset>
+    <legend>Place of Residence</legend>
+    <label class="control">
+      <input name="place" type="radio" />
+      <div class="label">
+        Urban Area
+      </div>
+      <div class="description">
+        An area with a dense concentration of buildings, people, infrastructure and commercial activity
+      </div>
+    </label>
+    <label class="control">
+      <input name="place" type="radio" />
+      <div class="label">
+        Suburban Area
+      </div>
+      <div class="description">
+        An area with moderate population density, car-centric infrastructure and some commercial spaces
+      </div>
+    </label>
+    <label class="control">
+      <input name="place" type="radio" />
+      <div class="label">
+        Rural Area
+      </div>
+      <div class="description">
+        An area with low population density, extensive open spaces, and a prevalence of agricultural or natural landscapes
+      </div>
+    </label>
+  </fieldset>
+  <label class="control">
+    <input type="checkbox" />
     <div class="label">
       I accept the following terms and conditions:
     </div>
@@ -81,10 +96,10 @@
         I entered all data truthfully
       </li>
       <li>
-        I'm a good person
+        I am a good person
       </li>
       <li>
-        I won't vote for Donald Trump next time
+        I only make informed decisions
       </li>
     </ul>
   </label>

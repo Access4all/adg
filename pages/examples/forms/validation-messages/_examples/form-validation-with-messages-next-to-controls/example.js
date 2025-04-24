@@ -55,8 +55,8 @@
 
   $(document).ready(function () {
     if ($.urlParam('validate')) {
-      validateInput('name', 'Please enter your name!')
-      validateInput('biography', 'Please tell us something about your history!')
+      validateInput('name', 'Please tell us your full name!')
+      validateInput('biography', 'Please tell us something about yourself!')
       validateInput('gender', 'Please tell us your gender!')
       validateInput('accept_agbs', 'You must accept our terms and conditions!')
       if ($('.error').length === 0) {
