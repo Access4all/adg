@@ -1,7 +1,9 @@
+@use 'sass:math';
+
 @function px2percent($px, $contextSize) {
   @return ($px / $contextSize) * 100%;
 }
 
 @function px2rem($px) {
-  @return ($px / $base-font-size) * 1rem;
+  @return math.div($px, $base-font-size) * 1rem;
 }

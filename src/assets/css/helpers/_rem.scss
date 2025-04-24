@@ -1,3 +1,7 @@
+@use 'sass:math';
+@use 'sass:map';
+@use 'sass:meta';
+
 // from compass
 // https://github.com/Compass/compass/blob/d5df161d0df7edc686e576b22412f437dd0590cc/core/stylesheets/compass/typography/_units.scss
 
@@ -34,7 +38,7 @@ $rem-with-px-fallback: true !default;
   $from-context: $base-font-size,
   $to-context: $from-context
 ) {
-  $from-unit: unit($length);
+  $from-unit: math.unit($length);
 
   // Optimize for cases where `from` and `to` units are accidentally the same.
   @if $from-unit == $to-unit {
@@ -43,10 +47,10 @@ $rem-with-px-fallback: true !default;
 
   // Context values must be in px so we can determine a conversion ratio for
   // relative units.
-  @if unit($from-context) != 'px' {
+  @if math.unit($from-context) != 'px' {
     @warn "Paremeter $from-context must resolve to a value in pixel units.";
   }
-  @if unit($to-context) != 'px' {
+  @if math.unit($to-context) != 'px' {
     @warn "Parameter $to-context must resolve to a value in pixel units.";
   }
 
@@ -105,7 +109,7 @@ $rem-with-px-fallback: true !default;
     @if $to-unit == 'em' {
       $output-length: $px-length * 1em / $to-context;
     } @else if $to-unit == 'rem' {
-      $output-length: $px-length * 1rem / $base-font-size;
+      $output-length: math.div($px-length * 1rem, $base-font-size);
     } @else if $to-unit == '%' {
       $output-length: $px-length * 100% / $to-context;
     } @else if $to-unit == 'ex' {
@@ -152,19 +156,19 @@ $rem-with-px-fallback: true !default;
     rem: $value
   );
 
-  @if type-of($value) == number and not unitless($value) {
-    @if unit($value) == rem {
-      $_return: map-merge(
+  @if meta.type-of($value) == number and not math.is-unitless($value) {
+    @if math.unit($value) == rem {
+      $_return: map.merge(
         $_return,
         (
-          px: round(convert-length($value, px))
+          px: math.round(convert-length($value, px))
         )
       );
-    } @else if unit($value) == px {
-      $_return: map-merge(
+    } @else if math.unit($value) == px {
+      $_return: map.merge(
         $_return,
         (
-          px: round($value),
+          px: math.round($value),
           rem: convert-length($value, rem)
         )
       );
@@ -183,18 +187,18 @@ $rem-with-px-fallback: true !default;
   $_return: $_empty;
   $_sep: null;
 
-  @if type-of($value) == list {
+  @if meta.type-of($value) == list {
     $_sep: list-separator($value);
     @each $sub in $value {
       $_this: list-convert-rems($sub);
       $_return: (
-        px: append(map-get($_return, px), map-get($_this, px), $_sep),
-        rem: append(map-get($_return, rem), map-get($_this, rem), $_sep)
+        px: append(map.get($_return, px), map.get($_this, px), $_sep),
+        rem: append(map.get($_return, rem), map.get($_this, rem), $_sep)
       );
     }
   } @else {
     $_this: rem-fallback-values($value);
-    $_return: map-merge($_return, $_this);
+    $_return: map.merge($_return, $_this);
   }
 
   @return $_return;
@@ -215,8 +219,8 @@ $rem-with-px-fallback: true !default;
 @mixin rem($property, $values, $use-px-fallback: $rem-with-px-fallback) {
   // get converted values.
   $values: list-convert-rems($values);
-  $px-values: map-get($values, px);
-  $values: map-get($values, rem);
+  $px-values: map.get($values, px);
+  $values: map.get($values, rem);
 
   // Use pixel fallback for browsers that don't understand rem units.
   @if $use-px-fallback and $px-values != $values {
