@@ -1,67 +1,57 @@
 ;(function () {
-  var validateInput
+  function getUrlParam(name) {
+    return new URLSearchParams(window.location.search).get(name)
+  }
 
-  $.urlParam = function (name) {
-    var results
-    results = new RegExp('[?&]' + name + '=([^&#]*)').exec(window.location.href)
-    if (results === null) {
-      return null
-    } else {
-      return decodeURI(results[1]) || null
+  function showError(input, message) {
+    let errorContainer = input.closest('fieldset') || input.parentElement
+    if (!errorContainer) return
+
+    const errorId = `${input.name}-error`
+    input.setAttribute('aria-describedby', errorId)
+    input.setAttribute('aria-invalid', 'true')
+
+    if (!document.getElementById(errorId)) {
+      const errorMessage = document.createElement('p')
+      errorMessage.id = errorId
+      errorMessage.className = 'error'
+      errorMessage.textContent = message
+      errorContainer.appendChild(errorMessage)
+    }
+
+    if (!document.querySelector(':focus')) {
+      input.focus()
     }
   }
 
-  validateInput = function (input, message) {
-    var $elementToDescribe,
-      $errorContainer,
-      $fieldset,
-      $input,
-      $referencedElement,
-      value
-    $input = $('[name="' + input + '"]')
-    if ((value = $.urlParam(input)) === null) {
-      $referencedElement = null
-      $elementToDescribe = null
-      $errorContainer = null
-      if ($input.is(':radio')) {
-        $fieldset = $input.closest('fieldset')
-        $elementToDescribe = $fieldset
-        $errorContainer = $fieldset
-        $referencedElement = $input.filter(':first')
-      } else {
-        $elementToDescribe = $input
-        $errorContainer = $input.parent()
-        $referencedElement = $input
-      }
-      $elementToDescribe.attr('aria-describedby', input + '_description')
-      $errorContainer.append(
-        '<p id="' + input + '_description" class="error">' + message + '</p>'
-      )
-      if ($(':not(body):focus').length === 0) {
-        // See https://stackoverflow.com/questions/46134247/jquery-setting-focus-doesnt-work-in-ie11/
-        return $referencedElement.focus()
-      }
+  function validateInput(name, message) {
+    const input = document.querySelector(`[name="${name}"]`)
+    if (!input) return
+
+    const value = getUrlParam(name)
+    if (!value) {
+      showError(input, message)
     } else {
-      if ($input.is(':checkbox')) {
-        $input.attr('checked', true)
-      }
-      if ($input.is(':radio')) {
-        return $input.filter('[value="' + value + '"]').attr('checked', true)
+      if (input.type === 'checkbox' || input.type === 'radio') {
+        document
+          .querySelector(`[name="${name}"][value="${value}"]`)
+          .setAttribute('checked', 'true')
       } else {
-        return $input.val(value)
+        input.value = value
       }
     }
   }
 
-  $(document).ready(function () {
-    if ($.urlParam('validate')) {
+  document.addEventListener('DOMContentLoaded', () => {
+    if (getUrlParam('validate')) {
       validateInput('name', 'Please enter your name!')
       validateInput('biography', 'Please tell us something about your history!')
       validateInput('gender', 'Please tell us your gender!')
       validateInput('accept_agbs', 'You must accept our terms and conditions!')
-      if ($('.error').length === 0) {
-        return alert('All inputs are valid.')
+
+      if (!document.querySelector('.error')) {
+        alert('All inputs are valid.')
       }
     }
   })
-}).call(this)
+})()
