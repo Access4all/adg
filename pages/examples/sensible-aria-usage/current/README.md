@@ -1,11 +1,11 @@
 ---
-navigation_title: "Current"
+navigation_title: 'Current'
 position: 5
 ---
 
 # Marking elements as the current one using aria-current
 
-**ARIA provides an attribute which allows to mark an element in a set of elements as the current one. It works pretty uniformly in modern browsers and screen readers. Still, for most situations there exist alternative techniques that are more robust.**
+**ARIA provides an attribute which allows to mark an element in a set of elements as the current one.**
 
 [[_TOC_]]
 
@@ -17,7 +17,7 @@ On a visual level, this status typically is indicated using icons, for example a
 
 ## Intended use
 
-On a semantical level, the `aria-current` attribute is a good choice to convey that an element is the current one:
+The `aria-current` attribute is a good choice to convey that an element is the current one:
 
 ```html
 <ul>
@@ -49,30 +49,14 @@ There are various possible values for `aria-current`:
 
 [Example](_examples/marking-elements-using-different-aria-current-values)
 
-## Peculiarities and side effects
-
-While NVDA announces most of the possible values accurately, it does not make a difference between `aria-current="true"` and `aria-current="false"`. So instead of using the latter, you should simply remove the whole attribute.
-
-## Real world use
-
-Although `aria-current` looks very promising, it was awaited for a long time, and as such is a rather new player in the field of accessibility. While many modern browsers and screen readers seem to have picked it up quite well, there may be a lot of older software that does not yet know about it though.
-
-So instead of using it, for the time being, we recommend using a more traditional technique using visually hidden text.
-
 ### Alternative technique using visually hidden text
 
-Instead of fiddling around with ARIA, you can achieve the same result using visually hidden text, see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually).
+Instead of using ARIA, you can achieve the same result using visually hidden text, see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually).
 
 [Example](_examples/marking-elements-using-visually-hidden-text)
 
-While this may seem like a little more work, it is very robust and leaves you much more freedom in choosing adequate labels for describing your current elements.
+This is a useful alternative when attempting to support old browsers which mighht be lacking support for `aria-current`.
 
 ### Do not confuse with aria-selected
 
 There is another, similarly appealing ARIA attribute called `aria-selected`: it can only be used together with certain roles (for example `role="tablist"`) and as such should not be confused with `aria-current`.
-
-## Conclusion
-
-Due to the described peculiarities, we do not recommend to use `aria-current`.
-
-Instead, stick to the alternative technique using visually hidden text.
