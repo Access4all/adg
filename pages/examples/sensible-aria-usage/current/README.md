@@ -55,7 +55,7 @@ Instead of using ARIA, you can achieve the same result using visually hidden tex
 
 [Example](_examples/marking-elements-using-visually-hidden-text)
 
-This is a useful alternative when attempting to support old browsers which mighht be lacking support for `aria-current`.
+This is a useful alternative when attempting to support old browsers which might be lacking support for `aria-current`.
 
 ### Do not confuse with aria-selected
 
