@@ -13,7 +13,7 @@ position: 1
 
 We advise you to activate your mobile screen reader only when reading and interacting with a web page. For anything else like entering an URL into the browser’s address bar we advise you to deactivate it temporarily; as soon as the web page has loaded, start it again.
 
-- For VoiceOver/iOS, use the Accessibility shortcut by triple-clicking the Home button (or the Side button if you’re using an iOS device without a Home button).<br>
+- For VoiceOver/iOS, use the accessibility shortcut by triple-clicking the Home button (or the Side button if you’re using an iOS device without a Home button).<br>
   - To set up the shortcut, go to [VoiceOver/iOS configuration](/setup/screen-readers/voiceover-ios/) and follow the instructions.
 - For TalkBack, on recent Android versions, the shortcut is operated by pressing both volume keys for 3 seconds.<br>
   - To set up the shortcut, go to [TalkBack configuration](/setup/screen-readers/talkback/) and follow the instructions.
