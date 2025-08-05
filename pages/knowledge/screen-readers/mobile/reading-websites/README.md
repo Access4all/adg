@@ -5,16 +5,18 @@ position: 1
 
 # How to read websites using a mobile screen reader
 
-**For a sighted person, it's hard to imagine how a screen reader user surfs the internet. For a web developer with accessibility in mind, it's crucial to have a basic knowledge about this topic. So be ready to get a concrete idea of the main strategies available to read a website using a mobile screen reader!**
+**For a sighted person, it’s hard to imagine how a screen reader user surfs the internet. For a web developer with accessibility in mind, it’s crucial to have a basic knowledge about this topic. So be ready to get a concrete idea of the main strategies available to read a website using a mobile screen reader!**
 
 [[_TOC_]]
 
 ## Opening a website
 
-We advise you to activate your mobile screen reader only when reading and interacting with a web page. For anything else like entering an URL into the browser's address bar we advise you to deactivate it temporarily; as soon as the web page has loaded, start it again.
+We advise you to activate your mobile screen reader only when reading and interacting with a web page. For anything else like entering an URL into the browser’s address bar we advise you to deactivate it temporarily; as soon as the web page has loaded, start it again.
 
-- For VoiceOver/iOS, use the accessibility shortcut by tripple clicking the Home button (if you haven't done this yet, go back and read [VoiceOver/iOS configuration](/setup/screen-readers/voiceover-ios/)).
-- For TalkBack, on recent Android versions, the shortcut is operated by pressing both volume keys for 3 seconds (if you haven't done this yet, go back and read [TalkBack configuration](/setup/screen-readers/talkback/)).
+- For VoiceOver/iOS, use the Accessibility shortcut by triple-clicking the Home button (or the Side button if you’re using an iOS device without a Home button).<br>
+  - To set up the shortcut, go to [VoiceOver/iOS configuration](/setup/screen-readers/voiceover-ios/) and follow the instructions.
+- For TalkBack, on recent Android versions, the shortcut is operated by pressing both volume keys for 3 seconds.<br>
+  - To set up the shortcut, go to [TalkBack configuration](/setup/screen-readers/talkback/) and follow the instructions.
 
 ## Reading through a document
 
@@ -37,7 +39,7 @@ If you move your finger over the touch screen, any element below your finger wil
 
 ## Change settings in VoiceOver/iOS (using Rotor)
 
-The rotor is a quickly accessible menu which offers more ways to interact with VoiceOver/iOS. To use it, rotate two fingers on your screen as if you're turning a dial. VoiceOver/iOS will announce the current setting; if you want to hear more settings, keep rotating your fingers until you found the one you need. To interact with the current setting, swipe up or down with one finger.
+The rotor is a quickly accessible menu which offers more ways to interact with VoiceOver/iOS. To use it, rotate two fingers on your screen as if you’re turning a dial. VoiceOver/iOS will announce the current setting; if you want to hear more settings, keep rotating your fingers until you found the one you need. To interact with the current setting, swipe up or down with one finger.
 
 Some of the settings that prove to be useful in daily accessibility testing are:
 
@@ -53,7 +55,7 @@ The activation gestures can be changed in the Settings.
 
 ### The global context menu
 
-This is activated by smoothly swiping down then right, like drawing an "L" sign. It presents the user with a number of options, including "TalkBack Settings" and "Text to speech settings". 
+This is activated by smoothly swiping down then right, like drawing an "L" sign. It presents the user with a number of options, including "TalkBack Settings" and "Text to speech settings".
 
 ### The local context menu
 
@@ -61,4 +63,4 @@ This is activated by smoothly swiping up, then right. It contains controls that 
 
 ## Screen dim (VoiceOver/iOS)
 
-If you want to have the "real deal" (i.e. have truly the same experience like a blind person), you can dim your iPhone's screen by triple clicking on it using three fingers. Do the same again to un-dim.
+If you want to experience what using a phone as a blind person might feel like, you can dim your iPhone’s screen by triple-tapping it with three fingers. Repeat the gesture to restore the brightness.
