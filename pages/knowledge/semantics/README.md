@@ -1,6 +1,6 @@
 ---
 navigation_title: "Semantics"
-position: 1
+position: 2
 ---
 
 # Semantics and their importance for accessibility

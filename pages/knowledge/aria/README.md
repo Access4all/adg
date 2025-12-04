@@ -1,6 +1,6 @@
 ---
 navigation_title: "ARIA"
-position: 2
+position: 3
 ---
 
 # ARIA - when HTML simply is not enough

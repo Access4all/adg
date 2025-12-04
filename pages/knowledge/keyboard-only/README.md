@@ -1,6 +1,6 @@
 ---
 navigation_title: "Keyboard only"
-position: 3
+position: 4
 ---
 
 # Introduction to keyboard only usage
