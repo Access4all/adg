@@ -124,6 +124,7 @@ module.exports = rootDir => filePath => {
             if (['heading_open'].includes(token.type)) {
               if (token.tag === 'h1' && isMainHeading) {
                 token.attrSet('id', 'main-h1')
+                token.attrSet('tabindex', '-1')
                 isMainHeading = false
               }
             }
