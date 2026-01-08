@@ -116,22 +116,6 @@ module.exports = rootDir => filePath => {
         }
       )
       .use(() => {
-        // Add the #main-h1 ID to each page's main heading.
-        markdown.core.ruler.push('manipulate_main_heading', state => {
-          var isMainHeading = true
-
-          state.tokens.forEach(token => {
-            if (['heading_open'].includes(token.type)) {
-              if (token.tag === 'h1' && isMainHeading) {
-                token.attrSet('id', 'main-h1')
-                token.attrSet('tabindex', '-1')
-                isMainHeading = false
-              }
-            }
-          })
-        })
-      })
-      .use(() => {
         // Add unique IDs to each heading.
         let uniqueIds = {}
         markdown.core.ruler.push('manipulate_heading_anchor', state => {
