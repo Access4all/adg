@@ -11,7 +11,7 @@ position: 6
 
 Tablists are well known as native controls in many operating systems: a list of controls (usually on top of the element) allows to toggle the visibility of corresponding panels. Only a single control can be active at a time, so exactly one panel is visible and all others are hidden.
 
-![Tablist](_media/tablist.png)
+![Tablist](_media/screenshot-of-a-tablist.png)
 
 We use the term *tablist* instead of simply *tabs* to avoid confusion with the `Tab` key used for keyboard navigation.
 
@@ -19,7 +19,7 @@ We use the term *tablist* instead of simply *tabs* to avoid confusion with the `
 
 ## General requirements
 
-The following requirements are based on established best practices and the [WAI-ARIA Authoring Practices: Tab Panel Widget](https://www.w3.org/TR/wai-aria-practices/#tabpanel).
+The following requirements are based on established best practices and the [WAI-ARIA Authoring Practices: Tab Panel Widget](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/).
 
 In particular, a compliant tablist must fulfil the following criteria:
 
@@ -29,7 +29,7 @@ In particular, a compliant tablist must fulfil the following criteria:
 - The tablist must be fully operable using:
   - keyboard only,
   - screen readers (desktop and mobile),
-  - standard interaction keys (`Tab`, `Enter`/`Space`, `Esc`, arrow keys).
+  - standard interaction keys (`Tab`, `Enter`/`Space`, `Home`/`End`, arrow keys).
 - Panel content must be easily accessible via keyboard and assistive technologies.
 
 ---
@@ -53,7 +53,7 @@ Because of these similarities, many of the following principles also apply to:
 
 Before continuing, please read [What is a "Proof of Concept"?](/examples/widgets/proof-of-concept) (POC).
 
-ARIA is well supported for tablists across modern browsers and assistive technologies. For new projects, an ARIA-based implementation is recommended, as it provides correct semantics and consistent behaviour.
+ARIA-based tablists are well supported across modern browsers and assistive technologies. When native HTML elements cannot express the required behaviour, an ARIA-based implementation is recommended.
 
 ---
 
@@ -63,7 +63,7 @@ This implementation follows the
 [WAI-ARIA Authoring Practices Guide for Tabs](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/)  
 and uses **manual activation**. Users activate a focused tab using `Enter`, `Space`, or a mouse click.
 
-Manual activation is recommended when panel content cannot be displayed instantly.
+Manual activation is recommended when panel content cannot be displayed instantly or when activating a tab triggers expensive operations.
 
 The implementation uses appropriate:
 
@@ -85,9 +85,10 @@ This ensures reliable screen reader support across browsers and platforms.
   - `Home/End`: Move focus to first/last tab
   - `Enter/Space`: Activate focused tab
   - `Tab`: Move focus out of the tablist
-- Tab elements use `display: block` (instead of `inline-block`) to improve navigation in NVDA browse mode.
 - Tabs are laid out horizontally using flexbox.
-- Focus management ensures that only one panel is visible at a time.
+- Activation logic ensures that only the selected panel is visible at a time.
+- Inactive panels are hidden using the `hidden` attribute to ensure proper support in assistive technologies.
+- In some implementations, tab elements use `display: block` (instead of `inline-block`) to improve navigation in NVDA browse mode.
 - ARIA attributes establish clear relationships between tabs and panels.
 
 ---
@@ -98,7 +99,7 @@ This ensures reliable screen reader support across browsers and platforms.
 
 The ARIA-based implementation (POC #1) should be used for all new projects, as it offers correct semantics and more reliable support for modern assistive technologies.
 
-The radio button approach was previously used as a simpler alternative based on native form controls. However, it does not provide proper tab semantics and requires significant workarounds to achieve comparable accessibility.
+The radio button approach was previously used as a simpler alternative based on native form controls. However, radio buttons represent form input choices rather than navigational relationships between tabs and panels. This semantic mismatch leads to poorer screen reader support and inconsistent interaction patterns, requiring significant workarounds to achieve comparable accessibility.
 
 [Example](_examples/tablist-with-radio-buttons)  
 *(Legacy — for reference only)*
