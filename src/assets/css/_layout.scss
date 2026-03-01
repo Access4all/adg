@@ -91,3 +91,7 @@ html {
     outline: none;
   }
 }
+
+#jump-target[tabindex='-1']:focus {
+  outline: none;
+}
