@@ -56,3 +56,9 @@ While the EAA defines the legal and technical framework, accessibility cannot be
 Developers can ensure semantic markup, ARIA correctness and keyboard operability. However, content quality plays an equally important role. For example, an image with a technically valid alt attribute is still inaccessible if the provided text is incomplete or unclear. True compliance requires accessibility to be **embedded throughout the entire content lifecycle.**
 
 Accessibility is therefore not a one‑off task but an **ongoing responsibility** involving design, development and editorial teams. An accessible website is a living product that succeeds only when everyone maintains a consistent commitment to inclusion.
+
+## Further reading
+
+For a more detailed discussion of the European Accessibility Act and its national implementation in Germany (BFSG), we recommend the following in‑depth overview by tollwerk (in German):
+
+https://tollwerk.de/blog/european-accessibility-act-eaa-barrierefreiheitsstaerkungsgesetz-bfsg{ target=_blank hreflang=de }
