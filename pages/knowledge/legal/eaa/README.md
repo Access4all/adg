@@ -1,7 +1,7 @@
 ---
 navigation_title: 'European Accessibility Act'
 position: 1
-card_text: "The European Accessibility Act (EAA) defines accessibility requirements for a wide range of products and services sold or provided in the European Union"
+card_text: "The European Accessibility Act (EAA) defines accessibility requirements for a wide range of products and services sold or provided in the European Union."
 ---
 
 # European Accessibility Act
@@ -59,6 +59,6 @@ Accessibility is therefore not a one‑off task but an **ongoing responsibility*
 
 ## Further reading
 
-For a more detailed discussion of the European Accessibility Act and its national implementation in Germany (BFSG), we recommend the following in‑depth overview by tollwerk (in German):
+For a more detailed discussion of the European Accessibility Act and its national implementation in Germany (BFSG), we recommend the following in‑depth overview by tollwerk:
 
-https://tollwerk.de/blog/european-accessibility-act-eaa-barrierefreiheitsstaerkungsgesetz-bfsg{ target=_blank hreflang=de }
+[European Accessibility Act – Barrierefreiheit für die Privatwirtschaft (in German)](https://tollwerk.de/blog/european-accessibility-act-eaa-barrierefreiheitsstaerkungsgesetz-bfsg){ target=_blank hreflang=de }
