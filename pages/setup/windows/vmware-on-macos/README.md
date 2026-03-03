@@ -11,50 +11,67 @@ position: 3
 
 ![VMware Fusion logo](_media/vmware-fusion-logo.png)
 
-## IMPORTANT NOTE regarding M1/M2 ARM processors
-
-The options for Windows VMs on Apple M1 and M2 chips seem to be [very limited at the time of writing](https://support.microsoft.com/en-us/windows/options-for-using-windows-11-with-mac-computers-with-apple-m1-and-m2-chips-cd15fd62-9b34-4b78-b0bc-121baa3c568c). We have been successful with Parallels Desktop only.
-
-## Preparing the virtual machine
-
-Before you proceed, be sure you have downloaded a pre-configured virtual machine (VM) as described here: [Getting a free Windows virtual machine from Microsoft](/setup/windows/virtual-machines).
-
-Then extract the VM (using [The Unarchiver](https://wakaba.c3.cx/s/apps/unarchiver.html), as the built-in unzip version is not capable of zip64 files) to a proper location, for example `~/Virtual Machines`.
-
 ## Installing VMware Fusion
 
-After downloading [VMware Fusion](https://www.vmware.com/ch/products/fusion), installing and launching it:
+You need to create a free account on [Broadcom](https://www.broadcom.com/) to download VMware Fusion. 
+After logging in, go to the `Sidebar` -> `Click "Free Software Downloads available HERE"` -> `Search for VMware Fusion` -> `Choose version` -> `Accept license agreement` -> `Download`
 
-- Choose `File` -> `Import`, select the `*.ovf` file in the extracted folder and confirm.
-- Take a snapshot (`Command + Shift + S`).
-    - This allows to easily go back to that state later, meaning you can re-activate the VM's Windows 90-day license again and again.
-    - For more info, see [Understanding snapshots (VMware)](https://kb.vmware.com/s/article/1014509).
-- Under `Virtual Machine` -> `Settings`:
-    - If you have a retina display, go to `Display` and deselect `Use full resolution for Retina display` (otherwise your eyes will begin to hurt).
-    - Go to `Processors & Memory`, then select at least 2000MB of memory.
-    - To be able to connect to the internet, click `Add Device...` and choose `Network Adapter`.
-        - Use option `Share with my Mac`.
+![VMware Fusion downlaod](_media/vmware-download.png)
+
+After installing and launching you have the option to choose a previously downloaded Windows ISO image or you may also let VMware Fusion download a Windows for you. We recommend the second option because it is the most straightforward one.
+
+- Choose `Get Windows from Microsoft`. Then `Windows Home`. This will download a Windows version for you.
+- If for any reason the second option does not work for you, you can download the Windows ISO from the following URL:
+  [Windows ISO download](https://www.microsoft.com/en-us/software-download/windows11arm64).
+
+For both cases go through the default installation process. 
 
 ## Booting up the VM for the first time
 
-Start the VM. User and password can be found here: [Getting a free Windows virtual machine from Microsoft](/setup/windows/virtual-machines).
+You need to have a Microsoft account. For Windows Home, you can just create an outlook address and log into Windows with that one.
+You might be prompted to allow internet. For internet access you need to install VMware Tools. 
+- Go to `Virtual Machine` -> `Install VMware Tools` in the menu bar of VMware Fusion.
+
+<img src="_media/install-vmware-tools.png" width="200" />
+
+- Click on `Install driver` in the Windows installation process window.
+
+<img src="_media/internet-setup.png" width="600" />
+
+- Browse the newly installed VMware Tools.
+
+<img src="_media/choose-vmware-tools.png" width="600" />
 
 ## Improving seamless integration
 
-Simply having a Windows machine run on your beloved Mac may already feel creepy. To make you feel as comfortable as possible when working with it, we suggest the following additional configuration steps.
+To make you feel as comfortable as possible when working with it, we suggest the following additional configuration steps.
 
 ### Disabling left Windows key
 
 In VMware Fusion, the left `Command` key by default is assigned to the left `Windows` key. Pressing `Command + Tab` therefore often interferes with the left `Windows` key, opening and closing the "Start" menu of the VM seemingly randomly.
 
-![Opened Windows 7 start menu](_media/opened-windows-7-start-menu.png)
+![Opened Windows 7 start menu](_media/start-menu.png)
 
 If you want to prevent this:
+- `VMware Fusion` -> `Preferences` -> `Keyboard & Mouse` -> `Edit Profile`-> `Mac Host Shortcuts`.
+- There is an option called `Enable Mac OS Host Keyboard Shortcuts`
+  
+<img src="_media/edit-keyboard-profile.png" width="600" />
+<img src="_media/mac-os-host-keyboard.png" width="600" />
 
-- `VMware Fusion` -> `Preferences` -> `Keyboard & Mouse` -> `Mac Host Shortcuts`.
-- Then under `For Windows key, use` select `Right Command key`.
+This option has two consequences:
+1. `Command` + `Tab` will work to switch between Mac apps, but not to switch between Windows apps and it won't open 
+the Start menu in Windows either.
+2. Windows' Narrator app for accessibility has a default key combination 
+`Control` + `right/left arrow` which lets the user tab through each word. This will not work, since macOS will handle
+this key combination. The default mac behaviour for this key combination is switching between desktops.
 
-Remember that you can still use the right `Command` key to open and close the "Start" menu.
+You can try to deselect the `Mac Host Shortcuts` checkbox and use following setting for using `Command` + `Tab` in 
+the Macbook. However it is not working always.
+- `For Windows key, use` select `Right Command key`.
+
+If this setting is working correctly you can use the right `Command` key to open and close the "Start" menu, 
+while leaving the left `Command` key for switching between Mac apps.
 
 ### Changing behaviour of function keys
 
@@ -71,6 +88,10 @@ Keyboard shortcuts of desktop screen readers are quite tricky (if you are really
 Windows desktop screen readers rely heavily on the `Insert` key.
 
 ![Insert key on a keyboard](_media/insert-key-on-a-keyboard.png)
+
+- `VMware Fusion` -> `Preferences` -> `Keyboard & Mouse` -> `Edit Profile`-> `Key Mappings`. Here, click the plus and add your mapping.
+
+<img src="_media/set-insert.png" width="400" />
 
 This key is not available on Macs (in earlier days of macOS, it was the "Help" key), so you will have to emulate it. The most robust way to do this is using the free software Karabiner-Elements which translates any given key to any other in macOS.
 
