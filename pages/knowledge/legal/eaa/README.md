@@ -14,7 +14,7 @@ The European Accessibility Act (EAA) is a key piece of EU legislation designed t
 
 The European Accessibility Act (EAA), formally known as [Directive (EU) 2019/882](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019L0882){ target=_blank }, sets out **uniform accessibility rules** for products and services offered across the EU. The directive aims to support social inclusion and create a more consistent internal market by removing fragmentation caused by differing national regulations.
 
-As of 28 June 2025, any organisation providing covered products or services within the EU must comply with the directive. For design, development and content teams, this means ensuring that all digital touchpoints meet **all 50 WCAG 2.1 Level A and AA success criteria**.
+As of 28 June 2025, any organisation providing covered products or services within the EU must comply with the [European Standard <nobr>EN 301 549</nobr>](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf){ target=_blank }. As part of its requirements, this standard mandates that design, development and content teams ensure that **all 50 WCAG 2.1 Level A and AA success criteria** are fulfilled across all digital touchpoints.
 
 ## Who and what is affected?
 
@@ -59,6 +59,6 @@ Accessibility is therefore not a one‑off task but an **ongoing responsibility*
 
 ## Further reading
 
-For a more detailed discussion of the European Accessibility Act and its national implementation in Germany (BFSG), we recommend the following in‑depth overview by tollwerk:
+For a more detailed discussion of the European Accessibility Act and its national implementation in Germany (BFSG), we recommend the following in‑depth overview by Tollwerk:
 
 [European Accessibility Act – Barrierefreiheit für die Privatwirtschaft (in German)](https://tollwerk.de/blog/european-accessibility-act-eaa-barrierefreiheitsstaerkungsgesetz-bfsg){ target=_blank hreflang=de }
