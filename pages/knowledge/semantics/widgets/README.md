@@ -37,16 +37,6 @@ A tablist allows users to toggle the visibility of content panels. The recommend
 
 For detailed information and implementation examples, see [Tablists](/examples/widgets/tablists).
 
-## When to use standard HTML controls
-
-For many widget patterns, standard HTML form controls can be styled and enhanced to create accessible custom widgets. This approach works well when:
-
-- The widget's behavior closely matches a native form control
-- Visual customization is needed but semantic structure can remain
-- You want to leverage built-in browser accessibility features
-
-Examples include styled checkboxes for multi-select lists, radio buttons for single-select options, or native select elements enhanced with custom styling.
-
 ## Best practices
 
 Regardless of which approach you choose:
