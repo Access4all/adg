@@ -14,6 +14,7 @@ position: 3
 When creating custom widgets, start with semantic HTML and standard form controls. These provide built-in accessibility features, keyboard support, and screen reader compatibility. Then:
 
 1. **Enhance with ARIA** when semantic HTML alone isn't sufficient
+   - **Important:** Pay attention to the robustness of ARIA roles and attributes used, as browsers and screen readers still differ quite a lot in how certain ARIA roles and attributes are interpreted. Always test with multiple assistive technology combinations.
 2. **Style with CSS** to achieve the desired visual design
 3. **Add interactivity with JavaScript** to create the widget behavior
 
@@ -22,6 +23,8 @@ This approach ensures that widgets work out of the box for keyboard users and sc
 ## Using ARIA for complex widgets
 
 For widgets that don't have a direct HTML equivalent (like tablists, accordions, or carousels), ARIA provides the necessary semantic structure. ARIA roles, states, and properties communicate the widget's structure and behavior to assistive technologies.
+
+**Note on robustness:** When using ARIA, be aware that browser and screen reader support varies. Different combinations interpret ARIA roles and attributes differently. Always test your implementation with multiple assistive technology combinations to ensure robust accessibility across different platforms.
 
 ### Example: Tablists
 
