@@ -1,6 +1,6 @@
 ---
 navigation_title: 'Web Components'
-position: 5
+position: 6
 ---
 
 # Web Components
