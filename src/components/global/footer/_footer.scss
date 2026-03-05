@@ -44,6 +44,10 @@
 
 .footer--inner {
   @include l-site_width;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 @include above-tablet-portrait {
@@ -57,11 +61,13 @@
 
 .footer--label {
   clear: both;
+  flex-basis: 100%;
   margin-bottom: 10px;
 }
 
 .footer--copy {
   clear: both;
+  flex-basis: 100%;
 }
 .footer--agencies {
   display: flex;
