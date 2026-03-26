@@ -14,3 +14,6 @@ To associate data cells with more than one row or column header, we use `id` and
 [Example](_examples/table-spanning-multiple-rows-and-columns)
 
 Due to limited screen reader support for more complex scenarios, it is generally recommended to be very careful with spanning table cells. See examples and test results in [Adrian Roselli's post](https://adrianroselli.com/2023/02/avoid-spanning-table-headers.html).
+
+## Hierarchical Data in Tables
+[Example using aria tree-grid](_examples/hierarchical-data-in-tree-grid-table)
