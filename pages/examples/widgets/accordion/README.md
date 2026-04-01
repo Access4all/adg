@@ -35,42 +35,55 @@ It is relatively simple to create a custom accordion implementation with ARIA:
 
 #### Implementation details
 
-A link with an `aria-expanded="true"` attribute is placed around each panel’s header; its value (`true`/`false`) and the visibility of the corresponding panel is toggled using JavaScript. See [Marking elements expandable using aria-expanded](/examples/sensible-aria-usage/expanded).
+This implementation follows the current APG approach and uses a real `button` in each header.
 
-While this may feel tempting in some circumstances, there are several drawbacks:
+- The button toggles `aria-expanded` (`true`/`false`).
+- The button uses `aria-controls` to reference the associated panel.
+- The panel uses `role="region"` and `aria-labelledby` to expose a clear relationship back to the controlling header button.
+- The panel visibility is synchronized with the semantic state using JavaScript.
 
-- It needs more JavaScript (instead of relying on browser standard behaviour).
-    - The current implementation allows multiple elements to be open. If you wanted to restrict it to one element though, a lot of additional JavaScript would be needed to manage states - something that radio buttons would offer "for free".
-- This solution is less intuitive: a screen reader announcement "link X collapsed" is less expressive than "show panel X checkbox not checked" or "show panel X radio button not checked 2 of 3".
-- Missing backwards compatibility for older clients with incomplete/missing ARIA support.
+### Native HTML implementation (`<details>` / `<summary>`)
 
-### Radio buttons implementation
+For simple disclosure-like use cases, native HTML can be a solid option:
+
+- A `<summary>` works as the interactive header.
+- The surrounding `<details>` element manages expanded/collapsed state natively.
+- This can reduce JavaScript and complexity compared to fully custom widgets.
+
+For more complex behaviours and full APG-style keyboard interaction parity, prefer the ARIA implementation above.
+
+[Example](_examples/accordion-with-details-summary)
+
+### Radio buttons implementation (Legacy)
+
+**Note:** This approach is deprecated and provided for reference only.
+
+The ARIA-based implementation above should be used for all new projects, as it offers more appropriate semantics and more reliable support for modern assistive technologies.
 
 This implementation is based on the [tablists’ proof of concept](/examples/widgets/tablists/#proof-of-concept), only the layout is different.
 
-[Example](_examples/accordion-with-radio-buttons)
+[Example](_examples/accordion-with-radio-buttons)  
+*(Legacy — for reference only)*
 
 #### Implementation details
 
-Some interesting peculiarities:
+- Uses native radio button selection mechanics to keep exactly one panel open at a time.
+- Requires additional scripting/CSS to emulate accordion semantics and behaviour.
+- Kept for historical reference only.
 
-- Using `.accordion:focus-within .control label`, a style can be applied to all radio button labels upon interacting with the accordion.
-    - This gives users a clue that they are interacting with a single control now (indicating to use the `Arrow` keys instead of `Tab` to navigate through accordion items).
-    - If you would rather like to make each control focusable on its own, you could use a group of checkboxes instead of radio buttons.
-          - Do not forget to make sure only one of them is checked at a time though (using some JavaScript).
+### Checkboxes implementation (Legacy)
 
-### Checkboxes implementation
+**Note:** This approach is deprecated and provided for reference only.
+
+The ARIA-based implementation above should be used for all new projects, as it offers more appropriate semantics and more reliable support for modern assistive technologies.
 
 This implementation is based on the [tablists’ proof of concept](/examples/widgets/tablists/#proof-of-concept), with a slightly different layout:
 
-[Example](_examples/multi-accordion-with-checkboxes)
+[Example](_examples/multi-accordion-with-checkboxes)  
+*(Legacy — for reference only)*
 
 #### Implementation details
 
-Some interesting peculiarities:
-
-- Checkboxes replace the radio buttons to offer multiple selection.
-    - We waived using a `<fieldset>`/`<legend>` structure, as this is no traditional group of checkboxes, and JAWS tends to be very wordy with focusable items nested within those, see [Grouping form controls with fieldset and legend](/examples/forms/grouping-with-fieldset-legend).
-- By default, only the `Space` key is used to toggle a checkbox (while pressing `Enter` submits a form).
-    - To make it more intuitive for visual users (who do not know about any checkbox behind the scenes, and thinking they are interacting with a link or button), the `Enter` key was re-wired to also toggle the checkboxes.
-- In contrast to the radio button solution above, we omitted a visual `.accordion:focus-within .control label` state for the accordion items, as checkboxes are individual controls and (thereby accessed by the `Tab` key, as most users would expect).
+- Uses checkbox controls to allow multiple panels open at once.
+- Requires additional scripting/CSS to approximate expected accordion behaviour.
+- Kept for historical reference only.

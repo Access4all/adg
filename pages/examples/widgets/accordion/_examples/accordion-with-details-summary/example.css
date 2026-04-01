@@ -1,12 +1,3 @@
-.visually-hidden {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
 body {
   padding: 20px;
   font-family: system-ui, sans-serif;
@@ -18,19 +9,8 @@ body {
 
 .accordion-item {
   margin: 0;
-}
-
-.notice {
-  background: #fff3cd;
-  border: 1px solid #ffc107;
-  padding: 8px;
-  margin: 0 0 16px 0;
-}
-
-.accordion-header {
-  margin: 0;
-  font-size: 1.25rem;
-  font-weight: 600; 
+  padding: 0;
+  border: 0;
 }
 
 .accordion-trigger {
@@ -41,12 +21,27 @@ body {
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  border: 1px solid black;
-  margin: 0;
+  border: 1px solid #000;
   padding: 6px 12px;
+  margin: 0;
   width: 100%;
   cursor: pointer;
   text-align: left;
+  list-style: none;
+}
+
+.accordion-header {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.accordion-trigger::marker {
+  content: '';
+}
+
+.accordion-trigger::-webkit-details-marker {
+  display: none;
 }
 
 .indicator {
@@ -59,33 +54,28 @@ body {
   font-weight: normal;
 }
 
-.indicator-open {
-  display: none;
-}
-
-input[type='radio']:checked + .accordion-header .accordion-trigger {
-  background: lightyellow;
-}
-
-input[type='radio']:checked + .accordion-header .accordion-trigger .indicator-open {
+.indicator-closed {
   display: inline-block;
 }
 
-input[type='radio']:checked + .accordion-header .accordion-trigger .indicator-closed {
+.indicator-open {
   display: none;
-}
-
-input[type='radio']:focus-visible + .accordion-header .accordion-trigger {
-  outline: 2px dotted;
-  outline-offset: 2px;
 }
 
 .accordion-trigger:hover {
   background: #fff9c4;
 }
 
-input[type='radio']:checked + .accordion-header .accordion-trigger:hover {
+.accordion-item[open] > .accordion-trigger {
   background: lightyellow;
+}
+
+.accordion-item[open] > .accordion-trigger .indicator-open {
+  display: inline-block;
+}
+
+.accordion-item[open] > .accordion-trigger .indicator-closed {
+  display: none;
 }
 
 .accordion-panel {
@@ -95,6 +85,7 @@ input[type='radio']:checked + .accordion-header .accordion-trigger:hover {
   background: lightyellow;
 }
 
+.accordion-trigger:focus-visible,
 a:focus-visible,
 button:focus-visible {
   outline: 2px dotted;

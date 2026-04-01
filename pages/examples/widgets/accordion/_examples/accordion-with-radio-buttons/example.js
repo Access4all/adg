@@ -12,7 +12,7 @@ class AdgRadioAccordion {
       panel.style.display = trigger.checked ? 'block' : 'none'
 
       trigger.addEventListener('change', () => {
-        this.element.querySelectorAll('.panel').forEach(p => {
+        this.element.querySelectorAll('.accordion-panel').forEach(p => {
           p.style.display = p.id === panel.id ? 'block' : 'none'
         })
       })
