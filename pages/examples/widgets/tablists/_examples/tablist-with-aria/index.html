@@ -1,0 +1,47 @@
+<p>
+  <button>Focusable element before</button>
+</p>
+
+<section class="tablist-widget">
+  <h2 id="flowers-heading">Flowers</h2>
+
+  <div role="tablist" aria-labelledby="flowers" class="tablist">
+    <button role="tab" id="t1" aria-controls="p1">Rose</button>
+    <button role="tab" id="t2" aria-controls="p2">Tulip</button>
+    <button role="tab" id="t3" aria-controls="p3">Sunflower</button>
+  </div>
+
+  <div role="tabpanel" id="p1" aria-labelledby="t1">
+    <h3>Rose</h3>
+
+    <p>A rose is a woody perennial flowering plant of the genus Rosa.</p>
+
+    <p>
+      <a href="https://en.wikipedia.org/wiki/Rose" target="_blank">Learn more about roses</a>
+    </p>
+  </div>
+
+  <div role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+    <h3>Tulip</h3>
+
+    <p>Tulips are a genus of spring-blooming perennial plants.</p>
+
+    <p>
+      <a href="https://en.wikipedia.org/wiki/Tulip" target="_blank">Learn more about tulips</a>
+    </p>
+  </div>
+
+  <div role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+    <h3>Sunflower</h3>
+
+    <p>A sunflower is a large annual plant.</p>
+
+    <p>
+      <a href="https://en.wikipedia.org/wiki/Sunflower" target="_blank">Learn more about sunflowers</a>
+    </p>
+  </div>
+</section>
+
+<p>
+  <button>Focusable element after</button>
+</p>

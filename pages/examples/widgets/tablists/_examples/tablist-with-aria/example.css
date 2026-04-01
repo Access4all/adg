@@ -1,32 +1,14 @@
-.visually-hidden {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
 body {
   padding: 20px;
   font-family: system-ui, sans-serif;
 }
 
-fieldset {
-  border: 0;
-  padding: 0;
-}
-
-.controls {
+.tablist {
   display: flex;
   border-bottom: 1px solid #000;
 }
 
-.control {
-  display: inline-block;
-}
-
-.control label {
+[role="tab"] {
   appearance: none;
   background: none;
   border: 1px solid #000;
@@ -34,27 +16,30 @@ fieldset {
   padding: 6px 12px;
   margin: 0 2px 0 0;
   cursor: pointer;
-  display: block;
 }
 
-input[type="radio"]:checked + label {
+[role="tab"][aria-selected="true"] {
   background: lightyellow;
   font-weight: 600;
 }
 
-.control label:hover {
+[role="tab"]:hover {
   text-decoration: underline;
 }
 
-input[type="radio"]:focus-visible + label {
+[role="tab"]:focus-visible {
   outline: 2px dotted;
   outline-offset: 2px;
 }
 
-.panel {
+[role="tabpanel"] {
   border: 1px solid #000;
   padding: 1rem;
   background: lightyellow;
+}
+
+[role="tabpanel"][hidden] {
+  display: none;
 }
 
 a:focus-visible,

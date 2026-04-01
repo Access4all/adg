@@ -5,46 +5,46 @@ position: 3
 
 # Widgets simply working for all
 
-**HTML supports interactive controls for most requirements. But what about additional interaction patterns that do not offer an HTML equivalent? Surprisingly to many, standard browser behaviour is also a fool-proof way to provide even complex custom functionalities in the style of modern widgets. The trick is to simply use traditional form controls, change their visual design using CSS, and add the needed interactivity using JavaScript.**
+**HTML supports interactive controls for most requirements. But what about additional interaction patterns that do not offer an HTML equivalent? The key is to use semantic HTML and standard controls where possible, enhance them with ARIA when needed, style them with CSS, and add interactivity with JavaScript. This approach leverages native browser behavior and ensures widgets work for everyone.**
 
 [[_TOC_]]
 
-Let's think about the true spirit of a typical widget, for example a tablist: what is its purpose? It offers a list of items that are toggling the visibility of related containers. Only one item can be visible at a time, and if another one is activated, the previously active one gets deactivated automatically.
+## The principle
 
-This sounds a lot like a group of radio buttons, does it not?
+When creating custom widgets, start with semantic HTML and standard form controls. These provide built-in accessibility features, keyboard support, and screen reader compatibility. Then:
 
-## Tablist using radio buttons
+1. **Enhance with ARIA** when semantic HTML alone isn't sufficient
+   - **Important:** Pay attention to the robustness of ARIA roles and attributes used, as browsers and screen readers still differ quite a lot in how certain ARIA roles and attributes are interpreted. Always test with multiple assistive technology combinations.
+2. **Style with CSS** to achieve the desired visual design
+3. **Add interactivity with JavaScript** to create the widget behavior
 
-Instead of re-inventing the wheel by creating our own tablist implementation using lots of more or less meaningful custom HTML containers and lots of JavaScript, why not simply re-use existing standard behaviour?
+This approach ensures that widgets work out of the box for keyboard users and screen reader users, while still allowing complete visual customization.
 
-```html
-<div class="tablist">
-  <fieldset>
-    <legend>Tablist controls</legend>
-    <input type="radio" name="tablist" value="dancing" id="dancing_label" checked />
-    <label for="dancing_label">Dancing</label>
+## Using ARIA for complex widgets
 
-    <input type="radio" name="tablist" value="soccer" id="soccer_label" />
-    <label for="soccer_label">Soccer</label>
-  </fieldset>
+For widgets that don't have a direct HTML equivalent (like tablists, accordions, or carousels), ARIA provides the necessary semantic structure. ARIA roles, states, and properties communicate the widget's structure and behavior to assistive technologies.
 
-  <div id="dancing_panel">...</div>
-  <div id="soccer_panel" hidden>...</div>
-</div>
-```
+**Note on robustness:** When using ARIA, be aware that browser and screen reader support varies. Different combinations interpret ARIA roles and attributes differently. Always test your implementation with multiple assistive technology combinations to ensure robust accessibility across different platforms.
 
-With this approach, we only need to react on the change of a radio button group using JavaScript and toggle the visibility of the respective tabpanel. Everything else works perfectly out of the box, also for keyboard only and screen reader users. And sure, we can change the visual properties to anything we like to resemble a tablist.
+### Example: Tablists
 
-## Other user interface patterns
+A tablist allows users to toggle the visibility of content panels. The recommended approach is to use ARIA roles and attributes following the [WAI-ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/). This provides:
 
-It is not always as easy as with tablists. But the approach of using standard HTML form controls to mimic modern control patterns can be applied to most requirements. In fact, this approach is the base of many complex interactive code examples in this guide. If you are really curious and want to learn more about this, skip ahead and read [Interactive widgets](/examples/widgets).
+- Proper semantic structure that screen readers understand
+- Robust keyboard navigation with focus management
+- Clear communication of relationships between tabs and panels
+- Accurate announcement of the active state
 
-## But isn't this wrong?
+For detailed information and implementation examples, see [Tablists](/examples/widgets/tablists).
 
-It may feel a bit weird (if not to say: blasphemic) to use radio buttons as a tablist. But actually, the majority of users (those with good vision) will never even become aware of the radio buttons, as these are acting completely behind the scenes, and it "just works", out of the box, with minimal effort. So in the end, this is a huge plus in many aspects, be it usability, accessibility, readability of code (and thus maintainability), or performance.
+## Best practices
 
-For screen reader users, this approach may be a bit surprising in the first place. They might wonder: "Why is there a group of radio buttons? I'm not inside a form, am I?" To alleviate this, we can make the element more self-explanatory by improving the label texts for screen readers, ie. "Show panel Dancing" (instead of just "Dancing"). And as radio buttons are not tied to a `<form>` element, they can exist anywhere in a website anyway. In general we can say: screen reader users are so much used to encounter inaccessible widgets on a daily basis that they will be very happy that our implementation just does the job for them.
-  
-## ARIA - Pushing accessibility to the max
+Regardless of which approach you choose:
 
-If you want to provide an even more accessible experience to screen reader users, you are welcome to use the Accessible Rich Internet Application (ARIA) standard which is aimed to implement widgets that are 100% optimised for screen readers. Just read on, please.
+- **Start with semantic HTML** - Use the most appropriate HTML element for the job
+- **Enhance with ARIA when needed** - Add ARIA roles, states, and properties for complex widgets
+- **Ensure keyboard accessibility** - All interactive elements must be keyboard accessible
+- **Test with assistive technologies** - Verify that screen readers announce widgets correctly
+- **Follow established patterns** - Use the [WAI-ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/) as a reference
+
+For more examples of accessible widgets, see [Interactive widgets](/examples/widgets).

@@ -5,74 +5,101 @@ position: 6
 
 # Tablist widgets (or: tab panels, tabs)
 
-**Tablists help to split up a page's content into smaller and thus more digestible parts. Each part is minimally represented in a list of names, by which their visibility can be enabled one at a time. Tablists can be thought of as small page fragments inside a page.**
+**Tablists are used to divide complex page content into smaller, more manageable sections. Each section is represented by a tab label that allows users to display one panel at a time. In this sense, tablists can be understood as small, self-contained page fragments within a larger page.**
 
 [[_TOC_]]
 
 Tablists are well known as native controls in many operating systems: a list of controls (usually on top of the element) allows to toggle the visibility of corresponding panels. Only a single control can be active at a time, so exactly one panel is visible and all others are hidden.
 
-![Tablist](_media/tablist.png)
+![Tablist](_media/screenshot-of-a-tablist.png)
 
-We do not call tablists simply "tabs" so the difference to the `Tab` key is obvious.
+We use the term *tablist* instead of simply *tabs* to avoid confusion with the `Tab` key used for keyboard navigation.
+
+---
 
 ## General requirements
 
-The following requirements are based on well established best practices and [WAI-ARIA Authoring Practices: Tab Panel Widget](https://www.w3.org/TR/wai-aria-practices/#tabpanel).
+The following requirements are based on established best practices and the [WAI-ARIA Authoring Practices: Tab Panel Widget](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/).
 
-Besides many other requirements, we want to stress out explicitly the following:
+In particular, a compliant tablist must fulfil the following criteria:
 
-- The meaning and usage of the tablist must be clear.
-- The state of each tab control must be perceivable ("active/inactive" or similar).
-- Proper feedback must be given upon activating a tab control ("active" or similar).
-- The tablist must be operable using both keyboard only and screen readers (with a reasonable interplay of default keys like `Tab`, `Enter`/`Space`, `Esc`, `Arrow` keys), as well as mobile screen readers.
-- The panel contents must be easily accessible using both keyboard only and screen reader.
+- The purpose and usage of the tablist must be clearly understandable.
+- The active and inactive states of tabs must be visually and programmatically perceivable.
+- Users must receive clear feedback when a tab is activated.
+- The tablist must be fully operable using:
+  - keyboard only,
+  - screen readers (desktop and mobile),
+  - standard interaction keys (`Tab`, `Enter`/`Space`, `Home`/`End`, arrow keys).
+- Panel content must be easily accessible via keyboard and assistive technologies.
 
-### Similarities with accordions and carousels
+---
 
-Maybe you never noticed that tablists, carousels, and accordions - although looking pretty distinct from each other - all solve a very similar use case: toggling the visibility of contents.
+## Similarities with accordions and carousels
 
-Tablists are the most basic pattern of them all. Carousels then extend it by providing additional controls like previous/next and autoplay/pause button(s). And accordions extend it by stacking all controls and panels on top of each other; in addition, some of them allow to display multiple panels at the same time.
+Although tablists, accordions, and carousels appear visually different, they all address the same fundamental use case: controlling the visibility of related content sections.
 
-Because of this, the following texts apply not only to tablists, but also to carousels (see [Carousels (or: slideshow, slider)](/examples/widgets/carousel)) and accordions (see [Accordions](/examples/widgets/accordion)).
+- **Tablists** provide the most basic pattern: one active panel at a time.
+- **Carousels** extend this pattern with previous/next controls and optional autoplay.
+- **Accordions** stack controls and panels vertically and may allow multiple panels to be open simultaneously.
+
+Because of these similarities, many of the following principles also apply to:
+
+- [Carousels](/examples/widgets/carousel)
+- [Accordions](/examples/widgets/accordion)
+
+---
 
 ## Proofs of concept
 
-Before you go on, please read [What is a "Proof of concept"?](/examples/widgets/proof-of-concept) (POC).
+Before continuing, please read [What is a "Proof of Concept"?](/examples/widgets/proof-of-concept) (POC).
 
-ARIA is supported pretty well for tablists (see POC #1). If you need a much simpler solution though, and according to our credo [Widgets simply working for all](/knowledge/semantics/widgets), the easiest way to create a tablist is using a simple group of radio buttons (see POC #2).
+ARIA-based tablists are well supported across modern browsers and assistive technologies. When native HTML elements cannot express the required behaviour, an ARIA-based implementation is recommended.
 
-### POC #1: ARIA
+---
 
-TODO
+### POC #1: ARIA (Recommended)
+
+This implementation follows the  
+[WAI-ARIA Authoring Practices Guide for Tabs](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/)  
+and uses **manual activation**. Users activate a focused tab using `Enter`, `Space`, or a mouse click.
+
+Manual activation is recommended when panel content cannot be displayed instantly or when activating a tab triggers expensive operations.
+
+The implementation uses appropriate:
+
+- Roles: `tablist`, `tab`, `tabpanel`
+- States: `aria-selected`
+- Relationships: `aria-controls`, `aria-labelledby`
+
+This ensures reliable screen reader support across browsers and platforms.
+
+[Example](_examples/tablist-with-aria)
 
 #### Implementation details
 
-TODO
+- Uses the roving tabindex pattern:
+  - Active tab: `tabindex="0"`
+  - Inactive tabs: `tabindex="-1"`
+- Keyboard interaction:
+  - `Arrow Left/Right`: Move focus between tabs
+  - `Home/End`: Move focus to first/last tab
+  - `Enter/Space`: Activate focused tab
+  - `Tab`: Move focus out of the tablist
+- Tabs are laid out horizontally using flexbox.
+- Activation logic ensures that only the selected panel is visible at a time.
+- Inactive panels are hidden using the `hidden` attribute to ensure proper support in assistive technologies.
+- In some implementations, tab elements use `display: block` (instead of `inline-block`) to improve navigation in NVDA browse mode.
+- ARIA attributes establish clear relationships between tabs and panels.
 
-### POC #2: Radio buttons
+---
 
-They can be styled visually as needed using CSS, and spiced up with (very little) JavaScript, so they behave like perfect tablists.
+### POC #2: Radio buttons (Legacy)
 
-Sensible naming of elements (and a few specifically added visually hidden texts) guarantees that screen reader users know how to handle the element - even if they have not seen any other tablist before.
+**Note:** This approach is deprecated and provided for reference only.
 
-[Example](_examples/tablist-with-radio-buttons)
+The ARIA-based implementation (POC #1) should be used for all new projects, as it offers correct semantics and more reliable support for modern assistive technologies.
 
-#### Implementation details
+The radio button approach was previously used as a simpler alternative based on native form controls. However, radio buttons represent form input choices rather than navigational relationships between tabs and panels. This semantic mismatch leads to poorer screen reader support and inconsistent interaction patterns, requiring significant workarounds to achieve comparable accessibility.
 
-Some interesting peculiarities:
-
-- Elements are announced properly by screen readers, and it is clearly perceivable which control is active: the one with the active radio button.
-- Proper feedback is given upon interaction: whenever a control is activated, the screen reader announces the respective radio button's state.
-- Collapsed panels are hidden effectively from everybody, see [Hiding elements from all devices](/examples/hiding-elements/from-all-devices).
-- Where functionality may not be obvious to screen reader users, descriptive text is given (only visible to screen readers):
-    - The tablist/carousel/accordion's main heading has "tablist/carousel/accordion" appended.
-    - A small help text explains how the tablist/carousel/accordion works.
-    - The controls are named "tablist/carousel/accordion controls" and are placed within a `fieldset`/`legend` structure (see [Grouping form controls with fieldset and legend](/examples/forms/grouping-with-fieldset-legend)).
-    - Each control is named "Show panel X".
-    - Each panel's heading has "panel" appended.
-- The tablist/carousel/accordion controls are placed in the DOM before the panels:
-    - As the whole element is properly marked up with headings, screen reader users can jump very quickly between controls and panels (see [How to handle headings](/examples/headings/handling)).
-- Using `.tablist:focus-within .control label`, a style can be applied to all radio button labels upon interacting with the tablist.
-    - This gives users a clue that they are interacting with a single control now (indicating to use the `Arrow` keys instead of `Tab` to navigate through tab items).
-    - If you would rather like to make each control focusable on its own, you could use a group of checkboxes instead of radio buttons.
-          - Do not forget to make sure only one of them is checked at a time though (using some JavaScript).
+[Example](_examples/tablist-with-radio-buttons)  
+*(Legacy — for reference only)*
