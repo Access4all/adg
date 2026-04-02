@@ -2,10 +2,10 @@ import path from 'node:path'
 import { styleText } from 'node:util'
 import gulp from 'gulp'
 import browserSyncFactory from 'browser-sync'
-import del from 'del'
+import { deleteAsync } from 'del'
 import through from 'through2'
 import spritesmith from 'gulp.spritesmith'
-import merge from 'merge-stream'
+import ordered from 'ordered-read-streams'
 import sharp from 'sharp'
 import concat from 'gulp-concat'
 import changed from 'gulp-changed'
@@ -19,7 +19,7 @@ const browserSync = browserSyncFactory.create()
 function errorHandler(err) {
   console.error(
     err.plugin || '',
-    styleText('cyan', err.fileName),
+    styleText('cyan', err.fileName || ''),
     styleText('red', err.message)
   )
 }
@@ -210,7 +210,9 @@ gulp.task('media:resize', () => {
 
 gulp.task('sprite', () => {
   const data = gulp
-    .src(['./src/assets/img/icons/**/*.png', '!./src/assets/img/icons/*.png'])
+    .src(['./src/assets/img/icons/**/*.png', '!./src/assets/img/icons/*.png'], {
+      encoding: false
+    })
     .pipe(
       spritesmith({
         retinaSrcFilter: './src/assets/img/icons/2x/*.png',
@@ -228,12 +230,12 @@ gulp.task('sprite', () => {
   const imgStream = data.img.pipe(gulp.dest('./src/assets/img/icons'))
   const cssStream = data.css.pipe(changed('./tmp')).pipe(gulp.dest('./tmp'))
 
-  return merge(imgStream, cssStream)
+  return ordered([imgStream, cssStream])
 })
 
 gulp.task('media', gulp.parallel('media:copy', 'media:resize'))
 
-gulp.task('clean', () => del('./dist'))
+gulp.task('clean', () => deleteAsync('./dist'))
 
 gulp.task(
   'build',

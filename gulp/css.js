@@ -1,5 +1,5 @@
 import gulp from 'gulp'
-import gulpSassInit from 'gulp-sass'
+import gulpSassInit from 'gulp-sass/legacy.js'
 import sassCompiler from 'sass'
 import globImporter from 'node-sass-glob-importer'
 import autoprefixer from 'autoprefixer'
