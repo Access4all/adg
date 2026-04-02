@@ -44,8 +44,8 @@ const slugify = text => {
     .toString()
     .toLowerCase()
     .replace(/\s+/g, '-') // Replace spaces with -
-    .replace(/[^\w\-]+/g, '') // Remove all non-word chars
-    .replace(/\-\-+/g, '-') // Replace multiple - with single -
+    .replace(/[^\w-]+/g, '') // Remove all non-word chars
+    .replace(/--+/g, '-') // Replace multiple - with single -
     .replace(/^-+/, '') // Trim - from start of text
     .replace(/-+$/, '') // Trim - from end of text
 }
@@ -189,30 +189,28 @@ export default rootDir => filePath => {
                   : path.resolve(path.dirname(filePath), exampleLink)
                 example = examples.getExample(examplePath, filePath)
 
-                token.children
-                  .slice(childIdx)
-                  .some((followingChildToken, followingChildIdx) => {
-                    if (followingChildToken.type === 'text') {
-                      // Change link title and wrap with span
-                      followingChildToken.type = 'html_inline'
-                      followingChildToken.content = `<span class="example-link-text">${
-                        example.code.details.title
-                      }</span>${
-                        example.code.preview
-                          ? `<img src="/${path.relative(
-                              path.join(rootDir, 'pages'),
-                              example.code.preview
-                            )}" alt="Preview">`
-                          : ''
-                      }`
-                    }
+                token.children.slice(childIdx).some(followingChildToken => {
+                  if (followingChildToken.type === 'text') {
+                    // Change link title and wrap with span
+                    followingChildToken.type = 'html_inline'
+                    followingChildToken.content = `<span class="example-link-text">${
+                      example.code.details.title
+                    }</span>${
+                      example.code.preview
+                        ? `<img src="/${path.relative(
+                            path.join(rootDir, 'pages'),
+                            example.code.preview
+                          )}" alt="Preview">`
+                        : ''
+                    }`
+                  }
 
-                    if (followingChildToken.type === 'link_close') {
-                      return true
-                    }
+                  if (followingChildToken.type === 'link_close') {
+                    return true
+                  }
 
-                    return false
-                  })
+                  return false
+                })
 
                 // Add custom class to link
                 exampleLinkClass = childToken.attrGet('class')

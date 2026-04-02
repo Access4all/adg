@@ -1,6 +1,7 @@
 import child_process from 'node:child_process'
 import fs from 'node:fs'
 import path from 'node:path'
+import { Readable } from 'node:stream'
 import gulp from 'gulp'
 import handlebars from 'gulp-hb'
 import frontMatter from 'gulp-front-matter'
@@ -8,13 +9,12 @@ import through from 'through2'
 import plumber from 'gulp-plumber'
 import normalize from 'normalize-strings'
 import { SitemapStream, streamToPromise } from 'sitemap'
-import { Readable } from 'stream'
 import { JSDOM } from 'jsdom'
+import appConfig from '../config.js'
 import { formatDate } from './helpers/datetime.js'
 import markdownFactory from './helpers/markdown.js'
 import { generateTags } from './helpers/metatags.js'
 import Feed from './helpers/rss.js'
-import appConfig from '../config.js'
 
 const pathSeparatorRegExp = new RegExp('\\' + path.sep, 'g')
 

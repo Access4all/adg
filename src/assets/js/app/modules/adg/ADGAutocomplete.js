@@ -188,8 +188,8 @@ export default class ADGAutocomplete extends ADGBase {
           ? maxIndex
           : currentIndex - 1
         : currentIndex === maxIndex
-        ? 0
-        : currentIndex + 1
+          ? 0
+          : currentIndex + 1
     $upcomingOption = $($visibleOptions[upcomingIndex])
     return $upcomingOption.prop('checked', true).trigger('change')
   }
@@ -290,6 +290,7 @@ export default class ADGAutocomplete extends ADGBase {
     while (i < filter.length) {
       escapedCharacter = filter
         .charAt(i)
+        // eslint-disable-next-line no-useless-escape
         .replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&') // See https://stackoverflow.com/questions/3446170/escape-string-for-use-in-javascript-regex
       fuzzifiedFilter += `${escapedCharacter}.*?`
       i++

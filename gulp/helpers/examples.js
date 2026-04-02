@@ -51,7 +51,7 @@ const getTitle = href => {
   return meta.title
 }
 
-const getCodePenForm = (code, title) => {
+const getCodePenForm = code => {
   const config = {
     title: code.details.title,
 
@@ -83,7 +83,7 @@ const getCodePenForm = (code, title) => {
   </form>`
 }
 
-const getExample = (examplePath, filePath) => {
+const getExample = examplePath => {
   try {
     const code = getCode(examplePath)
     const id = `example-${randomUUID()}`
@@ -153,7 +153,6 @@ const getExample = (examplePath, filePath) => {
       // Format date
       const date = new Date(result.date)
 
-      // eslint-disable-next-line eqeqeq
       if (date != 'Invalid Date') {
         result.date = `${date.getFullYear()}-${
           date.getMonth() + 1

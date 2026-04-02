@@ -9,7 +9,7 @@ import * as babel from '@babel/core'
 import babelPreset from '@babel/preset-env'
 import * as helpers from './helpers/examples.js'
 
-export default (config, cb) => {
+export default config => {
   const layout = fs.readFileSync('./src/templates/example.hbs')
 
   return (
