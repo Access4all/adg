@@ -16,7 +16,7 @@ export default config => {
       sass({
         importer: globImporter(),
         includePaths: config.includePaths,
-        silenceDeprecations: ['mixed-decls', 'import', 'legacy-js-api'],
+        silenceDeprecations: ['import', 'legacy-js-api'],
         quietDeps: true
       }).on('error', config.errorHandler)
     )
