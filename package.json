@@ -71,7 +71,6 @@
     "markdown-it-samp": "^0.0.4",
     "markdown-it-toc-done-right": "^4.2.0",
     "merge-stream": "^2.0.0",
-    "minimist": "^1.2.8",
     "node-sass-glob-importer": "^5.3.2",
     "normalize-strings": "^1.1.1",
     "postcss": "^8.4.23",

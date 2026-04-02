@@ -1,8 +1,19 @@
 import path from 'node:path'
+import { parseArgs } from 'node:util'
 import webpack from 'webpack'
-import minimist from 'minimist'
 
-const argv = minimist(process.argv.slice(2))
+const {
+  values: { webpackWatch }
+} = parseArgs({
+  options: {
+    webpackWatch: {
+      type: 'boolean',
+      default: false
+    }
+  },
+  allowPositionals: true
+})
+console.log({ webpackWatch })
 
 export default (config, cb) => {
   const compiler = webpack({
@@ -77,7 +88,7 @@ export default (config, cb) => {
     return cb()
   }
 
-  if (argv.webpackWatch) {
+  if (webpackWatch) {
     compiler.watch({}, log)
   } else {
     compiler.run(log)
