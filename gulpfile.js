@@ -170,7 +170,8 @@ gulp.task('media:resize', () => {
 
   return gulp
     .src(['./pages/{,**/}_media/**/*', './pages/**/_examples/**/*.png'], {
-      base: './pages'
+      base: './pages',
+      encoding: false
     })
     .pipe(
       changed('./dist', {
