@@ -1,18 +1,28 @@
-const markdownIt = require('markdown-it')
-const importFresh = require('import-fresh')
-const path = require('path')
+import path from 'node:path'
+import markdownIt from 'markdown-it'
+import iterator from 'markdown-it-for-inline'
+import regexp from 'markdown-it-regexp'
+import abbr from 'markdown-it-abbr'
+import attrs from 'markdown-it-attrs'
+import deflist from 'markdown-it-deflist'
+import kbd from 'markdown-it-kbd'
+import samp from 'markdown-it-samp'
+import responsive from '@gerhobbelt/markdown-it-responsive'
+import replacements from 'markdown-it-replacements'
+import toc from 'markdown-it-toc-done-right'
+import * as examples from './examples.js'
 
 const plugins = {
-  iterator: require('markdown-it-for-inline'),
-  regexp: require('markdown-it-regexp'),
-  abbr: require('markdown-it-abbr'),
-  attrs: require('markdown-it-attrs'),
-  deflist: require('markdown-it-deflist'),
-  kbd: require('markdown-it-kbd'),
-  samp: require('markdown-it-samp'),
-  responsive: require('@gerhobbelt/markdown-it-responsive'),
-  replacements: require('markdown-it-replacements'),
-  toc: require('markdown-it-toc-done-right')
+  iterator,
+  regexp,
+  abbr,
+  attrs,
+  deflist,
+  kbd,
+  samp,
+  responsive,
+  replacements,
+  toc
 }
 
 plugins.replacements.replacements.push({
@@ -40,13 +50,12 @@ const slugify = text => {
     .replace(/-+$/, '') // Trim - from end of text
 }
 
-module.exports = rootDir => filePath => {
+export default rootDir => filePath => {
   const markdown = markdownIt({
     html: true,
     linkify: true,
     typography: true
   })
-  const examples = importFresh('./examples')
 
   markdown.validateLink = url => {
     const BAD_PROTO_RE = /^(vbscript|file|data):/

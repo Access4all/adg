@@ -1,17 +1,15 @@
-const gulp = require('gulp')
-const plumber = require('gulp-plumber')
-const through = require('through2')
-const handlebars = require('gulp-hb')
-const frontMatter = require('front-matter')
-const importFresh = require('import-fresh')
-const fs = require('fs')
-const path = require('path')
-const babel = require('@babel/core')
-const babelPreset = require('@babel/preset-env')
+import fs from 'node:fs'
+import path from 'node:path'
+import gulp from 'gulp'
+import plumber from 'gulp-plumber'
+import through from 'through2'
+import handlebars from 'gulp-hb'
+import frontMatter from 'front-matter'
+import * as babel from '@babel/core'
+import babelPreset from '@babel/preset-env'
+import * as helpers from './helpers/examples.js'
 
-module.exports = (config, cb) => {
-  const helpers = importFresh('./helpers/examples')
-
+export default (config, cb) => {
   const layout = fs.readFileSync('./src/templates/example.hbs')
 
   return (

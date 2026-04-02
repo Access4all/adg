@@ -1,6 +1,6 @@
 import $ from 'jquery'
 
-import BaseModule from '../BaseModule'
+import BaseModule from '../BaseModule.js'
 
 /**
  * Theme

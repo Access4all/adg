@@ -1,8 +1,10 @@
-const path = require('path')
-const webpack = require('webpack')
-const argv = require('minimist')(process.argv.slice(2))
+import path from 'node:path'
+import webpack from 'webpack'
+import minimist from 'minimist'
 
-module.exports = (config, cb) => {
+const argv = minimist(process.argv.slice(2))
+
+export default (config, cb) => {
   const compiler = webpack({
     entry: config.entry,
     mode: 'development',
@@ -10,7 +12,7 @@ module.exports = (config, cb) => {
       rules: [
         {
           test: /\.js$/,
-          include: path.resolve(__dirname, 'src'),
+          include: path.resolve(import.meta.dirname, 'src'),
           exclude: /node_modules/,
           loader: 'babel-loader',
           options: {

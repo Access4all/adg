@@ -1,5 +1,5 @@
 import 'details-polyfill'
-import modules from './app/modules'
+import modules from './app/modules.js'
 
 modules()
 

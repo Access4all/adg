@@ -1,6 +1,6 @@
 import $ from 'jquery'
 
-import ADGBase from './ADGBase'
+import ADGBase from './ADGBase.js'
 
 export default class ADGAutocomplete extends ADGBase {
   // Need to override the base class method

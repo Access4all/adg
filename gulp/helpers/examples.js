@@ -1,8 +1,8 @@
-const fs = require('fs')
-const path = require('path')
-const frontMatter = require('front-matter')
-const hljs = require('highlight.js')
-const _ = require('lodash')
+import fs from 'node:fs'
+import path from 'node:path'
+import frontMatter from 'front-matter'
+import hljs from 'highlight.js'
+import _ from 'lodash'
 
 const getFile = (files, type, dir) => {
   const match = files.find(file => {
@@ -265,10 +265,4 @@ const getLink = token => {
   return href.match(/_examples/) ? href : null
 }
 
-module.exports = {
-  getCode,
-  getTitle,
-  getCodePenForm,
-  getExample,
-  getLink
-}
+export { getCode, getTitle, getCodePenForm, getExample, getLink }
