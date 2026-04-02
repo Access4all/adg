@@ -229,7 +229,7 @@ gulp.task('sprite', () => {
     )
 
   const imgStream = data.img.pipe(gulp.dest('./src/assets/img/icons'))
-  const cssStream = data.css.pipe(changed('./tmp')).pipe(gulp.dest('./tmp'))
+  const cssStream = data.css.pipe(gulp.dest('./tmp'))
 
   return ordered([imgStream, cssStream])
 })
