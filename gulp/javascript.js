@@ -13,7 +13,6 @@ const {
   },
   allowPositionals: true
 })
-console.log({ webpackWatch })
 
 export default (config, cb) => {
   const compiler = webpack({
