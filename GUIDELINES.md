@@ -14,19 +14,8 @@ Be sure to read our [Contributing Guidelines](./CONTRIBUTING.md).
 - We use simple language with short sentences.
 - We avoid relative clauses.
 - We avoid passive voice.
-- We use bullet points when approprioate.
+- We use bullet points when appropriate.
 
 ## Formatting
 
 - We use [Markdown](https://commonmark.org/help/) to format text.
-- 
-
-### References to Standards
-
-### Typography
-
-### Images
-
-## Code Examples
-
-TODO
