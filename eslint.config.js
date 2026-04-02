@@ -30,7 +30,8 @@ export default defineConfig([
           caughtErrors: 'none',
           argsIgnorePattern: '^(e|event|context|options)$'
         }
-      ]
+      ],
+      'no-useless-assignment': 'off'
     }
   }
 ])
