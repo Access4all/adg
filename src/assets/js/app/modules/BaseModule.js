@@ -42,11 +42,11 @@ define(['jquery'], function ($) {
 
   BaseModule.prototype.logAllFn = function (obj) {
     console.log(this.ns, 'logAll - activated')
-    var functions = Object.getOwnPropertyNames(obj.prototype).filter(function (
-      p
-    ) {
-      return typeof obj.prototype[p] === 'function'
-    })
+    var functions = Object.getOwnPropertyNames(obj.prototype).filter(
+      function (p) {
+        return typeof obj.prototype[p] === 'function'
+      }
+    )
 
     for (var i = 0; i < functions.length; i++) {
       var functionName = functions[i]
