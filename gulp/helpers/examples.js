@@ -1,8 +1,8 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import { randomUUID } from 'node:crypto'
 import frontMatter from 'front-matter'
 import hljs from 'highlight.js'
-import _ from 'lodash'
 
 const getFile = (files, type, dir) => {
   const match = files.find(file => {
@@ -86,7 +86,7 @@ const getCodePenForm = (code, title) => {
 const getExample = (examplePath, filePath) => {
   try {
     const code = getCode(examplePath)
-    const id = _.uniqueId('example-')
+    const id = `example-${randomUUID()}`
 
     const compatibilitySummaryBrowsers = [
       'Chrome',

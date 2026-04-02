@@ -3,7 +3,6 @@ import { styleText } from 'node:util'
 import gulp from 'gulp'
 import browserSyncFactory from 'browser-sync'
 import del from 'del'
-import _ from 'lodash'
 import through from 'through2'
 import spritesmith from 'gulp.spritesmith'
 import merge from 'merge-stream'
@@ -81,8 +80,6 @@ gulp.task('css', cb => {
 })
 
 gulp.task('js', cb => {
-  const done = _.once(cb)
-
   js(
     {
       entry: {
@@ -94,7 +91,7 @@ gulp.task('js', cb => {
     () => {
       browserSync.reload()
 
-      done()
+      cb()
     }
   )
 

@@ -9,7 +9,6 @@ import plumber from 'gulp-plumber'
 import normalize from 'normalize-strings'
 import { SitemapStream, streamToPromise } from 'sitemap'
 import { Readable } from 'stream'
-import _ from 'lodash'
 import { JSDOM } from 'jsdom'
 import { formatDate } from './helpers/datetime.js'
 import markdownFactory from './helpers/markdown.js'
@@ -45,7 +44,7 @@ const getPageNavigation = options =>
 
 // Add isCurrent / isActive properties, extend options.prevNext
 const extendNavigationItem = (origItem, index, options) => {
-  const item = _.merge({}, origItem)
+  const item = Object.assign({}, origItem)
   const level = options.level || 1
 
   item.level = level
