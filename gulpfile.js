@@ -1,8 +1,7 @@
 import path from 'node:path'
+import { styleText } from 'node:util'
 import gulp from 'gulp'
 import browserSyncFactory from 'browser-sync'
-import log from 'fancy-log'
-import colors from 'ansi-colors'
 import del from 'del'
 import _ from 'lodash'
 import through from 'through2'
@@ -19,7 +18,11 @@ import examples from './gulp/examples.js'
 const browserSync = browserSyncFactory.create()
 
 function errorHandler(err) {
-  log(err.plugin || '', colors.cyan(err.fileName), colors.red(err.message))
+  console.error(
+    err.plugin || '',
+    styleText('cyan', err.fileName),
+    styleText('red', err.message)
+  )
 }
 
 gulp.task('html', cb =>
