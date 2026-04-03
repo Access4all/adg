@@ -89,10 +89,15 @@ input[type='checkbox']:checked + .accordion-header .accordion-trigger:hover {
 }
 
 .accordion-panel {
+  display: none;
   border: 1px solid #000;
   border-top: none;
   padding: 1rem;
   background: lightyellow;
+}
+
+.accordion-item > input[type='checkbox']:checked ~ .accordion-panel {
+  display: block;
 }
 
 a:focus-visible,
