@@ -5,11 +5,11 @@ position: 8
 
 # Accordions
 
-**Accordions contain of a number of content panels, each of wich can be expanded or collapsed vertically by the user.**
+**Accordions consist of a number of content panels, each of which can be expanded or collapsed vertically by the user.**
 
 [[_TOC_]]
 
-Accordions help to save vertical space and prevent from visual noise. Some accordions allow only a single panel to be expanded at a time, others allow multiple.
+Accordions help to save vertical space and reduce visual noise. Some accordions allow only a single panel to be expanded at a time, others allow multiple.
 
 ![Accordion](_media/accordion.png)
 
@@ -17,11 +17,12 @@ Before you continue, please read [Tablist widgets (or: tab panels, tabs)](/examp
 
 ## General requirements
 
-The following requirements are based on well established best practices and [WAI-WAI-ARIA Authoring Practices: Accordion (widget)](https://www.w3.org/TR/wai-aria-practices/#accordion).
+The following requirements are based on well established best practices and the [WAI-ARIA Authoring Practices Guide (APG): Accordion Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/).
 
-In addition to the tablists’ requirements, and besides many other requirements, we want to stress out explicitly the following:
+Accordions and [Tablists](/examples/widgets/tablists) share the same underlying logic: a trigger (header/tab) controls the visibility of a content panel. While they are structurally similar, accordions have specific requirements:
 
-- Multiple slides can be visible (optional).
+- Multiple panels can be visible at the same time (optional).
+- Keyboard support: Users can navigate between accordion headers using `Tab` and toggle them with `Enter` or `Space`. (Optional but recommended: Arrow key navigation).
 
 ## Proofs of concept
 
@@ -42,48 +43,41 @@ This implementation follows the current APG approach and uses a real `button` in
 - The panel uses `role="region"` and `aria-labelledby` to expose a clear relationship back to the controlling header button.
 - The panel visibility is synchronized with the semantic state using JavaScript.
 
-### Native HTML implementation (`<details>` / `<summary>`)
+### Native HTML Disclosure Elements
 
-For simple disclosure-like use cases, native HTML can be a solid option:
+For simple disclosure-like use cases, the native HTML `<details>` and `<summary>` elements are a solid, no-JavaScript option. You can find the technical specification and browser behavior in the [MDN Web Docs for the Details element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details).
 
-- A `<summary>` works as the interactive header.
-- The surrounding `<details>` element manages expanded/collapsed state natively.
-- This can reduce JavaScript and complexity compared to fully custom widgets.
-
-For more complex behaviours and full APG-style keyboard interaction parity, prefer the ARIA implementation above.
+- The `summary` element works as the interactive header.
+- The surrounding `details` element manages the expanded/collapsed state natively.
+- This removes the need for JavaScript compared to custom ARIA widgets.
 
 [Example](_examples/accordion-with-details-summary)
 
-### Radio buttons implementation (Legacy)
+#### Implementation details 
 
-**Note:** This approach is deprecated and provided for reference only.
+This implementation follows the current APG approach and uses a real `button` in each header.
 
-The ARIA-based implementation above should be used for all new projects, as it offers more appropriate semantics and more reliable support for modern assistive technologies.
+- The button toggles `aria-expanded` (`true`/`false`).
+- The button uses `aria-controls` to reference the associated panel.
+- The panel uses `role="region"` and `aria-labelledby` to expose a clear relationship back to the controlling header button.
+- **Keyboard Navigation:** Implementation should ideally support Arrow keys (`Up`/`Down`) to move focus between headers, and `Home`/`End` to jump to the first/last header.
 
-This implementation is based on the [tablists’ proof of concept](/examples/widgets/tablists/#proof-of-concept), only the layout is different.
 
-[Example](_examples/accordion-with-radio-buttons)  
-*(Legacy — for reference only)*
+### Comparison: ARIA vs. Native HTML
 
-#### Implementation details
+#### Comparison of Implementation Methods
 
-- Uses native radio button selection mechanics to keep exactly one panel open at a time.
-- Requires additional scripting/CSS to emulate accordion semantics and behaviour.
-- Kept for historical reference only.
+| Implementation Method | Advantages | Limitations |
+| :--- | :--- | :--- |
+| **Custom ARIA Implementation** | <ul><li>Full control over keyboard behavior (e.g. arrow keys).</li><li>Better for complex layouts/nested widgets.</li><li>Exact state control via JS.</li></ul> | <ul><li>Requires JavaScript for state and interaction.</li><li>Higher maintenance (must handle all ARIA states manually).</li></ul> |
+| **Native Disclosure Elements (`<details>`)**| <ul><li>Works without JavaScript.</li><li>Native accessibility "out of the box".</li><li>Minimal code footprint.</li></ul> | <ul><li>Limited styling options.</li><li>No native support for "only one open" (requires JS).</li><li>Default keyboard support is limited to Tab/Space/Enter.</li></ul> |
 
-### Checkboxes implementation (Legacy)
 
-**Note:** This approach is deprecated and provided for reference only.
+### Legacy implementations (Historical)
 
-The ARIA-based implementation above should be used for all new projects, as it offers more appropriate semantics and more reliable support for modern assistive technologies.
+**Note:** The following legacy variants are deprecated and provided for historical reference only.
 
-This implementation is based on the [tablists’ proof of concept](/examples/widgets/tablists/#proof-of-concept), with a slightly different layout:
+For all new projects, use one of the recommended implementations above (ARIA or native `<details>`/`<summary>`, depending on your requirements).
 
-[Example](_examples/multi-accordion-with-checkboxes)  
-*(Legacy — for reference only)*
-
-#### Implementation details
-
-- Uses checkbox controls to allow multiple panels open at once.
-- Requires additional scripting/CSS to approximate expected accordion behaviour.
-- Kept for historical reference only.
+[Accordion with radio buttons](_examples/accordion-with-radio-buttons) *(Legacy — for reference only)**  
+[Multi accordion with checkboxes](_examples/multi-accordion-with-checkboxes) *(Legacy — for reference only)*

@@ -101,5 +101,5 @@ The ARIA-based implementation (POC #1) should be used for all new projects, as i
 
 The radio button approach was previously used as a simpler alternative based on native form controls. However, radio buttons represent form input choices rather than navigational relationships between tabs and panels. This semantic mismatch leads to poorer screen reader support and inconsistent interaction patterns, requiring significant workarounds to achieve comparable accessibility.
 
-[Example](_examples/tablist-with-radio-buttons)  
+[Tablist with radio buttons](_examples/tablist-with-radio-buttons)  
 *(Legacy — for reference only)*
