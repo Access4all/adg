@@ -1,4 +1,3 @@
-const child_process = require('child_process')
 const gulp = require('gulp')
 const handlebars = require('gulp-hb')
 // const prettify = require('gulp-prettify')
@@ -131,15 +130,16 @@ const flattenNavigation = items =>
     return acc
   }, [])
 
-// Cache changed dates
-const changedDates = {}
-
 module.exports = (config, cb) => {
   const datetime = importFresh('./helpers/datetime')
   const markdown = importFresh('./helpers/markdown')(config.rootDir)
   const metatags = importFresh('./helpers/metatags')
   const Feed = importFresh('./helpers/rss')
   const appConfig = importFresh('../config')
+  const githubRepoUrl = appConfig.repoUrl
+  const getGitMetadata = importFresh('./helpers/git-metadata')({
+    githubRepoUrl
+  })
 
   const files = []
   const sitemap = []
@@ -261,19 +261,23 @@ module.exports = (config, cb) => {
               site_name: appConfig.title,
               url: `${appConfig.url}/${currentUrl}`
             }
-            const dateChanged =
-              changedDates[file.path] ||
-              child_process.spawnSync(
-                'git',
-                ['log', '-1', '--pretty=format:%ci', file.path],
-                { encoding: 'utf8' }
-              ).stdout
-
-            changedDates[file.path] = dateChanged
+            const metadata = getGitMetadata(file.path)
 
             file.data = Object.assign({}, file.data, {
               changed:
-                dateChanged && dateChanged.length > 0 ? dateChanged : null,
+                metadata.changed && metadata.changed.length > 0
+                  ? metadata.changed
+                  : null,
+              changedBy:
+                metadata.changedBy && metadata.changedBy.length > 0
+                  ? metadata.changedBy
+                  : null,
+              historyEntries:
+                metadata.historyEntries && metadata.historyEntries.length > 0
+                  ? metadata.historyEntries
+                  : [],
+              hasHistoryEntries:
+                metadata.historyEntries && metadata.historyEntries.length > 0,
               title: file.data.title,
               contents: file.contents,
               navigation: pageNavigation,
@@ -291,7 +295,7 @@ module.exports = (config, cb) => {
               breadcrumb: breadcrumb.sort((a, b) => {
                 return a.url.length - b.url.length
               }),
-              fileHistory: `https://github.com/Access4all/adg/commits/main/pages/${relPath}`
+              fileHistory: `${githubRepoUrl}/commits/main/pages/${relPath}`
             })
 
             sitemap.push({
