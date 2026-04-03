@@ -178,7 +178,7 @@ module.exports = rootDir => filePath => {
             token.children.some((childToken, childIdx) => {
               exampleLink = examples.getLink(childToken)
 
-              // Add title
+              // Add example embedding (unless line contains "legacy" keyword)
               if (exampleLink) {
                 if (hasLegacyMarker) {
                   return false
