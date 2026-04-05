@@ -29,6 +29,10 @@
   cursor: pointer;
 }
 
+[data-adg-dialog-container] h2 {
+  margin-top: 0;
+}
+
 svg#definition {
   display: none;
 }

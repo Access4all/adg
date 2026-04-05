@@ -6,17 +6,21 @@
   Some text before.
 </p>
 <p>
-  <button data-adg-dialog="my-dialog" aria-haspopup="dialog">Terms and conditions</button>
+  <button data-adg-native-dialog="my-dialog" aria-haspopup="dialog">Terms and conditions</button>
 </p>
 <p>
   Some text after.
 </p>
 <button>Focusable element after</button>
-<div hidden="" id="my-dialog">
-  <h2>
+<dialog data-adg-dialog-container id="my-dialog" aria-labelledby="my-dialog-heading" aria-describedby="my-dialog-description">
+  <button class="adg-dialog-icon" data-adg-dialog-close>
+    <svg class="icon" focusable="false"><use xlink:href="#tooltip" /></svg>
+    <span class="adg-visually-hidden">Close dialog</span>
+  </button>
+  <h2 id="my-dialog-heading">
     Terms and conditions
   </h2>
-  <p>
+  <p id="my-dialog-description">
     Here are the terms and conditions.
   </p>
   <p>
@@ -25,4 +29,7 @@
   <p>
     Please read them carefully...
   </p>
-</div>
+  <p>
+    <button data-adg-dialog-confirm>Confirm<span class="adg-visually-hidden"> (close)</span></button>
+  </p>
+</dialog>

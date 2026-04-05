@@ -11,13 +11,21 @@
   overflow: hidden;
 }
 
-[data-adg-dialog-container] {
+dialog[data-adg-dialog-container] {
   background-color: lightyellow;
   border: 1px solid;
-  position: absolute;
+  margin: 0;
+  padding: 10px;
+}
+
+dialog[data-adg-dialog-container][open] {
+  position: fixed;
   left: 40px;
   top: 40px;
-  padding: 10px;
+}
+
+dialog[data-adg-dialog-container]::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .adg-dialog-icon {
@@ -29,16 +37,7 @@
   cursor: pointer;
 }
 
-.adg-dialog-curtain {
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-[data-adg-dialog-container] h2 {
+dialog[data-adg-dialog-container] h2 {
   margin-top: 0;
 }
 
