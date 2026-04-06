@@ -1,8 +1,20 @@
-const path = require('path')
-const webpack = require('webpack')
-const argv = require('minimist')(process.argv.slice(2))
+import path from 'node:path'
+import { parseArgs } from 'node:util'
+import webpack from 'webpack'
 
-module.exports = (config, cb) => {
+const {
+  values: { webpackWatch }
+} = parseArgs({
+  options: {
+    webpackWatch: {
+      type: 'boolean',
+      default: false
+    }
+  },
+  allowPositionals: true
+})
+
+export default (config, cb) => {
   const compiler = webpack({
     entry: config.entry,
     mode: 'development',
@@ -10,7 +22,7 @@ module.exports = (config, cb) => {
       rules: [
         {
           test: /\.js$/,
-          include: path.resolve(__dirname, 'src'),
+          include: path.resolve(import.meta.dirname, 'src'),
           exclude: /node_modules/,
           loader: 'babel-loader',
           options: {
@@ -75,7 +87,7 @@ module.exports = (config, cb) => {
     return cb()
   }
 
-  if (argv.webpackWatch) {
+  if (webpackWatch) {
     compiler.watch({}, log)
   } else {
     compiler.run(log)

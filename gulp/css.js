@@ -1,11 +1,13 @@
-const gulp = require('gulp')
-const sass = require('gulp-sass')(require('sass'))
-const globImporter = require('node-sass-glob-importer')
+import gulp from 'gulp'
+import gulpSassInit from 'gulp-sass/legacy.js'
+import sassCompiler from 'sass'
+import globImporter from 'node-sass-glob-importer'
+import autoprefixer from 'autoprefixer'
+import postcss from 'gulp-postcss'
 
-const autoprefixer = require('autoprefixer')
-const postcss = require('gulp-postcss')
+const sass = gulpSassInit(sassCompiler)
 
-module.exports = config => {
+export default config => {
   return gulp
     .src(config.src, {
       base: config.srcBase
@@ -14,7 +16,7 @@ module.exports = config => {
       sass({
         importer: globImporter(),
         includePaths: config.includePaths,
-        silenceDeprecations: ['mixed-decls', 'import', 'legacy-js-api'],
+        silenceDeprecations: ['import', 'legacy-js-api'],
         quietDeps: true
       }).on('error', config.errorHandler)
     )

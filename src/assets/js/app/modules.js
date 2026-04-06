@@ -1,5 +1,5 @@
-import contextTrigger from '../lib/util/contextTrigger'
-import ModuleManager from '../lib/util/ModuleManager'
+import contextTrigger from '../lib/util/contextTrigger.js'
+import ModuleManager from '../lib/util/ModuleManager.js'
 
 export default () => {
   // every module should at least implement two methods

@@ -1,5 +1,5 @@
 import $ from 'jquery'
-import contextTrigger from './contextTrigger'
+import contextTrigger from './contextTrigger.js'
 
 // every module should at least implement two methods
 // Module.init = function( HTMLElement )
