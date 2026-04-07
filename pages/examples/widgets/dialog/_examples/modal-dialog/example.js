@@ -1,105 +1,76 @@
-;(function () {
-  function ensureHintText(button) {
-    if (button.querySelector('.adg-visually-hidden')) return
-    const hint = document.createElement('span')
-    hint.className = 'adg-visually-hidden'
-    hint.textContent = ' (dialog)'
-    button.append(hint)
+class AdgDialog {
+  constructor(opener) {
+    this.opener = opener
+    this.container = document.getElementById(opener.dataset.adgDialog)
+    if (!this.container) return
+
+    this.curtain = null
+    this.originalOverflow = ''
+    this.init()
   }
 
-  function ensureDialogSemantics(container) {
-    const heading = container.querySelector('h2')
-    const description = container.querySelector('p')
-    if (!heading || !description) return
-
-    if (!heading.id) heading.id = `${container.id}-title`
-    if (!description.id) description.id = `${container.id}-description`
-
-    container.setAttribute('role', 'dialog')
-    container.setAttribute('aria-modal', 'true')
-    container.setAttribute('aria-labelledby', heading.id)
-    container.setAttribute('aria-describedby', description.id)
-    container.setAttribute('data-adg-dialog-container', 'true')
+  init() {
+    this.cacheControls()
+    this.bindEvents()
   }
 
-  function buildCloseButton() {
-    const button = document.createElement('button')
-    button.className = 'adg-dialog-icon'
-    button.innerHTML =
-      '<svg class="icon" focusable="false"><use xlink:href="#tooltip"></use></svg><span class="adg-visually-hidden">Close dialog</span>'
-    return button
+  cacheControls() {
+    this.closeBtn = this.container.querySelector('[data-adg-dialog-close]')
+    this.confirmBtn = this.container.querySelector('[data-adg-dialog-confirm]')
   }
 
-  function buildConfirmButton() {
-    const wrapper = document.createElement('p')
-    wrapper.innerHTML =
-      '<button>Confirm<span class="adg-visually-hidden"> (close)</span></button>'
-    return wrapper.firstElementChild
-  }
-
-  function getFocusable(container) {
-    return Array.from(
-      container.querySelectorAll(
-        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
-      )
-    )
-  }
-
-  function initDialog(opener) {
-    const containerId = opener.getAttribute('data-adg-dialog')
-    const container = document.getElementById(containerId)
-    if (!container) return
-
-    ensureDialogSemantics(container)
-
-    const closeButton = buildCloseButton()
-    const confirmButton = buildConfirmButton()
-    container.prepend(closeButton)
-    container.append(confirmButton)
-
-    opener.setAttribute('aria-expanded', 'false')
-    opener.setAttribute('aria-haspopup', 'dialog')
-    ensureHintText(opener)
-
-    let curtain = null
-
-    const show = () => {
-      if (!curtain) {
-        curtain = document.createElement('div')
-        curtain.className = 'adg-dialog-curtain'
-        container.before(curtain)
-      }
-      container.removeAttribute('hidden')
-      opener.setAttribute('aria-expanded', 'true')
-      closeButton.focus()
-    }
-
-    const hide = () => {
-      if (curtain) {
-        curtain.remove()
-        curtain = null
-      }
-      container.setAttribute('hidden', '')
-      opener.setAttribute('aria-expanded', 'false')
-      opener.focus()
-    }
-
-    opener.addEventListener('click', () => {
-      if (container.hasAttribute('hidden')) show()
-      else hide()
+  toggleInert(isActive) {
+    // Make background content unavailable while the modal is open.
+    Array.from(document.body.children).forEach(node => {
+      if (node === this.container || node === this.curtain) return
+      isActive ? node.setAttribute('inert', '') : node.removeAttribute('inert')
     })
-    closeButton.addEventListener('click', hide)
-    confirmButton.addEventListener('click', hide)
+  }
 
-    container.addEventListener('keydown', e => {
-      if (e.key === 'Escape') {
-        e.preventDefault()
-        hide()
-        return
-      }
+  show() {
+    if (!this.curtain) {
+      // The curtain provides a visual backdrop behind the custom modal.
+      this.curtain = document.createElement('div')
+      this.curtain.className = 'adg-dialog-curtain'
+      this.container.before(this.curtain)
+    }
+    this.toggleInert(true)
 
-      if (e.key !== 'Tab') return
-      const focusables = getFocusable(container)
+    this.originalOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+
+    this.container.removeAttribute('hidden')
+    this.opener.setAttribute('aria-expanded', 'true')
+    this.closeBtn.focus()
+  }
+
+  hide() {
+    if (this.curtain) {
+      this.curtain.remove()
+      this.curtain = null
+    }
+    this.container.setAttribute('hidden', '')
+    this.opener.setAttribute('aria-expanded', 'false')
+    this.toggleInert(false)
+
+    document.body.style.overflow = this.originalOverflow
+    this.opener.focus()
+  }
+
+  handleKeydown(e) {
+    if (e.key === 'Escape') {
+      e.preventDefault()
+      this.hide()
+      return
+    }
+
+    if (e.key === 'Tab') {
+      // Keep focus cycling inside the modal while it is active.
+      const focusables = Array.from(
+        this.container.querySelectorAll(
+          'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        )
+      )
       if (focusables.length === 0) return
 
       const first = focusables[0]
@@ -112,10 +83,25 @@
         e.preventDefault()
         first.focus()
       }
-    })
+    }
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('[data-adg-dialog]').forEach(initDialog)
-  })
-})()
+  bindEvents() {
+    if (!this.closeBtn || !this.confirmBtn) return
+
+    this.opener.addEventListener('click', () => {
+      this.container.hasAttribute('hidden') ? this.show() : this.hide()
+    })
+
+    this.closeBtn.addEventListener('click', () => this.hide())
+    this.confirmBtn.addEventListener('click', () => this.hide())
+    this.container.addEventListener('keydown', e => this.handleKeydown(e))
+  }
+}
+
+// Enhance all custom dialog triggers on the page.
+document.addEventListener('DOMContentLoaded', () => {
+  document
+    .querySelectorAll('[data-adg-dialog]')
+    .forEach(opener => new AdgDialog(opener))
+})

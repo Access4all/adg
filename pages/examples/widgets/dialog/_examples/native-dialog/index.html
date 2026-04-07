@@ -1,20 +1,54 @@
-<svg id="definition" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><symbol id="tooltip" viewbox="0 0 51.976 51.976"><g><path d="M44.373,7.603c-10.137-10.137-26.632-10.138-36.77,0c-10.138,10.138-10.137,26.632,0,36.77s26.632,10.138,36.77,0 		C54.51,34.235,54.51,17.74,44.373,7.603z M36.241,36.241c-0.781,0.781-2.047,0.781-2.828,0l-7.425-7.425l-7.778,7.778 		c-0.781,0.781-2.047,0.781-2.828,0c-0.781-0.781-0.781-2.047,0-2.828l7.778-7.778l-7.425-7.425c-0.781-0.781-0.781-2.048,0-2.828 		c0.781-0.781,2.047-0.781,2.828,0l7.425,7.425l7.071-7.071c0.781-0.781,2.047-0.781,2.828,0c0.781,0.781,0.781,2.047,0,2.828 		l-7.071,7.071l7.425,7.425C37.022,34.194,37.022,35.46,36.241,36.241z"></path></g></symbol></defs></svg>
+<svg id="definition" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><symbol id="close-icon" viewbox="0 0 51.976 51.976"><g><path d="M44.373,7.603c-10.137-10.137-26.632-10.138-36.77,0c-10.138,10.138-10.137,26.632,0,36.77s26.632,10.138,36.77,0 		C54.51,34.235,54.51,17.74,44.373,7.603z M36.241,36.241c-0.781,0.781-2.047,0.781-2.828,0l-7.425-7.425l-7.778,7.778 		c-0.781,0.781-2.047,0.781-2.828,0c-0.781-0.781-0.781-2.047,0-2.828l7.778-7.778l-7.425-7.425c-0.781-0.781-0.781-2.048,0-2.828 		c0.781-0.781,2.047-0.781,2.828,0l7.425,7.425l7.071-7.071c0.781-0.781,2.047-0.781,2.828,0c0.781,0.781,0.781,2.047,0,2.828 		l-7.071,7.071l7.425,7.425C37.022,34.194,37.022,35.46,36.241,36.241z"></path></g></symbol></defs></svg>
+
+
+<button>Focusable element before</button>
+<h2>Example page content</h2>
 <p>
-  <button>Focusable element before</button>
+  This example includes additional page content so you can scroll before opening the dialog.
 </p>
+<p>
+  Scroll down to the trigger, open the dialog, and verify that background scrolling is locked while the modal is active.
+</p>
+
 <p>
   Some text before.
 </p>
 <p>
-  <button data-adg-native-dialog="my-dialog" aria-haspopup="dialog">Terms and conditions</button>
+  <button data-adg-native-dialog="my-dialog" aria-haspopup="dialog">
+    Terms and conditions
+    <span class="adg-visually-hidden"> (dialog)</span>
+  </button>
 </p>
 <p>
   Some text after.
+</p>  
+<p>
+  Additional content below the trigger makes it easier to confirm that the page remains in place while the dialog is open.
 </p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere, orci nec tincidunt dapibus, neque felis feugiat sapien, vitae volutpat nibh lorem sed sem.
+</p>
+<p>
+  Curabitur euismod, erat nec tincidunt tincidunt, enim risus pretium nulla, at varius velit tellus vel neque. Donec tempor feugiat sem, ut suscipit nibh lacinia vitae.
+</p>
+<p>
+  Sed sit amet magna id sem fermentum suscipit. Nullam feugiat, urna quis finibus vulputate, dui purus pretium est, vitae luctus magna velit at lorem.
+</p>
+<p>
+  Vivamus luctus mauris ut libero tincidunt, at porttitor lectus porttitor. Aliquam erat volutpat. Suspendisse potenti.
+</p>
+<p>
+  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum volutpat nisl ac neque posuere, vitae placerat justo dictum.
+</p>
+<p>
+  Integer convallis risus et purus gravida, at lacinia leo volutpat. Cras non nisl eu justo condimentum pretium.
+</p>
+
 <button>Focusable element after</button>
-<dialog data-adg-dialog-container id="my-dialog" aria-labelledby="my-dialog-heading" aria-describedby="my-dialog-description">
+
+<dialog class="adg-dialog" id="my-dialog" aria-labelledby="my-dialog-heading" aria-describedby="my-dialog-description">
   <button class="adg-dialog-icon" data-adg-dialog-close>
-    <svg class="icon" focusable="false"><use xlink:href="#tooltip" /></svg>
+    <svg class="icon" focusable="false"><use xlink:href="#close-icon" /></svg>
     <span class="adg-visually-hidden">Close dialog</span>
   </button>
   <h2 id="my-dialog-heading">

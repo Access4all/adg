@@ -11,20 +11,20 @@
   overflow: hidden;
 }
 
-dialog[data-adg-dialog-container] {
+dialog.adg-dialog {
   background-color: lightyellow;
   border: 1px solid;
   margin: 0;
   padding: 10px;
 }
 
-dialog[data-adg-dialog-container][open] {
+dialog.adg-dialog[open] {
   position: fixed;
   left: 40px;
   top: 40px;
 }
 
-dialog[data-adg-dialog-container]::backdrop {
+dialog.adg-dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -32,12 +32,18 @@ dialog[data-adg-dialog-container]::backdrop {
   float: right;
   border: none;
   background-color: transparent;
+  min-width: 24px;
+  min-height: 24px;
+  padding: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .adg-dialog-icon:hover {
   cursor: pointer;
 }
 
-dialog[data-adg-dialog-container] h2 {
+dialog.adg-dialog h2 {
   margin-top: 0;
 }
 

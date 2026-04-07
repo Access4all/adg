@@ -1,51 +1,70 @@
-;(function () {
-  function ensureHintText(button) {
-    if (button.querySelector('.adg-visually-hidden')) return
-    const hint = document.createElement('span')
-    hint.className = 'adg-visually-hidden'
-    hint.textContent = ' (dialog)'
-    button.append(hint)
+class AdgNativeDialog {
+  constructor(opener) {
+    this.opener = opener
+    this.dialog = document.getElementById(opener.dataset.adgNativeDialog)
+
+    if (!this.dialog) return
+
+    this.closeBtn = this.dialog.querySelector('[data-adg-dialog-close]')
+    this.confirmBtn = this.dialog.querySelector('[data-adg-dialog-confirm]')
+
+    this.init()
   }
 
-  function initDialog(opener) {
-    const dialogId = opener.getAttribute('data-adg-native-dialog')
-    const dialog = document.getElementById(dialogId)
-    if (!dialog) return
+  init() {
+    this.bindEvents()
+  }
 
-    const closeButton = dialog.querySelector('[data-adg-dialog-close]')
-    const confirmButton = dialog.querySelector('[data-adg-dialog-confirm]')
-    if (!closeButton || !confirmButton) return
-
-    opener.setAttribute('aria-expanded', 'false')
-    opener.setAttribute('aria-haspopup', 'dialog')
-    ensureHintText(opener)
-
-    const show = () => {
-      if (!dialog.open) dialog.showModal()
-      opener.setAttribute('aria-expanded', 'true')
-      closeButton.focus()
+  show() {
+    if (!this.dialog.open) {
+      this.dialog.showModal()
     }
+    if (this.closeBtn) this.closeBtn.focus()
+  }
 
-    const hide = () => {
-      if (dialog.open) dialog.close()
-      opener.setAttribute('aria-expanded', 'false')
-      opener.focus()
+  hide() {
+    if (this.dialog.open) {
+      this.dialog.close()
     }
+    this.opener.focus()
+  }
 
-    opener.addEventListener('click', () => {
-      if (dialog.open) hide()
-      else show()
+  handleBackdropClick(e) {
+    // Treat clicks outside the dialog box as backdrop clicks.
+    const rect = this.dialog.getBoundingClientRect()
+    const clickedInside =
+      e.clientX >= rect.left &&
+      e.clientX <= rect.right &&
+      e.clientY >= rect.top &&
+      e.clientY <= rect.bottom
+
+    if (!clickedInside) {
+      this.hide()
+    }
+  }
+
+  bindEvents() {
+    this.opener.addEventListener('click', () => {
+      this.dialog.open ? this.hide() : this.show()
     })
-    closeButton.addEventListener('click', hide)
-    confirmButton.addEventListener('click', hide)
 
-    dialog.addEventListener('cancel', e => {
+    if (this.closeBtn)
+      this.closeBtn.addEventListener('click', () => this.hide())
+    if (this.confirmBtn)
+      this.confirmBtn.addEventListener('click', () => this.hide())
+
+    this.dialog.addEventListener('cancel', e => {
       e.preventDefault()
-      hide()
+      this.hide()
     })
-  }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('[data-adg-native-dialog]').forEach(initDialog)
-  })
-})()
+    this.dialog.addEventListener('click', e => this.handleBackdropClick(e))
+  }
+}
+
+// Enhance all native dialog triggers on the page.
+document.addEventListener('DOMContentLoaded', () => {
+  document
+    .querySelectorAll('[data-adg-native-dialog]')
+    .forEach(opener => new AdgNativeDialog(opener))
+})

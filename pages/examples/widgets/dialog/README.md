@@ -3,92 +3,113 @@ navigation_title: "Dialog"
 position: 12
 ---
 
-# Dialog widget (or: modal, popup, lightbox, overlay, alert)
+# Dialog widget (modal, popup, lightbox, overlay)
 
-**Dialogs show contextual content above the page. Use them for confirmations, short tasks, or additional details.**
+**Dialogs display contextual content above the page. Use them for confirmations, short tasks, or additional details.**
 
 [[_TOC_]]
 
 ![Dialog](_media/dialog.png)
 
-## 1. Decision matrix: native vs custom
+## General requirements
 
-Before you start, choose the right technical approach.
-**Recommendation:** For new projects, use the native `<dialog>` element.
+The following requirements are based on established best practices and the WAI-ARIA Authoring Practices [Dialog Modal Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/).
+
+To fulfil WCAG 2.2 standards, accessible dialogs must meet these criteria:
+
+- **Predictable Focus:** Focus moves into the dialog when it opens and returns to the triggering element when it closes (SC 2.4.3).
+- **Keyboard Control:** The dialog is fully operable via keyboard, including `Tab` navigation and a clear mechanism to close it (e.g. `Esc`) (SC 2.1.1).
+- **Focus Trapping:** Modal dialogs keep focus within the dialog while open.
+- **Semantics:** The dialog has a clear accessible name (e.g. via `aria-labelledby`) and uses either the native `<dialog>` element or `role="dialog"`.
+
+### Decision matrix
 
 | Aspect | Native `<dialog>` | Custom dialog (ARIA) |
 | --- | --- | --- |
-| Conformance | Usually closer to WCAG/APG by default. | Must be built manually and tested intensively. |
-| Effect | `showModal()` uses the top layer. | Requires manual focus traps and overlays. |
-| Background handling | Makes the rest of the page inert automatically. | Background blocking must be implemented manually in JavaScript. |
-| When to use | Default for new features. | Only for strict legacy constraints or explicit custom behavior needs. |
+| Effort | Low | High |
+| Focus handling | Mostly handled by browser | Must be implemented manually |
+| Top layer | Automatic | Manual (`z-index` management required) |
+| Background interaction | Automatically blocked via `showModal()` | Requires `inert` or equivalent |
 
-## 2. Core specification (the blueprint)
+Before you continue, please read [What is a "Proof of concept"?](/examples/widgets/proof-of-concept).
 
-These rules apply to every dialog. Use them as both implementation guidance and QA acceptance criteria.
 
-### A. Semantics and initial state
+## Proofs of concept
 
-- **Trigger button:** Use `aria-haspopup="dialog"` and `aria-expanded` for state feedback.
-- **Naming:** Every dialog needs an accessible name via `aria-labelledby` (linked to a heading inside the dialog).
-- **Description:** Use `aria-describedby` only for short helper text, not for the entire content.
-- **API:** Use `showModal()` for modal dialogs and `show()` for non-modal dialogs.
-- **State handling:** Do not use the `open` attribute as your primary JavaScript API.
+### Native modal dialog
 
-### B. Focus management (crucial)
-
-- **Open:** Move focus into the dialog to a meaningful element (for example: close button or first form field).
-- **Safety:** Never default focus to a destructive action.
-- **Containment:** In modal dialogs, `Tab` focus must not leave the dialog.
-- **Close:** Return focus to the opener.
-- **Do not:** Put focus on the dialog container itself.
-
-### C. Interaction and close behavior
-
-| Behavior | Modal (`showModal`) | Non-modal (`show`) |
-| --- | --- | --- |
-| Visible close button | Required | Required |
-| `Esc` key | Required (native behavior for `<dialog>`) | Recommended |
-| Backdrop click | Optional (must be consistent and communicated) | Optional |
-| Background interaction | Blocked (inert) | Allowed |
-
-For modal dialogs, align keyboard interaction with APG expectations (`Tab`, `Shift+Tab`, `Escape`): [Modal Dialog Example (APG)](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/dialog/).
-
-## 3. Proofs of concept
-
-Before you go on, please read [What is a "Proof of concept"?](/examples/widgets/proof-of-concept).
-
-All three examples intentionally show the same dialog content and a very similar visual design. This makes comparison straightforward.
-
-### Native modal
-
-Best-practice implementation using `<dialog>` and `::backdrop` styling.
+This variant uses the native HTML `<dialog>` element and should be the default choice for modern projects.
+Use this variant when you need modal behaviour with low implementation effort and reliable built-in browser handling.
 
 [Example](_examples/native-dialog)
 
-### Custom non-modal
+#### Implementation details
 
-Useful for persistent overlays where background interaction remains available.
+- **Activation:** Use `.showModal()` to open the dialog in the browser's top layer.
+- **Backdrop:** Style using the `::backdrop` pseudo-element.
+- **Keyboard behaviour:** Browsers generally keep focus within the dialog and support closing via `Esc`, consistent with platform conventions.
+- **Focus return:** Browsers typically restore focus to the previously focused element when `.close()` is called.
+- **State:** Do not rely on the `open` attribute alone for modal behaviour.
+
+
+### Non-modal dialog
+
+This variant displays content above the page while background content remains interactive.
+Use this variant when users must continue interacting with the underlying page while keeping contextual information visible.
 
 [Example](_examples/non-modal-dialog)
 
-### Custom modal
+#### Implementation details
 
-Reference pattern for legacy systems, including a manual focus trap.
+- **Visibility:** Toggle using the `hidden` attribute to remove it from the accessibility tree when closed.
+- **State indication:** `aria-expanded` may be used if the dialog behaves like a disclosure pattern.
+- **Focus handling:** Move focus to a meaningful element when opened. Do not trap focus.
+- **DOM position:** Place markup close to the trigger to preserve logical tab order.
+
+
+### Custom modal dialog
+
+This variant recreates modal dialog behaviour with ARIA semantics and custom JavaScript logic.
+Use this only when native `<dialog>` cannot be used.
 
 [Example](_examples/modal-dialog)
 
-## 4. WCAG 2.2 compliance mapping
+#### Implementation details
 
-Ensure your dialog implementation meets these criteria:
+- **Role and name:** Use `role="dialog"` and `aria-labelledby`.
+- **Focus trap:** Implement manual focus management for `Tab` and `Shift + Tab`.
+- **Keyboard interaction:** Provide an explicit `Esc` handler.
+- **Inertness:** Mark background content as `inert` (or equivalent) while open.
 
-- `2.1.1 Keyboard (A)`: all actions are keyboard operable.
-- `2.1.2 No Keyboard Trap (A)`: users can always exit or close the dialog.
-- `2.4.3 Focus Order (A)`: focus flow is logical (in -> within -> back out).
-- `2.5.8 Target Size (AA)`: interactive targets should be at least 24x24 CSS pixels.
-- `4.1.2 Name, Role, Value (A)`: semantics and state are correctly exposed to assistive technologies.
 
-## References
+## Further discussions
 
-- APG pattern: [Dialog (Modal) Pattern](https://www.w3.org/TR/wai-aria-practices/#dialog_modal)
-- APG example: [Modal Dialog Example (APG)](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/dialog/)
+### Headings in dialogs
+
+- **Modal dialogs:** May act as self-contained contexts; `<h2>` is usually a safe default.
+- **Non-modal dialogs:** Should follow the existing page hierarchy.
+
+### Positioning in the DOM
+
+- **Native `<dialog>`:** Placement is flexible, but proximity to the trigger improves maintainability.
+- **Custom dialogs:** Often placed at the end of `<body>` to avoid layout issues.
+
+### Initial focus positioning
+
+By default, focus the first focusable element in the dialog. Consider these exceptions:
+
+- **Destructive actions:** For confirmation dialogs (e.g. deletion), focus `Cancel` rather than `Delete` to reduce accidental data loss.
+- **Long content:** Focus the dialog title (`tabindex="-1"`) so screen readers start reading from the top of the content.
+
+### Backdrop interaction
+
+Users often expect a modal to close when they click the backdrop.
+
+- **Implementation:** With native `<dialog>`, detect clicks on the dialog element itself (the backdrop is part of the box model) and call `.close()`. Ensure the click target is strictly the `<dialog>` and not its children, to prevent the dialog from closing when clicking inside the modal content.
+
+### Preventing background scrolling
+
+When a modal is open, background page content should not be scrollable.
+
+- **Native:** Handled automatically by `.showModal()`.
+- **Custom:** Apply `overflow: hidden` to `<body>` while the dialog is active.

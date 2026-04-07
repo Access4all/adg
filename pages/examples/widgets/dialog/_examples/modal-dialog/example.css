@@ -11,34 +11,46 @@
   overflow: hidden;
 }
 
-[data-adg-dialog-container] {
+.adg-dialog {
   background-color: lightyellow;
   border: 1px solid;
-  position: absolute;
+  position: fixed;
   left: 40px;
   top: 40px;
   padding: 10px;
+  z-index: 2;
 }
 
 .adg-dialog-icon {
   float: right;
   border: none;
   background-color: transparent;
+  min-width: 24px;
+  min-height: 24px;
+  padding: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .adg-dialog-icon:hover {
   cursor: pointer;
 }
 
-.adg-dialog-curtain {
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+body.adg-dialog-open {
+  overflow: hidden;
 }
 
-[data-adg-dialog-container] h2 {
+.adg-dialog-curtain {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.adg-dialog h2 {
   margin-top: 0;
 }
 
