@@ -1,0 +1,13 @@
+<span class="author{{#if className}} {{className}}{{/if}}">
+  {{#if gravatarUrl}}
+    <img
+      class="author__avatar"
+      src="{{gravatarUrl}}"
+      alt=""
+      loading="lazy"
+      width="32"
+      height="32"
+    >
+  {{/if}}
+  <span class="author__name">{{name}}</span>
+</span>

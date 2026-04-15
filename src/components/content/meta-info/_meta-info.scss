@@ -1,21 +1,91 @@
 .meta-info {
   @include rem(padding-top, $gutter);
+  gap: 1em;
 
   display: flex;
-  font-size: 0.8rem;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 16px;
   border-top: 1px solid var(--theme-main-color-inverse, $c-white);
 
   .theme-contribution & {
     border-color: var(--theme-color-medium, $c-gray);
   }
-}
 
-.meta-info__title {
-  margin-right: 0.5em;
+  @include mobile-portrait {
+    align-items: flex-start;
+  }
 }
 
 .meta-info__logo {
   display: block;
-  width: 1.5em;
-  height: 1.5em;
+  width: 32px;
+  height: 32px;
+}
+
+.meta-info__updated {
+  margin-right: 0;
+  font-weight: 500;
+}
+
+.meta-info__author {
+  margin-right: auto;
+}
+
+.meta-info__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.meta-info-history {
+  font-size: 14px;
+  width: 100%;
+}
+
+.meta-info-history__summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.meta-info-history__summary::-webkit-details-marker {
+  display: none;
+}
+
+.meta-info-history__summary::before {
+  content: '▽';
+  margin-right: 0.5em;
+  font-size: 1em;
+  line-height: 1;
+}
+
+.meta-info-history[open] .meta-info-history__summary::before {
+  content: '△';
+}
+
+.meta-info-history__summary:focus-visible {
+  outline: 2px solid currentcolor;
+  outline-offset: 2px;
+}
+
+.meta-info-history__list {
+  margin-top: 0.5em;
+  font-size: 14x;
+}
+
+.meta-info-history__item {
+  margin-bottom: 0.5em;
+}
+
+.meta-info-history__date {
+  font-weight: 600;
+}
+
+.meta-info-history__message {
+  margin-left: 0.5em;
+}
+
+.meta-info-history__author {
+  margin-left: 0.5em;
+  font-style: italic;
 }
