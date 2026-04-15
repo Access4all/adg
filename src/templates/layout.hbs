@@ -55,6 +55,9 @@
           {{#if subPages}}
             {{> "content/cardmenu/cardmenu" menuitem=subPages}}
           {{/if}}
+          {{#if recentlyUpdatedPages}}
+            {{> "content/recent-pages/recent-pages" pages=recentlyUpdatedPages}}
+          {{/if}}
         </div>
         {{> "content/prev_next/prev_next" prev=previousPage next=nextPage}}
         {{#notEq section 'welcome'}}

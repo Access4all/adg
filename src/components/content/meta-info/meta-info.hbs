@@ -2,19 +2,18 @@
 <h2 class="visuallyhidden">
   About this page
 </h2>
-<p class="meta-info">
+<div class="meta-info">
   <span class="meta-info__updated">
     Last updated: {{ formatDate changed }}
-    {{#if changedBy}}
-      by
-      {{ changedBy }}
-    {{/if}}
   </span>
+  {{#if changedBy}}
+    {{> "content/author/author" name=changedBy gravatarUrl=gravatarUrl className="meta-info__author"}}
+  {{/if}}
   <a href="{{ fileHistory }}" class="meta-info__link">
     {{{ inlineSvg "src/assets/img/logo/github.svg" class="meta-info__logo" }}}
     <span>View full history on GitHub</span>
   </a>
-</p>
+</div>
 {{#if hasHistoryEntries}}
   <details class="meta-info-history">
     <summary class="meta-info-history__summary">

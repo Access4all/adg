@@ -1,0 +1,75 @@
+.recent-pages {
+  @include rem(margin-top, $gutter);
+}
+
+.recent-pages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.recent-pages__item {
+  margin: 0;
+}
+
+.recent-pages__link {
+  @include rem(padding, 1rem 1.1rem);
+
+  display: block;
+  background: var(--theme-main-color-inverse, $c-white);
+  border: 1px solid var(--theme-color-medium, $c-gray);
+  border-radius: 10px;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.08);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease,
+    transform 0.15s ease;
+
+  &:hover,
+  &:focus {
+    border-color: var(--theme-color-dark);
+    box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.12);
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+}
+
+.recent-pages__date {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--theme-color-dark);
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.recent-pages__title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.recent-pages__title-link {
+  color: var(--theme-color-dark);
+  text-decoration: none;
+}
+
+.recent-pages__lead {
+  @include rem(margin-top, 0.35rem);
+  @include rem(margin-bottom, 0.6rem);
+
+  max-width: 58rem;
+  color: var(--theme-color-dark);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.recent-pages__author {
+  @include rem(margin-bottom, 0.65rem);
+  color: var(--theme-color-dark);
+
+  display: flex;
+}

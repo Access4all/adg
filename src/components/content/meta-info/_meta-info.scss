@@ -5,7 +5,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 16px;
   border-top: 1px solid var(--theme-main-color-inverse, $c-white);
 
   .theme-contribution & {
@@ -20,6 +20,10 @@
 }
 
 .meta-info__updated {
+  margin-right: 0;
+}
+
+.meta-info__author {
   margin-right: auto;
 }
 
@@ -27,6 +31,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+  margin-left: auto;
 }
 
 .meta-info-history {
@@ -46,7 +51,7 @@
 .meta-info-history__summary::before {
   content: '▽';
   @include rem(margin-right, 0.35rem);
-  font-size: 0.75em;
+  font-size: 16px;
   line-height: 1;
 }
 

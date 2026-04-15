@@ -1,0 +1,24 @@
+<section class="recent-pages" aria-labelledby="recent-pages-heading">
+  <div class="text_container">
+    <h2 id="recent-pages-heading">Recent changes</h2>
+  </div>
+
+  <ul class="recent-pages__list">
+    {{#each pages}}
+      <li class="recent-pages__item">
+        <a class="recent-pages__link" href="/{{url}}">
+          <span class="recent-pages__date">{{ formatDate changed }}</span>
+          <h3 class="recent-pages__title">
+            <span class="recent-pages__title-link">{{title}}</span>
+          </h3>
+          {{#if lead}}
+            <p class="recent-pages__lead">{{ truncateText lead 150 }}</p>
+          {{/if}}
+          {{#if changedBy}}
+            {{> "content/author/author" name=changedBy gravatarUrl=gravatarUrl className="recent-pages__author"}}
+          {{/if}}
+        </a>
+      </li>
+    {{/each}}
+  </ul>
+</section>

@@ -23,6 +23,15 @@ const getUrl = (filePath, base) => {
     .replace(/\/$/, '')
 }
 
+const getCurrentUrl = (filePath, base) => {
+  const relPath = path.relative(base, filePath)
+  const lastSeparatorIndex = relPath.lastIndexOf(path.sep)
+
+  return (
+    lastSeparatorIndex >= 0 ? relPath.substring(0, lastSeparatorIndex) : ''
+  ).replace(pathSeparatorRegExp, '/')
+}
+
 const getLayout = (layoutName, layouts) => {
   layoutName = layoutName || 'layout'
 
@@ -130,6 +139,8 @@ const flattenNavigation = items =>
     return acc
   }, [])
 
+const recentUpdatesLimit = 8
+
 module.exports = (config, cb) => {
   const datetime = importFresh('./helpers/datetime')
   const markdown = importFresh('./helpers/markdown')(config.rootDir)
@@ -140,6 +151,30 @@ module.exports = (config, cb) => {
   const getGitMetadata = importFresh('./helpers/git-metadata')({
     githubRepoUrl
   })
+  const getRecentlyUpdatedPages = currentFilePath =>
+    files
+      .filter(file => !file.frontMatter.navigation_ignore)
+      .map(file => {
+        const metadata = getGitMetadata(file.path)
+
+        return {
+          title: file.data.title,
+          lead: file.data.lead,
+          url: getCurrentUrl(file.path, config.base),
+          changed: metadata.changed,
+          changedBy: metadata.changedBy,
+          gravatarUrl: metadata.gravatarUrl
+        }
+      })
+      .filter(
+        page =>
+          page.title &&
+          page.url &&
+          page.changed &&
+          page.url !== getCurrentUrl(currentFilePath, config.base)
+      )
+      .sort((a, b) => new Date(b.changed) - new Date(a.changed))
+      .slice(0, recentUpdatesLimit)
 
   const files = []
   const sitemap = []
@@ -240,9 +275,7 @@ module.exports = (config, cb) => {
           try {
             const layout = getLayout(file.frontMatter.layout, layouts)
             const relPath = path.relative('./pages', file.path)
-            const currentUrl = relPath
-              .substring(0, relPath.lastIndexOf(path.sep))
-              .replace(pathSeparatorRegExp, '/')
+            const currentUrl = getCurrentUrl(file.path, config.base)
             const prevNext = {}
             const breadcrumb = []
             const subPages = []
@@ -272,6 +305,10 @@ module.exports = (config, cb) => {
                 metadata.changedBy && metadata.changedBy.length > 0
                   ? metadata.changedBy
                   : null,
+              gravatarUrl:
+                metadata.gravatarUrl && metadata.gravatarUrl.length > 0
+                  ? metadata.gravatarUrl
+                  : null,
               historyEntries:
                 metadata.historyEntries && metadata.historyEntries.length > 0
                   ? metadata.historyEntries
@@ -291,6 +328,8 @@ module.exports = (config, cb) => {
                     level: 1
                   }))
                 : subPages,
+              recentlyUpdatedPages:
+                currentUrl === '' ? getRecentlyUpdatedPages(file.path) : [],
               metatags: metatags.generateTags(metatagsData),
               breadcrumb: breadcrumb.sort((a, b) => {
                 return a.url.length - b.url.length
@@ -327,6 +366,20 @@ module.exports = (config, cb) => {
         },
         helpers: {
           formatDate: datetime.formatDate,
+          truncateText: function (text, maxLength) {
+            if (!text) {
+              return ''
+            }
+
+            const normalizedText = String(text).trim().replace(/\s+/g, ' ')
+            const limit = Number(maxLength)
+
+            if (!Number.isFinite(limit) || normalizedText.length <= limit) {
+              return normalizedText
+            }
+
+            return `${normalizedText.slice(0, limit).trimEnd()}...`
+          },
           eq: function (v1, v2, options) {
             if (v1 === v2) {
               return options.fn(this)

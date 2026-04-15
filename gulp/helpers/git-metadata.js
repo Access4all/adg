@@ -1,4 +1,5 @@
 const childProcess = require('child_process')
+const crypto = require('crypto')
 
 const excludedCommitIds = [
   'ac195754a6e64604066dafe2f5ad373c2a949ac4', // May 2, 2018   Absolutise paths
@@ -19,6 +20,23 @@ const excludedCommitIdsSet = new Set(
   excludedCommitIds.map(id => id.toLowerCase())
 )
 const historyYearsLimit = 5
+const gravatarImageSize = 48
+
+const getGravatarUrl = email => {
+  if (!email) {
+    return ''
+  }
+
+  const normalizedEmail = String(email).trim().toLowerCase()
+
+  if (!normalizedEmail) {
+    return ''
+  }
+
+  const hash = crypto.createHash('sha256').update(normalizedEmail).digest('hex')
+
+  return `https://gravatar.com/avatar/${hash}?s=${gravatarImageSize}&d=mp`
+}
 
 module.exports = ({ githubRepoUrl }) => {
   const changedMetadata = {}
@@ -30,7 +48,7 @@ module.exports = ({ githubRepoUrl }) => {
 
     const historyStdout = childProcess.spawnSync(
       'git',
-      ['log', '--pretty=format:%H%x1f%ci%x1f%an%x1f%s%x1e', filePath],
+      ['log', '--pretty=format:%H%x1f%ci%x1f%an%x1f%ae%x1f%s%x1e', filePath],
       { encoding: 'utf8' }
     ).stdout
 
@@ -39,13 +57,20 @@ module.exports = ({ githubRepoUrl }) => {
       .map(item => item.trim())
       .filter(Boolean)
       .map(item => {
-        const [commitId = '', changed = '', changedBy = '', message = ''] =
-          item.split('\x1f')
+        const [
+          commitId = '',
+          changed = '',
+          changedBy = '',
+          changedByEmail = '',
+          message = ''
+        ] = item.split('\x1f')
 
         return {
           commitId,
           changed,
           changedBy,
+          changedByEmail,
+          gravatarUrl: getGravatarUrl(changedByEmail),
           commitUrl: `${githubRepoUrl}/commit/${commitId}`,
           message
         }
@@ -67,6 +92,8 @@ module.exports = ({ githubRepoUrl }) => {
     const metadata = {
       changed: latestEntry ? latestEntry.changed : '',
       changedBy: latestEntry ? latestEntry.changedBy : '',
+      changedByEmail: latestEntry ? latestEntry.changedByEmail : '',
+      gravatarUrl: latestEntry ? latestEntry.gravatarUrl : '',
       historyEntries
     }
 
