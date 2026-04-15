@@ -1,6 +1,6 @@
 .meta-info {
   @include rem(padding-top, $gutter);
-  @include rem(gap, 0.75rem);
+  gap: 1em;
 
   display: flex;
   flex-wrap: wrap;
@@ -11,16 +11,21 @@
   .theme-contribution & {
     border-color: var(--theme-color-medium, $c-gray);
   }
+
+  @include mobile-portrait {
+    align-items: flex-start;
+  }
 }
 
 .meta-info__logo {
   display: block;
-  width: 1.5em;
-  height: 1.5em;
+  width: 32px;
+  height: 32px;
 }
 
 .meta-info__updated {
   margin-right: 0;
+  font-weight: 500;
 }
 
 .meta-info__author {
@@ -30,13 +35,12 @@
 .meta-info__link {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  margin-left: auto;
+  gap: 8px;
 }
 
 .meta-info-history {
-  @include rem(margin-top, calc($gutter / 2));
-  @include font-size(14px);
+  font-size: 14px;
+  width: 100%;
 }
 
 .meta-info-history__summary {
@@ -50,8 +54,8 @@
 
 .meta-info-history__summary::before {
   content: '▽';
-  @include rem(margin-right, 0.35rem);
-  font-size: 16px;
+  margin-right: 0.5em;
+  font-size: 1em;
   line-height: 1;
 }
 
@@ -65,12 +69,12 @@
 }
 
 .meta-info-history__list {
-  @include rem(margin-top, calc($gutter / 2));
-  @include font-size(14px);
+  margin-top: 0.5em;
+  font-size: 14x;
 }
 
 .meta-info-history__item {
-  @include rem(margin-bottom, calc($gutter / 6));
+  margin-bottom: 0.5em;
 }
 
 .meta-info-history__date {
@@ -78,10 +82,10 @@
 }
 
 .meta-info-history__message {
-  @include rem(margin-left, 0.35rem);
+  margin-left: 0.5em;
 }
 
 .meta-info-history__author {
-  @include rem(margin-left, 0.35rem);
-  color: var(--theme-color-dark, $c-black);
+  margin-left: 0.5em;
+  font-style: italic;
 }

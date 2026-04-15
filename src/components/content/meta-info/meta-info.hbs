@@ -13,27 +13,27 @@
     {{{ inlineSvg "src/assets/img/logo/github.svg" class="meta-info__logo" }}}
     <span>View full history on GitHub</span>
   </a>
+  {{#if hasHistoryEntries}}
+    <details class="meta-info-history">
+      <summary class="meta-info-history__summary">
+        Show recent relevant commits for this page
+        <span class="visuallyhidden">
+          Expands to a list of commit messages, dates, and authors.
+        </span>
+      </summary>
+      <ul class="meta-info-history__list">
+        {{#each historyEntries}}
+          <li class="meta-info-history__item">
+            <a href="{{ commitUrl }}" target="_blank">
+              <span class="meta-info-history__date">{{ formatDate changed }}</span>
+              <span class="meta-info-history__message">{{ message }}</span>
+              {{#if changedBy}}
+                <span class="meta-info-history__author">by {{ changedBy }}</span>
+            {{/if}}
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </details>
+  {{/if}}
 </div>
-{{#if hasHistoryEntries}}
-  <details class="meta-info-history">
-    <summary class="meta-info-history__summary">
-      Show recent relevant commits for this page
-      <span class="visuallyhidden">
-        Expands to a list of commit messages, dates, and authors.
-      </span>
-    </summary>
-    <ul class="meta-info-history__list">
-      {{#each historyEntries}}
-        <li class="meta-info-history__item">
-          <a href="{{ commitUrl }}" target="_blank">
-            <span class="meta-info-history__date">{{ formatDate changed }}</span>
-            <span class="meta-info-history__message">{{ message }}</span>
-            {{#if changedBy}}
-              <span class="meta-info-history__author">by {{ changedBy }}</span>
-          {{/if}}
-          </a>
-        </li>
-      {{/each}}
-    </ul>
-  </details>
-{{/if}}

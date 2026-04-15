@@ -7,7 +7,7 @@
   padding: 0;
   list-style: none;
   display: grid;
-  gap: 0.9rem;
+  gap: 1em;
 }
 
 .recent-pages__item {
@@ -15,7 +15,7 @@
 }
 
 .recent-pages__link {
-  @include rem(padding, 1rem 1.1rem);
+  padding: 1em;
 
   display: block;
   background: var(--theme-main-color-inverse, $c-white);
@@ -38,9 +38,8 @@
 
 .recent-pages__date {
   display: block;
-  margin-bottom: 0.45rem;
-  color: var(--theme-color-dark);
-  font-size: 0.78rem;
+  margin-bottom: 4px;
+  font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -48,7 +47,7 @@
 
 .recent-pages__title {
   margin: 0;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.25;
 }
 
@@ -58,18 +57,12 @@
 }
 
 .recent-pages__lead {
-  @include rem(margin-top, 0.35rem);
-  @include rem(margin-bottom, 0.6rem);
-
-  max-width: 58rem;
-  color: var(--theme-color-dark);
+  margin-top: 0.75em;
+  margin-bottom: 1.5em;
   font-size: 16px;
   line-height: 1.5;
 }
 
 .recent-pages__author {
-  @include rem(margin-bottom, 0.65rem);
-  color: var(--theme-color-dark);
-
   display: flex;
 }
