@@ -66,11 +66,51 @@ This implementation follows the current APG approach and uses a real `button` in
 ### Comparison: ARIA vs. Native HTML
 
 #### Comparison of Implementation Methods
-
-| Implementation Method | Advantages | Limitations |
-| :--- | :--- | :--- |
-| **Custom ARIA Implementation** | <ul><li>Full control over keyboard behavior (e.g. arrow keys).</li><li>Better for complex layouts/nested widgets.</li><li>Exact state control via JS.</li></ul> | <ul><li>Requires JavaScript for state and interaction.</li><li>Higher maintenance (must handle all ARIA states manually).</li></ul> |
-| **Native Disclosure Elements (`<details>`)**| <ul><li>Works without JavaScript.</li><li>Native accessibility "out of the box".</li><li>Minimal code footprint.</li></ul> | <ul><li>Limited styling options.</li><li>No native support for "only one open" (requires JS).</li><li>Default keyboard support is limited to Tab/Space/Enter.</li></ul> |
+<table>
+  <caption class="visuallyhidden">Comparison of Accordion Implementation Methods</caption>
+  <thead>
+    <tr>
+      <th scope="col">Implementation Method</th>
+      <th scope="col">Advantages</th>
+      <th scope="col">Limitations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Custom ARIA Implementation</th>
+      <td>
+        <ul>
+          <li>Full control over keyboard behavior (e.g. arrow keys).</li>
+          <li>Better for complex layouts/nested widgets.</li>
+          <li>Exact state control via JS.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Requires JavaScript for state and interaction.</li>
+          <li>Higher maintenance (must handle all ARIA states manually).</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Native Disclosure Elements (<code>&lt;details&gt;</code>)</th>
+      <td>
+        <ul>
+          <li>Works without JavaScript.</li>
+          <li>Native accessibility "out of the box".</li>
+          <li>Minimal code footprint.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Limited styling options.</li>
+          <li>No native support for "only one open" (requires JS).</li>
+          <li>Default keyboard support is limited to Tab/Space/Enter.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 
 ### Legacy implementations (Historical)

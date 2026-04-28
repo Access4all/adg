@@ -28,11 +28,12 @@ body {
   cursor: pointer;
   text-align: left;
   list-style: none;
+  font-size: 1.25rem;
 }
 
 .accordion-header {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: inherit;
   font-weight: 600;
 }
 
