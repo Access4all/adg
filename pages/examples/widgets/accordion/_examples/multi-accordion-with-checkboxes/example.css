@@ -1,58 +1,107 @@
-*:focus {
-  outline: 2px dotted black;
-}
-
 .visually-hidden {
   position: absolute;
-  margin: -1px;
-  border: 0;
-  padding: 0;
+  left: -10000px;
+  top: auto;
   width: 1px;
   height: 1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
 }
 
-.header h2 {
-  margin-bottom: 0;
+body {
+  padding: 20px;
+  font-family: system-ui, sans-serif;
 }
-.header label {
-  display: block;
+
+.accordion-widget > h2 {
+  margin: 0 0 12px;
+}
+
+.accordion-item {
+  margin: 0;
+}
+
+.notice {
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  padding: 8px;
+  margin: 0 0 16px 0;
+}
+
+.accordion-header {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.accordion-trigger {
+  appearance: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
   border: 1px solid black;
-  margin: 0 0 -1px 0;
-  padding: 4px 10px;
-  background-color: lightyellow;
+  margin: 0;
+  padding: 6px 12px;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
 }
-.header label::before {
-  content: "+";
-  display: inline-block;
-  width: 0.75em;
+
+.indicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  flex: 0 0 1rem;
+  margin-right: 8px;
   font-weight: normal;
 }
 
-input[type="checkbox"]:checked + h2 label {
-  border-bottom-color: lightyellow;
-  position: relative;
-}
-input[type="checkbox"]:checked + h2 label::before {
-  content: "-";
+.indicator-open {
+  display: none;
 }
 
-.accordion a:focus,
-.accordion input:focus,
-.accordion input[type="checkbox"]:focus + h2 label {
-  outline: 2px dotted red;
+input[type='checkbox']:checked + .accordion-header .accordion-trigger {
+  background: lightyellow;
+}
+
+input[type='checkbox']:checked + .accordion-header .accordion-trigger .indicator-open {
+  display: inline-block;
+}
+
+input[type='checkbox']:checked + .accordion-header .accordion-trigger .indicator-closed {
+  display: none;
+}
+
+input[type='checkbox']:focus-visible + .accordion-header .accordion-trigger {
+  outline: 2px dotted;
   outline-offset: 2px;
 }
 
-input[type="checkbox"] + h2 label:hover {
-  cursor: pointer;
-  text-decoration: underline;
+.accordion-trigger:hover {
+  background: #fff9c4;
 }
 
-.panel {
-  border: 1px solid;
-  background-color: lightyellow;
-  padding: 0 0 0 10px;
+input[type='checkbox']:checked + .accordion-header .accordion-trigger:hover {
+  background: lightyellow;
+}
+
+.accordion-panel {
+  display: none;
+  border: 1px solid #000;
+  border-top: none;
+  padding: 1rem;
+  background: lightyellow;
+}
+
+.accordion-item > input[type='checkbox']:checked ~ .accordion-panel {
+  display: block;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px dotted;
+  outline-offset: 2px;
 }

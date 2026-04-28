@@ -1,58 +1,30 @@
 class AdgAccordion {
   constructor(el) {
     this.element = el
-    this.triggers = this.element.querySelectorAll('[aria-controls]')
+    this.triggers = Array.from(
+      this.element.querySelectorAll('.accordion-trigger')
+    )
     this.initTriggers()
   }
 
   initTriggers() {
-    this.triggers.forEach((trigger, triggerIndex, triggerArray) => {
+    this.triggers.forEach(trigger => {
       const panelId = trigger.getAttribute('aria-controls')
       const panel = document.getElementById(panelId)
 
-      this.hide(panel, trigger)
+      const isExpanded = trigger.getAttribute('aria-expanded') === 'true'
+      panel.hidden = !isExpanded
 
       trigger.addEventListener('click', () => {
-        if (panel.hidden) {
-          this.show(panel, trigger)
-        } else {
-          this.hide(panel, trigger)
-        }
-      })
-
-      trigger.addEventListener('keydown', event => {
-        if (trigger === document.activeElement) {
-          let focusTarget
-          switch (event.keyCode || event.key) {
-            case 38:
-            case 'Up':
-            case 'ArrowUp':
-              focusTarget =
-                triggerIndex > 0 ? triggerIndex - 1 : triggerArray.length - 1
-              break
-            case 40:
-            case 'Down':
-            case 'ArrowDown':
-              focusTarget =
-                triggerIndex < triggerArray.length - 1 ? triggerIndex + 1 : 0
-              break
-          }
-          if (triggerArray[focusTarget]) {
-            triggerArray[focusTarget].focus()
-          }
-        }
+        this.toggle(panel, trigger)
       })
     })
   }
 
-  show(panel, trigger) {
-    panel.hidden = false
-    trigger.setAttribute('aria-expanded', 'true')
-  }
-
-  hide(panel, trigger) {
-    panel.hidden = true
-    trigger.setAttribute('aria-expanded', 'false')
+  toggle(panel, trigger) {
+    const isExpanded = trigger.getAttribute('aria-expanded') === 'true'
+    trigger.setAttribute('aria-expanded', String(!isExpanded))
+    panel.hidden = isExpanded
   }
 }
 
