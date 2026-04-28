@@ -24,12 +24,38 @@ To fulfil WCAG 2.2 standards, accessible dialogs must meet these criteria:
 
 ### Decision matrix
 
-| Aspect | Native `<dialog>` | Custom dialog (ARIA) |
-| --- | --- | --- |
-| Effort | Low | High |
-| Focus handling | Mostly handled by browser | Must be implemented manually |
-| Top layer | Automatic | Manual (`z-index` management required) |
-| Background interaction | Automatically blocked via `showModal()` | Requires `inert` or equivalent |
+<table>
+  <caption class="visuallyhidden">Dialog implementation decision matrix</caption>
+  <thead>
+    <tr>
+      <th scope="col">Aspect</th>
+      <th scope="col">Native <code>&lt;dialog&gt;</code></th>
+      <th scope="col">Custom dialog (ARIA)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Effort</th>
+      <td>Low</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <th scope="row">Focus handling</th>
+      <td>Mostly handled by browser</td>
+      <td>Must be implemented manually</td>
+    </tr>
+    <tr>
+      <th scope="row">Top layer</th>
+      <td>Automatic</td>
+      <td>Manual (<code>z-index</code> management required)</td>
+    </tr>
+    <tr>
+      <th scope="row">Background interaction</th>
+      <td>Automatically blocked via <code>showModal()</code></td>
+      <td>Requires <code>inert</code> or equivalent</td>
+    </tr>
+  </tbody>
+</table>
 
 Before you continue, please read [What is a "Proof of concept"?](/examples/widgets/proof-of-concept).
 
@@ -61,7 +87,7 @@ Use this variant when users must continue interacting with the underlying page w
 
 #### Implementation details
 
-- **Visibility:** Toggle using the `hidden` attribute to remove it from the accessibility tree when closed.
+- **Visibility:** Toggle using the `hidden` attribute to remove it from rendering and the accessibility tree when closed.
 - **State indication:** `aria-expanded` may be used if the dialog behaves like a disclosure pattern.
 - **Focus handling:** Move focus to a meaningful element when opened. Do not trap focus.
 - **DOM position:** Place markup close to the trigger to preserve logical tab order.
