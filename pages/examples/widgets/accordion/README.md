@@ -53,14 +53,11 @@ For simple disclosure-like use cases, the native HTML `<details>` and `<summary>
 
 [Example](_examples/accordion-with-details-summary)
 
-#### Implementation details 
+#### Implementation details
 
-This implementation follows the current APG approach and uses a real `button` in each header.
-
-- The button toggles `aria-expanded` (`true`/`false`).
-- The button uses `aria-controls` to reference the associated panel.
-- The panel uses `role="region"` and `aria-labelledby` to expose a clear relationship back to the controlling header button.
-- **Keyboard Navigation:** Implementation should ideally support Arrow keys (`Up`/`Down`) to move focus between headers, and `Home`/`End` to jump to the first/last header.
+- The panel lives in the default slot of `<details>` (no separate region role required for basic disclosure).
+- Each item uses `<details>` and `<summary>`; the open/closed state is exposed natively without `aria-expanded`.
+- **Keyboard navigation:** Browsers natively support `Tab`, `Space`, and `Enter` on the `<summary>`; arrow-key navigation between headers requires JavaScript.
 
 
 ### Comparison: ARIA vs. Native HTML
@@ -89,6 +86,7 @@ This implementation follows the current APG approach and uses a real `button` in
         <ul>
           <li>Requires JavaScript for state and interaction.</li>
           <li>Higher maintenance (must handle all ARIA states manually).</li>
+          <li>In Chrome with NVDA, if the virtual cursor is on an accordion button while keyboard focus is on a different element, activating the button can cause <code>aria-expanded</code> to be announced twice. No known fix exists.</li>
         </ul>
       </td>
     </tr>
@@ -106,6 +104,7 @@ This implementation follows the current APG approach and uses a real `button` in
           <li>Limited styling options.</li>
           <li>No native support for "only one open" (requires JS).</li>
           <li>Default keyboard support is limited to Tab/Space/Enter.</li>
+          <li>Adding <code>role="region"</code> (and similar ARIA attributes) to content inside <code>&lt;details&gt;</code> does not work reliably; workarounds are needed for explicit regions.</li>
         </ul>
       </td>
     </tr>
