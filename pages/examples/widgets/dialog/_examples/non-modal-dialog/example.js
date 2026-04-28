@@ -1,70 +1,60 @@
-;(function () {
-  var AdgDialog
+class AdgNonModalDialog {
+  constructor(opener) {
+    this.opener = opener
+    this.container = document.getElementById(opener.dataset.adgDialog)
 
-  AdgDialog = class AdgDialog {
-    constructor(el) {
-      this.$openButton = $(el)
-      this.initContainer(this.$openButton.attr('data-adg-dialog'))
-      this.initOpenButton()
-    }
+    if (!this.container) return
 
-    initOpenButton() {
-      this.$openButton.attr('aria-expanded', false)
-      this.$openButton.append(
-        '<span class="adg-visually-hidden"> (dialog)</span>'
-      )
-      return this.$openButton.click(e => {
-        if (this.$container.is(':visible')) {
-          return this.hide()
-        } else {
-          return this.show()
-        }
-      })
-    }
-
-    initContainer(id) {
-      this.$container = $(`#${id}`)
-      this.$container.attr('data-adg-dialog-container', true)
-      this.initCloseButton()
-      return this.initConfirmButton()
-    }
-
-    initConfirmButton() {
-      this.$confirmButton = $(
-        '<button>Confirm<span class="adg-visually-hidden"> (close)</span></button>'
-      )
-      this.$container.append(this.$confirmButton)
-      return this.$confirmButton.click(() => {
-        return this.hide()
-      })
-    }
-
-    initCloseButton() {
-      this.$closeButton = $(
-        '<button class="adg-dialog-icon"><svg class="icon" focusable="false"><use xlink:href="#tooltip" /></svg></span><span class="adg-visually-hidden">Close dialog</span></button>'
-      )
-      this.$container.prepend(this.$closeButton)
-      return this.$closeButton.click(() => {
-        return this.hide()
-      })
-    }
-
-    show() {
-      this.$container.attr('hidden', false)
-      this.$openButton.attr('aria-expanded', true)
-      return this.$closeButton.focus()
-    }
-
-    hide() {
-      this.$container.attr('hidden', true)
-      this.$openButton.attr('aria-expanded', false)
-      return this.$openButton.focus()
-    }
+    this.init()
   }
 
-  $(document).ready(function () {
-    return $('[data-adg-dialog]').each(function () {
-      return new AdgDialog(this)
+  init() {
+    this.cacheControls()
+    this.bindEvents()
+  }
+
+  cacheControls() {
+    this.closeBtn = this.container.querySelector('[data-adg-dialog-close]')
+    this.confirmBtn = this.container.querySelector('[data-adg-dialog-confirm]')
+  }
+
+  show() {
+    this.container.removeAttribute('hidden')
+    this.opener.setAttribute('aria-expanded', 'true')
+    this.closeBtn.focus()
+  }
+
+  hide() {
+    this.container.setAttribute('hidden', '')
+    this.opener.setAttribute('aria-expanded', 'false')
+    this.opener.focus()
+  }
+
+  bindEvents() {
+    if (!this.closeBtn || !this.confirmBtn) return
+
+    // Toggle the non-modal dialog without trapping focus.
+    this.opener.addEventListener('click', () => {
+      this.container.hasAttribute('hidden') ? this.show() : this.hide()
     })
-  })
-}).call(this)
+
+    // Keep both dialog actions aligned with the same close behavior.
+    this.closeBtn.addEventListener('click', () => this.hide())
+    this.confirmBtn.addEventListener('click', () => this.hide())
+
+    // Support Esc as a standard way to dismiss the dialog.
+    this.container.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        e.preventDefault()
+        this.hide()
+      }
+    })
+  }
+}
+
+// Enhance all non-modal dialog triggers on the page.
+document.addEventListener('DOMContentLoaded', () => {
+  document
+    .querySelectorAll('[data-adg-dialog]')
+    .forEach(opener => new AdgNonModalDialog(opener))
+})

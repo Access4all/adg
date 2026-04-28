@@ -3,9 +3,9 @@ navigation_title: "Dialog"
 position: 12
 ---
 
-# Dialog widget (or: modal, popup, lightbox, overlay, alert)
+# Dialog widget (modal, popup, lightbox, overlay)
 
-**Dialogs display some information on top of a page. They are typically used to react upon a user action, for example to display a notice or to ask for some input like confirming something. There are dialogs that disable the rest of the page in the background (modal), while others do not (non-modal).**
+**Dialogs display contextual content above the page. Use them for confirmations, short tasks, or additional details.**
 
 [[_TOC_]]
 
@@ -13,83 +13,129 @@ position: 12
 
 ## General requirements
 
-The following requirements are based on well established best practices and [WAI-ARIA Authoring Practices: Dialog Modal (W3.org)](https://www.w3.org/TR/wai-aria-practices/#dialog_modal).
+The following requirements are based on established best practices and the WAI-ARIA Authoring Practices [Dialog Modal Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/).
 
-Besides many other requirements, we want to stress out explicitly the following:
+To fulfil WCAG 2.2 standards, accessible dialogs must meet these criteria:
 
-- The meaning and usage of the dialog must be clear.
-- The dialog must be operable using both keyboard only and screen readers (with a reasonable interplay of default keys like Tab, Enter/Space, Esc, Arrow keys), as well as mobile screen readers.
-- Focus must be placed inside the dialog upon opening, and placed back upon closing.
-- Modal dialogs must track focus.
-- It must be evident where a dialog's content begins and where it ends.
+- **Predictable Focus:** Focus moves into the dialog when it opens and returns to the triggering element when it closes (SC 2.4.3).
+- **Keyboard Control:** The dialog is fully operable via keyboard, including `Tab` navigation and a clear mechanism to close it (e.g. `Esc`) (SC 2.1.1).
+- **Focus Trapping:** Modal dialogs keep focus within the dialog while open.
+- **Semantics:** The dialog has a clear accessible name (e.g. via `aria-labelledby`) and uses either the native `<dialog>` element or `role="dialog"`.
 
-By the way, non-modal dialogs are very similar to:
+### Decision matrix
 
-- Complex tooltips, see [Tooltip widgets (or: screen tip, balloon)](/examples/widgets/tooltips)
-- Dropdowns, see [Dropdown widget (or: menu, pulldown)](/examples/widgets/dropdown)
+<table>
+  <caption class="visuallyhidden">Dialog implementation decision matrix</caption>
+  <thead>
+    <tr>
+      <th scope="col">Aspect</th>
+      <th scope="col">Native <code>&lt;dialog&gt;</code></th>
+      <th scope="col">Custom dialog (ARIA)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Effort</th>
+      <td>Low</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <th scope="row">Focus handling</th>
+      <td>Mostly handled by browser</td>
+      <td>Must be implemented manually</td>
+    </tr>
+    <tr>
+      <th scope="row">Top layer</th>
+      <td>Automatic</td>
+      <td>Manual (<code>z-index</code> management required)</td>
+    </tr>
+    <tr>
+      <th scope="row">Background interaction</th>
+      <td>Automatically blocked via <code>showModal()</code></td>
+      <td>Requires <code>inert</code> or equivalent</td>
+    </tr>
+  </tbody>
+</table>
+
+Before you continue, please read [What is a "Proof of concept"?](/examples/widgets/proof-of-concept).
+
 
 ## Proofs of concept
 
-Before you go on, please read [What is a "Proof of concept"?](/examples/widgets/proof-of-concept).
+### Native modal dialog
+
+This variant uses the native HTML `<dialog>` element and should be the default choice for modern projects.
+Use this variant when you need modal behaviour with low implementation effort and reliable built-in browser handling.
+
+[Example](_examples/native-dialog)
+
+#### Implementation details
+
+- **Activation:** Use `.showModal()` to open the dialog in the browser's top layer.
+- **Backdrop:** Style using the `::backdrop` pseudo-element.
+- **Keyboard behaviour:** Browsers generally keep focus within the dialog and support closing via `Esc`, consistent with platform conventions.
+- **Focus return:** Browsers typically restore focus to the previously focused element when `.close()` is called.
+- **State:** Do not rely on the `open` attribute alone for modal behaviour.
+
 
 ### Non-modal dialog
 
-This dialog simply displays some content above the page, while the rest of the page remains fully functional.
+This variant displays content above the page while background content remains interactive.
+Use this variant when users must continue interacting with the underlying page while keeping contextual information visible.
 
 [Example](_examples/non-modal-dialog)
 
 #### Implementation details
 
-Some interesting peculiarities:
+- **Visibility:** Toggle using the `hidden` attribute to remove it from rendering and the accessibility tree when closed.
+- **State indication:** `aria-expanded` may be used if the dialog behaves like a disclosure pattern.
+- **Focus handling:** Move focus to a meaningful element when opened. Do not trap focus.
+- **DOM position:** Place markup close to the trigger to preserve logical tab order.
 
-- Each dialog toggler has an `aria-expanded="false"` attribute; its value (`true`/`false`) and the visibility of the corresponding dialog is toggled using JavaScript. See [Marking elements expandable using aria-expanded](/examples/sensible-aria-usage/expanded).
-- The dialog is toggled using `hidden` attribute (see [Hiding elements from all devices](/examples/hiding-elements/from-all-devices)).
-- The dialog's first element is a "Close dialog" button.
-    - Upon opening the dialog, the focus is set on this button, which announces its caption; this way users immediately know they are in a dialog now.
-    - The button has a visible SVG icon (also an image with empty `alt` attribute would work), and a visually hidden text (see [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually)).
-    - Upon clicking it, the dialog is closed and focus is set on the dialog toggler again button, which makes screen readers announce its caption; this way users immediately know they are out of the dialog now.
-- The dialog's last element is a "Confirm" button.
-    - Upon clicking it, the dialog is closed and focus is set on the dialog toggler again button, which makes screen readers announce its caption; this way users immediately know they are out of the dialog now.
 
-Adding more sophisticated features like movability using drag and drop or similar would be easy. For simplicity though, we refrained from doing this.
+### Custom modal dialog
 
-### Modal dialog
-
-This dialog displays some content above the page, traps the focus (so the dialog cannot be left) and darkens the background (to indicate that the rest of the page cannot be interacted while the dialog is open).
-
-Modal dialogs are used when immediate user interaction is required, for example a prompt like "Are you really sure you want to empty your shopping cart?".
+This variant recreates modal dialog behaviour with ARIA semantics and custom JavaScript logic.
+Use this only when native `<dialog>` cannot be used.
 
 [Example](_examples/modal-dialog)
 
 #### Implementation details
 
-Some interesting peculiarities:
+- **Role and name:** Use `role="dialog"` and `aria-labelledby`.
+- **Focus trap:** Implement manual focus management for `Tab` and `Shift + Tab`.
+- **Keyboard interaction:** Provide an explicit `Esc` handler.
+- **Inertness:** Mark background content as `inert` (or equivalent) while open.
 
-- Keyboard focus is trapped by intercepting `Tab` (and `Shift + Tab`) on the first and last button, then moving the focus manually back and forth between them.
-- The screen reader cursor is trapped by surrounding the dialog with both a `role="dialog"` container and a `role="document"` container.
-    - The `role="dialog"` container traps the focus, and forces some screen readers to remain in focus mode (so browsable content is not readable).
-    - The `role="document"` container re-enables switching to browse mode.
-- The curtain is implemented with an independent container and a semi-transparent background colour.
-    - Some implementations allow clicking the curtain to dismiss a dialog. While this would be easy to implement, we omitted it for simplicity reasons.
 
 ## Further discussions
 
 ### Headings in dialogs
 
-Some dialogs contain a lot of content, and this usually needs to be structured semantically. You should structure content of dialogs like any other content on the page. Be sure though that it fits into the general page structure.
-
-For example, when using headings in a dialog, make sure that they fit nicely into the heading structure of the page around it. It can be an easy and pragmatic approach to start each dialog with its own heading level 1 `<h1>` to separate it clearly from the rest of the page.
+- **Modal dialogs:** May act as self-contained contexts; `<h2>` is usually a safe default.
+- **Non-modal dialogs:** Should follow the existing page hierarchy.
 
 ### Positioning in the DOM
 
-There is no general rule where dialogs should be placed in the DOM.
+- **Native `<dialog>`:** Placement is flexible, but proximity to the trigger improves maintainability.
+- **Custom dialogs:** Often placed at the end of `<body>` to avoid layout issues.
 
-For non-modal dialogs, it usually makes sense to place them near the toggler button, so the tabbing sequence (which includes both dialog and background elements) remains meaningful.
+### Initial focus positioning
 
-For modal dialogs, the background is fully disabled thanks to `role="dialog"`, so their position may not be important. But for backwards compatibility with devices that do not support `role="dialog"` (and thus do not trap focus), it can be sensible to either place dialogs near the toggler button (like non-modal dialogs), or at the very bottom of the page.
+By default, focus the first focusable element in the dialog. Consider these exceptions:
 
-### HTML 5 dialog element
+- **Destructive actions:** For confirmation dialogs (e.g. deletion), focus `Cancel` rather than `Delete` to reduce accidental data loss.
+- **Long content:** Focus the dialog title (`tabindex="-1"`) so screen readers start reading from the top of the content.
 
-In HTML 5 exists a `<dialog>` container.
+### Backdrop interaction
 
-While some browsers support this element already, it is not yet supported by some major browsers. So from an accessibility point of view, you are better off using a custom dialog instead of `<dialog>` (yet).
+Users often expect a modal to close when they click the backdrop.
+
+- **Implementation:** With native `<dialog>`, detect clicks on the dialog element itself (the backdrop is part of the box model) and call `.close()`. Ensure the click target is strictly the `<dialog>` and not its children, to prevent the dialog from closing when clicking inside the modal content.
+
+### Preventing background scrolling
+
+When a modal is open, background page content should not be scrollable.
+
+- **Native:** Handled automatically by `.showModal()`.
+- **Custom:** Apply `overflow: hidden` to `<body>` while the dialog is active.

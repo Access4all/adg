@@ -1,92 +1,107 @@
-;(function () {
-  var AdgDialog
+class AdgDialog {
+  constructor(opener) {
+    this.opener = opener
+    this.container = document.getElementById(opener.dataset.adgDialog)
+    if (!this.container) return
 
-  AdgDialog = class AdgDialog {
-    constructor(el) {
-      this.$openButton = $(el)
-      this.initContainer(this.$openButton.attr('data-adg-dialog'))
-      this.initOpenButton()
+    this.curtain = null
+    this.originalOverflow = ''
+    this.init()
+  }
+
+  init() {
+    this.cacheControls()
+    this.bindEvents()
+  }
+
+  cacheControls() {
+    this.closeBtn = this.container.querySelector('[data-adg-dialog-close]')
+    this.confirmBtn = this.container.querySelector('[data-adg-dialog-confirm]')
+  }
+
+  toggleInert(isActive) {
+    // Make background content unavailable while the modal is open.
+    Array.from(document.body.children).forEach(node => {
+      if (node === this.container || node === this.curtain) return
+      isActive ? node.setAttribute('inert', '') : node.removeAttribute('inert')
+    })
+  }
+
+  show() {
+    if (!this.curtain) {
+      // The curtain provides a visual backdrop behind the custom modal.
+      this.curtain = document.createElement('div')
+      this.curtain.className = 'adg-dialog-curtain'
+      this.container.before(this.curtain)
+    }
+    this.toggleInert(true)
+
+    this.originalOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+
+    this.container.removeAttribute('hidden')
+    this.opener.setAttribute('aria-expanded', 'true')
+    this.closeBtn.focus()
+  }
+
+  hide() {
+    if (this.curtain) {
+      this.curtain.remove()
+      this.curtain = null
+    }
+    this.container.setAttribute('hidden', '')
+    this.opener.setAttribute('aria-expanded', 'false')
+    this.toggleInert(false)
+
+    document.body.style.overflow = this.originalOverflow
+    this.opener.focus()
+  }
+
+  handleKeydown(e) {
+    if (e.key === 'Escape') {
+      e.preventDefault()
+      this.hide()
+      return
     }
 
-    initOpenButton() {
-      this.$openButton.attr('aria-expanded', false)
-      this.$openButton.append(
-        '<span class="adg-visually-hidden"> (dialog)</span>'
+    if (e.key === 'Tab') {
+      // Keep focus cycling inside the modal while it is active.
+      const focusables = Array.from(
+        this.container.querySelectorAll(
+          'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        )
       )
-      return this.$openButton.click(e => {
-        if (this.$container.is(':visible')) {
-          return this.hide()
-        } else {
-          return this.show()
-        }
-      })
-    }
+      if (focusables.length === 0) return
 
-    initContainer(id) {
-      this.$container = $(`#${id}`)
-      this.$container.attr('data-adg-dialog-container', true)
-      this.$container.wrap(
-        "<div role='dialog'><div role='document'></div></div>"
-      )
-      this.initCloseButton()
-      this.initConfirmButton()
-      return this.initContainerButtonEvents()
-    }
+      const first = focusables[0]
+      const last = focusables[focusables.length - 1]
 
-    initConfirmButton() {
-      this.$confirmButton = $(
-        '<button>Confirm<span class="adg-visually-hidden"> (close)</span></button>'
-      )
-      return this.$container.append(this.$confirmButton)
-    }
-
-    initCloseButton() {
-      this.$closeButton = $(
-        '<button class="adg-dialog-icon"><svg class="icon" focusable="false"><use xlink:href="#tooltip" /></svg></span><span class="adg-visually-hidden">Close dialog</span></button>'
-      )
-      return this.$container.prepend(this.$closeButton)
-    }
-
-    initContainerButtonEvents() {
-      this.$confirmButton.click(() => {
-        return this.hide()
-      })
-      this.$confirmButton.keydown(e => {
-        if (!e.shiftKey && e.which === 9) {
-          this.$closeButton.focus()
-          e.preventDefault()
-          return e.stopPropagation()
-        }
-      })
-      this.$closeButton.click(() => {
-        return this.hide()
-      })
-      return this.$closeButton.keydown(e => {
-        if (e.shiftKey && e.which === 9) {
-          this.$confirmButton.focus()
-          return e.preventDefault()
-        }
-      })
-    }
-
-    show() {
-      this.$container.before("<div class='adg-dialog-curtain'></div>")
-      this.$container.attr('hidden', false)
-      this.$openButton.attr('aria-expanded', true)
-      return this.$closeButton.focus()
-    }
-
-    hide() {
-      $('.adg-dialog-curtain').remove()
-      this.$container.attr('hidden', true)
-      this.$openButton.attr('aria-expanded', false)
-      return this.$openButton.focus()
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault()
+        last.focus()
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault()
+        first.focus()
+      }
     }
   }
 
-  $(document).ready(function () {
-    return $('[data-adg-dialog]').each(function () {
-      return new AdgDialog(this)
+  bindEvents() {
+    if (!this.closeBtn || !this.confirmBtn) return
+
+    this.opener.addEventListener('click', () => {
+      this.container.hasAttribute('hidden') ? this.show() : this.hide()
     })
-  })
-}).call(this)
+
+    this.closeBtn.addEventListener('click', () => this.hide())
+    this.confirmBtn.addEventListener('click', () => this.hide())
+    this.container.addEventListener('keydown', e => this.handleKeydown(e))
+  }
+}
+
+// Enhance all custom dialog triggers on the page.
+document.addEventListener('DOMContentLoaded', () => {
+  document
+    .querySelectorAll('[data-adg-dialog]')
+    .forEach(opener => new AdgDialog(opener))
+})
