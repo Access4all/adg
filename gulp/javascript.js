@@ -22,7 +22,7 @@ export default (config, cb) => {
       rules: [
         {
           test: /\.js$/,
-          include: path.resolve(import.meta.dirname, 'src'),
+          include: path.resolve(import.meta.dirname, '..', 'src'),
           exclude: /node_modules/,
           loader: 'babel-loader',
           options: {
@@ -31,6 +31,7 @@ export default (config, cb) => {
                 '@babel/preset-env',
                 {
                   useBuiltIns: 'usage',
+                  corejs: 3,
                   targets: {
                     browsers: ['last 2 versions']
                   }
