@@ -54,7 +54,7 @@
     "highlight.js": "^11.11.1",
     "husky": "^9.1.7",
     "jsdom": "^29.0.1",
-    "lint-staged": "^16.4.0",
+    "lint-staged": "^17.0.2",
     "markdown-it": "^14.1.1",
     "markdown-it-abbr": "^2.0.0",
     "markdown-it-attrs": "^4.3.1",
