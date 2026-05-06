@@ -24,7 +24,7 @@
     "iOS >= 8.4"
   ],
   "engines": {
-    "node": ">=16"
+    "node": ">=24.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
