@@ -47,15 +47,7 @@ export default (config, cb) => {
       filename: '[name].js',
       chunkFilename: 'async/[name].js',
       publicPath: config.publicPath
-    },
-    ignoreWarnings: [
-      // `app/modules.js` is using `require(['something'])` and we can safely ignore this
-      {
-        module: /ModuleManager\.js/,
-        message:
-          /Critical dependency: the request of a dependency is an expression/
-      }
-    ]
+    }
   })
 
   const log = (err, stats) => {
