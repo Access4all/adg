@@ -13,7 +13,9 @@ const excludedCommitIds = [
   '8d2f1cf458bd1769c828cff79743d8878cf71276', // Jun 28, 2021  feat: change ToC insertion to manual mode
   'f84cdc3b77f12dc3170717f6025aeadf4c337bbb', // Jan 18, 2024  feat: replace http in urls with https
   'aac742ff1c64c608985a1be3777da79fa70bf292', // Jun 29, 2023  feat: remove manual changed date from markdown files
-  '34da02f9b8caf03abc590e28d5bae79f8fc89e08' // Jan 27, 2024  ADG-338 feat: unify card text endings
+  'a3f8584dd30b0404cab50cb982b62a132e8e0582', // Jan 2, 2024   ADG-338 feat: rename contribution page
+  '34da02f9b8caf03abc590e28d5bae79f8fc89e08', // Jan 27, 2024  ADG-338 feat: unify card text endings
+  'c8cac292ac104b3dcd406c61091a5491448af7ea' // Dec 4, 2025   ADG-434 fix: remove duplicate positions
 ]
 
 const excludedCommitIdsSet = new Set(
