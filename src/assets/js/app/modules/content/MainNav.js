@@ -1,5 +1,5 @@
 import $ from 'jquery'
-import BaseModule from '../BaseModule'
+import BaseModule from '../BaseModule.js'
 
 export default class MainNav extends BaseModule {
   constructor() {
