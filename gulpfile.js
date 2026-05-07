@@ -122,7 +122,8 @@ gulp.task(
     function content() {
       return gulp
         .src(['./pages/{,**/}_media/**/*', './pages/**/*.{png,jpg,mp3}'], {
-          base: './pages'
+          base: './pages',
+          encoding: false
         })
         .pipe(changed('./dist'))
         .pipe(gulp.dest('./dist'))
@@ -130,7 +131,8 @@ gulp.task(
     function assets() {
       return gulp
         .src(['./src/assets/img/**/*'], {
-          base: './src/assets'
+          base: './src/assets',
+          encoding: false
         })
         .pipe(changed('./dist'))
         .pipe(gulp.dest('./dist'))
