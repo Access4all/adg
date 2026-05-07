@@ -1,19 +1,27 @@
-const gulp = require('gulp')
-const browserSync = require('browser-sync').create()
-const log = require('fancy-log')
-const colors = require('ansi-colors')
-const del = require('del')
-const _ = require('lodash')
+import path from 'node:path'
+import { styleText } from 'node:util'
+import gulp from 'gulp'
+import browserSyncFactory from 'browser-sync'
+import { deleteAsync } from 'del'
+import through from 'through2'
+import spritesmith from 'gulp.spritesmith'
+import ordered from 'ordered-read-streams'
+import sharp from 'sharp'
+import concat from 'gulp-concat'
+import changed from 'gulp-changed'
+import html from './gulp/html.js'
+import css from './gulp/css.js'
+import js from './gulp/javascript.js'
+import examples from './gulp/examples.js'
 
-const html = require('./gulp/html')
-const css = require('./gulp/css')
-const js = require('./gulp/javascript')
-const examples = require('./gulp/examples')
-const concat = require('gulp-concat')
-const changed = require('gulp-changed')
+const browserSync = browserSyncFactory.create()
 
 function errorHandler(err) {
-  log(err.plugin || '', colors.cyan(err.fileName), colors.red(err.message))
+  console.error(
+    err.plugin || '',
+    styleText('cyan', err.fileName || ''),
+    styleText('red', err.message)
+  )
 }
 
 gulp.task('html', cb =>
@@ -29,7 +37,7 @@ gulp.task('html', cb =>
         rss: './dist/feed/rss.xml'
       },
       errorHandler,
-      rootDir: __dirname
+      rootDir: import.meta.dirname
     },
     () => {
       browserSync.reload()
@@ -72,8 +80,6 @@ gulp.task('css', cb => {
 })
 
 gulp.task('js', cb => {
-  const done = _.once(cb)
-
   js(
     {
       entry: {
@@ -85,7 +91,7 @@ gulp.task('js', cb => {
     () => {
       browserSync.reload()
 
-      done()
+      cb()
     }
   )
 
@@ -141,10 +147,6 @@ gulp.task(
 )
 
 gulp.task('media:resize', () => {
-  const sharp = require('sharp')
-  const through = require('through2')
-  const path = require('path')
-
   const resize = async ({ file, image, metadata, key, width }) => {
     const extension = path.extname(file.path)
     const fileName = path.basename(file.path, extension)
@@ -168,7 +170,8 @@ gulp.task('media:resize', () => {
 
   return gulp
     .src(['./pages/{,**/}_media/**/*', './pages/**/_examples/**/*.png'], {
-      base: './pages'
+      base: './pages',
+      encoding: false
     })
     .pipe(
       changed('./dist', {
@@ -207,11 +210,10 @@ gulp.task('media:resize', () => {
 })
 
 gulp.task('sprite', () => {
-  const spritesmith = require('gulp.spritesmith')
-  const merge = require('merge-stream')
-
   const data = gulp
-    .src(['./src/assets/img/icons/**/*.png', '!./src/assets/img/icons/*.png'])
+    .src(['./src/assets/img/icons/**/*.png', '!./src/assets/img/icons/*.png'], {
+      encoding: false
+    })
     .pipe(
       spritesmith({
         retinaSrcFilter: './src/assets/img/icons/2x/*.png',
@@ -227,14 +229,14 @@ gulp.task('sprite', () => {
     )
 
   const imgStream = data.img.pipe(gulp.dest('./src/assets/img/icons'))
-  const cssStream = data.css.pipe(changed('./tmp')).pipe(gulp.dest('./tmp'))
+  const cssStream = data.css.pipe(gulp.dest('./tmp'))
 
-  return merge(imgStream, cssStream)
+  return ordered([imgStream, cssStream])
 })
 
 gulp.task('media', gulp.parallel('media:copy', 'media:resize'))
 
-gulp.task('clean', () => del('./dist'))
+gulp.task('clean', () => deleteAsync('./dist'))
 
 gulp.task(
   'build',
