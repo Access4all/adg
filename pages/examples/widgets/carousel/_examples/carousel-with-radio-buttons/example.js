@@ -37,8 +37,8 @@ class AdgCarousel {
               ? maxIndex
               : currentIndex - 1
             : currentIndex >= maxIndex
-            ? 0
-            : currentIndex + 1
+              ? 0
+              : currentIndex + 1
         const nextPanel = allPanels[nextIndex]
 
         nextPanel.checked = true

@@ -1,8 +1,20 @@
-const path = require('path')
-const webpack = require('webpack')
-const argv = require('minimist')(process.argv.slice(2))
+import path from 'node:path'
+import { parseArgs } from 'node:util'
+import webpack from 'webpack'
 
-module.exports = (config, cb) => {
+const {
+  values: { webpackWatch }
+} = parseArgs({
+  options: {
+    webpackWatch: {
+      type: 'boolean',
+      default: false
+    }
+  },
+  allowPositionals: true
+})
+
+export default (config, cb) => {
   const compiler = webpack({
     entry: config.entry,
     mode: 'development',
@@ -10,7 +22,7 @@ module.exports = (config, cb) => {
       rules: [
         {
           test: /\.js$/,
-          include: path.resolve(__dirname, 'src'),
+          include: path.resolve(import.meta.dirname, '..', 'src'),
           exclude: /node_modules/,
           loader: 'babel-loader',
           options: {
@@ -19,6 +31,7 @@ module.exports = (config, cb) => {
                 '@babel/preset-env',
                 {
                   useBuiltIns: 'usage',
+                  corejs: 3,
                   targets: {
                     browsers: ['last 2 versions']
                   }
@@ -35,15 +48,7 @@ module.exports = (config, cb) => {
       filename: '[name].js',
       chunkFilename: 'async/[name].js',
       publicPath: config.publicPath
-    },
-    ignoreWarnings: [
-      // `app/modules.js` is using `require(['something'])` and we can safely ignore this
-      {
-        module: /ModuleManager\.js/,
-        message:
-          /Critical dependency: the request of a dependency is an expression/
-      }
-    ]
+    }
   })
 
   const log = (err, stats) => {
@@ -75,7 +80,7 @@ module.exports = (config, cb) => {
     return cb()
   }
 
-  if (argv.webpackWatch) {
+  if (webpackWatch) {
     compiler.watch({}, log)
   } else {
     compiler.run(log)
