@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import contextTrigger from './contextTrigger'
 
 // every module should at least implement two methods
 // Module.init = function( HTMLElement )
@@ -125,6 +126,21 @@ setTimeout(function () {
 export default {
   connect: function (Module, element) {
     initialiseModule(Module, element)
+  },
+  add: function (M, selector) {
+    if (typeof Module === 'string') {
+      contextTrigger.add(selector, function () {
+        var elem = this
+        require([M], function (Module) {
+          initialiseModule(Module, elem)
+        })
+      })
+    } else {
+      contextTrigger.add(selector, function () {
+        var elem = this
+        initialiseModule(M, elem)
+      })
+    }
   },
   checkGarbage: checkModuleGarbage
 }

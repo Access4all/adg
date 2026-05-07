@@ -28,4 +28,6 @@ const formatDate = date => {
   return `${monthNames[monthIndex]} ${day}, ${year}`
 }
 
-export { formatDate }
+module.exports = {
+  formatDate
+}

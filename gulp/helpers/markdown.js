@@ -1,28 +1,18 @@
-import path from 'node:path'
-import markdownIt from 'markdown-it'
-import iterator from 'markdown-it-for-inline'
-import regexp from 'markdown-it-regexp'
-import abbr from 'markdown-it-abbr'
-import attrs from 'markdown-it-attrs'
-import deflist from 'markdown-it-deflist'
-import kbd from 'markdown-it-kbd'
-import samp from 'markdown-it-samp'
-import responsive from '@gerhobbelt/markdown-it-responsive'
-import replacements from 'markdown-it-replacements'
-import toc from 'markdown-it-toc-done-right'
-import * as examples from './examples.js'
+const markdownIt = require('markdown-it')
+const importFresh = require('import-fresh')
+const path = require('path')
 
 const plugins = {
-  iterator,
-  regexp,
-  abbr,
-  attrs,
-  deflist,
-  kbd,
-  samp,
-  responsive,
-  replacements,
-  toc
+  iterator: require('markdown-it-for-inline'),
+  regexp: require('markdown-it-regexp'),
+  abbr: require('markdown-it-abbr'),
+  attrs: require('markdown-it-attrs'),
+  deflist: require('markdown-it-deflist'),
+  kbd: require('markdown-it-kbd'),
+  samp: require('markdown-it-samp'),
+  responsive: require('@gerhobbelt/markdown-it-responsive'),
+  replacements: require('markdown-it-replacements'),
+  toc: require('markdown-it-toc-done-right')
 }
 
 plugins.replacements.replacements.push({
@@ -44,18 +34,19 @@ const slugify = text => {
     .toString()
     .toLowerCase()
     .replace(/\s+/g, '-') // Replace spaces with -
-    .replace(/[^\w-]+/g, '') // Remove all non-word chars
-    .replace(/--+/g, '-') // Replace multiple - with single -
+    .replace(/[^\w\-]+/g, '') // Remove all non-word chars
+    .replace(/\-\-+/g, '-') // Replace multiple - with single -
     .replace(/^-+/, '') // Trim - from start of text
     .replace(/-+$/, '') // Trim - from end of text
 }
 
-export default rootDir => filePath => {
+module.exports = rootDir => filePath => {
   const markdown = markdownIt({
     html: true,
     linkify: true,
     typography: true
   })
+  const examples = importFresh('./examples')
 
   markdown.validateLink = url => {
     const BAD_PROTO_RE = /^(vbscript|file|data):/
@@ -189,28 +180,30 @@ export default rootDir => filePath => {
                   : path.resolve(path.dirname(filePath), exampleLink)
                 example = examples.getExample(examplePath, filePath)
 
-                token.children.slice(childIdx).some(followingChildToken => {
-                  if (followingChildToken.type === 'text') {
-                    // Change link title and wrap with span
-                    followingChildToken.type = 'html_inline'
-                    followingChildToken.content = `<span class="example-link-text">${
-                      example.code.details.title
-                    }</span>${
-                      example.code.preview
-                        ? `<img src="/${path.relative(
-                            path.join(rootDir, 'pages'),
-                            example.code.preview
-                          )}" alt="Preview">`
-                        : ''
-                    }`
-                  }
+                token.children
+                  .slice(childIdx)
+                  .some((followingChildToken, followingChildIdx) => {
+                    if (followingChildToken.type === 'text') {
+                      // Change link title and wrap with span
+                      followingChildToken.type = 'html_inline'
+                      followingChildToken.content = `<span class="example-link-text">${
+                        example.code.details.title
+                      }</span>${
+                        example.code.preview
+                          ? `<img src="/${path.relative(
+                              path.join(rootDir, 'pages'),
+                              example.code.preview
+                            )}" alt="Preview">`
+                          : ''
+                      }`
+                    }
 
-                  if (followingChildToken.type === 'link_close') {
-                    return true
-                  }
+                    if (followingChildToken.type === 'link_close') {
+                      return true
+                    }
 
-                  return false
-                })
+                    return false
+                  })
 
                 // Add custom class to link
                 exampleLinkClass = childToken.attrGet('class')

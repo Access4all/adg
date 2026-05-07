@@ -1,8 +1,8 @@
-import fs from 'node:fs'
-import path from 'node:path'
-import { randomUUID } from 'node:crypto'
-import frontMatter from 'front-matter'
-import hljs from 'highlight.js'
+const fs = require('fs')
+const path = require('path')
+const frontMatter = require('front-matter')
+const hljs = require('highlight.js')
+const _ = require('lodash')
 
 const getFile = (files, type, dir) => {
   const match = files.find(file => {
@@ -51,7 +51,7 @@ const getTitle = href => {
   return meta.title
 }
 
-const getCodePenForm = code => {
+const getCodePenForm = (code, title) => {
   const config = {
     title: code.details.title,
 
@@ -83,10 +83,10 @@ const getCodePenForm = code => {
   </form>`
 }
 
-const getExample = examplePath => {
+const getExample = (examplePath, filePath) => {
   try {
     const code = getCode(examplePath)
-    const id = `example-${randomUUID()}`
+    const id = _.uniqueId('example-')
 
     const compatibilitySummaryBrowsers = [
       'Chrome',
@@ -153,6 +153,7 @@ const getExample = examplePath => {
       // Format date
       const date = new Date(result.date)
 
+      // eslint-disable-next-line eqeqeq
       if (date != 'Invalid Date') {
         result.date = `${date.getFullYear()}-${
           date.getMonth() + 1
@@ -264,4 +265,10 @@ const getLink = token => {
   return href.match(/_examples/) ? href : null
 }
 
-export { getCode, getTitle, getCodePenForm, getExample, getLink }
+module.exports = {
+  getCode,
+  getTitle,
+  getCodePenForm,
+  getExample,
+  getLink
+}

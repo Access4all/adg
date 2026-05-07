@@ -1,20 +1,18 @@
-import child_process from 'node:child_process'
-import fs from 'node:fs'
-import path from 'node:path'
-import { Readable } from 'node:stream'
-import gulp from 'gulp'
-import handlebars from 'gulp-hb'
-import frontMatter from 'gulp-front-matter'
-import through from 'through2'
-import plumber from 'gulp-plumber'
-import normalize from 'normalize-strings'
-import { SitemapStream, streamToPromise } from 'sitemap'
-import { JSDOM } from 'jsdom'
-import appConfig from '../config.js'
-import { formatDate } from './helpers/datetime.js'
-import markdownFactory from './helpers/markdown.js'
-import { generateTags } from './helpers/metatags.js'
-import Feed from './helpers/rss.js'
+const child_process = require('child_process')
+const gulp = require('gulp')
+const handlebars = require('gulp-hb')
+// const prettify = require('gulp-prettify')
+const frontMatter = require('gulp-front-matter')
+const through = require('through2')
+const fs = require('fs')
+const path = require('path')
+const importFresh = require('import-fresh')
+const plumber = require('gulp-plumber')
+const normalize = require('normalize-strings')
+const { SitemapStream, streamToPromise } = require('sitemap')
+const { Readable } = require('stream')
+const _ = require('lodash')
+const { JSDOM } = require('jsdom')
 
 const pathSeparatorRegExp = new RegExp('\\' + path.sep, 'g')
 
@@ -44,7 +42,7 @@ const getPageNavigation = options =>
 
 // Add isCurrent / isActive properties, extend options.prevNext
 const extendNavigationItem = (origItem, index, options) => {
-  const item = Object.assign({}, origItem)
+  const item = _.merge({}, origItem)
   const level = options.level || 1
 
   item.level = level
@@ -136,8 +134,12 @@ const flattenNavigation = items =>
 // Cache changed dates
 const changedDates = {}
 
-export default (config, cb) => {
-  const markdown = markdownFactory(config.rootDir)
+module.exports = (config, cb) => {
+  const datetime = importFresh('./helpers/datetime')
+  const markdown = importFresh('./helpers/markdown')(config.rootDir)
+  const metatags = importFresh('./helpers/metatags')
+  const Feed = importFresh('./helpers/rss')
+  const appConfig = importFresh('../config')
 
   const files = []
   const sitemap = []
@@ -285,7 +287,7 @@ export default (config, cb) => {
                     level: 1
                   }))
                 : subPages,
-              metatags: generateTags(metatagsData),
+              metatags: metatags.generateTags(metatagsData),
               breadcrumb: breadcrumb.sort((a, b) => {
                 return a.url.length - b.url.length
               }),
@@ -320,7 +322,7 @@ export default (config, cb) => {
             .replace(pathSeparatorRegExp, '/')
         },
         helpers: {
-          formatDate,
+          formatDate: datetime.formatDate,
           eq: function (v1, v2, options) {
             if (v1 === v2) {
               return options.fn(this)

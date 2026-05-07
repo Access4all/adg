@@ -7,6 +7,19 @@
  *
  * contextTrigger.add( triggerSelector,callback );
  *
+ *
+ * ---------------------------------------------------------------------------
+ *
+ * Example:
+ *
+ * contextTrigger.add("#main", function(){
+ *
+ *  require(['uxui/util/Frameplayer'], function(F){
+ *    console.log(F);
+ *  });
+ *
+ * });
+ *
  */
 import $ from 'jquery'
 

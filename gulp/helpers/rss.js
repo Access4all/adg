@@ -1,7 +1,8 @@
-import { Feed } from 'feed'
-import appConfig from '../../config.js'
+const { Feed } = require('feed')
 
-export default (origPages = []) => {
+module.exports = (origPages = []) => {
+  const appConfig = require('../../config')
+
   // Sort by date
   const pages = origPages.sort((a, b) => {
     return new Date(b.data.changed) - new Date(a.data.changed)

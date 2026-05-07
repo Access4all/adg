@@ -1,7 +1,7 @@
 /* globals initializeSs360 */
 import $ from 'jquery'
 
-import BaseModule from './BaseModule.js'
+import BaseModule from './BaseModule'
 
 /**
  * Search

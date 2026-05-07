@@ -1,9 +1,5 @@
-import contextTrigger from '../lib/util/contextTrigger.js'
-import ModuleManager from '../lib/util/ModuleManager.js'
-import Search from './modules/Search.js'
-import Anchor from './modules/content/Anchor.js'
-import MainNav from './modules/content/MainNav.js'
-import Panel from './modules/content/Panel.js'
+import contextTrigger from '../lib/util/contextTrigger'
+import ModuleManager from '../lib/util/ModuleManager'
 
 export default () => {
   // every module should at least implement two methods
@@ -17,25 +13,49 @@ export default () => {
   contextTrigger.add('.js-search', function () {
     var elem = this
 
-    ModuleManager.connect(Search, elem)
+    require(['./modules/Search'], function (Module) {
+      if (Module.default) {
+        ModuleManager.connect(Module.default, elem)
+      } else {
+        ModuleManager.connect(Module, elem)
+      }
+    })
   })
 
   contextTrigger.add('.js-anchor', function () {
     var elem = this
 
-    ModuleManager.connect(Anchor, elem)
+    require(['./modules/content/Anchor'], function (Module) {
+      if (Module.default) {
+        ModuleManager.connect(Module.default, elem)
+      } else {
+        ModuleManager.connect(Module, elem)
+      }
+    })
   })
 
   contextTrigger.add('.js-mainnav', function () {
     var elem = this
 
-    ModuleManager.connect(MainNav, elem)
+    require(['./modules/content/MainNav'], function (Module) {
+      if (Module.default) {
+        ModuleManager.connect(Module.default, elem)
+      } else {
+        ModuleManager.connect(Module, elem)
+      }
+    })
   })
 
   contextTrigger.add('.js-panel', function () {
     var elem = this
 
-    ModuleManager.connect(Panel, elem)
+    require(['./modules/content/Panel'], function (Module) {
+      if (Module.default) {
+        ModuleManager.connect(Module.default, elem)
+      } else {
+        ModuleManager.connect(Module, elem)
+      }
+    })
   })
 
   contextTrigger.validate('body')
