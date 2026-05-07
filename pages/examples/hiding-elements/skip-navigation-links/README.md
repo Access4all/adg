@@ -1,15 +1,15 @@
 ---
-navigation_title: "Skip navigation links"
+navigation_title: "Skip links"
 position: 4
 ---
 
-# Skip navigation links
+# Skip links
 
 **A skip link is usually the first interactive element on a page. It is visually hidden by default, appears on keyboard focus, and lets users bypass repeated blocks quickly.**
 
 [[_TOC_]]
 
-This pattern is mainly relevant for keyboard users. It avoids having to tab through repeated links on every page load.
+This pattern is mainly relevant for keyboard users. It allows skipping past elements with many focusable children.
 
 ## Recommended baseline: one link to main content
 
