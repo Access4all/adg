@@ -5,11 +5,11 @@ position: 8
 
 # Accordions
 
-**Accordions contain of a number of content panels, each of wich can be expanded or collapsed vertically by the user.**
+**Accordions consist of a number of content panels, each of which can be expanded or collapsed vertically by the user.**
 
 [[_TOC_]]
 
-Accordions help to save vertical space and prevent from visual noise. Some accordions allow only a single panel to be expanded at a time, others allow multiple.
+Accordions help to save vertical space and reduce visual noise. Some accordions allow only a single panel to be expanded at a time, others allow multiple.
 
 ![Accordion](_media/accordion.png)
 
@@ -17,11 +17,12 @@ Before you continue, please read [Tablist widgets (or: tab panels, tabs)](/examp
 
 ## General requirements
 
-The following requirements are based on well established best practices and [WAI-WAI-ARIA Authoring Practices: Accordion (widget)](https://www.w3.org/TR/wai-aria-practices/#accordion).
+The following requirements are based on well established best practices and the [WAI-ARIA Authoring Practices Guide (APG): Accordion Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/).
 
-In addition to the tablists’ requirements, and besides many other requirements, we want to stress out explicitly the following:
+Accordions and [Tablists](/examples/widgets/tablists) share the same underlying logic: a trigger (header/tab) controls the visibility of a content panel. While they are structurally similar, accordions have specific requirements:
 
-- Multiple slides can be visible (optional).
+- Multiple panels can be visible at the same time (optional).
+- Keyboard support: Users can navigate between accordion headers using `Tab` and toggle them with `Enter` or `Space`. (Optional but recommended: Arrow key navigation).
 
 ## Proofs of concept
 
@@ -35,42 +36,87 @@ It is relatively simple to create a custom accordion implementation with ARIA:
 
 #### Implementation details
 
-A link with an `aria-expanded="true"` attribute is placed around each panel’s header; its value (`true`/`false`) and the visibility of the corresponding panel is toggled using JavaScript. See [Marking elements expandable using aria-expanded](/examples/sensible-aria-usage/expanded).
+This implementation follows the current APG approach and uses a real `button` in each header.
 
-While this may feel tempting in some circumstances, there are several drawbacks:
+- The button toggles `aria-expanded` (`true`/`false`).
+- The button uses `aria-controls` to reference the associated panel.
+- The panel uses `role="region"` and `aria-labelledby` to expose a clear relationship back to the controlling header button.
+- The panel visibility is synchronized with the semantic state using JavaScript.
 
-- It needs more JavaScript (instead of relying on browser standard behaviour).
-    - The current implementation allows multiple elements to be open. If you wanted to restrict it to one element though, a lot of additional JavaScript would be needed to manage states - something that radio buttons would offer "for free".
-- This solution is less intuitive: a screen reader announcement "link X collapsed" is less expressive than "show panel X checkbox not checked" or "show panel X radio button not checked 2 of 3".
-- Missing backwards compatibility for older clients with incomplete/missing ARIA support.
+### Native HTML Disclosure Elements
 
-### Radio buttons implementation
+For simple disclosure-like use cases, the native HTML `<details>` and `<summary>` elements are a solid, no-JavaScript option. You can find the technical specification and browser behavior in the [MDN Web Docs for the Details element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details).
 
-This implementation is based on the [tablists’ proof of concept](/examples/widgets/tablists/#proof-of-concept), only the layout is different.
+- The `summary` element works as the interactive header.
+- The surrounding `details` element manages the expanded/collapsed state natively.
+- This removes the need for JavaScript compared to custom ARIA widgets.
 
-[Example](_examples/accordion-with-radio-buttons)
-
-#### Implementation details
-
-Some interesting peculiarities:
-
-- Using `.accordion:focus-within .control label`, a style can be applied to all radio button labels upon interacting with the accordion.
-    - This gives users a clue that they are interacting with a single control now (indicating to use the `Arrow` keys instead of `Tab` to navigate through accordion items).
-    - If you would rather like to make each control focusable on its own, you could use a group of checkboxes instead of radio buttons.
-          - Do not forget to make sure only one of them is checked at a time though (using some JavaScript).
-
-### Checkboxes implementation
-
-This implementation is based on the [tablists’ proof of concept](/examples/widgets/tablists/#proof-of-concept), with a slightly different layout:
-
-[Example](_examples/multi-accordion-with-checkboxes)
+[Example](_examples/accordion-with-details-summary)
 
 #### Implementation details
 
-Some interesting peculiarities:
+- The panel lives in the default slot of `<details>` (no separate region role required for basic disclosure).
+- Each item uses `<details>` and `<summary>`; the open/closed state is exposed natively without `aria-expanded`.
+- **Keyboard navigation:** Browsers natively support `Tab`, `Space`, and `Enter` on the `<summary>`; arrow-key navigation between headers requires JavaScript.
 
-- Checkboxes replace the radio buttons to offer multiple selection.
-    - We waived using a `<fieldset>`/`<legend>` structure, as this is no traditional group of checkboxes, and JAWS tends to be very wordy with focusable items nested within those, see [Grouping form controls with fieldset and legend](/examples/forms/grouping-with-fieldset-legend).
-- By default, only the `Space` key is used to toggle a checkbox (while pressing `Enter` submits a form).
-    - To make it more intuitive for visual users (who do not know about any checkbox behind the scenes, and thinking they are interacting with a link or button), the `Enter` key was re-wired to also toggle the checkboxes.
-- In contrast to the radio button solution above, we omitted a visual `.accordion:focus-within .control label` state for the accordion items, as checkboxes are individual controls and (thereby accessed by the `Tab` key, as most users would expect).
+
+### Comparison: ARIA vs. Native HTML
+
+#### Comparison of Implementation Methods
+<table>
+  <caption class="visuallyhidden">Comparison of Accordion Implementation Methods</caption>
+  <thead>
+    <tr>
+      <th scope="col">Implementation Method</th>
+      <th scope="col">Advantages</th>
+      <th scope="col">Limitations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Custom ARIA Implementation</th>
+      <td>
+        <ul>
+          <li>Full control over keyboard behavior (e.g. arrow keys).</li>
+          <li>Better for complex layouts/nested widgets.</li>
+          <li>Exact state control via JS.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Requires JavaScript for state and interaction.</li>
+          <li>Higher maintenance (must handle all ARIA states manually).</li>
+          <li>In Chrome with NVDA, if the virtual cursor is on an accordion button while keyboard focus is on a different element, activating the button can cause <code>aria-expanded</code> to be announced twice. No known fix exists.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Native Disclosure Elements (<code>&lt;details&gt;</code>)</th>
+      <td>
+        <ul>
+          <li>Works without JavaScript.</li>
+          <li>Native accessibility "out of the box".</li>
+          <li>Minimal code footprint.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Limited styling options.</li>
+          <li>No native support for "only one open" (requires JS).</li>
+          <li>Default keyboard support is limited to Tab/Space/Enter.</li>
+          <li>Adding <code>role="region"</code> (and similar ARIA attributes) to content inside <code>&lt;details&gt;</code> does not work reliably; workarounds are needed for explicit regions.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+### Legacy implementations (Historical)
+
+**Note:** The following legacy variants are deprecated and provided for historical reference only.
+
+For all new projects, use one of the recommended implementations above (ARIA or native `<details>`/`<summary>`, depending on your requirements).
+
+[Accordion with radio buttons](_examples/accordion-with-radio-buttons) *(Legacy — for reference only)**  
+[Multi accordion with checkboxes](_examples/multi-accordion-with-checkboxes) *(Legacy — for reference only)*

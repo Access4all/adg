@@ -9,6 +9,8 @@ body {
 
 .accordion-item {
   margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 .accordion-trigger {
@@ -19,21 +21,28 @@ body {
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  margin: 0;
-  border: 1px solid black;
+  border: 1px solid #000;
   padding: 6px 12px;
+  margin: 0;
   width: 100%;
   cursor: pointer;
   text-align: left;
+  list-style: none;
+  font-size: 1.25rem;
 }
 
-.accordion-trigger:hover {
-  background: #fff9c4;
+.accordion-header {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 600;
 }
 
-.accordion-trigger:focus-visible {
-  outline: 2px dotted;
-  outline-offset: 2px;
+.accordion-trigger::marker {
+  content: '';
+}
+
+.accordion-trigger::-webkit-details-marker {
+  display: none;
 }
 
 .indicator {
@@ -47,34 +56,37 @@ body {
 }
 
 .indicator-closed {
-  display: none;
-}
-
-.accordion-trigger[aria-expanded='false'] .indicator-open {
-  display: none;
-}
-
-.accordion-trigger[aria-expanded='false'] .indicator-closed {
   display: inline-block;
 }
 
-.accordion-header {
-  margin: 0;
-  font-size: 1.25rem;
-  font-weight: 600;
+.indicator-open {
+  display: none;
+}
+
+.accordion-trigger:hover {
+  background: #fff9c4;
+}
+
+.accordion-item[open] > .accordion-trigger {
+  background: lightyellow;
+}
+
+.accordion-item[open] > .accordion-trigger .indicator-open {
+  display: inline-block;
+}
+
+.accordion-item[open] > .accordion-trigger .indicator-closed {
+  display: none;
 }
 
 .accordion-panel {
-  border: 1px solid black;
+  border: 1px solid #000;
   border-top: none;
   padding: 1rem;
   background: lightyellow;
 }
 
-.accordion-trigger[aria-expanded='true'] {
-  background: lightyellow;
-}
-
+.accordion-trigger:focus-visible,
 a:focus-visible,
 button:focus-visible {
   outline: 2px dotted;

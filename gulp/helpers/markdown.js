@@ -169,12 +169,21 @@ module.exports = rootDir => filePath => {
             let example
             let insertToken
             let exampleLinkClass
+            const tokenTextContent = token.children
+              .filter(child => child.type === 'text')
+              .map(child => child.content)
+              .join(' ')
+            const hasLegacyMarker = /\blegacy\b/i.test(tokenTextContent)
 
             token.children.some((childToken, childIdx) => {
               exampleLink = examples.getLink(childToken)
 
-              // Add title
+              // Add example embedding (unless line contains "legacy" keyword)
               if (exampleLink) {
+                if (hasLegacyMarker) {
+                  return false
+                }
+
                 examplePath = path.isAbsolute(exampleLink)
                   ? path.join(rootDir, exampleLink)
                   : path.resolve(path.dirname(filePath), exampleLink)
