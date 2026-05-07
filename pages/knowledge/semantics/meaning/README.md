@@ -218,4 +218,4 @@ In addition to this, proper semantics allow the user to navigate content quickly
 
 So to create accessible websites, it is highest priority to provide correct semantics, while presentation always has lower priority. Please live with that.
 
-By the way, there are a lot of automated test tools that help preventing many of the problems described above.
+By the way, there are a lot of automated test tools that help preventing many of the problems described above, for example in our [helper tools](/setup/helper-tools).
