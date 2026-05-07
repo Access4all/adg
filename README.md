@@ -2,7 +2,7 @@
 
 **If you want to learn about accessible website development, you are at the right place.**
 
-- Live site: [www.accessibility-developer-guide.com](https://www.accessibility-developer-guide.com/) / [RSS](/feed/rss.xml)
+- Live site: [www.accessibility-developer-guide.com](https://www.accessibility-developer-guide.com/) / [RSS](https://www.accessibility-developer-guide.com/feed/rss.xml)
 - Facebook: [AccessibilityDeveloperGuide](https://www.facebook.com/AccessibilityDeveloperGuide)
 - Twitter: [A11yDevGuide](https://twitter.com/A11yDevGuide)
 
@@ -16,7 +16,7 @@ It is developed and maintained in collaboration with a number of acclaimed web a
 - [Unic](https://www.unic.com/)
 - [Liip](https://www.liip.ch/)
 - [Zeix](https://www.zeix.com/)
-- [Nothing](https://www.nothing.ch)
+- [responsive.ch](https://www.responsive.ch/)
 
 ## Vision
 
