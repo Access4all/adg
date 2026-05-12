@@ -1,5 +1,5 @@
 ---
-title: "Accordion with radio buttons"
+title: "Accordion with radio buttons (Legacy)"
 compatibility:
   Keyboard only:
     status: pass

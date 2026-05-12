@@ -43,6 +43,4 @@ const generateTags = map => {
   return metatags
 }
 
-module.exports = {
-  generateTags
-}
+export { generateTags }

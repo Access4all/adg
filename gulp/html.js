@@ -1,17 +1,20 @@
-const gulp = require('gulp')
-const handlebars = require('gulp-hb')
-// const prettify = require('gulp-prettify')
-const frontMatter = require('gulp-front-matter')
-const through = require('through2')
-const fs = require('fs')
-const path = require('path')
-const importFresh = require('import-fresh')
-const plumber = require('gulp-plumber')
-const normalize = require('normalize-strings')
-const { SitemapStream, streamToPromise } = require('sitemap')
-const { Readable } = require('stream')
-const _ = require('lodash')
-const { JSDOM } = require('jsdom')
+import fs from 'node:fs'
+import path from 'node:path'
+import { Readable } from 'node:stream'
+import gulp from 'gulp'
+import handlebars from 'gulp-hb'
+import frontMatter from 'gulp-front-matter'
+import through from 'through2'
+import plumber from 'gulp-plumber'
+import normalize from 'normalize-strings'
+import { SitemapStream, streamToPromise } from 'sitemap'
+import { JSDOM } from 'jsdom'
+import appConfig from '../config.js'
+import { formatDate } from './helpers/datetime.js'
+import markdownFactory from './helpers/markdown.js'
+import { generateTags } from './helpers/metatags.js'
+import Feed from './helpers/rss.js'
+import getGitMetadataFactory from './helpers/git-metadata.js'
 
 const pathSeparatorRegExp = new RegExp('\\' + path.sep, 'g')
 
@@ -50,7 +53,7 @@ const getPageNavigation = options =>
 
 // Add isCurrent / isActive properties, extend options.prevNext
 const extendNavigationItem = (origItem, index, options) => {
-  const item = _.merge({}, origItem)
+  const item = Object.assign({}, origItem)
   const level = options.level || 1
 
   item.level = level
@@ -141,14 +144,10 @@ const flattenNavigation = items =>
 
 const recentUpdatesLimit = 8
 
-module.exports = (config, cb) => {
-  const datetime = importFresh('./helpers/datetime')
-  const markdown = importFresh('./helpers/markdown')(config.rootDir)
-  const metatags = importFresh('./helpers/metatags')
-  const Feed = importFresh('./helpers/rss')
-  const appConfig = importFresh('../config')
+export default (config, cb) => {
+  const markdown = markdownFactory(config.rootDir)
+  const getGitMetadata = getGitMetadataFactory()
   const githubRepoUrl = appConfig.repoUrl
-  const getGitMetadata = importFresh('./helpers/git-metadata')()
   const getRecentlyUpdatedPages = currentFilePath =>
     files
       .filter(file => !file.frontMatter.navigation_ignore)
@@ -314,7 +313,7 @@ module.exports = (config, cb) => {
                 : subPages,
               recentlyUpdatedPages:
                 currentUrl === '' ? getRecentlyUpdatedPages(file.path) : [],
-              metatags: metatags.generateTags(metatagsData),
+              metatags: generateTags(metatagsData),
               breadcrumb: breadcrumb.sort((a, b) => {
                 return a.url.length - b.url.length
               }),
@@ -349,7 +348,7 @@ module.exports = (config, cb) => {
             .replace(pathSeparatorRegExp, '/')
         },
         helpers: {
-          formatDate: datetime.formatDate,
+          formatDate,
           truncateText: function (text, maxLength) {
             if (!text) {
               return ''

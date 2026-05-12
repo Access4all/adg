@@ -1,5 +1,5 @@
-const childProcess = require('child_process')
-const crypto = require('crypto')
+import childProcess from 'node:child_process'
+import crypto from 'node:crypto'
 
 const excludedCommitIds = [
   'ac195754a6e64604066dafe2f5ad373c2a949ac4', // May 2, 2018   Absolutise paths
@@ -39,7 +39,7 @@ const getGravatarUrl = email => {
   return `https://gravatar.com/avatar/${hash}?s=${gravatarImageSize}&d=mp`
 }
 
-module.exports = () => {
+export default () => {
   const changedMetadata = {}
 
   return filePath => {

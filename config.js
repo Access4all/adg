@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   url: 'https://www.accessibility-developer-guide.com',
   repoUrl: 'https://github.com/Access4all/adg',
   title: 'Accessibility Developer Guide',

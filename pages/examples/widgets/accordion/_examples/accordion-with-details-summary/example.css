@@ -1,0 +1,94 @@
+body {
+  padding: 20px;
+  font-family: system-ui, sans-serif;
+}
+
+.accordion-widget > h2 {
+  margin: 0 0 12px;
+}
+
+.accordion-item {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.accordion-trigger {
+  appearance: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  padding: 6px 12px;
+  margin: 0;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+  list-style: none;
+  font-size: 1.25rem;
+}
+
+.accordion-header {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 600;
+}
+
+.accordion-trigger::marker {
+  content: '';
+}
+
+.accordion-trigger::-webkit-details-marker {
+  display: none;
+}
+
+.indicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  flex: 0 0 1rem;
+  margin-right: 8px;
+  font-weight: normal;
+}
+
+.indicator-closed {
+  display: inline-block;
+}
+
+.indicator-open {
+  display: none;
+}
+
+.accordion-trigger:hover {
+  background: #fff9c4;
+}
+
+.accordion-item[open] > .accordion-trigger {
+  background: lightyellow;
+}
+
+.accordion-item[open] > .accordion-trigger .indicator-open {
+  display: inline-block;
+}
+
+.accordion-item[open] > .accordion-trigger .indicator-closed {
+  display: none;
+}
+
+.accordion-panel {
+  border: 1px solid #000;
+  border-top: none;
+  padding: 1rem;
+  background: lightyellow;
+}
+
+.accordion-trigger:focus-visible,
+a:focus-visible,
+button:focus-visible {
+  outline: 2px dotted;
+  outline-offset: 2px;
+}

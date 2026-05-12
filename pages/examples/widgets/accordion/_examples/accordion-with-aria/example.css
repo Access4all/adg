@@ -1,60 +1,82 @@
-*:focus {
-  outline: 2px dotted black;
+body {
+  padding: 20px;
+  font-family: system-ui, sans-serif;
 }
 
-.visually-hidden {
-  position: absolute;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
+.accordion-widget > h2 {
+  margin: 0 0 12px;
 }
 
-.accordion button[aria-controls] {
+.accordion-item {
+  margin: 0;
+}
+
+.accordion-trigger {
   appearance: none;
-  all: inherit;
-  display: block;
+  background: none;
+  font: inherit;
+  color: inherit;
+  display: flex;
+  align-items: center;
   box-sizing: border-box;
-  margin: 0 0 -1px 0;
+  margin: 0;
   border: 1px solid black;
-  padding: 4px 10px;
+  padding: 6px 12px;
   width: 100%;
-  background-color: lightyellow;
   cursor: pointer;
+  text-align: left;
 }
 
-.accordion button[aria-controls]:hover {
-  text-decoration: underline;
+.accordion-trigger:hover {
+  background: #fff9c4;
 }
 
-.accordion *:focus,
-.accordion button[aria-controls]:focus {
-  outline: 2px dotted red;
+.accordion-trigger:focus-visible {
+  outline: 2px dotted;
   outline-offset: 2px;
 }
 
-.accordion button[aria-controls]::before {
-  content: "-";
-  display: inline-block;
-  width: 0.75em;
+.indicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  flex: 0 0 1rem;
+  margin-right: 8px;
   font-weight: normal;
 }
 
-.accordion button[aria-controls][aria-expanded=false]::before {
-  content: "+";
+.indicator-closed {
+  display: none;
 }
 
-.header {
-  margin-bottom: 0;
+.accordion-trigger[aria-expanded='false'] .indicator-open {
+  display: none;
 }
 
-.panel {
+.accordion-trigger[aria-expanded='false'] .indicator-closed {
+  display: inline-block;
+}
+
+.accordion-header {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.accordion-panel {
   border: 1px solid black;
-  border-top-color: lightyellow;
-  padding: 0 0 0 10px;
-  background-color: lightyellow;
+  border-top: none;
+  padding: 1rem;
+  background: lightyellow;
+}
+
+.accordion-trigger[aria-expanded='true'] {
+  background: lightyellow;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px dotted;
+  outline-offset: 2px;
 }
