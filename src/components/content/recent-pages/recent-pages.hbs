@@ -7,7 +7,12 @@
     {{#each pages}}
       <li class="recent-pages__item">
         <a class="recent-pages__link" href="/{{url}}">
-          <span class="recent-pages__date">{{ formatDate changed }}</span>
+          <div class="recent-pages__meta">
+            <span class="recent-pages__date">{{ formatDate changed }}</span>
+            {{#if sectionTitle}}
+              <span class="recent-pages__pill theme theme-{{section}}">{{sectionTitle}}</span>
+            {{/if}}
+          </div>
           <h3 class="recent-pages__title">
             <span class="recent-pages__title-link">{{title}}</span>
           </h3>

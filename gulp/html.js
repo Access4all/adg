@@ -153,11 +153,16 @@ export default (config, cb) => {
       .filter(file => !file.frontMatter.navigation_ignore)
       .map(file => {
         const metadata = getGitMetadata(file.path)
+        const section = file.data.section
+        const sectionTitle =
+          navigation.find(item => item.url === section)?.title || ''
 
         return {
           title: file.data.title,
           lead: file.data.lead,
           url: getCurrentUrl(file.path, config.base),
+          section,
+          sectionTitle,
           changed: metadata.changed,
           changedBy: metadata.changedBy,
           gravatarUrl: metadata.gravatarUrl
