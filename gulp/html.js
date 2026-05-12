@@ -148,9 +148,7 @@ module.exports = (config, cb) => {
   const Feed = importFresh('./helpers/rss')
   const appConfig = importFresh('../config')
   const githubRepoUrl = appConfig.repoUrl
-  const getGitMetadata = importFresh('./helpers/git-metadata')({
-    githubRepoUrl
-  })
+  const getGitMetadata = importFresh('./helpers/git-metadata')()
   const getRecentlyUpdatedPages = currentFilePath =>
     files
       .filter(file => !file.frontMatter.navigation_ignore)
@@ -301,20 +299,6 @@ module.exports = (config, cb) => {
                 metadata.changed && metadata.changed.length > 0
                   ? metadata.changed
                   : null,
-              changedBy:
-                metadata.changedBy && metadata.changedBy.length > 0
-                  ? metadata.changedBy
-                  : null,
-              gravatarUrl:
-                metadata.gravatarUrl && metadata.gravatarUrl.length > 0
-                  ? metadata.gravatarUrl
-                  : null,
-              historyEntries:
-                metadata.historyEntries && metadata.historyEntries.length > 0
-                  ? metadata.historyEntries
-                  : [],
-              hasHistoryEntries:
-                metadata.historyEntries && metadata.historyEntries.length > 0,
               title: file.data.title,
               contents: file.contents,
               navigation: pageNavigation,

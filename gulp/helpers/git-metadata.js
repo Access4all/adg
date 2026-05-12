@@ -21,7 +21,6 @@ const excludedCommitIds = [
 const excludedCommitIdsSet = new Set(
   excludedCommitIds.map(id => id.toLowerCase())
 )
-const historyYearsLimit = 5
 const gravatarImageSize = 48
 
 const getGravatarUrl = email => {
@@ -40,7 +39,7 @@ const getGravatarUrl = email => {
   return `https://gravatar.com/avatar/${hash}?s=${gravatarImageSize}&d=mp`
 }
 
-module.exports = ({ githubRepoUrl }) => {
+module.exports = () => {
   const changedMetadata = {}
 
   return filePath => {
@@ -50,11 +49,11 @@ module.exports = ({ githubRepoUrl }) => {
 
     const historyStdout = childProcess.spawnSync(
       'git',
-      ['log', '--pretty=format:%H%x1f%ci%x1f%an%x1f%ae%x1f%s%x1e', filePath],
+      ['log', '--pretty=format:%H%x1f%ci%x1f%an%x1f%ae%x1e', filePath],
       { encoding: 'utf8' }
     ).stdout
 
-    const filteredHistoryEntries = historyStdout
+    const latestEntry = historyStdout
       .split('\x1e')
       .map(item => item.trim())
       .filter(Boolean)
@@ -63,8 +62,7 @@ module.exports = ({ githubRepoUrl }) => {
           commitId = '',
           changed = '',
           changedBy = '',
-          changedByEmail = '',
-          message = ''
+          changedByEmail = ''
         ] = item.split('\x1f')
 
         return {
@@ -72,31 +70,19 @@ module.exports = ({ githubRepoUrl }) => {
           changed,
           changedBy,
           changedByEmail,
-          gravatarUrl: getGravatarUrl(changedByEmail),
-          commitUrl: `${githubRepoUrl}/commit/${commitId}`,
-          message
+          gravatarUrl: getGravatarUrl(changedByEmail)
         }
       })
-      .filter(
+      .find(
         entry =>
           entry.commitId &&
           !excludedCommitIdsSet.has(entry.commitId.toLowerCase())
       )
 
-    const latestEntry = filteredHistoryEntries[0] || null
-    const cutoffDate = new Date()
-    cutoffDate.setFullYear(cutoffDate.getFullYear() - historyYearsLimit)
-    const historyEntries = filteredHistoryEntries.filter(entry => {
-      const changedDate = new Date(entry.changed)
-      return !Number.isNaN(changedDate.getTime()) && changedDate >= cutoffDate
-    })
-
     const metadata = {
       changed: latestEntry ? latestEntry.changed : '',
       changedBy: latestEntry ? latestEntry.changedBy : '',
-      changedByEmail: latestEntry ? latestEntry.changedByEmail : '',
-      gravatarUrl: latestEntry ? latestEntry.gravatarUrl : '',
-      historyEntries
+      gravatarUrl: latestEntry ? latestEntry.gravatarUrl : ''
     }
 
     changedMetadata[filePath] = metadata
