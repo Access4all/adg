@@ -1,0 +1,60 @@
+<section class="page-updates" aria-labelledby="page-updates-caption">
+  <h2 id="page-updates-caption" class="visuallyhidden">
+    Merges sorted by date with affected pages
+  </h2>
+
+  {{#if merges}}
+    <ol class="page-updates__list">
+      {{#each merges}}
+        <li class="page-updates__item">
+          <article class="page-updates__merge">
+            <div class="page-updates__meta">
+              <time class="page-updates__date" datetime="{{changed}}">
+                {{ formatDateTime changedTimestamp }}
+              </time>
+              {{#if changedBy}}
+                {{> "content/author/author" name=changedBy gravatarUrl=gravatarUrl className="page-updates__author"}}
+              {{else}}
+                <span class="visuallyhidden">Updated by unknown author</span>
+              {{/if}}
+              {{#if commitUrl}}
+                <a
+                  class="page-updates__commit"
+                  href="{{commitUrl}}"
+                  aria-label="View commit {{commitShortId}} in the repository"
+                >
+                  <code>{{commitShortId}}</code>
+                </a>
+              {{else}}
+                <span class="visuallyhidden">Commit unavailable</span>
+              {{/if}}
+            </div>
+            {{#if commitMessage}}
+              <p class="page-updates__message">{{commitMessage}}</p>
+            {{/if}}
+            <ul class="page-updates__pages" aria-label="Affected pages">
+              {{#each pages}}
+                <li class="page-updates__page">
+                  {{#if sectionTitle}}
+                    <span class="page-updates__section theme theme-{{section}}">
+                      <span class="visuallyhidden">Section: </span>{{sectionTitle}}
+                    </span>
+                  {{/if}}
+                  <a class="page-updates__link" href="/{{url}}">{{title}}</a>
+                  <span
+                    class="page-updates__changes"
+                    aria-label="{{linesAdded}} lines added, {{linesDeleted}} lines deleted"
+                  >
+                    +{{linesAdded}} −{{linesDeleted}}
+                  </span>
+                </li>
+              {{/each}}
+            </ul>
+          </article>
+        </li>
+      {{/each}}
+    </ol>
+  {{else}}
+    <p class="page-updates__empty">No pages with merge history were found.</p>
+  {{/if}}
+</section>

@@ -8,7 +8,7 @@
       <li class="recent-pages__item">
         <a class="recent-pages__link" href="/{{url}}">
           <div class="recent-pages__meta">
-            <span class="recent-pages__date">{{ formatDate changed }}</span>
+            <time class="recent-pages__date" datetime="{{changed}}">{{ formatDate changed }}</time>
             {{#if sectionTitle}}
               <span class="recent-pages__pill theme theme-{{section}}">{{sectionTitle}}</span>
             {{/if}}
@@ -26,4 +26,10 @@
       </li>
     {{/each}}
   </ul>
+
+  {{#if overviewLink}}
+    <p class="recent-pages__overview">
+      <a href="/{{overviewLink.url}}">{{overviewLink.title}}</a>
+    </p>
+  {{/if}}
 </section>

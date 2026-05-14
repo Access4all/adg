@@ -55,8 +55,11 @@
           {{#if subPages}}
             {{> "content/cardmenu/cardmenu" menuitem=subPages}}
           {{/if}}
+          {{#if pageUpdatesList}}
+            {{> "content/page-updates/page-updates-table" merges=pageUpdatesList}}
+          {{/if}}
           {{#if recentlyUpdatedPages}}
-            {{> "content/recent-pages/recent-pages" pages=recentlyUpdatedPages}}
+            {{> "content/recent-pages/recent-pages" pages=recentlyUpdatedPages overviewLink=recentPagesOverviewLink}}
           {{/if}}
         </div>
         {{> "content/prev_next/prev_next" prev=previousPage next=nextPage}}

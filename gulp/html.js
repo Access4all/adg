@@ -1,6 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { Readable } from 'node:stream'
+import { deleteAsync } from 'del'
 import gulp from 'gulp'
 import handlebars from 'gulp-hb'
 import frontMatter from 'gulp-front-matter'
@@ -10,11 +11,12 @@ import normalize from 'normalize-strings'
 import { SitemapStream, streamToPromise } from 'sitemap'
 import { JSDOM } from 'jsdom'
 import appConfig from '../config.js'
-import { formatDate } from './helpers/datetime.js'
+import { formatDate, formatDateTime } from './helpers/datetime.js'
 import markdownFactory from './helpers/markdown.js'
 import { generateTags } from './helpers/metatags.js'
 import Feed from './helpers/rss.js'
 import getGitMetadataFactory from './helpers/git-metadata.js'
+import { getDevOnlyDistPaths } from './helpers/page-frontmatter.js'
 
 const pathSeparatorRegExp = new RegExp('\\' + path.sep, 'g')
 
@@ -144,15 +146,70 @@ const flattenNavigation = items =>
 
 const recentUpdatesLimit = 8
 
+const groupPageEntriesByMerge = pages => {
+  const mergesByCommitId = new Map()
+
+  for (const page of pages) {
+    if (!page.commitId) {
+      continue
+    }
+
+    const affectedPage = {
+      title: page.title,
+      url: page.url,
+      section: page.section,
+      sectionTitle: page.sectionTitle,
+      linesAdded: page.linesAdded,
+      linesDeleted: page.linesDeleted,
+      linesChanged: page.linesChanged
+    }
+    const existingMerge = mergesByCommitId.get(page.commitId)
+
+    if (existingMerge) {
+      existingMerge.pages.push(affectedPage)
+      continue
+    }
+
+    mergesByCommitId.set(page.commitId, {
+      changed: page.changed,
+      changedTimestamp: page.changedTimestamp,
+      changedBy: page.changedBy,
+      gravatarUrl: page.gravatarUrl,
+      commitId: page.commitId,
+      commitShortId: page.commitId.slice(0, 7),
+      commitMessage: page.commitMessage,
+      commitUrl: page.commitUrl,
+      pages: [affectedPage]
+    })
+  }
+
+  return Array.from(mergesByCommitId.values())
+    .map(merge => ({
+      ...merge,
+      pages: merge.pages.sort((a, b) => {
+        if (b.linesChanged !== a.linesChanged) {
+          return b.linesChanged - a.linesChanged
+        }
+
+        return a.title.localeCompare(b.title)
+      })
+    }))
+    .sort((a, b) => b.changedTimestamp - a.changedTimestamp)
+}
+
 export default (config, cb) => {
+  const devMode = Boolean(config.devMode)
   const markdown = markdownFactory(config.rootDir)
-  const getGitMetadata = getGitMetadataFactory()
+  const { getGitMetadata, getFileChangeStats } = getGitMetadataFactory()
   const githubRepoUrl = appConfig.repoUrl
-  const getRecentlyUpdatedPages = currentFilePath =>
+  const getUpdatedPageEntries = currentFilePath =>
     files
       .filter(file => !file.frontMatter.navigation_ignore)
       .map(file => {
         const metadata = getGitMetadata(file.path)
+        const { linesAdded, linesDeleted } = metadata.commitId
+          ? getFileChangeStats(metadata.commitId, file.path)
+          : { linesAdded: 0, linesDeleted: 0 }
         const section = file.data.section
         const sectionTitle =
           navigation.find(item => item.url === section)?.title || ''
@@ -163,25 +220,35 @@ export default (config, cb) => {
           url: getCurrentUrl(file.path, config.base),
           section,
           sectionTitle,
+          linesAdded,
+          linesDeleted,
+          linesChanged: linesAdded + linesDeleted,
           changed: metadata.changed,
+          changedTimestamp: metadata.changedTimestamp,
           changedBy: metadata.changedBy,
-          gravatarUrl: metadata.gravatarUrl
+          gravatarUrl: metadata.gravatarUrl,
+          commitId: metadata.commitId,
+          commitMessage: metadata.commitMessage,
+          commitUrl: metadata.commitId
+            ? `${githubRepoUrl}/commit/${metadata.commitId}`
+            : ''
         }
       })
       .filter(
         page =>
           page.title &&
           page.url &&
-          page.changed &&
+          page.changedTimestamp > 0 &&
           page.url !== getCurrentUrl(currentFilePath, config.base)
       )
-      .sort((a, b) => new Date(b.changed) - new Date(a.changed))
-      .slice(0, recentUpdatesLimit)
+      .sort((a, b) => b.changedTimestamp - a.changedTimestamp)
 
   const files = []
   const sitemap = []
   const layouts = {}
   let navigation = []
+  let updatedPageEntries = []
+  let pageUpdatesOverviewFile = null
 
   // const config = {
   //   src: './pages/**/*.md',
@@ -262,6 +329,16 @@ export default (config, cb) => {
             .filter(page => !page.parent && page.parent !== null)
             .sort((a, b) => a.position - b.position)
 
+          const homeFile = files.find(
+            file => getCurrentUrl(file.path, config.base) === ''
+          )
+
+          updatedPageEntries = homeFile
+            ? getUpdatedPageEntries(homeFile.path)
+            : []
+          pageUpdatesOverviewFile =
+            files.find(file => file.frontMatter.page_updates_overview) || null
+
           // Return files back to stream
           files.forEach(this.push.bind(this))
 
@@ -297,6 +374,24 @@ export default (config, cb) => {
               url: `${appConfig.url}/${currentUrl}`
             }
             const metadata = getGitMetadata(file.path)
+            const recentlyUpdatedPages =
+              currentUrl === ''
+                ? updatedPageEntries.slice(0, recentUpdatesLimit)
+                : []
+            const pageUpdatesList =
+              devMode && file.frontMatter.page_updates_overview
+                ? groupPageEntriesByMerge(updatedPageEntries)
+                : []
+            const recentPagesOverviewLink =
+              devMode && currentUrl === '' && pageUpdatesOverviewFile
+                ? {
+                    title: pageUpdatesOverviewFile.data.title,
+                    url: getCurrentUrl(
+                      pageUpdatesOverviewFile.path,
+                      config.base
+                    )
+                  }
+                : null
 
             file.data = Object.assign({}, file.data, {
               changed:
@@ -316,8 +411,9 @@ export default (config, cb) => {
                     level: 1
                   }))
                 : subPages,
-              recentlyUpdatedPages:
-                currentUrl === '' ? getRecentlyUpdatedPages(file.path) : [],
+              recentlyUpdatedPages,
+              pageUpdatesList,
+              recentPagesOverviewLink,
               metatags: generateTags(metatagsData),
               breadcrumb: breadcrumb.sort((a, b) => {
                 return a.url.length - b.url.length
@@ -354,6 +450,7 @@ export default (config, cb) => {
         },
         helpers: {
           formatDate,
+          formatDateTime,
           truncateText: function (text, maxLength) {
             if (!text) {
               return ''
@@ -477,6 +574,10 @@ export default (config, cb) => {
       ).then(data => data.toString())
 
       fs.writeFileSync(config.sitemap, xml)
+
+      if (!devMode) {
+        await deleteAsync(getDevOnlyDistPaths(config.rootDir), { force: true })
+      }
 
       cb()
     })
