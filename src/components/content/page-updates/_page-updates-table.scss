@@ -2,6 +2,11 @@
   @include rem(margin-top, $gutter);
 }
 
+.page-updates__intro {
+  margin: 0 0 1em;
+  max-width: 48em;
+}
+
 .page-updates__list {
   margin: 0;
   padding: 0;
@@ -69,6 +74,16 @@
   }
 }
 
+.page-updates__page-label {
+  display: inline-flex;
+  margin: 0;
+  cursor: pointer;
+}
+
+.page-updates__page-checkbox {
+  margin: 0;
+}
+
 .page-updates__link {
   flex: 1 1 auto;
   min-width: 12em;
@@ -100,4 +115,47 @@
 
 .page-updates__empty {
   margin: 0;
+}
+
+.page-updates__output {
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: 1px solid var(--theme-color-medium, $c-gray);
+}
+
+.page-updates__output-label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+.page-updates__textarea {
+  width: 100%;
+  min-height: 8em;
+  padding: 0.75em;
+  border: 1px solid var(--theme-color-medium, $c-gray);
+  border-radius: 6px;
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.page-updates__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75em;
+  margin-top: 0.75em;
+}
+
+.page-updates__copy {
+  margin: 0;
+}
+
+.page-updates__status {
+  margin: 0;
+  font-size: 14px;
 }

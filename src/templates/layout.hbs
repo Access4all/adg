@@ -56,7 +56,7 @@
             {{> "content/cardmenu/cardmenu" menuitem=subPages}}
           {{/if}}
           {{#if pageUpdatesList}}
-            {{> "content/page-updates/page-updates-table" merges=pageUpdatesList}}
+            {{> "content/page-updates/page-updates-table" merges=pageUpdatesList showConfigurator=pageUpdatesConfigurator}}
           {{/if}}
           {{#if recentlyUpdatedPages}}
             {{> "content/recent-pages/recent-pages" pages=recentlyUpdatedPages overviewLink=recentPagesOverviewLink}}

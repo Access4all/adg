@@ -58,7 +58,65 @@ const getGravatarUrl = email => {
 
 export default () => {
   const changedMetadata = {}
+  const fileMergeHistoryCache = {}
   const fileChangeStatsCache = new Map()
+
+  const parseGitHistory = historyStdout =>
+    historyStdout
+      .split('\x1e')
+      .map(item => item.trim())
+      .filter(Boolean)
+      .map(item => {
+        const [
+          commitId = '',
+          changed = '',
+          changedTimestamp = '',
+          changedBy = '',
+          changedByEmail = '',
+          commitMessage = ''
+        ] = item.split('\x1f')
+
+        return {
+          commitId,
+          changed,
+          changedTimestamp: Number(changedTimestamp),
+          changedBy,
+          changedByEmail,
+          commitMessage,
+          gravatarUrl: getGravatarUrl(changedByEmail)
+        }
+      })
+      .filter(
+        entry =>
+          entry.commitId &&
+          !excludedCommitIdsSet.has(entry.commitId.toLowerCase())
+      )
+
+  const getFileMergeHistory = filePath => {
+    if (fileMergeHistoryCache[filePath]) {
+      return fileMergeHistoryCache[filePath]
+    }
+
+    const historyStdout = childProcess.spawnSync(
+      'git',
+      [
+        'log',
+        gitHistoryRef,
+        '--pretty=format:%H%x1f%ci%x1f%ct%x1f%an%x1f%ae%x1f%s%x1e',
+        '-m',
+        '--merges',
+        '--first-parent',
+        '--',
+        filePath
+      ],
+      { encoding: 'utf8' }
+    ).stdout
+
+    const history = parseGitHistory(historyStdout)
+
+    fileMergeHistoryCache[filePath] = history
+    return history
+  }
 
   const getFileChangeStats = (commitId, filePath) => {
     if (!commitId || !filePath) {
@@ -105,50 +163,7 @@ export default () => {
       return changedMetadata[filePath]
     }
 
-    const historyStdout = childProcess.spawnSync(
-      'git',
-      [
-        'log',
-        gitHistoryRef,
-        '--pretty=format:%H%x1f%ci%x1f%ct%x1f%an%x1f%ae%x1f%s%x1e',
-        '-m',
-        '--merges',
-        '--first-parent',
-        '--',
-        filePath
-      ],
-      { encoding: 'utf8' }
-    ).stdout
-
-    const latestEntry = historyStdout
-      .split('\x1e')
-      .map(item => item.trim())
-      .filter(Boolean)
-      .map(item => {
-        const [
-          commitId = '',
-          changed = '',
-          changedTimestamp = '',
-          changedBy = '',
-          changedByEmail = '',
-          commitMessage = ''
-        ] = item.split('\x1f')
-
-        return {
-          commitId,
-          changed,
-          changedTimestamp: Number(changedTimestamp),
-          changedBy,
-          changedByEmail,
-          commitMessage,
-          gravatarUrl: getGravatarUrl(changedByEmail)
-        }
-      })
-      .find(
-        entry =>
-          entry.commitId &&
-          !excludedCommitIdsSet.has(entry.commitId.toLowerCase())
-      )
+    const latestEntry = getFileMergeHistory(filePath)[0]
 
     const metadata = {
       changed: latestEntry ? latestEntry.changed : '',
@@ -163,5 +178,5 @@ export default () => {
     return metadata
   }
 
-  return { getGitMetadata, getFileChangeStats }
+  return { getGitMetadata, getFileChangeStats, getFileMergeHistory }
 }

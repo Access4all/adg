@@ -11,6 +11,7 @@ import normalize from 'normalize-strings'
 import { SitemapStream, streamToPromise } from 'sitemap'
 import { JSDOM } from 'jsdom'
 import appConfig from '../config.js'
+import recentPagesConfig from '../config/recent-pages.js'
 import { formatDate, formatDateTime } from './helpers/datetime.js'
 import markdownFactory from './helpers/markdown.js'
 import { generateTags } from './helpers/metatags.js'
@@ -144,43 +145,188 @@ const flattenNavigation = items =>
     return acc
   }, [])
 
-const recentUpdatesLimit = 8
+const normalizeRecentPagesConfig = recentPages => {
+  if (!Array.isArray(recentPages)) {
+    return { urlOnly: [], commits: [] }
+  }
 
-const groupPageEntriesByMerge = pages => {
+  const urlOnly = []
+  const commits = []
+
+  for (const entry of recentPages) {
+    if (typeof entry === 'string') {
+      const url = entry.replace(/^\/+/, '').trim()
+
+      if (url) {
+        urlOnly.push(url)
+      }
+
+      continue
+    }
+
+    if (!entry || typeof entry !== 'object') {
+      continue
+    }
+
+    const commit = typeof entry.commit === 'string' ? entry.commit.trim() : ''
+    const pages = Array.isArray(entry.pages)
+      ? [
+          ...new Set(
+            entry.pages
+              .filter(page => typeof page === 'string')
+              .map(page => page.replace(/^\/+/, '').trim())
+              .filter(Boolean)
+          )
+        ]
+      : []
+
+    if (commit && pages.length) {
+      commits.push({ commit, pages })
+    }
+  }
+
+  return {
+    urlOnly: [...new Set(urlOnly)],
+    commits
+  }
+}
+
+const findMergeByCommit = (merges, commitRef) => {
+  if (!commitRef) {
+    return null
+  }
+
+  return (
+    merges.find(
+      merge =>
+        merge.commitId === commitRef || merge.commitId.startsWith(commitRef)
+    ) || null
+  )
+}
+
+const applyMergeMetadata = (page, merge) => ({
+  ...page,
+  changed: merge.changed,
+  changedTimestamp: merge.changedTimestamp,
+  changedBy: merge.changedBy,
+  gravatarUrl: merge.gravatarUrl,
+  commitId: merge.commitId,
+  commitMessage: merge.commitMessage,
+  commitUrl: merge.commitUrl
+})
+
+const getRecentlyUpdatedPages = (entries, recentPages, mergeOptions) => {
+  const { urlOnly, commits } = normalizeRecentPagesConfig(recentPages)
+
+  if (!urlOnly.length && !commits.length) {
+    return entries
+  }
+
+  if (commits.length) {
+    const entryByUrl = new Map(entries.map(entry => [entry.url, entry]))
+    const merges = groupPageEntriesByMerge(entries, mergeOptions)
+    const results = []
+
+    for (const item of commits) {
+      const merge = findMergeByCommit(merges, item.commit)
+
+      for (const url of item.pages) {
+        const base = entryByUrl.get(url)
+
+        if (!base) {
+          continue
+        }
+
+        results.push(merge ? applyMergeMetadata(base, merge) : base)
+      }
+    }
+
+    return results
+  }
+
+  const selectedUrlSet = new Set(urlOnly)
+
+  return entries.filter(page => selectedUrlSet.has(page.url))
+}
+
+const markMergePageSelection = (merges, recentPages) => {
+  const { commits } = normalizeRecentPagesConfig(recentPages)
+  const selectedByCommit = new Map()
+
+  for (const item of commits) {
+    const merge = findMergeByCommit(merges, item.commit)
+
+    if (merge) {
+      selectedByCommit.set(merge.commitId, new Set(item.pages))
+    }
+  }
+
+  return merges.map(merge => ({
+    ...merge,
+    pages: merge.pages.map(page => ({
+      ...page,
+      isSelected: selectedByCommit.get(merge.commitId)?.has(page.url) ?? false
+    }))
+  }))
+}
+
+const groupPageEntriesByMerge = (pages, mergeOptions = {}) => {
+  const {
+    getFileMergeHistory,
+    getFileChangeStats,
+    githubRepoUrl = ''
+  } = mergeOptions
   const mergesByCommitId = new Map()
 
   for (const page of pages) {
-    if (!page.commitId) {
+    if (!page.filePath || !getFileMergeHistory || !getFileChangeStats) {
       continue
     }
 
-    const affectedPage = {
-      title: page.title,
-      url: page.url,
-      section: page.section,
-      sectionTitle: page.sectionTitle,
-      linesAdded: page.linesAdded,
-      linesDeleted: page.linesDeleted,
-      linesChanged: page.linesChanged
-    }
-    const existingMerge = mergesByCommitId.get(page.commitId)
+    for (const mergeEntry of getFileMergeHistory(page.filePath)) {
+      const { linesAdded, linesDeleted } = getFileChangeStats(
+        mergeEntry.commitId,
+        page.filePath
+      )
 
-    if (existingMerge) {
-      existingMerge.pages.push(affectedPage)
-      continue
-    }
+      if (linesAdded === 0 && linesDeleted === 0) {
+        continue
+      }
 
-    mergesByCommitId.set(page.commitId, {
-      changed: page.changed,
-      changedTimestamp: page.changedTimestamp,
-      changedBy: page.changedBy,
-      gravatarUrl: page.gravatarUrl,
-      commitId: page.commitId,
-      commitShortId: page.commitId.slice(0, 7),
-      commitMessage: page.commitMessage,
-      commitUrl: page.commitUrl,
-      pages: [affectedPage]
-    })
+      const affectedPage = {
+        title: page.title,
+        url: page.url,
+        section: page.section,
+        sectionTitle: page.sectionTitle,
+        linesAdded,
+        linesDeleted,
+        linesChanged: linesAdded + linesDeleted
+      }
+      const existingMerge = mergesByCommitId.get(mergeEntry.commitId)
+
+      if (existingMerge) {
+        if (existingMerge.pages.some(entry => entry.url === page.url)) {
+          continue
+        }
+
+        existingMerge.pages.push(affectedPage)
+        continue
+      }
+
+      mergesByCommitId.set(mergeEntry.commitId, {
+        changed: mergeEntry.changed,
+        changedTimestamp: mergeEntry.changedTimestamp,
+        changedBy: mergeEntry.changedBy,
+        gravatarUrl: mergeEntry.gravatarUrl,
+        commitId: mergeEntry.commitId,
+        commitShortId: mergeEntry.commitId.slice(0, 7),
+        commitMessage: mergeEntry.commitMessage,
+        commitUrl: githubRepoUrl
+          ? `${githubRepoUrl}/commit/${mergeEntry.commitId}`
+          : '',
+        pages: [affectedPage]
+      })
+    }
   }
 
   return Array.from(mergesByCommitId.values())
@@ -198,10 +344,20 @@ const groupPageEntriesByMerge = pages => {
 }
 
 export default (config, cb) => {
+  buildHtml(config, cb)
+}
+
+const buildHtml = (config, cb) => {
   const devMode = Boolean(config.devMode)
   const markdown = markdownFactory(config.rootDir)
-  const { getGitMetadata, getFileChangeStats } = getGitMetadataFactory()
+  const { getGitMetadata, getFileChangeStats, getFileMergeHistory } =
+    getGitMetadataFactory()
   const githubRepoUrl = appConfig.repoUrl
+  const mergeOptions = {
+    getFileMergeHistory,
+    getFileChangeStats,
+    githubRepoUrl
+  }
   const getUpdatedPageEntries = currentFilePath =>
     files
       .filter(file => !file.frontMatter.navigation_ignore)
@@ -218,6 +374,7 @@ export default (config, cb) => {
           title: file.data.title,
           lead: file.data.lead,
           url: getCurrentUrl(file.path, config.base),
+          filePath: file.path,
           section,
           sectionTitle,
           linesAdded,
@@ -376,12 +533,20 @@ export default (config, cb) => {
             const metadata = getGitMetadata(file.path)
             const recentlyUpdatedPages =
               currentUrl === ''
-                ? updatedPageEntries.slice(0, recentUpdatesLimit)
+                ? getRecentlyUpdatedPages(
+                    updatedPageEntries,
+                    recentPagesConfig,
+                    mergeOptions
+                  )
                 : []
-            const pageUpdatesList =
+            const pageUpdatesConfigurator =
               devMode && file.frontMatter.page_updates_overview
-                ? groupPageEntriesByMerge(updatedPageEntries)
-                : []
+            const pageUpdatesList = pageUpdatesConfigurator
+              ? markMergePageSelection(
+                  groupPageEntriesByMerge(updatedPageEntries, mergeOptions),
+                  recentPagesConfig
+                )
+              : []
             const recentPagesOverviewLink =
               devMode && currentUrl === '' && pageUpdatesOverviewFile
                 ? {
@@ -413,6 +578,7 @@ export default (config, cb) => {
                 : subPages,
               recentlyUpdatedPages,
               pageUpdatesList,
+              pageUpdatesConfigurator,
               recentPagesOverviewLink,
               metatags: generateTags(metatagsData),
               breadcrumb: breadcrumb.sort((a, b) => {
@@ -482,6 +648,7 @@ export default (config, cb) => {
           or: function () {
             return Array.prototype.slice.call(arguments, 0, -1).some(Boolean)
           },
+          json: context => JSON.stringify(context).replace(/</g, '\\u003c'),
           inlineSvg: function (filePath, options = {}) {
             if (!fs.existsSync(filePath)) {
               throw new Error(
