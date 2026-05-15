@@ -7,4 +7,4 @@ all_pages_overview: true
 
 # Page revisions
 
-**Development overview of every guide page in the site navigation, sorted by the date of its most recent merge that changed more than three lines.**
+**Development overview of all guide pages, sorted by the most recent merge.**
