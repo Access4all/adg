@@ -36,11 +36,12 @@ const getGravatarUrl = email => {
   return `https://gravatar.com/avatar/${hash}?s=${gravatarImageSize}&d=mp`
 }
 
-export default () => {
-  const changedMetadata = {}
-  const fileMergeHistoryCache = {}
-  const fileChangeStatsCache = new Map()
+// Persist across watch rebuilds; git history does not change on every markdown save.
+const changedMetadata = {}
+const fileMergeHistoryCache = {}
+const fileChangeStatsCache = new Map()
 
+export default () => {
   const parseGitHistory = historyStdout =>
     historyStdout
       .split('\x1e')

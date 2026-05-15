@@ -275,6 +275,8 @@ const markMergePageSelection = (merges, recentPages) => {
   }))
 }
 
+let devAllPagesListCache = null
+
 const MIN_MEANINGFUL_REVISION_LINES = 4
 
 const isMeaningfulRevision = (linesAdded, linesDeleted) =>
@@ -484,8 +486,18 @@ const buildHtml = (config, cb) => {
   const sitemap = []
   const layouts = {}
   let navigation = []
-  let updatedPageEntries = []
+  let updatedPageEntries = null
   let pageUpdatesOverviewFile = null
+  let homeFile = null
+
+  const ensureUpdatedPageEntries = currentFilePath => {
+    if (updatedPageEntries !== null) {
+      return updatedPageEntries
+    }
+
+    updatedPageEntries = getUpdatedPageEntries(currentFilePath)
+    return updatedPageEntries
+  }
 
   // const config = {
   //   src: './pages/**/*.md',
@@ -566,13 +578,9 @@ const buildHtml = (config, cb) => {
             .filter(page => !page.parent && page.parent !== null)
             .sort((a, b) => a.position - b.position)
 
-          const homeFile = files.find(
+          homeFile = files.find(
             file => getCurrentUrl(file.path, config.base) === ''
           )
-
-          updatedPageEntries = homeFile
-            ? getUpdatedPageEntries(homeFile.path)
-            : []
           pageUpdatesOverviewFile =
             files.find(file => file.frontMatter.page_updates_overview) || null
 
@@ -610,11 +618,11 @@ const buildHtml = (config, cb) => {
               site_name: appConfig.title,
               url: `${appConfig.url}/${currentUrl}`
             }
-            const metadata = getGitMetadata(file.path)
+            const metadata = devMode ? null : getGitMetadata(file.path)
             const recentlyUpdatedPages =
               currentUrl === ''
                 ? getRecentlyUpdatedPages(
-                    updatedPageEntries,
+                    ensureUpdatedPageEntries(homeFile?.path ?? file.path),
                     recentPagesConfig,
                     mergeOptions
                   )
@@ -623,18 +631,22 @@ const buildHtml = (config, cb) => {
               devMode && file.frontMatter.page_updates_overview
             const pageUpdatesList = pageUpdatesConfigurator
               ? markMergePageSelection(
-                  groupPageEntriesByMerge(updatedPageEntries, mergeOptions),
+                  groupPageEntriesByMerge(
+                    ensureUpdatedPageEntries(file.path),
+                    mergeOptions
+                  ),
                   recentPagesConfig
                 )
               : []
             const allPagesList =
               devMode && file.frontMatter.all_pages_overview
-                ? getAllPagesByRevision(
+                ? devAllPagesListCache ||
+                  (devAllPagesListCache = getAllPagesByRevision(
                     files.filter(isGuideNavigationPage),
                     navigation,
                     mergeOptions,
                     config.base
-                  )
+                  ))
                 : []
             const recentPagesOverviewLink =
               devMode && currentUrl === '' && pageUpdatesOverviewFile
@@ -647,11 +659,17 @@ const buildHtml = (config, cb) => {
                   }
                 : null
 
+            const pageChanged =
+              metadata?.changed && metadata.changed.length > 0
+                ? metadata.changed
+                : null
+            const showPageMetaInfo = devMode
+              ? Boolean(currentUrl && file.data.section !== 'welcome')
+              : Boolean(pageChanged)
+
             file.data = Object.assign({}, file.data, {
-              changed:
-                metadata.changed && metadata.changed.length > 0
-                  ? metadata.changed
-                  : null,
+              changed: pageChanged,
+              showPageMetaInfo,
               title: file.data.title,
               contents: file.contents,
               navigation: pageNavigation,

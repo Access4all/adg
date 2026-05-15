@@ -67,7 +67,7 @@
         </div>
         {{> "content/prev_next/prev_next" prev=previousPage next=nextPage}}
         {{#notEq section 'welcome'}}
-          {{#if changed}}
+          {{#if showPageMetaInfo}}
           <aside class="l-site_width">
             {{> "content/meta-info/meta-info"}}
           </aside>
