@@ -215,6 +215,11 @@ const applyMergeMetadata = (page, merge) => ({
   commitUrl: merge.commitUrl
 })
 
+const isGuideNavigationPage = file =>
+  !file.frontMatter.navigation_ignore &&
+  !file.frontMatter.page_updates_overview &&
+  !file.frontMatter.all_pages_overview
+
 const getRecentlyUpdatedPages = (entries, recentPages, mergeOptions) => {
   const { urlOnly, commits } = normalizeRecentPagesConfig(recentPages)
 
@@ -270,6 +275,81 @@ const markMergePageSelection = (merges, recentPages) => {
   }))
 }
 
+const MIN_MEANINGFUL_REVISION_LINES = 4
+
+const isMeaningfulRevision = (linesAdded, linesDeleted) =>
+  linesAdded >= MIN_MEANINGFUL_REVISION_LINES ||
+  linesDeleted >= MIN_MEANINGFUL_REVISION_LINES
+
+const getMeaningfulPageRevision = (filePath, mergeOptions) => {
+  const { getFileMergeHistory, getFileChangeStats } = mergeOptions
+
+  for (const mergeEntry of getFileMergeHistory(filePath)) {
+    const { linesAdded, linesDeleted } = getFileChangeStats(
+      mergeEntry.commitId,
+      filePath
+    )
+    const linesChanged = linesAdded + linesDeleted
+
+    if (isMeaningfulRevision(linesAdded, linesDeleted)) {
+      return {
+        changed: mergeEntry.changed,
+        changedTimestamp: mergeEntry.changedTimestamp,
+        changedBy: mergeEntry.changedBy,
+        gravatarUrl: mergeEntry.gravatarUrl,
+        commitId: mergeEntry.commitId,
+        commitShortId: mergeEntry.commitId.slice(0, 7),
+        commitMessage: mergeEntry.commitMessage,
+        linesAdded,
+        linesDeleted,
+        linesChanged
+      }
+    }
+  }
+
+  return null
+}
+
+const getAllPagesByRevision = (
+  pageFiles,
+  navigationItems,
+  mergeOptions,
+  base
+) =>
+  pageFiles
+    .map(file => {
+      const url = getCurrentUrl(file.path, base)
+      const section = file.data.section
+      const sectionTitle =
+        navigationItems.find(item => item.url === section)?.title || ''
+      const revision = getMeaningfulPageRevision(file.path, mergeOptions)
+
+      return {
+        title: file.data.title,
+        url,
+        section,
+        sectionTitle,
+        changed: revision?.changed || '',
+        changedTimestamp: revision?.changedTimestamp || 0,
+        changedBy: revision?.changedBy || '',
+        gravatarUrl: revision?.gravatarUrl || '',
+        commitId: revision?.commitId || '',
+        commitShortId: revision?.commitShortId || '',
+        commitMessage: revision?.commitMessage || '',
+        linesAdded: revision?.linesAdded || 0,
+        linesDeleted: revision?.linesDeleted || 0,
+        linesChanged: revision?.linesChanged || 0
+      }
+    })
+    .filter(page => page.title && page.url)
+    .sort((a, b) => {
+      if (b.changedTimestamp !== a.changedTimestamp) {
+        return b.changedTimestamp - a.changedTimestamp
+      }
+
+      return a.title.localeCompare(b.title)
+    })
+
 const groupPageEntriesByMerge = (pages, mergeOptions = {}) => {
   const {
     getFileMergeHistory,
@@ -289,7 +369,7 @@ const groupPageEntriesByMerge = (pages, mergeOptions = {}) => {
         page.filePath
       )
 
-      if (linesAdded === 0 && linesDeleted === 0) {
+      if (!isMeaningfulRevision(linesAdded, linesDeleted)) {
         continue
       }
 
@@ -360,7 +440,7 @@ const buildHtml = (config, cb) => {
   }
   const getUpdatedPageEntries = currentFilePath =>
     files
-      .filter(file => !file.frontMatter.navigation_ignore)
+      .filter(isGuideNavigationPage)
       .map(file => {
         const metadata = getGitMetadata(file.path)
         const { linesAdded, linesDeleted } = metadata.commitId
@@ -395,7 +475,7 @@ const buildHtml = (config, cb) => {
         page =>
           page.title &&
           page.url &&
-          page.changedTimestamp > 0 &&
+          page.changed &&
           page.url !== getCurrentUrl(currentFilePath, config.base)
       )
       .sort((a, b) => b.changedTimestamp - a.changedTimestamp)
@@ -547,6 +627,15 @@ const buildHtml = (config, cb) => {
                   recentPagesConfig
                 )
               : []
+            const allPagesList =
+              devMode && file.frontMatter.all_pages_overview
+                ? getAllPagesByRevision(
+                    files.filter(isGuideNavigationPage),
+                    navigation,
+                    mergeOptions,
+                    config.base
+                  )
+                : []
             const recentPagesOverviewLink =
               devMode && currentUrl === '' && pageUpdatesOverviewFile
                 ? {
@@ -579,6 +668,7 @@ const buildHtml = (config, cb) => {
               recentlyUpdatedPages,
               pageUpdatesList,
               pageUpdatesConfigurator,
+              allPagesList,
               recentPagesOverviewLink,
               metatags: generateTags(metatagsData),
               breadcrumb: breadcrumb.sort((a, b) => {
