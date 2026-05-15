@@ -55,10 +55,19 @@
           {{#if subPages}}
             {{> "content/cardmenu/cardmenu" menuitem=subPages}}
           {{/if}}
+          {{#if pageUpdatesList}}
+            {{> "content/page-updates/page-updates-table" merges=pageUpdatesList showConfigurator=pageUpdatesConfigurator}}
+          {{/if}}
+          {{#if allPagesList}}
+            {{> "content/all-pages/all-pages-table" pages=allPagesList}}
+          {{/if}}
+          {{#if recentlyUpdatedPages}}
+            {{> "content/recent-pages/recent-pages" pages=recentlyUpdatedPages overviewLink=recentPagesOverviewLink}}
+          {{/if}}
         </div>
         {{> "content/prev_next/prev_next" prev=previousPage next=nextPage}}
         {{#notEq section 'welcome'}}
-          {{#if changed}}
+          {{#if showPageMetaInfo}}
           <aside class="l-site_width">
             {{> "content/meta-info/meta-info"}}
           </aside>

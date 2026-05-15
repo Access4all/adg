@@ -6,6 +6,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "dev": "ADG_DEV=1 gulp --webpackWatch",
     "start": "gulp --webpackWatch",
     "build": "gulp build",
     "rebuild": "gulp rebuild",

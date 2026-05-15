@@ -1,5 +1,6 @@
 ---
 navigation_title: "Privacy Policy"
+navigation_ignore: true
 position: 5
 ---
 

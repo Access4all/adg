@@ -1,0 +1,74 @@
+<section class="all-pages" aria-labelledby="all-pages-caption">
+  <h2 id="all-pages-caption" class="visuallyhidden">
+    All guide pages sorted by last meaningful revision
+  </h2>
+
+  <p class="all-pages__intro">
+    Each row shows the latest merge that changed more than three lines in that page file. Pages without such a revision appear at the end.
+  </p>
+
+  {{#if pages}}
+    <div class="all-pages__table-wrap">
+      <table class="all-pages__table">
+        <caption class="visuallyhidden">
+          Guide pages sorted by last revision date
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Last revision</th>
+            <th scope="col">Section</th>
+            <th scope="col">Page</th>
+            <th scope="col">Changes</th>
+            <th scope="col">Author</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each pages}}
+            <tr>
+              <td>
+                {{#if changedTimestamp}}
+                  <time class="all-pages__date" datetime="{{changed}}">
+                    {{ formatDateTime changedTimestamp }}
+                  </time>
+                {{else}}
+                  <span class="all-pages__empty-date">No substantial revision</span>
+                {{/if}}
+              </td>
+              <td>
+                {{#if sectionTitle}}
+                  <span class="all-pages__section theme theme-{{section}}">
+                    <span class="visuallyhidden">Section: </span>{{sectionTitle}}
+                  </span>
+                {{/if}}
+              </td>
+              <td>
+                <a class="all-pages__link" href="/{{url}}">{{title}}</a>
+              </td>
+              <td>
+                {{#if linesChanged}}
+                  <span
+                    class="all-pages__changes"
+                    aria-label="{{linesAdded}} lines added, {{linesDeleted}} lines deleted"
+                  >
+                    +{{linesAdded}} −{{linesDeleted}}
+                  </span>
+                {{else}}
+                  <span class="all-pages__empty-changes">—</span>
+                {{/if}}
+              </td>
+              <td>
+                {{#if changedBy}}
+                  {{> "content/author/author" name=changedBy gravatarUrl=gravatarUrl className="all-pages__author"}}
+                {{else}}
+                  <span class="all-pages__empty-author">—</span>
+                {{/if}}
+              </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  {{else}}
+    <p class="all-pages__empty">No pages were found.</p>
+  {{/if}}
+</section>

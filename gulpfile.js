@@ -13,6 +13,7 @@ import html from './gulp/html.js'
 import css from './gulp/css.js'
 import js from './gulp/javascript.js'
 import examples from './gulp/examples.js'
+import { getDevOnlyPageGlobs } from './gulp/helpers/page-frontmatter.js'
 
 const browserSync = browserSyncFactory.create()
 
@@ -24,27 +25,33 @@ function errorHandler(err) {
   )
 }
 
-gulp.task('html', cb =>
-  html(
-    {
-      src: ['./pages/**/*.md', '!./pages/**/_examples/**/*.md'],
-      base: './pages',
-      host: 'https://www.accessibility-developer-guide.com',
-      sitemap: './dist/sitemap.xml',
-      feed: {
-        json: './dist/feed/feed.json',
-        atom: './dist/feed/atom.xml',
-        rss: './dist/feed/rss.xml'
-      },
-      errorHandler,
-      rootDir: import.meta.dirname
-    },
-    () => {
-      browserSync.reload()
+const isDevMode = () => process.env.ADG_DEV === '1'
 
-      cb()
-    }
-  )
+const getHtmlConfig = () => ({
+  src: [
+    './pages/**/*.md',
+    '!./pages/**/_examples/**/*.md',
+    ...(isDevMode() ? [] : getDevOnlyPageGlobs(import.meta.dirname))
+  ],
+  base: './pages',
+  host: 'https://www.accessibility-developer-guide.com',
+  sitemap: './dist/sitemap.xml',
+  feed: {
+    json: './dist/feed/feed.json',
+    atom: './dist/feed/atom.xml',
+    rss: './dist/feed/rss.xml'
+  },
+  devMode: isDevMode(),
+  errorHandler,
+  rootDir: import.meta.dirname
+})
+
+gulp.task('html', cb =>
+  html(getHtmlConfig(), () => {
+    browserSync.reload()
+
+    cb()
+  })
 )
 
 gulp.task('html:examples', cb =>
@@ -252,54 +259,62 @@ gulp.task('rebuild', gulp.series('clean', 'build'))
 
 gulp.task(
   'default',
-  gulp.series('build', function serveAndWatch() {
-    browserSync.init({
-      server: {
-        baseDir: './dist'
-      }
-    })
+  gulp.series(
+    function enableDevMode(cb) {
+      process.env.ADG_DEV = '1'
+      cb()
+    },
+    'build',
+    function serveAndWatch() {
+      browserSync.init({
+        server: {
+          baseDir: './dist'
+        }
+      })
 
-    gulp.watch(
-      ['./src/assets/css/**/*.scss', './src/components/**/*.scss'],
-      gulp.series('css')
-    )
-    gulp.watch(['./src/assets/js/**/*.js'], gulp.series('js'))
-    gulp.watch(
-      [
-        './pages/**/*.md',
-        './src/templates/**/*.hbs',
-        './src/components/**/*.hbs',
-        './gulp/helpers/*',
-        // Example content which is embedded in HTML pages
-        './pages/**/_examples/**/*.html',
-        './pages/**/_examples/**/*.js',
-        './pages/**/_examples/**/*.css'
-      ],
-      gulp.series('html')
-    )
-    gulp.watch(['./pages/**/_examples/**/*'], gulp.series('html:examples'))
-    gulp.watch(
-      [
-        // demo
-        './pages/**/_examples/**/*.html',
-        '!./pages/**/_examples/**/index.html',
-        // content
-        './pages/{,**/}_media/**/*',
-        './pages/**/*.{png,jpg,mp3}',
-        // assets
-        './src/assets/img/**/*',
-        // static
-        './pages/{,**/}_static/**/*'
-      ],
-      gulp.series('media:copy')
-    )
-    gulp.watch(
-      ['./pages/{,**/}_media/**/*', './pages/**/_examples/**/*.png'],
-      gulp.series('media:resize')
-    )
-    gulp.watch(
-      ['./src/assets/img/icons/**/*.png', '!./src/assets/img/icons/*.png'],
-      gulp.series('sprite')
-    )
-  })
+      gulp.watch(
+        ['./src/assets/css/**/*.scss', './src/components/**/*.scss'],
+        gulp.series('css')
+      )
+      gulp.watch(['./src/assets/js/**/*.js'], gulp.series('js'))
+      gulp.watch(
+        [
+          './pages/**/*.md',
+          './src/templates/**/*.hbs',
+          './src/components/**/*.hbs',
+          './gulp/helpers/*',
+          './gulp/html.js',
+          // Example content which is embedded in HTML pages
+          './pages/**/_examples/**/*.html',
+          './pages/**/_examples/**/*.js',
+          './pages/**/_examples/**/*.css'
+        ],
+        gulp.series('html')
+      )
+      gulp.watch(['./pages/**/_examples/**/*'], gulp.series('html:examples'))
+      gulp.watch(
+        [
+          // demo
+          './pages/**/_examples/**/*.html',
+          '!./pages/**/_examples/**/index.html',
+          // content
+          './pages/{,**/}_media/**/*',
+          './pages/**/*.{png,jpg,mp3}',
+          // assets
+          './src/assets/img/**/*',
+          // static
+          './pages/{,**/}_static/**/*'
+        ],
+        gulp.series('media:copy')
+      )
+      gulp.watch(
+        ['./pages/{,**/}_media/**/*', './pages/**/_examples/**/*.png'],
+        gulp.series('media:resize')
+      )
+      gulp.watch(
+        ['./src/assets/img/icons/**/*.png', '!./src/assets/img/icons/*.png'],
+        gulp.series('sprite')
+      )
+    }
+  )
 )
