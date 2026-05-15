@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   url: 'https://www.accessibility-developer-guide.com',
   title: 'Accessibility Developer Guide',
   description: '', // TODO: Add

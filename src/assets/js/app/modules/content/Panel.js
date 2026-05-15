@@ -1,6 +1,6 @@
 import $ from 'jquery'
 
-import BaseModule from '../BaseModule'
+import BaseModule from '../BaseModule.js'
 
 /**
  * Panel (extracted from `ui.js` for consistency)
