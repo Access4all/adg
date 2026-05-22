@@ -1,7 +1,7 @@
 ---
-title: "Native dialog"
+title: "Dialog with Popover API"
 compatibility:
   Keyboard only:
     status: pass
-    date: 2026-04-04
+    date: 2026-05-22
 ---

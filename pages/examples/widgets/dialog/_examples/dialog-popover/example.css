@@ -2,13 +2,16 @@
   outline: 2px dotted #000;
 }
 
-.adg-visually-hidden {
+.visually-hidden {
   position: absolute;
-  left: -10000px;
-  top: auto;
   width: 1px;
   height: 1px;
+  padding: 0;
+  margin: -1px;
   overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 dialog.adg-dialog {
@@ -18,14 +21,10 @@ dialog.adg-dialog {
   padding: 10px;
 }
 
-dialog.adg-dialog[open] {
-  position: fixed;
+dialog.adg-dialog:popover-open {
+  position: absolute;
   left: 40px;
   top: 40px;
-}
-
-dialog.adg-dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .adg-dialog-icon {
