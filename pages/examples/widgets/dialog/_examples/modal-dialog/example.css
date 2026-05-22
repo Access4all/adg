@@ -2,40 +2,52 @@
   outline: 2px dotted #000;
 }
 
-.adg-visually-hidden {
+.visually-hidden {
   position: absolute;
-  left: -10000px;
-  top: auto;
   width: 1px;
   height: 1px;
+  padding: 0;
+  margin: -1px;
   overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-[data-adg-dialog-container] {
+dialog.adg-dialog {
   background-color: lightyellow;
   border: 1px solid;
-  position: absolute;
+  margin: 0;
+  padding: 10px;
+}
+
+dialog.adg-dialog[open] {
+  position: fixed;
   left: 40px;
   top: 40px;
-  padding: 10px;
+}
+
+dialog.adg-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .adg-dialog-icon {
   float: right;
   border: none;
   background-color: transparent;
+  min-width: 24px;
+  min-height: 24px;
+  padding: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .adg-dialog-icon:hover {
   cursor: pointer;
 }
 
-.adg-dialog-curtain {
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+dialog.adg-dialog h2 {
+  margin-top: 0;
 }
 
 svg#definition {

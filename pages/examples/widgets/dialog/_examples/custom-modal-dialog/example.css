@@ -14,17 +14,14 @@
   border: 0;
 }
 
-dialog.adg-dialog {
+.adg-dialog {
   background-color: lightyellow;
   border: 1px solid;
-  margin: 0;
-  padding: 10px;
-}
-
-dialog.adg-dialog[open] {
-  position: absolute;
+  position: fixed;
   left: 40px;
   top: 40px;
+  padding: 10px;
+  z-index: 2;
 }
 
 .adg-dialog-icon {
@@ -42,7 +39,17 @@ dialog.adg-dialog[open] {
   cursor: pointer;
 }
 
-dialog.adg-dialog h2 {
+.adg-dialog-curtain {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.adg-dialog h2 {
   margin-top: 0;
 }
 

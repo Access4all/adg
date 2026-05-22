@@ -6,26 +6,29 @@
   src="https://unpkg.com/invokers-polyfill@latest/invoker.min.js"
 ></script>
 
-<button>Focusable element before</button>
+<button type="button">Focusable element before</button>
+
 <h2>Example page content</h2>
 <p>
   This example includes additional page content so you can scroll before opening the dialog.
 </p>
 <p>
-  Scroll down to the trigger, open the dialog, and verify that background scrolling is locked while the modal is active.
+  Scroll down to the trigger, open the dialog popover, and confirm that background scrolling remains available. You can also close it by clicking outside or pressing Esc.
 </p>
-
 <p>
   Some text before.
 </p>
 <p>
-  <button type="button" command="show-modal" commandfor="my-dialog" aria-haspopup="dialog">Terms and conditions</button>
+  <button type="button" command="toggle-popover" commandfor="my-dialog" aria-haspopup="dialog">
+    Terms and conditions
+    <span class="visually-hidden"> (dialog)</span>
+  </button>
 </p>
 <p>
   Some text after.
-</p>  
+</p>
 <p>
-  Additional content below the trigger makes it easier to confirm that the page remains in place while the dialog is open.
+  Additional content below the trigger makes it easier to verify that the page remains scrollable while the dialog popover is open.
 </p>
 <p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere, orci nec tincidunt dapibus, neque felis feugiat sapien, vitae volutpat nibh lorem sed sem.
@@ -45,11 +48,10 @@
 <p>
   Integer convallis risus et purus gravida, at lacinia leo volutpat. Cras non nisl eu justo condimentum pretium.
 </p>
+<button type="button">Focusable element after</button>
 
-<button>Focusable element after</button>
-
-<dialog class="adg-dialog" id="my-dialog" aria-labelledby="my-dialog-heading" aria-describedby="my-dialog-description">
-  <button type="button" class="adg-dialog-icon" command="close" commandfor="my-dialog" autofocus>
+<dialog class="adg-dialog" id="my-dialog" popover="auto" aria-labelledby="my-dialog-heading" aria-describedby="my-dialog-description">
+  <button type="button" class="adg-dialog-icon" command="hide-popover" commandfor="my-dialog" autofocus>
     <svg class="icon" focusable="false"><use xlink:href="#close-icon" /></svg>
     <span class="visually-hidden">Close dialog</span>
   </button>
@@ -66,6 +68,6 @@
     Please read them carefully...
   </p>
   <p>
-    <button type="button" command="close" commandfor="my-dialog">Confirm</button>
+    <button type="button" command="hide-popover" commandfor="my-dialog">Confirm<span class="visually-hidden"> (close)</span></button>
   </p>
 </dialog>
