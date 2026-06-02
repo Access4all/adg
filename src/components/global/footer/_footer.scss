@@ -92,6 +92,10 @@
     opacity: 0;
     max-width: 70px;
     max-height: 50px;
+    &.footer--logo--oversize {
+      max-width: 90px;
+      max-height: 56px;
+    }
     .footer--left & {
       max-width: 200px;
       max-height: 50px;
