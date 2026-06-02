@@ -98,7 +98,7 @@ Former contributors:
 - **Graciela Schütz**, UX architect, formerly Unic.
 - **Markus Graf**, web developer.
 - **René Stalder**, web developer & accessibility consultant, whatwedo.
-- **Severin Klaus**, technical director, formerly Dept.
+- **Severin Klaus**, technical director, Dept.
 
 ### Testing staff
 
