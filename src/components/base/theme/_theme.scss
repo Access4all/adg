@@ -27,8 +27,7 @@
   --theme-color-light: #{$theme-1-light};
 }
 
-.theme-contribution,
-.theme-develop {
+.theme-contribution {
   --theme-color-dark: #{$theme-4-dark};
   --theme-color-medium: #{$c-gray};
   --theme-color-light: #{$theme-4-light};

@@ -55,12 +55,6 @@
           {{#if subPages}}
             {{> "content/cardmenu/cardmenu" menuitem=subPages}}
           {{/if}}
-          {{#if pageUpdatesList}}
-            {{> "content/page-updates/page-updates-table" merges=pageUpdatesList showConfigurator=pageUpdatesConfigurator}}
-          {{/if}}
-          {{#if allPagesList}}
-            {{> "content/all-pages/all-pages-table" pages=allPagesList}}
-          {{/if}}
           {{#if recentlyUpdatedPages}}
             {{> "content/recent-pages/recent-pages" pages=recentlyUpdatedPages overviewLink=recentPagesOverviewLink}}
           {{/if}}

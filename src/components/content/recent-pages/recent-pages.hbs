@@ -17,7 +17,7 @@
             <span class="recent-pages__title-link">{{title}}</span>
           </h3>
           {{#if lead}}
-            <p class="recent-pages__lead">{{ truncateText lead 150 }}</p>
+            <p class="recent-pages__lead">{{ lead }}</p>
           {{/if}}
           {{#if changedBy}}
             {{> "content/author/author" name=changedBy gravatarUrl=gravatarUrl className="recent-pages__author"}}

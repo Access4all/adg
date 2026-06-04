@@ -4,7 +4,6 @@ import Search from './modules/Search.js'
 import Anchor from './modules/content/Anchor.js'
 import MainNav from './modules/content/MainNav.js'
 import Panel from './modules/content/Panel.js'
-import PageUpdatesConfigurator from './modules/content/PageUpdatesConfigurator.js'
 
 export default () => {
   // every module should at least implement two methods
@@ -37,12 +36,6 @@ export default () => {
     var elem = this
 
     ModuleManager.connect(Panel, elem)
-  })
-
-  contextTrigger.add('.js-page-updates-configurator', function () {
-    var elem = this
-
-    ModuleManager.connect(PageUpdatesConfigurator, elem)
   })
 
   contextTrigger.validate('body')

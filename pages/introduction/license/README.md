@@ -1,6 +1,5 @@
 ---
 navigation_title: "License"
-navigation_ignore: true
 position: 4
 ---
 
