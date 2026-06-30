@@ -11,7 +11,7 @@ position: 3
 
 ## Installation
 
-Go to the [Chrome Web Store]([https://hinderlingvolkart.github.io/h123](https://chromewebstore.google.com/detail/heading-inspector) and install the extension on your browser.
+Go to the [Chrome Web Store](https://chromewebstore.google.com/detail/heading-inspector) and install the extension on your browser.
 
 ## Usage
 
