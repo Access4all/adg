@@ -1,14 +1,14 @@
 export default [
   {
+    commit: '2ee186fb4cd43afe66a10d9cad8f849365277103',
+    pages: ['introduction/about']
+  },
+  {
     commit: '23924f765de3b11b4c09bdc6ea6459a166b75317',
     pages: [
       'examples/hiding-elements/skip-navigation-links',
       'knowledge/keyboard-only/skip-navigation-links'
     ]
-  },
-  {
-    commit: '92cf70a701b23d2dcedb74a8521de7e8cac761b0',
-    pages: ['introduction/about']
   },
   {
     commit: '703b03c2ef4581b27f743e3136d626a3e36edd58',
