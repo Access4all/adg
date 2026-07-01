@@ -7,7 +7,7 @@ position: 2
 
 **This bookmarklet provides an efficient way to display the current webpage's heading outline, very close to how screen readers do. In addition, it has some pretty useful features like displaying potentially incorrectly hidden headings.**
 
-This extension outlines headings and sections based on a pages DOM. In certain scenarios headings might be missed or misinterpreted, for example when dealing with shadow DOMs. For a more reliable tool check out the heading inspector extension for Chrome: [Heading Inspector](https://www.accessibility-developer-guide.com/setup/helper-tools/browser-extensions/heading-inspector/)
+This bookmarklet outlines headings and sections based on a pages DOM. In certain scenarios headings might be missed or misinterpreted, for example when dealing with shadow DOMs. For a more reliable tool check out the heading inspector extension for Chrome: [Heading Inspector](https://www.accessibility-developer-guide.com/setup/helper-tools/browser-extensions/heading-inspector/)
 
 [[_TOC_]]
 
