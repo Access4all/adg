@@ -24,11 +24,4 @@ Toggle the heading outline panel for that page with one click on the toolbar ico
 - Follows navigation within the same site. Once you open the panel on a tab it stays with you as you walk that site — following links, submitting forms, or navigating a single-page app all re-populate the outline for the new page automatically.
 - Leaving the site (a different origin) stops the follow, and the panel does not reopen until you click the icon again on the new site. This keeps the audit loop going without re-clicking on every page.
 
-![The h123 bookmarklet in action](_media/the-h123-bookmarklet-in-action.png)
-
-tbd useful features:
-
-- tbd
-- tbd
-- tbd
-
+![The heading structure extension in action](_media/heading-structure-extension.png)
