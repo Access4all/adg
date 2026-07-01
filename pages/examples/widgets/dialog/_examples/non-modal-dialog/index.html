@@ -24,6 +24,29 @@
     <span class="visually-hidden"> (dialog)</span>
   </button>
 </p>
+
+<dialog class="adg-dialog" id="my-dialog" aria-labelledby="my-dialog-heading" aria-describedby="my-dialog-description">
+  <button type="button" class="adg-dialog-icon" command="close" commandfor="my-dialog" autofocus>
+    <svg class="icon" focusable="false"><use xlink:href="#close-icon" /></svg>
+    <span class="visually-hidden">Close dialog</span>
+  </button>
+  <h2 id="my-dialog-heading">
+    Terms and conditions
+  </h2>
+  <p id="my-dialog-description">
+    Here are the terms and conditions.
+  </p>
+  <p>
+    <a href="#">And here is a link.</a>
+  </p>
+  <p>
+    Please read them carefully...
+  </p>
+  <p>
+    <button type="button" command="close" commandfor="my-dialog">Confirm<span class="visually-hidden"> (close)</span></button>
+  </p>
+</dialog>
+
 <p>
   Some text after.
 </p>
@@ -49,25 +72,3 @@
   Integer convallis risus et purus gravida, at lacinia leo volutpat. Cras non nisl eu justo condimentum pretium.
 </p>
 <button type="button">Focusable element after</button>
-
-<dialog class="adg-dialog" id="my-dialog" aria-labelledby="my-dialog-heading" aria-describedby="my-dialog-description">
-  <button type="button" class="adg-dialog-icon" command="close" commandfor="my-dialog" autofocus>
-    <svg class="icon" focusable="false"><use xlink:href="#close-icon" /></svg>
-    <span class="visually-hidden">Close dialog</span>
-  </button>
-  <h2 id="my-dialog-heading">
-    Terms and conditions
-  </h2>
-  <p id="my-dialog-description">
-    Here are the terms and conditions.
-  </p>
-  <p>
-    <a href="#">And here is a link.</a>
-  </p>
-  <p>
-    Please read them carefully...
-  </p>
-  <p>
-    <button type="button" command="close" commandfor="my-dialog">Confirm<span class="visually-hidden"> (close)</span></button>
-  </p>
-</dialog>

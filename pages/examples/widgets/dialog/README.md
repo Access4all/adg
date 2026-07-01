@@ -94,6 +94,12 @@ To fulfil WCAG 2.2 standards, accessible dialogs must meet these criteria:
       <td>No Trap (Follows sequential popover order)</td>
     </tr>
     <tr>
+      <th scope="row">Screen reader virtual cursor</th>
+      <td>Background content hidden (<code>inert</code>)</td>
+      <td><strong>Trapped inside dialog</strong> (arrow keys; Tab can leave)</td>
+      <td><strong>Trapped inside dialog</strong> (arrow keys; Tab can leave)</td>
+    </tr>
+    <tr>
       <th scope="row">Light Dismiss</th>
       <td>No (Only via <code>Esc</code> or explicit close)</td>
       <td>No (Requires explicit close)</td>
@@ -143,9 +149,10 @@ Use this when you need a floating panel that behaves like a classic non-modal di
 
 - **Activation:** Call `.show()` to open and `.close()` to dismiss, or use Invoker Commands for close only (`command="close"` with `commandfor`) plus a small script for the opener. The example page loads [`invoker.min.js`](https://www.npmjs.com/package/invokers-polyfill) from a CDN for close controls where Invoker Commands are not supported yet.
 - **State indication:** Set `aria-expanded` on the trigger when you toggle open/closed from script.
-- **Focus handling:** Move focus to a meaningful element when opened (for example via `autofocus`). Note that while the strict WAI-ARIA APG pattern suggests containing the tab sequence inside non-modal dialogs (with explicit means to exit), a `<dialog>` opened with `.show()` typically allows users to tab out naturally into the document order.
+- **Focus handling:** Move focus to a meaningful element when opened (for example via `autofocus`). A `<dialog>` opened with `.show()` allows keyboard users to tab out naturally into the document order.
+- **Screen reader virtual cursor:** With JAWS and NVDA, arrow-key (virtual cursor) navigation remains inside the open dialog even though Tab can leave it. This follows from the implicit `dialog` role and is consistent across browsers. Place the dialog markup **immediately after the trigger button** in the DOM so that content following the trigger stays reachable when reading linearly through the dialog.
 - **Keyboard:** `Esc` does not close a non-modal dialog by default; provide an explicit close control or handle `cancel` if you need it.
-- **DOM position:** Place markup close to the trigger to preserve logical tab order.
+- **DOM position:** Place the `<dialog>` element directly after the trigger button, not at the end of `<body>`.
 
 
 ### Dialog with Popover API
@@ -162,6 +169,7 @@ Use this when you want top-layer promotion, optional light dismiss, and invoker-
 - **Invoker Commands:** `toggle-popover`, `show-popover`, and `hide-popover` map to the Popover API; the example page loads [`invoker.min.js`](https://www.npmjs.com/package/invokers-polyfill) from a CDN where needed.
 - **Light dismiss:** With `popover="auto"`, clicking outside or pressing `Esc` closes the popover by default.
 - **Focus handling:** Popover semantics differ from `.show()`; invoker buttons may receive implicit `aria-expanded` / `aria-details`. Tab order follows popover and browser conventions rather than the non-modal dialog APG focus loop.
+- **Screen reader virtual cursor:** Same limitation as `.show()`: arrow-key navigation stays inside the open `<dialog>` even though Tab can leave it. Place the dialog markup **immediately after the trigger button** in the DOM.
 - **Semantics:** The element remains a `<dialog>` in the DOM, but runtime behaviour follows the Popover API once `popover` is set.
 
 
@@ -192,6 +200,15 @@ The Terms and conditions examples on this page are informational modals, not ale
 
 ## Best practices & edge cases
 
+### Screen reader virtual cursor in non-modal dialogs
+
+Non-modal `<dialog>` elements (`.show()` and Popover API) expose an implicit `dialog` role. Keyboard users can tab in and out freely, but screen readers such as JAWS and NVDA keep virtual cursor (arrow-key) navigation inside the open dialog. This behaviour is consistent across browsers.
+
+Mitigations:
+
+- Place the `<dialog>` **directly after the trigger button** so page content that follows the trigger remains reachable when reading linearly through the dialog.
+- Document that users who rely on virtual cursor navigation may need to close the dialog to reach earlier page content, or switch to Tab-based navigation to leave the dialog.
+
 ### Headings in dialogs
 
 - **Modal dialogs:** May act as self-contained contexts; `<h2>` is usually a safe default.
@@ -199,7 +216,8 @@ The Terms and conditions examples on this page are informational modals, not ale
 
 ### Positioning in the DOM
 
-- **Native `<dialog>`:** Placement is flexible, but proximity to the trigger improves maintainability.
+- **Non-modal native `<dialog>` (`.show()` and Popover API):** Place the element **directly after the trigger button**. This keeps tab order predictable and lets screen reader users reach page content that follows the trigger when navigating with the virtual cursor (arrow keys). At end-of-`<body>` placement, that following content is unreachable from inside the dialog buffer.
+- **Modal native `<dialog>`:** Placement is flexible; end of `<body>` is common because background content is inert while open.
 - **Custom dialogs:** Often placed at the end of `<body>` to avoid layout issues.
 
 ### Initial focus positioning
