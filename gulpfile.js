@@ -270,6 +270,7 @@ gulp.task(
         './src/templates/**/*.hbs',
         './src/components/**/*.hbs',
         './gulp/helpers/*',
+        './gulp/html.js',
         // Example content which is embedded in HTML pages
         './pages/**/_examples/**/*.html',
         './pages/**/_examples/**/*.js',

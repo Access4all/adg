@@ -1,4 +1,3 @@
-import child_process from 'node:child_process'
 import fs from 'node:fs'
 import path from 'node:path'
 import { Readable } from 'node:stream'
@@ -15,6 +14,10 @@ import { formatDate } from './helpers/datetime.js'
 import markdownFactory from './helpers/markdown.js'
 import { generateTags } from './helpers/metatags.js'
 import Feed from './helpers/rss.js'
+import {
+  getGitMetadata,
+  getRecentlyUpdatedPages
+} from './helpers/recent-changes.js'
 
 const pathSeparatorRegExp = new RegExp('\\' + path.sep, 'g')
 
@@ -132,9 +135,6 @@ const flattenNavigation = items =>
 
     return acc
   }, [])
-
-// Cache changed dates
-const changedDates = {}
 
 export default (config, cb) => {
   const markdown = markdownFactory(config.rootDir)
@@ -259,19 +259,26 @@ export default (config, cb) => {
               site_name: appConfig.title,
               url: `${appConfig.url}/${currentUrl}`
             }
+            const metadata = getGitMetadata(file.path)
             const dateChanged =
-              changedDates[file.path] ||
-              child_process.spawnSync(
-                'git',
-                ['log', '-1', '--pretty=format:%ci', file.path],
-                { encoding: 'utf8' }
-              ).stdout
+              metadata?.changed && metadata.changed.length > 0
+                ? metadata.changed
+                : null
+            const showPageMetaInfo = Boolean(dateChanged)
 
-            changedDates[file.path] = dateChanged
+            const recentlyUpdatedPages =
+              currentUrl === ''
+                ? getRecentlyUpdatedPages({
+                    currentFilePath: file.path,
+                    files,
+                    config,
+                    navigation
+                  })
+                : []
 
             file.data = Object.assign({}, file.data, {
-              changed:
-                dateChanged && dateChanged.length > 0 ? dateChanged : null,
+              changed: dateChanged,
+              showPageMetaInfo,
               title: file.data.title,
               contents: file.contents,
               navigation: pageNavigation,
@@ -285,11 +292,12 @@ export default (config, cb) => {
                     level: 1
                   }))
                 : subPages,
+              recentlyUpdatedPages,
               metatags: generateTags(metatagsData),
               breadcrumb: breadcrumb.sort((a, b) => {
                 return a.url.length - b.url.length
               }),
-              fileHistory: `https://github.com/Access4all/adg/commits/main/pages/${relPath}`
+              fileHistory: `${appConfig.repoUrl}/commits/main/pages/${relPath}`
             })
 
             sitemap.push({
