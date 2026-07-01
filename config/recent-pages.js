@@ -16,6 +16,7 @@ export default [
   },
   {
     commit: '517667bf917d002ea45092af00df472130d23f90',
+    authorCommit: '2d8ca741419fc31b380d831c7137c2608020e0be',
     pages: ['setup/windows/vmware-on-macos']
   },
   {
