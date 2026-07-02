@@ -7,14 +7,17 @@ const MIN_MEANINGFUL_REVISION_LINES = 4
 
 const pathSeparatorRegExp = new RegExp('\\' + path.sep, 'g')
 
-const { getGitMetadata, getFileChangeStats, getFileMergeHistory } =
-  getGitMetadataFactory()
+const {
+  getGitMetadata,
+  getFileChangeStats,
+  getFileMergeHistory,
+  getCommitMetadata
+} = getGitMetadataFactory()
 
 const githubRepoUrl = appConfig.repoUrl
 const mergeOptions = {
   getFileMergeHistory,
-  getFileChangeStats,
-  githubRepoUrl
+  getFileChangeStats
 }
 
 const getCurrentUrl = (filePath, base) => {
@@ -25,6 +28,8 @@ const getCurrentUrl = (filePath, base) => {
     lastSeparatorIndex >= 0 ? relPath.substring(0, lastSeparatorIndex) : ''
   ).replace(pathSeparatorRegExp, '/')
 }
+
+const trim = value => (typeof value === 'string' ? value.trim() : '')
 
 const normalizeRecentPagesConfig = recentPages => {
   if (!Array.isArray(recentPages)) {
@@ -49,7 +54,7 @@ const normalizeRecentPagesConfig = recentPages => {
       continue
     }
 
-    const commit = typeof entry.commit === 'string' ? entry.commit.trim() : ''
+    const commit = trim(entry.commit)
     const pages = Array.isArray(entry.pages)
       ? [
           ...new Set(
@@ -60,9 +65,12 @@ const normalizeRecentPagesConfig = recentPages => {
           )
         ]
       : []
+    const authorCommit = trim(entry.authorCommit)
 
     if (commit && pages.length) {
-      commits.push({ commit, pages })
+      commits.push(
+        authorCommit ? { commit, authorCommit, pages } : { commit, pages }
+      )
     }
   }
 
@@ -85,16 +93,39 @@ const findMergeByCommit = (merges, commitRef) => {
   )
 }
 
-const applyMergeMetadata = (page, merge) => ({
+const commitUrl = commitId =>
+  commitId && githubRepoUrl ? `${githubRepoUrl}/commit/${commitId}` : ''
+
+const applyMetadata = (page, metadata) => ({
   ...page,
-  changed: merge.changed,
-  changedTimestamp: merge.changedTimestamp,
-  changedBy: merge.changedBy,
-  gravatarUrl: merge.gravatarUrl,
-  commitId: merge.commitId,
-  commitMessage: merge.commitMessage,
-  commitUrl: merge.commitUrl
+  changed: metadata.changed,
+  changedTimestamp: metadata.changedTimestamp,
+  changedBy: metadata.changedBy,
+  gravatarUrl: metadata.gravatarUrl,
+  commitId: metadata.commitId,
+  commitMessage: metadata.commitMessage,
+  commitUrl: metadata.commitUrl || commitUrl(metadata.commitId)
 })
+
+const resolveConfiguredPage = (base, { commit, authorCommit }, merges) => {
+  const metadata =
+    findMergeByCommit(merges, commit) || getCommitMetadata(commit)
+  let page = metadata ? applyMetadata(base, metadata) : base
+
+  if (authorCommit) {
+    const author = getCommitMetadata(authorCommit)
+
+    if (author) {
+      page = {
+        ...page,
+        changedBy: author.changedBy,
+        gravatarUrl: author.gravatarUrl
+      }
+    }
+  }
+
+  return page
+}
 
 const isGuideNavigationPage = file => !file.frontMatter.navigation_ignore
 
@@ -122,8 +153,6 @@ const getRecentlyUpdatedPages = ({
     const results = []
 
     for (const item of commits) {
-      const merge = findMergeByCommit(merges, item.commit)
-
       for (const url of item.pages) {
         const base = entryByUrl.get(url)
 
@@ -131,7 +160,7 @@ const getRecentlyUpdatedPages = ({
           continue
         }
 
-        results.push(merge ? applyMergeMetadata(base, merge) : base)
+        results.push(resolveConfiguredPage(base, item, merges))
       }
     }
 
@@ -148,11 +177,7 @@ const isMeaningfulRevision = (linesAdded, linesDeleted) =>
   linesDeleted >= MIN_MEANINGFUL_REVISION_LINES
 
 const groupPageEntriesByMerge = (pages, mergeOptions = {}) => {
-  const {
-    getFileMergeHistory,
-    getFileChangeStats,
-    githubRepoUrl = ''
-  } = mergeOptions
+  const { getFileMergeHistory, getFileChangeStats } = mergeOptions
   const mergesByCommitId = new Map()
 
   for (const page of pages) {
@@ -198,9 +223,7 @@ const groupPageEntriesByMerge = (pages, mergeOptions = {}) => {
         commitId: mergeEntry.commitId,
         commitShortId: mergeEntry.commitId.slice(0, 7),
         commitMessage: mergeEntry.commitMessage,
-        commitUrl: githubRepoUrl
-          ? `${githubRepoUrl}/commit/${mergeEntry.commitId}`
-          : '',
+        commitUrl: commitUrl(mergeEntry.commitId),
         pages: [affectedPage]
       })
     }
@@ -253,9 +276,7 @@ const getUpdatedPageEntries = ({
         gravatarUrl: metadata.gravatarUrl,
         commitId: metadata.commitId,
         commitMessage: metadata.commitMessage,
-        commitUrl: metadata.commitId
-          ? `${githubRepoUrl}/commit/${metadata.commitId}`
-          : ''
+        commitUrl: commitUrl(metadata.commitId)
       }
     })
     .filter(

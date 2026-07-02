@@ -40,6 +40,7 @@ const getGravatarUrl = email => {
 const changedMetadata = {}
 const fileMergeHistoryCache = {}
 const fileChangeStatsCache = new Map()
+const commitMetadataCache = new Map()
 
 export default () => {
   const parseGitHistory = historyStdout =>
@@ -135,6 +136,38 @@ export default () => {
     return stats
   }
 
+  const getCommitMetadata = commitRef => {
+    if (!commitRef) {
+      return null
+    }
+
+    if (commitMetadataCache.has(commitRef)) {
+      return commitMetadataCache.get(commitRef)
+    }
+
+    const result = childProcess.spawnSync(
+      'git',
+      [
+        'log',
+        '-1',
+        '--pretty=format:%H%x1f%ci%x1f%ct%x1f%an%x1f%ae%x1f%s%x1e',
+        commitRef
+      ],
+      { encoding: 'utf8' }
+    )
+
+    const metadata =
+      result.status === 0 ? parseGitHistory(result.stdout)[0] || null : null
+
+    commitMetadataCache.set(commitRef, metadata)
+
+    if (metadata) {
+      commitMetadataCache.set(metadata.commitId, metadata)
+    }
+
+    return metadata
+  }
+
   const getGitMetadata = filePath => {
     if (changedMetadata[filePath]) {
       return changedMetadata[filePath]
@@ -155,5 +188,10 @@ export default () => {
     return metadata
   }
 
-  return { getGitMetadata, getFileChangeStats, getFileMergeHistory }
+  return {
+    getGitMetadata,
+    getFileChangeStats,
+    getFileMergeHistory,
+    getCommitMetadata
+  }
 }

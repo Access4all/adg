@@ -1,5 +1,9 @@
 export default [
   {
+    commit: '2ee186fb4cd43afe66a10d9cad8f849365277103',
+    pages: ['introduction/about']
+  },
+  {
     commit: '23924f765de3b11b4c09bdc6ea6459a166b75317',
     pages: [
       'examples/hiding-elements/skip-navigation-links',
@@ -7,15 +11,12 @@ export default [
     ]
   },
   {
-    commit: '92cf70a701b23d2dcedb74a8521de7e8cac761b0',
-    pages: ['introduction/about']
-  },
-  {
     commit: '703b03c2ef4581b27f743e3136d626a3e36edd58',
     pages: ['examples/widgets/accordion']
   },
   {
     commit: '517667bf917d002ea45092af00df472130d23f90',
+    authorCommit: '2d8ca741419fc31b380d831c7137c2608020e0be',
     pages: ['setup/windows/vmware-on-macos']
   },
   {
