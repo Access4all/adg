@@ -21,7 +21,7 @@ dialog.adg-dialog {
   padding: 10px;
 }
 
-dialog.adg-dialog[open] {
+dialog.adg-dialog:popover-open {
   position: absolute;
   left: 40px;
   top: 40px;
