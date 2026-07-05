@@ -8,6 +8,8 @@ card_text: "It generates an index of any web document structured with headings a
 
 **HeadingsMap generates an index of any web document structured with headings and sections. It shows the headings structure, the errors in the structure (ie. incorrect levels), and it works as HTML5 Outliner too.**
 
+This extension outlines headings and sections based on a pages DOM. In certain scenarios headings might be missed or misinterpreted, for example when dealing with shadow DOMs. For a more reliable tool check out the heading inspector extension for Chrome: [Heading Inspector](https://www.accessibility-developer-guide.com/setup/helper-tools/browser-extensions/heading-inspector/)
+
 ## Installation
 
 **Firefox**<br>
