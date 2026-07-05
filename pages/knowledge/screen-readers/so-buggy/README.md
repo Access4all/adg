@@ -72,14 +72,14 @@ The best way to avoid such situations is to follow established standards and bes
 
 ### How to deal with bugs
 
-If you find bugs in either screen readers or browsers, we highly urge you to get in contact with their manufacturers, so fixes can be worked out together.
+If you encounter bugs in screen readers or browsers, we encourage you to contact the respective vendors directly so they can investigate and resolve them.
 
-- For filing NVDA issues, please use the [issue tracker for NVDA (GitHub.com)](https://github.com/nvaccess/nvda/issues).
-    - The folks there are helpful and responsive.
-- For filing JAWS issues, please use the [issue tracker for VFO-standards-support (GitHub.com)](https://github.com/FreedomScientific/VFO-standards-support/issues) by FreedomScientific.
-    - For more details, please read [JAWS wide open (PacielloGroup.com)](https://developer.paciellogroup.com/blog/2017/10/jaws-wide-open/).
-- For filing Firefox issues, please use the [issue tracker for Firefox (Mozilla.org)](https://bugzilla.mozilla.org).
-- TODO: Chrome! TODO!!!
+- For NVDA issues, please use the [issue tracker for NVDA (GitHub.com)](https://github.com/nvaccess/nvda/issues).
+  - The maintainers are helpful and responsive.
+- For JAWS issues, please use the [issue tracker for VFO-standards-support (GitHub.com)](https://github.com/FreedomScientific/VFO-standards-support/issues) by FreedomScientific.
+  - For more details, see [JAWS wide open (PacielloGroup.com)](https://developer.paciellogroup.com/blog/2017/10/jaws-wide-open/).
+- For Firefox issues, please use the [issue tracker for Firefox (Mozilla.org)](https://bugzilla.mozilla.org/).
+- For Chrome and Chromium-related issues, please use the [issue wizard for Chrome (Chromium.org)](https://issues.chromium.org/issues/wizard).
 
 ### What will the future bring?
 
