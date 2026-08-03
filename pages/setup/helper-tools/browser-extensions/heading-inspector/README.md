@@ -5,7 +5,7 @@ position: 3
 
 # Heading Inspector
 
-**Inspired by the bookmarklet [h123](https://www.accessibility-developer-guide.com/setup/helper-tools/bookmarklets/h123/), this Chrome extension displays the heading structure of a webpage based on Chrome's accessibility tree. As a result, the outline shown by the extension reliably matches the outline announced by screen readers. Similar tools mostly rely on a page's DOM to outline headings, which can cause headings to be missed or misreported. The Heading Structure extension is built and maintained by [Quantico](https://github.com/quatico-solutions/heading-inspector).**
+**Unlike similar heading outline tools that parse a page's DOM, this extension reads the accessibility tree directly, catching edge cases—like headings assigned via JavaScript—that DOM-based tools can miss. The Heading Structure extension is built and maintained by [Quantico](https://github.com/quatico-solutions/heading-inspector).**
 
 [[_TOC_]]
 
