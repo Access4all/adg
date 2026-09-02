@@ -40,6 +40,7 @@ The screen reader's cursor is somewhat similar to the browser's focus. But while
 For example, in VoiceOver/iOS the cursor paints a black border around the current object; it looks like this:
 
 ![VoiceOver/iOS cursor](_media/voiceover-ios-cursor.png)
+
 ### Auditive announcement of elements
 
 The screen reader always reads aloud the information fragment on which its cursor currently is placed. The cursor can be moved by the user to the next (or previous) element, which is then announced by the screen reader.
