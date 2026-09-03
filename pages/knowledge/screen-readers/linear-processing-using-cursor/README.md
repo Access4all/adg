@@ -43,9 +43,15 @@ For example, in VoiceOver/iOS the cursor paints a black border around the curren
 
 ### Auditive announcement of elements
 
-The screen reader always reads aloud the information fragment on which its cursor currently is placed. The cursor can be moved by the user to the next (or previous) element, which then again is announced by the screen reader. The [DOM](https://en.wikipedia.org/wiki/Document_Object_Model) is used to determine the sequence of the elements.
+The screen reader always reads aloud the information fragment on which its cursor currently is placed. The cursor can be moved by the user to the next (or previous) element, which is then announced by the screen reader.
 
-This way, users move their cursor through the whole document, from the very top to the very bottom - or until they find the information they are looking for.
+While it is common to say that the screen reader reads the [Document Object Model](https://en.wikipedia.org/wiki/Document_Object_Model) (DOM) directly, the process under the hood is slightly different. When a browser parses HTML, it creates the DOM tree, but it also creates a parallel structure called the **accessibility tree**.
+
+This tree is a simplified, semantic version of the DOM, specifically tailored for assistive technologies:
+* **Pruning layout containers:** Elements that are purely visual or used only for layout positioning (such as container divs that do not add semantic meaning) are filtered out to keep the tree clean and focused.
+* **Preserving semantic nodes:** Meaningful elements – like headings, buttons, text fields, and plain text – are kept as nodes in the tree.
+
+When a screen reader is active, this accessibility tree is the actual structure the user is traversing. In this tree, users move their cursor sequentially through the document: From the very top to the very bottom, or until they find the information they are looking for.
 
 ![Cursor sequence on a typical website](_media/cursor-sequence-on-a-typical-website.png)
 
