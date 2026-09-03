@@ -22,9 +22,8 @@
     }
 
     initIcon() {
-      // Set focusable="false" for IE, see https://stackoverflow.com/questions/18646111/disable-onfocus-event-for-svg-element
       this.$icon = $(
-        "<span class='adg-tooltip-simple-icon'><svg class='icon' focusable='false'><use xlink:href='#tooltip' /></svg></span>"
+        "<span class='adg-tooltip-simple-icon'><svg class='icon'><use xlink:href='#tooltip' /></svg></span>"
       )
       return this.$container.append(this.$icon)
     }
