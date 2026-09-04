@@ -19,9 +19,7 @@
   "author": "",
   "license": "ISC",
   "browserslist": [
-    "defaults",
-    "> 1%",
-    "iOS >= 8.4"
+    "defaults"
   ],
   "engines": {
     "node": ">=20"
