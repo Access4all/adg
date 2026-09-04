@@ -1,4 +1,5 @@
-import 'details-polyfill'
+import './lib/vendor/init.js'
+import './lib/vendor/sitesearch360-v12.js'
 import modules from './app/modules.js'
 
 modules()
