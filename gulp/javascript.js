@@ -17,7 +17,7 @@ const {
 export default (config, cb) => {
   const compiler = webpack({
     entry: config.entry,
-    mode: 'development',
+    mode: webpackWatch ? 'development' : 'production',
     module: {
       rules: [
         {
