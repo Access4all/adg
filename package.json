@@ -75,7 +75,6 @@
   },
   "dependencies": {
     "core-js": "^3.49.0",
-    "details-polyfill": "^1.2.0",
     "jquery": "^4.0.0"
   },
   "lint-staged": {
