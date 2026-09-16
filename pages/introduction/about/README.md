@@ -70,12 +70,7 @@ Please read on.
 
 We are a bunch of open-hearted and highly motivated nerds who believe in the potential that technological advancements can have for humanity.
 
-If you feel like you have anything to give to our movement (be it active collaboration, sharing your knowledge, providing financial support, or simply giving some feedback), please get in touch with us through:
-
-- Facebook: [AccessibilityDeveloperGuide](https://www.facebook.com/AccessibilityDeveloperGuide)
-- Twitter: [A11yDevGuide](https://twitter.com/A11yDevGuide)
-
-Or drop us a line using the [«Access for all» contact form](https://access-for-all.ch/en/about-us/contact/).
+If you feel like you have anything to give to our movement (be it active collaboration, sharing your knowledge, providing financial support, or simply giving some feedback), drop us a line using the [«Access for all» contact form](https://access-for-all.ch/en/about-us/contact/).
 
 ### Contributors
 
@@ -84,21 +79,23 @@ Besides the diligent online community, a group of people regularly physically ga
 <!-- ![The core team working on the Accessibility Developer Guide (details read below)](_media/core-team.jpg) -->
 
 - **Christoph Dubach**, UX architect & web developer, Unic.
-- **Donato Rotunno**, frontend developer & accessibility expert, Liip.
 - **Joshua Muheim**, frontend developer & accessibility expert, Accessify&#46;me.
 - **Jürgen Rudigier**, frontend developer, Dept.
+- **Regina Reusser**, accessibility consultant, Access for all.
+- **Roman Alt**, accessibility consultant, Access for all.
 - **Thomas Jaggi**, web developer, responsive&#46;ch.
 
 Former contributors:
 
 - **Andreas Moesch**, web developer, formerly Nothing.
-- **Anton Bolfing**, former accessibility expert at «Access for all».
-- **Bernhard Heinser**, former CEO at «Access for all».
+- **Anton Bolfing**, former accessibility expert at Access for all.
+- **Bernhard Heinser**, former CEO at Access for all.
+- **Donato Rotunno**, frontend developer & accessibility expert, Liip.
 - **Esther Brunner**, interface developer, Zeix.
 - **Graciela Schütz**, UX architect, formerly Unic.
 - **Markus Graf**, web developer.
 - **René Stalder**, web developer & accessibility consultant, whatwedo.
-- **Severin Klaus**, technical director, Dept.
+- **Severin Klaus**, technology director, HEART.
 
 ### Testing staff
 

@@ -39,12 +39,3 @@ At the bottom of each content element, links to its sub-elements (chapters or pa
 Being a comprehensive tutorial, the contents of this guide build up on each other sequentially. So we highly recommend you to start reading from the very beginning, then make your way continuously through the guide (use the **Previous** and **Next** links at the bottom to do so). Alas, internal links between different contents are provided sparingly.
 
 However, we have given our best to make the individual content elements as self-standing and self-explanatory as possible. This allows you to browse them on their own as a quick reference. Use the content navigation sidebar to quickly access different contents.
-
-## Staying up to date
-
-To be informed about new or updated contents, related activities (events) or similar, subscribe to our social media channels:
-
-- Facebook: [AccessibilityDeveloperGuide](https://www.facebook.com/AccessibilityDeveloperGuide)
-- Twitter: [A11yDevGuide](https://twitter.com/A11yDevGuide)
-
-We also provide a content feed: [RSS](/feed/rss.xml).
