@@ -101,4 +101,4 @@ This mode can be disabled, so it is similar to NVDA. **But we urge you to only d
 - In `Virtual Cursor Options` look out for `Form Options`, then `Auto Forms Mode`.
 - Choose `SemiAuto` and confirm.
 
-Do the same in Internet Explorer.
+Do the same in Microsoft Edge.

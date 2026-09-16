@@ -19,7 +19,6 @@
     }
 
     initIcon() {
-      // Set focusable="false" for IE, see https://stackoverflow.com/questions/18646111/disable-onfocus-event-for-svg-element
       this.$icon = $(
         "<button class='adg-tooltip-complex-icon' aria-expanded='false'><span class='adg-visually-hidden'>Toggle tooltip</span><svg class='icon' focusable='false'><use xlink:href='#tooltip' /></svg></button>"
       )

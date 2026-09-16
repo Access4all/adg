@@ -13,8 +13,6 @@ position: 7
 
 As we know from [Semantics and their importance for accessibility](/knowledge/semantics), HTML elements all have their inherent role. If for some reason you need to remove this role from an element, you can do this by setting `role="presentation"` (it should be treated like a `<div>` then).
 
-Notice: we know that `role="presentation"` does not work in Internet Explorer. Still we want to talk about it here, as it you may stumble over it during your work as a developer, and it is good for you to know about it.
-
 ## Intended use
 
 To a screen reader, the following is no paragraph anymore, and as such cannot be navigated to by pressing the `P` key:
