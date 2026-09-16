@@ -70,12 +70,7 @@ Please read on.
 
 We are a bunch of open-hearted and highly motivated nerds who believe in the potential that technological advancements can have for humanity.
 
-If you feel like you have anything to give to our movement (be it active collaboration, sharing your knowledge, providing financial support, or simply giving some feedback), please get in touch with us through:
-
-- Facebook: [AccessibilityDeveloperGuide](https://www.facebook.com/AccessibilityDeveloperGuide)
-- Twitter: [A11yDevGuide](https://twitter.com/A11yDevGuide)
-
-Or drop us a line using the [«Access for all» contact form](https://access-for-all.ch/en/about-us/contact/).
+If you feel like you have anything to give to our movement (be it active collaboration, sharing your knowledge, providing financial support, or simply giving some feedback), drop us a line using the [«Access for all» contact form](https://access-for-all.ch/en/about-us/contact/).
 
 ### Contributors
 
