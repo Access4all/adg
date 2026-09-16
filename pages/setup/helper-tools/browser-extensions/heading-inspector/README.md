@@ -5,7 +5,7 @@ position: 3
 
 # Heading Inspector
 
-**Unlike similar heading outline tools that parse a page's DOM, this extension reads the accessibility tree directly, catching edge cases—like headings assigned via JavaScript—that DOM-based tools can miss. The Heading Structure extension is built and maintained by [Quantico](https://github.com/quatico-solutions/heading-inspector).**
+**Unlike similar heading outline tools that parse a page's DOM, this extension reads the accessibility tree directly, catching edge cases—like headings assigned via JavaScript—that DOM-based tools can miss. The Heading Structure extension is built and maintained by [Quatico](https://github.com/quatico-solutions/heading-inspector).**
 
 [[_TOC_]]
 
