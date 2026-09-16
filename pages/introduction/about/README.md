@@ -84,21 +84,23 @@ Besides the diligent online community, a group of people regularly physically ga
 <!-- ![The core team working on the Accessibility Developer Guide (details read below)](_media/core-team.jpg) -->
 
 - **Christoph Dubach**, UX architect & web developer, Unic.
-- **Donato Rotunno**, frontend developer & accessibility expert, Liip.
 - **Joshua Muheim**, frontend developer & accessibility expert, Accessify&#46;me.
 - **Jürgen Rudigier**, frontend developer, Dept.
+- **Regina Reusser**, accessibility consultant, Access for all.
+- **Roman Alt**, accessibility consultant, Access for all.
 - **Thomas Jaggi**, web developer, responsive&#46;ch.
 
 Former contributors:
 
 - **Andreas Moesch**, web developer, formerly Nothing.
-- **Anton Bolfing**, former accessibility expert at «Access for all».
-- **Bernhard Heinser**, former CEO at «Access for all».
+- **Anton Bolfing**, former accessibility expert at Access for all.
+- **Bernhard Heinser**, former CEO at Access for all.
+- **Donato Rotunno**, frontend developer & accessibility expert, Liip.
 - **Esther Brunner**, interface developer, Zeix.
 - **Graciela Schütz**, UX architect, formerly Unic.
 - **Markus Graf**, web developer.
 - **René Stalder**, web developer & accessibility consultant, whatwedo.
-- **Severin Klaus**, technical director, Dept.
+- **Severin Klaus**, technology director, HEART.
 
 ### Testing staff
 
