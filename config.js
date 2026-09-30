@@ -3,7 +3,6 @@ export default {
   repoUrl: 'https://github.com/Access4all/adg',
   title: 'Accessibility Developer Guide',
   description: '', // TODO: Add
-  twitter: '', // TODO: Add
   media: {
     image: 'https://www.accessibility-developer-guide.com/img/logo/adg.svg',
     favicon:
