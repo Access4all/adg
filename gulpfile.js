@@ -7,7 +7,6 @@ import through from 'through2'
 import spritesmith from 'gulp.spritesmith'
 import ordered from 'ordered-read-streams'
 import sharp from 'sharp'
-import concat from 'gulp-concat'
 import changed from 'gulp-changed'
 import html from './gulp/html.js'
 import css from './gulp/css.js'
@@ -94,11 +93,6 @@ gulp.task('js', cb => {
       cb()
     }
   )
-
-  gulp
-    .src('./src/assets/js/lib/vendor/**/*.js')
-    .pipe(concat('vendor.js'))
-    .pipe(gulp.dest('./dist/js/'))
 })
 
 gulp.task(

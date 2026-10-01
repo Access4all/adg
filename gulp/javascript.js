@@ -17,7 +17,7 @@ const {
 export default (config, cb) => {
   const compiler = webpack({
     entry: config.entry,
-    mode: 'development',
+    mode: webpackWatch ? 'development' : 'production',
     module: {
       rules: [
         {
@@ -31,10 +31,7 @@ export default (config, cb) => {
                 '@babel/preset-env',
                 {
                   useBuiltIns: 'usage',
-                  corejs: 3,
-                  targets: {
-                    browsers: ['last 2 versions']
-                  }
+                  corejs: 3
                 }
               ]
             ]

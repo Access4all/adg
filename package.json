@@ -19,9 +19,7 @@
   "author": "",
   "license": "ISC",
   "browserslist": [
-    "defaults",
-    "> 1%",
-    "iOS >= 8.4"
+    "defaults"
   ],
   "engines": {
     "node": ">=20"
@@ -43,7 +41,6 @@
     "globals": "^17.4.0",
     "gulp": "^5.0.1",
     "gulp-changed": "^5.0.4",
-    "gulp-concat": "^2.6.1",
     "gulp-front-matter": "^1.3.0",
     "gulp-hb": "^8.0.0",
     "gulp-plumber": "^1.2.1",
@@ -78,7 +75,6 @@
   },
   "dependencies": {
     "core-js": "^3.49.0",
-    "details-polyfill": "^1.2.0",
     "jquery": "^4.0.0"
   },
   "lint-staged": {
