@@ -1,5 +1,17 @@
 export default [
   {
+    commit: '7a122ceddab1e181f262cdaacf0d2fea0768b335',
+    pages: ['knowledge/screen-readers/linear-processing-using-cursor']
+  },
+  {
+    commit: 'b3b7ab2f50fc5ec908a1a6f98fdd799be8766913',
+    pages: ['setup/helper-tools/browser-extensions/heading-inspector']
+  },
+  {
+    commit: '9c828f1b445ff11606523312ce3d5effb19d6c61',
+    pages: ['examples/widgets/dialog']
+  },
+  {
     commit: '2ee186fb4cd43afe66a10d9cad8f849365277103',
     pages: ['introduction/about']
   },
