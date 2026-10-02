@@ -45,9 +45,6 @@
   }
   h2 {
     @include theme-color;
-    .anchor-link {
-      color: $c-font;
-    }
   }
 
   a {
