@@ -48,7 +48,6 @@
   &:focus {
     @include theme(color, var(--theme-color-dark));
     text-decoration: underline;
-    outline: none;
   }
 
   .nav-list--item-level1 > & {

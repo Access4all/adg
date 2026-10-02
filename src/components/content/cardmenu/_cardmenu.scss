@@ -77,8 +77,6 @@
     &.cardmenu--card--link-examples {
       @include theme(border-color, 3);
     }
-
-    outline: none;
   }
 
   .text_container & {

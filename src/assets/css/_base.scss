@@ -39,18 +39,8 @@ textarea {
   @include textantialiasing;
 }
 
-// links
-a:active {
-  outline: none;
-}
-
-a:selected {
-  border: none;
-  outline: none;
-}
-
-*:focus {
-  //  outline: none;
+:focus-visible {
+  @include btn-focus-style;
 }
 
 abbr {
@@ -158,7 +148,11 @@ p img {
         font-size: 0.75em;
       }
 
-      &:focus + label {
+      &:focus-visible {
+        outline: none;
+      }
+
+      &:focus-visible + label {
         @include btn-focus-style;
       }
     }

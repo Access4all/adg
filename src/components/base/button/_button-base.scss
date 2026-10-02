@@ -1,9 +1,13 @@
 @mixin btn-focus-style {
-  outline: 2px dotted var(--theme-color-dark);
+  outline: 2px solid var(--theme-color-dark, #{$c-font});
   outline-offset: 2px;
+
+  @media (forced-colors: active) {
+    outline: 2px solid Highlight;
+  }
 }
 @mixin btn-focus {
-  &:focus {
+  &:focus-visible {
     @include btn-focus-style;
   }
 }
