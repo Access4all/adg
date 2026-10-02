@@ -82,13 +82,13 @@ $("button#show-dialog").click(function() {
 
 ### Avoiding focus on background elements
 
-Dialogs typically sit on top of the page's other content, often darkening the background. Keeping the focus in the background after opening a dialog is nasty for keyboard users. Take care that this does not happen again while the user interacts with the dialog.
+Dialogs typically are placed on top of the page's other content, often darkening the background. As explained above, keeping the focus placed in the background after opening a dialog is nasty for keyboard users. So we should take care that this does not happen by accident again when the user is interacting with the dialog.
 
-Make the rest of the page inert while the dialog is open. A native `<dialog>` does this when opened with `showModal()`. Keyboard focus then stays on the dialog's controls. `Tab` can still move on to the browser UI, for example the address bar.
+One way is to trap the focus within the dialog: this means that after the last focusable element of the dialog loses focus, the first element is focused again. This way, if users have interacted with the form and then want to close it again using the close button on top of the dialog, they do not have to tab back to the top (using `Shift + Tab`), but intuitively reach the close button again automatically.
 
-Avoid a strict loop that cancels `Tab` on the last control and jumps back to the first. That older technique blocks the browser UI. For the full explanation, read [Focus traps and the browser UI](/knowledge/keyboard-only/focus-trap/).
+But there is a big disadvantage with this technique: users will not be able at all to leave the page content using `Tab` key, for example if they want to reach the address bar. Sure, there are other ways to do this (for example pressing `F6` or `Ctrl + L`), but some users do not know about this.
 
-A close button at the bottom of a long dialog is still useful. Users can reach it without tabbing backwards through the whole dialog.
+A better solution is to not trap the focus, but to offer another close button at the bottom of the dialog. This way, the user won't have the need anymore to press `Tab` again, in hope to reach the close button at the top.
 
 ```html
 <div id="dialog">

@@ -75,7 +75,6 @@ For most websites, regular skip links plus proper headings and landmarks are the
 - [Skip navigation links example](/examples/hiding-elements/skip-navigation-links/)
 - [Hiding elements visually by moving them off-screen](/examples/hiding-elements/visually/)
 - [How to implement websites that are ready for keyboard only usage](/knowledge/keyboard-only/how-to-implement/)
-- [Focus traps and the browser UI](/knowledge/keyboard-only/focus-trap/)
 
 ## WCAG and W3C references
 

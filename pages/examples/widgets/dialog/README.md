@@ -19,7 +19,7 @@ To fulfil WCAG 2.2 standards, accessible dialogs must meet these criteria:
 
 - **Predictable Focus:** Focus moves into the dialog when it opens and returns to the triggering element when it closes (SC 2.4.3).
 - **Keyboard Control:** The dialog is fully operable via keyboard, including `Tab` navigation and a clear mechanism to close it (e.g. `Esc`) (SC 2.1.1).
-- **Focus containment:** While a modal is open, `Tab` skips the rest of the page. `Tab` can still reach the browser UI (address bar, tabs). See [Focus traps and the browser UI](/knowledge/keyboard-only/focus-trap/).
+- **Focus Trapping:** Modal dialogs keep focus within the dialog while open.
 - **Semantics:** The dialog has a clear accessible name (e.g. via `aria-labelledby`) and uses either the native `<dialog>` element or `role="dialog"`.
 
 ### Native or Custom solution
@@ -89,7 +89,7 @@ To fulfil WCAG 2.2 standards, accessible dialogs must meet these criteria:
     </tr>
     <tr>
       <th scope="row">Focus Management</th>
-      <td><strong>Inert background</strong> (page is skipped; browser UI stays reachable)</td>
+      <td><strong>Automatic Focus Trap</strong> (Tab stays inside)</td>
       <td>No Trap (Natural page tab order)</td>
       <td>No Trap (Follows sequential popover order)</td>
     </tr>
@@ -131,7 +131,7 @@ Use this variant when you need modal behaviour with low implementation effort an
 
 - **Activation:** Use Invoker Commands (`command="show-modal"` and `command="close"` with `commandfor`) to open and close the dialog. The example page loads [`invoker.min.js`](https://www.npmjs.com/package/invokers-polyfill) from a CDN where Invoker Commands are not supported yet.
 - **Backdrop:** Style using the `::backdrop` pseudo-element.
-- **Keyboard behaviour:** The browser keeps the rest of the page inert and supports closing via `Esc`. After the last control, `Tab` moves to the browser UI. Do not add a script that wraps `Tab` back to the first control. See [Focus traps and the browser UI](/knowledge/keyboard-only/focus-trap/).
+- **Keyboard behaviour:** Browsers generally keep focus within the dialog and support closing via `Esc`, consistent with platform conventions.
 - **Focus return:** Browsers typically restore focus to the previously focused element when the dialog closes.
 - **Initial focus:** Use `autofocus` on a meaningful control inside the dialog (for example the close button), or follow the guidance in [Initial focus positioning](#initial-focus-positioning) below.
 - **State:** Do not rely on the `open` attribute alone for modal behaviour.
@@ -183,7 +183,7 @@ Use this only when native `<dialog>` cannot be used. Prefer the [modal dialog](#
 #### Implementation details
 
 - **Role and name:** Use `role="dialog"` and `aria-labelledby`.
-- **Focus trap:** This legacy example wraps `Tab` from the last control back to the first. That strict loop blocks the browser UI. Prefer the [modal dialog](#modal-dialog). See [Focus traps and the browser UI](/knowledge/keyboard-only/focus-trap/).
+- **Focus trap:** Implement manual focus management for `Tab` and `Shift + Tab`.
 - **Keyboard interaction:** Provide an explicit `Esc` handler.
 - **Inertness:** Mark background content as `inert` (or equivalent) while open.
 
