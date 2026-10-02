@@ -45,7 +45,7 @@ Instead of trying to hide the plain text asterisk `*` in the label, we replace i
 
 [Example](_examples/required-input-with-asterisks-as-icons)
 
-To prevent Internet Explorer from making the SVGs focusable, the `focusable="false"` attribute is used. Instead of an SVG, you could also use a traditional image with empty alternative text (`<img src="..." alt="" />`).
+Instead of an SVG, you could also use a traditional image with empty alternative text (`<img src="..." alt="" />`).
 
 And if you really want to make it fancy, you could combine this technique with a tooltip showing "Required" on hover: [Tooltip widgets (or: screen tip, balloon)](/examples/widgets/tooltips).
 

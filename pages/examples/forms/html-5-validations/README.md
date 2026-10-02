@@ -65,12 +65,6 @@ As seen in the example above, it is good practice to provide a human readable ex
 
 Notice that this does not work for other validation types. So for example, it is not possible to override the standard message for inputs that have only a `required` attribute.
 
-### Internet Explorer peculiarity
-
-From an accessibility point of view, for Internet Explorer it is not only good practice, but it's a clear requirement. Because if an input requires a specific `pattern`, but has no `title`, JAWS does not announce any validation error. So while a visual user at least sees a small popup "You must use this format" (admittedly not being of much help), a JAWS user will feel totally frustrated as there is no clue about a specific format.
-
-The following example is especially problematic, as the field not only requires a specific pattern - it is also marked up as `required`: so users feel like they have done everything right after filling something into the input, but still they cannot submit the form.
-
 [Example](_examples/html-5-client-side-validations-with-untitled-pattern)
 
 ## HTML 5 vs. ARIA

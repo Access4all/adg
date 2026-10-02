@@ -87,6 +87,5 @@ Some interesting peculiarities:
 - Each form control's label gives a hint about the existence of a tooltip. This enables screen reader users to know about it in advance, so they can consult its contents before interacting with the form control (if wished).
     - Alternatively, the tooltip could be placed before the form control.
 - The toggle button has a visually hidden label to provide a proper name, while the visible SVG icon is ignored by screen readers.
-    - To prevent Internet Explorer from making the SVGs focusable, the `focusable="false"` attribute is used.
     - Instead of an SVG icon, also a traditional image with empty alternative text would work: `<img src="..." alt="" />`.
 - The toggle button has an `aria-expanded` attribute to announce its expandability status (see [Marking elements expandable using aria-expanded](/examples/sensible-aria-usage/expanded)).

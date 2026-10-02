@@ -24,7 +24,3 @@ You may open and close browsers repeatedly during accessibility testing. To lear
 ## Add-ons
 
 We recommend adding selected [browser extensions](/setup/helper-tools/browser-extensions/) and [bookmarklets](/setup/helper-tools/bookmarklets/) to your browser.
-
-## IE 11
-
-The installation and setup instructions for IE 11 are [still available here](../internet-explorer-11/).
