@@ -86,7 +86,7 @@ Dialogs typically sit on top of the page's other content, often darkening the ba
 
 Make the rest of the page inert while the dialog is open. A native `<dialog>` does this when opened with `showModal()`. Keyboard focus then stays on the dialog's controls. `Tab` can still move on to the browser UI, for example the address bar.
 
-Avoid a strict loop that cancels `Tab` on the last control and jumps back to the first. That older technique blocks the browser UI. For the full explanation, read [Focus traps and the browser UI](/knowledge/keyboard-only/focus-trap/).
+Avoid a strict loop that cancels `Tab` on the last control and jumps back to the first. That older technique blocks the browser UI. For the full explanation, read [Focus traps](/knowledge/keyboard-only/focus-trap/).
 
 A close button at the bottom of a long dialog is still useful. Users can reach it without tabbing backwards through the whole dialog.
 
