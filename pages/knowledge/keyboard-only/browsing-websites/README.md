@@ -64,4 +64,5 @@ Knowledge is power! Our guide has more to offer about:
 - [Controlling a computer with a keyboard only](/knowledge/keyboard-only/controlling-a-computer/)
 - [Skip navigation links](/knowledge/keyboard-only/skip-navigation-links/)
 - [How to implement websites that are ready for keyboard only usage](/knowledge/keyboard-only/how-to-implement/)
+- [Focus traps](/knowledge/keyboard-only/focus-trap/)
 - [What screen readers are - and why they are so important to accessibility testing](/knowledge/screen-readers/what-and-why/)
