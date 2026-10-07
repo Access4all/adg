@@ -91,4 +91,5 @@ Knowledge is power! Our guide has more to offer about:
 - [How to browse websites using a keyboard only](/knowledge/keyboard-only/browsing-websites/)
 - [Skip navigation links](/knowledge/keyboard-only/skip-navigation-links/)
 - [How to implement websites that are ready for keyboard only usage](/knowledge/keyboard-only/how-to-implement/)
+- [Focus traps](/knowledge/keyboard-only/focus-trap/)
 - [Relevant combinations of screen readers and browsers](/knowledge/screen-readers/relevant-combinations/)
