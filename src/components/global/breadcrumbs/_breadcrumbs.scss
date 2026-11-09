@@ -30,7 +30,7 @@
   @include l-site_width;
   min-height: $logo_height + 1px; // todo: find out why +1?
   &:before {
-    content: '📍';
+    content: '📍' / '';
     font-size: 1.5em;
     vertical-align: middle;
   }
@@ -56,7 +56,7 @@
   @include font-xs;
 
   &::after {
-    content: '/';
+    content: '/' / '';
     padding: 0 math.div($gutter, 4);
     display: inline-block;
   }

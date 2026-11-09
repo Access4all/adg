@@ -35,7 +35,7 @@
     font-weight: 500;
 
     &::before {
-      content: '•';
+      content: '•' / '';
       display: inline-block;
       position: absolute;
       left: -0.75em;
