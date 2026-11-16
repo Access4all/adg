@@ -3,7 +3,7 @@ import ModuleManager from '../lib/util/ModuleManager.js'
 import Search from './modules/Search.js'
 import Anchor from './modules/content/Anchor.js'
 import MainNav from './modules/content/MainNav.js'
-import Panel from './modules/content/Panel.js'
+import Disclosure from './modules/content/Disclosure.js'
 
 export default () => {
   // every module should at least implement two methods
@@ -32,10 +32,10 @@ export default () => {
     ModuleManager.connect(MainNav, elem)
   })
 
-  contextTrigger.add('.js-panel', function () {
+  contextTrigger.add('.js-disclosure', function () {
     var elem = this
 
-    ModuleManager.connect(Panel, elem)
+    ModuleManager.connect(Disclosure, elem)
   })
 
   contextTrigger.validate('body')
