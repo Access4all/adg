@@ -1,3 +1,35 @@
+// The link follows the heading's last word without being part of the heading.
+// For that the heading is inline, and the surrounding block takes over its
+// font and the margins from `richtext()`.
+.anchor-surround {
+  margin-top: 1.5em;
+  margin-bottom: 0.75ex;
+
+  &:has(> h2) {
+    @include h2;
+  }
+
+  &:has(> h3) {
+    @include h3;
+  }
+
+  &:has(> h4) {
+    @include h4;
+  }
+
+  &:has(> h5) {
+    @include h5;
+  }
+
+  &:has(> h6) {
+    @include h6;
+  }
+
+  > .anchor-element {
+    display: inline;
+  }
+}
+
 a.anchor-link {
   display: inline-flex;
   align-items: center;

@@ -37,6 +37,7 @@ export default class Anchor extends BaseModule {
     $name.text('Direct link to this section: ' + headingText)
     $link.attr('href', '#' + this.id)
     $link.append('<span aria-hidden="true">#</span>', $name)
-    this.$el.append($link)
+    this.$el.wrap('<div class="anchor-surround"></div>')
+    this.$el.after($link)
   }
 }
