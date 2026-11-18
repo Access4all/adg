@@ -17,6 +17,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <script>document.documentElement.classList.add('js')</script>
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Eczar|Work+Sans&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Eczar|Work+Sans&display=swap"></noscript>
@@ -45,7 +46,7 @@
       {{> "global/navbar/navbar"}}
       <main id="main-content" class="site-content">
         {{> "global/breadcrumbs/breadcrumbs"}}
-        <div class="l-site_width" id="jump-target">
+        <div class="l-site_width" id="jump-target" tabindex="-1">
           {{#if contents}}
 {{> "content/text_container/text_container" content=contents}} {{!-- needs to have zero space indenting for code examples --}}
           {{/if}}

@@ -45,9 +45,6 @@
   }
   h2 {
     @include theme-color;
-    .anchor-link {
-      color: $c-font;
-    }
   }
 
   a {
@@ -81,12 +78,6 @@
       padding: 10px 16px;
       border-radius: 10px;
     }
-  }
-
-  a:focus {
-    outline: 2px dotted var(--theme-color-dark);
-    outline-offset: 4px;
-    color: var(--theme-color-dark);
   }
 
   table,

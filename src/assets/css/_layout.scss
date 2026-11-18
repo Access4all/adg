@@ -79,19 +79,39 @@ html {
 
 #jump {
   position: absolute;
-  z-index: -1;
-  font-weight: 500;
-  border: 1px solid var(--theme-color-dark);
-  background-color: var(--theme-main-color-inverse, $c-white);
-  color: var(--theme-color-dark);
-  padding: 10px;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 
-  &:focus {
-    z-index: 2;
-    outline: none;
+  &:focus,
+  &:focus-visible {
+    position: fixed;
+    z-index: 10000;
+    top: 0.75rem;
+    left: 0.75rem;
+    width: auto;
+    height: auto;
+    min-width: 24px;
+    min-height: 24px;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    padding: 0.5rem 0.75rem;
+    font-weight: 500;
+    border: 1px solid var(--theme-color-dark);
+    background-color: var(--theme-main-color-inverse, $c-white);
+    color: var(--theme-color-dark);
+    @include btn-focus-style;
   }
 }
 
-#jump-target[tabindex='-1']:focus {
+#jump-target[tabindex='-1']:focus,
+#jump-target[tabindex='-1']:focus-visible {
   outline: none;
 }

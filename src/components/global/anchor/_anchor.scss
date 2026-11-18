@@ -1,10 +1,53 @@
-a.anchor-link {
-  position: absolute;
-  text-decoration: none;
-  top: 0;
-  left: -1em;
+// The link follows the heading's last word without being part of the heading.
+// For that the heading is inline, and the surrounding block takes over its
+// font and the margins from `richtext()`.
+.anchor-surround {
+  margin-top: 1.5em;
+  margin-bottom: 0.75ex;
+
+  &:has(> h2) {
+    @include h2;
+  }
+
+  &:has(> h3) {
+    @include h3;
+  }
+
+  &:has(> h4) {
+    @include h4;
+  }
+
+  &:has(> h5) {
+    @include h5;
+  }
+
+  &:has(> h6) {
+    @include h6;
+  }
+
+  > .anchor-element {
+    display: inline;
+  }
 }
 
-.anchor-surround {
-  position: relative;
+a.anchor-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 24px;
+  min-height: 24px;
+  margin-inline-start: 0.25em;
+  color: var(--theme-color-dark, #{$c-font});
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  vertical-align: baseline;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
 }

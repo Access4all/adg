@@ -180,8 +180,9 @@
     right: 10px;
     top: 30px;
   }
-  &:focus {
+  &:focus-visible {
     outline: none;
+
     .navbar--toggle--inner {
       @include btn-focus-style;
     }

@@ -30,13 +30,14 @@ export default class Anchor extends BaseModule {
   }
 
   initLink() {
-    let $link = $(
-      '<a class="anchor-link"><span aria-hidden="true">#</span><span class="visuallyhidden">Link to heading "' +
-        this.$el.text() +
-        '"</span></a>'
-    )
+    const headingText = this.$el.text()
+    const $link = $('<a class="anchor-link"></a>')
+    const $name = $('<span class="visuallyhidden"></span>')
+
+    $name.text('Direct link to this section: ' + headingText)
     $link.attr('href', '#' + this.id)
-    this.$el.wrap("<div class='anchor-surround'></div>")
+    $link.append('<span aria-hidden="true">#</span>', $name)
+    this.$el.wrap('<div class="anchor-surround"></div>')
     this.$el.after($link)
   }
 }

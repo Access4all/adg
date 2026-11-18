@@ -4,6 +4,17 @@ import { randomUUID } from 'node:crypto'
 import frontMatter from 'front-matter'
 import hljs from 'highlight.js'
 
+const SOURCE_TYPES = ['html', 'css', 'js']
+
+// Browsers whose screen reader results are summarised in the compatibility button
+const SUMMARY_BROWSERS = ['Chrome', 'Edge', 'FF', 'Safari', 'IE']
+
+const STATUSES = {
+  green: { symbol: '✔', text: 'pass' },
+  yellow: { symbol: '⚠', text: 'pass with comments' },
+  red: { symbol: '✘', text: 'fail' }
+}
+
 const getFile = (files, type, dir) => {
   const match = files.find(file => {
     if (type === 'html') {
@@ -83,170 +94,146 @@ const getCodePenForm = code => {
   </form>`
 }
 
+const escapeAttribute = value =>
+  String(value).replace(/&/g, '&amp;').replace(/"/g, '&quot;')
+
+const getStatusCode = ({ status, comments }) => {
+  if (status !== 'pass') {
+    return 'red'
+  }
+
+  return comments ? 'yellow' : 'green'
+}
+
+const formatDate = value => {
+  const date = new Date(value)
+
+  if (Number.isNaN(date.getTime())) {
+    return value
+  }
+
+  return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+}
+
+// One result per screen reader and browser combination of the front matter
+const getCompatibilityResults = compatibility =>
+  Object.entries(compatibility).flatMap(([category, value]) => {
+    if (!value) {
+      throw new Error(
+        `Missing value for "${category}" in "compatibility" table.`
+      )
+    }
+
+    // Categories without browsers hold their result directly
+    const results = value.status ? { [category]: value } : value
+
+    return Object.entries(results).map(([browser, result]) => {
+      if (!result) {
+        throw new Error(
+          `Missing value for "${browser}" in "compatibility" table.`
+        )
+      }
+
+      const env = category === browser ? category : `${category} ${browser}`
+
+      return {
+        env,
+        category,
+        statusCode: getStatusCode(result),
+        comments: result.comments || null,
+        date: formatDate(result.date),
+        summaryBrowser: SUMMARY_BROWSERS.find(name => env.includes(name))
+      }
+    })
+  })
+
+const renderSummaryItem = ({ category, summaryBrowser, statusCode }) =>
+  `<span class="disclosure--status disclosure--status--${statusCode}"><img src="/img/compatibility/${category.toLowerCase()}.png" alt="${category}" /><img src="/img/compatibility/${summaryBrowser.toLowerCase()}.png" class="disclosure--browser" alt="${summaryBrowser}" /><span class="disclosure--mark">${STATUSES[statusCode].symbol}</span></span>`
+
+// Only a visual overview, the table in the panel holds the same results
+const renderSummary = results => {
+  const items = results
+    .filter(result => result.summaryBrowser)
+    .map(renderSummaryItem)
+
+  return `<span class="disclosure--summary" aria-hidden="true">${items.join('')}</span>`
+}
+
+const renderResultRow = ({ env, statusCode, comments, date }) => {
+  const { symbol, text } = STATUSES[statusCode]
+
+  return `<tr>
+  <th scope="row">${env}</th>
+  <td class="disclosure--result disclosure--result--${statusCode}"><span aria-hidden="true">${symbol}</span> ${text}</td>
+  <td>${comments || '-'}</td>
+  <td>${date}</td>
+</tr>`
+}
+
+const renderCompatibilityTable =
+  results => `<table class="disclosure--compatibility">
+  <thead>
+    <tr>
+      <th scope="col" class="category">Category</th>
+      <th scope="col" class="result">Result</th>
+      <th scope="col" class="comments">Comments</th>
+      <th scope="col" class="date">Date</th>
+    </tr>
+  </thead>
+  <tbody>${results.map(renderResultRow).join('')}</tbody>
+</table>`
+
+const getSourceSections = (code, id) =>
+  SOURCE_TYPES.filter(type => code[type]).map(type => ({
+    id: `${id}-${type}`,
+    label: type.toUpperCase(),
+    content: `<pre tabindex="0"><code>${
+      hljs.highlightAuto(code[type], [type]).value
+    }</code></pre>`
+  }))
+
+const getCompatibilitySection = (results, id) => ({
+  id: `${id}-compatibility`,
+  label: `<span class="visuallyhidden">Compatibility</span>${renderSummary(results)}`,
+  content: renderCompatibilityTable(results)
+})
+
+// Without JavaScript the toggles are plain links to panels that all stay visible
+const renderToggle = ({ id, label }) =>
+  `<li class="disclosure--item"><a class="disclosure--toggle button" href="#${id}">${label}</a></li>`
+
+const renderPanel = ({ id, content }) =>
+  `<div class="disclosure--panel" id="${id}">${content}</div>`
+
+const renderDisclosure = (
+  sections,
+  label
+) => `<div class="disclosure js-disclosure">
+  <ul class="disclosure--list" aria-label="${escapeAttribute(label)}">${sections
+    .map(renderToggle)
+    .join('')}</ul>
+  ${sections.map(renderPanel).join('')}
+</div>`
+
 const getExample = examplePath => {
   try {
     const code = getCode(examplePath)
     const id = `example-${randomUUID()}`
+    const sections = getSourceSections(code, id)
+    const results = getCompatibilityResults(code.details.compatibility || {})
 
-    const compatibilitySummaryBrowsers = [
-      'Chrome',
-      'Edge',
-      'FF',
-      'Safari',
-      'IE'
-    ]
-    const compatibilitySummary = []
-
-    let compatibility = []
-
-    if (code.details.compatibility) {
-      for (const [category, value] of Object.entries(
-        code.details.compatibility
-      )) {
-        if (!value) {
-          throw new Error(
-            `Missing value for "${category}" in "compatibility" table.`
-          )
-        }
-
-        const results = value.status
-          ? {
-              [category]: value
-            }
-          : value
-
-        for (const [browser, result] of Object.entries(results)) {
-          if (!result) {
-            throw new Error(
-              `Missing value for "${browser}" in "compatibility" table.`
-            )
-          }
-
-          const env = category === browser ? category : `${category} ${browser}`
-
-          compatibility.push({
-            env,
-            status: result.status,
-            date: result.date,
-            comments: result.comments || null,
-            category
-          })
-        }
-      }
+    if (results.length) {
+      sections.push(getCompatibilitySection(results, id))
     }
 
-    compatibility = compatibility.map(result => {
-      // Create color code and visual indication based on status and whether comments are present
-      result.statusCode =
-        result.status === 'pass'
-          ? result.comments
-            ? 'yellow'
-            : 'green'
-          : 'red'
-      result.statusIndication =
-        result.status === 'pass'
-          ? result.comments
-            ? '⚠ <span class="visuallyhidden">(pass with comments)</span>'
-            : '✔ <span class="visuallyhidden">(pass)</span>'
-          : '✘ <span class="visuallyhidden">(fail)</span>'
-
-      // Format date
-      const date = new Date(result.date)
-
-      if (date != 'Invalid Date') {
-        result.date = `${date.getFullYear()}-${
-          date.getMonth() + 1
-        }-${date.getDate()}`
-      }
-
-      // Create summary of screenreader+browser combinations
-      const summaryBrowser = compatibilitySummaryBrowsers.find(browser =>
-        result.env.match(browser)
-      )
-
-      if (summaryBrowser) {
-        compatibilitySummary.push({
-          name: `<img src="/img/compatibility/${result.category.toLowerCase()}.png" alt="${
-            result.category
-          }" /><span class="visuallyhidden">+</span><img src="/img/compatibility/${summaryBrowser.toLowerCase()}.png" class="browser" alt="${summaryBrowser}" />`,
-          statusCode: result.statusCode,
-          statusIndication: result.statusIndication
-        })
-      }
-
-      return result
-    })
-
-    const btns = ['html', 'css', 'js']
-      .filter(type => code[type])
-      .map(type => {
-        return `<div class="control">
-      <input type="checkbox" id="${id}-${type}" name="${id}" value="${type}" class="js-panel" />
-      <label class="button" for="${id}-${type}">
-        <span class="visuallyhidden">Show </span>
-        ${type.toUpperCase()}
-        <span class="visuallyhidden"> code</span>
-      </label>
-    </div>`
-      })
-    const blocks = ['html', 'css', 'js']
-      .filter(type => code[type])
-      .map(type => {
-        const markup = hljs.highlightAuto(code[type], [type])
-
-        return `<div class="panel" id="${id}-${type}_panel" style="display: none"><pre><code>${markup.value}</code></pre></div>`
-      })
-
-    const codePenForm = getCodePenForm(code)
-
-    if (compatibility.length) {
-      btns.push(`<div class="control">
-      <input type="checkbox" id="${id}-compatibility" name="${id}" value="compatibility" class="js-panel" />
-      <label class="button" for="${id}-compatibility">
-        <span class="summary">
-          ${compatibilitySummary
-            .map(
-              item => `<span class="status status--${item.statusCode}">
-            ${item.name} ${item.statusIndication}
-        </span>`
-            )
-            .join('<span class="visuallyhidden">, </span>')}
-        </span>
-      </label>
-    </div>`)
-
-      blocks.push(`<div class="panel" id="${id}-compatibility_panel" style="display: none">
-      <table class="compatibility">
-        <thead>
-          <th class="category">Category</th>
-          <th class="result">Result</th>
-          <th class="comments">Comments</th>
-          <th class="date">Date</th>
-        </thead>
-        <tbody>
-          ${compatibility
-            .map(
-              result => `<tr>
-  <th>${result.env}</th>
-    <td class="result result--${result.statusCode}">
-      ${result.statusIndication} ${result.status}
-    </td>
-    <td>${result.comments ? result.comments : '-'}</td>
-    <td>${result.date}</td>
-</tr>`
-            )
-            .join('')}
-        </tbody>
-      </table>
-    </div>`)
-    }
+    const disclosure = sections.length
+      ? renderDisclosure(sections, code.details.title || 'Example')
+      : ''
 
     return {
       form: `
-  ${codePenForm}
-  <div class="tablist"><div class="controls">${btns.join(
-    ''
-  )}</div><div class="panels">${blocks.join('')}</div></div>`,
+  ${getCodePenForm(code)}
+  ${disclosure}`,
       code
     }
   } catch (err) {

@@ -35,7 +35,7 @@
     font-weight: 500;
 
     &::before {
-      content: '•';
+      content: '•' / '';
       display: inline-block;
       position: absolute;
       left: -0.75em;
@@ -48,7 +48,6 @@
   &:focus {
     @include theme(color, var(--theme-color-dark));
     text-decoration: underline;
-    outline: none;
   }
 
   .nav-list--item-level1 > & {
